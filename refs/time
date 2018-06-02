@@ -8,5 +8,5 @@
 <use f='MTProxy/mtproto/mtproto-config.c' l='414' u='c' c='do_reload_config'/>
 <use f='MTProxy/net/net-events.c' l='401' u='c' c='epoll_work'/>
 <use f='MTProxy/net/net-events.c' l='421' u='c' c='epoll_work'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='603' u='c' c='tcp_rpcc_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='605' u='c' c='tcp_rpcc_init_crypto'/>
 <use f='MTProxy/net/net-tcp-rpc-server.c' l='208' u='c' c='tcp_rpcs_process_nonce_packet'/>

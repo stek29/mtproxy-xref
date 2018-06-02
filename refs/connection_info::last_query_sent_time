@@ -1,7 +1,7 @@
 <dec f='MTProxy/net/net-connections.h' l='220' type='double'/>
 <offset>3456</offset>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='454' u='w' c='tcp_rpcc_connected'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='513' u='r' c='tcp_rpcc_default_check_ready'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='514' u='r' c='tcp_rpcc_default_check_ready'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='554' u='w' c='tcp_rpcc_init_outbound'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='497' u='w' c='tcp_rpcs_init_accepted'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='456' u='w' c='tcp_rpcc_connected'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='515' u='r' c='tcp_rpcc_default_check_ready'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='516' u='r' c='tcp_rpcc_default_check_ready'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='556' u='w' c='tcp_rpcc_init_outbound'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='499' u='w' c='tcp_rpcs_init_accepted'/>

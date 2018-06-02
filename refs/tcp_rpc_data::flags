@@ -19,5 +19,5 @@
 <use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='273' u='r' c='tcp_rpcs_compact_parse_execute'/>
 <use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='279' u='w' c='tcp_rpcs_compact_parse_execute'/>
 <use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='282' u='w' c='tcp_rpcs_compact_parse_execute'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='332' u='w' c='tcp_rpcs_parse_execute'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='332' u='r' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='334' u='w' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='334' u='r' c='tcp_rpcs_parse_execute'/>

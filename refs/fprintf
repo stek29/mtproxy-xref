@@ -34,6 +34,6 @@
 <use f='MTProxy/net/net-msg.c' l='857' u='c' c='rwm_dump_sizes'/>
 <use f='MTProxy/net/net-msg.c' l='883' u='c' c='rwm_check'/>
 <use f='MTProxy/net/net-msg.c' l='901' u='c' c='rwm_dump'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='396' u='c' c='tcp_rpcc_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='398' u='c' c='tcp_rpcc_parse_execute'/>
 <use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='329' u='c' c='tcp_rpcs_compact_parse_execute'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='400' u='c' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='402' u='c' c='tcp_rpcs_parse_execute'/>

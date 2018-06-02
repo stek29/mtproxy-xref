@@ -1,4 +1,4 @@
 <dec f='MTProxy/net/net-tcp-rpc-client.h' l='42' type='int'/>
 <offset>800</offset>
 <use f='MTProxy/mtproto/mtproto-proxy.c' l='2273' u='w' c='mtfront_pre_start'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='299' u='r' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='301' u='r' c='tcp_rpcc_process_handshake_packet'/>

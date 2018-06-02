@@ -11,11 +11,11 @@
 <doc f='MTProxy/net/net-msg.c' l='1138'>/* }}} */</doc>
 <doc f='MTProxy/net/net-msg.c' l='1140'>/* {{{ */</doc>
 <use f='MTProxy/net/net-tcp-rpc-client.c' l='133' u='c' c='tcp_rpcc_process_nonce_packet'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='298' u='c' c='tcp_rpcc_process_handshake_packet'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='391' u='c' c='tcp_rpcc_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='300' u='c' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='393' u='c' c='tcp_rpcc_parse_execute'/>
 <use f='MTProxy/net/net-tcp-rpc-common.c' l='141' u='c' c='tcp_rpc_default_execute'/>
 <use f='MTProxy/net/net-tcp-rpc-common.c' l='178' u='c' c='tcp_rpc_write_packet_compact'/>
 <use f='MTProxy/net/net-tcp-rpc-server.c' l='107' u='c' c='tcp_rpcs_default_execute'/>
 <use f='MTProxy/net/net-tcp-rpc-server.c' l='138' u='c' c='tcp_rpcs_process_nonce_packet'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='287' u='c' c='tcp_rpcs_process_handshake_packet'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='395' u='c' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='289' u='c' c='tcp_rpcs_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='397' u='c' c='tcp_rpcs_parse_execute'/>

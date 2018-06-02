@@ -1,6 +1,6 @@
 <dec f='MTProxy/net/net-tcp-rpc-common.h' l='67' type='unsigned char [256]'/>
 <offset>576</offset>
 <use f='MTProxy/net/net-tcp-rpc-client.c' l='211' u='r' c='tcp_rpcc_process_nonce_packet'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='636' u='r' c='tcp_rpcc_init_crypto'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='605' u='r' c='tcp_rpcs_init_crypto'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='605' u='r' c='tcp_rpcs_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='638' u='r' c='tcp_rpcc_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='607' u='r' c='tcp_rpcs_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='607' u='r' c='tcp_rpcs_init_crypto'/>

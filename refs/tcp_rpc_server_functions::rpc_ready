@@ -2,4 +2,4 @@
 <offset>640</offset>
 <use f='MTProxy/mtproto/mtproto-proxy.c' l='1018' u='w'/>
 <use f='MTProxy/net/net-tcp-rpc-server.c' l='97' u='w'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='526' u='r' c='tcp_rpcs_init_accepted_nohs'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='528' u='r' c='tcp_rpcs_init_accepted_nohs'/>

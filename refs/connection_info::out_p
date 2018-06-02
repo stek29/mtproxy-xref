@@ -10,5 +10,5 @@
 <use f='MTProxy/net/net-tcp-connections.c' l='204' u='a' c='cpu_tcp_aes_crypto_encrypt_output'/>
 <use f='MTProxy/net/net-tcp-connections.c' l='245' u='a' c='cpu_tcp_aes_crypto_ctr128_encrypt_output'/>
 <use f='MTProxy/net/net-tcp-rpc-client.c' l='176' u='m' c='tcp_rpcc_process_nonce_packet'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='457' u='m' c='tcp_rpcs_wakeup'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='471' u='m' c='tcp_rpcs_alarm'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='459' u='m' c='tcp_rpcs_wakeup'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='473' u='m' c='tcp_rpcs_alarm'/>

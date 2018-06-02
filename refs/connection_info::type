@@ -37,6 +37,6 @@
 <use f='MTProxy/net/net-tcp-rpc-common.c' l='156' u='r' c='tcp_rpc_flush_packet'/>
 <use f='MTProxy/net/net-tcp-rpc-common.c' l='208' u='r' c='tcp_rpc_flush'/>
 <use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='233' u='r' c='tcp_rpcs_compact_parse_execute'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='340' u='w' c='tcp_rpcs_parse_execute'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='343' u='r' c='tcp_rpcs_parse_execute'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='349' u='r' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='342' u='w' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='345' u='r' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='351' u='r' c='tcp_rpcs_parse_execute'/>

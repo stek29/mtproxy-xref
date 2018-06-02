@@ -2,6 +2,6 @@
 <dec f='MTProxy/net/net-tcp-rpc-client.c' l='62' type='int tcp_rpcc_connected(connection_job_t c)'/>
 <use f='MTProxy/net/net-tcp-rpc-client.c' l='80' u='r'/>
 <use f='MTProxy/net/net-tcp-rpc-client.c' l='80' u='r'/>
-<def f='MTProxy/net/net-tcp-rpc-client.c' l='450' ll='484' type='int tcp_rpcc_connected(connection_job_t C)'/>
-<doc f='MTProxy/net/net-tcp-rpc-client.c' l='448'>/* }}} */</doc>
-<doc f='MTProxy/net/net-tcp-rpc-client.c' l='450'>/* {{{ */</doc>
+<def f='MTProxy/net/net-tcp-rpc-client.c' l='452' ll='486' type='int tcp_rpcc_connected(connection_job_t C)'/>
+<doc f='MTProxy/net/net-tcp-rpc-client.c' l='450'>/* }}} */</doc>
+<doc f='MTProxy/net/net-tcp-rpc-client.c' l='452'>/* {{{ */</doc>

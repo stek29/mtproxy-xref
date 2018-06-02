@@ -23,5 +23,5 @@
 <use f='MTProxy/net/net-http-server.c' l='228' u='r' c='hts_parse_execute'/>
 <use f='MTProxy/net/net-http-server.c' l='626' u='r' c='hts_parse_execute'/>
 <use f='MTProxy/net/net-http-server.c' l='871' u='r' c='http_flush'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='462' u='w' c='tcp_rpcs_wakeup'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='476' u='w' c='tcp_rpcs_alarm'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='464' u='w' c='tcp_rpcs_wakeup'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='478' u='w' c='tcp_rpcs_alarm'/>

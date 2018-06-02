@@ -1,4 +1,5 @@
 <dec f='MTProxy/net/net-events.h' l='128' type='unsigned int get_my_ipv4()'/>
 <use f='MTProxy/engine/engine.c' l='235' u='c' c='engine_init'/>
 <def f='MTProxy/net/net-events.c' l='737' ll='769' type='unsigned int get_my_ipv4()'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='271' u='c' c='tcp_rpcs_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='241' u='c' c='tcp_rpcs_send_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='273' u='c' c='tcp_rpcs_process_handshake_packet'/>

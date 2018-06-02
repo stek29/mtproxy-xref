@@ -8,4 +8,4 @@
 <use f='MTProxy/net/net-rpc-targets.c' l='240' u='r' c='check_connection'/>
 <use f='MTProxy/net/net-rpc-targets.c' l='267' u='r' c='check_connection_arr'/>
 <use f='MTProxy/net/net-rpc-targets.c' l='359' u='r' c='rpc_target_get_state'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='522' u='r' c='tcp_rpcc_default_check_ready'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='524' u='r' c='tcp_rpcc_default_check_ready'/>

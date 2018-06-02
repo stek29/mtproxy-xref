@@ -3,5 +3,5 @@
 <doc f='MTProxy/net/net-crypto-aes.c' l='236'>// str := nonce_server.nonce_client.client_timestamp.server_ip.client_port.(&quot;SERVER&quot;/&quot;CLIENT&quot;).client_ip.server_port.master_key.nonce_server.[client_ipv6.server_ipv6].nonce_client
 // key := SUBSTR(MD5(str+1),0,12).SHA1(str)
 // iv  := MD5(str+2)</doc>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='675' u='c' c='tcp_rpcc_start_crypto'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='615' u='c' c='tcp_rpcs_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='677' u='c' c='tcp_rpcc_start_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='617' u='c' c='tcp_rpcs_init_crypto'/>

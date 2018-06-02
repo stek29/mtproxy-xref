@@ -3,5 +3,5 @@
 <def f='MTProxy/net/net-crypto-dh.c' l='112' ll='142' type='int init_dh_params()'/>
 <doc f='MTProxy/net/net-crypto-dh.c' l='111'>// result: 1 = OK, 0 = already done, -1 = error</doc>
 <use f='MTProxy/net/net-tcp-rpc-client.c' l='186' u='c' c='tcp_rpcc_process_nonce_packet'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='608' u='c' c='tcp_rpcc_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='610' u='c' c='tcp_rpcc_init_crypto'/>
 <use f='MTProxy/net/net-tcp-rpc-server.c' l='185' u='c' c='tcp_rpcs_process_nonce_packet'/>

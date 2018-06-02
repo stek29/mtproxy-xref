@@ -4,5 +4,5 @@
 <use f='MTProxy/mtproto/mtproto-proxy.c' l='1779' u='r' c='forward_tcp_query'/>
 <use f='MTProxy/net/net-connections.c' l='686' u='r' c='alloc_new_connection'/>
 <use f='MTProxy/net/net-connections.c' l='1198' u='r' c='alloc_new_socket_connection'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='675' u='r' c='tcp_rpcc_start_crypto'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='615' u='r' c='tcp_rpcs_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='677' u='r' c='tcp_rpcc_start_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='617' u='r' c='tcp_rpcs_init_crypto'/>

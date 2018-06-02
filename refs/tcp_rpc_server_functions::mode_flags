@@ -1,4 +1,4 @@
 <dec f='MTProxy/net/net-tcp-rpc-server.h' l='45' type='int'/>
 <offset>800</offset>
 <doc f='MTProxy/net/net-tcp-rpc-server.h' l='45'>/* 1 = ignore PID mismatch */</doc>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='289' u='r' c='tcp_rpcs_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='291' u='r' c='tcp_rpcs_process_handshake_packet'/>

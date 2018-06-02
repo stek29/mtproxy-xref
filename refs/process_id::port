@@ -16,9 +16,9 @@
 <use f='MTProxy/net/net-rpc-targets.c' l='165' u='r' c='rpc_target_delete_conn'/>
 <use f='MTProxy/net/net-rpc-targets.c' l='215' u='w' c='rpc_target_lookup_hp'/>
 <use f='MTProxy/net/net-stats.c' l='139' macro='1' u='r'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='250' u='r' c='tcp_rpcc_send_handshake_packet'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='252' u='w' c='tcp_rpcc_send_handshake_packet'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='301' u='r' c='tcp_rpcc_process_handshake_packet'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='301' u='r' c='tcp_rpcc_process_handshake_packet'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='291' u='r' c='tcp_rpcs_process_handshake_packet'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='291' u='r' c='tcp_rpcs_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='252' u='r' c='tcp_rpcc_send_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='254' u='w' c='tcp_rpcc_send_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='303' u='r' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='303' u='r' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='293' u='r' c='tcp_rpcs_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='293' u='r' c='tcp_rpcs_process_handshake_packet'/>

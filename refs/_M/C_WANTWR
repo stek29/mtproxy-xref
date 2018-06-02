@@ -7,5 +7,5 @@
 <use f='MTProxy/net/net-connections.c' l='1077' u='c'/>
 <use f='MTProxy/net/net-connections.c' l='1077' u='c'/>
 <use f='MTProxy/net/net-connections.c' l='1190' u='c'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='458' u='c'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='472' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='460' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='474' u='c'/>

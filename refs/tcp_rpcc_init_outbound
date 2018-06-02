@@ -2,4 +2,4 @@
 <dec f='MTProxy/net/net-tcp-rpc-client.c' l='65' type='int tcp_rpcc_init_outbound(connection_job_t c)'/>
 <use f='MTProxy/net/net-tcp-rpc-client.c' l='79' u='r'/>
 <use f='MTProxy/net/net-tcp-rpc-client.c' l='79' u='r'/>
-<def f='MTProxy/net/net-tcp-rpc-client.c' l='549' ll='580' type='int tcp_rpcc_init_outbound(connection_job_t C)'/>
+<def f='MTProxy/net/net-tcp-rpc-client.c' l='551' ll='582' type='int tcp_rpcc_init_outbound(connection_job_t C)'/>

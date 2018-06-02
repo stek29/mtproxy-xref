@@ -4,4 +4,4 @@
 <use f='MTProxy/net/net-tcp-rpc-server.c' l='94'/>
 <use f='MTProxy/net/net-tcp-rpc-server.c' l='93'/>
 <use f='MTProxy/net/net-tcp-rpc-server.c' l='94'/>
-<def f='MTProxy/net/net-tcp-rpc-server.c' l='489' ll='491' type='int tcp_rpcs_do_wakeup(connection_job_t c)'/>
+<def f='MTProxy/net/net-tcp-rpc-server.c' l='491' ll='493' type='int tcp_rpcs_do_wakeup(connection_job_t c)'/>

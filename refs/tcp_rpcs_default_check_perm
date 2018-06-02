@@ -5,4 +5,4 @@
 <dec f='MTProxy/net/net-tcp-rpc-server.c' l='65' type='int tcp_rpcs_default_check_perm(connection_job_t c)'/>
 <use f='MTProxy/net/net-tcp-rpc-server.c' l='95'/>
 <use f='MTProxy/net/net-tcp-rpc-server.c' l='95'/>
-<def f='MTProxy/net/net-tcp-rpc-server.c' l='553' ll='555' type='int tcp_rpcs_default_check_perm(connection_job_t C)'/>
+<def f='MTProxy/net/net-tcp-rpc-server.c' l='555' ll='557' type='int tcp_rpcs_default_check_perm(connection_job_t C)'/>

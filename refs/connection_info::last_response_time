@@ -7,4 +7,4 @@
 <use f='MTProxy/net/net-tcp-rpc-common.c' l='150' u='w' c='tcp_rpc_default_execute'/>
 <use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='336' u='w' c='tcp_rpcs_compact_parse_execute'/>
 <use f='MTProxy/net/net-tcp-rpc-server.c' l='105' u='w' c='tcp_rpcs_default_execute'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='436' u='w' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='438' u='w' c='tcp_rpcs_parse_execute'/>

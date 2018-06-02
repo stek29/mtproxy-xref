@@ -1,4 +1,4 @@
 <dec f='MTProxy/net/net-tcp-rpc-common.h' l='61' type='int'/>
 <offset>64</offset>
 <doc f='MTProxy/net/net-tcp-rpc-common.h' l='61'>/* 3 = AES+extra keys+DH */</doc>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='633' u='w' c='tcp_rpcs_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='635' u='w' c='tcp_rpcs_init_crypto'/>

@@ -6,5 +6,5 @@
 <def f='MTProxy/common/crc32c.c' l='660' type='crc32_partial_func_t'/>
 <doc f='MTProxy/common/crc32c.h' l='34'>//extern unsigned int crc32c_table[256];</doc>
 <use f='MTProxy/net/net-msg.c' l='1082' u='r' c='crc32c_process'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='323' u='r' c='tcp_rpcc_process_handshake_packet'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='424' u='r' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='325' u='r' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='426' u='r' c='tcp_rpcs_parse_execute'/>

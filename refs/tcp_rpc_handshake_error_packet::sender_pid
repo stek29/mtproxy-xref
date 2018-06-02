@@ -1,4 +1,4 @@
 <dec f='MTProxy/net/net-tcp-rpc-common.h' l='81' type='struct process_id'/>
 <offset>64</offset>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='273' u='a' c='tcp_rpcc_send_handshake_error_packet'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='257' u='a' c='tcp_rpcs_send_handshake_error_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='275' u='a' c='tcp_rpcc_send_handshake_error_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='259' u='a' c='tcp_rpcs_send_handshake_error_packet'/>

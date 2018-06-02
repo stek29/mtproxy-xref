@@ -3,6 +3,6 @@
 <use f='MTProxy/net/net-connections.c' l='1451' u='r' c='server_check_ready'/>
 <use f='MTProxy/net/net-connections.c' l='1452' u='r' c='server_check_ready'/>
 <use f='MTProxy/net/net-connections.c' l='1602' c='count_connection_num'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='504' u='r' c='tcp_rpcc_default_check_ready'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='516' u='r' c='tcp_rpcc_default_check_ready'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='526' u='r' c='tcp_rpcc_default_check_ready'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='506' u='r' c='tcp_rpcc_default_check_ready'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='518' u='r' c='tcp_rpcc_default_check_ready'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='528' u='r' c='tcp_rpcc_default_check_ready'/>

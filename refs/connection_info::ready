@@ -5,8 +5,8 @@
 <use f='MTProxy/net/net-connections.c' l='1452' u='w' c='server_check_ready'/>
 <use f='MTProxy/net/net-connections.c' l='1454' u='w' c='server_check_ready'/>
 <use f='MTProxy/net/net-connections.c' l='2069' u='r' c='check_connection_stopped'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='504' u='w' c='tcp_rpcc_default_check_ready'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='516' u='w' c='tcp_rpcc_default_check_ready'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='506' u='w' c='tcp_rpcc_default_check_ready'/>
 <use f='MTProxy/net/net-tcp-rpc-client.c' l='518' u='w' c='tcp_rpcc_default_check_ready'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='522' u='w' c='tcp_rpcc_default_check_ready'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='526' u='w' c='tcp_rpcc_default_check_ready'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='520' u='w' c='tcp_rpcc_default_check_ready'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='524' u='w' c='tcp_rpcc_default_check_ready'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='528' u='w' c='tcp_rpcc_default_check_ready'/>

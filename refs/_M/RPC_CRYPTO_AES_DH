@@ -1,8 +1,8 @@
 <dec f='MTProxy/net/net-tcp-rpc-common.h' l='152'/>
 <use f='MTProxy/net/net-tcp-rpc-client.c' l='156' u='c'/>
 <use f='MTProxy/net/net-tcp-rpc-client.c' l='183' u='c'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='629' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='631' u='c'/>
 <use f='MTProxy/net/net-tcp-rpc-server.c' l='159' u='c'/>
 <use f='MTProxy/net/net-tcp-rpc-server.c' l='182' u='c'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='593' u='c'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='633' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='595' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='635' u='c'/>

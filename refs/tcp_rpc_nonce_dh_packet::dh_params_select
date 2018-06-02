@@ -3,8 +3,8 @@
 <doc f='MTProxy/net/net-tcp-rpc-common.h' l='66'>/* least significant 32 bits of SHA1 of DH params : g:int p:string */</doc>
 <use f='MTProxy/net/net-tcp-rpc-client.c' l='188' u='r' c='tcp_rpcc_process_nonce_packet'/>
 <use f='MTProxy/net/net-tcp-rpc-client.c' l='188' u='r' c='tcp_rpcc_process_nonce_packet'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='632' u='w' c='tcp_rpcc_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='634' u='w' c='tcp_rpcc_init_crypto'/>
 <use f='MTProxy/net/net-tcp-rpc-server.c' l='187' u='r' c='tcp_rpcs_process_nonce_packet'/>
 <use f='MTProxy/net/net-tcp-rpc-server.c' l='187' u='r' c='tcp_rpcs_process_nonce_packet'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='597' u='r' c='tcp_rpcs_init_crypto'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='636' u='w' c='tcp_rpcs_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='599' u='r' c='tcp_rpcs_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='638' u='w' c='tcp_rpcs_init_crypto'/>

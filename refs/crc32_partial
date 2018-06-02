@@ -4,6 +4,6 @@
 <use f='MTProxy/common/crc32.c' l='1040' u='w' c='crc32_init'/>
 <use f='MTProxy/common/crc32.c' l='1045' u='w' c='crc32_init'/>
 <use f='MTProxy/net/net-msg.c' l='1098' u='r' c='crc32_process'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='555' u='r' c='tcp_rpcc_init_outbound'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='498' u='r' c='tcp_rpcs_init_accepted'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='525' u='r' c='tcp_rpcs_init_accepted_nohs'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='557' u='r' c='tcp_rpcc_init_outbound'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='500' u='r' c='tcp_rpcs_init_accepted'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='527' u='r' c='tcp_rpcs_init_accepted_nohs'/>

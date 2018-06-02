@@ -1,2 +1,2 @@
-<def f='MTProxy/net/net-tcp-rpc-server.c' l='532' ll='548' type='int tcp_rpcs_init_fake_crypto(connection_job_t c)'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='568' u='c' c='tcp_rpcs_init_crypto'/>
+<def f='MTProxy/net/net-tcp-rpc-server.c' l='534' ll='550' type='int tcp_rpcs_init_fake_crypto(connection_job_t c)'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='570' u='c' c='tcp_rpcs_init_crypto'/>

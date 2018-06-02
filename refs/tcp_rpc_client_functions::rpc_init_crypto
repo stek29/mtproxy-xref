@@ -3,5 +3,5 @@
 <doc f='MTProxy/net/net-tcp-rpc-client.h' l='35'>/* 1 = ok; -1 = no crypto */</doc>
 <use f='MTProxy/mtproto/mtproto-proxy.c' l='775' u='w'/>
 <use f='MTProxy/net/net-tcp-rpc-client.c' l='100' u='w'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='471' u='r' c='tcp_rpcc_connected'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='472' u='r' c='tcp_rpcc_connected'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='473' u='r' c='tcp_rpcc_connected'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='474' u='r' c='tcp_rpcc_connected'/>

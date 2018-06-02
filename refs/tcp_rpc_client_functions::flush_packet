@@ -3,5 +3,5 @@
 <doc f='MTProxy/net/net-tcp-rpc-client.h' l='33'>/* execute this to push query to server */</doc>
 <use f='MTProxy/mtproto/mtproto-proxy.c' l='773' u='w'/>
 <use f='MTProxy/net/net-tcp-rpc-client.c' l='98' u='w'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='480' u='r' c='tcp_rpcc_connected'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='481' u='r' c='tcp_rpcc_connected'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='482' u='r' c='tcp_rpcc_connected'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='483' u='r' c='tcp_rpcc_connected'/>

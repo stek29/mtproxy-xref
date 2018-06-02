@@ -3,4 +3,4 @@
 <use f='MTProxy/mtproto/mtproto-proxy.c' l='772'/>
 <use f='MTProxy/net/net-tcp-rpc-client.c' l='97'/>
 <use f='MTProxy/net/net-tcp-rpc-client.c' l='97'/>
-<def f='MTProxy/net/net-tcp-rpc-client.c' l='500' ll='527' type='int tcp_rpcc_default_check_ready(connection_job_t C)'/>
+<def f='MTProxy/net/net-tcp-rpc-client.c' l='502' ll='529' type='int tcp_rpcc_default_check_ready(connection_job_t C)'/>

@@ -2,4 +2,4 @@
 <dec f='MTProxy/net/net-tcp-rpc-client.c' l='66' type='int tcp_rpc_client_check_ready(connection_job_t c)'/>
 <use f='MTProxy/net/net-tcp-rpc-client.c' l='82' u='r'/>
 <use f='MTProxy/net/net-tcp-rpc-client.c' l='82' u='r'/>
-<def f='MTProxy/net/net-tcp-rpc-client.c' l='496' ll='498' type='int tcp_rpc_client_check_ready(connection_job_t c)'/>
+<def f='MTProxy/net/net-tcp-rpc-client.c' l='498' ll='500' type='int tcp_rpc_client_check_ready(connection_job_t c)'/>

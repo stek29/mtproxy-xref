@@ -1,7 +1,7 @@
 <dec f='MTProxy/net/net-connections.h' l='428' type='unsigned int nat_translate_ip(unsigned int local_ip)'/>
 <use f='MTProxy/mtproto/mtproto-proxy.c' l='1790' u='c' c='forward_tcp_query'/>
 <def f='MTProxy/net/net-connections.c' l='2169' ll='2180' type='unsigned int nat_translate_ip(unsigned int local_ip)'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='675' u='c' c='tcp_rpcc_start_crypto'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='675' u='c' c='tcp_rpcc_start_crypto'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='615' u='c' c='tcp_rpcs_init_crypto'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='615' u='c' c='tcp_rpcs_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='677' u='c' c='tcp_rpcc_start_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='677' u='c' c='tcp_rpcc_start_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='617' u='c' c='tcp_rpcs_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='617' u='c' c='tcp_rpcs_init_crypto'/>

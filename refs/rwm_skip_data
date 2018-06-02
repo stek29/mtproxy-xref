@@ -9,9 +9,9 @@
 <doc f='MTProxy/net/net-msg.c' l='1147'>/* }}} */</doc>
 <doc f='MTProxy/net/net-msg.c' l='1149'>/* {{{ */</doc>
 <use f='MTProxy/net/net-tcp-connections.c' l='141' u='c' c='cpu_tcp_server_reader'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='354' u='c' c='tcp_rpcc_parse_execute'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='388' u='c' c='tcp_rpcc_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='356' u='c' c='tcp_rpcc_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='390' u='c' c='tcp_rpcc_parse_execute'/>
 <use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='220' u='c' c='tcp_rpcs_compact_parse_execute'/>
 <use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='314' u='c' c='tcp_rpcs_compact_parse_execute'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='363' u='c' c='tcp_rpcs_parse_execute'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='394' u='c' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='365' u='c' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='396' u='c' c='tcp_rpcs_parse_execute'/>

@@ -4,4 +4,4 @@
 <dec f='MTProxy/net/net-tcp-rpc-server.c' l='63' type='int tcp_rpcs_close_connection(connection_job_t c, int who)'/>
 <use f='MTProxy/net/net-tcp-rpc-server.c' l='74' u='r'/>
 <use f='MTProxy/net/net-tcp-rpc-server.c' l='74' u='r'/>
-<def f='MTProxy/net/net-tcp-rpc-server.c' l='480' ll='486' type='int tcp_rpcs_close_connection(connection_job_t C, int who)'/>
+<def f='MTProxy/net/net-tcp-rpc-server.c' l='482' ll='488' type='int tcp_rpcs_close_connection(connection_job_t C, int who)'/>

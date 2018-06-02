@@ -19,5 +19,5 @@
 <doc f='MTProxy/net/net-msg.c' l='563'>/* {{{ */</doc>
 <use f='MTProxy/net/net-tcp-connections.c' l='78' u='c' c='cpu_tcp_server_writer'/>
 <use f='MTProxy/net/net-tcp-connections.c' l='81' u='c' c='cpu_tcp_server_writer'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='372' u='c' c='tcp_rpcc_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='374' u='c' c='tcp_rpcc_parse_execute'/>
 <use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='222' u='c' c='tcp_rpcs_compact_parse_execute'/>

@@ -1,5 +1,5 @@
 <dec f='MTProxy/net/net-tcp-rpc-server.h' l='47' type='void *'/>
 <offset>960</offset>
 <use f='MTProxy/engine/engine-net.c' l='128' u='w' c='engine_set_http_fallback'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='337' u='r' c='tcp_rpcs_parse_execute'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='340' u='r' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='339' u='r' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='342' u='r' c='tcp_rpcs_parse_execute'/>

@@ -5,5 +5,5 @@
 <use f='MTProxy/net/net-msg.c' l='733' u='c' c='rwm_trunc'/>
 <doc f='MTProxy/net/net-msg.c' l='698'>/* }}} */</doc>
 <doc f='MTProxy/net/net-msg.c' l='700'>/* {{{ */</doc>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='378' u='c' c='tcp_rpcc_parse_execute'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='381' u='c' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='380' u='c' c='tcp_rpcc_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='383' u='c' c='tcp_rpcs_parse_execute'/>

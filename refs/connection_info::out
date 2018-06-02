@@ -13,7 +13,7 @@
 <use f='MTProxy/net/net-tcp-connections.c' l='231' u='m' c='cpu_tcp_aes_crypto_needed_output_bytes'/>
 <use f='MTProxy/net/net-tcp-connections.c' l='241' u='a' c='cpu_tcp_aes_crypto_ctr128_encrypt_output'/>
 <use f='MTProxy/net/net-tcp-connections.c' l='245' u='a' c='cpu_tcp_aes_crypto_ctr128_encrypt_output'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='663' u='m' c='tcp_rpcc_start_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='665' u='m' c='tcp_rpcc_start_crypto'/>
 <use f='MTProxy/net/net-tcp-rpc-common.c' l='84' u='a' c='tcp_rpc_conn_send_im'/>
 <use f='MTProxy/net/net-tcp-rpc-common.c' l='169' u='a' c='tcp_rpc_write_packet'/>
 <use f='MTProxy/net/net-tcp-rpc-common.c' l='180' u='a' c='tcp_rpc_write_packet_compact'/>

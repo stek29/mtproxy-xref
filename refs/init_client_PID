@@ -1,3 +1,4 @@
 <dec f='MTProxy/common/pid.h' l='52' type='void init_client_PID(unsigned int ip)'/>
 <def f='MTProxy/common/pid.c' l='50' ll='56' type='void init_client_PID(unsigned int ip)'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='268' u='c' c='tcp_rpcc_send_handshake_error_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='247' u='c' c='tcp_rpcc_send_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='270' u='c' c='tcp_rpcc_send_handshake_error_packet'/>

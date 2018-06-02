@@ -2,5 +2,5 @@
 <dec f='MTProxy/net/net-tcp-rpc-client.c' l='64' type='int tcp_rpcc_close_connection(connection_job_t c, int who)'/>
 <use f='MTProxy/net/net-tcp-rpc-client.c' l='78' u='r'/>
 <use f='MTProxy/net/net-tcp-rpc-client.c' l='78' u='r'/>
-<def f='MTProxy/net/net-tcp-rpc-client.c' l='487' ll='493' type='int tcp_rpcc_close_connection(connection_job_t C, int who)'/>
-<doc f='MTProxy/net/net-tcp-rpc-client.c' l='485'>/* }}} */</doc>
+<def f='MTProxy/net/net-tcp-rpc-client.c' l='489' ll='495' type='int tcp_rpcc_close_connection(connection_job_t C, int who)'/>
+<doc f='MTProxy/net/net-tcp-rpc-client.c' l='487'>/* }}} */</doc>

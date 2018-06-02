@@ -35,6 +35,6 @@
 <use f='MTProxy/net/net-msg.c' l='857' macro='1' u='r'/>
 <use f='MTProxy/net/net-msg.c' l='883' macro='1' u='r'/>
 <use f='MTProxy/net/net-msg.c' l='901' macro='1' u='r'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='396' macro='1' u='r'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='398' macro='1' u='r'/>
 <use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='329' macro='1' u='r'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='400' macro='1' u='r'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='402' macro='1' u='r'/>

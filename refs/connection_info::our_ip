@@ -6,7 +6,8 @@
 <use f='MTProxy/net/net-connections.c' l='670' u='w' c='alloc_new_connection'/>
 <use f='MTProxy/net/net-connections.c' l='679' u='w' c='alloc_new_connection'/>
 <use f='MTProxy/net/net-connections.c' l='1192' u='r' c='alloc_new_socket_connection'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='268' u='r' c='tcp_rpcc_send_handshake_error_packet'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='675' u='r' c='tcp_rpcc_start_crypto'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='269' u='r' c='tcp_rpcs_process_handshake_packet'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='615' u='r' c='tcp_rpcs_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='247' u='r' c='tcp_rpcc_send_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='270' u='r' c='tcp_rpcc_send_handshake_error_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='677' u='r' c='tcp_rpcc_start_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='271' u='r' c='tcp_rpcs_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='617' u='r' c='tcp_rpcs_init_crypto'/>

@@ -8,11 +8,11 @@
 <use f='MTProxy/net/net-tcp-rpc-client.c' l='198' u='r' c='tcp_rpcc_process_nonce_packet'/>
 <use f='MTProxy/net/net-tcp-rpc-client.c' l='198' u='r' c='tcp_rpcc_process_nonce_packet'/>
 <use f='MTProxy/net/net-tcp-rpc-client.c' l='227' u='r' c='tcp_rpcc_process_nonce_packet'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='623' u='w' c='tcp_rpcc_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='625' u='w' c='tcp_rpcc_init_crypto'/>
 <use f='MTProxy/net/net-tcp-rpc-server.c' l='173' u='r' c='tcp_rpcs_process_nonce_packet'/>
 <use f='MTProxy/net/net-tcp-rpc-server.c' l='192' u='w' c='tcp_rpcs_process_nonce_packet'/>
 <use f='MTProxy/net/net-tcp-rpc-server.c' l='192' u='r' c='tcp_rpcs_process_nonce_packet'/>
 <use f='MTProxy/net/net-tcp-rpc-server.c' l='194' u='r' c='tcp_rpcs_process_nonce_packet'/>
 <use f='MTProxy/net/net-tcp-rpc-server.c' l='194' u='r' c='tcp_rpcs_process_nonce_packet'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='575' u='r' c='tcp_rpcs_init_crypto'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='626' u='w' c='tcp_rpcs_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='577' u='r' c='tcp_rpcs_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='628' u='w' c='tcp_rpcs_init_crypto'/>

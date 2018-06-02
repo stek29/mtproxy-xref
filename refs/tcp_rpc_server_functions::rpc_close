@@ -2,4 +2,4 @@
 <offset>704</offset>
 <use f='MTProxy/engine/engine-net.c' l='119' u='w'/>
 <use f='MTProxy/mtproto/mtproto-proxy.c' l='1019' u='w'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='481' u='r' c='tcp_rpcs_close_connection'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='483' u='r' c='tcp_rpcs_close_connection'/>

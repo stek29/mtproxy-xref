@@ -5,6 +5,6 @@
 <use f='MTProxy/net/net-rpc-targets.c' l='241' u='c' c='check_connection'/>
 <use f='MTProxy/net/net-rpc-targets.c' l='246' u='c' c='check_connection'/>
 <use f='MTProxy/net/net-rpc-targets.c' l='270' u='c' c='check_connection_arr'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='299' u='c' c='tcp_rpcc_process_handshake_packet'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='309' u='c' c='tcp_rpcc_process_handshake_packet'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='289' u='c' c='tcp_rpcs_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='301' u='c' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='311' u='c' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='291' u='c' c='tcp_rpcs_process_handshake_packet'/>

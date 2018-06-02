@@ -1,4 +1,4 @@
 <dec f='MTProxy/net/net-tcp-rpc-client.h' l='41' type='int'/>
 <offset>768</offset>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='347' u='r' c='tcp_rpcc_parse_execute'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='347' u='r' c='tcp_rpcc_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='349' u='r' c='tcp_rpcc_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='349' u='r' c='tcp_rpcc_parse_execute'/>

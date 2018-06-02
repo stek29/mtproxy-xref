@@ -1,8 +1,8 @@
 <dec f='MTProxy/net/net-tcp-rpc-common.h' l='145'/>
 <doc f='MTProxy/net/net-tcp-rpc-common.h' l='143'>//extern int default_rpc_flags;  /* 0 = compatibility mode, RPC_USE_CRC32C = allow both CRC32C and CRC32 */</doc>
 <use f='MTProxy/net/net-tcp-rpc-client.c' l='125' u='c'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='537' u='c'/>
-<use f='MTProxy/net/net-tcp-rpc-client.c' l='622' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='539' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='624' u='c'/>
 <use f='MTProxy/net/net-tcp-rpc-server.c' l='131' u='c'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='539' u='c'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='625' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='541' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='627' u='c'/>

@@ -3,5 +3,5 @@
 <use f='MTProxy/mtproto/mtproto-proxy.c' l='1022' u='w'/>
 <use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='304' u='r' c='tcp_rpcs_compact_parse_execute'/>
 <use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='304' u='r' c='tcp_rpcs_compact_parse_execute'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='356' u='r' c='tcp_rpcs_parse_execute'/>
-<use f='MTProxy/net/net-tcp-rpc-server.c' l='356' u='r' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='358' u='r' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='358' u='r' c='tcp_rpcs_parse_execute'/>

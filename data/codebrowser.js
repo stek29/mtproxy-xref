@@ -21,7 +21,7 @@
 
 if (!data_path) {
     // Previous version of the generator (1.7 and before) did not have data_path defined
-    var data_path = root_path + "/../data";
+    var data_path = root_path + "/data";
 }
 
 //Styles:

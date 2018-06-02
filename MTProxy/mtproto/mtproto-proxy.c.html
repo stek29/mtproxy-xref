@@ -3,12 +3,12 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>mtproto-proxy.c source code [MTProxy/mtproto/mtproto-proxy.c] - Woboq Code Browser</title>
 <meta name="woboq:interestingDefinitions" content="client_packet_info,ext_connection,ext_connection_ref,http_query_info,job_callback_info,main,rpcs_exec_data,worker_stats "/>
-<link rel="stylesheet" href="data//qtcreator.css" title="QtCreator"/>
-<link rel="alternate stylesheet" href="data//kdevelop.css" title="KDevelop"/>
-<script type="text/javascript" src="data//jquery/jquery.min.js"></script>
-<script type="text/javascript" src="data//jquery/jquery-ui.min.js"></script>
-<script>var file = 'MTProxy/mtproto/mtproto-proxy.c'; var root_path = '../..'; var data_path = 'data/';</script>
-<script src='data//codebrowser.js'></script>
+<link rel="stylesheet" href="../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'MTProxy/mtproto/mtproto-proxy.c'; var root_path = '../..'; var data_path = '../../data';</script>
+<script src='../../data/codebrowser.js'></script>
 </head>
 <body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='..'>MTProxy</a>/<a href='./'>mtproto</a>/<a href='mtproto-proxy.c.html'>mtproto-proxy.c</a></h1></div>
 <hr/><div id='content'><table class="code">
@@ -82,7 +82,7 @@
 <tr><th id="68">68</th><td><u>#<span data-ppcond="66">endif</span></u></td></tr>
 <tr><th id="69">69</th><td></td></tr>
 <tr><th id="70">70</th><td><u>#define <dfn class="macro" id="_M/VERSION_STR" data-ref="_M/VERSION_STR">VERSION_STR</dfn>	"mtproxy-0.01"</u></td></tr>
-<tr><th id="71">71</th><td><em>const</em> <em>char</em> <dfn class="decl def" id="FullVersionStr" title='FullVersionStr' data-ref="FullVersionStr">FullVersionStr</dfn>[] = <a class="macro" href="#70" title="&quot;mtproxy-0.01&quot;" data-ref="_M/VERSION_STR">VERSION_STR</a> <q>" compiled at "</q> <span class="macro" title="&quot;Jun  2 2018&quot;" data-ref="_M/__DATE__">__DATE__</span> <q>" "</q> <span class="macro" title="&quot;12:35:46&quot;" data-ref="_M/__TIME__">__TIME__</span> <q>" by gcc "</q> <span class="macro" title="&quot;4.2.1 Compatible Clang 3.8.0 (tags/RELEASE_380/final)&quot;" data-ref="_M/__VERSION__">__VERSION__</span> <q>" "</q></td></tr>
+<tr><th id="71">71</th><td><em>const</em> <em>char</em> <dfn class="decl def" id="FullVersionStr" title='FullVersionStr' data-ref="FullVersionStr">FullVersionStr</dfn>[] = <a class="macro" href="#70" title="&quot;mtproxy-0.01&quot;" data-ref="_M/VERSION_STR">VERSION_STR</a> <q>" compiled at "</q> <span class="macro" title="&quot;Jun  2 2018&quot;" data-ref="_M/__DATE__">__DATE__</span> <q>" "</q> <span class="macro" title="&quot;12:59:25&quot;" data-ref="_M/__TIME__">__TIME__</span> <q>" by gcc "</q> <span class="macro" title="&quot;4.2.1 Compatible Clang 3.8.0 (tags/RELEASE_380/final)&quot;" data-ref="_M/__VERSION__">__VERSION__</span> <q>" "</q></td></tr>
 <tr><th id="72">72</th><td><u>#<span data-ppcond="72">ifdef</span> <span class="macro" data-ref="_M/__LP64__">__LP64__</span></u></td></tr>
 <tr><th id="73">73</th><td>  <q>"64-bit"</q></td></tr>
 <tr><th id="74">74</th><td><u>#<span data-ppcond="72">else</span></u></td></tr>
@@ -659,7 +659,7 @@
 <tr><th id="645">645</th><td>	     <q>"http_qps\t%.6f\n"</q></td></tr>
 <tr><th id="646">646</th><td>	     <q>"proxy_mode\t%d\n"</q></td></tr>
 <tr><th id="647">647</th><td>	     <q>"proxy_tag_set\t%d\n"</q></td></tr>
-<tr><th id="648">648</th><td>	     <q>"version\t"</q> <a class="macro" href="#70" title="&quot;mtproxy-0.01&quot;" data-ref="_M/VERSION_STR">VERSION_STR</a> <q>" compiled at "</q> <span class="macro" title="&quot;Jun  2 2018&quot;" data-ref="_M/__DATE__">__DATE__</span> <q>" "</q> <span class="macro" title="&quot;12:35:46&quot;" data-ref="_M/__TIME__">__TIME__</span> <q>" by gcc "</q> <span class="macro" title="&quot;4.2.1 Compatible Clang 3.8.0 (tags/RELEASE_380/final)&quot;" data-ref="_M/__VERSION__">__VERSION__</span> <q>" "</q></td></tr>
+<tr><th id="648">648</th><td>	     <q>"version\t"</q> <a class="macro" href="#70" title="&quot;mtproxy-0.01&quot;" data-ref="_M/VERSION_STR">VERSION_STR</a> <q>" compiled at "</q> <span class="macro" title="&quot;Jun  2 2018&quot;" data-ref="_M/__DATE__">__DATE__</span> <q>" "</q> <span class="macro" title="&quot;12:59:25&quot;" data-ref="_M/__TIME__">__TIME__</span> <q>" by gcc "</q> <span class="macro" title="&quot;4.2.1 Compatible Clang 3.8.0 (tags/RELEASE_380/final)&quot;" data-ref="_M/__VERSION__">__VERSION__</span> <q>" "</q></td></tr>
 <tr><th id="649">649</th><td><u>#<span data-ppcond="649">ifdef</span> <span class="macro" data-ref="_M/__LP64__">__LP64__</span></u></td></tr>
 <tr><th id="650">650</th><td>	     <q>"64-bit"</q></td></tr>
 <tr><th id="651">651</th><td><u>#<span data-ppcond="649">else</span></u></td></tr>

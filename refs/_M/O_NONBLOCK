@@ -1,0 +1,5 @@
+<dec f='include/x86_64-linux-gnu/bits/fcntl-linux.h' l='62'/>
+<use f='MTProxy/engine/engine.c' l='137' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='600' u='c'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='139' u='c'/>
+<use f='MTProxy/net/net-events.c' l='470' u='c'/>

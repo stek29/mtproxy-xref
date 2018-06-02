@@ -1,0 +1,13 @@
+<dec f='MTProxy/common/tl-parse.h' l='815' type='void tl_out_state_free(struct tl_out_state * tlio_out)'/>
+<def f='MTProxy/common/tl-parse.c' l='970' ll='979' type='void tl_out_state_free(struct tl_out_state * tlio_out)'/>
+<use f='MTProxy/engine/engine-rpc.c' l='401' u='c' c='process_act_atom_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='412' u='c' c='process_act_atom_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='437' u='c' c='process_act_atom_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='519' u='c' c='process_query_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='549' u='c' c='process_query_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='575' u='c' c='process_query_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='757' u='c' c='query_job_run'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='787' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1578' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1612' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1816' macro='1' u='c'/>

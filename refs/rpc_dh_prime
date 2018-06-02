@@ -1,0 +1,5 @@
+<def f='MTProxy/net/net-crypto-dh.c' l='79' type='BIGNUM *'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='122' u='w' c='init_dh_params'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='123' u='r' c='init_dh_params'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='155' u='r' c='create_g_a'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='190' u='r' c='dh_inner_round'/>

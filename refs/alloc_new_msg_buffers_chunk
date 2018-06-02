@@ -1,0 +1,4 @@
+<def f='MTProxy/net/net-msg-buffers.c' l='163' ll='266' type='struct msg_buffers_chunk * alloc_new_msg_buffers_chunk(struct msg_buffers_chunk * CH)'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='349' u='c' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='391' u='c' c='alloc_msg_buffer_internal'/>
+<doc f='MTProxy/net/net-msg-buffers.c' l='162'>// returns locked chunk</doc>

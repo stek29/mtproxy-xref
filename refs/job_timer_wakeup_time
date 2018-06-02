@@ -1,0 +1,2 @@
+<dec f='MTProxy/jobs/jobs.h' l='361' type='double job_timer_wakeup_time(job_t job)'/>
+<def f='MTProxy/jobs/jobs.c' l='1419' ll='1422' type='double job_timer_wakeup_time(job_t job)'/>

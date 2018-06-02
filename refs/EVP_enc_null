@@ -1,0 +1,2 @@
+<dec f='include/openssl/evp.h' l='742' type='const EVP_CIPHER * EVP_enc_null()'/>
+<doc f='include/openssl/evp.h' l='742'>/* does nothing :-) */</doc>

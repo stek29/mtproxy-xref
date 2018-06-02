@@ -1,0 +1,4 @@
+<dec f='MTProxy/jobs/jobs.h' l='276' type='void * job_thread_ex(void * arg, void (*)(void *, int) work_one)'/>
+<def f='MTProxy/jobs/jobs.c' l='885' ll='951' type='void * job_thread_ex(void * arg, void (*)(void *, int) work_one)'/>
+<use f='MTProxy/jobs/jobs.c' l='1025' u='c' c='job_thread'/>
+<use f='MTProxy/jobs/jobs.c' l='1029' u='c' c='job_thread_sub'/>

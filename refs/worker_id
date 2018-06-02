@@ -1,0 +1,4 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='407' type='int'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='537' u='r' c='update_local_stats'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='538' u='r' c='update_local_stats'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2247' u='w' c='mtfront_pre_init'/>

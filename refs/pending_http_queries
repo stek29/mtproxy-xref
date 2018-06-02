@@ -1,0 +1,8 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='412' type='int'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='438' u='r' c='update_local_stats_copy'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='708' u='r' c='mtfront_prepare_stats'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1045' u='w' c='mtproto_http_close'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1340' u='w' c='http_query_job_run'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1451' u='w' c='hts_execute'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1533' u='w' c='mtproto_http_alarm'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1552' u='w' c='finish_postponed_http_response'/>

@@ -1,0 +1,5 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='2055' ll='2072' type='void mtfront_pre_loop()'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2294'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2294'/>
+<doc f='MTProxy/mtproto/mtproto-proxy.c' l='2052'>// static double next_create_outbound;
+// int outbound_connections_per_second = DEFAULT_OUTBOUND_CONNECTION_CREATION_RATE;</doc>

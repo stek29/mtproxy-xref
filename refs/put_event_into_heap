@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-events.h' l='87' type='int put_event_into_heap(event_t * ev)'/>
+<def f='MTProxy/net/net-events.c' l='160' ll='177' type='int put_event_into_heap(event_t * ev)'/>
+<use f='MTProxy/net/net-events.c' l='181' u='c' c='put_event_into_heap_tail'/>
+<use f='MTProxy/net/net-events.c' l='350' u='c' c='epoll_runqueue'/>
+<use f='MTProxy/net/net-events.c' l='392' u='c' c='epoll_fetch_events'/>

@@ -1,0 +1,21 @@
+<def f='MTProxy/common/server-functions.c' l='270' type='struct engine_parse_option *'/>
+<use f='MTProxy/common/server-functions.c' l='277' u='r' c='find_parse_option'/>
+<use f='MTProxy/common/server-functions.c' l='291' u='r' c='find_parse_option_name'/>
+<use f='MTProxy/common/server-functions.c' l='307' u='r' c='parse_option_up'/>
+<use f='MTProxy/common/server-functions.c' l='321' u='r' c='parse_option_down'/>
+<use f='MTProxy/common/server-functions.c' l='342' u='w' c='parse_option_internal'/>
+<use f='MTProxy/common/server-functions.c' l='342' u='r' c='parse_option_internal'/>
+<use f='MTProxy/common/server-functions.c' l='345' u='r' c='parse_option_internal'/>
+<use f='MTProxy/common/server-functions.c' l='395' u='r' c='remove_parse_option_completely'/>
+<use f='MTProxy/common/server-functions.c' l='403' u='r' c='remove_parse_option_completely'/>
+<use f='MTProxy/common/server-functions.c' l='403' u='r' c='remove_parse_option_completely'/>
+<use f='MTProxy/common/server-functions.c' l='415' u='r' c='remove_parse_option'/>
+<use f='MTProxy/common/server-functions.c' l='422' u='r' c='remove_parse_option'/>
+<use f='MTProxy/common/server-functions.c' l='422' u='r' c='remove_parse_option'/>
+<use f='MTProxy/common/server-functions.c' l='470' u='r' c='parse_option_alias'/>
+<use f='MTProxy/common/server-functions.c' l='492' u='r' c='parse_option_long_alias'/>
+<use f='MTProxy/common/server-functions.c' l='503' u='r' c='parse_usage'/>
+<use f='MTProxy/common/server-functions.c' l='526' u='r' c='parse_usage'/>
+<use f='MTProxy/common/server-functions.c' l='632' u='r' c='parse_one_option'/>
+<use f='MTProxy/common/server-functions.c' l='644' u='r' c='parse_engine_options_long'/>
+<use f='MTProxy/common/server-functions.c' l='661' u='r' c='parse_engine_options_long'/>

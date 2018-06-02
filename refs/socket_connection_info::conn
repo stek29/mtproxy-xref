@@ -1,0 +1,16 @@
+<dec f='MTProxy/net/net-connections.h' l='254' type='connection_job_t'/>
+<offset>512</offset>
+<use f='MTProxy/net/net-connections.c' l='808' u='r' c='fail_socket_connection'/>
+<use f='MTProxy/net/net-connections.c' l='825' u='r' c='net_server_socket_free'/>
+<use f='MTProxy/net/net-connections.c' l='826' u='r' c='net_server_socket_free'/>
+<use f='MTProxy/net/net-connections.c' l='827' c='net_server_socket_free'/>
+<use f='MTProxy/net/net-connections.c' l='827' u='r' c='net_server_socket_free'/>
+<use f='MTProxy/net/net-connections.c' l='827' u='w' c='net_server_socket_free'/>
+<use f='MTProxy/net/net-connections.c' l='938' u='r' c='net_server_socket_reader'/>
+<use f='MTProxy/net/net-connections.c' l='939' u='r' c='net_server_socket_reader'/>
+<use f='MTProxy/net/net-connections.c' l='940' u='r' c='net_server_socket_reader'/>
+<use f='MTProxy/net/net-connections.c' l='1049' u='r' c='net_server_socket_read_write'/>
+<use f='MTProxy/net/net-connections.c' l='1052' u='r' c='net_server_socket_read_write'/>
+<use f='MTProxy/net/net-connections.c' l='1189' u='w' c='alloc_new_socket_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1425' u='r' c='connection_get_by_fd'/>
+<use f='MTProxy/net/net-connections.c' l='1426' u='r' c='connection_get_by_fd'/>

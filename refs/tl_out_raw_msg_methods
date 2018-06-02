@@ -1,0 +1,24 @@
+<dec f='MTProxy/common/tl-parse.h' l='154' type='const struct tl_out_methods'/>
+<def f='MTProxy/common/tl-parse.c' l='454' ll='471' type='const struct tl_out_methods'/>
+<use f='MTProxy/common/tl-parse.c' l='783' u='a' c='tls_init_raw_msg'/>
+<doc f='MTProxy/common/tl-parse.c' l='432'>/*
+const struct tl_out_methods tl_out_conn_simple_methods = {
+  .store_get_ptr = __tl_conn_store_get_ptr,
+  .store_raw_data = __tl_conn_store_raw_data,
+  .store_raw_msg = __tl_conn_store_raw_msg,
+  .store_read_back =  __tl_conn_store_read_back,
+  .store_read_back_nondestruct = __tl_conn_store_read_back_nondestruct,
+  // .store_flush = __tl_conn_store_flush,
+  .store_clear = __tl_conn_store_clear,
+  .copy_through = 
+    {
+      0, // none
+      __tl_str_conn_copy_through, // str
+      __tl_raw_msg_conn_copy_through, // raw_msg
+      __tl_raw_msg_conn_copy_through, // tcp raw msg
+      __tl_raw_msg_conn_copy_through, // gms msg
+      __tl_raw_msg_conn_copy_through  // gms bcast
+    },
+  .flags = TLF_PERMANENT | TLF_DISABLE_PREPEND | TLF_NO_AUTOFLUSH | TLF_NOALIGN,
+  .prepend_bytes = 0
+};*/</doc>

@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-http-server.h' l='92' type='conn_type_t'/>
+<use f='MTProxy/engine/engine.c' l='602' u='a' c='default_main'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1926' u='a' c='init_ct_server_mtfront'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1927' u='a' c='init_ct_server_mtfront'/>
+<def f='MTProxy/net/net-http-server.c' l='62' ll='75' type='conn_type_t'/>

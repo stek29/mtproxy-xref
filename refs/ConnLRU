@@ -1,0 +1,11 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='1850' type='struct ext_connection'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1850' u='a'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1850' u='a'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1850' u='a'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1850' u='a'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1862' u='m' c='lru_insert_ext_conn'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1863' u='a' c='lru_insert_ext_conn'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1887' u='m' c='check_all_conn_buffers'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1887' u='a' c='check_all_conn_buffers'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1888' u='m' c='check_all_conn_buffers'/>
+<doc f='MTProxy/mtproto/mtproto-proxy.c' l='1848'>/* ------------------------ FLOOD CONTROL -------------------------- */</doc>

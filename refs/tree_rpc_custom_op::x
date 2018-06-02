@@ -1,0 +1,28 @@
+<dec f='MTProxy/vv/vv-tree.c' l='62' type='struct rpc_custom_op *'/>
+<use f='MTProxy/vv/vv-tree.c' l='143' u='r' c='tree_lookup_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='143' u='r' c='tree_lookup_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='152' u='r' c='tree_lookup_next_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='152' u='r' c='tree_lookup_next_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='186' u='r' c='tree_lookup_ptr_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='186' u='r' c='tree_lookup_ptr_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='189' u='r' c='tree_lookup_ptr_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='218' u='r' c='tree_split_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='218' u='r' c='tree_split_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='283' u='r' c='tree_insert_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='283' u='r' c='tree_insert_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='425' u='r' c='tree_delete_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='425' u='r' c='tree_delete_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='504' u='r' c='tree_act_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='511' u='r' c='tree_act_ex_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='518' u='r' c='tree_act_ex2_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='525' u='r' c='tree_act_ex3_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='554' u='r' c='tree_check_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='554' u='r' c='tree_check_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='554' u='r' c='tree_check_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='554' u='r' c='tree_check_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='555' u='r' c='tree_check_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='555' u='r' c='tree_check_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='555' u='r' c='tree_check_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='555' u='r' c='tree_check_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='575' u='w' c='tree_alloc_rpc_custom_op'/>
+<offset>128</offset>

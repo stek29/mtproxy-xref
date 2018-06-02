@@ -1,0 +1,2 @@
+<def f='MTProxy/common/server-functions.c' l='627' ll='634' type='int parse_one_option(int val)'/>
+<use f='MTProxy/common/server-functions.c' l='699' u='c' c='parse_engine_options_long'/>

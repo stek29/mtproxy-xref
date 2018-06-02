@@ -1,0 +1,20 @@
+<dec f='MTProxy/net/net-msg.h' l='85'/>
+<doc f='MTProxy/net/net-msg.h' l='84'>// temp raw message (doesn&apos;t change refcnts of pointed msg_parts), used for fast read iterators</doc>
+<use f='MTProxy/net/net-msg.c' l='196' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='199' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='204' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='205' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='326' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='334' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='343' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='357' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='657' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='701' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='715' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='729' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='739' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='797' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='841' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='865' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='893' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='910' u='c'/>

@@ -1,0 +1,3 @@
+<dec f='MTProxy/common/parse-config.h' l='36' type='int load_config(const char * file, int fd)'/>
+<def f='MTProxy/common/parse-config.c' l='239' ll='270' type='int load_config(const char * file, int fd)'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='254' u='c' c='parse_config'/>

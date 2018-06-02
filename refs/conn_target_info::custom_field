@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-connections.h' l='190' type='int'/>
+<offset>1024</offset>
+<use f='MTProxy/net/net-rpc-targets.c' l='221' u='r' c='rpc_target_lookup_target'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='224' u='r' c='rpc_target_lookup_target'/>

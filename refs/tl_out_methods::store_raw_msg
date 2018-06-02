@@ -1,0 +1,9 @@
+<dec f='MTProxy/common/tl-parse.h' l='80' type='void (*)(struct tl_out_state *, struct raw_message *)'/>
+<use f='MTProxy/common/tl-parse.h' l='629' u='r' c='tls_raw_msg'/>
+<use f='MTProxy/common/tl-parse.h' l='633' u='r' c='tls_raw_msg'/>
+<use f='MTProxy/common/tl-parse.c' l='457' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='476' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='494' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='513' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='532' u='w'/>
+<offset>192</offset>

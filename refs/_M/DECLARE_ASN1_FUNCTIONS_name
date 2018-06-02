@@ -1,0 +1,4 @@
+<dec f='include/openssl/asn1.h' l='316'/>
+<use f='include/openssl/asn1.h' l='890' u='c'/>
+<use f='include/openssl/asn1.h' l='892' u='c'/>
+<use f='include/openssl/asn1.h' l='893' u='c'/>

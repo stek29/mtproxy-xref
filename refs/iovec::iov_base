@@ -1,0 +1,8 @@
+<dec f='include/x86_64-linux-gnu/bits/uio.h' l='45' type='void *'/>
+<offset>0</offset>
+<doc f='include/x86_64-linux-gnu/bits/uio.h' l='45'>/* Pointer to data.  */</doc>
+<use f='MTProxy/net/net-connections.c' l='235' u='w' c='prealloc_tcp_buffers'/>
+<use f='MTProxy/net/net-connections.c' l='902' u='r' c='net_server_socket_reader'/>
+<use f='MTProxy/net/net-connections.c' l='934' u='w' c='net_server_socket_reader'/>
+<use f='MTProxy/net/net-msg.c' l='671' u='w' c='rwm_prepare_iovec'/>
+<use f='MTProxy/net/net-msg.c' l='675' u='w' c='rwm_prepare_iovec'/>

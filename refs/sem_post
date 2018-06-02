@@ -1,0 +1,5 @@
+<dec f='include/semaphore.h' l='69' type='int sem_post(sem_t * __sem)'/>
+<doc f='include/semaphore.h' l='68'>/* Post SEM.  */</doc>
+<use f='MTProxy/jobs/jobs.c' l='589' u='c' c='create_job_class_sub'/>
+<use f='MTProxy/jobs/jobs.c' l='1007' u='c' c='process_one_sublist'/>
+<use f='MTProxy/jobs/jobs.c' l='1011' u='c' c='process_one_sublist'/>

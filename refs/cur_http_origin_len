@@ -1,0 +1,4 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='137' type='int'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1266' u='w' c='process_http_query'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1806' u='r' c='forward_tcp_query'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1806' u='r' c='forward_tcp_query'/>

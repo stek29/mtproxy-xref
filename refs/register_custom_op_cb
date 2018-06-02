@@ -1,0 +1,4 @@
+<dec f='MTProxy/engine/engine-rpc.h' l='70' type='void register_custom_op_cb(unsigned int op, void (*)(struct tl_in_state *, struct query_work_params *) func)'/>
+<def f='MTProxy/engine/engine-rpc.c' l='106' ll='111' type='void register_custom_op_cb(unsigned int op, void (*)(struct tl_in_state *, struct query_work_params *) func)'/>
+<use f='MTProxy/engine/engine.c' l='434' u='c' c='default_engine_server_start'/>
+<use f='MTProxy/engine/engine.c' l='438' u='c' c='default_engine_server_start'/>

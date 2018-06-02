@@ -1,0 +1,16 @@
+<dec f='MTProxy/mtproto/mtproto-config.h' l='59' type='struct mf_config *'/>
+<def f='MTProxy/mtproto/mtproto-config.c' l='58' type='struct mf_config *'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='404' u='r' c='do_reload_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='405' u='w' c='do_reload_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='414' u='r' c='do_reload_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='415' u='r' c='do_reload_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='416' u='r' c='do_reload_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='417' u='r' c='do_reload_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='418' u='r' c='do_reload_config'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='656' u='r' c='mtfront_prepare_stats'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='657' u='r' c='mtfront_prepare_stats'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='658' u='r' c='mtfront_prepare_stats'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='659' u='r' c='mtfront_prepare_stats'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1628' u='r' c='choose_proxy_target'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1629' u='r' c='choose_proxy_target'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2270' u='r' c='mtfront_pre_start'/>

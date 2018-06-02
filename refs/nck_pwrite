@@ -1,0 +1,2 @@
+<dec f='MTProxy/common/kprintf.h' l='56' type='void nck_pwrite(int fd, const void * data, size_t len, off_t offset)'/>
+<def f='MTProxy/common/kprintf.c' l='280' ll='282' type='void nck_pwrite(int fd, const void * data, size_t len, off_t offset)'/>

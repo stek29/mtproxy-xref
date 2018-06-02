@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/mp-queue.h' l='122' type='void init_mp_queue_w(struct mp_queue * MQ)'/>
+<def f='MTProxy/common/mp-queue.c' l='386' ll='393' type='void init_mp_queue_w(struct mp_queue * MQ)'/>
+<use f='MTProxy/common/mp-queue.c' l='408' u='c' c='alloc_mp_queue_w'/>
+<use f='MTProxy/jobs/jobs.c' l='527' u='c' c='init_async_jobs'/>

@@ -1,0 +1,3 @@
+<dec f='include/openssl/dh.h' l='120' type='int (*)(DH *)'/>
+<offset>64</offset>
+<doc f='include/openssl/dh.h' l='119'>/* Methods here */</doc>

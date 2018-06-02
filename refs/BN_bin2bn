@@ -1,0 +1,5 @@
+<dec f='include/openssl/bn.h' l='442' type='BIGNUM * BN_bin2bn(const unsigned char * s, int len, BIGNUM * ret)'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='123' u='c' c='init_dh_params'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='153' u='c' c='create_g_a'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='184' u='c' c='dh_inner_round'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='187' u='c' c='dh_inner_round'/>

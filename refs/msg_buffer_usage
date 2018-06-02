@@ -1,0 +1,2 @@
+<dec f='MTProxy/net/net-msg-buffers.h' l='117' type='double msg_buffer_usage()'/>
+<def f='MTProxy/net/net-msg-buffers.c' l='586' ll='588' type='double msg_buffer_usage()'/>

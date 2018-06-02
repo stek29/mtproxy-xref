@@ -1,0 +1,14 @@
+<dec f='MTProxy/net/net-connections.h' l='185' type='unsigned char [16]'/>
+<offset>544</offset>
+<use f='MTProxy/mtproto/mtproto-config.c' l='157' u='r' c='cfg_parse_server_port'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='160' u='r' c='cfg_parse_server_port'/>
+<use f='MTProxy/net/net-connections.c' l='1717' u='r' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1719' u='r' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1724' u='r' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1730' u='r' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1806' u='r' c='find_target_ipv6'/>
+<use f='MTProxy/net/net-connections.c' l='1807' u='r' c='find_target_ipv6'/>
+<use f='MTProxy/net/net-connections.c' l='1843' u='r' c='free_target'/>
+<use f='MTProxy/net/net-connections.c' l='1844' u='r' c='free_target'/>
+<use f='MTProxy/net/net-connections.c' l='1950' u='r' c='create_target'/>
+<use f='MTProxy/net/net-connections.c' l='1989' u='r' c='create_target'/>

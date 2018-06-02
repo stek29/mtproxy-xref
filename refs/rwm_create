@@ -1,0 +1,10 @@
+<dec f='MTProxy/net/net-msg.h' l='103' type='int rwm_create(struct raw_message * raw, const void * data, int alloc_bytes)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='793' u='c' c='push_rpc_confirmation'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1259' u='c' c='process_http_query'/>
+<def f='MTProxy/net/net-msg.c' l='555' ll='560' type='int rwm_create(struct raw_message * raw, const void * data, int alloc_bytes)'/>
+<use f='MTProxy/net/net-msg.c' l='564' u='c' c='rwm_init'/>
+<doc f='MTProxy/net/net-msg.c' l='553'>/* }}} */</doc>
+<doc f='MTProxy/net/net-msg.c' l='555'>/* {{{ */</doc>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='116' u='c' c='tcp_rpc_conn_send_data'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='123' u='c' c='tcp_rpc_conn_send_data_init'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='130' u='c' c='tcp_rpc_conn_send_data_im'/>

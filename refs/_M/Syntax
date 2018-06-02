@@ -1,0 +1,12 @@
+<dec f='MTProxy/common/parse-config.h' l='47'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='269' u='c'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='277' u='c'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='284' u='c'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='292' u='c'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='311' u='c'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='315' u='c'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='322' u='c'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='328' u='c'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='334' u='c'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='344' u='c'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='348' u='c'/>

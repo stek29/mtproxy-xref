@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/sys/resource.h' l='54' type='int getrlimit(__rlimit_resource_t __resource, struct rlimit * __rlimits)'/>
+<dec f='include/x86_64-linux-gnu/sys/resource.h' l='61' type='int getrlimit64(__rlimit_resource_t __resource, struct rlimit64 * __rlimits)'/>
+<use f='MTProxy/common/server-functions.c' l='148' u='c' c='raise_file_rlimit'/>
+<use f='MTProxy/engine/engine.c' l='180' u='c' c='raise_file_limit'/>

@@ -1,0 +1,5 @@
+<dec f='include/netinet/in.h' l='221'/>
+<use f='MTProxy/net/net-connections.c' l='678' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='679' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='683' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='1286' u='c'/>

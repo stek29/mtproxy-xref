@@ -1,0 +1,680 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>crc32c.c source code [MTProxy/common/crc32c.c] - Woboq Code Browser</title>
+<link rel="stylesheet" href="https://code.woboq.org/data//qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="https://code.woboq.org/data//kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery-ui.min.js"></script>
+<script>var file = 'MTProxy/common/crc32c.c'; var root_path = '../..'; var data_path = 'https://code.woboq.org/data/';</script>
+<script src='https://code.woboq.org/data//codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='..'>MTProxy</a>/<a href='./'>common</a>/<a href='crc32c.c.html'>crc32c.c</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>    This file is part of Mtproto-proxy Library.</i></td></tr>
+<tr><th id="3">3</th><td><i></i></td></tr>
+<tr><th id="4">4</th><td><i>    Mtproto-proxy Library is free software: you can redistribute it and/or modify</i></td></tr>
+<tr><th id="5">5</th><td><i>    it under the terms of the GNU Lesser General Public License as published by</i></td></tr>
+<tr><th id="6">6</th><td><i>    the Free Software Foundation, either version 2 of the License, or</i></td></tr>
+<tr><th id="7">7</th><td><i>    (at your option) any later version.</i></td></tr>
+<tr><th id="8">8</th><td><i></i></td></tr>
+<tr><th id="9">9</th><td><i>    Mtproto-proxy Library is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="10">10</th><td><i>    but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="11">11</th><td><i>    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</i></td></tr>
+<tr><th id="12">12</th><td><i>    GNU Lesser General Public License for more details.</i></td></tr>
+<tr><th id="13">13</th><td><i></i></td></tr>
+<tr><th id="14">14</th><td><i>    You should have received a copy of the GNU Lesser General Public License</i></td></tr>
+<tr><th id="15">15</th><td><i>    along with Mtproto-proxy Library.  If not, see &lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</i></td></tr>
+<tr><th id="16">16</th><td><i></i></td></tr>
+<tr><th id="17">17</th><td><i>    Copyright 2009-2012 Vkontakte Ltd</i></td></tr>
+<tr><th id="18">18</th><td><i>              2009-2012 Nikolai Durov</i></td></tr>
+<tr><th id="19">19</th><td><i>              2009-2012 Andrey Lopatin</i></td></tr>
+<tr><th id="20">20</th><td><i>                   2012 Anton Maydell</i></td></tr>
+<tr><th id="21">21</th><td><i></i></td></tr>
+<tr><th id="22">22</th><td><i>    Copyright 2014 Telegram Messenger Inc</i></td></tr>
+<tr><th id="23">23</th><td><i>              2014 Anton Maydell</i></td></tr>
+<tr><th id="24">24</th><td><i>*/</i></td></tr>
+<tr><th id="25">25</th><td></td></tr>
+<tr><th id="26">26</th><td><u>#include <a href="../../include/stdlib.h.html">&lt;stdlib.h&gt;</a></u></td></tr>
+<tr><th id="27">27</th><td><u>#include <a href="../../include/math.h.html">&lt;math.h&gt;</a></u></td></tr>
+<tr><th id="28">28</th><td><u>#include <a href="../../include/assert.h.html">&lt;assert.h&gt;</a></u></td></tr>
+<tr><th id="29">29</th><td><u>#include &lt;stdint.h&gt;</u></td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td><u>#include <a href="crc32c.h.html">"crc32c.h"</a></u></td></tr>
+<tr><th id="32">32</th><td><u>#include <a href="kprintf.h.html">"kprintf.h"</a></u></td></tr>
+<tr><th id="33">33</th><td><u>#include <a href="cpuid.h.html">"cpuid.h"</a></u></td></tr>
+<tr><th id="34">34</th><td></td></tr>
+<tr><th id="35">35</th><td><em>static</em> <em>unsigned</em> <dfn class="tu decl def" id="crc32c_table" title='crc32c_table' data-type='unsigned int [256]' data-ref="crc32c_table">crc32c_table</dfn>[<var>256</var>] = {</td></tr>
+<tr><th id="36">36</th><td><var>0x00000000</var>, <var>0xf26b8303</var>, <var>0xe13b70f7</var>, <var>0x1350f3f4</var>,</td></tr>
+<tr><th id="37">37</th><td><var>0xc79a971f</var>, <var>0x35f1141c</var>, <var>0x26a1e7e8</var>, <var>0xd4ca64eb</var>,</td></tr>
+<tr><th id="38">38</th><td><var>0x8ad958cf</var>, <var>0x78b2dbcc</var>, <var>0x6be22838</var>, <var>0x9989ab3b</var>,</td></tr>
+<tr><th id="39">39</th><td><var>0x4d43cfd0</var>, <var>0xbf284cd3</var>, <var>0xac78bf27</var>, <var>0x5e133c24</var>,</td></tr>
+<tr><th id="40">40</th><td><var>0x105ec76f</var>, <var>0xe235446c</var>, <var>0xf165b798</var>, <var>0x030e349b</var>,</td></tr>
+<tr><th id="41">41</th><td><var>0xd7c45070</var>, <var>0x25afd373</var>, <var>0x36ff2087</var>, <var>0xc494a384</var>,</td></tr>
+<tr><th id="42">42</th><td><var>0x9a879fa0</var>, <var>0x68ec1ca3</var>, <var>0x7bbcef57</var>, <var>0x89d76c54</var>,</td></tr>
+<tr><th id="43">43</th><td><var>0x5d1d08bf</var>, <var>0xaf768bbc</var>, <var>0xbc267848</var>, <var>0x4e4dfb4b</var>,</td></tr>
+<tr><th id="44">44</th><td><var>0x20bd8ede</var>, <var>0xd2d60ddd</var>, <var>0xc186fe29</var>, <var>0x33ed7d2a</var>,</td></tr>
+<tr><th id="45">45</th><td><var>0xe72719c1</var>, <var>0x154c9ac2</var>, <var>0x061c6936</var>, <var>0xf477ea35</var>,</td></tr>
+<tr><th id="46">46</th><td><var>0xaa64d611</var>, <var>0x580f5512</var>, <var>0x4b5fa6e6</var>, <var>0xb93425e5</var>,</td></tr>
+<tr><th id="47">47</th><td><var>0x6dfe410e</var>, <var>0x9f95c20d</var>, <var>0x8cc531f9</var>, <var>0x7eaeb2fa</var>,</td></tr>
+<tr><th id="48">48</th><td><var>0x30e349b1</var>, <var>0xc288cab2</var>, <var>0xd1d83946</var>, <var>0x23b3ba45</var>,</td></tr>
+<tr><th id="49">49</th><td><var>0xf779deae</var>, <var>0x05125dad</var>, <var>0x1642ae59</var>, <var>0xe4292d5a</var>,</td></tr>
+<tr><th id="50">50</th><td><var>0xba3a117e</var>, <var>0x4851927d</var>, <var>0x5b016189</var>, <var>0xa96ae28a</var>,</td></tr>
+<tr><th id="51">51</th><td><var>0x7da08661</var>, <var>0x8fcb0562</var>, <var>0x9c9bf696</var>, <var>0x6ef07595</var>,</td></tr>
+<tr><th id="52">52</th><td><var>0x417b1dbc</var>, <var>0xb3109ebf</var>, <var>0xa0406d4b</var>, <var>0x522bee48</var>,</td></tr>
+<tr><th id="53">53</th><td><var>0x86e18aa3</var>, <var>0x748a09a0</var>, <var>0x67dafa54</var>, <var>0x95b17957</var>,</td></tr>
+<tr><th id="54">54</th><td><var>0xcba24573</var>, <var>0x39c9c670</var>, <var>0x2a993584</var>, <var>0xd8f2b687</var>,</td></tr>
+<tr><th id="55">55</th><td><var>0x0c38d26c</var>, <var>0xfe53516f</var>, <var>0xed03a29b</var>, <var>0x1f682198</var>,</td></tr>
+<tr><th id="56">56</th><td><var>0x5125dad3</var>, <var>0xa34e59d0</var>, <var>0xb01eaa24</var>, <var>0x42752927</var>,</td></tr>
+<tr><th id="57">57</th><td><var>0x96bf4dcc</var>, <var>0x64d4cecf</var>, <var>0x77843d3b</var>, <var>0x85efbe38</var>,</td></tr>
+<tr><th id="58">58</th><td><var>0xdbfc821c</var>, <var>0x2997011f</var>, <var>0x3ac7f2eb</var>, <var>0xc8ac71e8</var>,</td></tr>
+<tr><th id="59">59</th><td><var>0x1c661503</var>, <var>0xee0d9600</var>, <var>0xfd5d65f4</var>, <var>0x0f36e6f7</var>,</td></tr>
+<tr><th id="60">60</th><td><var>0x61c69362</var>, <var>0x93ad1061</var>, <var>0x80fde395</var>, <var>0x72966096</var>,</td></tr>
+<tr><th id="61">61</th><td><var>0xa65c047d</var>, <var>0x5437877e</var>, <var>0x4767748a</var>, <var>0xb50cf789</var>,</td></tr>
+<tr><th id="62">62</th><td><var>0xeb1fcbad</var>, <var>0x197448ae</var>, <var>0x0a24bb5a</var>, <var>0xf84f3859</var>,</td></tr>
+<tr><th id="63">63</th><td><var>0x2c855cb2</var>, <var>0xdeeedfb1</var>, <var>0xcdbe2c45</var>, <var>0x3fd5af46</var>,</td></tr>
+<tr><th id="64">64</th><td><var>0x7198540d</var>, <var>0x83f3d70e</var>, <var>0x90a324fa</var>, <var>0x62c8a7f9</var>,</td></tr>
+<tr><th id="65">65</th><td><var>0xb602c312</var>, <var>0x44694011</var>, <var>0x5739b3e5</var>, <var>0xa55230e6</var>,</td></tr>
+<tr><th id="66">66</th><td><var>0xfb410cc2</var>, <var>0x092a8fc1</var>, <var>0x1a7a7c35</var>, <var>0xe811ff36</var>,</td></tr>
+<tr><th id="67">67</th><td><var>0x3cdb9bdd</var>, <var>0xceb018de</var>, <var>0xdde0eb2a</var>, <var>0x2f8b6829</var>,</td></tr>
+<tr><th id="68">68</th><td><var>0x82f63b78</var>, <var>0x709db87b</var>, <var>0x63cd4b8f</var>, <var>0x91a6c88c</var>,</td></tr>
+<tr><th id="69">69</th><td><var>0x456cac67</var>, <var>0xb7072f64</var>, <var>0xa457dc90</var>, <var>0x563c5f93</var>,</td></tr>
+<tr><th id="70">70</th><td><var>0x082f63b7</var>, <var>0xfa44e0b4</var>, <var>0xe9141340</var>, <var>0x1b7f9043</var>,</td></tr>
+<tr><th id="71">71</th><td><var>0xcfb5f4a8</var>, <var>0x3dde77ab</var>, <var>0x2e8e845f</var>, <var>0xdce5075c</var>,</td></tr>
+<tr><th id="72">72</th><td><var>0x92a8fc17</var>, <var>0x60c37f14</var>, <var>0x73938ce0</var>, <var>0x81f80fe3</var>,</td></tr>
+<tr><th id="73">73</th><td><var>0x55326b08</var>, <var>0xa759e80b</var>, <var>0xb4091bff</var>, <var>0x466298fc</var>,</td></tr>
+<tr><th id="74">74</th><td><var>0x1871a4d8</var>, <var>0xea1a27db</var>, <var>0xf94ad42f</var>, <var>0x0b21572c</var>,</td></tr>
+<tr><th id="75">75</th><td><var>0xdfeb33c7</var>, <var>0x2d80b0c4</var>, <var>0x3ed04330</var>, <var>0xccbbc033</var>,</td></tr>
+<tr><th id="76">76</th><td><var>0xa24bb5a6</var>, <var>0x502036a5</var>, <var>0x4370c551</var>, <var>0xb11b4652</var>,</td></tr>
+<tr><th id="77">77</th><td><var>0x65d122b9</var>, <var>0x97baa1ba</var>, <var>0x84ea524e</var>, <var>0x7681d14d</var>,</td></tr>
+<tr><th id="78">78</th><td><var>0x2892ed69</var>, <var>0xdaf96e6a</var>, <var>0xc9a99d9e</var>, <var>0x3bc21e9d</var>,</td></tr>
+<tr><th id="79">79</th><td><var>0xef087a76</var>, <var>0x1d63f975</var>, <var>0x0e330a81</var>, <var>0xfc588982</var>,</td></tr>
+<tr><th id="80">80</th><td><var>0xb21572c9</var>, <var>0x407ef1ca</var>, <var>0x532e023e</var>, <var>0xa145813d</var>,</td></tr>
+<tr><th id="81">81</th><td><var>0x758fe5d6</var>, <var>0x87e466d5</var>, <var>0x94b49521</var>, <var>0x66df1622</var>,</td></tr>
+<tr><th id="82">82</th><td><var>0x38cc2a06</var>, <var>0xcaa7a905</var>, <var>0xd9f75af1</var>, <var>0x2b9cd9f2</var>,</td></tr>
+<tr><th id="83">83</th><td><var>0xff56bd19</var>, <var>0x0d3d3e1a</var>, <var>0x1e6dcdee</var>, <var>0xec064eed</var>,</td></tr>
+<tr><th id="84">84</th><td><var>0xc38d26c4</var>, <var>0x31e6a5c7</var>, <var>0x22b65633</var>, <var>0xd0ddd530</var>,</td></tr>
+<tr><th id="85">85</th><td><var>0x0417b1db</var>, <var>0xf67c32d8</var>, <var>0xe52cc12c</var>, <var>0x1747422f</var>,</td></tr>
+<tr><th id="86">86</th><td><var>0x49547e0b</var>, <var>0xbb3ffd08</var>, <var>0xa86f0efc</var>, <var>0x5a048dff</var>,</td></tr>
+<tr><th id="87">87</th><td><var>0x8ecee914</var>, <var>0x7ca56a17</var>, <var>0x6ff599e3</var>, <var>0x9d9e1ae0</var>,</td></tr>
+<tr><th id="88">88</th><td><var>0xd3d3e1ab</var>, <var>0x21b862a8</var>, <var>0x32e8915c</var>, <var>0xc083125f</var>,</td></tr>
+<tr><th id="89">89</th><td><var>0x144976b4</var>, <var>0xe622f5b7</var>, <var>0xf5720643</var>, <var>0x07198540</var>,</td></tr>
+<tr><th id="90">90</th><td><var>0x590ab964</var>, <var>0xab613a67</var>, <var>0xb831c993</var>, <var>0x4a5a4a90</var>,</td></tr>
+<tr><th id="91">91</th><td><var>0x9e902e7b</var>, <var>0x6cfbad78</var>, <var>0x7fab5e8c</var>, <var>0x8dc0dd8f</var>,</td></tr>
+<tr><th id="92">92</th><td><var>0xe330a81a</var>, <var>0x115b2b19</var>, <var>0x020bd8ed</var>, <var>0xf0605bee</var>,</td></tr>
+<tr><th id="93">93</th><td><var>0x24aa3f05</var>, <var>0xd6c1bc06</var>, <var>0xc5914ff2</var>, <var>0x37faccf1</var>,</td></tr>
+<tr><th id="94">94</th><td><var>0x69e9f0d5</var>, <var>0x9b8273d6</var>, <var>0x88d28022</var>, <var>0x7ab90321</var>,</td></tr>
+<tr><th id="95">95</th><td><var>0xae7367ca</var>, <var>0x5c18e4c9</var>, <var>0x4f48173d</var>, <var>0xbd23943e</var>,</td></tr>
+<tr><th id="96">96</th><td><var>0xf36e6f75</var>, <var>0x0105ec76</var>, <var>0x12551f82</var>, <var>0xe03e9c81</var>,</td></tr>
+<tr><th id="97">97</th><td><var>0x34f4f86a</var>, <var>0xc69f7b69</var>, <var>0xd5cf889d</var>, <var>0x27a40b9e</var>,</td></tr>
+<tr><th id="98">98</th><td><var>0x79b737ba</var>, <var>0x8bdcb4b9</var>, <var>0x988c474d</var>, <var>0x6ae7c44e</var>,</td></tr>
+<tr><th id="99">99</th><td><var>0xbe2da0a5</var>, <var>0x4c4623a6</var>, <var>0x5f16d052</var>, <var>0xad7d5351</var>,</td></tr>
+<tr><th id="100">100</th><td>};</td></tr>
+<tr><th id="101">101</th><td><em>static</em> <em>unsigned</em> <dfn class="tu decl def" id="crc32c_table2" title='crc32c_table2' data-type='unsigned int [256]' data-ref="crc32c_table2">crc32c_table2</dfn>[<var>256</var>] = {</td></tr>
+<tr><th id="102">102</th><td><var>0x00000000</var>, <var>0x13a29877</var>, <var>0x274530ee</var>, <var>0x34e7a899</var>,</td></tr>
+<tr><th id="103">103</th><td><var>0x4e8a61dc</var>, <var>0x5d28f9ab</var>, <var>0x69cf5132</var>, <var>0x7a6dc945</var>,</td></tr>
+<tr><th id="104">104</th><td><var>0x9d14c3b8</var>, <var>0x8eb65bcf</var>, <var>0xba51f356</var>, <var>0xa9f36b21</var>,</td></tr>
+<tr><th id="105">105</th><td><var>0xd39ea264</var>, <var>0xc03c3a13</var>, <var>0xf4db928a</var>, <var>0xe7790afd</var>,</td></tr>
+<tr><th id="106">106</th><td><var>0x3fc5f181</var>, <var>0x2c6769f6</var>, <var>0x1880c16f</var>, <var>0x0b225918</var>,</td></tr>
+<tr><th id="107">107</th><td><var>0x714f905d</var>, <var>0x62ed082a</var>, <var>0x560aa0b3</var>, <var>0x45a838c4</var>,</td></tr>
+<tr><th id="108">108</th><td><var>0xa2d13239</var>, <var>0xb173aa4e</var>, <var>0x859402d7</var>, <var>0x96369aa0</var>,</td></tr>
+<tr><th id="109">109</th><td><var>0xec5b53e5</var>, <var>0xfff9cb92</var>, <var>0xcb1e630b</var>, <var>0xd8bcfb7c</var>,</td></tr>
+<tr><th id="110">110</th><td><var>0x7f8be302</var>, <var>0x6c297b75</var>, <var>0x58ced3ec</var>, <var>0x4b6c4b9b</var>,</td></tr>
+<tr><th id="111">111</th><td><var>0x310182de</var>, <var>0x22a31aa9</var>, <var>0x1644b230</var>, <var>0x05e62a47</var>,</td></tr>
+<tr><th id="112">112</th><td><var>0xe29f20ba</var>, <var>0xf13db8cd</var>, <var>0xc5da1054</var>, <var>0xd6788823</var>,</td></tr>
+<tr><th id="113">113</th><td><var>0xac154166</var>, <var>0xbfb7d911</var>, <var>0x8b507188</var>, <var>0x98f2e9ff</var>,</td></tr>
+<tr><th id="114">114</th><td><var>0x404e1283</var>, <var>0x53ec8af4</var>, <var>0x670b226d</var>, <var>0x74a9ba1a</var>,</td></tr>
+<tr><th id="115">115</th><td><var>0x0ec4735f</var>, <var>0x1d66eb28</var>, <var>0x298143b1</var>, <var>0x3a23dbc6</var>,</td></tr>
+<tr><th id="116">116</th><td><var>0xdd5ad13b</var>, <var>0xcef8494c</var>, <var>0xfa1fe1d5</var>, <var>0xe9bd79a2</var>,</td></tr>
+<tr><th id="117">117</th><td><var>0x93d0b0e7</var>, <var>0x80722890</var>, <var>0xb4958009</var>, <var>0xa737187e</var>,</td></tr>
+<tr><th id="118">118</th><td><var>0xff17c604</var>, <var>0xecb55e73</var>, <var>0xd852f6ea</var>, <var>0xcbf06e9d</var>,</td></tr>
+<tr><th id="119">119</th><td><var>0xb19da7d8</var>, <var>0xa23f3faf</var>, <var>0x96d89736</var>, <var>0x857a0f41</var>,</td></tr>
+<tr><th id="120">120</th><td><var>0x620305bc</var>, <var>0x71a19dcb</var>, <var>0x45463552</var>, <var>0x56e4ad25</var>,</td></tr>
+<tr><th id="121">121</th><td><var>0x2c896460</var>, <var>0x3f2bfc17</var>, <var>0x0bcc548e</var>, <var>0x186eccf9</var>,</td></tr>
+<tr><th id="122">122</th><td><var>0xc0d23785</var>, <var>0xd370aff2</var>, <var>0xe797076b</var>, <var>0xf4359f1c</var>,</td></tr>
+<tr><th id="123">123</th><td><var>0x8e585659</var>, <var>0x9dface2e</var>, <var>0xa91d66b7</var>, <var>0xbabffec0</var>,</td></tr>
+<tr><th id="124">124</th><td><var>0x5dc6f43d</var>, <var>0x4e646c4a</var>, <var>0x7a83c4d3</var>, <var>0x69215ca4</var>,</td></tr>
+<tr><th id="125">125</th><td><var>0x134c95e1</var>, <var>0x00ee0d96</var>, <var>0x3409a50f</var>, <var>0x27ab3d78</var>,</td></tr>
+<tr><th id="126">126</th><td><var>0x809c2506</var>, <var>0x933ebd71</var>, <var>0xa7d915e8</var>, <var>0xb47b8d9f</var>,</td></tr>
+<tr><th id="127">127</th><td><var>0xce1644da</var>, <var>0xddb4dcad</var>, <var>0xe9537434</var>, <var>0xfaf1ec43</var>,</td></tr>
+<tr><th id="128">128</th><td><var>0x1d88e6be</var>, <var>0x0e2a7ec9</var>, <var>0x3acdd650</var>, <var>0x296f4e27</var>,</td></tr>
+<tr><th id="129">129</th><td><var>0x53028762</var>, <var>0x40a01f15</var>, <var>0x7447b78c</var>, <var>0x67e52ffb</var>,</td></tr>
+<tr><th id="130">130</th><td><var>0xbf59d487</var>, <var>0xacfb4cf0</var>, <var>0x981ce469</var>, <var>0x8bbe7c1e</var>,</td></tr>
+<tr><th id="131">131</th><td><var>0xf1d3b55b</var>, <var>0xe2712d2c</var>, <var>0xd69685b5</var>, <var>0xc5341dc2</var>,</td></tr>
+<tr><th id="132">132</th><td><var>0x224d173f</var>, <var>0x31ef8f48</var>, <var>0x050827d1</var>, <var>0x16aabfa6</var>,</td></tr>
+<tr><th id="133">133</th><td><var>0x6cc776e3</var>, <var>0x7f65ee94</var>, <var>0x4b82460d</var>, <var>0x5820de7a</var>,</td></tr>
+<tr><th id="134">134</th><td><var>0xfbc3faf9</var>, <var>0xe861628e</var>, <var>0xdc86ca17</var>, <var>0xcf245260</var>,</td></tr>
+<tr><th id="135">135</th><td><var>0xb5499b25</var>, <var>0xa6eb0352</var>, <var>0x920cabcb</var>, <var>0x81ae33bc</var>,</td></tr>
+<tr><th id="136">136</th><td><var>0x66d73941</var>, <var>0x7575a136</var>, <var>0x419209af</var>, <var>0x523091d8</var>,</td></tr>
+<tr><th id="137">137</th><td><var>0x285d589d</var>, <var>0x3bffc0ea</var>, <var>0x0f186873</var>, <var>0x1cbaf004</var>,</td></tr>
+<tr><th id="138">138</th><td><var>0xc4060b78</var>, <var>0xd7a4930f</var>, <var>0xe3433b96</var>, <var>0xf0e1a3e1</var>,</td></tr>
+<tr><th id="139">139</th><td><var>0x8a8c6aa4</var>, <var>0x992ef2d3</var>, <var>0xadc95a4a</var>, <var>0xbe6bc23d</var>,</td></tr>
+<tr><th id="140">140</th><td><var>0x5912c8c0</var>, <var>0x4ab050b7</var>, <var>0x7e57f82e</var>, <var>0x6df56059</var>,</td></tr>
+<tr><th id="141">141</th><td><var>0x1798a91c</var>, <var>0x043a316b</var>, <var>0x30dd99f2</var>, <var>0x237f0185</var>,</td></tr>
+<tr><th id="142">142</th><td><var>0x844819fb</var>, <var>0x97ea818c</var>, <var>0xa30d2915</var>, <var>0xb0afb162</var>,</td></tr>
+<tr><th id="143">143</th><td><var>0xcac27827</var>, <var>0xd960e050</var>, <var>0xed8748c9</var>, <var>0xfe25d0be</var>,</td></tr>
+<tr><th id="144">144</th><td><var>0x195cda43</var>, <var>0x0afe4234</var>, <var>0x3e19eaad</var>, <var>0x2dbb72da</var>,</td></tr>
+<tr><th id="145">145</th><td><var>0x57d6bb9f</var>, <var>0x447423e8</var>, <var>0x70938b71</var>, <var>0x63311306</var>,</td></tr>
+<tr><th id="146">146</th><td><var>0xbb8de87a</var>, <var>0xa82f700d</var>, <var>0x9cc8d894</var>, <var>0x8f6a40e3</var>,</td></tr>
+<tr><th id="147">147</th><td><var>0xf50789a6</var>, <var>0xe6a511d1</var>, <var>0xd242b948</var>, <var>0xc1e0213f</var>,</td></tr>
+<tr><th id="148">148</th><td><var>0x26992bc2</var>, <var>0x353bb3b5</var>, <var>0x01dc1b2c</var>, <var>0x127e835b</var>,</td></tr>
+<tr><th id="149">149</th><td><var>0x68134a1e</var>, <var>0x7bb1d269</var>, <var>0x4f567af0</var>, <var>0x5cf4e287</var>,</td></tr>
+<tr><th id="150">150</th><td><var>0x04d43cfd</var>, <var>0x1776a48a</var>, <var>0x23910c13</var>, <var>0x30339464</var>,</td></tr>
+<tr><th id="151">151</th><td><var>0x4a5e5d21</var>, <var>0x59fcc556</var>, <var>0x6d1b6dcf</var>, <var>0x7eb9f5b8</var>,</td></tr>
+<tr><th id="152">152</th><td><var>0x99c0ff45</var>, <var>0x8a626732</var>, <var>0xbe85cfab</var>, <var>0xad2757dc</var>,</td></tr>
+<tr><th id="153">153</th><td><var>0xd74a9e99</var>, <var>0xc4e806ee</var>, <var>0xf00fae77</var>, <var>0xe3ad3600</var>,</td></tr>
+<tr><th id="154">154</th><td><var>0x3b11cd7c</var>, <var>0x28b3550b</var>, <var>0x1c54fd92</var>, <var>0x0ff665e5</var>,</td></tr>
+<tr><th id="155">155</th><td><var>0x759baca0</var>, <var>0x663934d7</var>, <var>0x52de9c4e</var>, <var>0x417c0439</var>,</td></tr>
+<tr><th id="156">156</th><td><var>0xa6050ec4</var>, <var>0xb5a796b3</var>, <var>0x81403e2a</var>, <var>0x92e2a65d</var>,</td></tr>
+<tr><th id="157">157</th><td><var>0xe88f6f18</var>, <var>0xfb2df76f</var>, <var>0xcfca5ff6</var>, <var>0xdc68c781</var>,</td></tr>
+<tr><th id="158">158</th><td><var>0x7b5fdfff</var>, <var>0x68fd4788</var>, <var>0x5c1aef11</var>, <var>0x4fb87766</var>,</td></tr>
+<tr><th id="159">159</th><td><var>0x35d5be23</var>, <var>0x26772654</var>, <var>0x12908ecd</var>, <var>0x013216ba</var>,</td></tr>
+<tr><th id="160">160</th><td><var>0xe64b1c47</var>, <var>0xf5e98430</var>, <var>0xc10e2ca9</var>, <var>0xd2acb4de</var>,</td></tr>
+<tr><th id="161">161</th><td><var>0xa8c17d9b</var>, <var>0xbb63e5ec</var>, <var>0x8f844d75</var>, <var>0x9c26d502</var>,</td></tr>
+<tr><th id="162">162</th><td><var>0x449a2e7e</var>, <var>0x5738b609</var>, <var>0x63df1e90</var>, <var>0x707d86e7</var>,</td></tr>
+<tr><th id="163">163</th><td><var>0x0a104fa2</var>, <var>0x19b2d7d5</var>, <var>0x2d557f4c</var>, <var>0x3ef7e73b</var>,</td></tr>
+<tr><th id="164">164</th><td><var>0xd98eedc6</var>, <var>0xca2c75b1</var>, <var>0xfecbdd28</var>, <var>0xed69455f</var>,</td></tr>
+<tr><th id="165">165</th><td><var>0x97048c1a</var>, <var>0x84a6146d</var>, <var>0xb041bcf4</var>, <var>0xa3e32483</var>,</td></tr>
+<tr><th id="166">166</th><td>};</td></tr>
+<tr><th id="167">167</th><td><em>static</em> <em>unsigned</em> <dfn class="tu decl def" id="crc32c_table1" title='crc32c_table1' data-type='unsigned int [256]' data-ref="crc32c_table1">crc32c_table1</dfn>[<var>256</var>] = {</td></tr>
+<tr><th id="168">168</th><td><var>0x00000000</var>, <var>0xa541927e</var>, <var>0x4f6f520d</var>, <var>0xea2ec073</var>,</td></tr>
+<tr><th id="169">169</th><td><var>0x9edea41a</var>, <var>0x3b9f3664</var>, <var>0xd1b1f617</var>, <var>0x74f06469</var>,</td></tr>
+<tr><th id="170">170</th><td><var>0x38513ec5</var>, <var>0x9d10acbb</var>, <var>0x773e6cc8</var>, <var>0xd27ffeb6</var>,</td></tr>
+<tr><th id="171">171</th><td><var>0xa68f9adf</var>, <var>0x03ce08a1</var>, <var>0xe9e0c8d2</var>, <var>0x4ca15aac</var>,</td></tr>
+<tr><th id="172">172</th><td><var>0x70a27d8a</var>, <var>0xd5e3eff4</var>, <var>0x3fcd2f87</var>, <var>0x9a8cbdf9</var>,</td></tr>
+<tr><th id="173">173</th><td><var>0xee7cd990</var>, <var>0x4b3d4bee</var>, <var>0xa1138b9d</var>, <var>0x045219e3</var>,</td></tr>
+<tr><th id="174">174</th><td><var>0x48f3434f</var>, <var>0xedb2d131</var>, <var>0x079c1142</var>, <var>0xa2dd833c</var>,</td></tr>
+<tr><th id="175">175</th><td><var>0xd62de755</var>, <var>0x736c752b</var>, <var>0x9942b558</var>, <var>0x3c032726</var>,</td></tr>
+<tr><th id="176">176</th><td><var>0xe144fb14</var>, <var>0x4405696a</var>, <var>0xae2ba919</var>, <var>0x0b6a3b67</var>,</td></tr>
+<tr><th id="177">177</th><td><var>0x7f9a5f0e</var>, <var>0xdadbcd70</var>, <var>0x30f50d03</var>, <var>0x95b49f7d</var>,</td></tr>
+<tr><th id="178">178</th><td><var>0xd915c5d1</var>, <var>0x7c5457af</var>, <var>0x967a97dc</var>, <var>0x333b05a2</var>,</td></tr>
+<tr><th id="179">179</th><td><var>0x47cb61cb</var>, <var>0xe28af3b5</var>, <var>0x08a433c6</var>, <var>0xade5a1b8</var>,</td></tr>
+<tr><th id="180">180</th><td><var>0x91e6869e</var>, <var>0x34a714e0</var>, <var>0xde89d493</var>, <var>0x7bc846ed</var>,</td></tr>
+<tr><th id="181">181</th><td><var>0x0f382284</var>, <var>0xaa79b0fa</var>, <var>0x40577089</var>, <var>0xe516e2f7</var>,</td></tr>
+<tr><th id="182">182</th><td><var>0xa9b7b85b</var>, <var>0x0cf62a25</var>, <var>0xe6d8ea56</var>, <var>0x43997828</var>,</td></tr>
+<tr><th id="183">183</th><td><var>0x37691c41</var>, <var>0x92288e3f</var>, <var>0x78064e4c</var>, <var>0xdd47dc32</var>,</td></tr>
+<tr><th id="184">184</th><td><var>0xc76580d9</var>, <var>0x622412a7</var>, <var>0x880ad2d4</var>, <var>0x2d4b40aa</var>,</td></tr>
+<tr><th id="185">185</th><td><var>0x59bb24c3</var>, <var>0xfcfab6bd</var>, <var>0x16d476ce</var>, <var>0xb395e4b0</var>,</td></tr>
+<tr><th id="186">186</th><td><var>0xff34be1c</var>, <var>0x5a752c62</var>, <var>0xb05bec11</var>, <var>0x151a7e6f</var>,</td></tr>
+<tr><th id="187">187</th><td><var>0x61ea1a06</var>, <var>0xc4ab8878</var>, <var>0x2e85480b</var>, <var>0x8bc4da75</var>,</td></tr>
+<tr><th id="188">188</th><td><var>0xb7c7fd53</var>, <var>0x12866f2d</var>, <var>0xf8a8af5e</var>, <var>0x5de93d20</var>,</td></tr>
+<tr><th id="189">189</th><td><var>0x29195949</var>, <var>0x8c58cb37</var>, <var>0x66760b44</var>, <var>0xc337993a</var>,</td></tr>
+<tr><th id="190">190</th><td><var>0x8f96c396</var>, <var>0x2ad751e8</var>, <var>0xc0f9919b</var>, <var>0x65b803e5</var>,</td></tr>
+<tr><th id="191">191</th><td><var>0x1148678c</var>, <var>0xb409f5f2</var>, <var>0x5e273581</var>, <var>0xfb66a7ff</var>,</td></tr>
+<tr><th id="192">192</th><td><var>0x26217bcd</var>, <var>0x8360e9b3</var>, <var>0x694e29c0</var>, <var>0xcc0fbbbe</var>,</td></tr>
+<tr><th id="193">193</th><td><var>0xb8ffdfd7</var>, <var>0x1dbe4da9</var>, <var>0xf7908dda</var>, <var>0x52d11fa4</var>,</td></tr>
+<tr><th id="194">194</th><td><var>0x1e704508</var>, <var>0xbb31d776</var>, <var>0x511f1705</var>, <var>0xf45e857b</var>,</td></tr>
+<tr><th id="195">195</th><td><var>0x80aee112</var>, <var>0x25ef736c</var>, <var>0xcfc1b31f</var>, <var>0x6a802161</var>,</td></tr>
+<tr><th id="196">196</th><td><var>0x56830647</var>, <var>0xf3c29439</var>, <var>0x19ec544a</var>, <var>0xbcadc634</var>,</td></tr>
+<tr><th id="197">197</th><td><var>0xc85da25d</var>, <var>0x6d1c3023</var>, <var>0x8732f050</var>, <var>0x2273622e</var>,</td></tr>
+<tr><th id="198">198</th><td><var>0x6ed23882</var>, <var>0xcb93aafc</var>, <var>0x21bd6a8f</var>, <var>0x84fcf8f1</var>,</td></tr>
+<tr><th id="199">199</th><td><var>0xf00c9c98</var>, <var>0x554d0ee6</var>, <var>0xbf63ce95</var>, <var>0x1a225ceb</var>,</td></tr>
+<tr><th id="200">200</th><td><var>0x8b277743</var>, <var>0x2e66e53d</var>, <var>0xc448254e</var>, <var>0x6109b730</var>,</td></tr>
+<tr><th id="201">201</th><td><var>0x15f9d359</var>, <var>0xb0b84127</var>, <var>0x5a968154</var>, <var>0xffd7132a</var>,</td></tr>
+<tr><th id="202">202</th><td><var>0xb3764986</var>, <var>0x1637dbf8</var>, <var>0xfc191b8b</var>, <var>0x595889f5</var>,</td></tr>
+<tr><th id="203">203</th><td><var>0x2da8ed9c</var>, <var>0x88e97fe2</var>, <var>0x62c7bf91</var>, <var>0xc7862def</var>,</td></tr>
+<tr><th id="204">204</th><td><var>0xfb850ac9</var>, <var>0x5ec498b7</var>, <var>0xb4ea58c4</var>, <var>0x11abcaba</var>,</td></tr>
+<tr><th id="205">205</th><td><var>0x655baed3</var>, <var>0xc01a3cad</var>, <var>0x2a34fcde</var>, <var>0x8f756ea0</var>,</td></tr>
+<tr><th id="206">206</th><td><var>0xc3d4340c</var>, <var>0x6695a672</var>, <var>0x8cbb6601</var>, <var>0x29faf47f</var>,</td></tr>
+<tr><th id="207">207</th><td><var>0x5d0a9016</var>, <var>0xf84b0268</var>, <var>0x1265c21b</var>, <var>0xb7245065</var>,</td></tr>
+<tr><th id="208">208</th><td><var>0x6a638c57</var>, <var>0xcf221e29</var>, <var>0x250cde5a</var>, <var>0x804d4c24</var>,</td></tr>
+<tr><th id="209">209</th><td><var>0xf4bd284d</var>, <var>0x51fcba33</var>, <var>0xbbd27a40</var>, <var>0x1e93e83e</var>,</td></tr>
+<tr><th id="210">210</th><td><var>0x5232b292</var>, <var>0xf77320ec</var>, <var>0x1d5de09f</var>, <var>0xb81c72e1</var>,</td></tr>
+<tr><th id="211">211</th><td><var>0xccec1688</var>, <var>0x69ad84f6</var>, <var>0x83834485</var>, <var>0x26c2d6fb</var>,</td></tr>
+<tr><th id="212">212</th><td><var>0x1ac1f1dd</var>, <var>0xbf8063a3</var>, <var>0x55aea3d0</var>, <var>0xf0ef31ae</var>,</td></tr>
+<tr><th id="213">213</th><td><var>0x841f55c7</var>, <var>0x215ec7b9</var>, <var>0xcb7007ca</var>, <var>0x6e3195b4</var>,</td></tr>
+<tr><th id="214">214</th><td><var>0x2290cf18</var>, <var>0x87d15d66</var>, <var>0x6dff9d15</var>, <var>0xc8be0f6b</var>,</td></tr>
+<tr><th id="215">215</th><td><var>0xbc4e6b02</var>, <var>0x190ff97c</var>, <var>0xf321390f</var>, <var>0x5660ab71</var>,</td></tr>
+<tr><th id="216">216</th><td><var>0x4c42f79a</var>, <var>0xe90365e4</var>, <var>0x032da597</var>, <var>0xa66c37e9</var>,</td></tr>
+<tr><th id="217">217</th><td><var>0xd29c5380</var>, <var>0x77ddc1fe</var>, <var>0x9df3018d</var>, <var>0x38b293f3</var>,</td></tr>
+<tr><th id="218">218</th><td><var>0x7413c95f</var>, <var>0xd1525b21</var>, <var>0x3b7c9b52</var>, <var>0x9e3d092c</var>,</td></tr>
+<tr><th id="219">219</th><td><var>0xeacd6d45</var>, <var>0x4f8cff3b</var>, <var>0xa5a23f48</var>, <var>0x00e3ad36</var>,</td></tr>
+<tr><th id="220">220</th><td><var>0x3ce08a10</var>, <var>0x99a1186e</var>, <var>0x738fd81d</var>, <var>0xd6ce4a63</var>,</td></tr>
+<tr><th id="221">221</th><td><var>0xa23e2e0a</var>, <var>0x077fbc74</var>, <var>0xed517c07</var>, <var>0x4810ee79</var>,</td></tr>
+<tr><th id="222">222</th><td><var>0x04b1b4d5</var>, <var>0xa1f026ab</var>, <var>0x4bdee6d8</var>, <var>0xee9f74a6</var>,</td></tr>
+<tr><th id="223">223</th><td><var>0x9a6f10cf</var>, <var>0x3f2e82b1</var>, <var>0xd50042c2</var>, <var>0x7041d0bc</var>,</td></tr>
+<tr><th id="224">224</th><td><var>0xad060c8e</var>, <var>0x08479ef0</var>, <var>0xe2695e83</var>, <var>0x4728ccfd</var>,</td></tr>
+<tr><th id="225">225</th><td><var>0x33d8a894</var>, <var>0x96993aea</var>, <var>0x7cb7fa99</var>, <var>0xd9f668e7</var>,</td></tr>
+<tr><th id="226">226</th><td><var>0x9557324b</var>, <var>0x3016a035</var>, <var>0xda386046</var>, <var>0x7f79f238</var>,</td></tr>
+<tr><th id="227">227</th><td><var>0x0b899651</var>, <var>0xaec8042f</var>, <var>0x44e6c45c</var>, <var>0xe1a75622</var>,</td></tr>
+<tr><th id="228">228</th><td><var>0xdda47104</var>, <var>0x78e5e37a</var>, <var>0x92cb2309</var>, <var>0x378ab177</var>,</td></tr>
+<tr><th id="229">229</th><td><var>0x437ad51e</var>, <var>0xe63b4760</var>, <var>0x0c158713</var>, <var>0xa954156d</var>,</td></tr>
+<tr><th id="230">230</th><td><var>0xe5f54fc1</var>, <var>0x40b4ddbf</var>, <var>0xaa9a1dcc</var>, <var>0x0fdb8fb2</var>,</td></tr>
+<tr><th id="231">231</th><td><var>0x7b2bebdb</var>, <var>0xde6a79a5</var>, <var>0x3444b9d6</var>, <var>0x91052ba8</var>,</td></tr>
+<tr><th id="232">232</th><td>};</td></tr>
+<tr><th id="233">233</th><td><em>static</em> <em>unsigned</em> <dfn class="tu decl def" id="crc32c_table0" title='crc32c_table0' data-type='unsigned int [256]' data-ref="crc32c_table0">crc32c_table0</dfn>[<var>256</var>] = {</td></tr>
+<tr><th id="234">234</th><td><var>0x00000000</var>, <var>0xdd45aab8</var>, <var>0xbf672381</var>, <var>0x62228939</var>,</td></tr>
+<tr><th id="235">235</th><td><var>0x7b2231f3</var>, <var>0xa6679b4b</var>, <var>0xc4451272</var>, <var>0x1900b8ca</var>,</td></tr>
+<tr><th id="236">236</th><td><var>0xf64463e6</var>, <var>0x2b01c95e</var>, <var>0x49234067</var>, <var>0x9466eadf</var>,</td></tr>
+<tr><th id="237">237</th><td><var>0x8d665215</var>, <var>0x5023f8ad</var>, <var>0x32017194</var>, <var>0xef44db2c</var>,</td></tr>
+<tr><th id="238">238</th><td><var>0xe964b13d</var>, <var>0x34211b85</var>, <var>0x560392bc</var>, <var>0x8b463804</var>,</td></tr>
+<tr><th id="239">239</th><td><var>0x924680ce</var>, <var>0x4f032a76</var>, <var>0x2d21a34f</var>, <var>0xf06409f7</var>,</td></tr>
+<tr><th id="240">240</th><td><var>0x1f20d2db</var>, <var>0xc2657863</var>, <var>0xa047f15a</var>, <var>0x7d025be2</var>,</td></tr>
+<tr><th id="241">241</th><td><var>0x6402e328</var>, <var>0xb9474990</var>, <var>0xdb65c0a9</var>, <var>0x06206a11</var>,</td></tr>
+<tr><th id="242">242</th><td><var>0xd725148b</var>, <var>0x0a60be33</var>, <var>0x6842370a</var>, <var>0xb5079db2</var>,</td></tr>
+<tr><th id="243">243</th><td><var>0xac072578</var>, <var>0x71428fc0</var>, <var>0x136006f9</var>, <var>0xce25ac41</var>,</td></tr>
+<tr><th id="244">244</th><td><var>0x2161776d</var>, <var>0xfc24ddd5</var>, <var>0x9e0654ec</var>, <var>0x4343fe54</var>,</td></tr>
+<tr><th id="245">245</th><td><var>0x5a43469e</var>, <var>0x8706ec26</var>, <var>0xe524651f</var>, <var>0x3861cfa7</var>,</td></tr>
+<tr><th id="246">246</th><td><var>0x3e41a5b6</var>, <var>0xe3040f0e</var>, <var>0x81268637</var>, <var>0x5c632c8f</var>,</td></tr>
+<tr><th id="247">247</th><td><var>0x45639445</var>, <var>0x98263efd</var>, <var>0xfa04b7c4</var>, <var>0x27411d7c</var>,</td></tr>
+<tr><th id="248">248</th><td><var>0xc805c650</var>, <var>0x15406ce8</var>, <var>0x7762e5d1</var>, <var>0xaa274f69</var>,</td></tr>
+<tr><th id="249">249</th><td><var>0xb327f7a3</var>, <var>0x6e625d1b</var>, <var>0x0c40d422</var>, <var>0xd1057e9a</var>,</td></tr>
+<tr><th id="250">250</th><td><var>0xaba65fe7</var>, <var>0x76e3f55f</var>, <var>0x14c17c66</var>, <var>0xc984d6de</var>,</td></tr>
+<tr><th id="251">251</th><td><var>0xd0846e14</var>, <var>0x0dc1c4ac</var>, <var>0x6fe34d95</var>, <var>0xb2a6e72d</var>,</td></tr>
+<tr><th id="252">252</th><td><var>0x5de23c01</var>, <var>0x80a796b9</var>, <var>0xe2851f80</var>, <var>0x3fc0b538</var>,</td></tr>
+<tr><th id="253">253</th><td><var>0x26c00df2</var>, <var>0xfb85a74a</var>, <var>0x99a72e73</var>, <var>0x44e284cb</var>,</td></tr>
+<tr><th id="254">254</th><td><var>0x42c2eeda</var>, <var>0x9f874462</var>, <var>0xfda5cd5b</var>, <var>0x20e067e3</var>,</td></tr>
+<tr><th id="255">255</th><td><var>0x39e0df29</var>, <var>0xe4a57591</var>, <var>0x8687fca8</var>, <var>0x5bc25610</var>,</td></tr>
+<tr><th id="256">256</th><td><var>0xb4868d3c</var>, <var>0x69c32784</var>, <var>0x0be1aebd</var>, <var>0xd6a40405</var>,</td></tr>
+<tr><th id="257">257</th><td><var>0xcfa4bccf</var>, <var>0x12e11677</var>, <var>0x70c39f4e</var>, <var>0xad8635f6</var>,</td></tr>
+<tr><th id="258">258</th><td><var>0x7c834b6c</var>, <var>0xa1c6e1d4</var>, <var>0xc3e468ed</var>, <var>0x1ea1c255</var>,</td></tr>
+<tr><th id="259">259</th><td><var>0x07a17a9f</var>, <var>0xdae4d027</var>, <var>0xb8c6591e</var>, <var>0x6583f3a6</var>,</td></tr>
+<tr><th id="260">260</th><td><var>0x8ac7288a</var>, <var>0x57828232</var>, <var>0x35a00b0b</var>, <var>0xe8e5a1b3</var>,</td></tr>
+<tr><th id="261">261</th><td><var>0xf1e51979</var>, <var>0x2ca0b3c1</var>, <var>0x4e823af8</var>, <var>0x93c79040</var>,</td></tr>
+<tr><th id="262">262</th><td><var>0x95e7fa51</var>, <var>0x48a250e9</var>, <var>0x2a80d9d0</var>, <var>0xf7c57368</var>,</td></tr>
+<tr><th id="263">263</th><td><var>0xeec5cba2</var>, <var>0x3380611a</var>, <var>0x51a2e823</var>, <var>0x8ce7429b</var>,</td></tr>
+<tr><th id="264">264</th><td><var>0x63a399b7</var>, <var>0xbee6330f</var>, <var>0xdcc4ba36</var>, <var>0x0181108e</var>,</td></tr>
+<tr><th id="265">265</th><td><var>0x1881a844</var>, <var>0xc5c402fc</var>, <var>0xa7e68bc5</var>, <var>0x7aa3217d</var>,</td></tr>
+<tr><th id="266">266</th><td><var>0x52a0c93f</var>, <var>0x8fe56387</var>, <var>0xedc7eabe</var>, <var>0x30824006</var>,</td></tr>
+<tr><th id="267">267</th><td><var>0x2982f8cc</var>, <var>0xf4c75274</var>, <var>0x96e5db4d</var>, <var>0x4ba071f5</var>,</td></tr>
+<tr><th id="268">268</th><td><var>0xa4e4aad9</var>, <var>0x79a10061</var>, <var>0x1b838958</var>, <var>0xc6c623e0</var>,</td></tr>
+<tr><th id="269">269</th><td><var>0xdfc69b2a</var>, <var>0x02833192</var>, <var>0x60a1b8ab</var>, <var>0xbde41213</var>,</td></tr>
+<tr><th id="270">270</th><td><var>0xbbc47802</var>, <var>0x6681d2ba</var>, <var>0x04a35b83</var>, <var>0xd9e6f13b</var>,</td></tr>
+<tr><th id="271">271</th><td><var>0xc0e649f1</var>, <var>0x1da3e349</var>, <var>0x7f816a70</var>, <var>0xa2c4c0c8</var>,</td></tr>
+<tr><th id="272">272</th><td><var>0x4d801be4</var>, <var>0x90c5b15c</var>, <var>0xf2e73865</var>, <var>0x2fa292dd</var>,</td></tr>
+<tr><th id="273">273</th><td><var>0x36a22a17</var>, <var>0xebe780af</var>, <var>0x89c50996</var>, <var>0x5480a32e</var>,</td></tr>
+<tr><th id="274">274</th><td><var>0x8585ddb4</var>, <var>0x58c0770c</var>, <var>0x3ae2fe35</var>, <var>0xe7a7548d</var>,</td></tr>
+<tr><th id="275">275</th><td><var>0xfea7ec47</var>, <var>0x23e246ff</var>, <var>0x41c0cfc6</var>, <var>0x9c85657e</var>,</td></tr>
+<tr><th id="276">276</th><td><var>0x73c1be52</var>, <var>0xae8414ea</var>, <var>0xcca69dd3</var>, <var>0x11e3376b</var>,</td></tr>
+<tr><th id="277">277</th><td><var>0x08e38fa1</var>, <var>0xd5a62519</var>, <var>0xb784ac20</var>, <var>0x6ac10698</var>,</td></tr>
+<tr><th id="278">278</th><td><var>0x6ce16c89</var>, <var>0xb1a4c631</var>, <var>0xd3864f08</var>, <var>0x0ec3e5b0</var>,</td></tr>
+<tr><th id="279">279</th><td><var>0x17c35d7a</var>, <var>0xca86f7c2</var>, <var>0xa8a47efb</var>, <var>0x75e1d443</var>,</td></tr>
+<tr><th id="280">280</th><td><var>0x9aa50f6f</var>, <var>0x47e0a5d7</var>, <var>0x25c22cee</var>, <var>0xf8878656</var>,</td></tr>
+<tr><th id="281">281</th><td><var>0xe1873e9c</var>, <var>0x3cc29424</var>, <var>0x5ee01d1d</var>, <var>0x83a5b7a5</var>,</td></tr>
+<tr><th id="282">282</th><td><var>0xf90696d8</var>, <var>0x24433c60</var>, <var>0x4661b559</var>, <var>0x9b241fe1</var>,</td></tr>
+<tr><th id="283">283</th><td><var>0x8224a72b</var>, <var>0x5f610d93</var>, <var>0x3d4384aa</var>, <var>0xe0062e12</var>,</td></tr>
+<tr><th id="284">284</th><td><var>0x0f42f53e</var>, <var>0xd2075f86</var>, <var>0xb025d6bf</var>, <var>0x6d607c07</var>,</td></tr>
+<tr><th id="285">285</th><td><var>0x7460c4cd</var>, <var>0xa9256e75</var>, <var>0xcb07e74c</var>, <var>0x16424df4</var>,</td></tr>
+<tr><th id="286">286</th><td><var>0x106227e5</var>, <var>0xcd278d5d</var>, <var>0xaf050464</var>, <var>0x7240aedc</var>,</td></tr>
+<tr><th id="287">287</th><td><var>0x6b401616</var>, <var>0xb605bcae</var>, <var>0xd4273597</var>, <var>0x09629f2f</var>,</td></tr>
+<tr><th id="288">288</th><td><var>0xe6264403</var>, <var>0x3b63eebb</var>, <var>0x59416782</var>, <var>0x8404cd3a</var>,</td></tr>
+<tr><th id="289">289</th><td><var>0x9d0475f0</var>, <var>0x4041df48</var>, <var>0x22635671</var>, <var>0xff26fcc9</var>,</td></tr>
+<tr><th id="290">290</th><td><var>0x2e238253</var>, <var>0xf36628eb</var>, <var>0x9144a1d2</var>, <var>0x4c010b6a</var>,</td></tr>
+<tr><th id="291">291</th><td><var>0x5501b3a0</var>, <var>0x88441918</var>, <var>0xea669021</var>, <var>0x37233a99</var>,</td></tr>
+<tr><th id="292">292</th><td><var>0xd867e1b5</var>, <var>0x05224b0d</var>, <var>0x6700c234</var>, <var>0xba45688c</var>,</td></tr>
+<tr><th id="293">293</th><td><var>0xa345d046</var>, <var>0x7e007afe</var>, <var>0x1c22f3c7</var>, <var>0xc167597f</var>,</td></tr>
+<tr><th id="294">294</th><td><var>0xc747336e</var>, <var>0x1a0299d6</var>, <var>0x782010ef</var>, <var>0xa565ba57</var>,</td></tr>
+<tr><th id="295">295</th><td><var>0xbc65029d</var>, <var>0x6120a825</var>, <var>0x0302211c</var>, <var>0xde478ba4</var>,</td></tr>
+<tr><th id="296">296</th><td><var>0x31035088</var>, <var>0xec46fa30</var>, <var>0x8e647309</var>, <var>0x5321d9b1</var>,</td></tr>
+<tr><th id="297">297</th><td><var>0x4a21617b</var>, <var>0x9764cbc3</var>, <var>0xf54642fa</var>, <var>0x2803e842</var>,</td></tr>
+<tr><th id="298">298</th><td>};</td></tr>
+<tr><th id="299">299</th><td></td></tr>
+<tr><th id="300">300</th><td><u>#define <dfn class="macro" id="_M/CRC32C_REFLECTED_X1023" data-ref="_M/CRC32C_REFLECTED_X1023">CRC32C_REFLECTED_X1023</dfn> 0x7417153fll</u></td></tr>
+<tr><th id="301">301</th><td><u>#define <dfn class="macro" id="_M/CRC32C_REFLECTED_X2047" data-ref="_M/CRC32C_REFLECTED_X2047">CRC32C_REFLECTED_X2047</dfn> 0x1426a815ll</u></td></tr>
+<tr><th id="302">302</th><td><u>#define <dfn class="macro" id="_M/CRC32C_REFLECTED_X4095" data-ref="_M/CRC32C_REFLECTED_X4095">CRC32C_REFLECTED_X4095</dfn> 0xe986c148ll</u></td></tr>
+<tr><th id="303">303</th><td><u>#define <dfn class="macro" id="_M/CRC32C_REFLECTED_X8191" data-ref="_M/CRC32C_REFLECTED_X8191">CRC32C_REFLECTED_X8191</dfn> 0xcdc220ddll</u></td></tr>
+<tr><th id="304">304</th><td><u>#define <dfn class="macro" id="_M/CRC32C_REFLECTED_X16383" data-ref="_M/CRC32C_REFLECTED_X16383">CRC32C_REFLECTED_X16383</dfn> 0x1acaec54ll</u></td></tr>
+<tr><th id="305">305</th><td></td></tr>
+<tr><th id="306">306</th><td><u>#<span data-ppcond="306">ifdef</span> <span class="macro" data-ref="_M/__LP64__">__LP64__</span></u></td></tr>
+<tr><th id="307">307</th><td><em>static</em> <em>unsigned</em> <dfn class="tu decl def" id="crc32c_partial_sse42" title='crc32c_partial_sse42' data-type='unsigned int crc32c_partial_sse42(const void * data, long len, unsigned int crc)' data-ref="crc32c_partial_sse42">crc32c_partial_sse42</dfn> (<em>const</em> <em>void</em> *<dfn class="local col6 decl" id="6data" title='data' data-type='const void *' data-ref="6data">data</dfn>, <em>long</em> <dfn class="local col7 decl" id="7len" title='len' data-type='long' data-ref="7len">len</dfn>, <em>unsigned</em> <dfn class="local col8 decl" id="8crc" title='crc' data-type='unsigned int' data-ref="8crc">crc</dfn>) {</td></tr>
+<tr><th id="308">308</th><td>  <em>const</em> <em>char</em> *<dfn class="local col9 decl" id="9p" title='p' data-type='const char *' data-ref="9p">p</dfn> = <a class="local col6 ref" href="#6data" title='data' data-ref="6data">data</a>;</td></tr>
+<tr><th id="309">309</th><td>  <em>unsigned</em> <em>long</em> <em>long</em> <dfn class="local col0 decl" id="10c" title='c' data-type='unsigned long long' data-ref="10c">c</dfn> = <a class="local col8 ref" href="#8crc" title='crc' data-ref="8crc">crc</a>;</td></tr>
+<tr><th id="310">310</th><td>  <b>while</b> ((((<a class="typedef" href="../../include/stdint.h.html#uintptr_t" title='uintptr_t' data-type='unsigned long' data-ref="uintptr_t">uintptr_t</a>) <a class="local col9 ref" href="#9p" title='p' data-ref="9p">p</a>) &amp; <var>7</var>) &amp;&amp; (<a class="local col7 ref" href="#7len" title='len' data-ref="7len">len</a> &gt; <var>0</var>)) {</td></tr>
+<tr><th id="311">311</th><td>    <b>asm</b> <em>volatile</em> (</td></tr>
+<tr><th id="312">312</th><td>       <q>"crc32b (%2), %1\n\t"</q></td></tr>
+<tr><th id="313">313</th><td>     : <q>"=r"</q> (<a class="local col0 ref" href="#10c" title='c' data-ref="10c">c</a>)</td></tr>
+<tr><th id="314">314</th><td>     : <q>"0"</q>  (<a class="local col0 ref" href="#10c" title='c' data-ref="10c">c</a>), <q>"r"</q> (<a class="local col9 ref" href="#9p" title='p' data-ref="9p">p</a>)</td></tr>
+<tr><th id="315">315</th><td>    );</td></tr>
+<tr><th id="316">316</th><td>    <a class="local col9 ref" href="#9p" title='p' data-ref="9p">p</a>++;</td></tr>
+<tr><th id="317">317</th><td>    <a class="local col7 ref" href="#7len" title='len' data-ref="7len">len</a>--;</td></tr>
+<tr><th id="318">318</th><td>  }</td></tr>
+<tr><th id="319">319</th><td>  <b>while</b> (<a class="local col7 ref" href="#7len" title='len' data-ref="7len">len</a> &gt;= <var>8</var>) {</td></tr>
+<tr><th id="320">320</th><td>    <b>asm</b> <em>volatile</em> (</td></tr>
+<tr><th id="321">321</th><td>       <q>"crc32q (%2), %1\n\t"</q></td></tr>
+<tr><th id="322">322</th><td>     : <q>"=r"</q> (<a class="local col0 ref" href="#10c" title='c' data-ref="10c">c</a>)</td></tr>
+<tr><th id="323">323</th><td>     : <q>"0"</q>  (<a class="local col0 ref" href="#10c" title='c' data-ref="10c">c</a>), <q>"r"</q> (<a class="local col9 ref" href="#9p" title='p' data-ref="9p">p</a>)</td></tr>
+<tr><th id="324">324</th><td>    );</td></tr>
+<tr><th id="325">325</th><td>    <a class="local col9 ref" href="#9p" title='p' data-ref="9p">p</a> += <var>8</var>;</td></tr>
+<tr><th id="326">326</th><td>    <a class="local col7 ref" href="#7len" title='len' data-ref="7len">len</a> -= <var>8</var>;</td></tr>
+<tr><th id="327">327</th><td>  }</td></tr>
+<tr><th id="328">328</th><td>  <b>while</b> (<a class="local col7 ref" href="#7len" title='len' data-ref="7len">len</a> &gt; <var>0</var>) {</td></tr>
+<tr><th id="329">329</th><td>    <b>asm</b> <em>volatile</em> (</td></tr>
+<tr><th id="330">330</th><td>       <q>"crc32b (%2), %1\n\t"</q></td></tr>
+<tr><th id="331">331</th><td>     : <q>"=r"</q> (<a class="local col0 ref" href="#10c" title='c' data-ref="10c">c</a>)</td></tr>
+<tr><th id="332">332</th><td>     : <q>"0"</q>  (<a class="local col0 ref" href="#10c" title='c' data-ref="10c">c</a>), <q>"r"</q> (<a class="local col9 ref" href="#9p" title='p' data-ref="9p">p</a>)</td></tr>
+<tr><th id="333">333</th><td>    );</td></tr>
+<tr><th id="334">334</th><td>    <a class="local col9 ref" href="#9p" title='p' data-ref="9p">p</a>++;</td></tr>
+<tr><th id="335">335</th><td>    <a class="local col7 ref" href="#7len" title='len' data-ref="7len">len</a>--;</td></tr>
+<tr><th id="336">336</th><td>  }</td></tr>
+<tr><th id="337">337</th><td>  <b>return</b> <a class="local col0 ref" href="#10c" title='c' data-ref="10c">c</a>;</td></tr>
+<tr><th id="338">338</th><td>}</td></tr>
+<tr><th id="339">339</th><td></td></tr>
+<tr><th id="340">340</th><td><em>static</em> <em>unsigned</em> <dfn class="tu decl def" id="crc32c_partial_sse42_clmul" title='crc32c_partial_sse42_clmul' data-type='unsigned int crc32c_partial_sse42_clmul(const void * data, long len, unsigned int crc)' data-ref="crc32c_partial_sse42_clmul">crc32c_partial_sse42_clmul</dfn> (<em>const</em> <em>void</em> *<dfn class="local col1 decl" id="11data" title='data' data-type='const void *' data-ref="11data">data</dfn>, <em>long</em> <dfn class="local col2 decl" id="12len" title='len' data-type='long' data-ref="12len">len</dfn>, <em>unsigned</em> <dfn class="local col3 decl" id="13crc" title='crc' data-type='unsigned int' data-ref="13crc">crc</dfn>) {</td></tr>
+<tr><th id="341">341</th><td>  <em>const</em> <em>char</em> *<dfn class="local col4 decl" id="14p" title='p' data-type='const char *' data-ref="14p">p</dfn> = <a class="local col1 ref" href="#11data" title='data' data-ref="11data">data</a>;</td></tr>
+<tr><th id="342">342</th><td>  <b>if</b> (<a class="macro" href="cpuid.h.html#24" title="__builtin_expect(((((uintptr_t) p) &amp; 1)),0)" data-ref="_M/unlikely">unlikely</a> ((((<a class="typedef" href="../../include/stdint.h.html#uintptr_t" title='uintptr_t' data-type='unsigned long' data-ref="uintptr_t">uintptr_t</a>) <a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a>) &amp; <var>1</var>)) &amp;&amp; (<a class="local col2 ref" href="#12len" title='len' data-ref="12len">len</a> &gt; <var>0</var>)) {</td></tr>
+<tr><th id="343">343</th><td>    <b>asm</b> <em>volatile</em> (</td></tr>
+<tr><th id="344">344</th><td>       <q>"crc32b (%2), %1\n\t"</q></td></tr>
+<tr><th id="345">345</th><td>     : <q>"=r"</q> (<a class="local col3 ref" href="#13crc" title='crc' data-ref="13crc">crc</a>)</td></tr>
+<tr><th id="346">346</th><td>     : <q>"0"</q>  (<a class="local col3 ref" href="#13crc" title='crc' data-ref="13crc">crc</a>), <q>"r"</q> (<a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a>)</td></tr>
+<tr><th id="347">347</th><td>    );</td></tr>
+<tr><th id="348">348</th><td>    <a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a>++;</td></tr>
+<tr><th id="349">349</th><td>    <a class="local col2 ref" href="#12len" title='len' data-ref="12len">len</a>--;</td></tr>
+<tr><th id="350">350</th><td>  }</td></tr>
+<tr><th id="351">351</th><td></td></tr>
+<tr><th id="352">352</th><td>  <b>if</b> (<a class="macro" href="cpuid.h.html#24" title="__builtin_expect(((((uintptr_t) p) &amp; 2)),0)" data-ref="_M/unlikely">unlikely</a> ((((<a class="typedef" href="../../include/stdint.h.html#uintptr_t" title='uintptr_t' data-type='unsigned long' data-ref="uintptr_t">uintptr_t</a>) <a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a>) &amp; <var>2</var>)) &amp;&amp; (<a class="local col2 ref" href="#12len" title='len' data-ref="12len">len</a> &gt;= <var>2</var>)) {</td></tr>
+<tr><th id="353">353</th><td>    <b>asm</b> <em>volatile</em> (</td></tr>
+<tr><th id="354">354</th><td>       <q>"crc32w (%2), %1\n\t"</q></td></tr>
+<tr><th id="355">355</th><td>     : <q>"=r"</q> (<a class="local col3 ref" href="#13crc" title='crc' data-ref="13crc">crc</a>)</td></tr>
+<tr><th id="356">356</th><td>     : <q>"0"</q>  (<a class="local col3 ref" href="#13crc" title='crc' data-ref="13crc">crc</a>), <q>"r"</q> (<a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a>)</td></tr>
+<tr><th id="357">357</th><td>    );</td></tr>
+<tr><th id="358">358</th><td>    <a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a> += <var>2</var>;</td></tr>
+<tr><th id="359">359</th><td>    <a class="local col2 ref" href="#12len" title='len' data-ref="12len">len</a> -= <var>2</var>;</td></tr>
+<tr><th id="360">360</th><td>  }</td></tr>
+<tr><th id="361">361</th><td></td></tr>
+<tr><th id="362">362</th><td>  <b>if</b> ((((<a class="typedef" href="../../include/stdint.h.html#uintptr_t" title='uintptr_t' data-type='unsigned long' data-ref="uintptr_t">uintptr_t</a>) <a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a>) &amp; <var>4</var>) &amp;&amp; (<a class="local col2 ref" href="#12len" title='len' data-ref="12len">len</a> &gt;= <var>4</var>)) {</td></tr>
+<tr><th id="363">363</th><td>    <b>asm</b> <em>volatile</em> (</td></tr>
+<tr><th id="364">364</th><td>       <q>"crc32l (%2), %1\n\t"</q></td></tr>
+<tr><th id="365">365</th><td>     : <q>"=r"</q> (<a class="local col3 ref" href="#13crc" title='crc' data-ref="13crc">crc</a>)</td></tr>
+<tr><th id="366">366</th><td>     : <q>"0"</q>  (<a class="local col3 ref" href="#13crc" title='crc' data-ref="13crc">crc</a>), <q>"r"</q> (<a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a>)</td></tr>
+<tr><th id="367">367</th><td>    );</td></tr>
+<tr><th id="368">368</th><td>    <a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a> += <var>4</var>;</td></tr>
+<tr><th id="369">369</th><td>    <a class="local col2 ref" href="#12len" title='len' data-ref="12len">len</a> -= <var>4</var>;</td></tr>
+<tr><th id="370">370</th><td>  }</td></tr>
+<tr><th id="371">371</th><td></td></tr>
+<tr><th id="372">372</th><td>  <b>if</b> (<a class="macro" href="cpuid.h.html#24" title="__builtin_expect((((uintptr_t) p) &amp; 7),0)" data-ref="_M/unlikely">unlikely</a> (((<a class="typedef" href="../../include/stdint.h.html#uintptr_t" title='uintptr_t' data-type='unsigned long' data-ref="uintptr_t">uintptr_t</a>) <a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a>) &amp; <var>7</var>)) {</td></tr>
+<tr><th id="373">373</th><td>    <b>while</b> (<a class="local col2 ref" href="#12len" title='len' data-ref="12len">len</a> &gt; <var>0</var>) {</td></tr>
+<tr><th id="374">374</th><td>      <b>asm</b> <em>volatile</em> (</td></tr>
+<tr><th id="375">375</th><td>         <q>"crc32b (%2), %1\n\t"</q></td></tr>
+<tr><th id="376">376</th><td>       : <q>"=r"</q> (<a class="local col3 ref" href="#13crc" title='crc' data-ref="13crc">crc</a>)</td></tr>
+<tr><th id="377">377</th><td>       : <q>"0"</q>  (<a class="local col3 ref" href="#13crc" title='crc' data-ref="13crc">crc</a>), <q>"r"</q> (<a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a>)</td></tr>
+<tr><th id="378">378</th><td>      );</td></tr>
+<tr><th id="379">379</th><td>      <a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a>++;</td></tr>
+<tr><th id="380">380</th><td>      <a class="local col2 ref" href="#12len" title='len' data-ref="12len">len</a>--;</td></tr>
+<tr><th id="381">381</th><td>    }</td></tr>
+<tr><th id="382">382</th><td>    <b>return</b> <a class="local col3 ref" href="#13crc" title='crc' data-ref="13crc">crc</a>;</td></tr>
+<tr><th id="383">383</th><td>  }</td></tr>
+<tr><th id="384">384</th><td></td></tr>
+<tr><th id="385">385</th><td>  <em>unsigned</em> <em>long</em> <em>long</em> <dfn class="local col5 decl" id="15c" title='c' data-type='unsigned long long' data-ref="15c">c</dfn> = <a class="local col3 ref" href="#13crc" title='crc' data-ref="13crc">crc</a>;</td></tr>
+<tr><th id="386">386</th><td></td></tr>
+<tr><th id="387">387</th><td>  <b>while</b> (<a class="local col2 ref" href="#12len" title='len' data-ref="12len">len</a> &gt;= <var>3</var> * <var>0x400</var>) {</td></tr>
+<tr><th id="388">388</th><td>    <em>unsigned</em> <em>long</em> <em>long</em> <dfn class="local col6 decl" id="16c1" title='c1' data-type='unsigned long long' data-ref="16c1">c1</dfn> = <var>0</var>, <dfn class="local col7 decl" id="17c2" title='c2' data-type='unsigned long long' data-ref="17c2">c2</dfn> = <var>0</var>;</td></tr>
+<tr><th id="389">389</th><td>    <em>const</em> <em>char</em> *<dfn class="local col8 decl" id="18q" title='q' data-type='const char *' data-ref="18q">q</dfn> = <a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a> + <var>0x400</var>;</td></tr>
+<tr><th id="390">390</th><td>    <b>do</b> {</td></tr>
+<tr><th id="391">391</th><td>      <b>asm</b> <em>volatile</em>(</td></tr>
+<tr><th id="392">392</th><td>          <q>"crc32q (%3), %0\n\t"</q></td></tr>
+<tr><th id="393">393</th><td>          <q>"crc32q 0x400(%3), %1\n\t"</q></td></tr>
+<tr><th id="394">394</th><td>          <q>"crc32q 0x800(%3), %2\n\t"</q></td></tr>
+<tr><th id="395">395</th><td>          <q>"crc32q 8(%3), %0\n\t"</q></td></tr>
+<tr><th id="396">396</th><td>          <q>"crc32q 0x408(%3), %1\n\t"</q></td></tr>
+<tr><th id="397">397</th><td>          <q>"crc32q 0x808(%3), %2\n\t"</q></td></tr>
+<tr><th id="398">398</th><td>          : <q>"=r"</q>(<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>), <q>"=r"</q>(<a class="local col6 ref" href="#16c1" title='c1' data-ref="16c1">c1</a>), <q>"=r"</q>(<a class="local col7 ref" href="#17c2" title='c2' data-ref="17c2">c2</a>)</td></tr>
+<tr><th id="399">399</th><td>          : <q>"r"</q>(<a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a>), <q>"0"</q>(<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>), <q>"1"</q>(<a class="local col6 ref" href="#16c1" title='c1' data-ref="16c1">c1</a>), <q>"2"</q>(<a class="local col7 ref" href="#17c2" title='c2' data-ref="17c2">c2</a>));</td></tr>
+<tr><th id="400">400</th><td>      <a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a> += <var>16</var>;</td></tr>
+<tr><th id="401">401</th><td>    } <b>while</b> (<a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a> &lt; <a class="local col8 ref" href="#18q" title='q' data-ref="18q">q</a>);</td></tr>
+<tr><th id="402">402</th><td>    <em>static</em> <em>const</em> <a class="typedef" href="cpuid.h.html#v2di" title='v2di' data-type='__attribute__((__vector_size__(2 * sizeof(long long)))) long long' data-ref="v2di">v2di</a> <dfn class="local col9 decl" id="19K" title='K' data-type='const v2di' data-ref="19K">K</dfn> = { <a class="macro" href="#304" title="0x1acaec54ll" data-ref="_M/CRC32C_REFLECTED_X16383">CRC32C_REFLECTED_X16383</a>, <a class="macro" href="#303" title="0xcdc220ddll" data-ref="_M/CRC32C_REFLECTED_X8191">CRC32C_REFLECTED_X8191</a> };</td></tr>
+<tr><th id="403">403</th><td>    <a class="typedef" href="cpuid.h.html#v2di" title='v2di' data-type='__attribute__((__vector_size__(2 * sizeof(long long)))) long long' data-ref="v2di">v2di</a> <dfn class="local col0 decl" id="20D" title='D' data-type='v2di' data-ref="20D">D</dfn>, <dfn class="local col1 decl" id="21E" title='E' data-type='v2di' data-ref="21E">E</dfn>;</td></tr>
+<tr><th id="404">404</th><td>    <b>asm</b> <em>volatile</em> (<q>"movq %1, %0\n\t"</q> : <q>"=x"</q> (<a class="local col0 ref" href="#20D" title='D' data-ref="20D">D</a>)  : <q>"g"</q> (<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>));</td></tr>
+<tr><th id="405">405</th><td>    <b>asm</b> <em>volatile</em> (<q>"movq %1, %0\n\t"</q> : <q>"=x"</q> (<a class="local col1 ref" href="#21E" title='E' data-ref="21E">E</a>)  : <q>"g"</q> (<a class="local col6 ref" href="#16c1" title='c1' data-ref="16c1">c1</a>));</td></tr>
+<tr><th id="406">406</th><td>    <a class="typedef" href="cpuid.h.html#v2di" title='v2di' data-type='__attribute__((__vector_size__(2 * sizeof(long long)))) long long' data-ref="v2di">v2di</a> <dfn class="local col2 decl" id="22F" title='F' data-type='v2di' data-ref="22F">F</dfn> = <a class="ref" href="#406" title='__builtin_ia32_pclmulqdq128' data-ref="__builtin_ia32_pclmulqdq128">__builtin_ia32_pclmulqdq128</a> (<a class="local col0 ref" href="#20D" title='D' data-ref="20D">D</a>, <a class="local col9 ref" href="#19K" title='K' data-ref="19K">K</a>, <var>0x00</var>) ^ <a class="ref" href="#406" title='__builtin_ia32_pclmulqdq128' data-ref="__builtin_ia32_pclmulqdq128">__builtin_ia32_pclmulqdq128</a> (<a class="local col1 ref" href="#21E" title='E' data-ref="21E">E</a>, <a class="local col9 ref" href="#19K" title='K' data-ref="19K">K</a>, <var>0x10</var>);</td></tr>
+<tr><th id="407">407</th><td>    <b>asm</b> <em>volatile</em> (<q>"movq %1, %0\n\t"</q> : <q>"=g"</q> (<a class="local col6 ref" href="#16c1" title='c1' data-ref="16c1">c1</a>) : <q>"x"</q>(<a class="local col2 ref" href="#22F" title='F' data-ref="22F">F</a>));</td></tr>
+<tr><th id="408">408</th><td>    <em>unsigned</em> <em>int</em> <dfn class="local col3 decl" id="23r" title='r' data-type='unsigned int' data-ref="23r">r</dfn>;</td></tr>
+<tr><th id="409">409</th><td>    <b>asm</b> <em>volatile</em> (<q>"crc32l %1, %0\n\t"</q> : <q>"=r"</q> (<a class="local col3 ref" href="#23r" title='r' data-ref="23r">r</a>) : <q>"r"</q>((<em>int</em>) <a class="local col6 ref" href="#16c1" title='c1' data-ref="16c1">c1</a>), <q>"0"</q>(<var>0</var>));</td></tr>
+<tr><th id="410">410</th><td>    <a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a> += <var>0x800</var>;</td></tr>
+<tr><th id="411">411</th><td>    <a class="local col2 ref" href="#12len" title='len' data-ref="12len">len</a> -= <var>3</var> * <var>0x400</var>;</td></tr>
+<tr><th id="412">412</th><td>    <a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a> = <a class="local col3 ref" href="#23r" title='r' data-ref="23r">r</a> ^ (<a class="local col6 ref" href="#16c1" title='c1' data-ref="16c1">c1</a> &gt;&gt; <var>32</var>) ^ <a class="local col7 ref" href="#17c2" title='c2' data-ref="17c2">c2</a>;</td></tr>
+<tr><th id="413">413</th><td>  }</td></tr>
+<tr><th id="414">414</th><td>  <b>while</b> (<a class="local col2 ref" href="#12len" title='len' data-ref="12len">len</a> &gt;= <var>0x180</var>) {</td></tr>
+<tr><th id="415">415</th><td>    <em>unsigned</em> <em>long</em> <em>long</em> <dfn class="local col4 decl" id="24c1" title='c1' data-type='unsigned long long' data-ref="24c1">c1</dfn> = <var>0</var>, <dfn class="local col5 decl" id="25c2" title='c2' data-type='unsigned long long' data-ref="25c2">c2</dfn> = <var>0</var>;</td></tr>
+<tr><th id="416">416</th><td>    <b>asm</b> <em>volatile</em>(</td></tr>
+<tr><th id="417">417</th><td>        <q>"crc32q (%3), %0\n\t"</q></td></tr>
+<tr><th id="418">418</th><td>        <q>"crc32q 0x80(%3), %1\n\t"</q></td></tr>
+<tr><th id="419">419</th><td>        <q>"crc32q 0x100(%3), %2\n\t"</q></td></tr>
+<tr><th id="420">420</th><td>        <q>"crc32q 0x8(%3), %0\n\t"</q></td></tr>
+<tr><th id="421">421</th><td>        <q>"crc32q 0x88(%3), %1\n\t"</q></td></tr>
+<tr><th id="422">422</th><td>        <q>"crc32q 0x108(%3), %2\n\t"</q></td></tr>
+<tr><th id="423">423</th><td>        <q>"crc32q 0x10(%3), %0\n\t"</q></td></tr>
+<tr><th id="424">424</th><td>        <q>"crc32q 0x90(%3), %1\n\t"</q></td></tr>
+<tr><th id="425">425</th><td>        <q>"crc32q 0x110(%3), %2\n\t"</q></td></tr>
+<tr><th id="426">426</th><td>        <q>"crc32q 0x18(%3), %0\n\t"</q></td></tr>
+<tr><th id="427">427</th><td>        <q>"crc32q 0x98(%3), %1\n\t"</q></td></tr>
+<tr><th id="428">428</th><td>        <q>"crc32q 0x118(%3), %2\n\t"</q></td></tr>
+<tr><th id="429">429</th><td>        <q>"crc32q 0x20(%3), %0\n\t"</q></td></tr>
+<tr><th id="430">430</th><td>        <q>"crc32q 0xa0(%3), %1\n\t"</q></td></tr>
+<tr><th id="431">431</th><td>        <q>"crc32q 0x120(%3), %2\n\t"</q></td></tr>
+<tr><th id="432">432</th><td>        <q>"crc32q 0x28(%3), %0\n\t"</q></td></tr>
+<tr><th id="433">433</th><td>        <q>"crc32q 0xa8(%3), %1\n\t"</q></td></tr>
+<tr><th id="434">434</th><td>        <q>"crc32q 0x128(%3), %2\n\t"</q></td></tr>
+<tr><th id="435">435</th><td>        <q>"crc32q 0x30(%3), %0\n\t"</q></td></tr>
+<tr><th id="436">436</th><td>        <q>"crc32q 0xb0(%3), %1\n\t"</q></td></tr>
+<tr><th id="437">437</th><td>        <q>"crc32q 0x130(%3), %2\n\t"</q></td></tr>
+<tr><th id="438">438</th><td>        <q>"crc32q 0x38(%3), %0\n\t"</q></td></tr>
+<tr><th id="439">439</th><td>        <q>"crc32q 0xb8(%3), %1\n\t"</q></td></tr>
+<tr><th id="440">440</th><td>        <q>"crc32q 0x138(%3), %2\n\t"</q></td></tr>
+<tr><th id="441">441</th><td>        <q>"crc32q 0x40(%3), %0\n\t"</q></td></tr>
+<tr><th id="442">442</th><td>        <q>"crc32q 0xc0(%3), %1\n\t"</q></td></tr>
+<tr><th id="443">443</th><td>        <q>"crc32q 0x140(%3), %2\n\t"</q></td></tr>
+<tr><th id="444">444</th><td>        <q>"crc32q 0x48(%3), %0\n\t"</q></td></tr>
+<tr><th id="445">445</th><td>        <q>"crc32q 0xc8(%3), %1\n\t"</q></td></tr>
+<tr><th id="446">446</th><td>        <q>"crc32q 0x148(%3), %2\n\t"</q></td></tr>
+<tr><th id="447">447</th><td>        <q>"crc32q 0x50(%3), %0\n\t"</q></td></tr>
+<tr><th id="448">448</th><td>        <q>"crc32q 0xd0(%3), %1\n\t"</q></td></tr>
+<tr><th id="449">449</th><td>        <q>"crc32q 0x150(%3), %2\n\t"</q></td></tr>
+<tr><th id="450">450</th><td>        <q>"crc32q 0x58(%3), %0\n\t"</q></td></tr>
+<tr><th id="451">451</th><td>        <q>"crc32q 0xd8(%3), %1\n\t"</q></td></tr>
+<tr><th id="452">452</th><td>        <q>"crc32q 0x158(%3), %2\n\t"</q></td></tr>
+<tr><th id="453">453</th><td>        <q>"crc32q 0x60(%3), %0\n\t"</q></td></tr>
+<tr><th id="454">454</th><td>        <q>"crc32q 0xe0(%3), %1\n\t"</q></td></tr>
+<tr><th id="455">455</th><td>        <q>"crc32q 0x160(%3), %2\n\t"</q></td></tr>
+<tr><th id="456">456</th><td>        <q>"crc32q 0x68(%3), %0\n\t"</q></td></tr>
+<tr><th id="457">457</th><td>        <q>"crc32q 0xe8(%3), %1\n\t"</q></td></tr>
+<tr><th id="458">458</th><td>        <q>"crc32q 0x168(%3), %2\n\t"</q></td></tr>
+<tr><th id="459">459</th><td>        <q>"crc32q 0x70(%3), %0\n\t"</q></td></tr>
+<tr><th id="460">460</th><td>        <q>"crc32q 0xf0(%3), %1\n\t"</q></td></tr>
+<tr><th id="461">461</th><td>        <q>"crc32q 0x170(%3), %2\n\t"</q></td></tr>
+<tr><th id="462">462</th><td>        <q>"crc32q 0x78(%3), %0\n\t"</q></td></tr>
+<tr><th id="463">463</th><td>        <q>"crc32q 0xf8(%3), %1\n\t"</q></td></tr>
+<tr><th id="464">464</th><td>        <q>"crc32q 0x178(%3), %2\n\t"</q></td></tr>
+<tr><th id="465">465</th><td>        : <q>"=r"</q>(<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>), <q>"=r"</q>(<a class="local col4 ref" href="#24c1" title='c1' data-ref="24c1">c1</a>), <q>"=r"</q>(<a class="local col5 ref" href="#25c2" title='c2' data-ref="25c2">c2</a>)</td></tr>
+<tr><th id="466">466</th><td>        : <q>"r"</q>(<a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a>), <q>"0"</q>(<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>), <q>"1"</q>(<a class="local col4 ref" href="#24c1" title='c1' data-ref="24c1">c1</a>), <q>"2"</q>(<a class="local col5 ref" href="#25c2" title='c2' data-ref="25c2">c2</a>));</td></tr>
+<tr><th id="467">467</th><td>    <em>static</em> <em>const</em> <a class="typedef" href="cpuid.h.html#v2di" title='v2di' data-type='__attribute__((__vector_size__(2 * sizeof(long long)))) long long' data-ref="v2di">v2di</a> <dfn class="local col6 decl" id="26K" title='K' data-type='const v2di' data-ref="26K">K</dfn> = { <a class="macro" href="#301" title="0x1426a815ll" data-ref="_M/CRC32C_REFLECTED_X2047">CRC32C_REFLECTED_X2047</a>, <a class="macro" href="#300" title="0x7417153fll" data-ref="_M/CRC32C_REFLECTED_X1023">CRC32C_REFLECTED_X1023</a> };</td></tr>
+<tr><th id="468">468</th><td>    <a class="typedef" href="cpuid.h.html#v2di" title='v2di' data-type='__attribute__((__vector_size__(2 * sizeof(long long)))) long long' data-ref="v2di">v2di</a> <dfn class="local col7 decl" id="27D" title='D' data-type='v2di' data-ref="27D">D</dfn>, <dfn class="local col8 decl" id="28E" title='E' data-type='v2di' data-ref="28E">E</dfn>;</td></tr>
+<tr><th id="469">469</th><td>    <b>asm</b> <em>volatile</em> (<q>"movq %1, %0\n\t"</q> : <q>"=x"</q> (<a class="local col7 ref" href="#27D" title='D' data-ref="27D">D</a>)  : <q>"g"</q> (<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>));</td></tr>
+<tr><th id="470">470</th><td>    <b>asm</b> <em>volatile</em> (<q>"movq %1, %0\n\t"</q> : <q>"=x"</q> (<a class="local col8 ref" href="#28E" title='E' data-ref="28E">E</a>)  : <q>"g"</q> (<a class="local col4 ref" href="#24c1" title='c1' data-ref="24c1">c1</a>));</td></tr>
+<tr><th id="471">471</th><td>    <a class="typedef" href="cpuid.h.html#v2di" title='v2di' data-type='__attribute__((__vector_size__(2 * sizeof(long long)))) long long' data-ref="v2di">v2di</a> <dfn class="local col9 decl" id="29F" title='F' data-type='v2di' data-ref="29F">F</dfn> = <a class="ref" href="#406" title='__builtin_ia32_pclmulqdq128' data-ref="__builtin_ia32_pclmulqdq128">__builtin_ia32_pclmulqdq128</a> (<a class="local col7 ref" href="#27D" title='D' data-ref="27D">D</a>, <a class="local col6 ref" href="#26K" title='K' data-ref="26K">K</a>, <var>0x00</var>) ^ <a class="ref" href="#406" title='__builtin_ia32_pclmulqdq128' data-ref="__builtin_ia32_pclmulqdq128">__builtin_ia32_pclmulqdq128</a> (<a class="local col8 ref" href="#28E" title='E' data-ref="28E">E</a>, <a class="local col6 ref" href="#26K" title='K' data-ref="26K">K</a>, <var>0x10</var>);</td></tr>
+<tr><th id="472">472</th><td>    <b>asm</b> <em>volatile</em> (<q>"movq %1, %0\n\t"</q> : <q>"=g"</q> (<a class="local col4 ref" href="#24c1" title='c1' data-ref="24c1">c1</a>) : <q>"x"</q>(<a class="local col9 ref" href="#29F" title='F' data-ref="29F">F</a>));</td></tr>
+<tr><th id="473">473</th><td>    <em>unsigned</em> <em>int</em> <dfn class="local col0 decl" id="30r" title='r' data-type='unsigned int' data-ref="30r">r</dfn>;</td></tr>
+<tr><th id="474">474</th><td>    <b>asm</b> <em>volatile</em> (<q>"crc32l %1, %0\n\t"</q> : <q>"=r"</q> (<a class="local col0 ref" href="#30r" title='r' data-ref="30r">r</a>) : <q>"r"</q>((<em>int</em>) <a class="local col4 ref" href="#24c1" title='c1' data-ref="24c1">c1</a>), <q>"0"</q>(<var>0</var>));</td></tr>
+<tr><th id="475">475</th><td>    <a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a> += <var>0x180</var>;</td></tr>
+<tr><th id="476">476</th><td>    <a class="local col2 ref" href="#12len" title='len' data-ref="12len">len</a> -= <var>0x180</var>;</td></tr>
+<tr><th id="477">477</th><td>    <a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a> = <a class="local col0 ref" href="#30r" title='r' data-ref="30r">r</a> ^ (<a class="local col4 ref" href="#24c1" title='c1' data-ref="24c1">c1</a> &gt;&gt; <var>32</var>) ^ <a class="local col5 ref" href="#25c2" title='c2' data-ref="25c2">c2</a>;</td></tr>
+<tr><th id="478">478</th><td>  }</td></tr>
+<tr><th id="479">479</th><td>  <b>while</b> (<a class="local col2 ref" href="#12len" title='len' data-ref="12len">len</a> &gt;= <var>32</var>) {</td></tr>
+<tr><th id="480">480</th><td>    <b>asm</b> <em>volatile</em> (</td></tr>
+<tr><th id="481">481</th><td>       <q>"crc32q (%2), %1\n\t"</q></td></tr>
+<tr><th id="482">482</th><td>       <q>"crc32q 8(%2), %1\n\t"</q></td></tr>
+<tr><th id="483">483</th><td>       <q>"crc32q 0x10(%2), %1\n\t"</q></td></tr>
+<tr><th id="484">484</th><td>       <q>"crc32q 0x18(%2), %1\n\t"</q></td></tr>
+<tr><th id="485">485</th><td>     : <q>"=r"</q> (<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>)</td></tr>
+<tr><th id="486">486</th><td>     : <q>"0"</q>  (<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>), <q>"r"</q> (<a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a>)</td></tr>
+<tr><th id="487">487</th><td>    );</td></tr>
+<tr><th id="488">488</th><td>    <a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a> += <var>32</var>;</td></tr>
+<tr><th id="489">489</th><td>    <a class="local col2 ref" href="#12len" title='len' data-ref="12len">len</a> -= <var>32</var>;</td></tr>
+<tr><th id="490">490</th><td>  }</td></tr>
+<tr><th id="491">491</th><td>  <b>while</b> (<a class="local col2 ref" href="#12len" title='len' data-ref="12len">len</a> &gt;= <var>8</var>) {</td></tr>
+<tr><th id="492">492</th><td>    <b>asm</b> <em>volatile</em> (</td></tr>
+<tr><th id="493">493</th><td>       <q>"crc32q (%2), %1\n\t"</q></td></tr>
+<tr><th id="494">494</th><td>     : <q>"=r"</q> (<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>)</td></tr>
+<tr><th id="495">495</th><td>     : <q>"0"</q>  (<a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>), <q>"r"</q> (<a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a>)</td></tr>
+<tr><th id="496">496</th><td>    );</td></tr>
+<tr><th id="497">497</th><td>    <a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a> += <var>8</var>;</td></tr>
+<tr><th id="498">498</th><td>    <a class="local col2 ref" href="#12len" title='len' data-ref="12len">len</a> -= <var>8</var>;</td></tr>
+<tr><th id="499">499</th><td>  }</td></tr>
+<tr><th id="500">500</th><td>  <a class="local col3 ref" href="#13crc" title='crc' data-ref="13crc">crc</a> = <a class="local col5 ref" href="#15c" title='c' data-ref="15c">c</a>;</td></tr>
+<tr><th id="501">501</th><td>  <b>if</b> (<a class="local col2 ref" href="#12len" title='len' data-ref="12len">len</a> &amp; <var>4</var>) {</td></tr>
+<tr><th id="502">502</th><td>    <b>asm</b> <em>volatile</em> (</td></tr>
+<tr><th id="503">503</th><td>       <q>"crc32l (%2), %1\n\t"</q></td></tr>
+<tr><th id="504">504</th><td>     : <q>"=r"</q> (<a class="local col3 ref" href="#13crc" title='crc' data-ref="13crc">crc</a>)</td></tr>
+<tr><th id="505">505</th><td>     : <q>"0"</q>  (<a class="local col3 ref" href="#13crc" title='crc' data-ref="13crc">crc</a>), <q>"r"</q> (<a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a>)</td></tr>
+<tr><th id="506">506</th><td>    );</td></tr>
+<tr><th id="507">507</th><td>    <a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a> += <var>4</var>;</td></tr>
+<tr><th id="508">508</th><td>  }</td></tr>
+<tr><th id="509">509</th><td>  <b>if</b> (<a class="macro" href="cpuid.h.html#23" title="__builtin_expect((!(len &amp; 3)),1)" data-ref="_M/likely">likely</a> (!(<a class="local col2 ref" href="#12len" title='len' data-ref="12len">len</a> &amp; <var>3</var>))) {</td></tr>
+<tr><th id="510">510</th><td>    <b>return</b> <a class="local col3 ref" href="#13crc" title='crc' data-ref="13crc">crc</a>;</td></tr>
+<tr><th id="511">511</th><td>  }</td></tr>
+<tr><th id="512">512</th><td>  <b>if</b> (<a class="local col2 ref" href="#12len" title='len' data-ref="12len">len</a> &amp; <var>2</var>) {</td></tr>
+<tr><th id="513">513</th><td>    <b>asm</b> <em>volatile</em> (</td></tr>
+<tr><th id="514">514</th><td>       <q>"crc32w (%2), %1\n\t"</q></td></tr>
+<tr><th id="515">515</th><td>     : <q>"=r"</q> (<a class="local col3 ref" href="#13crc" title='crc' data-ref="13crc">crc</a>)</td></tr>
+<tr><th id="516">516</th><td>     : <q>"0"</q>  (<a class="local col3 ref" href="#13crc" title='crc' data-ref="13crc">crc</a>), <q>"r"</q> (<a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a>)</td></tr>
+<tr><th id="517">517</th><td>    );</td></tr>
+<tr><th id="518">518</th><td>    <a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a> += <var>2</var>;</td></tr>
+<tr><th id="519">519</th><td>  }</td></tr>
+<tr><th id="520">520</th><td>  <b>if</b> (<a class="local col2 ref" href="#12len" title='len' data-ref="12len">len</a> &amp; <var>1</var>) {</td></tr>
+<tr><th id="521">521</th><td>    <b>asm</b> <em>volatile</em> (</td></tr>
+<tr><th id="522">522</th><td>       <q>"crc32b (%2), %1\n\t"</q></td></tr>
+<tr><th id="523">523</th><td>     : <q>"=r"</q> (<a class="local col3 ref" href="#13crc" title='crc' data-ref="13crc">crc</a>)</td></tr>
+<tr><th id="524">524</th><td>     : <q>"0"</q>  (<a class="local col3 ref" href="#13crc" title='crc' data-ref="13crc">crc</a>), <q>"r"</q> (<a class="local col4 ref" href="#14p" title='p' data-ref="14p">p</a>)</td></tr>
+<tr><th id="525">525</th><td>    );</td></tr>
+<tr><th id="526">526</th><td>  }</td></tr>
+<tr><th id="527">527</th><td>  <b>return</b> <a class="local col3 ref" href="#13crc" title='crc' data-ref="13crc">crc</a>;</td></tr>
+<tr><th id="528">528</th><td>}</td></tr>
+<tr><th id="529">529</th><td></td></tr>
+<tr><th id="530">530</th><td><u>#<span data-ppcond="306">else</span></u></td></tr>
+<tr><th id="531">531</th><td><em>static</em> <em>unsigned</em> crc32c_partial_sse42 (<em>const</em> <em>void</em> *data, <em>long</em> len, <em>unsigned</em> crc) {</td></tr>
+<tr><th id="532">532</th><td>  <em>const</em> <em>char</em> *p = data;</td></tr>
+<tr><th id="533">533</th><td>  <b>while</b> ((((uintptr_t) p) &amp; <var>3</var>) &amp;&amp; (len &gt; <var>0</var>)) {</td></tr>
+<tr><th id="534">534</th><td>    <b>asm</b> <em>volatile</em> (</td></tr>
+<tr><th id="535">535</th><td>       <q>"crc32b (%2), %1\n\t"</q></td></tr>
+<tr><th id="536">536</th><td>     : <q>"=r"</q> (crc)</td></tr>
+<tr><th id="537">537</th><td>     : <q>"0"</q>  (crc), <q>"r"</q> (p)</td></tr>
+<tr><th id="538">538</th><td>    );</td></tr>
+<tr><th id="539">539</th><td>    p++;</td></tr>
+<tr><th id="540">540</th><td>    len--;</td></tr>
+<tr><th id="541">541</th><td>  }</td></tr>
+<tr><th id="542">542</th><td>  <b>while</b> (len &gt;= <var>4</var>) {</td></tr>
+<tr><th id="543">543</th><td>    <b>asm</b> <em>volatile</em> (</td></tr>
+<tr><th id="544">544</th><td>       <q>"crc32l (%2), %1\n\t"</q></td></tr>
+<tr><th id="545">545</th><td>     : <q>"=r"</q> (crc)</td></tr>
+<tr><th id="546">546</th><td>     : <q>"0"</q>  (crc), <q>"r"</q> (p)</td></tr>
+<tr><th id="547">547</th><td>    );</td></tr>
+<tr><th id="548">548</th><td>    p += <var>4</var>;</td></tr>
+<tr><th id="549">549</th><td>    len -= <var>4</var>;</td></tr>
+<tr><th id="550">550</th><td>  }</td></tr>
+<tr><th id="551">551</th><td>  <b>while</b> (len &gt; <var>0</var>) {</td></tr>
+<tr><th id="552">552</th><td>    <b>asm</b> <em>volatile</em> (</td></tr>
+<tr><th id="553">553</th><td>       <q>"crc32b (%2), %1\n\t"</q></td></tr>
+<tr><th id="554">554</th><td>     : <q>"=r"</q> (crc)</td></tr>
+<tr><th id="555">555</th><td>     : <q>"0"</q>  (crc), <q>"r"</q> (p)</td></tr>
+<tr><th id="556">556</th><td>    );</td></tr>
+<tr><th id="557">557</th><td>    p++;</td></tr>
+<tr><th id="558">558</th><td>    len--;</td></tr>
+<tr><th id="559">559</th><td>  }</td></tr>
+<tr><th id="560">560</th><td>  <b>return</b> crc;</td></tr>
+<tr><th id="561">561</th><td>}</td></tr>
+<tr><th id="562">562</th><td><u>#<span data-ppcond="306">endif</span></u></td></tr>
+<tr><th id="563">563</th><td></td></tr>
+<tr><th id="564">564</th><td><em>unsigned</em> <dfn class="decl def" id="crc32c_partial_four_tables" title='crc32c_partial_four_tables' data-ref="crc32c_partial_four_tables">crc32c_partial_four_tables</dfn> (<em>const</em> <em>void</em> *<dfn class="local col1 decl" id="31data" title='data' data-type='const void *' data-ref="31data">data</dfn>, <em>long</em> <dfn class="local col2 decl" id="32len" title='len' data-type='long' data-ref="32len">len</dfn>, <em>unsigned</em> <dfn class="local col3 decl" id="33crc" title='crc' data-type='unsigned int' data-ref="33crc">crc</dfn>) {</td></tr>
+<tr><th id="565">565</th><td>  <em>const</em> <em>int</em> *<dfn class="local col4 decl" id="34p" title='p' data-type='const int *' data-ref="34p">p</dfn> = (<em>const</em> <em>int</em> *) <a class="local col1 ref" href="#31data" title='data' data-ref="31data">data</a>;</td></tr>
+<tr><th id="566">566</th><td>  <em>int</em> <dfn class="local col5 decl" id="35x" title='x' data-type='int' data-ref="35x">x</dfn>;</td></tr>
+<tr><th id="567">567</th><td><u>#define <dfn class="macro" id="_M/DO_ONE" data-ref="_M/DO_ONE">DO_ONE</dfn>(v) <a class="local col3 ref" href="#33crc" title='crc' data-ref="33crc">crc</a> ^= v; <a class="local col3 ref" href="#33crc" title='crc' data-ref="33crc">crc</a> = <a class="tu ref" href="#crc32c_table0" title='crc32c_table0' data-use='r' data-ref="crc32c_table0">crc32c_table0</a>[<a class="local col3 ref" href="#33crc" title='crc' data-ref="33crc">crc</a> &amp; 0xff] ^ <a class="tu ref" href="#crc32c_table1" title='crc32c_table1' data-use='r' data-ref="crc32c_table1">crc32c_table1</a>[(<a class="local col3 ref" href="#33crc" title='crc' data-ref="33crc">crc</a> &amp; 0xff00) &gt;&gt; 8] ^ <a class="tu ref" href="#crc32c_table2" title='crc32c_table2' data-use='r' data-ref="crc32c_table2">crc32c_table2</a>[(<a class="local col3 ref" href="#33crc" title='crc' data-ref="33crc">crc</a> &amp; 0xff0000) &gt;&gt; 16] ^ <a class="tu ref" href="#crc32c_table" title='crc32c_table' data-use='r' data-ref="crc32c_table">crc32c_table</a>[<a class="local col3 ref" href="#33crc" title='crc' data-ref="33crc">crc</a> &gt;&gt; 24];</u></td></tr>
+<tr><th id="568">568</th><td><u>#define <dfn class="macro" id="_M/DO_FOUR" data-ref="_M/DO_FOUR">DO_FOUR</dfn>(p) DO_ONE((p)[0]); DO_ONE((p)[1]); DO_ONE((p)[2]); DO_ONE((p)[3]);</u></td></tr>
+<tr><th id="569">569</th><td></td></tr>
+<tr><th id="570">570</th><td>  <b>for</b> (<a class="local col5 ref" href="#35x" title='x' data-ref="35x">x</a> = (<a class="local col2 ref" href="#32len" title='len' data-ref="32len">len</a> &gt;&gt; <var>5</var>); <a class="local col5 ref" href="#35x" title='x' data-ref="35x">x</a> &gt; <var>0</var>; <a class="local col5 ref" href="#35x" title='x' data-ref="35x">x</a>--) {</td></tr>
+<tr><th id="571">571</th><td>    <a class="macro" href="#568" title="crc ^= (p)[0]; crc = crc32c_table0[crc &amp; 0xff] ^ crc32c_table1[(crc &amp; 0xff00) &gt;&gt; 8] ^ crc32c_table2[(crc &amp; 0xff0000) &gt;&gt; 16] ^ crc32c_table[crc &gt;&gt; 24];; crc ^= (p)[1]; crc = crc32c_table0[crc &amp; 0xff] ^ crc32c_table1[(crc &amp; 0xff00) &gt;&gt; 8] ^ crc32c_table2[(crc &amp; 0xff0000) &gt;&gt; 16] ^ crc32c_table[crc &gt;&gt; 24];; crc ^= (p)[2]; crc = crc32c_table0[crc &amp; 0xff] ^ crc32c_table1[(crc &amp; 0xff00) &gt;&gt; 8] ^ crc32c_table2[(crc &amp; 0xff0000) &gt;&gt; 16] ^ crc32c_table[crc &gt;&gt; 24];; crc ^= (p)[3]; crc = crc32c_table0[crc &amp; 0xff] ^ crc32c_table1[(crc &amp; 0xff00) &gt;&gt; 8] ^ crc32c_table2[(crc &amp; 0xff0000) &gt;&gt; 16] ^ crc32c_table[crc &gt;&gt; 24];;" data-ref="_M/DO_FOUR">DO_FOUR</a> (<a class="local col4 ref" href="#34p" title='p' data-ref="34p">p</a>);</td></tr>
+<tr><th id="572">572</th><td>    <a class="macro" href="#568" title="crc ^= (p + 4)[0]; crc = crc32c_table0[crc &amp; 0xff] ^ crc32c_table1[(crc &amp; 0xff00) &gt;&gt; 8] ^ crc32c_table2[(crc &amp; 0xff0000) &gt;&gt; 16] ^ crc32c_table[crc &gt;&gt; 24];; crc ^= (p + 4)[1]; crc = crc32c_table0[crc &amp; 0xff] ^ crc32c_table1[(crc &amp; 0xff00) &gt;&gt; 8] ^ crc32c_table2[(crc &amp; 0xff0000) &gt;&gt; 16] ^ crc32c_table[crc &gt;&gt; 24];; crc ^= (p + 4)[2]; crc = crc32c_table0[crc &amp; 0xff] ^ crc32c_table1[(crc &amp; 0xff00) &gt;&gt; 8] ^ crc32c_table2[(crc &amp; 0xff0000) &gt;&gt; 16] ^ crc32c_table[crc &gt;&gt; 24];; crc ^= (p + 4)[3]; crc = crc32c_table0[crc &amp; 0xff] ^ crc32c_table1[(crc &amp; 0xff00) &gt;&gt; 8] ^ crc32c_table2[(crc &amp; 0xff0000) &gt;&gt; 16] ^ crc32c_table[crc &gt;&gt; 24];;" data-ref="_M/DO_FOUR">DO_FOUR</a> (<a class="local col4 ref" href="#34p" title='p' data-ref="34p">p</a> + <var>4</var>);</td></tr>
+<tr><th id="573">573</th><td>    <a class="local col4 ref" href="#34p" title='p' data-ref="34p">p</a> += <var>8</var>;</td></tr>
+<tr><th id="574">574</th><td>  }</td></tr>
+<tr><th id="575">575</th><td>  <b>if</b> (<a class="local col2 ref" href="#32len" title='len' data-ref="32len">len</a> &amp; <var>16</var>) {</td></tr>
+<tr><th id="576">576</th><td>    <a class="macro" href="#568" title="crc ^= (p)[0]; crc = crc32c_table0[crc &amp; 0xff] ^ crc32c_table1[(crc &amp; 0xff00) &gt;&gt; 8] ^ crc32c_table2[(crc &amp; 0xff0000) &gt;&gt; 16] ^ crc32c_table[crc &gt;&gt; 24];; crc ^= (p)[1]; crc = crc32c_table0[crc &amp; 0xff] ^ crc32c_table1[(crc &amp; 0xff00) &gt;&gt; 8] ^ crc32c_table2[(crc &amp; 0xff0000) &gt;&gt; 16] ^ crc32c_table[crc &gt;&gt; 24];; crc ^= (p)[2]; crc = crc32c_table0[crc &amp; 0xff] ^ crc32c_table1[(crc &amp; 0xff00) &gt;&gt; 8] ^ crc32c_table2[(crc &amp; 0xff0000) &gt;&gt; 16] ^ crc32c_table[crc &gt;&gt; 24];; crc ^= (p)[3]; crc = crc32c_table0[crc &amp; 0xff] ^ crc32c_table1[(crc &amp; 0xff00) &gt;&gt; 8] ^ crc32c_table2[(crc &amp; 0xff0000) &gt;&gt; 16] ^ crc32c_table[crc &gt;&gt; 24];;" data-ref="_M/DO_FOUR">DO_FOUR</a> (<a class="local col4 ref" href="#34p" title='p' data-ref="34p">p</a>);</td></tr>
+<tr><th id="577">577</th><td>    <a class="local col4 ref" href="#34p" title='p' data-ref="34p">p</a> += <var>4</var>;</td></tr>
+<tr><th id="578">578</th><td>  }</td></tr>
+<tr><th id="579">579</th><td>  <b>if</b> (<a class="local col2 ref" href="#32len" title='len' data-ref="32len">len</a> &amp; <var>8</var>) {</td></tr>
+<tr><th id="580">580</th><td>    <a class="macro" href="#567" title="crc ^= p[0]; crc = crc32c_table0[crc &amp; 0xff] ^ crc32c_table1[(crc &amp; 0xff00) &gt;&gt; 8] ^ crc32c_table2[(crc &amp; 0xff0000) &gt;&gt; 16] ^ crc32c_table[crc &gt;&gt; 24];" data-ref="_M/DO_ONE">DO_ONE</a> (<a class="local col4 ref" href="#34p" title='p' data-ref="34p">p</a>[<var>0</var>]);</td></tr>
+<tr><th id="581">581</th><td>    <a class="macro" href="#567" title="crc ^= p[1]; crc = crc32c_table0[crc &amp; 0xff] ^ crc32c_table1[(crc &amp; 0xff00) &gt;&gt; 8] ^ crc32c_table2[(crc &amp; 0xff0000) &gt;&gt; 16] ^ crc32c_table[crc &gt;&gt; 24];" data-ref="_M/DO_ONE">DO_ONE</a> (<a class="local col4 ref" href="#34p" title='p' data-ref="34p">p</a>[<var>1</var>]);</td></tr>
+<tr><th id="582">582</th><td>    <a class="local col4 ref" href="#34p" title='p' data-ref="34p">p</a> += <var>2</var>;</td></tr>
+<tr><th id="583">583</th><td>  }</td></tr>
+<tr><th id="584">584</th><td>  <b>if</b> (<a class="local col2 ref" href="#32len" title='len' data-ref="32len">len</a> &amp; <var>4</var>) {</td></tr>
+<tr><th id="585">585</th><td>    <a class="macro" href="#567" title="crc ^= *p++; crc = crc32c_table0[crc &amp; 0xff] ^ crc32c_table1[(crc &amp; 0xff00) &gt;&gt; 8] ^ crc32c_table2[(crc &amp; 0xff0000) &gt;&gt; 16] ^ crc32c_table[crc &gt;&gt; 24];" data-ref="_M/DO_ONE">DO_ONE</a> (*<a class="local col4 ref" href="#34p" title='p' data-ref="34p">p</a>++);</td></tr>
+<tr><th id="586">586</th><td>  }</td></tr>
+<tr><th id="587">587</th><td><u>#undef <a class="macro" href="#567" data-ref="_M/DO_ONE">DO_ONE</a></u></td></tr>
+<tr><th id="588">588</th><td><u>#undef <a class="macro" href="#568" data-ref="_M/DO_FOUR">DO_FOUR</a></u></td></tr>
+<tr><th id="589">589</th><td>  <em>const</em> <em>char</em> *<dfn class="local col6 decl" id="36q" title='q' data-type='const char *' data-ref="36q">q</dfn> = (<em>const</em> <em>char</em> *) <a class="local col4 ref" href="#34p" title='p' data-ref="34p">p</a>;</td></tr>
+<tr><th id="590">590</th><td>  <b>if</b> (<a class="local col2 ref" href="#32len" title='len' data-ref="32len">len</a> &amp; <var>2</var>) {</td></tr>
+<tr><th id="591">591</th><td>    <a class="local col3 ref" href="#33crc" title='crc' data-ref="33crc">crc</a> = <a class="tu ref" href="#crc32c_table" title='crc32c_table' data-use='r' data-ref="crc32c_table">crc32c_table</a>[(<a class="local col3 ref" href="#33crc" title='crc' data-ref="33crc">crc</a> ^ <a class="local col6 ref" href="#36q" title='q' data-ref="36q">q</a>[<var>0</var>]) &amp; <var>0xff</var>] ^ (<a class="local col3 ref" href="#33crc" title='crc' data-ref="33crc">crc</a> &gt;&gt; <var>8</var>);</td></tr>
+<tr><th id="592">592</th><td>    <a class="local col3 ref" href="#33crc" title='crc' data-ref="33crc">crc</a> = <a class="tu ref" href="#crc32c_table" title='crc32c_table' data-use='r' data-ref="crc32c_table">crc32c_table</a>[(<a class="local col3 ref" href="#33crc" title='crc' data-ref="33crc">crc</a> ^ <a class="local col6 ref" href="#36q" title='q' data-ref="36q">q</a>[<var>1</var>]) &amp; <var>0xff</var>] ^ (<a class="local col3 ref" href="#33crc" title='crc' data-ref="33crc">crc</a> &gt;&gt; <var>8</var>);</td></tr>
+<tr><th id="593">593</th><td>    <a class="local col6 ref" href="#36q" title='q' data-ref="36q">q</a> += <var>2</var>;</td></tr>
+<tr><th id="594">594</th><td>  }</td></tr>
+<tr><th id="595">595</th><td>  <b>if</b> (<a class="local col2 ref" href="#32len" title='len' data-ref="32len">len</a> &amp; <var>1</var>) {</td></tr>
+<tr><th id="596">596</th><td>    <a class="local col3 ref" href="#33crc" title='crc' data-ref="33crc">crc</a> = <a class="tu ref" href="#crc32c_table" title='crc32c_table' data-use='r' data-ref="crc32c_table">crc32c_table</a>[(<a class="local col3 ref" href="#33crc" title='crc' data-ref="33crc">crc</a> ^ *<a class="local col6 ref" href="#36q" title='q' data-ref="36q">q</a>++) &amp; <var>0xff</var>] ^ (<a class="local col3 ref" href="#33crc" title='crc' data-ref="33crc">crc</a> &gt;&gt; <var>8</var>);</td></tr>
+<tr><th id="597">597</th><td>  }</td></tr>
+<tr><th id="598">598</th><td>  <b>return</b> <a class="local col3 ref" href="#33crc" title='crc' data-ref="33crc">crc</a>;</td></tr>
+<tr><th id="599">599</th><td>}</td></tr>
+<tr><th id="600">600</th><td></td></tr>
+<tr><th id="601">601</th><td><u>#define <dfn class="macro" id="_M/CRC32C_REFLECTED_POLY" data-ref="_M/CRC32C_REFLECTED_POLY">CRC32C_REFLECTED_POLY</dfn> 0x82F63B78U</u></td></tr>
+<tr><th id="602">602</th><td></td></tr>
+<tr><th id="603">603</th><td><em>static</em> <em>unsigned</em> <dfn class="tu decl def" id="crc32c_combine_generic" title='crc32c_combine_generic' data-type='unsigned int crc32c_combine_generic(unsigned int crc1, unsigned int crc2, int64_t len2)' data-ref="crc32c_combine_generic">crc32c_combine_generic</dfn> (<em>unsigned</em> <dfn class="local col7 decl" id="37crc1" title='crc1' data-type='unsigned int' data-ref="37crc1">crc1</dfn>, <em>unsigned</em> <dfn class="local col8 decl" id="38crc2" title='crc2' data-type='unsigned int' data-ref="38crc2">crc2</dfn>, <a class="typedef" href="../../include/x86_64-linux-gnu/sys/types.h.html#197" title='int64_t' data-type='long' data-ref="int64_t">int64_t</a> <dfn class="local col9 decl" id="39len2" title='len2' data-type='int64_t' data-ref="39len2">len2</dfn>) {</td></tr>
+<tr><th id="604">604</th><td>  <u>#define <dfn class="macro" id="_M/N" data-ref="_M/N">N</dfn> (32*67)</u></td></tr>
+<tr><th id="605">605</th><td>  <em>static</em> <em>unsigned</em> <em>int</em> <dfn class="local col0 decl" id="40crc32c_powers" title='crc32c_powers' data-type='unsigned int [2144]' data-ref="40crc32c_powers">crc32c_powers</dfn>[<a class="macro" href="#604" title="(32*67)" data-ref="_M/N">N</a>];</td></tr>
+<tr><th id="606">606</th><td>  <i>/* degenerate case (also disallow negative lengths) */</i></td></tr>
+<tr><th id="607">607</th><td>  <b>if</b> (<a class="local col9 ref" href="#39len2" title='len2' data-ref="39len2">len2</a> &lt;= <var>0</var>) {</td></tr>
+<tr><th id="608">608</th><td>    <b>return</b> <a class="local col7 ref" href="#37crc1" title='crc1' data-ref="37crc1">crc1</a>;</td></tr>
+<tr><th id="609">609</th><td>  }</td></tr>
+<tr><th id="610">610</th><td>  <b>if</b> (!<a class="local col0 ref" href="#40crc32c_powers" title='crc32c_powers' data-ref="40crc32c_powers">crc32c_powers</a>[<a class="macro" href="#604" title="(32*67)" data-ref="_M/N">N</a>-<var>1</var>]) {</td></tr>
+<tr><th id="611">611</th><td>    <a class="ref" href="crc32.h.html#gf32_compute_powers_generic" title='gf32_compute_powers_generic' data-ref="gf32_compute_powers_generic">gf32_compute_powers_generic</a> (<a class="local col0 ref" href="#40crc32c_powers" title='crc32c_powers' data-ref="40crc32c_powers">crc32c_powers</a>, <a class="macro" href="#604" title="(32*67)" data-ref="_M/N">N</a>, <a class="macro" href="#601" title="0x82F63B78U" data-ref="_M/CRC32C_REFLECTED_POLY">CRC32C_REFLECTED_POLY</a>);</td></tr>
+<tr><th id="612">612</th><td>    <a class="macro" href="../../include/assert.h.html#88" title="((crc32c_powers[(32*67)-1]) ? (void) (0) : __assert_fail (&quot;crc32c_powers[N-1]&quot;, &quot;/home/parallels/MTProxy/common/crc32c.c&quot;, 612, __PRETTY_FUNCTION__))" data-ref="_M/assert">assert</a> (<a class="local col0 ref" href="#40crc32c_powers" title='crc32c_powers' data-ref="40crc32c_powers">crc32c_powers</a>[<a class="macro" href="#604" title="(32*67)" data-ref="_M/N">N</a>-<var>1</var>]);</td></tr>
+<tr><th id="613">613</th><td>  }</td></tr>
+<tr><th id="614">614</th><td>  <b>return</b> <a class="ref" href="crc32.h.html#gf32_combine_generic" title='gf32_combine_generic' data-ref="gf32_combine_generic">gf32_combine_generic</a> (<a class="local col0 ref" href="#40crc32c_powers" title='crc32c_powers' data-ref="40crc32c_powers">crc32c_powers</a>, <a class="local col7 ref" href="#37crc1" title='crc1' data-ref="37crc1">crc1</a>, <a class="local col9 ref" href="#39len2" title='len2' data-ref="39len2">len2</a>) ^ <a class="local col8 ref" href="#38crc2" title='crc2' data-ref="38crc2">crc2</a>;</td></tr>
+<tr><th id="615">615</th><td>}</td></tr>
+<tr><th id="616">616</th><td></td></tr>
+<tr><th id="617">617</th><td><em>static</em> <em>unsigned</em> <dfn class="tu decl def" id="crc32c_combine_clmul" title='crc32c_combine_clmul' data-type='unsigned int crc32c_combine_clmul(unsigned int crc1, unsigned int crc2, int64_t len2)' data-ref="crc32c_combine_clmul">crc32c_combine_clmul</dfn> (<em>unsigned</em> <dfn class="local col1 decl" id="41crc1" title='crc1' data-type='unsigned int' data-ref="41crc1">crc1</dfn>, <em>unsigned</em> <dfn class="local col2 decl" id="42crc2" title='crc2' data-type='unsigned int' data-ref="42crc2">crc2</dfn>, <a class="typedef" href="../../include/x86_64-linux-gnu/sys/types.h.html#197" title='int64_t' data-type='long' data-ref="int64_t">int64_t</a> <dfn class="local col3 decl" id="43len2" title='len2' data-type='int64_t' data-ref="43len2">len2</dfn>) {</td></tr>
+<tr><th id="618">618</th><td>  <em>static</em> <em>unsigned</em> <em>int</em> <dfn class="local col4 decl" id="44crc32c_powers" title='crc32c_powers' data-type='unsigned int [252]' data-ref="44crc32c_powers">crc32c_powers</dfn>[<var>252</var>] <b>__attribute__</b> ((aligned(<var>16</var>)));</td></tr>
+<tr><th id="619">619</th><td>  <b>if</b> (<a class="local col3 ref" href="#43len2" title='len2' data-ref="43len2">len2</a> &lt;= <var>0</var>) {</td></tr>
+<tr><th id="620">620</th><td>    <b>return</b> <a class="local col1 ref" href="#41crc1" title='crc1' data-ref="41crc1">crc1</a>;</td></tr>
+<tr><th id="621">621</th><td>  }</td></tr>
+<tr><th id="622">622</th><td>  <b>if</b> (!<a class="local col4 ref" href="#44crc32c_powers" title='crc32c_powers' data-ref="44crc32c_powers">crc32c_powers</a>[<var>251</var>]) {</td></tr>
+<tr><th id="623">623</th><td>    <a class="ref" href="crc32.h.html#gf32_compute_powers_clmul" title='gf32_compute_powers_clmul' data-ref="gf32_compute_powers_clmul">gf32_compute_powers_clmul</a> (<a class="local col4 ref" href="#44crc32c_powers" title='crc32c_powers' data-ref="44crc32c_powers">crc32c_powers</a>, <a class="macro" href="#601" title="0x82F63B78U" data-ref="_M/CRC32C_REFLECTED_POLY">CRC32C_REFLECTED_POLY</a>);</td></tr>
+<tr><th id="624">624</th><td>    <a class="macro" href="../../include/assert.h.html#88" title="((crc32c_powers[7 * 4 + 3] == (int) 0x7417153fll) ? (void) (0) : __assert_fail (&quot;crc32c_powers[7 * 4 + 3] == (int) CRC32C_REFLECTED_X1023&quot;, &quot;/home/parallels/MTProxy/common/crc32c.c&quot;, 624, __PRETTY_FUNCTION__))" data-ref="_M/assert">assert</a> (<a class="local col4 ref" href="#44crc32c_powers" title='crc32c_powers' data-ref="44crc32c_powers">crc32c_powers</a>[<var>7</var> * <var>4</var> + <var>3</var>] == (<em>int</em>) <a class="macro" href="#300" title="0x7417153fll" data-ref="_M/CRC32C_REFLECTED_X1023">CRC32C_REFLECTED_X1023</a>);</td></tr>
+<tr><th id="625">625</th><td>    <a class="macro" href="../../include/assert.h.html#88" title="((crc32c_powers[8 * 4 + 3] == (int) 0x1426a815ll) ? (void) (0) : __assert_fail (&quot;crc32c_powers[8 * 4 + 3] == (int) CRC32C_REFLECTED_X2047&quot;, &quot;/home/parallels/MTProxy/common/crc32c.c&quot;, 625, __PRETTY_FUNCTION__))" data-ref="_M/assert">assert</a> (<a class="local col4 ref" href="#44crc32c_powers" title='crc32c_powers' data-ref="44crc32c_powers">crc32c_powers</a>[<var>8</var> * <var>4</var> + <var>3</var>] == (<em>int</em>) <a class="macro" href="#301" title="0x1426a815ll" data-ref="_M/CRC32C_REFLECTED_X2047">CRC32C_REFLECTED_X2047</a>);</td></tr>
+<tr><th id="626">626</th><td>    <a class="macro" href="../../include/assert.h.html#88" title="((crc32c_powers[9 * 4 + 3] == (int) 0xe986c148ll) ? (void) (0) : __assert_fail (&quot;crc32c_powers[9 * 4 + 3] == (int) CRC32C_REFLECTED_X4095&quot;, &quot;/home/parallels/MTProxy/common/crc32c.c&quot;, 626, __PRETTY_FUNCTION__))" data-ref="_M/assert">assert</a> (<a class="local col4 ref" href="#44crc32c_powers" title='crc32c_powers' data-ref="44crc32c_powers">crc32c_powers</a>[<var>9</var> * <var>4</var> + <var>3</var>] == (<em>int</em>) <a class="macro" href="#302" title="0xe986c148ll" data-ref="_M/CRC32C_REFLECTED_X4095">CRC32C_REFLECTED_X4095</a>);</td></tr>
+<tr><th id="627">627</th><td>    <a class="macro" href="../../include/assert.h.html#88" title="((crc32c_powers[10 * 4 + 3] == (int) 0xcdc220ddll) ? (void) (0) : __assert_fail (&quot;crc32c_powers[10 * 4 + 3] == (int) CRC32C_REFLECTED_X8191&quot;, &quot;/home/parallels/MTProxy/common/crc32c.c&quot;, 627, __PRETTY_FUNCTION__))" data-ref="_M/assert">assert</a> (<a class="local col4 ref" href="#44crc32c_powers" title='crc32c_powers' data-ref="44crc32c_powers">crc32c_powers</a>[<var>10</var> * <var>4</var> + <var>3</var>] == (<em>int</em>) <a class="macro" href="#303" title="0xcdc220ddll" data-ref="_M/CRC32C_REFLECTED_X8191">CRC32C_REFLECTED_X8191</a>);</td></tr>
+<tr><th id="628">628</th><td>    <a class="macro" href="../../include/assert.h.html#88" title="((crc32c_powers[11 * 4 + 3] == (int) 0x1acaec54ll) ? (void) (0) : __assert_fail (&quot;crc32c_powers[11 * 4 + 3] == (int) CRC32C_REFLECTED_X16383&quot;, &quot;/home/parallels/MTProxy/common/crc32c.c&quot;, 628, __PRETTY_FUNCTION__))" data-ref="_M/assert">assert</a> (<a class="local col4 ref" href="#44crc32c_powers" title='crc32c_powers' data-ref="44crc32c_powers">crc32c_powers</a>[<var>11</var> * <var>4</var> + <var>3</var>] == (<em>int</em>) <a class="macro" href="#304" title="0x1acaec54ll" data-ref="_M/CRC32C_REFLECTED_X16383">CRC32C_REFLECTED_X16383</a>);</td></tr>
+<tr><th id="629">629</th><td>    <a class="macro" href="../../include/assert.h.html#88" title="((crc32c_powers[251]) ? (void) (0) : __assert_fail (&quot;crc32c_powers[251]&quot;, &quot;/home/parallels/MTProxy/common/crc32c.c&quot;, 629, __PRETTY_FUNCTION__))" data-ref="_M/assert">assert</a> (<a class="local col4 ref" href="#44crc32c_powers" title='crc32c_powers' data-ref="44crc32c_powers">crc32c_powers</a>[<var>251</var>]);</td></tr>
+<tr><th id="630">630</th><td>  }</td></tr>
+<tr><th id="631">631</th><td></td></tr>
+<tr><th id="632">632</th><td>  <a class="typedef" href="../../include/stdint.h.html#uint64_t" title='uint64_t' data-type='unsigned long' data-ref="uint64_t">uint64_t</a> <dfn class="local col5 decl" id="45T" title='T' data-type='uint64_t' data-ref="45T">T</dfn> = <a class="ref" href="crc32.h.html#gf32_combine_clmul" title='gf32_combine_clmul' data-ref="gf32_combine_clmul">gf32_combine_clmul</a> (<a class="local col4 ref" href="#44crc32c_powers" title='crc32c_powers' data-ref="44crc32c_powers">crc32c_powers</a>, <a class="local col1 ref" href="#41crc1" title='crc1' data-ref="41crc1">crc1</a>, <a class="local col3 ref" href="#43len2" title='len2' data-ref="43len2">len2</a>);</td></tr>
+<tr><th id="633">633</th><td></td></tr>
+<tr><th id="634">634</th><td>  <em>unsigned</em> <dfn class="local col6 decl" id="46crc" title='crc' data-type='unsigned int' data-ref="46crc">crc</dfn> = <var>0</var>;</td></tr>
+<tr><th id="635">635</th><td>  <b>asm</b> <em>volatile</em> (</td></tr>
+<tr><th id="636">636</th><td>      <q>"crc32l %2, %1\n\t"</q></td></tr>
+<tr><th id="637">637</th><td>      : <q>"=r"</q> (<a class="local col6 ref" href="#46crc" title='crc' data-ref="46crc">crc</a>)</td></tr>
+<tr><th id="638">638</th><td>      : <q>"0"</q>  (<a class="local col6 ref" href="#46crc" title='crc' data-ref="46crc">crc</a>), <q>"r"</q> ( (<em>unsigned</em>) <a class="local col5 ref" href="#45T" title='T' data-ref="45T">T</a>)</td></tr>
+<tr><th id="639">639</th><td>  );</td></tr>
+<tr><th id="640">640</th><td>  <b>return</b> <a class="local col6 ref" href="#46crc" title='crc' data-ref="46crc">crc</a> ^ ((<em>unsigned</em>) (<a class="local col5 ref" href="#45T" title='T' data-ref="45T">T</a> &gt;&gt; <var>32</var>)) ^ <a class="local col2 ref" href="#42crc2" title='crc2' data-ref="42crc2">crc2</a>;</td></tr>
+<tr><th id="641">641</th><td>}</td></tr>
+<tr><th id="642">642</th><td></td></tr>
+<tr><th id="643">643</th><td><em>static</em> <em>void</em> <a class="tu decl" href="#crc32c_init" title='crc32c_init' data-type='void crc32c_init()' data-ref="crc32c_init">crc32c_init</a> (<em>void</em>) <b>__attribute__</b> ((constructor));</td></tr>
+<tr><th id="644">644</th><td><em>void</em> <dfn class="tu decl def" id="crc32c_init" title='crc32c_init' data-type='void crc32c_init()' data-ref="crc32c_init">crc32c_init</dfn> (<em>void</em>) {</td></tr>
+<tr><th id="645">645</th><td>  <a class="typedef" href="cpuid.h.html#kdb_cpuid_t" title='kdb_cpuid_t' data-type='struct kdb_cpuid_t' data-ref="kdb_cpuid_t">kdb_cpuid_t</a> *<dfn class="local col7 decl" id="47p" title='p' data-type='kdb_cpuid_t *' data-ref="47p">p</dfn> = <a class="ref" href="cpuid.h.html#kdb_cpuid" title='kdb_cpuid' data-ref="kdb_cpuid">kdb_cpuid</a> ();</td></tr>
+<tr><th id="646">646</th><td>  <a class="ref" href="crc32c.h.html#compute_crc32c_combine" title='compute_crc32c_combine' data-ref="compute_crc32c_combine">compute_crc32c_combine</a> = &amp;<a class="tu ref" href="#crc32c_combine_generic" title='crc32c_combine_generic' data-use='a' data-ref="crc32c_combine_generic">crc32c_combine_generic</a>;</td></tr>
+<tr><th id="647">647</th><td>  <b>if</b> (<a class="local col7 ref" href="#47p" title='p' data-ref="47p">p</a>-&gt;<a class="ref" href="cpuid.h.html#(anonymous)::ecx" title='(anonymous struct)::ecx' data-ref="(anonymous)::ecx">ecx</a> &amp; (<var>1</var> &lt;&lt; <var>20</var>)) {</td></tr>
+<tr><th id="648">648</th><td>    <a class="ref" href="crc32c.h.html#crc32c_partial" title='crc32c_partial' data-ref="crc32c_partial">crc32c_partial</a> = <a class="tu ref" href="#crc32c_partial_sse42" title='crc32c_partial_sse42' data-use='r' data-ref="crc32c_partial_sse42">crc32c_partial_sse42</a>;</td></tr>
+<tr><th id="649">649</th><td><u>#<span data-ppcond="649">ifdef</span> <span class="macro" data-ref="_M/__LP64__">__LP64__</span></u></td></tr>
+<tr><th id="650">650</th><td>    <b>if</b> (<a class="local col7 ref" href="#47p" title='p' data-ref="47p">p</a>-&gt;<a class="ref" href="cpuid.h.html#(anonymous)::ecx" title='(anonymous struct)::ecx' data-ref="(anonymous)::ecx">ecx</a> &amp; <var>2</var>) {</td></tr>
+<tr><th id="651">651</th><td>      <a class="ref" href="crc32c.h.html#crc32c_partial" title='crc32c_partial' data-ref="crc32c_partial">crc32c_partial</a> = <a class="tu ref" href="#crc32c_partial_sse42_clmul" title='crc32c_partial_sse42_clmul' data-use='r' data-ref="crc32c_partial_sse42_clmul">crc32c_partial_sse42_clmul</a>;</td></tr>
+<tr><th id="652">652</th><td>      <a class="ref" href="crc32c.h.html#compute_crc32c_combine" title='compute_crc32c_combine' data-ref="compute_crc32c_combine">compute_crc32c_combine</a> = &amp;<a class="tu ref" href="#crc32c_combine_clmul" title='crc32c_combine_clmul' data-use='a' data-ref="crc32c_combine_clmul">crc32c_combine_clmul</a>;</td></tr>
+<tr><th id="653">653</th><td>    }</td></tr>
+<tr><th id="654">654</th><td><u>#<span data-ppcond="649">endif</span></u></td></tr>
+<tr><th id="655">655</th><td>  } <b>else</b> {</td></tr>
+<tr><th id="656">656</th><td>    <a class="ref" href="crc32c.h.html#crc32c_partial" title='crc32c_partial' data-ref="crc32c_partial">crc32c_partial</a> = &amp;<a class="ref" href="#crc32c_partial_four_tables" title='crc32c_partial_four_tables' data-ref="crc32c_partial_four_tables">crc32c_partial_four_tables</a>;</td></tr>
+<tr><th id="657">657</th><td>  }</td></tr>
+<tr><th id="658">658</th><td>}</td></tr>
+<tr><th id="659">659</th><td></td></tr>
+<tr><th id="660">660</th><td><a class="typedef" href="crc32.h.html#crc32_partial_func_t" title='crc32_partial_func_t' data-type='unsigned int (*)(const void *, long, unsigned int)' data-ref="crc32_partial_func_t">crc32_partial_func_t</a> <dfn class="decl def" id="crc32c_partial" title='crc32c_partial' data-ref="crc32c_partial">crc32c_partial</dfn>;</td></tr>
+<tr><th id="661">661</th><td><a class="typedef" href="crc32.h.html#crc32_combine_func_t" title='crc32_combine_func_t' data-type='unsigned int (*)(unsigned int, unsigned int, int64_t)' data-ref="crc32_combine_func_t">crc32_combine_func_t</a> <dfn class="decl def" id="compute_crc32c_combine" title='compute_crc32c_combine' data-ref="compute_crc32c_combine">compute_crc32c_combine</dfn>;</td></tr>
+<tr><th id="662">662</th><td></td></tr>
+<tr><th id="663">663</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated on <em>2018-Jun-02</em> from project MTProxy revision <em>842f343decf6c463bdecf1862e357c4a03e4bc97</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

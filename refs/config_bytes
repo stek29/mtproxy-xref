@@ -1,0 +1,8 @@
+<dec f='MTProxy/common/parse-config.h' l='24' type='int'/>
+<def f='MTProxy/common/parse-config.c' l='40' type='int'/>
+<use f='MTProxy/common/parse-config.c' l='234' u='r' c='reset_config'/>
+<use f='MTProxy/common/parse-config.c' l='252' u='w' c='load_config'/>
+<use f='MTProxy/common/parse-config.c' l='274' u='r' c='md5_hex_config'/>
+<use f='MTProxy/common/parse-config.c' l='286' u='w' c='close_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='415' u='r' c='do_reload_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='420' u='r' c='do_reload_config'/>

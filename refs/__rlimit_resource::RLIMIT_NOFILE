@@ -1,0 +1,6 @@
+<dec f='include/x86_64-linux-gnu/bits/resource.h' l='61' type='7'/>
+<use f='include/x86_64-linux-gnu/bits/resource.h' l='62'/>
+<use f='MTProxy/common/server-functions.c' l='148' macro='1' u='r'/>
+<use f='MTProxy/common/server-functions.c' l='156' macro='1' u='r'/>
+<doc f='include/x86_64-linux-gnu/bits/resource.h' l='60'>/* Number of open files.  */</doc>
+<use f='MTProxy/engine/engine.c' l='180' macro='1' u='r'/>

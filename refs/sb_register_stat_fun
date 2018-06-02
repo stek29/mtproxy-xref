@@ -1,0 +1,2 @@
+<dec f='MTProxy/common/common-stats.h' l='88' type='int sb_register_stat_fun(stat_fun_t fun)'/>
+<def f='MTProxy/common/common-stats.c' l='175' ll='192' type='int sb_register_stat_fun(stat_fun_t func)'/>

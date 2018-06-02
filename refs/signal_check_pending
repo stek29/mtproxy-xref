@@ -1,0 +1,7 @@
+<dec f='MTProxy/engine/engine.h' l='152' type='int signal_check_pending(int sig)'/>
+<def f='MTProxy/engine/engine-signals.c' l='48' ll='50' type='int signal_check_pending(int sig)'/>
+<use f='MTProxy/engine/engine.c' l='327' u='c' c='server_exit'/>
+<use f='MTProxy/engine/engine.c' l='329' u='c' c='server_exit'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2281' u='c' c='mtfront_on_exit'/>
+<use f='MTProxy/net/net-events.c' l='313' u='c' c='term_signal_received'/>
+<use f='MTProxy/net/net-events.c' l='313' u='c' c='term_signal_received'/>

@@ -1,0 +1,7 @@
+<def f='MTProxy/net/net-rpc-targets.h' l='31' ll='38'/>
+<size>64</size>
+<mbr r='rpc_target_info::timer' o='0' t='struct event_timer'/>
+<mbr r='rpc_target_info::a' o='256' t='int'/>
+<mbr r='rpc_target_info::b' o='288' t='int'/>
+<mbr r='rpc_target_info::conn_tree' o='320' t='struct tree_connection *'/>
+<mbr r='rpc_target_info::PID' o='384' t='struct process_id'/>

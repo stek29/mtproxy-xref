@@ -1,0 +1,5 @@
+<def f='MTProxy/engine/engine-rpc.c' l='66' ll='86' type='struct tl_out_state * tl_aio_init_store(enum tl_type type, struct process_id * pid, long long qid)'/>
+<use f='MTProxy/engine/engine-rpc.c' l='497' u='c' c='process_query_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='533' u='c' c='process_query_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='563' u='c' c='process_query_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='753' u='c' c='query_job_run'/>

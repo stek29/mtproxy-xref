@@ -1,0 +1,1 @@
+<dec f='MTProxy/net/net-crypto-aes.h' l='94' type='int aes_create_udp_keys(struct aes_key_data * R, struct process_id * local_pid, struct process_id * remote_pid, int generation, const aes_secret_t * key)'/>

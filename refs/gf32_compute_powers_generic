@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/crc32.h' l='74' type='void gf32_compute_powers_generic(unsigned int * P, int size, unsigned int poly)'/>
+<def f='MTProxy/common/crc32.c' l='719' ll='730' type='void gf32_compute_powers_generic(unsigned int * P, int size, unsigned int poly)'/>
+<use f='MTProxy/common/crc32.c' l='794' u='c' c='compute_crc32_combine_generic'/>
+<use f='MTProxy/common/crc32c.c' l='611' u='c' c='crc32c_combine_generic'/>

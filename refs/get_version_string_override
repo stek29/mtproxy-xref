@@ -1,0 +1,4 @@
+<dec f='MTProxy/engine/engine.c' l='157' type='const char * get_version_string_override()'/>
+<def f='MTProxy/engine/engine.c' l='158' ll='160' type='const char * get_version_string_override()'/>
+<use f='MTProxy/engine/engine.c' l='166' u='c' c='get_version_string'/>
+<doc f='MTProxy/engine/engine.c' l='154'>/* }}} */</doc>

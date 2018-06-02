@@ -1,0 +1,16 @@
+<def f='MTProxy/mtproto/mtproto-config.h' l='44' ll='57'/>
+<size>65600</size>
+<mbr r='mf_config::tot_targets' o='0' t='int'/>
+<mbr r='mf_config::auth_clusters' o='32' t='int'/>
+<mbr r='mf_config::default_cluster_id' o='64' t='int'/>
+<mbr r='mf_config::min_connections' o='96' t='int'/>
+<mbr r='mf_config::max_connections' o='128' t='int'/>
+<mbr r='mf_config::timeout' o='192' t='double'/>
+<mbr r='mf_config::config_bytes' o='256' t='int'/>
+<mbr r='mf_config::config_loaded_at' o='288' t='int'/>
+<mbr r='mf_config::config_md5_hex' o='320' t='char *'/>
+<mbr r='mf_config::auth_stats' o='384' t='struct mf_group_stats'/>
+<mbr r='mf_config::have_proxy' o='416' t='int'/>
+<mbr r='mf_config::default_cluster' o='448' t='struct mf_cluster *'/>
+<mbr r='mf_config::targets' o='512' t='conn_target_job_t [4096]'/>
+<mbr r='mf_config::auth_cluster' o='262656' t='struct mf_cluster [1024]'/>

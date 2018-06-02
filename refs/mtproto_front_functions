@@ -1,0 +1,5 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='2288' ll='2305' type='server_functions_t'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2308' u='m' c='main'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2309' u='m' c='main'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2310' u='m' c='main'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2311' u='a' c='main'/>

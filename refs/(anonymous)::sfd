@@ -1,0 +1,11 @@
+<dec f='MTProxy/engine/engine.h' l='122' type='int'/>
+<offset>96</offset>
+<use f='MTProxy/engine/engine-net.c' l='44' u='r' c='default_close_network_sockets'/>
+<use f='MTProxy/engine/engine-net.c' l='45' u='r' c='default_close_network_sockets'/>
+<use f='MTProxy/engine/engine-net.c' l='46' u='w' c='default_close_network_sockets'/>
+<use f='MTProxy/engine/engine-net.c' l='62' u='w' c='try_open_port'/>
+<use f='MTProxy/engine/engine-net.c' l='64' u='r' c='try_open_port'/>
+<use f='MTProxy/engine/engine.c' l='296' u='r' c='server_init'/>
+<use f='MTProxy/engine/engine.c' l='302' u='r' c='server_init'/>
+<use f='MTProxy/engine/engine.c' l='304' u='r' c='server_init'/>
+<use f='MTProxy/engine/engine.c' l='579' u='w' c='engine_startup'/>

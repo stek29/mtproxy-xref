@@ -1,0 +1,3 @@
+<dec f='MTProxy/jobs/jobs.h' l='337' type='job_list_node_type_t'/>
+<offset>64</offset>
+<use f='MTProxy/jobs/jobs.c' l='1176' u='r' c='process_job_list'/>

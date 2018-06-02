@@ -1,0 +1,11 @@
+<dec f='MTProxy/jobs/jobs.h' l='282' type='int schedule_job(int job_tag_int, job_t job)'/>
+<doc f='MTProxy/jobs/jobs.h' l='281'>/* puts job into execution queue according to its priority class (actually, unlocks it and sends signal 0) */</doc>
+<use f='MTProxy/engine/engine-rpc.c' l='343' u='c' c='fetch_all_queries'/>
+<use f='MTProxy/engine/engine-rpc.c' l='822' u='c' c='do_create_query_job'/>
+<use f='MTProxy/engine/engine.c' l='447' u='c' c='default_engine_server_start'/>
+<def f='MTProxy/jobs/jobs.c' l='1111' ll='1115' type='int schedule_job(int job_tag_int, job_t job)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='753' u='c' c='schedule_job_callback'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='932' u='c' c='rpcc_execute'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1464' u='c' c='hts_execute'/>
+<use f='MTProxy/net/net-connections.c' l='1996' u='c' c='create_target'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='576' u='c' c='free_msg_buffer'/>

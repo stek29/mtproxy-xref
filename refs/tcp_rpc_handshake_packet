@@ -1,0 +1,6 @@
+<def f='MTProxy/net/net-tcp-rpc-common.h' l='70' ll='76'/>
+<size>32</size>
+<mbr r='tcp_rpc_handshake_packet::type' o='0' t='int'/>
+<mbr r='tcp_rpc_handshake_packet::flags' o='32' t='int'/>
+<mbr r='tcp_rpc_handshake_packet::sender_pid' o='64' t='struct process_id'/>
+<mbr r='tcp_rpc_handshake_packet::peer_pid' o='160' t='struct process_id'/>

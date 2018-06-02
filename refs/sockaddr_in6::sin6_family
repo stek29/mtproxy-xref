@@ -1,0 +1,6 @@
+<dec f='include/netinet/in.h' l='256' macro='1' type='sa_family_t'/>
+<offset>0</offset>
+<use f='MTProxy/net/net-connections.c' l='675' u='r' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1274' u='r' c='net_accept_new_connections'/>
+<use f='MTProxy/net/net-events.c' l='610' u='w' c='server_socket'/>
+<use f='MTProxy/net/net-events.c' l='723' u='w' c='client_socket_ipv6'/>

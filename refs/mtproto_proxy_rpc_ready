@@ -1,0 +1,2 @@
+<dec f='MTProxy/mtproto/mtproto-proxy.c' l='1025' type='int mtproto_proxy_rpc_ready(connection_job_t C)'/>
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='1069' ll='1083' type='int mtproto_proxy_rpc_ready(connection_job_t C)'/>

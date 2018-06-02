@@ -1,0 +1,6 @@
+<dec f='include/grp.h' l='108' type='struct group * getgrnam(const char * __name)'/>
+<use f='MTProxy/common/server-functions.c' l='94' u='c' c='change_user_group'/>
+<doc f='include/grp.h' l='104'>/* Search for an entry with a matching group name.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */</doc>

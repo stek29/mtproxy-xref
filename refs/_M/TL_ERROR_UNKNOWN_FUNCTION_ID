@@ -1,0 +1,5 @@
+<dec f='MTProxy/common/rpc-const.h' l='91'/>
+<doc f='MTProxy/common/rpc-const.h' l='88'>//
+// Syntax ok, bad can not start query. -2000...-2999
+//</doc>
+<use f='MTProxy/engine/engine-rpc.c' l='295' u='c'/>

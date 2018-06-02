@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-tcp-rpc-common.h' l='108'/>
+<doc f='MTProxy/net/net-tcp-rpc-common.h' l='107'>/* for flags in struct tcp_rpc_data */</doc>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1515' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1705' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1743' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1747' u='c'/>

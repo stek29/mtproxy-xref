@@ -1,0 +1,9 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='209' ll='220' type='struct ext_connection * get_ext_connection_by_in_fd(int in_fd)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1032' u='c' c='do_close_in_ext_conn'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1062' u='c' c='mtproto_ext_rpc_close'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1586' u='c' c='http_send_message'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1702' u='c' c='forward_tcp_query'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1869' u='c' c='lru_delete_conn'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1876' u='c' c='lru_insert_conn'/>
+<doc f='MTProxy/mtproto/mtproto-proxy.c' l='207'>// makes sense only for !IS_PROXY_IN
+// returns the only ext_connection with given in_fd</doc>

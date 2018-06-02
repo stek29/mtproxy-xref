@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-msg.h' l='119' type='void * rwm_postpone_alloc(struct raw_message * raw, int alloc_bytes)'/>
+<use f='MTProxy/common/tl-parse.c' l='194' u='c' c='__tl_raw_msg_store_get_ptr'/>
+<def f='MTProxy/net/net-msg.c' l='611' ll='653' type='void * rwm_postpone_alloc(struct raw_message * raw, int alloc_bytes)'/>
+<doc f='MTProxy/net/net-msg.c' l='609'>/* }}} */</doc>
+<doc f='MTProxy/net/net-msg.c' l='611'>/* {{{ */</doc>

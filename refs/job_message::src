@@ -1,0 +1,26 @@
+<dec f='MTProxy/jobs/jobs.h' l='244' type='job_t'/>
+<use f='MTProxy/jobs/jobs.h' l='377' u='r' c='job_message_answer_true'/>
+<use f='MTProxy/jobs/jobs.h' l='378' c='job_message_answer_true'/>
+<use f='MTProxy/jobs/jobs.h' l='378' u='r' c='job_message_answer_true'/>
+<use f='MTProxy/jobs/jobs.h' l='378' u='w' c='job_message_answer_true'/>
+<offset>128</offset>
+<use f='MTProxy/jobs/jobs.c' l='1458' u='r' c='job_message_queue_free'/>
+<use f='MTProxy/jobs/jobs.c' l='1459' c='job_message_queue_free'/>
+<use f='MTProxy/jobs/jobs.c' l='1459' u='r' c='job_message_queue_free'/>
+<use f='MTProxy/jobs/jobs.c' l='1459' u='w' c='job_message_queue_free'/>
+<use f='MTProxy/jobs/jobs.c' l='1470' u='r' c='job_message_queue_free'/>
+<use f='MTProxy/jobs/jobs.c' l='1471' c='job_message_queue_free'/>
+<use f='MTProxy/jobs/jobs.c' l='1471' u='r' c='job_message_queue_free'/>
+<use f='MTProxy/jobs/jobs.c' l='1471' u='w' c='job_message_queue_free'/>
+<use f='MTProxy/jobs/jobs.c' l='1491' u='r' c='job_message_free_default'/>
+<use f='MTProxy/jobs/jobs.c' l='1492' c='job_message_free_default'/>
+<use f='MTProxy/jobs/jobs.c' l='1492' u='r' c='job_message_free_default'/>
+<use f='MTProxy/jobs/jobs.c' l='1492' u='w' c='job_message_free_default'/>
+<use f='MTProxy/jobs/jobs.c' l='1505' u='w' c='job_message_send'/>
+<use f='MTProxy/jobs/jobs.c' l='1546' u='w' c='job_message_send_fake'/>
+<use f='MTProxy/jobs/jobs.c' l='1658' c='notify_job_receive_message'/>
+<use f='MTProxy/jobs/jobs.c' l='1658' u='r' c='notify_job_receive_message'/>
+<use f='MTProxy/jobs/jobs.c' l='1658' u='w' c='notify_job_receive_message'/>
+<use f='MTProxy/jobs/jobs.c' l='1661' c='notify_job_receive_message'/>
+<use f='MTProxy/jobs/jobs.c' l='1661' u='r' c='notify_job_receive_message'/>
+<use f='MTProxy/jobs/jobs.c' l='1661' u='w' c='notify_job_receive_message'/>

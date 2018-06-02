@@ -1,0 +1,2 @@
+<dec f='include/openssl/evp.h' l='1041'/>
+<doc f='include/openssl/evp.h' l='1040'>/* Can appear as the outermost AlgorithmIdentifier */</doc>

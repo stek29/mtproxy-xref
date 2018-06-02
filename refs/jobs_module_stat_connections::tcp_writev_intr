@@ -1,0 +1,3 @@
+<dec f='MTProxy/net/net-connections.c' l='109' type='long long'/>
+<use f='MTProxy/net/net-connections.c' l='986' u='w' c='net_server_socket_writer'/>
+<offset>1536</offset>

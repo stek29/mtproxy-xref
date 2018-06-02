@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/pid.h' l='53' type='void init_server_PID(unsigned int ip, int port)'/>
+<def f='MTProxy/common/pid.c' l='58' ll='66' type='void init_server_PID(unsigned int ip, int port)'/>
+<use f='MTProxy/engine/engine.c' l='235' u='c' c='engine_init'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='269' u='c' c='tcp_rpcs_process_handshake_packet'/>

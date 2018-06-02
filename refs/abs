@@ -1,0 +1,4 @@
+<dec f='include/stdlib.h' l='774' type='int abs(int __x)'/>
+<doc f='include/stdlib.h' l='773'>/* Return the absolute value of X.  */</doc>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='204' u='c' c='tcp_rpcc_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='209' u='c' c='tcp_rpcs_process_nonce_packet'/>

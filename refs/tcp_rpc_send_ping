@@ -1,0 +1,2 @@
+<dec f='MTProxy/net/net-tcp-rpc-common.h' l='165' type='void tcp_rpc_send_ping(connection_job_t C, long long ping_id)'/>
+<def f='MTProxy/net/net-tcp-rpc-common.c' l='221' ll='226' type='void tcp_rpc_send_ping(connection_job_t C, long long ping_id)'/>

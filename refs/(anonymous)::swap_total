@@ -1,0 +1,5 @@
+<dec f='MTProxy/common/common-stats.h' l='61' type='long long'/>
+<use f='MTProxy/common/common-stats.c' l='149' u='w' c='am_get_memory_stats'/>
+<use f='MTProxy/common/common-stats.c' l='164' u='r' c='am_get_memory_stats'/>
+<use f='MTProxy/common/common-stats.c' l='288' u='r' c='sb_memory'/>
+<offset>256</offset>

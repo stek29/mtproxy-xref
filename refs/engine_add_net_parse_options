@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/server-functions.c' l='726' type='void engine_add_net_parse_options()'/>
+<def f='MTProxy/common/server-functions.c' l='727' type='void engine_add_net_parse_options()'/>
+<use f='MTProxy/common/server-functions.c' l='743' u='c' c='add_builtin_parse_options'/>
+<def f='MTProxy/engine/engine-net.c' l='232' ll='246' type='void engine_add_net_parse_options()'/>

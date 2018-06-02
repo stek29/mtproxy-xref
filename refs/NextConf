@@ -1,0 +1,7 @@
+<def f='MTProxy/mtproto/mtproto-config.c' l='58' type='struct mf_config *'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='379' u='r' c='do_reload_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='396' u='r' c='do_reload_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='399' u='r' c='do_reload_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='405' u='r' c='do_reload_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='406' u='w' c='do_reload_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='408' u='r' c='do_reload_config'/>

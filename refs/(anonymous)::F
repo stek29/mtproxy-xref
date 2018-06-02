@@ -1,0 +1,16 @@
+<dec f='MTProxy/engine/engine.h' l='137' type='server_functions_t *'/>
+<offset>576</offset>
+<use f='MTProxy/engine/engine-signals.c' l='135' u='r' c='engine_process_signals'/>
+<use f='MTProxy/engine/engine.c' l='163' u='r' c='get_version_string'/>
+<use f='MTProxy/engine/engine.c' l='163' u='r' c='get_version_string'/>
+<use f='MTProxy/engine/engine.c' l='164' u='r' c='get_version_string'/>
+<use f='MTProxy/engine/engine.c' l='278' u='r' c='server_init'/>
+<use f='MTProxy/engine/engine.c' l='323' u='r' c='server_exit'/>
+<use f='MTProxy/engine/engine.c' l='356' u='r' c='do_precise_cron'/>
+<use f='MTProxy/engine/engine.c' l='414' u='r' c='terminate_job_run'/>
+<use f='MTProxy/engine/engine.c' l='428' u='r' c='default_engine_server_start'/>
+<use f='MTProxy/engine/engine.c' l='495' u='r' c='engine_prepare_stats'/>
+<use f='MTProxy/engine/engine.c' l='496' u='r' c='engine_prepare_stats'/>
+<use f='MTProxy/engine/engine.c' l='532' u='r' c='check_server_functions'/>
+<use f='MTProxy/engine/engine.c' l='568' u='w' c='engine_startup'/>
+<use f='MTProxy/engine/engine.c' l='711' u='r' c='default_parse_option_func'/>

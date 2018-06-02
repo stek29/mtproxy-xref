@@ -1,0 +1,8 @@
+<dec f='MTProxy/net/net-tcp-rpc-common.h' l='167' type='unsigned int tcp_get_default_rpc_flags()'/>
+<use f='MTProxy/common/tl-parse.c' l='88' u='c' c='tl_parse_prepare_stat'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='249' u='c' c='tcp_rpcc_send_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='318' u='c' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='593' u='c' c='tcp_rpcc_default_check_perm'/>
+<def f='MTProxy/net/net-tcp-rpc-common.c' l='234' ll='236' type='unsigned int tcp_get_default_rpc_flags()'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='299' u='c' c='tcp_rpcs_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='554' u='c' c='tcp_rpcs_default_check_perm'/>

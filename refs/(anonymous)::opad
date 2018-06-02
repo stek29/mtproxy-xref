@@ -1,0 +1,7 @@
+<dec f='MTProxy/common/md5.h' l='17' type='unsigned char [64]'/>
+<use f='MTProxy/common/md5.c' l='348' u='r' c='md5_hmac_starts'/>
+<use f='MTProxy/common/md5.c' l='353' u='w' c='md5_hmac_starts'/>
+<use f='MTProxy/common/md5.c' l='353' u='r' c='md5_hmac_starts'/>
+<use f='MTProxy/common/md5.c' l='379' u='r' c='md5_hmac_finish'/>
+<offset>1408</offset>
+<doc f='MTProxy/common/md5.h' l='17'>/*!&lt; HMAC: outer padding        */</doc>

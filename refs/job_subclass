@@ -1,0 +1,8 @@
+<def f='MTProxy/jobs/jobs.h' l='188' ll='198'/>
+<size>32</size>
+<mbr r='job_subclass::subclass_id' o='0' t='int'/>
+<mbr r='job_subclass::total_jobs' o='32' t='int'/>
+<mbr r='job_subclass::allowed_to_run_jobs' o='64' t='int'/>
+<mbr r='job_subclass::processed_jobs' o='96' t='int'/>
+<mbr r='job_subclass::locked' o='128' t='int'/>
+<mbr r='job_subclass::job_queue' o='192' t='struct mp_queue *'/>

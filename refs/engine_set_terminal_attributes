@@ -1,0 +1,6 @@
+<dec f='MTProxy/common/server-functions.c' l='219' type='void engine_set_terminal_attributes()'/>
+<def f='MTProxy/common/server-functions.c' l='220' type='void engine_set_terminal_attributes()'/>
+<dec f='MTProxy/engine/engine-signals.c' l='39' type='void engine_set_terminal_attributes()'/>
+<def f='MTProxy/engine/engine-signals.c' l='40' type='void engine_set_terminal_attributes()'/>
+<use f='MTProxy/engine/engine-signals.c' l='64' u='c' c='sigint_immediate_handler'/>
+<use f='MTProxy/engine/engine-signals.c' l='72' u='c' c='sigterm_immediate_handler'/>

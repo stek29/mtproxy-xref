@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-rpc-targets.h' l='47' type='int rpc_target_choose_random_connections(rpc_target_job_t S, struct process_id * PID, int limit, connection_job_t * buf)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1638' u='c' c='choose_proxy_target'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1730' u='c' c='forward_tcp_query'/>
+<def f='MTProxy/net/net-rpc-targets.c' l='315' ll='348' type='int rpc_target_choose_random_connections(rpc_target_job_t S, struct process_id * pid, int limit, connection_job_t * buf)'/>

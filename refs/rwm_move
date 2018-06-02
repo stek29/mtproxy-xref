@@ -1,0 +1,9 @@
+<dec f='MTProxy/net/net-msg.h' l='105' type='void rwm_move(struct raw_message * dest_raw, struct raw_message * src_raw)'/>
+<use f='MTProxy/common/tl-parse.c' l='580' u='c' c='tlf_init_raw_message'/>
+<use f='MTProxy/common/tl-parse.c' l='582' u='c' c='tlf_init_raw_message'/>
+<use f='MTProxy/jobs/jobs.c' l='1511' u='c' c='job_message_send'/>
+<use f='MTProxy/jobs/jobs.c' l='1552' u='c' c='job_message_send_fake'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1513' u='c' c='ext_rpcs_execute'/>
+<def f='MTProxy/net/net-msg.c' l='356' ll='360' type='void rwm_move(struct raw_message * dest_raw, struct raw_message * src_raw)'/>
+<doc f='MTProxy/net/net-msg.c' l='354'>/* }}} */</doc>
+<doc f='MTProxy/net/net-msg.c' l='356'>/* {{{ */</doc>

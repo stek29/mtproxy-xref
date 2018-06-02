@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-rpc-targets.c' l='74' type='long long'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='143' u='w' c='rpc_target_insert_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='185' u='w' c='rpc_target_delete_conn'/>
+<offset>64</offset>

@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-events.h' l='30'/>
+<dec f='include/x86_64-linux-gnu/sys/epoll.h' l='63'/>
+<use f='MTProxy/net/net-connections.c' l='1125' u='c'/>
+<use f='MTProxy/net/net-events.c' l='218' u='c'/>
+<use f='MTProxy/net/net-events.c' l='234' u='c'/>

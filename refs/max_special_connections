@@ -1,0 +1,18 @@
+<dec f='MTProxy/net/net-connections.h' l='421' type='int'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2032' u='r' c='check_special_connections_overflow'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2033' u='r' c='check_special_connections_overflow'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2060' u='r' c='mtfront_pre_loop'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2103' u='w' c='f_parse_option'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2104' u='r' c='f_parse_option'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2105' u='w' c='f_parse_option'/>
+<def f='MTProxy/net/net-connections.c' l='82' type='int'/>
+<use f='MTProxy/net/net-connections.c' l='147' u='r' c='connections_prepare_stat'/>
+<use f='MTProxy/net/net-connections.c' l='182' u='r' c='fetch_connections_stat'/>
+<use f='MTProxy/net/net-connections.c' l='519' u='r' c='cpu_server_close_connection'/>
+<use f='MTProxy/net/net-connections.c' l='746' u='r' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='747' u='r' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='747' u='r' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='749' u='r' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='2013' u='r' c='tcp_set_max_connections'/>
+<use f='MTProxy/net/net-connections.c' l='2013' u='r' c='tcp_set_max_connections'/>
+<use f='MTProxy/net/net-connections.c' l='2014' u='w' c='tcp_set_max_connections'/>

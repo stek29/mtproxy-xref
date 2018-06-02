@@ -1,0 +1,10 @@
+<dec f='MTProxy/net/net-msg-buffers.h' l='70' type='int (*)(struct msg_buffers_chunk *, struct msg_buffer *)'/>
+<offset>64</offset>
+<use f='MTProxy/net/net-msg-buffers.c' l='99' u='w' c='init_buffer_chunk_headers'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='141' u='r' c='try_lock_chunk'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='152' u='r' c='unlock_chunk'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='196' u='w' c='alloc_new_msg_buffers_chunk'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='536' u='r' c='free_msg_buffer_job'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='557' u='r' c='free_msg_buffer'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='559' u='r' c='free_msg_buffer'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='572' u='r' c='free_msg_buffer'/>

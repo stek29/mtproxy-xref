@@ -1,0 +1,2 @@
+<dec f='MTProxy/common/parse-config.h' l='32' type='void syntax_warning(const char * msg)'/>
+<def f='MTProxy/common/parse-config.c' l='170' ll='184' type='void syntax_warning(const char * msg)'/>

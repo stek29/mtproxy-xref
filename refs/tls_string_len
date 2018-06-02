@@ -1,0 +1,3 @@
+<def f='MTProxy/common/tl-parse.h' l='610' ll='621' type='int tls_string_len(struct tl_out_state * tlio_out, int len)'/>
+<use f='MTProxy/common/tl-parse.h' l='671' u='c' c='tls_string'/>
+<doc f='MTProxy/common/tl-parse.h' l='610'>/* {{{ */</doc>

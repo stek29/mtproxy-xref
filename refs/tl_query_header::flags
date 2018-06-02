@@ -1,0 +1,15 @@
+<dec f='MTProxy/common/tl-parse.h' l='143' type='int'/>
+<use f='MTProxy/common/tl-parse.c' l='599' u='r' c='tlf_query_flags'/>
+<use f='MTProxy/common/tl-parse.c' l='600' u='r' c='tlf_query_flags'/>
+<use f='MTProxy/common/tl-parse.c' l='607' u='w' c='tlf_query_flags'/>
+<use f='MTProxy/common/tl-parse.c' l='671' u='r' c='tlf_query_answer_flags'/>
+<use f='MTProxy/common/tl-parse.c' l='672' u='r' c='tlf_query_answer_flags'/>
+<use f='MTProxy/common/tl-parse.c' l='679' u='w' c='tlf_query_answer_flags'/>
+<use f='MTProxy/common/tl-parse.c' l='840' u='r' c='tls_header'/>
+<use f='MTProxy/common/tl-parse.c' l='843' u='r' c='tls_header'/>
+<use f='MTProxy/common/tl-parse.c' l='852' u='r' c='tls_header'/>
+<use f='MTProxy/common/tl-parse.c' l='854' u='r' c='tls_header'/>
+<offset>128</offset>
+<use f='MTProxy/engine/engine-rpc.c' l='122' u='r' c='tl_result_get_header_len'/>
+<use f='MTProxy/engine/engine-rpc.c' l='129' u='r' c='tl_result_make_header'/>
+<use f='MTProxy/engine/engine-rpc.c' l='130' u='r' c='tl_result_make_header'/>

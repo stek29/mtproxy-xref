@@ -1,0 +1,12 @@
+<dec f='MTProxy/common/mp-queue.h' l='121' type='struct mp_queue * alloc_mp_queue_w()'/>
+<def f='MTProxy/common/mp-queue.c' l='403' ll='410' type='struct mp_queue * alloc_mp_queue_w()'/>
+<use f='MTProxy/jobs/jobs.c' l='438' u='c' c='create_job_thread_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='584' u='c' c='create_job_class_sub'/>
+<use f='MTProxy/jobs/jobs.c' l='1303' u='c' c='alloc_timer_manager'/>
+<use f='MTProxy/jobs/jobs.c' l='1486' u='c' c='job_message_queue_init'/>
+<use f='MTProxy/net/net-connections.c' l='691' u='c' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='692' u='c' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1200' u='c' c='alloc_new_socket_connection'/>
+<use f='MTProxy/net/net-connections.c' l='2103' u='c' c='insert_free_later_struct'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='262' u='c' c='alloc_new_msg_buffers_chunk'/>
+<use f='MTProxy/net/net-thread.c' l='101' u='c' c='notification_event_job_create'/>

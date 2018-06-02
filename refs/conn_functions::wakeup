@@ -1,0 +1,9 @@
+<dec f='MTProxy/net/net-connections.h' l='151' type='int (*)(connection_job_t)'/>
+<offset>1088</offset>
+<doc f='MTProxy/net/net-connections.h' l='151'>/* invoked from run() when pending_queries == 0 */</doc>
+<use f='MTProxy/net/net-connections.c' l='1517' u='r' c='check_conn_functions'/>
+<use f='MTProxy/net/net-connections.c' l='1518' u='w' c='check_conn_functions'/>
+<use f='MTProxy/net/net-http-server.c' l='72' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='81' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='71' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='78' u='w'/>

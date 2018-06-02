@@ -1,0 +1,6 @@
+<dec f='MTProxy/mtproto/mtproto-config.h' l='34' type='int'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='118' u='w' c='forget_cluster_targets'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='200' u='w' c='init_old_mf_cluster'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='229' u='r' c='dump_mf_cluster'/>
+<offset>64</offset>
+<doc f='MTProxy/mtproto/mtproto-config.h' l='34'>// size of `cluster_targets` and `balance_hashes` arrays</doc>

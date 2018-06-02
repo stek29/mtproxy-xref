@@ -1,0 +1,5 @@
+<def f='MTProxy/common/tl-parse.h' l='376' ll='398' type='int tlf_string_len(struct tl_in_state * tlio_in, int max_len)'/>
+<use f='MTProxy/common/tl-parse.h' l='457' u='c' c='tlf_string'/>
+<use f='MTProxy/common/tl-parse.h' l='470' u='c' c='tlf_skip_string'/>
+<use f='MTProxy/common/tl-parse.h' l='483' u='c' c='tlf_string0'/>
+<doc f='MTProxy/common/tl-parse.h' l='376'>/* {{{ */</doc>

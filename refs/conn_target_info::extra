@@ -1,0 +1,12 @@
+<dec f='MTProxy/net/net-connections.h' l='183' type='void *'/>
+<offset>448</offset>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='162' u='w'/>
+<use f='MTProxy/net/net-connections.c' l='652' u='r' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1771' u='r' c='find_target'/>
+<use f='MTProxy/net/net-connections.c' l='1808' u='r' c='find_target_ipv6'/>
+<use f='MTProxy/net/net-connections.c' l='1841' u='r' c='free_target'/>
+<use f='MTProxy/net/net-connections.c' l='1844' u='r' c='free_target'/>
+<use f='MTProxy/net/net-connections.c' l='1949' u='r' c='create_target'/>
+<use f='MTProxy/net/net-connections.c' l='1950' u='r' c='create_target'/>
+<use f='MTProxy/net/net-connections.c' l='1987' u='r' c='create_target'/>
+<use f='MTProxy/net/net-connections.c' l='1989' u='r' c='create_target'/>

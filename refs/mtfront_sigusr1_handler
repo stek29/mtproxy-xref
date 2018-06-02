@@ -1,0 +1,2 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='2078' ll='2083' type='void mtfront_sigusr1_handler()'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2310' u='r' c='main'/>

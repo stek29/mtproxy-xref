@@ -1,0 +1,6 @@
+<dec f='include/getopt.h' l='118'/>
+<use f='MTProxy/common/server-functions.c' l='517' u='c'/>
+<use f='MTProxy/common/server-functions.c' l='551' u='c'/>
+<use f='MTProxy/common/server-functions.c' l='732' u='c'/>
+<use f='MTProxy/common/server-functions.c' l='736' u='c'/>
+<use f='MTProxy/engine/engine.c' l='696' u='c'/>

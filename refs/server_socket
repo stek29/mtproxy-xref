@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-events.h' l='121' type='int server_socket(int port, struct in_addr in_addr, int backlog, int mode)'/>
+<use f='MTProxy/engine/engine-net.c' l='62' u='c' c='try_open_port'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2227' u='c' c='mtfront_pre_init'/>
+<def f='MTProxy/net/net-events.c' l='558' ll='626' type='int server_socket(int port, struct in_addr in_addr, int backlog, int mode)'/>

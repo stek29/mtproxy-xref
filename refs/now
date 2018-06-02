@@ -1,0 +1,28 @@
+<dec f='MTProxy/common/precise-time.h' l='40' type='int'/>
+<use f='MTProxy/common/common-stats.c' l='293' u='r' c='sb_print_queries'/>
+<doc f='MTProxy/common/precise-time.h' l='39'>/* net-event.h */</doc>
+<def f='MTProxy/common/precise-time.c' l='28' type='int'/>
+<use f='MTProxy/engine/engine.c' l='360' u='r' c='do_precise_cron'/>
+<use f='MTProxy/engine/engine.c' l='361' u='r' c='do_precise_cron'/>
+<use f='MTProxy/jobs/jobs.c' l='929' u='w' c='job_thread_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='930' u='r' c='job_thread_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='930' u='r' c='job_thread_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='931' u='r' c='job_thread_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='937' u='r' c='job_thread_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='940' u='r' c='job_thread_ex'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='414' u='r' c='do_reload_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='414' u='r' c='do_reload_config'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='427' u='r' c='update_local_stats_copy'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='581' u='r' c='mtfront_prepare_stats'/>
+<use f='MTProxy/net/net-events.c' l='401' u='w' c='epoll_work'/>
+<use f='MTProxy/net/net-events.c' l='421' u='w' c='epoll_work'/>
+<use f='MTProxy/net/net-events.c' l='423' u='r' c='epoll_work'/>
+<use f='MTProxy/net/net-events.c' l='423' u='r' c='epoll_work'/>
+<use f='MTProxy/net/net-events.c' l='424' u='r' c='epoll_work'/>
+<use f='MTProxy/net/net-events.c' l='430' u='r' c='epoll_work'/>
+<use f='MTProxy/net/net-http-server.c' l='775' u='r' c='cur_http_date'/>
+<use f='MTProxy/net/net-http-server.c' l='776' u='r' c='cur_http_date'/>
+<use f='MTProxy/net/net-stats.c' l='112' u='r' c='prepare_stats'/>
+<use f='MTProxy/net/net-stats.c' l='130' u='r' c='prepare_stats'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='208' u='r' c='tcp_rpcs_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='208' u='r' c='tcp_rpcs_process_nonce_packet'/>

@@ -1,0 +1,5 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='299' ll='308' type='struct ext_connection * find_ext_connection_by_out_conn_id(long long out_conn_id)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='337' u='c' c='remove_ext_connection'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='819' u='c' c='process_client_packet'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='841' u='c' c='process_client_packet'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='869' u='c' c='process_client_packet'/>

@@ -1,0 +1,10 @@
+<dec f='MTProxy/common/mp-queue.h' l='124' type='void free_mp_queue(struct mp_queue * MQ)'/>
+<doc f='MTProxy/common/mp-queue.h' l='124'>// same + invoke free()</doc>
+<def f='MTProxy/common/mp-queue.c' l='428' ll='432' type='void free_mp_queue(struct mp_queue * MQ)'/>
+<use f='MTProxy/jobs/jobs.c' l='1478' u='c' c='job_message_queue_free'/>
+<use f='MTProxy/net/net-connections.c' l='433' u='c' c='cpu_server_free_connection'/>
+<use f='MTProxy/net/net-connections.c' l='443' u='c' c='cpu_server_free_connection'/>
+<use f='MTProxy/net/net-connections.c' l='772' u='c' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='773' u='c' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='837' u='c' c='net_server_socket_free'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='306' u='c' c='free_msg_buffers_chunk_internal'/>

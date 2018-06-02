@@ -1,0 +1,13 @@
+<dec f='MTProxy/net/net-connections.h' l='266' type='int'/>
+<offset>256</offset>
+<use f='MTProxy/net/net-connections.c' l='723' u='r' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='750' u='r' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='751' u='r' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1237' u='r' c='net_accept_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1240' u='r' c='net_accept_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1248' u='r' c='net_accept_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1304' u='r' c='do_listening_connection_job'/>
+<use f='MTProxy/net/net-connections.c' l='1305' u='r' c='do_listening_connection_job'/>
+<use f='MTProxy/net/net-connections.c' l='1330' u='w' c='init_listening_connection_ext'/>
+<use f='MTProxy/net/net-connections.c' l='1349' u='r' c='init_listening_connection_ext'/>
+<use f='MTProxy/net/net-connections.c' l='1355' u='r' c='init_listening_connection_ext'/>

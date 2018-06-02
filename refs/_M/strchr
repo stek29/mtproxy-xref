@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/bits/string2.h' l='395'/>
+<use f='include/x86_64-linux-gnu/bits/string2.h' l='1202' u='c'/>
+<use f='MTProxy/common/resolver.c' l='392' u='c'/>
+<use f='MTProxy/common/resolver.c' l='392' u='c'/>

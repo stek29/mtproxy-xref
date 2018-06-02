@@ -1,0 +1,17 @@
+<dec f='MTProxy/net/net-events.h' l='80' type='event_t [524288]'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2063' u='m' c='mtfront_pre_loop'/>
+<use f='MTProxy/net/net-connections.c' l='1202' u='r' c='alloc_new_socket_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1237' u='m' c='net_accept_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1334' u='r' c='init_listening_connection_ext'/>
+<use f='MTProxy/net/net-connections.c' l='1389' u='a' c='connection_event_incref'/>
+<use f='MTProxy/net/net-connections.c' l='1399' u='a' c='connection_get_by_fd'/>
+<def f='MTProxy/net/net-events.c' l='58' type='event_t [524288]'/>
+<use f='MTProxy/net/net-events.c' l='77' u='m' c='init_epoll'/>
+<use f='MTProxy/net/net-events.c' l='125' u='r' c='remove_event_from_heap'/>
+<use f='MTProxy/net/net-events.c' l='163' u='r' c='put_event_into_heap'/>
+<use f='MTProxy/net/net-events.c' l='187' u='r' c='epoll_sethandler'/>
+<use f='MTProxy/net/net-events.c' l='248' u='r' c='epoll_insert'/>
+<use f='MTProxy/net/net-events.c' l='279' u='r' c='epoll_remove'/>
+<use f='MTProxy/net/net-events.c' l='294' u='r' c='epoll_close'/>
+<use f='MTProxy/net/net-events.c' l='329' u='r' c='epoll_runqueue'/>
+<use f='MTProxy/net/net-events.c' l='388' u='r' c='epoll_fetch_events'/>

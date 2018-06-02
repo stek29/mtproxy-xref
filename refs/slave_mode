@@ -1,0 +1,6 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='407' type='int'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='534' u='r' c='update_local_stats'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2023' u='r' c='check_children_status'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2032' u='r' c='check_special_connections_overflow'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2079' u='r' c='mtfront_sigusr1_handler'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2249' u='w' c='mtfront_pre_init'/>

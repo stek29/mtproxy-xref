@@ -1,0 +1,8 @@
+<def f='MTProxy/mtproto/mtproto-config.h' l='31' ll='38'/>
+<size>32</size>
+<mbr r='mf_cluster::targets_num' o='0' t='int'/>
+<mbr r='mf_cluster::write_targets_num' o='32' t='int'/>
+<mbr r='mf_cluster::targets_allocated' o='64' t='int'/>
+<mbr r='mf_cluster::flags' o='96' t='int'/>
+<mbr r='mf_cluster::cluster_id' o='128' t='int'/>
+<mbr r='mf_cluster::cluster_targets' o='192' t='conn_target_job_t *'/>

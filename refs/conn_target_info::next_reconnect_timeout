@@ -1,0 +1,8 @@
+<dec f='MTProxy/net/net-connections.h' l='189' type='double'/>
+<offset>960</offset>
+<use f='MTProxy/net/net-connections.c' l='1580' u='r' c='compute_next_reconnect'/>
+<use f='MTProxy/net/net-connections.c' l='1581' u='w' c='compute_next_reconnect'/>
+<use f='MTProxy/net/net-connections.c' l='1583' u='r' c='compute_next_reconnect'/>
+<use f='MTProxy/net/net-connections.c' l='1584' u='r' c='compute_next_reconnect'/>
+<use f='MTProxy/net/net-connections.c' l='1585' u='w' c='compute_next_reconnect'/>
+<use f='MTProxy/net/net-connections.c' l='1585' u='r' c='compute_next_reconnect'/>

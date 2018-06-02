@@ -1,0 +1,17 @@
+<dec f='MTProxy/net/net-connections.h' l='363' type='int server_noop(connection_job_t C)'/>
+<def f='MTProxy/net/net-connections.c' l='1458' ll='1460' type='int server_noop(connection_job_t C)'/>
+<use f='MTProxy/net/net-connections.c' l='1493' u='r' c='check_conn_functions'/>
+<use f='MTProxy/net/net-connections.c' l='1505' u='r' c='check_conn_functions'/>
+<use f='MTProxy/net/net-connections.c' l='1515' u='r' c='check_conn_functions'/>
+<use f='MTProxy/net/net-connections.c' l='1518' u='r' c='check_conn_functions'/>
+<use f='MTProxy/net/net-connections.c' l='1521' u='r' c='check_conn_functions'/>
+<use f='MTProxy/net/net-connections.c' l='1524' u='r' c='check_conn_functions'/>
+<use f='MTProxy/net/net-connections.c' l='1539' u='r' c='check_conn_functions'/>
+<doc f='MTProxy/net/net-connections.c' l='1456'>/* }}} */</doc>
+<doc f='MTProxy/net/net-connections.c' l='1458'>/* {{{ */</doc>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='81' u='r'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='81' u='r'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='102'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='102'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='97'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='97'/>

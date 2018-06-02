@@ -1,0 +1,2 @@
+<def f='MTProxy/engine/engine.c' l='501' ll='504' type='void engine_rpc_stats(struct tl_out_state * tlio_out)'/>
+<use f='MTProxy/engine/engine.c' l='644' u='r' c='default_main'/>

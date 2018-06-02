@@ -1,0 +1,2 @@
+<dec f='MTProxy/net/net-http-server.h' l='93' type='struct http_server_functions'/>
+<def f='MTProxy/net/net-http-server.c' l='95' ll='99' type='struct http_server_functions'/>

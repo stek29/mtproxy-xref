@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-connections.h' l='305'/>
+<dec f='MTProxy/net/net-connections.h' l='413'/>
+<use f='MTProxy/engine/engine-rpc.c' l='707' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='728' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='777' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='815' u='c'/>

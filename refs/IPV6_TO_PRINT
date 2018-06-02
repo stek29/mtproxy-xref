@@ -1,0 +1,3 @@
+<def f='MTProxy/vv/vv-io.h' l='34' ll='75' type='char * IPV6_TO_PRINT(void * ip)'/>
+<use f='MTProxy/net/net-events.c' l='787' u='c' c='get_my_ipv6'/>
+<use f='MTProxy/net/net-events.c' l='816' u='c' c='get_my_ipv6'/>

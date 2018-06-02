@@ -1,0 +1,13 @@
+<dec f='MTProxy/jobs/jobs.h' l='86'/>
+<use f='MTProxy/engine/engine.c' l='269' u='c'/>
+<use f='MTProxy/jobs/jobs.c' l='1297' u='c'/>
+<use f='MTProxy/jobs/jobs.c' l='1305' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='1182' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='1182' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='1324' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='1324' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='1324' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='1975' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='1975' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='1975' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='1975' u='c'/>

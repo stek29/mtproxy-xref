@@ -1,0 +1,4 @@
+<dec f='include/ifaddrs.h' l='69' type='void freeifaddrs(struct ifaddrs * __ifa)'/>
+<use f='MTProxy/net/net-events.c' l='767' u='c' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='817' u='c' c='get_my_ipv6'/>
+<doc f='include/ifaddrs.h' l='68'>/* Reclaim the storage allocated by a previous `getifaddrs&apos; call.  */</doc>

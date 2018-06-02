@@ -1,0 +1,6 @@
+<dec f='MTProxy/jobs/jobs.h' l='356' type='void complete_subjob(job_t job, int parent_tag_int, job_t parent, int status)'/>
+<def f='MTProxy/jobs/jobs.c' l='815' ll='850' type='void complete_subjob(job_t job, int parent_tag_int, job_t parent, int status)'/>
+<use f='MTProxy/jobs/jobs.c' l='863' u='c' c='complete_job'/>
+<use f='MTProxy/jobs/jobs.c' l='1147' u='c' c='job_list_node_wakeup'/>
+<use f='MTProxy/jobs/jobs.c' l='1658' u='c' c='notify_job_receive_message'/>
+<use f='MTProxy/jobs/jobs.c' l='1692' u='c' c='notify_job_run'/>

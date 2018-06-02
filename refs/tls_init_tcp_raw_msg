@@ -1,0 +1,9 @@
+<dec f='MTProxy/common/tl-parse.h' l='215' type='int tls_init_tcp_raw_msg(struct tl_out_state * tlio_out, int c_tag_int, job_t c, long long qid)'/>
+<def f='MTProxy/common/tl-parse.c' l='786' ll='798' type='int tls_init_tcp_raw_msg(struct tl_out_state * tlio_out, int c_tag_int, job_t c, long long qid)'/>
+<use f='MTProxy/common/tl-parse.c' l='931' u='c' c='tls_init'/>
+<doc f='MTProxy/common/tl-parse.h' l='214'>//int tls_init_raw_msg_keep_error (struct tl_out_state *tlio_out, struct process_id *pid, long long qid);</doc>
+<use f='MTProxy/engine/engine-rpc.c' l='76' u='c' c='tl_aio_init_store'/>
+<use f='MTProxy/engine/engine-rpc.c' l='493' u='c' c='process_query_job'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='784' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1610' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1765' macro='1' u='c'/>

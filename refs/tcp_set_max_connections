@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-connections.h' l='419' type='void tcp_set_max_connections(int maxconn)'/>
+<use f='MTProxy/engine/engine-net.c' l='141' u='c' c='set_maxconn'/>
+<use f='MTProxy/engine/engine.c' l='187' u='c' c='raise_file_limit'/>
+<def f='MTProxy/net/net-connections.c' l='2011' ll='2016' type='void tcp_set_max_connections(int maxconn)'/>
+<doc f='MTProxy/net/net-connections.c' l='2006'>/* }}} */</doc>
+<doc f='MTProxy/net/net-connections.c' l='2011'>/* {{{ */</doc>

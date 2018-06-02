@@ -1,0 +1,2 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='883' ll='915' type='int client_packet_job_run(job_t job, int op, struct job_thread * JT)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='927' u='r' c='rpcc_execute'/>

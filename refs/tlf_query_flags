@@ -1,0 +1,5 @@
+<dec f='MTProxy/common/tl-parse.h' l='228' type='int tlf_query_flags(struct tl_in_state * tlio_in, struct tl_query_header * header)'/>
+<def f='MTProxy/common/tl-parse.c' l='594' ll='610' type='int tlf_query_flags(struct tl_in_state * tlio_in, struct tl_query_header * header)'/>
+<use f='MTProxy/common/tl-parse.c' l='646' u='c' c='tlf_query_header'/>
+<use f='MTProxy/common/tl-parse.c' l='650' u='c' c='tlf_query_header'/>
+<doc f='MTProxy/common/tl-parse.h' l='225'>//int tls_init_keep_error (struct tl_out_state *tlio_out, enum tl_type type, struct process_id *pid, long long qid);</doc>

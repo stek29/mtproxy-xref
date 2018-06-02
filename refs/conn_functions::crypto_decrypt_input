@@ -1,0 +1,8 @@
+<dec f='MTProxy/net/net-connections.h' l='171' type='int (*)(connection_job_t)'/>
+<offset>1984</offset>
+<doc f='MTProxy/net/net-connections.h' l='171'>/* 0 = all ok, &gt;0 = so much more bytes needed to decrypt last block */</doc>
+<use f='MTProxy/net/net-tcp-connections.c' l='116' u='r' c='cpu_tcp_server_reader'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='88' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='76' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='233' u='r' c='tcp_rpcs_compact_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='83' u='w'/>

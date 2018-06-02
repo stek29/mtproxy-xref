@@ -1,0 +1,6 @@
+<dec f='MTProxy/common/tl-parse.h' l='707'/>
+<doc f='MTProxy/common/tl-parse.h' l='701'>/*static inline int tl_store_read_back_nondestruct (struct tchar *buf, int size) {
+  assert (size &lt;= TL_OUT_POS);
+  TL_OUT_METHODS-&gt;store_read_back_nondestruct (buf, size);
+  return size;
+}*/</doc>

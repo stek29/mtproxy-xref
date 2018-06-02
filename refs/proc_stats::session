@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/proc-stat.h' l='28' type='int'/>
+<use f='MTProxy/common/proc-stat.c' l='42' u='a' c='read_proc_stats'/>
+<offset>2176</offset>
+<doc f='MTProxy/common/proc-stat.h' l='28'>// %d</doc>

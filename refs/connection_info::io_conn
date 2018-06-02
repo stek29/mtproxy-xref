@@ -1,0 +1,16 @@
+<dec f='MTProxy/net/net-connections.h' l='206' type='connection_job_t'/>
+<offset>576</offset>
+<use f='MTProxy/net/net-connections.c' l='310' u='r' c='connection_write_close'/>
+<use f='MTProxy/net/net-connections.c' l='422' u='r' c='cpu_server_free_connection'/>
+<use f='MTProxy/net/net-connections.c' l='493' u='r' c='cpu_server_close_connection'/>
+<use f='MTProxy/net/net-connections.c' l='494' c='cpu_server_close_connection'/>
+<use f='MTProxy/net/net-connections.c' l='494' u='r' c='cpu_server_close_connection'/>
+<use f='MTProxy/net/net-connections.c' l='494' u='w' c='cpu_server_close_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1213' u='w' c='alloc_new_socket_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1289' u='r' c='net_accept_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1733' u='r' c='create_new_connections'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='84' u='r' c='cpu_tcp_server_writer'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='85' u='r' c='cpu_tcp_server_writer'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='87' u='r' c='cpu_tcp_server_writer'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='89' u='r' c='cpu_tcp_server_writer'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='59' u='r' c='tcp_rpc_conn_send_init'/>

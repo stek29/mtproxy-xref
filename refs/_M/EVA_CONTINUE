@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-events.h' l='48'/>
+<use f='MTProxy/engine/engine.c' l='152' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='1134' u='c'/>
+<use f='MTProxy/net/net-events.c' l='353' u='c'/>

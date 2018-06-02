@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/sys/stat.h' l='219' type='int fstat(int __fd, struct stat * __buf)'/>
+<dec f='include/x86_64-linux-gnu/sys/stat.h' l='229' type='int fstat64(int __fd, struct stat64 * __buf)'/>
+<def f='include/x86_64-linux-gnu/sys/stat.h' l='465' ll='469' macro='1' type='int fstat(int __fd, struct stat * __statbuf)'/>
+<def f='include/x86_64-linux-gnu/sys/stat.h' l='514' ll='518' macro='1' type='int fstat64(int __fd, struct stat64 * __statbuf)'/>

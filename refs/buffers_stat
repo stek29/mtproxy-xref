@@ -1,0 +1,10 @@
+<def f='MTProxy/net/net-msg-buffers.h' l='91' ll='98'/>
+<size>48</size>
+<mbr r='buffers_stat::total_used_buffers_size' o='0' t='long long'/>
+<mbr r='buffers_stat::allocated_buffer_bytes' o='64' t='long long'/>
+<mbr r='buffers_stat::buffer_chunk_alloc_ops' o='128' t='long long'/>
+<mbr r='buffers_stat::total_used_buffers' o='192' t='int'/>
+<mbr r='buffers_stat::allocated_buffer_chunks' o='224' t='int'/>
+<mbr r='buffers_stat::max_allocated_buffer_chunks' o='256' t='int'/>
+<mbr r='buffers_stat::max_buffer_chunks' o='288' t='int'/>
+<mbr r='buffers_stat::max_allocated_buffer_bytes' o='320' t='long long'/>

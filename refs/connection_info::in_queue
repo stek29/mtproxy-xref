@@ -1,0 +1,9 @@
+<dec f='MTProxy/net/net-connections.h' l='238' type='struct mp_queue *'/>
+<offset>5184</offset>
+<use f='MTProxy/net/net-connections.c' l='437' u='r' c='cpu_server_free_connection'/>
+<use f='MTProxy/net/net-connections.c' l='443' u='r' c='cpu_server_free_connection'/>
+<use f='MTProxy/net/net-connections.c' l='444' u='w' c='cpu_server_free_connection'/>
+<use f='MTProxy/net/net-connections.c' l='691' u='w' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='772' u='r' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='939' u='r' c='net_server_socket_reader'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='104' u='r' c='cpu_tcp_server_reader'/>

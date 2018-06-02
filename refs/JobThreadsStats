@@ -1,0 +1,10 @@
+<def f='MTProxy/jobs/jobs.c' l='65' type='struct job_thread_stat [256]'/>
+<use f='MTProxy/jobs/jobs.c' l='180' u='m' c='jobs_prepare_stat'/>
+<use f='MTProxy/jobs/jobs.c' l='181' u='m' c='jobs_prepare_stat'/>
+<use f='MTProxy/jobs/jobs.c' l='182' u='m' c='jobs_prepare_stat'/>
+<use f='MTProxy/jobs/jobs.c' l='182' u='m' c='jobs_prepare_stat'/>
+<use f='MTProxy/jobs/jobs.c' l='184' u='m' c='jobs_prepare_stat'/>
+<use f='MTProxy/jobs/jobs.c' l='185' u='m' c='jobs_prepare_stat'/>
+<use f='MTProxy/jobs/jobs.c' l='186' u='m' c='jobs_prepare_stat'/>
+<use f='MTProxy/jobs/jobs.c' l='186' u='m' c='jobs_prepare_stat'/>
+<use f='MTProxy/jobs/jobs.c' l='334' u='a' c='update_thread_stat'/>

@@ -1,0 +1,7 @@
+<dec f='MTProxy/jobs/jobs.h' l='232' type='long long'/>
+<offset>1152</offset>
+<use f='MTProxy/jobs/jobs.c' l='294' u='r' c='jobs_prepare_stat'/>
+<use f='MTProxy/jobs/jobs.c' l='646' u='w' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='675' u='w' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='1097' u='w' c='create_async_job'/>
+<use f='MTProxy/net/net-connections.c' l='776' u='w' c='alloc_new_connection'/>

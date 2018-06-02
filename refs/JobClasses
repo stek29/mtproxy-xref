@@ -1,0 +1,8 @@
+<def f='MTProxy/jobs/jobs.c' l='359' type='struct job_class [16]'/>
+<use f='MTProxy/jobs/jobs.c' l='434' u='a' c='create_job_thread_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='503' u='a' c='create_job_thread'/>
+<use f='MTProxy/jobs/jobs.c' l='512' u='a' c='create_job_class_threads'/>
+<use f='MTProxy/jobs/jobs.c' l='530' u='m' c='init_async_jobs'/>
+<use f='MTProxy/jobs/jobs.c' l='558' u='a' c='create_job_class'/>
+<use f='MTProxy/jobs/jobs.c' l='592' u='m' c='create_job_class_sub'/>
+<use f='MTProxy/jobs/jobs.c' l='707' u='a' c='unlock_job'/>

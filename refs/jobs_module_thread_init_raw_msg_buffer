@@ -1,0 +1,3 @@
+<def f='MTProxy/net/net-msg-buffers.c' l='51' macro='1' type='void jobs_module_thread_init_raw_msg_buffer()'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='51' macro='1' u='r'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='51' macro='1' u='r'/>

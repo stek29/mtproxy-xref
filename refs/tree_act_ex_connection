@@ -1,0 +1,2 @@
+<use f='MTProxy/net/net-connections.c' l='1633' u='c' c='destroy_dead_target_connections'/>
+<use f='MTProxy/net/net-connections.c' l='2092' u='c' c='conn_target_get_connection'/>

@@ -1,0 +1,12 @@
+<dec f='include/x86_64-linux-gnu/bits/socket.h' l='100'/>
+<use f='MTProxy/common/resolver.c' l='377' u='c'/>
+<use f='MTProxy/common/resolver.c' l='381' u='c'/>
+<use f='MTProxy/common/resolver.c' l='385' u='c'/>
+<use f='MTProxy/common/resolver.c' l='393' u='c'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='158' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='675' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='1274' u='c'/>
+<use f='MTProxy/net/net-events.c' l='452' u='c'/>
+<use f='MTProxy/net/net-events.c' l='610' u='c'/>
+<use f='MTProxy/net/net-events.c' l='723' u='c'/>
+<use f='MTProxy/net/net-events.c' l='783' u='c'/>

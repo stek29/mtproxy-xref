@@ -1,0 +1,7 @@
+<dec f='MTProxy/engine/engine-rpc.h' l='97' type='struct tl_act_extra *(*)(struct tl_act_extra *)'/>
+<use f='MTProxy/engine/engine-rpc.h' l='113' u='w' c='tl_act_extra_init'/>
+<offset>576</offset>
+<use f='MTProxy/engine/engine-rpc.c' l='303' u='r' c='fetch_query'/>
+<use f='MTProxy/engine/engine-rpc.c' l='304' u='w' c='fetch_query'/>
+<use f='MTProxy/engine/engine-rpc.c' l='309' u='r' c='fetch_query'/>
+<use f='MTProxy/engine/engine-rpc.c' l='315' u='r' c='fetch_query'/>

@@ -1,0 +1,13 @@
+<def f='MTProxy/common/precise-time.h' l='32' ll='36' type='unsigned long long rdtsc()'/>
+<use f='MTProxy/common/precise-time.c' l='39' u='c' c='get_utime_monotonic'/>
+<use f='MTProxy/common/precise-time.c' l='50' u='c' c='get_double_time'/>
+<use f='MTProxy/common/precise-time.c' l='72' u='c' c='get_utime'/>
+<use f='MTProxy/common/precise-time.c' l='78' u='c' c='get_precise_time'/>
+<use f='MTProxy/engine/engine-rpc.h' l='114' u='c' c='tl_act_extra_init'/>
+<use f='MTProxy/engine/engine-rpc-common.c' l='79' u='c' c='tl_simple_parse_function'/>
+<use f='MTProxy/engine/engine-rpc.c' l='386' u='c' c='process_act_atom_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='389' u='c' c='process_act_atom_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='687' u='c' c='create_query_job'/>
+<use f='MTProxy/jobs/jobs.c' l='466' u='c' c='create_job_thread_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='925' u='c' c='job_thread_ex'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='224' u='c' c='aes_generate_nonce'/>

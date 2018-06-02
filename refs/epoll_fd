@@ -1,0 +1,12 @@
+<dec f='MTProxy/net/net-events.h' l='97' type='int'/>
+<use f='MTProxy/net/net-connections.c' l='1898' u='r' c='do_conn_target_job'/>
+<def f='MTProxy/net/net-events.c' l='59' type='int'/>
+<use f='MTProxy/net/net-events.c' l='74' u='r' c='init_epoll'/>
+<use f='MTProxy/net/net-events.c' l='83' u='w' c='init_epoll'/>
+<use f='MTProxy/net/net-events.c' l='266' u='r' c='epoll_insert'/>
+<use f='MTProxy/net/net-events.c' l='268' u='r' c='epoll_insert'/>
+<use f='MTProxy/net/net-events.c' l='269' u='r' c='epoll_insert'/>
+<use f='MTProxy/net/net-events.c' l='283' u='r' c='epoll_remove'/>
+<use f='MTProxy/net/net-events.c' l='284' u='r' c='epoll_remove'/>
+<use f='MTProxy/net/net-events.c' l='373' u='r' c='epoll_fetch_events'/>
+<use f='MTProxy/net/net-events.c' l='383' u='r' c='epoll_fetch_events'/>

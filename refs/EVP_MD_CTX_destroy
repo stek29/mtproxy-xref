@@ -1,0 +1,6 @@
+<dec f='include/openssl/evp.h' l='589' type='void EVP_MD_CTX_destroy(EVP_MD_CTX * ctx)'/>
+<use f='MTProxy/common/sha1.c' l='44' macro='1' u='c'/>
+<use f='MTProxy/common/sha1.c' l='53' macro='1' u='c'/>
+<use f='MTProxy/common/sha256.c' l='44' macro='1' u='c'/>
+<use f='MTProxy/common/sha256.c' l='53' macro='1' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='1073' macro='1' u='c'/>

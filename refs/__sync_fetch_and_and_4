@@ -1,0 +1,12 @@
+<use f='MTProxy/jobs/jobs.c' l='660' u='c' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='806' u='c' c='process_one_job'/>
+<use f='MTProxy/net/net-connections.c' l='357' u='c' c='set_connection_timeout'/>
+<use f='MTProxy/net/net-connections.c' l='490' u='c' c='cpu_server_close_connection'/>
+<use f='MTProxy/net/net-connections.c' l='544' u='c' c='do_connection_job'/>
+<use f='MTProxy/net/net-connections.c' l='874' u='c' c='net_server_socket_reader'/>
+<use f='MTProxy/net/net-connections.c' l='884' u='c' c='net_server_socket_reader'/>
+<use f='MTProxy/net/net-connections.c' l='962' u='c' c='net_server_socket_writer'/>
+<use f='MTProxy/net/net-connections.c' l='985' u='c' c='net_server_socket_writer'/>
+<use f='MTProxy/net/net-connections.c' l='995' u='c' c='net_server_socket_writer'/>
+<use f='MTProxy/net/net-connections.c' l='1047' u='c' c='net_server_socket_read_write'/>
+<use f='MTProxy/net/net-connections.c' l='1113' u='c' c='net_server_socket_read_write_gateway'/>

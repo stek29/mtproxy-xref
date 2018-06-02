@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-http-server.h' l='35' type='int (*)(connection_job_t)'/>
+<offset>128</offset>
+<use f='MTProxy/net/net-http-server.c' l='97' u='w'/>
+<use f='MTProxy/net/net-http-server.c' l='643' u='r' c='hts_std_wakeup'/>
+<use f='MTProxy/net/net-http-server.c' l='644' u='r' c='hts_std_wakeup'/>

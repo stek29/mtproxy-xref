@@ -1,0 +1,5 @@
+<dec f='MTProxy/common/sha1.h' l='32' type='void sha1_finish(sha1_context * ctx, unsigned char * output)'/>
+<def f='MTProxy/common/sha1.c' l='33' ll='37' type='void sha1_finish(sha1_context * ctx, unsigned char * output)'/>
+<use f='MTProxy/common/sha1.c' l='43' u='c' c='sha1'/>
+<use f='MTProxy/common/sha1.c' l='52' u='c' c='sha1_two_chunks'/>
+<use f='MTProxy/net/net-msg.c' l='1072' u='c' c='rwm_sha1'/>

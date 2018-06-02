@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-rpc-targets.h' l='42' type='rpc_target_job_t rpc_target_lookup(struct process_id * PID)'/>
+<use f='MTProxy/common/tl-parse.c' l='928' u='c' c='tls_init'/>
+<use f='MTProxy/engine/engine-rpc.c' l='72' u='c' c='tl_aio_init_store'/>
+<def f='MTProxy/net/net-rpc-targets.c' l='194' ll='210' type='rpc_target_job_t rpc_target_lookup(struct process_id * pid)'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='216' u='c' c='rpc_target_lookup_hp'/>

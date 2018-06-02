@@ -1,0 +1,17 @@
+<def f='MTProxy/common/tl-parse.h' l='245' ll='265' type='int tlf_check(struct tl_in_state * tlio_in, int nbytes)'/>
+<use f='MTProxy/common/tl-parse.h' l='283' u='c' c='tlf_lookup_int'/>
+<use f='MTProxy/common/tl-parse.h' l='294' u='c' c='tlf_lookup_second_int'/>
+<use f='MTProxy/common/tl-parse.h' l='305' u='c' c='tlf_lookup_long'/>
+<use f='MTProxy/common/tl-parse.h' l='316' u='c' c='tlf_lookup_data'/>
+<use f='MTProxy/common/tl-parse.h' l='326' u='c' c='tlf_int'/>
+<use f='MTProxy/common/tl-parse.h' l='337' u='c' c='tlf_double'/>
+<use f='MTProxy/common/tl-parse.h' l='348' u='c' c='tlf_long'/>
+<use f='MTProxy/common/tl-parse.h' l='377' u='c' c='tlf_string_len'/>
+<use f='MTProxy/common/tl-parse.h' l='404' u='c' c='tlf_pad'/>
+<use f='MTProxy/common/tl-parse.h' l='421' u='c' c='tlf_raw_data'/>
+<use f='MTProxy/common/tl-parse.h' l='431' u='c' c='tlf_string_data'/>
+<use f='MTProxy/common/tl-parse.h' l='444' u='c' c='tlf_skip_string_data'/>
+<use f='MTProxy/common/tl-parse.h' l='529' u='c' c='tlf_skip'/>
+<use f='MTProxy/common/tl-parse.h' l='713' u='c' c='tl_copy_through'/>
+<use f='MTProxy/common/tl-parse.h' l='777' u='c' c='_tlf_raw_message'/>
+<doc f='MTProxy/common/tl-parse.h' l='245'>/* {{{ */</doc>

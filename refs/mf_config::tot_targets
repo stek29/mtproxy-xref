@@ -1,0 +1,10 @@
+<dec f='MTProxy/mtproto/mtproto-config.h' l='45' type='int'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='130' u='r' c='clear_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='134' u='r' c='clear_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='139' u='w' c='clear_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='145' u='r' c='cfg_parse_server_port'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='146' u='r' c='cfg_parse_server_port'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='189' u='r' c='cfg_parse_server_port'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='192' u='w' c='cfg_parse_server_port'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='236' u='w' c='preinit_config'/>
+<offset>0</offset>

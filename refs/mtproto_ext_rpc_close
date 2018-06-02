@@ -1,0 +1,4 @@
+<dec f='MTProxy/mtproto/mtproto-proxy.c' l='1012' type='int mtproto_ext_rpc_close(connection_job_t C, int who)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1019'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1019'/>
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='1059' ll='1067' type='int mtproto_ext_rpc_close(connection_job_t C, int who)'/>

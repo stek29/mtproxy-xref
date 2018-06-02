@@ -1,0 +1,2 @@
+<dec f='MTProxy/net/net-crypto-aes.h' l='46' type='int aes_crypto_needed_output_bytes(connection_job_t c)'/>
+<doc f='MTProxy/net/net-crypto-aes.h' l='46'>/* returns # of bytes needed to complete last output block */</doc>

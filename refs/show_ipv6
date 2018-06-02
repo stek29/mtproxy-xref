@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-events.h' l='143' type='const char * show_ipv6(const unsigned char * ipv6)'/>
+<use f='MTProxy/net/net-connections.h' l='312' u='c' c='show_ip46'/>
+<use f='MTProxy/net/net-connections.c' l='1717' u='c' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1724' u='c' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1843' u='c' c='free_target'/>
+<def f='MTProxy/net/net-events.c' l='892' ll='901' type='const char * show_ipv6(const unsigned char * ipv6)'/>

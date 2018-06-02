@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-connections.h' l='148' type='int (*)(connection_job_t)'/>
+<offset>896</offset>
+<doc f='MTProxy/net/net-connections.h' l='147'>// CPU-NET METHODS</doc>
+<use f='MTProxy/net/net-connections.c' l='577' u='r' c='do_connection_job'/>
+<use f='MTProxy/net/net-connections.c' l='1535' u='r' c='check_conn_functions'/>
+<use f='MTProxy/net/net-connections.c' l='1536' u='w' c='check_conn_functions'/>

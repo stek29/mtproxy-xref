@@ -1,0 +1,2 @@
+<dec f='MTProxy/engine/engine-rpc.h' l='145'/>
+<doc f='MTProxy/engine/engine-rpc.h' l='144'>/* ${engine}-interface-structures.h must contain #pragma pack(push,4) for use TL_DEFAULT_PARSE_FUN macro */</doc>

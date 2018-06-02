@@ -1,0 +1,2 @@
+<dec f='MTProxy/net/net-msg.h' l='147' type='int rwm_sha1(struct raw_message * raw, int bytes, unsigned char * output)'/>
+<def f='MTProxy/net/net-msg.c' l='1067' ll='1076' type='int rwm_sha1(struct raw_message * raw, int bytes, unsigned char * output)'/>

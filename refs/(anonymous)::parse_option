@@ -1,0 +1,7 @@
+<dec f='MTProxy/engine/engine.h' l='87' type='int (*)(int)'/>
+<offset>832</offset>
+<use f='MTProxy/engine/engine.c' l='545' u='r' c='check_server_functions'/>
+<use f='MTProxy/engine/engine.c' l='545' u='w' c='check_server_functions'/>
+<use f='MTProxy/engine/engine.c' l='712' u='r' c='default_parse_option_func'/>
+<use f='MTProxy/engine/engine.c' l='713' u='r' c='default_parse_option_func'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2297' u='w'/>

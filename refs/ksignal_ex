@@ -1,0 +1,5 @@
+<def f='MTProxy/common/server-functions.c' l='204' ll='214' type='void ksignal_ex(int sig, void (*)(int, siginfo_t *, void *) handler)'/>
+<use f='MTProxy/common/server-functions.c' l='233' u='c' c='set_debug_handlers'/>
+<use f='MTProxy/common/server-functions.c' l='234' u='c' c='set_debug_handlers'/>
+<use f='MTProxy/common/server-functions.c' l='235' u='c' c='set_debug_handlers'/>
+<use f='MTProxy/common/server-functions.c' l='236' u='c' c='set_debug_handlers'/>

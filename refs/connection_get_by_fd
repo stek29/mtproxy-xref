@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-connections.h' l='341' type='connection_job_t connection_get_by_fd(int fd)'/>
+<use f='MTProxy/engine/engine-rpc.c' l='487' u='c' c='process_query_job'/>
+<def f='MTProxy/net/net-connections.c' l='1398' ll='1430' type='connection_job_t connection_get_by_fd(int fd)'/>
+<use f='MTProxy/net/net-connections.c' l='1433' u='c' c='connection_get_by_fd_generation'/>

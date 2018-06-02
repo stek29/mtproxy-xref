@@ -1,0 +1,4 @@
+<def f='MTProxy/jobs/jobs.h' l='303' ll='305' type='int check_job_completion(job_t job)'/>
+<use f='MTProxy/jobs/jobs.h' l='307' u='c' c='check_job_validity'/>
+<use f='MTProxy/jobs/jobs.h' l='313' u='c' c='parent_job_aborted'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1547' u='c' c='finish_postponed_http_response'/>

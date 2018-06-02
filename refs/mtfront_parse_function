@@ -1,0 +1,4 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='1830' ll='1845' type='struct tl_act_extra * mtfront_parse_function(struct tl_in_state * tlio_in, long long actor_id)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2303'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2303'/>
+<doc f='MTProxy/mtproto/mtproto-proxy.c' l='1828'>/* -------------------------- EXTERFACE ---------------------------- */</doc>

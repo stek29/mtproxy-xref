@@ -1,0 +1,4 @@
+<def f='MTProxy/common/mp-queue.c' l='62' macro='1' type='struct jobs_module_stat_mp_queue *[256]'/>
+<use f='MTProxy/common/mp-queue.c' l='62' macro='1' u='w'/>
+<use f='MTProxy/common/mp-queue.c' l='73' macro='1' u='r'/>
+<use f='MTProxy/common/mp-queue.c' l='74' macro='1' u='r'/>

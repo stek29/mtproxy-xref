@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-tcp-rpc-common.h' l='166' type='unsigned int tcp_set_default_rpc_flags(unsigned int and_flags, unsigned int or_flags)'/>
+<use f='MTProxy/engine/engine-net.c' l='184' u='c' c='f_parse_option_net'/>
+<use f='MTProxy/engine/engine-net.c' l='187' u='c' c='f_parse_option_net'/>
+<use f='MTProxy/engine/engine.c' l='571' u='c' c='engine_startup'/>
+<def f='MTProxy/net/net-tcp-rpc-common.c' l='230' ll='232' type='unsigned int tcp_set_default_rpc_flags(unsigned int and_flags, unsigned int or_flags)'/>

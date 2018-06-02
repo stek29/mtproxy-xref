@@ -1,0 +1,6 @@
+<dec f='include/netdb.h' l='104' type='int'/>
+<offset>128</offset>
+<doc f='include/netdb.h' l='104'>/* Host address type.  */</doc>
+<use f='MTProxy/common/resolver.c' l='95' u='w'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='155' u='r' c='cfg_parse_server_port'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='158' u='r' c='cfg_parse_server_port'/>

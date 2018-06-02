@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>parse-config.h source code [MTProxy/common/parse-config.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="https://code.woboq.org/data//qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="https://code.woboq.org/data//kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery-ui.min.js"></script>
+<script>var file = 'MTProxy/common/parse-config.h'; var root_path = '../..'; var data_path = 'https://code.woboq.org/data/';</script>
+<script src='https://code.woboq.org/data//codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='..'>MTProxy</a>/<a href='./'>common</a>/<a href='parse-config.h.html'>parse-config.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>    This file is part of Mtproto-proxy Library.</i></td></tr>
+<tr><th id="3">3</th><td><i></i></td></tr>
+<tr><th id="4">4</th><td><i>    Mtproto-proxy Library is free software: you can redistribute it and/or modify</i></td></tr>
+<tr><th id="5">5</th><td><i>    it under the terms of the GNU Lesser General Public License as published by</i></td></tr>
+<tr><th id="6">6</th><td><i>    the Free Software Foundation, either version 2 of the License, or</i></td></tr>
+<tr><th id="7">7</th><td><i>    (at your option) any later version.</i></td></tr>
+<tr><th id="8">8</th><td><i></i></td></tr>
+<tr><th id="9">9</th><td><i>    Mtproto-proxy Library is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="10">10</th><td><i>    but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="11">11</th><td><i>    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</i></td></tr>
+<tr><th id="12">12</th><td><i>    GNU Lesser General Public License for more details.</i></td></tr>
+<tr><th id="13">13</th><td><i></i></td></tr>
+<tr><th id="14">14</th><td><i>    You should have received a copy of the GNU Lesser General Public License</i></td></tr>
+<tr><th id="15">15</th><td><i>    along with Mtproto-proxy Library.  If not, see &lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</i></td></tr>
+<tr><th id="16">16</th><td><i></i></td></tr>
+<tr><th id="17">17</th><td><i>    Copyright 2014 Telegram Messenger Inc</i></td></tr>
+<tr><th id="18">18</th><td><i>              2014 Vitaly Valtman</i></td></tr>
+<tr><th id="19">19</th><td><i>*/</i></td></tr>
+<tr><th id="20">20</th><td></td></tr>
+<tr><th id="21">21</th><td><u>#pragma once</u></td></tr>
+<tr><th id="22">22</th><td></td></tr>
+<tr><th id="23">23</th><td><b>extern</b> <em>char</em> *<dfn class="decl" id="config_file" title='config_file' data-ref="config_file">config_file</dfn>, *<dfn class="decl" id="cfg_start" title='cfg_start' data-ref="cfg_start">cfg_start</dfn>, *<dfn class="decl" id="cfg_end" title='cfg_end' data-ref="cfg_end">cfg_end</dfn>, *<dfn class="decl" id="cfg_cur" title='cfg_cur' data-ref="cfg_cur">cfg_cur</dfn>;</td></tr>
+<tr><th id="24">24</th><td><b>extern</b> <em>int</em> <dfn class="decl" id="config_bytes" title='config_bytes' data-ref="config_bytes">config_bytes</dfn>, <dfn class="decl" id="cfg_lno" title='cfg_lno' data-ref="cfg_lno">cfg_lno</dfn>, <dfn class="decl" id="cfg_lex" title='cfg_lex' data-ref="cfg_lex">cfg_lex</dfn>;</td></tr>
+<tr><th id="25">25</th><td></td></tr>
+<tr><th id="26">26</th><td><em>int</em> <a class="decl" href="parse-config.c.html#cfg_skipspc" title='cfg_skipspc' data-ref="cfg_skipspc" id="cfg_skipspc">cfg_skipspc</a> (<em>void</em>);</td></tr>
+<tr><th id="27">27</th><td><em>int</em> <a class="decl" href="parse-config.c.html#cfg_skspc" title='cfg_skspc' data-ref="cfg_skspc" id="cfg_skspc">cfg_skspc</a> (<em>void</em>);</td></tr>
+<tr><th id="28">28</th><td><em>int</em> <a class="decl" href="parse-config.c.html#cfg_getlex" title='cfg_getlex' data-ref="cfg_getlex" id="cfg_getlex">cfg_getlex</a> (<em>void</em>);</td></tr>
+<tr><th id="29">29</th><td><em>int</em> <a class="decl" href="parse-config.c.html#cfg_getword" title='cfg_getword' data-ref="cfg_getword" id="cfg_getword">cfg_getword</a> (<em>void</em>);</td></tr>
+<tr><th id="30">30</th><td><em>int</em> <a class="decl" href="parse-config.c.html#cfg_getstr" title='cfg_getstr' data-ref="cfg_getstr" id="cfg_getstr">cfg_getstr</a> (<em>void</em>);</td></tr>
+<tr><th id="31">31</th><td><em>void</em> <a class="decl" href="parse-config.c.html#syntax" title='syntax' data-ref="syntax" id="syntax">syntax</a> (<em>const</em> <em>char</em> *<dfn class="local col1 decl" id="1msg" title='msg' data-type='const char *' data-ref="1msg">msg</dfn>, ...);</td></tr>
+<tr><th id="32">32</th><td><em>void</em> <a class="decl" href="parse-config.c.html#syntax_warning" title='syntax_warning' data-ref="syntax_warning" id="syntax_warning">syntax_warning</a> (<em>const</em> <em>char</em> *<dfn class="local col2 decl" id="2msg" title='msg' data-type='const char *' data-ref="2msg">msg</dfn>, ...);</td></tr>
+<tr><th id="33">33</th><td><em>int</em> <a class="decl" href="parse-config.c.html#expect_lexem" title='expect_lexem' data-ref="expect_lexem" id="expect_lexem">expect_lexem</a> (<em>int</em> <dfn class="local col3 decl" id="3lexem" title='lexem' data-type='int' data-ref="3lexem">lexem</dfn>);</td></tr>
+<tr><th id="34">34</th><td><em>int</em> <a class="decl" href="parse-config.c.html#expect_word" title='expect_word' data-ref="expect_word" id="expect_word">expect_word</a> (<em>const</em> <em>char</em> *<dfn class="local col4 decl" id="4name" title='name' data-type='const char *' data-ref="4name">name</dfn>, <em>int</em> <dfn class="local col5 decl" id="5len" title='len' data-type='int' data-ref="5len">len</dfn>);</td></tr>
+<tr><th id="35">35</th><td><em>void</em> <a class="decl" href="parse-config.c.html#reset_config" title='reset_config' data-ref="reset_config" id="reset_config">reset_config</a> (<em>void</em>);</td></tr>
+<tr><th id="36">36</th><td><em>int</em> <a class="decl" href="parse-config.c.html#load_config" title='load_config' data-ref="load_config" id="load_config">load_config</a> (<em>const</em> <em>char</em> *<dfn class="local col6 decl" id="6file" title='file' data-type='const char *' data-ref="6file">file</dfn>, <em>int</em> <dfn class="local col7 decl" id="7fd" title='fd' data-type='int' data-ref="7fd">fd</dfn>);</td></tr>
+<tr><th id="37">37</th><td><em>void</em> <a class="decl" href="parse-config.c.html#close_config" title='close_config' data-ref="close_config" id="close_config">close_config</a> (<em>int</em> *<dfn class="local col8 decl" id="8fd" title='fd' data-type='int *' data-ref="8fd">fd</dfn>);</td></tr>
+<tr><th id="38">38</th><td><em>void</em> <a class="decl" href="parse-config.c.html#md5_hex_config" title='md5_hex_config' data-ref="md5_hex_config" id="md5_hex_config">md5_hex_config</a> (<em>char</em> *<dfn class="local col9 decl" id="9out" title='out' data-type='char *' data-ref="9out">out</dfn>);</td></tr>
+<tr><th id="39">39</th><td><b>struct</b> <a class="type" href="../../include/netdb.h.html#hostent" title='hostent' data-ref="hostent" id="hostent"><a class="type" href="../../include/netdb.h.html#hostent" title='hostent' data-ref="hostent">hostent</a></a> *<a class="decl" href="parse-config.c.html#cfg_gethost" title='cfg_gethost' data-ref="cfg_gethost" id="cfg_gethost">cfg_gethost</a> (<em>void</em>);</td></tr>
+<tr><th id="40">40</th><td><b>struct</b> <a class="type" href="../../include/netdb.h.html#hostent" title='hostent' data-ref="hostent">hostent</a> *<a class="decl" href="parse-config.c.html#cfg_gethost_ex" title='cfg_gethost_ex' data-ref="cfg_gethost_ex" id="cfg_gethost_ex">cfg_gethost_ex</a> (<em>int</em> <dfn class="local col0 decl" id="10verb" title='verb' data-type='int' data-ref="10verb">verb</dfn>);</td></tr>
+<tr><th id="41">41</th><td><em>long</em> <em>long</em> <a class="decl" href="parse-config.c.html#cfg_getint" title='cfg_getint' data-ref="cfg_getint" id="cfg_getint">cfg_getint</a> (<em>void</em>);</td></tr>
+<tr><th id="42">42</th><td><em>long</em> <em>long</em> <a class="decl" href="parse-config.c.html#cfg_getint_zero" title='cfg_getint_zero' data-ref="cfg_getint_zero" id="cfg_getint_zero">cfg_getint_zero</a> (<em>void</em>);</td></tr>
+<tr><th id="43">43</th><td><em>long</em> <em>long</em> <a class="decl" href="parse-config.c.html#cfg_getint_signed_zero" title='cfg_getint_signed_zero' data-ref="cfg_getint_signed_zero" id="cfg_getint_signed_zero">cfg_getint_signed_zero</a> (<em>void</em>);</td></tr>
+<tr><th id="44">44</th><td></td></tr>
+<tr><th id="45">45</th><td><u>#define <dfn class="macro" id="_M/Expect" data-ref="_M/Expect">Expect</dfn>(l) { int t = expect_lexem (l); if (t &lt; 0) { return t; } }</u></td></tr>
+<tr><th id="46">46</th><td><u>#define <dfn class="macro" id="_M/ExpectWord" data-ref="_M/ExpectWord">ExpectWord</dfn>(s) { int t = expect_word (s, strlen (s)); if (t &lt; 0) { return t; } }</u></td></tr>
+<tr><th id="47">47</th><td><u>#define <dfn class="macro" id="_M/Syntax" data-ref="_M/Syntax">Syntax</dfn>(...) { syntax (__VA_ARGS__); return -1; }</u></td></tr>
+<tr><th id="48">48</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='parse-config.c.html'>MTProxy/common/parse-config.c</a><br/>Generated on <em>2018-Jun-02</em> from project MTProxy revision <em>842f343decf6c463bdecf1862e357c4a03e4bc97</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

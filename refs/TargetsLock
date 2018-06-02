@@ -1,0 +1,6 @@
+<def f='MTProxy/net/net-connections.c' l='1760' type='pthread_mutex_t'/>
+<use f='MTProxy/net/net-connections.c' l='1830' u='a' c='free_target'/>
+<use f='MTProxy/net/net-connections.c' l='1833' u='a' c='free_target'/>
+<use f='MTProxy/net/net-connections.c' l='1847' u='a' c='free_target'/>
+<use f='MTProxy/net/net-connections.c' l='1945' u='a' c='create_target'/>
+<use f='MTProxy/net/net-connections.c' l='1999' u='a' c='create_target'/>

@@ -1,0 +1,28 @@
+<def f='MTProxy/jobs/jobs.c' l='69' macro='1'/>
+<def f='MTProxy/jobs/jobs.c' l='79' macro='1' type='struct jobs_module_stat_jobs *'/>
+<use f='MTProxy/jobs/jobs.c' l='79' macro='1' u='w'/>
+<use f='MTProxy/jobs/jobs.c' l='643' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='673' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='918' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='921' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='922' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='923' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='932' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='933' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='938' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='938' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='1072' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='1239' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='1335' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='1349' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='1402' macro='1' u='r'/>
+<size>64</size>
+<mbr r='jobs_module_stat_jobs::tot_idle_time' o='0' t='double'/>
+<mbr r='jobs_module_stat_jobs::a_idle_time' o='64' t='double'/>
+<mbr r='jobs_module_stat_jobs::a_idle_quotient' o='128' t='double'/>
+<mbr r='jobs_module_stat_jobs::jobs_allocated_memory' o='192' t='long long'/>
+<mbr r='jobs_module_stat_jobs::jobs_ran' o='256' t='int'/>
+<mbr r='jobs_module_stat_jobs::job_timers_allocated' o='288' t='int'/>
+<mbr r='jobs_module_stat_jobs::locked_since' o='320' t='double'/>
+<mbr r='jobs_module_stat_jobs::timer_ops' o='384' t='long long'/>
+<mbr r='jobs_module_stat_jobs::timer_ops_scheduler' o='448' t='long long'/>

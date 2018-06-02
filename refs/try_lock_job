@@ -1,0 +1,8 @@
+<dec f='MTProxy/jobs/jobs.h' l='297' type='int try_lock_job(job_t job, int set_flags, int clear_flags)'/>
+<def f='MTProxy/jobs/jobs.c' l='599' ll='611' type='int try_lock_job(job_t job, int set_flags, int clear_flags)'/>
+<use f='MTProxy/jobs/jobs.c' l='754' u='c' c='job_send_signals'/>
+<use f='MTProxy/jobs/jobs.c' l='759' u='c' c='job_send_signals'/>
+<use f='MTProxy/jobs/jobs.c' l='803' u='c' c='process_one_job'/>
+<use f='MTProxy/jobs/jobs.c' l='807' u='c' c='process_one_job'/>
+<use f='MTProxy/jobs/jobs.c' l='1198' u='c' c='insert_node_into_job_list'/>
+<doc f='MTProxy/jobs/jobs.c' l='597'>/* ------ JOB THREAD CODE -------- */</doc>

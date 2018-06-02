@@ -1,0 +1,4 @@
+<def f='MTProxy/net/net-connections.c' l='2019' ll='2045' type='int create_all_outbound_connections_limited(int limit)'/>
+<use f='MTProxy/net/net-connections.c' l='2049' u='c' c='create_all_outbound_connections'/>
+<doc f='MTProxy/net/net-connections.c' l='2017'>/* }}} */</doc>
+<doc f='MTProxy/net/net-connections.c' l='2019'>/* {{{ */</doc>

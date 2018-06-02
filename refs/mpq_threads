@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/mp-queue.h' l='106' type='volatile int'/>
+<def f='MTProxy/common/mp-queue.c' l='50' type='volatile int'/>
+<use f='MTProxy/common/mp-queue.c' l='83' u='r' c='is_hazard_ptr'/>
+<use f='MTProxy/common/mp-queue.c' l='113' u='a' c='get_this_thread_id'/>

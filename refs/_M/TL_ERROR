@@ -1,0 +1,10 @@
+<dec f='MTProxy/common/tl-parse.h' l='185'/>
+<use f='MTProxy/common/tl-parse.h' l='261' u='c'/>
+<use f='MTProxy/common/tl-parse.h' l='497' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='113' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='124' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='550' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='554' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='569' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='570' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='571' u='c'/>

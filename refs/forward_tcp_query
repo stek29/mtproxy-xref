@@ -1,0 +1,5 @@
+<dec f='MTProxy/mtproto/mtproto-proxy.c' l='1115' type='int forward_tcp_query(struct tl_in_state * tlio_in, connection_job_t C, conn_target_job_t S, int flags, long long auth_key_id, int * remote_ip_port, int * our_ip_port)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1658' u='c' c='forward_mtproto_enc_packet'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1688' u='c' c='forward_mtproto_packet'/>
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='1699' ll='1826' type='int forward_tcp_query(struct tl_in_state * tlio_in, connection_job_t c, conn_target_job_t S, int flags, long long auth_key_id, int * remote_ip_port, int * our_ip_port)'/>
+<doc f='MTProxy/mtproto/mtproto-proxy.c' l='1697'>/* ----------- query rpc forwarding ------------ */</doc>

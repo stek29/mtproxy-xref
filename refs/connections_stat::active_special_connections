@@ -1,0 +1,9 @@
+<dec f='MTProxy/net/net-connections.h' l='282' type='int'/>
+<offset>160</offset>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='474' u='w' c='add_stats'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='474' u='r' c='add_stats'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='689' u='r' c='mtfront_prepare_stats'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='689' u='r' c='mtfront_prepare_stats'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='689' u='r' c='mtfront_prepare_stats'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2034' u='r' c='check_special_connections_overflow'/>
+<use f='MTProxy/net/net-connections.c' l='183' u='w' c='fetch_connections_stat'/>

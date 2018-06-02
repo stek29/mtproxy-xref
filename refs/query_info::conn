@@ -1,0 +1,10 @@
+<dec f='MTProxy/net/net-connections.h' l='405' type='void *'/>
+<offset>640</offset>
+<use f='MTProxy/engine/engine-rpc.c' l='780' u='r' c='do_query_job_run'/>
+<use f='MTProxy/engine/engine-rpc.c' l='781' u='r' c='do_query_job_run'/>
+<use f='MTProxy/engine/engine-rpc.c' l='782' u='r' c='do_query_job_run'/>
+<use f='MTProxy/engine/engine-rpc.c' l='783' u='r' c='do_query_job_run'/>
+<use f='MTProxy/engine/engine-rpc.c' l='784' c='do_query_job_run'/>
+<use f='MTProxy/engine/engine-rpc.c' l='784' u='r' c='do_query_job_run'/>
+<use f='MTProxy/engine/engine-rpc.c' l='784' u='w' c='do_query_job_run'/>
+<use f='MTProxy/engine/engine-rpc.c' l='820' u='w' c='do_create_query_job'/>

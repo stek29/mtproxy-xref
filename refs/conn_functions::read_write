@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-connections.h' l='150' type='int (*)(connection_job_t)'/>
+<offset>1024</offset>
+<doc f='MTProxy/net/net-connections.h' l='150'>/* invoked when an event related to connection of this type occurs */</doc>
+<use f='MTProxy/net/net-connections.c' l='555' u='r' c='do_connection_job'/>
+<use f='MTProxy/net/net-connections.c' l='1532' u='r' c='check_conn_functions'/>
+<use f='MTProxy/net/net-connections.c' l='1533' u='w' c='check_conn_functions'/>

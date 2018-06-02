@@ -1,0 +1,28 @@
+<def f='MTProxy/net/net-connections.h' l='276' ll='303'/>
+<size>152</size>
+<mbr r='connections_stat::active_connections' o='0' t='int'/>
+<mbr r='connections_stat::active_dh_connections' o='32' t='int'/>
+<mbr r='connections_stat::outbound_connections' o='64' t='int'/>
+<mbr r='connections_stat::active_outbound_connections' o='96' t='int'/>
+<mbr r='connections_stat::ready_outbound_connections' o='128' t='int'/>
+<mbr r='connections_stat::active_special_connections' o='160' t='int'/>
+<mbr r='connections_stat::max_special_connections' o='192' t='int'/>
+<mbr r='connections_stat::allocated_connections' o='224' t='int'/>
+<mbr r='connections_stat::allocated_outbound_connections' o='256' t='int'/>
+<mbr r='connections_stat::allocated_inbound_connections' o='288' t='int'/>
+<mbr r='connections_stat::allocated_socket_connections' o='320' t='int'/>
+<mbr r='connections_stat::allocated_targets' o='352' t='int'/>
+<mbr r='connections_stat::ready_targets' o='384' t='int'/>
+<mbr r='connections_stat::active_targets' o='416' t='int'/>
+<mbr r='connections_stat::inactive_targets' o='448' t='int'/>
+<mbr r='connections_stat::tcp_readv_calls' o='512' t='long long'/>
+<mbr r='connections_stat::tcp_readv_intr' o='576' t='long long'/>
+<mbr r='connections_stat::tcp_readv_bytes' o='640' t='long long'/>
+<mbr r='connections_stat::tcp_writev_calls' o='704' t='long long'/>
+<mbr r='connections_stat::tcp_writev_intr' o='768' t='long long'/>
+<mbr r='connections_stat::tcp_writev_bytes' o='832' t='long long'/>
+<mbr r='connections_stat::accept_calls_failed' o='896' t='long long'/>
+<mbr r='connections_stat::accept_nonblock_set_failed' o='960' t='long long'/>
+<mbr r='connections_stat::accept_rate_limit_failed' o='1024' t='long long'/>
+<mbr r='connections_stat::accept_init_accepted_failed' o='1088' t='long long'/>
+<mbr r='connections_stat::accept_connection_limit_failed' o='1152' t='long long'/>

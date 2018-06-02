@@ -1,0 +1,8 @@
+aes_secret_decref|aes_secret_decref
+aes_secret_incref|aes_secret_incref
+aes_create_keys|aes_create_keys
+aes_crypto_ctr128_init|aes_crypto_ctr128_init
+aes_crypto_free|aes_crypto_free
+aes_crypto_init|aes_crypto_init
+aes_generate_nonce|aes_generate_nonce
+aes_load_pwd_file|aes_load_pwd_file

@@ -1,0 +1,1 @@
+<def f='MTProxy/common/crc32.h' l='48' ll='50' type='uint64_t compute_crc64(const void * data, long len)'/>

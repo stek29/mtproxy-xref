@@ -1,0 +1,10 @@
+<dec f='MTProxy/common/mp-queue.h' l='119' type='void init_mp_queue(struct mp_queue * MQ)'/>
+<doc f='MTProxy/common/mp-queue.h' l='118'>/* functions for mp_queue = list of mp_queue_block&apos;s */</doc>
+<def f='MTProxy/common/mp-queue.c' l='371' ll='384' type='void init_mp_queue(struct mp_queue * MQ)'/>
+<use f='MTProxy/common/mp-queue.c' l='378' u='c' c='init_mp_queue'/>
+<use f='MTProxy/common/mp-queue.c' l='379' u='c' c='init_mp_queue'/>
+<use f='MTProxy/common/mp-queue.c' l='381' u='c' c='init_mp_queue'/>
+<use f='MTProxy/common/mp-queue.c' l='382' u='c' c='init_mp_queue'/>
+<use f='MTProxy/common/mp-queue.c' l='387' u='c' c='init_mp_queue_w'/>
+<use f='MTProxy/common/mp-queue.c' l='399' u='c' c='alloc_mp_queue'/>
+<doc f='MTProxy/common/mp-queue.c' l='370'>/* functions for mp_queue = list of mp_queue_block&apos;s */</doc>

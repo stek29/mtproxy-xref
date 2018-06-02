@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-connections.h' l='415' type='int new_conn_generation()'/>
+<use f='MTProxy/net/net-connections.c' l='632' u='c' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1339' u='c' c='init_listening_connection_ext'/>
+<def f='MTProxy/net/net-connections.c' l='2131' ll='2133' type='int new_conn_generation()'/>
+<use f='MTProxy/net/net-http-server.c' l='646' u='c' c='hts_std_wakeup'/>
+<use f='MTProxy/net/net-http-server.c' l='654' u='c' c='hts_std_alarm'/>

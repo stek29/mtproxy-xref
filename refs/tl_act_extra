@@ -1,0 +1,21 @@
+<def f='MTProxy/engine/engine-rpc.h' l='84' ll='104'/>
+<size>120</size>
+<mbr r='tl_act_extra::size' o='0' t='int'/>
+<mbr r='tl_act_extra::flags' o='32' t='int'/>
+<mbr r='tl_act_extra::attempt' o='64' t='int'/>
+<mbr r='tl_act_extra::type' o='96' t='int'/>
+<mbr r='tl_act_extra::op' o='128' t='int'/>
+<mbr r='tl_act_extra::subclass' o='160' t='int'/>
+<mbr r='tl_act_extra::hash' o='192' t='unsigned long long'/>
+<mbr r='tl_act_extra::start_rdtsc' o='256' t='long long'/>
+<mbr r='tl_act_extra::cpu_rdtsc' o='320' t='long long'/>
+<mbr r='tl_act_extra::tlio_out' o='384' t='struct tl_out_state *'/>
+<mbr r='tl_act_extra::act' o='448' t='int (*)(job_t, struct tl_act_extra *)'/>
+<mbr r='tl_act_extra::free' o='512' t='void (*)(struct tl_act_extra *)'/>
+<mbr r='tl_act_extra::dup' o='576' t='struct tl_act_extra *(*)(struct tl_act_extra *)'/>
+<mbr r='tl_act_extra::header' o='640' t='struct tl_query_header *'/>
+<mbr r='tl_act_extra::raw' o='704' t='struct raw_message **'/>
+<mbr r='tl_act_extra::error' o='768' t='char **'/>
+<mbr r='tl_act_extra::extra_ref' o='832' t='job_t'/>
+<mbr r='tl_act_extra::error_code' o='896' t='int *'/>
+<mbr r='tl_act_extra::extra' o='960' t='int [0]'/>

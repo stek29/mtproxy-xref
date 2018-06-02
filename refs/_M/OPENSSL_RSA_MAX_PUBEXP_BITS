@@ -1,0 +1,2 @@
+<dec f='include/openssl/rsa.h' l='177'/>
+<doc f='include/openssl/rsa.h' l='176'>/* exponent limit enforced for &quot;large&quot; modulus only */</doc>

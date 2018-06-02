@@ -1,0 +1,13 @@
+hts_execute|hts_execute
+hts_stats_execute|hts_stats_execute
+http_query_job_run|http_query_job_run
+http_send_message|http_send_message
+hts_close_connection|hts_close_connection
+hts_default_execute|hts_default_execute
+hts_do_wakeup|hts_do_wakeup
+hts_init_accepted|hts_init_accepted
+hts_parse_execute|hts_parse_execute
+hts_std_alarm|hts_std_alarm
+hts_std_wakeup|hts_std_wakeup
+hts_write_packet|hts_write_packet
+http_flush|http_flush

@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/tl-parse.c' l='62' type='int'/>
+<use f='MTProxy/common/tl-parse.c' l='950' u='w' c='tl_in_state_alloc'/>
+<use f='MTProxy/common/tl-parse.c' l='955' u='w' c='tl_in_state_free'/>
+<offset>384</offset>

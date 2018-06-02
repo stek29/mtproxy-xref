@@ -1,0 +1,7 @@
+<dec f='MTProxy/net/net-connections.h' l='325' type='int set_connection_timeout(connection_job_t C, double timeout)'/>
+<dec f='MTProxy/net/net-connections.h' l='359' type='int set_connection_timeout(connection_job_t C, double timeout)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1822' u='c' c='forward_tcp_query'/>
+<def f='MTProxy/net/net-connections.c' l='352' ll='366' type='int set_connection_timeout(connection_job_t C, double timeout)'/>
+<use f='MTProxy/net/net-connections.c' l='370' u='c' c='clear_connection_timeout'/>
+<doc f='MTProxy/net/net-connections.c' l='351'>/* {{{ TIMEOUT */</doc>
+<doc f='MTProxy/net/net-connections.c' l='352'>/* {{{ */</doc>

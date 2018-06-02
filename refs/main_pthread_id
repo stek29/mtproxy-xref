@@ -1,0 +1,5 @@
+<def f='MTProxy/jobs/jobs.c' l='365' type='pthread_t'/>
+<use f='MTProxy/jobs/jobs.c' l='408' u='r' c='init_main_pthread_id'/>
+<use f='MTProxy/jobs/jobs.c' l='410' u='w' c='init_main_pthread_id'/>
+<use f='MTProxy/jobs/jobs.c' l='417' u='r' c='check_main_thread'/>
+<use f='MTProxy/jobs/jobs.c' l='486' u='r' c='create_job_thread_ex'/>

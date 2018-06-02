@@ -1,0 +1,7 @@
+<dec f='include/unistd.h' l='537' type='int dup2(int __fd, int __fd2)'/>
+<doc f='include/unistd.h' l='536'>/* Duplicate FD to FD2, closing FD2 and making it open on the same file.  */</doc>
+<use f='MTProxy/common/kprintf.c' l='53' u='c' c='reopen_logs_ext'/>
+<use f='MTProxy/common/kprintf.c' l='54' u='c' c='reopen_logs_ext'/>
+<use f='MTProxy/common/kprintf.c' l='55' u='c' c='reopen_logs_ext'/>
+<use f='MTProxy/common/kprintf.c' l='61' u='c' c='reopen_logs_ext'/>
+<use f='MTProxy/common/kprintf.c' l='62' u='c' c='reopen_logs_ext'/>

@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/tl-parse.h' l='87' type='void (*)(struct tl_out_state *)'/>
+<use f='MTProxy/common/tl-parse.c' l='904' u='r' c='tls_end_ext'/>
+<use f='MTProxy/common/tl-parse.c' l='905' u='r' c='tls_end_ext'/>
+<offset>1216</offset>

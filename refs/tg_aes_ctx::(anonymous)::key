@@ -1,0 +1,12 @@
+<dec f='MTProxy/crypto/aesni256.h' l='44' type='AES_KEY'/>
+<offset>0</offset>
+<use f='MTProxy/crypto/aesni256.c' l='57' u='a' c='tg_ssl_aes_ctr_crypt'/>
+<use f='MTProxy/crypto/aesni256.c' l='72' u='a' c='tg_ssl_aes_ctr_crypt'/>
+<use f='MTProxy/crypto/aesni256.c' l='79' u='a' c='tg_ssl_aes_ctr_crypt'/>
+<use f='MTProxy/crypto/aesni256.c' l='91' u='a' c='tg_ssl_aes_cbc_encrypt'/>
+<use f='MTProxy/crypto/aesni256.c' l='95' u='a' c='tg_ssl_aes_cbc_decrypt'/>
+<use f='MTProxy/crypto/aesni256.c' l='99' u='a' c='tg_ssl_aes_ige_encrypt'/>
+<use f='MTProxy/crypto/aesni256.c' l='103' u='a' c='tg_ssl_aes_ige_decrypt'/>
+<use f='MTProxy/crypto/aesni256.c' l='107' u='a' c='tg_ssl_aes_ctr128_crypt'/>
+<use f='MTProxy/crypto/aesni256.c' l='118' u='a' c='tg_aes_set_encrypt_key'/>
+<use f='MTProxy/crypto/aesni256.c' l='130' u='a' c='tg_aes_set_decrypt_key'/>

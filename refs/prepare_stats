@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-connections.h' l='328' type='int prepare_stats(char * buf, int size)'/>
+<use f='MTProxy/common/common-stats.c' l='234' u='c' c='sb_prepare'/>
+<use f='MTProxy/engine/engine-rpc.c' l='876' u='c' c='default_stat_function'/>
+<def f='MTProxy/net/net-stats.c' l='99' ll='158' type='int prepare_stats(char * buff, int buff_size)'/>
+<use f='MTProxy/net/net-stats.c' l='162' u='c' c='output_std_stats'/>

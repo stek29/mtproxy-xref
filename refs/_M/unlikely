@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/cpuid.h' l='24'/>
+<use f='MTProxy/common/crc32c.c' l='342' u='c'/>
+<use f='MTProxy/common/crc32c.c' l='352' u='c'/>
+<use f='MTProxy/common/crc32c.c' l='372' u='c'/>

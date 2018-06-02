@@ -1,0 +1,12 @@
+<dec f='MTProxy/net/net-events.h' l='125' type='void maximize_sndbuf(int sfd, int max)'/>
+<use f='MTProxy/net/net-connections.c' l='610' u='c' c='alloc_new_connection'/>
+<def f='MTProxy/net/net-events.c' l='482' ll='515' type='void maximize_sndbuf(int socket_fd, int max)'/>
+<use f='MTProxy/net/net-events.c' l='568' u='c' c='server_socket'/>
+<use f='MTProxy/net/net-events.c' l='575' u='c' c='server_socket'/>
+<use f='MTProxy/net/net-events.c' l='642' u='c' c='client_socket'/>
+<use f='MTProxy/net/net-events.c' l='648' u='c' c='client_socket'/>
+<use f='MTProxy/net/net-events.c' l='709' u='c' c='client_socket_ipv6'/>
+<use f='MTProxy/net/net-events.c' l='714' u='c' c='client_socket_ipv6'/>
+<doc f='MTProxy/net/net-events.c' l='479'>/*
+ * Sets a socket&apos;s send buffer size to the maximum allowed by the system.
+ */</doc>

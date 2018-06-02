@@ -1,0 +1,4 @@
+<def f='MTProxy/vv/vv-tree.c' l='24' type='long long'/>
+<use f='MTProxy/vv/vv-tree.c' l='581' u='a' c='tree_alloc_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='606' u='a' c='tree_free_rpc_custom_op'/>
+<def f='MTProxy/net/net-stats.c' l='63' type='long long'/>

@@ -1,0 +1,4 @@
+<dec f='MTProxy/vv/vv-tree.c' l='76' macro='1' type='void tree_free_rpc_custom_op(struct tree_rpc_custom_op * T)'/>
+<use f='MTProxy/vv/vv-tree.c' l='430' macro='1' u='c'/>
+<use f='MTProxy/vv/vv-tree.c' l='537' macro='1' u='c'/>
+<def f='MTProxy/vv/vv-tree.c' l='586' macro='1' type='void tree_free_rpc_custom_op(struct tree_rpc_custom_op * T)'/>

@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-msg-buffers.c' l='89' type='int free_std_msg_buffer(struct msg_buffers_chunk * C, struct msg_buffer * X)'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='196' u='r' c='alloc_new_msg_buffers_chunk'/>
+<def f='MTProxy/net/net-msg-buffers.c' l='504' ll='527' type='int free_std_msg_buffer(struct msg_buffers_chunk * C, struct msg_buffer * X)'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='557' u='r' c='free_msg_buffer'/>

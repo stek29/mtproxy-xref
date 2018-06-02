@@ -1,0 +1,7 @@
+<dec f='MTProxy/jobs/jobs.h' l='354' type='int job_timer_check(job_t job)'/>
+<use f='MTProxy/engine/engine-rpc.c' l='529' u='c' c='process_query_job'/>
+<use f='MTProxy/engine/engine.c' l='401' u='c' c='precise_cron_job_run'/>
+<use f='MTProxy/jobs/jobs.c' l='1313' u='c' c='do_timer_job'/>
+<def f='MTProxy/jobs/jobs.c' l='1353' ll='1364' type='int job_timer_check(job_t job)'/>
+<use f='MTProxy/net/net-connections.c' l='560' u='c' c='do_connection_job'/>
+<use f='MTProxy/net/net-connections.c' l='1906' u='c' c='do_conn_target_job'/>

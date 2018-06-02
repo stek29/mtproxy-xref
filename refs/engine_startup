@@ -1,0 +1,4 @@
+<def f='MTProxy/engine/engine.c' l='567' ll='584' type='void engine_startup(engine_t * E, server_functions_t * F)'/>
+<use f='MTProxy/engine/engine.c' l='593' u='c' c='default_main'/>
+<doc f='MTProxy/engine/engine.c' l='565'>/* }}} */</doc>
+<doc f='MTProxy/engine/engine.c' l='567'>/* {{{ */</doc>

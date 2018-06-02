@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/tl-parse.h' l='72' type='int'/>
+<use f='MTProxy/common/tl-parse.c' l='416' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='429' u='w'/>
+<offset>576</offset>

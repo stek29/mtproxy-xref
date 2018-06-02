@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-tcp-connections.h' l='29' type='int cpu_tcp_server_writer(connection_job_t c)'/>
+<use f='MTProxy/net/net-connections.c' l='1555' u='r' c='check_conn_functions'/>
+<def f='MTProxy/net/net-tcp-connections.c' l='53' ll='96' type='int cpu_tcp_server_writer(connection_job_t C)'/>
+<doc f='MTProxy/net/net-tcp-connections.c' l='50'>/* }}} */</doc>
+<doc f='MTProxy/net/net-tcp-connections.c' l='53'>/* {{{ */</doc>

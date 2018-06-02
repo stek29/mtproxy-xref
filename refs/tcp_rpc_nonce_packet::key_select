@@ -1,0 +1,18 @@
+<dec f='MTProxy/net/net-tcp-rpc-common.h' l='40' type='int'/>
+<offset>32</offset>
+<doc f='MTProxy/net/net-tcp-rpc-common.h' l='40'>/* least significant 32 bits of key to use */</doc>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='135' u='r' c='tcp_rpcc_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='170' u='r' c='tcp_rpcc_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='196' u='w' c='tcp_rpcc_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='196' u='r' c='tcp_rpcc_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='198' u='r' c='tcp_rpcc_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='198' u='r' c='tcp_rpcc_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='227' u='r' c='tcp_rpcc_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='623' u='w' c='tcp_rpcc_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='173' u='r' c='tcp_rpcs_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='192' u='w' c='tcp_rpcs_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='192' u='r' c='tcp_rpcs_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='194' u='r' c='tcp_rpcs_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='194' u='r' c='tcp_rpcs_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='575' u='r' c='tcp_rpcs_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='626' u='w' c='tcp_rpcs_init_crypto'/>

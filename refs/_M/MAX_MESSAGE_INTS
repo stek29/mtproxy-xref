@@ -1,0 +1,4 @@
+<dec f='MTProxy/mtproto/mtproto-common.h' l='55'/>
+<use f='MTProxy/mtproto/mtproto-common.h' l='70' u='c'/>
+<doc f='MTProxy/mtproto/mtproto-common.h' l='53'>/* not really a limit, for struct encrypted_message only */
+// #define MAX_MESSAGE_INTS	16384</doc>

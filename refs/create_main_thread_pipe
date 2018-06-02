@@ -1,0 +1,2 @@
+<def f='MTProxy/engine/engine.c' l='126' ll='140' type='void create_main_thread_pipe()'/>
+<use f='MTProxy/engine/engine.c' l='268' u='c' c='engine_init'/>

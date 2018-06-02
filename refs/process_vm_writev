@@ -1,0 +1,1 @@
+<dec f='include/x86_64-linux-gnu/bits/uio.h' l='67' type='ssize_t process_vm_writev(pid_t __pid, const struct iovec * __lvec, unsigned long __liovcnt, const struct iovec * __rvec, unsigned long __riovcnt, unsigned long __flags)'/>

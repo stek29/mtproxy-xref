@@ -1,0 +1,4 @@
+<use f='MTProxy/common/mp-queue.c' l='301' u='c' c='mpq_block_pop'/>
+<use f='MTProxy/common/mp-queue.c' l='308' u='c' c='mpq_block_pop'/>
+<use f='MTProxy/common/mp-queue.c' l='315' u='c' c='mpq_block_pop'/>
+<use f='MTProxy/common/mp-queue.c' l='355' u='c' c='mpq_block_push'/>

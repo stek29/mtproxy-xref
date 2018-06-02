@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-timers.c' l='38' type='int'/>
+<use f='MTProxy/net/net-timers.c' l='94' u='w' c='insert_event_timer'/>
+<use f='MTProxy/net/net-timers.c' l='109' u='w' c='remove_event_timer'/>
+<offset>192</offset>

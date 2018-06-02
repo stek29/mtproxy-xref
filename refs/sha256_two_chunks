@@ -1,0 +1,2 @@
+<dec f='MTProxy/common/sha256.h' l='37' type='void sha256_two_chunks(const unsigned char * input1, int ilen1, const unsigned char * input2, int ilen2, unsigned char * output)'/>
+<def f='MTProxy/common/sha256.c' l='47' ll='54' type='void sha256_two_chunks(const unsigned char * input1, int ilen1, const unsigned char * input2, int ilen2, unsigned char * output)'/>

@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-connections.h' l='318' type='void fetch_connections_stat(struct connections_stat * st)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='430' u='c' c='update_local_stats_copy'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='583' u='c' c='mtfront_prepare_stats'/>
+<def f='MTProxy/net/net-connections.c' l='174' ll='205' type='void fetch_connections_stat(struct connections_stat * st)'/>

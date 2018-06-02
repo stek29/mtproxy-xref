@@ -1,0 +1,3 @@
+<def f='MTProxy/crypto/aesni256.c' l='46' ll='87' type='void tg_ssl_aes_ctr_crypt(tg_aes_ctx_t * ctx, const unsigned char * in, unsigned char * out, int size, unsigned char * iv, unsigned long long offset)'/>
+<use f='MTProxy/crypto/aesni256.c' l='113' u='r'/>
+<use f='MTProxy/crypto/aesni256.c' l='113' u='r'/>

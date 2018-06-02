@@ -1,0 +1,14 @@
+<dec f='MTProxy/common/tl-parse.h' l='213' type='int tls_init_raw_msg(struct tl_out_state * tlio_out, struct process_id * pid, long long qid)'/>
+<def f='MTProxy/common/tl-parse.c' l='771' ll='784' type='int tls_init_raw_msg(struct tl_out_state * tlio_out, struct process_id * pid, long long qid)'/>
+<use f='MTProxy/common/tl-parse.c' l='923' u='c' c='tls_init'/>
+<doc f='MTProxy/common/tl-parse.c' l='762'>/*int tls_init_simple (struct tl_out_state *tlio_out, connection_job_t c) {
+  if (c) {
+    TL_OUT_PID = &amp;(RPCS_DATA(c)-&gt;remote_pid);
+  } else {
+    TL_OUT_PID = 0;
+  }
+  return __tl_store_init (tlio_out, job_incref (c), 0, tl_type_conn, &amp;tl_out_conn_simple_methods, (1 &lt;&lt; 27), 0);
+}*/</doc>
+<doc f='MTProxy/common/tl-parse.h' l='211'>//int tls_init_connection (struct tl_out_state *tlio_out, connection_job_t c, long long qid);
+//int tls_init_connection_keep_error (struct tl_out_state *tlio_out, connection_job_t c, long long qid);</doc>
+<use f='MTProxy/engine/engine-rpc.c' l='69' u='c' c='tl_aio_init_store'/>

@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/common-stats.h' l='68' type='int am_get_memory_stats(am_memory_stat_t * S, int flags)'/>
+<def f='MTProxy/common/common-stats.c' l='104' ll='167' type='int am_get_memory_stats(am_memory_stat_t * S, int flags)'/>
+<use f='MTProxy/common/common-stats.c' l='274' u='c' c='sb_memory'/>
+<use f='MTProxy/common/common-stats.c' l='282' u='c' c='sb_memory'/>

@@ -1,0 +1,7 @@
+<dec f='MTProxy/net/net-connections.h' l='155' type='int (*)(connection_job_t)'/>
+<offset>1216</offset>
+<doc f='MTProxy/net/net-connections.h' l='154'>// NET-NET METHODS</doc>
+<doc f='MTProxy/net/net-connections.h' l='155'>/* invoked when an event related to connection of this type occurs */</doc>
+<use f='MTProxy/net/net-connections.c' l='1149' u='r' c='do_socket_connection_job'/>
+<use f='MTProxy/net/net-connections.c' l='1483' u='r' c='check_conn_functions'/>
+<use f='MTProxy/net/net-connections.c' l='1484' u='w' c='check_conn_functions'/>

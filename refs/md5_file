@@ -1,0 +1,14 @@
+<dec f='MTProxy/common/md5.h' l='70' type='int md5_file(char * path, unsigned char * output)'/>
+<def f='MTProxy/common/md5.c' l='303' ll='330' type='int md5_file(char * path, unsigned char * output)'/>
+<doc f='MTProxy/common/md5.c' l='300'>/*
+ * output = MD5( file contents )
+ */</doc>
+<doc f='MTProxy/common/md5.h' l='61'>/**
+ * \brief          Output = MD5( file contents )
+ *
+ * \param path     input file name
+ * \param output   MD5 checksum result
+ *
+ * \return         0 if successful, 1 if fopen failed,
+ *                 or 2 if fread failed
+ */</doc>

@@ -1,0 +1,7 @@
+<dec f='MTProxy/net/net-tcp-rpc-server.h' l='37' type='int (*)(connection_job_t)'/>
+<offset>320</offset>
+<doc f='MTProxy/net/net-tcp-rpc-server.h' l='37'>/* 1 = allow unencrypted, 2 = allow encrypted */</doc>
+<use f='MTProxy/engine/engine-net.c' l='117' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='95' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='500' u='r' c='tcp_rpcs_init_accepted'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='501' u='r' c='tcp_rpcs_init_accepted'/>

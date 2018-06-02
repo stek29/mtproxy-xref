@@ -1,0 +1,14 @@
+<def f='MTProxy/net/net-events.h' l='62' ll='76'/>
+<size>64</size>
+<mbr r='event_descr::fd' o='0' t='int'/>
+<mbr r='event_descr::state' o='32' t='int'/>
+<mbr r='event_descr::ready' o='64' t='int'/>
+<mbr r='event_descr::epoll_state' o='96' t='int'/>
+<mbr r='event_descr::epoll_ready' o='128' t='int'/>
+<mbr r='event_descr::timeout' o='160' t='int'/>
+<mbr r='event_descr::priority' o='192' t='int'/>
+<mbr r='event_descr::in_queue' o='224' t='int'/>
+<mbr r='event_descr::timestamp' o='256' t='long long'/>
+<mbr r='event_descr::refcnt' o='320' t='long long'/>
+<mbr r='event_descr::work' o='384' t='event_handler_t'/>
+<mbr r='event_descr::data' o='448' t='void *'/>

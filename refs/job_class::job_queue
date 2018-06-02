@@ -1,0 +1,9 @@
+<dec f='MTProxy/jobs/jobs.h' l='215' type='struct mp_queue *'/>
+<offset>128</offset>
+<use f='MTProxy/jobs/jobs.c' l='436' u='r' c='create_job_thread_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='438' u='w' c='create_job_thread_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='444' u='r' c='create_job_thread_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='461' u='r' c='create_job_thread_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='530' u='w' c='init_async_jobs'/>
+<use f='MTProxy/jobs/jobs.c' l='709' u='r' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='731' u='r' c='unlock_job'/>

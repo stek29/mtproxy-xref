@@ -1,0 +1,16 @@
+<dec f='MTProxy/net/net-msg.h' l='76' type='struct msg_part * new_msg_part(struct msg_part * neighbor, struct msg_buffer * X)'/>
+<use f='MTProxy/net/net-connections.c' l='901' u='c' c='net_server_socket_reader'/>
+<use f='MTProxy/net/net-connections.c' l='914' u='c' c='net_server_socket_reader'/>
+<def f='MTProxy/net/net-msg.c' l='76' ll='86' type='struct msg_part * new_msg_part(struct msg_part * neighbor, struct msg_buffer * X)'/>
+<use f='MTProxy/net/net-msg.c' l='174' u='c' c='rwm_lock_first_part'/>
+<use f='MTProxy/net/net-msg.c' l='282' u='c' c='fork_message_chain'/>
+<use f='MTProxy/net/net-msg.c' l='380' u='c' c='rwm_push_data_ext'/>
+<use f='MTProxy/net/net-msg.c' l='454' u='c' c='rwm_push_data_ext'/>
+<use f='MTProxy/net/net-msg.c' l='521' u='c' c='rwm_push_data_front'/>
+<use f='MTProxy/net/net-msg.c' l='599' u='c' c='rwm_prepend_alloc'/>
+<use f='MTProxy/net/net-msg.c' l='642' u='c' c='rwm_postpone_alloc'/>
+<use f='MTProxy/net/net-msg.c' l='1246' u='c' c='rwm_process_encrypt_decrypt'/>
+<use f='MTProxy/net/net-msg.c' l='1276' u='c' c='rwm_process_encrypt_decrypt'/>
+<use f='MTProxy/net/net-msg.c' l='1308' u='c' c='rwm_process_encrypt_decrypt'/>
+<use f='MTProxy/net/net-msg.c' l='1356' u='c' c='rwm_encrypt_decrypt_to'/>
+<doc f='MTProxy/net/net-msg.c' l='76'>/* {{{ */</doc>

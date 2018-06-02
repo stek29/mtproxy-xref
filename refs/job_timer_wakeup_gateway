@@ -1,0 +1,4 @@
+<dec f='MTProxy/jobs/jobs.h' l='353' type='int job_timer_wakeup_gateway(event_timer_t * et)'/>
+<def f='MTProxy/jobs/jobs.c' l='1117' ll='1127' type='int job_timer_wakeup_gateway(event_timer_t * et)'/>
+<use f='MTProxy/jobs/jobs.c' l='1247' u='r' c='do_immediate_timer_insert'/>
+<use f='MTProxy/jobs/jobs.c' l='1373' u='r' c='job_timer_insert'/>

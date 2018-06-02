@@ -1,0 +1,2 @@
+<def f='MTProxy/net/net-connections.c' l='2121' ll='2123' type='void free_connection_tree_ptr(struct tree_connection * T)'/>
+<doc f='MTProxy/net/net-connections.c' l='2121'>/* {{{ */</doc>

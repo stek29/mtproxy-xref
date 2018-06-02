@@ -1,0 +1,2 @@
+<def f='MTProxy/engine/engine-rpc.c' l='117' ll='119' type='int tl_result_new_flags(int old_flags)'/>
+<use f='MTProxy/engine/engine-rpc.c' l='130' u='c' c='tl_result_make_header'/>

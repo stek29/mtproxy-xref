@@ -1,0 +1,36 @@
+<dec f='include/stdlib.h' l='543' type='void exit(int __status)'/>
+<doc f='include/stdlib.h' l='540'>/* Call all functions registered with `atexit&apos; and `on_exit&apos;,
+   in the reverse of the order in which they were registered,
+   perform stdio cleanup, and terminate program execution with STATUS.  */</doc>
+<use f='MTProxy/common/kprintf.c' l='139' u='c' c='kdb_write'/>
+<use f='MTProxy/common/kprintf.c' l='150' u='c' c='kdb_write'/>
+<use f='MTProxy/common/resolver.c' l='414' u='c' c='detect_hostname'/>
+<use f='MTProxy/common/resolver.c' l='419' u='c' c='detect_hostname'/>
+<use f='MTProxy/common/resolver.c' l='436' u='c' c='detect_hostname'/>
+<use f='MTProxy/common/resolver.c' l='444' u='c' c='detect_hostname'/>
+<use f='MTProxy/common/server-functions.c' l='245' u='c' c='usage'/>
+<use f='MTProxy/common/server-functions.c' l='254' u='c' c='parse_memory_limit'/>
+<use f='MTProxy/common/server-functions.c' l='265' u='c' c='parse_memory_limit'/>
+<use f='MTProxy/common/server-functions.c' l='594' u='c' c='builtin_parse_option'/>
+<use f='MTProxy/common/server-functions.c' l='598' u='c' c='builtin_parse_option'/>
+<use f='MTProxy/engine/engine-net.c' l='67' u='c' c='try_open_port'/>
+<use f='MTProxy/engine/engine-net.c' l='87' u='c' c='try_open_port_range'/>
+<use f='MTProxy/engine/engine-net.c' l='201' u='c' c='f_parse_option_net'/>
+<use f='MTProxy/engine/engine-net.c' l='210' u='c' c='f_parse_option_net'/>
+<use f='MTProxy/engine/engine.c' l='182' u='c' c='raise_file_limit'/>
+<use f='MTProxy/engine/engine.c' l='191' u='c' c='raise_file_limit'/>
+<use f='MTProxy/engine/engine.c' l='211' u='c' c='engine_init'/>
+<use f='MTProxy/engine/engine.c' l='216' u='c' c='engine_init'/>
+<use f='MTProxy/engine/engine.c' l='294' u='c' c='server_init'/>
+<use f='MTProxy/engine/engine.c' l='420' u='c' c='terminate_job_run'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='401' u='c' c='do_reload_config'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2012' u='c' c='check_children_status'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2020' u='c' c='check_children_status'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2026' u='c' c='check_children_status'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2096' u='c' c='usage'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2205' u='c' c='mtfront_parse_extra_args'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2219' u='c' c='mtfront_pre_init'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2230' u='c' c='mtfront_pre_init'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2267' u='c' c='mtfront_pre_start'/>
+<use f='MTProxy/net/net-connections.c' l='231' u='c' c='prealloc_tcp_buffers'/>
+<use f='MTProxy/net/net-events.c' l='346' u='c' c='epoll_runqueue'/>

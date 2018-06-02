@@ -1,0 +1,4 @@
+<def f='MTProxy/net/net-events.c' l='65' type='long long'/>
+<use f='MTProxy/net/net-events.c' l='366' u='w' c='epoll_fetch_events'/>
+<dec f='MTProxy/net/net-stats.c' l='91' type='long long'/>
+<use f='MTProxy/net/net-stats.c' l='137' u='r' c='prepare_stats'/>

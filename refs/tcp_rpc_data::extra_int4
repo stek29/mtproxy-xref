@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-tcp-rpc-common.h' l='138' type='int'/>
+<offset>608</offset>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1655' u='r' c='forward_mtproto_enc_packet'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1685' u='r' c='forward_mtproto_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='236' u='w' c='tcp_rpcs_compact_parse_execute'/>

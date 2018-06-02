@@ -1,0 +1,24 @@
+<dec f='MTProxy/net/net-tcp-rpc-common.h' l='127' type='struct process_id'/>
+<use f='MTProxy/common/tl-parse.c' l='788' u='a' c='tls_init_tcp_raw_msg'/>
+<use f='MTProxy/common/tl-parse.c' l='802' u='a' c='tls_init_tcp_raw_msg_unaligned'/>
+<offset>128</offset>
+<use f='MTProxy/engine/engine-rpc.c' l='841' u='a' c='default_tl_tcp_rpcs_execute'/>
+<use f='MTProxy/engine/engine-rpc.c' l='843' u='a' c='default_tl_tcp_rpcs_execute'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='118' u='r' c='rpc_target_insert_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='160' u='r' c='rpc_target_delete_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='241' u='a' c='check_connection'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='246' u='a' c='check_connection'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='270' u='a' c='check_connection_arr'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='250' u='m' c='tcp_rpcc_send_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='251' u='m' c='tcp_rpcc_send_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='252' u='m' c='tcp_rpcc_send_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='255' u='a' c='tcp_rpcc_send_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='299' u='a' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='301' u='m' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='301' u='m' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='301' u='m' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='301' u='m' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='306' u='m' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='308' u='a' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='245' u='a' c='tcp_rpcs_send_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='288' u='a' c='tcp_rpcs_process_handshake_packet'/>

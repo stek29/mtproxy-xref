@@ -1,0 +1,2 @@
+<def f='MTProxy/net/net-timers.c' l='41' macro='1' type='struct thread_callback'/>
+<use f='MTProxy/net/net-timers.c' l='41' macro='1' u='a'/>

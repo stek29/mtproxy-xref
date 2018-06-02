@@ -1,0 +1,4 @@
+<def f='MTProxy/net/net-connections.c' l='1897' ll='1938' type='int do_conn_target_job(job_t job, int op, struct job_thread * JT)'/>
+<use f='MTProxy/net/net-connections.c' l='1975' u='r' c='create_target'/>
+<doc f='MTProxy/net/net-connections.c' l='1895'>/*}}} */</doc>
+<doc f='MTProxy/net/net-connections.c' l='1897'>/* {{{ */</doc>

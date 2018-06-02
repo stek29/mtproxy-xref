@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-http-server.h' l='53' type='int'/>
+<offset>224</offset>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1457' u='r' c='hts_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='317' u='w' c='hts_parse_execute'/>

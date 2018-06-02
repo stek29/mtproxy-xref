@@ -1,0 +1,2 @@
+<dec f='include/asm-generic/errno.h' l='21'/>
+<use f='MTProxy/common/kprintf.c' l='133' u='c'/>

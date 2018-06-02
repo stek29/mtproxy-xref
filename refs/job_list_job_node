@@ -1,0 +1,5 @@
+<def f='MTProxy/jobs/jobs.c' l='1133' ll='1138'/>
+<size>32</size>
+<doc f='MTProxy/jobs/jobs.c' l='1129'>/* --------- JOB LIST JOBS --------
+   (enables several connections or jobs to wait for same job completion)
+*/</doc>

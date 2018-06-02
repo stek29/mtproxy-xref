@@ -1,0 +1,19 @@
+<dec f='MTProxy/engine/engine.h' l='124' type='unsigned long long'/>
+<use f='MTProxy/engine/engine.h' l='156' u='w' c='engine_enable_ipv6'/>
+<use f='MTProxy/engine/engine.h' l='157' u='w' c='engine_disable_ipv6'/>
+<use f='MTProxy/engine/engine.h' l='158' u='r' c='engine_check_ipv6_enabled'/>
+<use f='MTProxy/engine/engine.h' l='159' u='r' c='engine_check_ipv6_disabled'/>
+<use f='MTProxy/engine/engine.h' l='156' u='w' c='engine_enable_tcp'/>
+<use f='MTProxy/engine/engine.h' l='157' u='w' c='engine_disable_tcp'/>
+<use f='MTProxy/engine/engine.h' l='158' u='r' c='engine_check_tcp_enabled'/>
+<use f='MTProxy/engine/engine.h' l='159' u='r' c='engine_check_tcp_disabled'/>
+<use f='MTProxy/engine/engine.h' l='156' u='w' c='engine_enable_multithread'/>
+<use f='MTProxy/engine/engine.h' l='157' u='w' c='engine_disable_multithread'/>
+<use f='MTProxy/engine/engine.h' l='158' u='r' c='engine_check_multithread_enabled'/>
+<use f='MTProxy/engine/engine.h' l='159' u='r' c='engine_check_multithread_disabled'/>
+<use f='MTProxy/engine/engine.h' l='156' u='w' c='engine_enable_slave_mode'/>
+<use f='MTProxy/engine/engine.h' l='157' u='w' c='engine_disable_slave_mode'/>
+<use f='MTProxy/engine/engine.h' l='158' u='r' c='engine_check_slave_mode_enabled'/>
+<use f='MTProxy/engine/engine.h' l='159' u='r' c='engine_check_slave_mode_disabled'/>
+<offset>128</offset>
+<use f='MTProxy/engine/engine.c' l='569' u='w' c='engine_startup'/>

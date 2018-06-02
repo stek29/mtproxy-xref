@@ -1,0 +1,6 @@
+<dec f='include/pwd.h' l='54' type='__gid_t'/>
+<use f='MTProxy/common/server-functions.c' l='87' u='r' c='change_user_group'/>
+<use f='MTProxy/common/server-functions.c' l='128' u='r' c='change_user'/>
+<use f='MTProxy/common/server-functions.c' l='137' u='r' c='change_user'/>
+<offset>160</offset>
+<doc f='include/pwd.h' l='54'>/* Group ID.  */</doc>

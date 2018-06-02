@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/common-stats.h' l='30'/>
+<use f='MTProxy/common/common-stats.c' l='110' u='c'/>
+<use f='MTProxy/common/common-stats.c' l='274' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='589' u='c'/>

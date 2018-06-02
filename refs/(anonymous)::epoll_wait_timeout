@@ -1,0 +1,5 @@
+<dec f='MTProxy/engine/engine.h' l='121' type='int'/>
+<offset>64</offset>
+<use f='MTProxy/engine/engine.c' l='172' u='w' c='engine_set_epoll_wait_timeout'/>
+<use f='MTProxy/engine/engine.c' l='460' u='r' c='default_engine_server_start'/>
+<use f='MTProxy/engine/engine.c' l='580' u='w' c='engine_startup'/>

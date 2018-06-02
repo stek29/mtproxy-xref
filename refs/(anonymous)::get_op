@@ -1,0 +1,5 @@
+<dec f='MTProxy/engine/engine.h' l='104' type='int (*)(struct tl_in_state *)'/>
+<offset>1536</offset>
+<use f='MTProxy/engine/engine.c' l='555' u='r' c='check_server_functions'/>
+<use f='MTProxy/engine/engine.c' l='555' u='w' c='check_server_functions'/>
+<use f='MTProxy/engine/engine.c' l='644' u='r' c='default_main'/>

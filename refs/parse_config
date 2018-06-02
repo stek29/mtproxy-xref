@@ -1,0 +1,5 @@
+<def f='MTProxy/mtproto/mtproto-config.c' l='247' ll='352' type='int parse_config(struct mf_config * MC, int flags, int config_fd)'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='379' u='c' c='do_reload_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='396' u='c' c='do_reload_config'/>
+<doc f='MTProxy/mtproto/mtproto-config.c' l='245'>// flags = 0 -- syntax check only (first pass), flags = 1 -- create targets and points as well (second pass)
+// flags: +2 = allow proxies, +4 = allow proxies only, +16 = do not load file</doc>

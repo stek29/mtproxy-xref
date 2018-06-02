@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/server-functions.h' l='120'/>
+<doc f='MTProxy/common/server-functions.h' l='117'>//extern struct multicast_host multicast_hosts[];
+//extern int multicast_hosts_num;</doc>
+<use f='MTProxy/engine/engine.c' l='570' u='c'/>

@@ -1,0 +1,4 @@
+<dec f='include/string.h' l='408' type='char * strerror(int __errnum)'/>
+<doc f='include/string.h' l='407'>/* Return a string describing the meaning of the `errno&apos; code in ERRNUM.  */</doc>
+<use f='MTProxy/jobs/jobs.c' l='479' u='c' c='create_job_thread_ex'/>
+<use f='MTProxy/net/net-connections.c' l='1119' u='c' c='net_server_socket_read_write_gateway'/>

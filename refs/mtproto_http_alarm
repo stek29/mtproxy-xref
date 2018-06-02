@@ -1,0 +1,5 @@
+<dec f='MTProxy/mtproto/mtproto-proxy.c' l='994' type='int mtproto_http_alarm(connection_job_t C)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1001'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1001'/>
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='1523' ll='1541' type='int mtproto_http_alarm(connection_job_t C)'/>
+<doc f='MTProxy/mtproto/mtproto-proxy.c' l='1522'>// NET-CPU context</doc>

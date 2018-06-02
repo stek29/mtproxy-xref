@@ -1,0 +1,5 @@
+<dec f='MTProxy/jobs/jobs.h' l='174' type='int'/>
+<offset>192</offset>
+<doc f='MTProxy/jobs/jobs.h' l='174'>// align of real allocated pointer</doc>
+<use f='MTProxy/jobs/jobs.c' l='1089' u='w' c='create_async_job'/>
+<use f='MTProxy/jobs/jobs.c' l='1636' u='r' c='job_free'/>

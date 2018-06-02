@@ -1,0 +1,3 @@
+<dec f='include/x86_64-linux-gnu/bits/stat.h' l='95'/>
+<use f='MTProxy/common/resolver.c' l='273' u='c'/>
+<use f='MTProxy/common/resolver.c' l='284' u='c'/>

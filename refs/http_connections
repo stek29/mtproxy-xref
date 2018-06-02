@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-http-server.h' l='103' type='int'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='437' u='r' c='update_local_stats_copy'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='707' u='r' c='mtfront_prepare_stats'/>
+<def f='MTProxy/net/net-http-server.c' l='49' type='int'/>
+<use f='MTProxy/net/net-http-server.c' l='125' u='w' c='hts_init_accepted'/>
+<use f='MTProxy/net/net-http-server.c' l='130' u='w' c='hts_close_connection'/>

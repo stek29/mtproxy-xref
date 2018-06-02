@@ -1,0 +1,2 @@
+<dec f='MTProxy/net/net-connections.h' l='416' type='int get_cur_conn_generation()'/>
+<def f='MTProxy/net/net-connections.c' l='2135' ll='2137' type='int get_cur_conn_generation()'/>

@@ -1,0 +1,4 @@
+<dec f='include/netdb.h' l='105' type='int'/>
+<offset>160</offset>
+<doc f='include/netdb.h' l='105'>/* Length of address.  */</doc>
+<use f='MTProxy/common/resolver.c' l='96' u='w'/>

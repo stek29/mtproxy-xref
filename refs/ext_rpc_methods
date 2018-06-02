@@ -1,0 +1,2 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='1014' ll='1023' type='struct tcp_rpc_server_functions'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2060' u='a' c='mtfront_pre_loop'/>

@@ -1,0 +1,30 @@
+<dec f='MTProxy/net/net-msg-buffers.h' l='87' type='unsigned short [0]'/>
+<offset>0</offset>
+<use f='MTProxy/net/net-msg-buffers.c' l='254' u='w' c='alloc_new_msg_buffers_chunk'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='256' u='a' c='alloc_new_msg_buffers_chunk'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='259' u='w' c='alloc_new_msg_buffers_chunk'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='259' u='r' c='alloc_new_msg_buffers_chunk'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='259' u='r' c='alloc_new_msg_buffers_chunk'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='273' u='r' c='free_msg_buffers_chunk_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='313' u='r' c='free_msg_buffers_chunk'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='355' u='r' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='358' u='r' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='373' u='r' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='381' u='r' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='403' u='r' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='414' u='r' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='422' u='r' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='424' u='r' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='431' u='r' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='438' u='r' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='441' u='w' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='451' u='w' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='455' u='r' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='455' u='r' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='457' u='r' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='459' u='w' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='461' u='r' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='462' u='r' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='466' u='w' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='510' u='r' c='free_std_msg_buffer'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='512' u='w' c='free_std_msg_buffer'/>

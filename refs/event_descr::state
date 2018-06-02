@@ -1,0 +1,18 @@
+<dec f='MTProxy/net/net-events.h' l='64' type='int'/>
+<offset>32</offset>
+<doc f='MTProxy/net/net-events.h' l='64'>// actions that we should wait for (read/write/special) + status</doc>
+<use f='MTProxy/net/net-connections.c' l='1103' u='r' c='net_server_socket_read_write_gateway'/>
+<use f='MTProxy/net/net-connections.c' l='1107' u='r' c='net_server_socket_read_write_gateway'/>
+<use f='MTProxy/net/net-connections.c' l='1110' u='r' c='net_server_socket_read_write_gateway'/>
+<use f='MTProxy/net/net-connections.c' l='1237' u='r' c='net_accept_new_connections'/>
+<use f='MTProxy/net/net-events.c' l='255' u='r' c='epoll_insert'/>
+<use f='MTProxy/net/net-events.c' l='258' u='w' c='epoll_insert'/>
+<use f='MTProxy/net/net-events.c' l='258' u='r' c='epoll_insert'/>
+<use f='MTProxy/net/net-events.c' l='260' u='r' c='epoll_insert'/>
+<use f='MTProxy/net/net-events.c' l='266' u='r' c='epoll_insert'/>
+<use f='MTProxy/net/net-events.c' l='268' u='r' c='epoll_insert'/>
+<use f='MTProxy/net/net-events.c' l='269' u='r' c='epoll_insert'/>
+<use f='MTProxy/net/net-events.c' l='271' u='w' c='epoll_insert'/>
+<use f='MTProxy/net/net-events.c' l='281' u='r' c='epoll_remove'/>
+<use f='MTProxy/net/net-events.c' l='282' u='w' c='epoll_remove'/>
+<use f='MTProxy/net/net-events.c' l='339' u='r' c='epoll_runqueue'/>

@@ -1,0 +1,9 @@
+<dec f='MTProxy/net/net-msg.h' l='130' type='int rwm_dump(struct raw_message * raw)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1403' u='c' c='hts_execute'/>
+<def f='MTProxy/net/net-msg.c' l='892' ll='905' type='int rwm_dump(struct raw_message * raw)'/>
+<doc f='MTProxy/net/net-msg.c' l='890'>/* }}} */</doc>
+<doc f='MTProxy/net/net-msg.c' l='892'>/* {{{ */</doc>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='397' u='c' c='tcp_rpcc_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='330' u='c' c='tcp_rpcs_compact_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='386' u='c' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='401' u='c' c='tcp_rpcs_parse_execute'/>

@@ -1,0 +1,2 @@
+<dec f='MTProxy/jobs/jobs.h' l='426' type='long long jobs_get_allocated_memoty()'/>
+<def f='MTProxy/jobs/jobs.c' l='325' ll='327' type='long long jobs_get_allocated_memoty()'/>

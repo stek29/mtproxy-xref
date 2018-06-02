@@ -1,0 +1,8 @@
+<dec f='MTProxy/common/tl-parse.h' l='142' type='long long'/>
+<use f='MTProxy/common/tl-parse.c' l='641' u='w' c='tlf_query_header'/>
+<use f='MTProxy/common/tl-parse.c' l='645' u='w' c='tlf_query_header'/>
+<use f='MTProxy/common/tl-parse.c' l='842' u='r' c='tls_header'/>
+<use f='MTProxy/common/tl-parse.c' l='844' u='r' c='tls_header'/>
+<use f='MTProxy/common/tl-parse.c' l='846' u='r' c='tls_header'/>
+<offset>64</offset>
+<use f='MTProxy/engine/engine-rpc.c' l='338' u='r' c='fetch_all_queries'/>

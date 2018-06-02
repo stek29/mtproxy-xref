@@ -1,0 +1,14 @@
+<def f='MTProxy/common/tl-parse.h' l='120' ll='136'/>
+<size>96</size>
+<mbr r='tl_out_state::out_type' o='0' t='enum tl_type'/>
+<mbr r='tl_out_state::out_methods' o='64' t='const struct tl_out_methods *'/>
+<mbr r='tl_out_state::out' o='128' t='void *'/>
+<mbr r='tl_out_state::out_extra' o='192' t='void *'/>
+<mbr r='tl_out_state::out_pos' o='256' t='int'/>
+<mbr r='tl_out_state::out_remaining' o='288' t='int'/>
+<mbr r='tl_out_state::out_size' o='320' t='int *'/>
+<mbr r='tl_out_state::error' o='384' t='char *'/>
+<mbr r='tl_out_state::errnum' o='448' t='int'/>
+<mbr r='tl_out_state::out_qid' o='512' t='long long'/>
+<mbr r='tl_out_state::out_pid_buf' o='576' t='struct process_id'/>
+<mbr r='tl_out_state::out_pid' o='704' t='struct process_id *'/>

@@ -1,0 +1,8 @@
+<dec f='MTProxy/common/parse-config.h' l='24' type='int'/>
+<def f='MTProxy/common/parse-config.c' l='40' type='int'/>
+<use f='MTProxy/common/parse-config.c' l='49' u='w' c='cfg_skipspc'/>
+<use f='MTProxy/common/parse-config.c' l='155' u='r' c='syntax'/>
+<use f='MTProxy/common/parse-config.c' l='156' u='r' c='syntax'/>
+<use f='MTProxy/common/parse-config.c' l='172' u='r' c='syntax_warning'/>
+<use f='MTProxy/common/parse-config.c' l='173' u='r' c='syntax_warning'/>
+<use f='MTProxy/common/parse-config.c' l='236' u='w' c='reset_config'/>

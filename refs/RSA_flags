@@ -1,0 +1,1 @@
+<dec f='include/openssl/rsa.h' l='347' type='int RSA_flags(const RSA * r)'/>

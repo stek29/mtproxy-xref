@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>net-timers.h source code [MTProxy/net/net-timers.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="event_timer "/>
+<link rel="stylesheet" href="https://code.woboq.org/data//qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="https://code.woboq.org/data//kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery-ui.min.js"></script>
+<script>var file = 'MTProxy/net/net-timers.h'; var root_path = '../..'; var data_path = 'https://code.woboq.org/data/';</script>
+<script src='https://code.woboq.org/data//codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='..'>MTProxy</a>/<a href='./'>net</a>/<a href='net-timers.h.html'>net-timers.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>    This file is part of Mtproto-proxy Library.</i></td></tr>
+<tr><th id="3">3</th><td><i></i></td></tr>
+<tr><th id="4">4</th><td><i>    Mtproto-proxy Library is free software: you can redistribute it and/or modify</i></td></tr>
+<tr><th id="5">5</th><td><i>    it under the terms of the GNU Lesser General Public License as published by</i></td></tr>
+<tr><th id="6">6</th><td><i>    the Free Software Foundation, either version 2 of the License, or</i></td></tr>
+<tr><th id="7">7</th><td><i>    (at your option) any later version.</i></td></tr>
+<tr><th id="8">8</th><td><i></i></td></tr>
+<tr><th id="9">9</th><td><i>    Mtproto-proxy Library is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="10">10</th><td><i>    but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="11">11</th><td><i>    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</i></td></tr>
+<tr><th id="12">12</th><td><i>    GNU Lesser General Public License for more details.</i></td></tr>
+<tr><th id="13">13</th><td><i></i></td></tr>
+<tr><th id="14">14</th><td><i>    You should have received a copy of the GNU Lesser General Public License</i></td></tr>
+<tr><th id="15">15</th><td><i>    along with Mtproto-proxy Library.  If not, see &lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</i></td></tr>
+<tr><th id="16">16</th><td><i></i></td></tr>
+<tr><th id="17">17</th><td><i>    Copyright 2015-2016 Telegram Messenger Inc             </i></td></tr>
+<tr><th id="18">18</th><td><i>              2015-2016 Vitaly Valtman     </i></td></tr>
+<tr><th id="19">19</th><td><i>*/</i></td></tr>
+<tr><th id="20">20</th><td><u>#pragma once</u></td></tr>
+<tr><th id="21">21</th><td></td></tr>
+<tr><th id="22">22</th><td><u>#define	<dfn class="macro" id="_M/MAX_EVENT_TIMERS" data-ref="_M/MAX_EVENT_TIMERS">MAX_EVENT_TIMERS</dfn>	(1 &lt;&lt; 19)</u></td></tr>
+<tr><th id="23">23</th><td></td></tr>
+<tr><th id="24">24</th><td><b>typedef</b> <b>struct</b> <a class="type" href="#event_timer" title='event_timer' data-ref="event_timer">event_timer</a> <dfn class="typedef" id="event_timer_t" title='event_timer_t' data-type='struct event_timer' data-ref="event_timer_t">event_timer_t</dfn>;</td></tr>
+<tr><th id="25">25</th><td></td></tr>
+<tr><th id="26">26</th><td><b>struct</b> <dfn class="type def" id="event_timer" title='event_timer' data-ref="event_timer">event_timer</dfn> {</td></tr>
+<tr><th id="27">27</th><td>  <em>int</em> <dfn class="decl" id="event_timer::h_idx" title='event_timer::h_idx' data-ref="event_timer::h_idx">h_idx</dfn>;</td></tr>
+<tr><th id="28">28</th><td>  <em>int</em> <dfn class="decl" id="event_timer::flags" title='event_timer::flags' data-ref="event_timer::flags">flags</dfn>;</td></tr>
+<tr><th id="29">29</th><td>  <em>int</em> (*<dfn class="decl" id="event_timer::wakeup" title='event_timer::wakeup' data-ref="event_timer::wakeup">wakeup</dfn>)(<a class="typedef" href="#event_timer_t" title='event_timer_t' data-type='struct event_timer' data-ref="event_timer_t">event_timer_t</a> *<dfn class="local col3 decl" id="1833et" title='et' data-type='event_timer_t *' data-ref="1833et">et</dfn>);</td></tr>
+<tr><th id="30">30</th><td>  <em>double</em> <dfn class="decl" id="event_timer::wakeup_time" title='event_timer::wakeup_time' data-ref="event_timer::wakeup_time">wakeup_time</dfn>;</td></tr>
+<tr><th id="31">31</th><td>  <em>double</em> <dfn class="decl" id="event_timer::real_wakeup_time" title='event_timer::real_wakeup_time' data-ref="event_timer::real_wakeup_time">real_wakeup_time</dfn>;</td></tr>
+<tr><th id="32">32</th><td>};</td></tr>
+<tr><th id="33">33</th><td></td></tr>
+<tr><th id="34">34</th><td><em>int</em> <dfn class="decl" id="thread_run_timers" title='thread_run_timers' data-ref="thread_run_timers">thread_run_timers</dfn> (<em>void</em>);</td></tr>
+<tr><th id="35">35</th><td><em>double</em> <dfn class="decl" id="timers_get_first" title='timers_get_first' data-ref="timers_get_first">timers_get_first</dfn> (<em>void</em>);</td></tr>
+<tr><th id="36">36</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../common/common-stats.c.html'>MTProxy/common/common-stats.c</a><br/>Generated on <em>2018-Jun-02</em> from project MTProxy revision <em>842f343decf6c463bdecf1862e357c4a03e4bc97</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

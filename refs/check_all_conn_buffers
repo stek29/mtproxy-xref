@@ -1,0 +1,2 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='1882' ll='1900' type='void check_all_conn_buffers()'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2045' u='c' c='cron'/>

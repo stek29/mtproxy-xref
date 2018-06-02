@@ -1,0 +1,6 @@
+<dec f='MTProxy/engine/engine-net.h' l='32' type='int try_open_port_range(int start_port, int end_port, int mod_port, int rem_port, int quit_on_fail)'/>
+<def f='MTProxy/engine/engine-net.c' l='77' ll='90' type='int try_open_port_range(int start_port, int end_port, int mod_port, int rem_port, int quit_on_fail)'/>
+<use f='MTProxy/engine/engine-net.c' l='106' u='c' c='engine_do_open_port'/>
+<doc f='MTProxy/engine/engine-net.c' l='75'>/* }}} */</doc>
+<doc f='MTProxy/engine/engine-net.c' l='77'>/* {{{ */</doc>
+<use f='MTProxy/engine/engine.c' l='222' u='c' c='engine_init'/>

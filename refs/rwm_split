@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-msg.h' l='116' type='int rwm_split(struct raw_message * raw, struct raw_message * tail, int bytes)'/>
+<def f='MTProxy/net/net-msg.c' l='738' ll='793' type='int rwm_split(struct raw_message * raw, struct raw_message * tail, int bytes)'/>
+<use f='MTProxy/net/net-msg.c' l='799' u='c' c='rwm_split_head'/>
+<doc f='MTProxy/net/net-msg.c' l='736'>/* }}} */</doc>
+<doc f='MTProxy/net/net-msg.c' l='738'>/* {{{ */</doc>

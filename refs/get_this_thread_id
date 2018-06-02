@@ -1,0 +1,20 @@
+<dec f='MTProxy/common/mp-queue.h' l='109' type='int get_this_thread_id()'/>
+<doc f='MTProxy/common/mp-queue.h' l='108'>/* initialize this thread id and return it */</doc>
+<use f='MTProxy/common/mp-queue.c' l='62' macro='1' u='c'/>
+<def f='MTProxy/common/mp-queue.c' l='108' ll='117' type='int get_this_thread_id()'/>
+<use f='MTProxy/common/mp-queue.c' l='436' u='c' c='mpq_pop'/>
+<use f='MTProxy/common/mp-queue.c' l='485' u='c' c='mpq_is_empty'/>
+<use f='MTProxy/common/mp-queue.c' l='534' u='c' c='mpq_push'/>
+<use f='MTProxy/common/mp-queue.c' l='670' u='c' c='get_ptr_multithread_copy'/>
+<doc f='MTProxy/common/mp-queue.c' l='107'>/* initialize this thread id and return it */</doc>
+<use f='MTProxy/common/tl-parse.c' l='69' macro='1' u='c'/>
+<use f='MTProxy/jobs/jobs.c' l='79' macro='1' u='c'/>
+<use f='MTProxy/jobs/jobs.c' l='485' u='c' c='create_job_thread_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='891' u='c' c='job_thread_ex'/>
+<use f='MTProxy/net/net-connections.c' l='116' macro='1' u='c'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='58' macro='1' u='c'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='57' macro='1' u='c'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='51' macro='1' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='65' macro='1' u='c'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='77' macro='1' u='c'/>
+<use f='MTProxy/net/net-timers.c' l='41' macro='1' u='c'/>

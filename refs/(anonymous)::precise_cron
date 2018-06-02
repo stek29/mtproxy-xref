@@ -1,0 +1,5 @@
+<dec f='MTProxy/engine/engine.h' l='71' type='void (*)(void)'/>
+<offset>64</offset>
+<use f='MTProxy/engine/engine.c' l='365' u='r' c='do_precise_cron'/>
+<use f='MTProxy/engine/engine.c' l='366' u='r' c='do_precise_cron'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2291' u='w'/>

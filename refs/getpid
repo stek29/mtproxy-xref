@@ -1,0 +1,9 @@
+<dec f='include/unistd.h' l='631' type='__pid_t getpid()'/>
+<use f='MTProxy/common/common-stats.c' l='111' u='c' c='am_get_memory_stats'/>
+<doc f='include/unistd.h' l='630'>/* Get the process ID of the calling process.  */</doc>
+<use f='MTProxy/common/kprintf.c' l='194' u='c' c='kwrite'/>
+<use f='MTProxy/common/kprintf.c' l='257' u='c' c='kprintf'/>
+<use f='MTProxy/common/pid.c' l='41' u='c' c='init_common_PID'/>
+<use f='MTProxy/jobs/jobs.c' l='344' u='c' c='update_all_thread_stats'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2241' u='c' c='mtfront_pre_init'/>
+<use f='MTProxy/net/net-stats.c' l='110' u='c' c='prepare_stats'/>

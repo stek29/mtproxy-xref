@@ -1,0 +1,5 @@
+<def f='MTProxy/net/net-msg-buffers.c' l='51' macro='1' type='char *'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='54' macro='1' u='r'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='55' macro='1' u='r'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='56' macro='1' u='r'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='57' macro='1' u='r'/>

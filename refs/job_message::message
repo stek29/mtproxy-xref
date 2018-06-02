@@ -1,0 +1,10 @@
+<dec f='MTProxy/jobs/jobs.h' l='246' type='struct raw_message'/>
+<offset>256</offset>
+<use f='MTProxy/jobs/jobs.c' l='1461' u='m' c='job_message_queue_free'/>
+<use f='MTProxy/jobs/jobs.c' l='1462' u='a' c='job_message_queue_free'/>
+<use f='MTProxy/jobs/jobs.c' l='1473' u='m' c='job_message_queue_free'/>
+<use f='MTProxy/jobs/jobs.c' l='1474' u='a' c='job_message_queue_free'/>
+<use f='MTProxy/jobs/jobs.c' l='1494' u='m' c='job_message_free_default'/>
+<use f='MTProxy/jobs/jobs.c' l='1495' u='a' c='job_message_free_default'/>
+<use f='MTProxy/jobs/jobs.c' l='1511' u='a' c='job_message_send'/>
+<use f='MTProxy/jobs/jobs.c' l='1552' u='a' c='job_message_send_fake'/>

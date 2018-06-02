@@ -1,0 +1,5 @@
+<dec f='MTProxy/common/mp-queue.h' l='104' type='int'/>
+<def f='MTProxy/common/mp-queue.c' l='48' type='int'/>
+<use f='MTProxy/common/mp-queue.c' l='83' u='r' c='is_hazard_ptr'/>
+<use f='MTProxy/common/mp-queue.c' l='109' u='r' c='get_this_thread_id'/>
+<use f='MTProxy/common/mp-queue.c' l='116' u='w' c='get_this_thread_id'/>

@@ -1,0 +1,13 @@
+<def f='MTProxy/common/tl-parse.h' l='62' ll='74'/>
+<size>80</size>
+<mbr r='tl_in_methods::fetch_raw_data' o='0' t='void (*)(struct tl_in_state *, void *, int)'/>
+<mbr r='tl_in_methods::fetch_move' o='64' t='void (*)(struct tl_in_state *, int)'/>
+<mbr r='tl_in_methods::fetch_lookup' o='128' t='void (*)(struct tl_in_state *, void *, int)'/>
+<mbr r='tl_in_methods::fetch_clear' o='192' t='void (*)(struct tl_in_state *)'/>
+<mbr r='tl_in_methods::fetch_mark' o='256' t='void (*)(struct tl_in_state *)'/>
+<mbr r='tl_in_methods::fetch_mark_restore' o='320' t='void (*)(struct tl_in_state *)'/>
+<mbr r='tl_in_methods::fetch_mark_delete' o='384' t='void (*)(struct tl_in_state *)'/>
+<mbr r='tl_in_methods::fetch_raw_message' o='448' t='void (*)(struct tl_in_state *, struct raw_message *, int)'/>
+<mbr r='tl_in_methods::fetch_lookup_raw_message' o='512' t='void (*)(struct tl_in_state *, struct raw_message *, int)'/>
+<mbr r='tl_in_methods::flags' o='576' t='int'/>
+<mbr r='tl_in_methods::prepend_bytes' o='608' t='int'/>

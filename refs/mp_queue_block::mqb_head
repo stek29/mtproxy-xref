@@ -1,0 +1,7 @@
+<dec f='MTProxy/common/mp-queue.h' l='79' type='long'/>
+<offset>0</offset>
+<use f='MTProxy/common/mp-queue.c' l='261' u='r' c='mpq_fix_state'/>
+<use f='MTProxy/common/mp-queue.c' l='281' u='a' c='mpq_block_pop'/>
+<use f='MTProxy/common/mp-queue.c' l='349' u='r' c='mpq_block_push'/>
+<use f='MTProxy/common/mp-queue.c' l='361' u='r' c='mpq_block_push'/>
+<use f='MTProxy/common/mp-queue.c' l='497' u='r' c='mpq_is_empty'/>

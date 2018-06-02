@@ -1,0 +1,4 @@
+<dec f='MTProxy/mtproto/mtproto-proxy.c' l='765' type='int mtfront_client_ready(connection_job_t C)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='777'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='777'/>
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='945' ll='962' type='int mtfront_client_ready(connection_job_t C)'/>

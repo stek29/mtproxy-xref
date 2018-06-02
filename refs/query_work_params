@@ -1,0 +1,19 @@
+<def f='MTProxy/engine/engine-rpc.h' l='36' ll='55'/>
+<size>168</size>
+<mbr r='query_work_params::ev' o='0' t='struct event_timer'/>
+<mbr r='query_work_params::type' o='256' t='enum tl_type'/>
+<mbr r='query_work_params::pid' o='288' t='struct process_id'/>
+<mbr r='query_work_params::src' o='384' t='struct raw_message'/>
+<mbr r='query_work_params::h' o='640' t='struct tl_query_header *'/>
+<mbr r='query_work_params::result' o='704' t='struct raw_message *'/>
+<mbr r='query_work_params::error_code' o='768' t='int'/>
+<mbr r='query_work_params::answer_sent' o='800' t='int'/>
+<mbr r='query_work_params::wait_coord' o='832' t='int'/>
+<mbr r='query_work_params::error' o='896' t='char *'/>
+<mbr r='query_work_params::wait_pos' o='960' t='void *'/>
+<mbr r='query_work_params::P' o='1024' t='struct paramed_type *'/>
+<mbr r='query_work_params::start_rdtsc' o='1088' t='long long'/>
+<mbr r='query_work_params::total_work_rdtsc' o='1152' t='long long'/>
+<mbr r='query_work_params::all_list' o='1216' t='job_t'/>
+<mbr r='query_work_params::fd' o='1280' t='int'/>
+<mbr r='query_work_params::generation' o='1312' t='int'/>

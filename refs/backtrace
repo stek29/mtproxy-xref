@@ -1,0 +1,4 @@
+<dec f='include/execinfo.h' l='27' type='int backtrace(void ** __array, int __size)'/>
+<use f='MTProxy/common/server-functions.c' l='172' u='c' c='print_backtrace'/>
+<doc f='include/execinfo.h' l='25'>/* Store up to SIZE return address of the current program state in
+   ARRAY and return the exact number of values stored.  */</doc>

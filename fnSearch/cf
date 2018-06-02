@@ -1,0 +1,11 @@
+cfg_gethost|cfg_gethost
+cfg_gethost_ex|cfg_gethost_ex
+cfg_getint|cfg_getint
+cfg_getint_signed_zero|cfg_getint_signed_zero
+cfg_getint_zero|cfg_getint_zero
+cfg_getlex|cfg_getlex
+cfg_getstr|cfg_getstr
+cfg_getword|cfg_getword
+cfg_skipspc|cfg_skipspc
+cfg_skspc|cfg_skspc
+cfg_parse_server_port|cfg_parse_server_port

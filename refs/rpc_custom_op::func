@@ -1,0 +1,5 @@
+<dec f='MTProxy/engine/engine.h' l='54' type='void (*)(struct tl_in_state *, struct query_work_params *)'/>
+<offset>32</offset>
+<use f='MTProxy/engine/engine-rpc.c' l='109' u='w' c='register_custom_op_cb'/>
+<use f='MTProxy/engine/engine-rpc.c' l='204' u='r' c='__tl_query_act_custom'/>
+<use f='MTProxy/engine/engine.c' l='438' u='r' c='default_engine_server_start'/>

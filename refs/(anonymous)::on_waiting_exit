@@ -1,0 +1,5 @@
+<dec f='MTProxy/engine/engine.h' l='73' type='int (*)(void)'/>
+<offset>192</offset>
+<doc f='MTProxy/engine/engine.h' l='73'>//returns 0 -&gt; stop wait and exit, X &gt; 0 wait X microsenconds */</doc>
+<use f='MTProxy/engine/engine.c' l='462' u='r' c='default_engine_server_start'/>
+<use f='MTProxy/engine/engine.c' l='464' u='r' c='default_engine_server_start'/>

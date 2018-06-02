@@ -1,0 +1,2 @@
+<use f='MTProxy/net/net-connections.c' l='1736' u='c' c='create_new_connections'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='142' u='c' c='rpc_target_insert_conn'/>

@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-thread.h' l='28' type='void notification_event_insert_tcp_conn_close(connection_job_t C)'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='489' u='c' c='tcp_rpcc_close_connection'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='482' u='c' c='tcp_rpcs_close_connection'/>
+<def f='MTProxy/net/net-thread.c' l='116' ll='118' type='void notification_event_insert_tcp_conn_close(connection_job_t C)'/>

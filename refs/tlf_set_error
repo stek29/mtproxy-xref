@@ -1,0 +1,8 @@
+<dec f='MTProxy/common/tl-parse.h' l='195' type='int tlf_set_error(struct tl_in_state * tlio_in, int errnum, const char * s)'/>
+<use f='MTProxy/common/tl-parse.h' l='247' u='c' c='tlf_check'/>
+<use f='MTProxy/common/tl-parse.h' l='383' u='c' c='tlf_string_len'/>
+<use f='MTProxy/common/tl-parse.h' l='411' u='c' c='tlf_pad'/>
+<def f='MTProxy/common/tl-parse.c' l='548' ll='557' type='int tlf_set_error(struct tl_in_state * tlio_in, int errnum, const char * s)'/>
+<use f='MTProxy/common/tl-parse.c' l='623' macro='1' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='694' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1833' macro='1' u='c'/>

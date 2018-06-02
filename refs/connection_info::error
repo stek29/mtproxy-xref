@@ -1,0 +1,7 @@
+<dec f='MTProxy/net/net-connections.h' l='209' type='int'/>
+<offset>704</offset>
+<use f='MTProxy/net/net-connections.c' l='387' u='r' c='fail_connection'/>
+<use f='MTProxy/net/net-connections.c' l='388' u='w' c='fail_connection'/>
+<use f='MTProxy/net/net-connections.c' l='479' u='r' c='cpu_server_close_connection'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='236' u='r' c='check_connection'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='267' u='r' c='check_connection_arr'/>

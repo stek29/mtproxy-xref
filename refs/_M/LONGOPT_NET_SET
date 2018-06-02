@@ -1,0 +1,6 @@
+<dec f='MTProxy/common/server-functions.h' l='70'/>
+<use f='MTProxy/engine/engine-net.c' l='235' u='c'/>
+<use f='MTProxy/engine/engine-net.c' l='236' u='c'/>
+<use f='MTProxy/engine/engine-net.c' l='237' u='c'/>
+<use f='MTProxy/engine/engine-net.c' l='244' u='c'/>
+<use f='MTProxy/engine/engine-net.c' l='245' u='c'/>

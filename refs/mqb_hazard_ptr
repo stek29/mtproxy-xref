@@ -1,0 +1,10 @@
+<dec f='MTProxy/common/mp-queue.h' l='145' type='void *[256][16]'/>
+<def f='MTProxy/common/mp-queue.c' l='79' type='void *[256][16]'/>
+<use f='MTProxy/common/mp-queue.c' l='87' u='r' c='is_hazard_ptr'/>
+<use f='MTProxy/common/mp-queue.c' l='97' u='r' c='is_hazard_ptr'/>
+<use f='MTProxy/common/mp-queue.c' l='115' u='r' c='get_this_thread_id'/>
+<use f='MTProxy/common/mp-queue.c' l='436' u='a' c='mpq_pop'/>
+<use f='MTProxy/common/mp-queue.c' l='485' u='a' c='mpq_is_empty'/>
+<use f='MTProxy/common/mp-queue.c' l='534' u='r' c='mpq_push'/>
+<use f='MTProxy/common/mp-queue.c' l='670' u='a' c='get_ptr_multithread_copy'/>
+<doc f='MTProxy/common/mp-queue.c' l='77'>/* hazard pointers, one per thread */</doc>

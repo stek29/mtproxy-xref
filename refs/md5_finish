@@ -1,0 +1,15 @@
+<dec f='MTProxy/common/md5.h' l='47' type='void md5_finish(md5_context * ctx, unsigned char * output)'/>
+<def f='MTProxy/common/md5.c' l='250' ll='273' type='void md5_finish(md5_context * ctx, unsigned char * output)'/>
+<use f='MTProxy/common/md5.c' l='284' u='c' c='md5'/>
+<use f='MTProxy/common/md5.c' l='318' u='c' c='md5_file'/>
+<use f='MTProxy/common/md5.c' l='377' u='c' c='md5_hmac_finish'/>
+<use f='MTProxy/common/md5.c' l='381' u='c' c='md5_hmac_finish'/>
+<doc f='MTProxy/common/md5.c' l='247'>/*
+ * MD5 final digest
+ */</doc>
+<doc f='MTProxy/common/md5.h' l='41'>/**
+ * \brief          MD5 final digest
+ *
+ * \param ctx      MD5 context
+ * \param output   MD5 checksum result
+ */</doc>

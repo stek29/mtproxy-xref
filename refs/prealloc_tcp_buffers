@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-connections.c' l='215' type='int prealloc_tcp_buffers()'/>
+<def f='MTProxy/net/net-connections.c' l='223' ll='241' type='int prealloc_tcp_buffers()'/>
+<use f='MTProxy/net/net-connections.c' l='856' u='c' c='net_server_socket_reader'/>
+<doc f='MTProxy/net/net-connections.c' l='223'>/* {{{ */</doc>

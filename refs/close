@@ -1,0 +1,33 @@
+<dec f='include/unistd.h' l='356' type='int close(int __fd)'/>
+<use f='MTProxy/common/common-stats.c' l='57' u='c' c='read_whole_file'/>
+<doc f='include/unistd.h' l='352'>/* Close the file descriptor FD.
+
+   This function is a cancellation point and therefore not marked with
+   __THROW.  */</doc>
+<use f='MTProxy/common/kprintf.c' l='57' u='c' c='reopen_logs_ext'/>
+<use f='MTProxy/common/kprintf.c' l='64' u='c' c='reopen_logs_ext'/>
+<use f='MTProxy/common/parse-config.c' l='290' u='c' c='close_config'/>
+<use f='MTProxy/common/resolver.c' l='287' u='c' c='kdb_load_hosts_internal'/>
+<use f='MTProxy/common/resolver.c' l='294' u='c' c='kdb_load_hosts_internal'/>
+<use f='MTProxy/common/resolver.c' l='422' u='c' c='detect_hostname'/>
+<use f='MTProxy/engine/engine-net.c' l='45' u='c' c='default_close_network_sockets'/>
+<use f='MTProxy/engine/engine.c' l='131' u='c' c='create_main_thread_pipe'/>
+<use f='MTProxy/engine/engine.c' l='135' u='c' c='create_main_thread_pipe'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='382' u='c' c='do_reload_config'/>
+<use f='MTProxy/net/net-connections.c' l='450' u='c' c='cpu_server_free_connection'/>
+<use f='MTProxy/net/net-connections.c' l='603' u='c' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='617' u='c' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='770' u='c' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1265' u='c' c='net_accept_new_connections'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='155' u='c' c='aes_load_pwd_file'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='169' u='c' c='aes_load_pwd_file'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='189' u='c' c='aes_load_pwd_file'/>
+<use f='MTProxy/net/net-events.c' l='340' u='c' c='epoll_runqueue'/>
+<use f='MTProxy/net/net-events.c' l='461' u='c' c='new_socket'/>
+<use f='MTProxy/net/net-events.c' l='472' u='c' c='new_socket'/>
+<use f='MTProxy/net/net-events.c' l='603' u='c' c='server_socket'/>
+<use f='MTProxy/net/net-events.c' l='616' u='c' c='server_socket'/>
+<use f='MTProxy/net/net-events.c' l='622' u='c' c='server_socket'/>
+<use f='MTProxy/net/net-events.c' l='673' u='c' c='client_socket'/>
+<use f='MTProxy/net/net-events.c' l='687' u='c' c='client_socket'/>
+<use f='MTProxy/net/net-events.c' l='729' u='c' c='client_socket_ipv6'/>

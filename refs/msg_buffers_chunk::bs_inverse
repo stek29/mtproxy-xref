@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-msg-buffers.h' l='76' type='int'/>
+<offset>448</offset>
+<use f='MTProxy/net/net-msg-buffers.c' l='116' u='w' c='prepare_bs_inv'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='339' u='r' c='get_buffer_no'/>

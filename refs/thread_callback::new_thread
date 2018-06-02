@@ -1,0 +1,14 @@
+<dec f='MTProxy/jobs/jobs.h' l='404' type='void (*)(void)'/>
+<offset>64</offset>
+<use f='MTProxy/common/mp-queue.c' l='62' macro='1' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='69' macro='1' u='w'/>
+<use f='MTProxy/jobs/jobs.c' l='79' macro='1' u='w'/>
+<use f='MTProxy/jobs/jobs.c' l='898' u='r' c='job_thread_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='1433' u='r' c='register_thread_callback'/>
+<use f='MTProxy/net/net-connections.c' l='116' macro='1' u='w'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='58' macro='1' u='w'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='57' macro='1' u='w'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='51' macro='1' u='w'/>
+<use f='MTProxy/net/net-msg.c' l='65' macro='1' u='w'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='77' macro='1' u='w'/>
+<use f='MTProxy/net/net-timers.c' l='41' macro='1' u='w'/>

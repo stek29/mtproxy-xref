@@ -1,0 +1,4 @@
+<dec f='MTProxy/engine/engine-rpc.h' l='62' type='void tl_query_result_fun_set(tl_query_result_fun_t func, int query_type_id)'/>
+<doc f='MTProxy/engine/engine-rpc.h' l='59'>//extern void (*tl_stat_function)(struct tl_out_state *tlio_out);
+//extern int (*tl_get_op_function)(struct tl_in_state *tlio_in);</doc>
+<def f='MTProxy/engine/engine-rpc.c' l='162' ll='167' type='void tl_query_result_fun_set(tl_query_result_fun_t func, int query_type_id)'/>

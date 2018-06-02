@@ -1,0 +1,6 @@
+<dec f='MTProxy/vv/vv-tree.h' l='25' type='struct tree_any_ptr *'/>
+<use f='MTProxy/vv/vv-tree.h' l='32' u='r' c='tree_act_any'/>
+<use f='MTProxy/vv/vv-tree.h' l='39' u='r' c='tree_act_any_ex'/>
+<use f='MTProxy/vv/vv-tree.h' l='46' u='r' c='tree_act_any_ex2'/>
+<use f='MTProxy/vv/vv-tree.h' l='53' u='r' c='tree_act_any_ex3'/>
+<offset>0</offset>

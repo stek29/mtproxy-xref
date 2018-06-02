@@ -1,0 +1,7 @@
+<dec f='MTProxy/net/net-connections.h' l='137' type='int (*)(connection_job_t)'/>
+<offset>320</offset>
+<doc f='MTProxy/net/net-connections.h' l='137'>/* invoked from run() for writing data */</doc>
+<use f='MTProxy/net/net-connections.c' l='403' u='r' c='cpu_server_read_write'/>
+<use f='MTProxy/net/net-connections.c' l='1554' u='r' c='check_conn_functions'/>
+<use f='MTProxy/net/net-connections.c' l='1555' u='w' c='check_conn_functions'/>
+<use f='MTProxy/net/net-connections.c' l='1564' u='r' c='check_conn_functions'/>

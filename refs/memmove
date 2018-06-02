@@ -1,0 +1,8 @@
+<dec f='include/string.h' l='46' type='void * memmove(void * __dest, const void * __src, size_t __n)'/>
+<doc f='include/string.h' l='44'>/* Copy N bytes of SRC to DEST, guaranteeing
+   correct behavior for overlapping strings.  */</doc>
+<use f='MTProxy/common/server-functions.c' l='314' u='c' c='parse_option_up'/>
+<use f='MTProxy/common/server-functions.c' l='328' u='c' c='parse_option_down'/>
+<use f='MTProxy/common/server-functions.c' l='403' u='c' c='remove_parse_option_completely'/>
+<use f='MTProxy/common/server-functions.c' l='422' u='c' c='remove_parse_option'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1182' u='c' c='parse_text_ipv6'/>

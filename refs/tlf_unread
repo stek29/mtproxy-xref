@@ -1,0 +1,10 @@
+<def f='MTProxy/common/tl-parse.h' l='522' ll='524' type='int tlf_unread(struct tl_in_state * tlio_in)'/>
+<use f='MTProxy/common/tl-parse.c' l='615' macro='1' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='633' macro='1' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='661' macro='1' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='686' macro='1' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='731' macro='1' u='c'/>
+<doc f='MTProxy/common/tl-parse.h' l='522'>/* {{{ */</doc>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='807' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='817' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='818' macro='1' u='c'/>

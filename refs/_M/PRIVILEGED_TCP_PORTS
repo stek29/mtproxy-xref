@@ -1,0 +1,7 @@
+<dec f='MTProxy/net/net-events.h' l='107'/>
+<doc f='MTProxy/net/net-events.h' l='102'>//int insert_event_timer (event_timer_t *et);
+//int remove_event_timer (event_timer_t *et);
+//static inline int event_timer_active (event_timer_t *et) { return et-&gt;h_idx; }
+//static inline void event_timer_init (event_timer_t *et) { et-&gt;h_idx = 0;}</doc>
+<use f='MTProxy/engine/engine-net.c' l='100' u='c'/>
+<use f='MTProxy/engine/engine-net.c' l='105' u='c'/>

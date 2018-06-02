@@ -1,0 +1,12 @@
+<dec f='MTProxy/jobs/jobs.h' l='407' type='void register_thread_callback(struct thread_callback * cb)'/>
+<use f='MTProxy/common/mp-queue.c' l='62' macro='1' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='69' macro='1' u='c'/>
+<use f='MTProxy/jobs/jobs.c' l='79' macro='1' u='c'/>
+<def f='MTProxy/jobs/jobs.c' l='1429' ll='1434' type='void register_thread_callback(struct thread_callback * cb)'/>
+<use f='MTProxy/net/net-connections.c' l='116' macro='1' u='c'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='58' macro='1' u='c'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='57' macro='1' u='c'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='51' macro='1' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='65' macro='1' u='c'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='77' macro='1' u='c'/>
+<use f='MTProxy/net/net-timers.c' l='41' macro='1' u='c'/>

@@ -1,0 +1,373 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>net-tcp-rpc-ext-server.c source code [MTProxy/net/net-tcp-rpc-ext-server.c] - Woboq Code Browser</title>
+<link rel="stylesheet" href="https://code.woboq.org/data//qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="https://code.woboq.org/data//kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery-ui.min.js"></script>
+<script>var file = 'MTProxy/net/net-tcp-rpc-ext-server.c'; var root_path = '../..'; var data_path = 'https://code.woboq.org/data/';</script>
+<script src='https://code.woboq.org/data//codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='..'>MTProxy</a>/<a href='./'>net</a>/<a href='net-tcp-rpc-ext-server.c.html'>net-tcp-rpc-ext-server.c</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>    This file is part of Mtproto-proxy Library.</i></td></tr>
+<tr><th id="3">3</th><td><i></i></td></tr>
+<tr><th id="4">4</th><td><i>    Mtproto-proxy Library is free software: you can redistribute it and/or modify</i></td></tr>
+<tr><th id="5">5</th><td><i>    it under the terms of the GNU Lesser General Public License as published by</i></td></tr>
+<tr><th id="6">6</th><td><i>    the Free Software Foundation, either version 2 of the License, or</i></td></tr>
+<tr><th id="7">7</th><td><i>    (at your option) any later version.</i></td></tr>
+<tr><th id="8">8</th><td><i></i></td></tr>
+<tr><th id="9">9</th><td><i>    Mtproto-proxy Library is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="10">10</th><td><i>    but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="11">11</th><td><i>    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</i></td></tr>
+<tr><th id="12">12</th><td><i>    GNU Lesser General Public License for more details.</i></td></tr>
+<tr><th id="13">13</th><td><i></i></td></tr>
+<tr><th id="14">14</th><td><i>    You should have received a copy of the GNU Lesser General Public License</i></td></tr>
+<tr><th id="15">15</th><td><i>    along with Mtproto-proxy Library.  If not, see &lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</i></td></tr>
+<tr><th id="16">16</th><td><i></i></td></tr>
+<tr><th id="17">17</th><td><i>    Copyright 2010-2013 Vkontakte Ltd</i></td></tr>
+<tr><th id="18">18</th><td><i>              2010-2013 Nikolai Durov</i></td></tr>
+<tr><th id="19">19</th><td><i>              2010-2013 Andrey Lopatin</i></td></tr>
+<tr><th id="20">20</th><td><i>                   2013 Vitaliy Valtman</i></td></tr>
+<tr><th id="21">21</th><td><i>    </i></td></tr>
+<tr><th id="22">22</th><td><i>    Copyright 2014-2018 Telegram Messenger Inc                 </i></td></tr>
+<tr><th id="23">23</th><td><i>              2015-2016 Vitaly Valtman</i></td></tr>
+<tr><th id="24">24</th><td><i>                    2016-2018 Nikolai Durov</i></td></tr>
+<tr><th id="25">25</th><td><i>*/</i></td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td><u>#define        <dfn class="macro" id="_M/_FILE_OFFSET_BITS" data-ref="_M/_FILE_OFFSET_BITS">_FILE_OFFSET_BITS</dfn>        64</u></td></tr>
+<tr><th id="28">28</th><td></td></tr>
+<tr><th id="29">29</th><td><u>#include <a href="../../include/assert.h.html">&lt;assert.h&gt;</a></u></td></tr>
+<tr><th id="30">30</th><td><u>#include <a href="../../include/string.h.html">&lt;string.h&gt;</a></u></td></tr>
+<tr><th id="31">31</th><td><u>#include <a href="../../include/stdio.h.html">&lt;stdio.h&gt;</a></u></td></tr>
+<tr><th id="32">32</th><td><u>#include <a href="../../include/stdlib.h.html">&lt;stdlib.h&gt;</a></u></td></tr>
+<tr><th id="33">33</th><td><u>#include <a href="../../include/time.h.html">&lt;time.h&gt;</a></u></td></tr>
+<tr><th id="34">34</th><td><u>#include <a href="../../include/unistd.h.html">&lt;unistd.h&gt;</a></u></td></tr>
+<tr><th id="35">35</th><td></td></tr>
+<tr><th id="36">36</th><td><u>#include <a href="../common/crc32.h.html">"crc32.h"</a></u></td></tr>
+<tr><th id="37">37</th><td><u>#include <a href="../common/crc32c.h.html">"crc32c.h"</a></u></td></tr>
+<tr><th id="38">38</th><td><u>#include <a href="../common/sha256.h.html">"common/sha256.h"</a></u></td></tr>
+<tr><th id="39">39</th><td><u>#include <a href="net-events.h.html">"net/net-events.h"</a></u></td></tr>
+<tr><th id="40">40</th><td><u>#include <a href="../common/kprintf.h.html">"kprintf.h"</a></u></td></tr>
+<tr><th id="41">41</th><td><u>#include <a href="../common/precise-time.h.html">"precise-time.h"</a></u></td></tr>
+<tr><th id="42">42</th><td><u>#include <a href="net-connections.h.html">"net/net-connections.h"</a></u></td></tr>
+<tr><th id="43">43</th><td><u>#include <a href="net-tcp-rpc-ext-server.h.html">"net/net-tcp-rpc-ext-server.h"</a></u></td></tr>
+<tr><th id="44">44</th><td><u>#include <a href="net-tcp-connections.h.html">"net/net-tcp-connections.h"</a></u></td></tr>
+<tr><th id="45">45</th><td><u>#include <a href="net-thread.h.html">"net/net-thread.h"</a></u></td></tr>
+<tr><th id="46">46</th><td></td></tr>
+<tr><th id="47">47</th><td><u>#include <a href="../common/rpc-const.h.html">"rpc-const.h"</a></u></td></tr>
+<tr><th id="48">48</th><td></td></tr>
+<tr><th id="49">49</th><td><u>#include <a href="net-crypto-aes.h.html">"net/net-crypto-aes.h"</a></u></td></tr>
+<tr><th id="50">50</th><td><i>//#include "net/net-config.h"</i></td></tr>
+<tr><th id="51">51</th><td></td></tr>
+<tr><th id="52">52</th><td><u>#include <a href="../vv/vv-io.h.html">"vv/vv-io.h"</a></u></td></tr>
+<tr><th id="53">53</th><td><i>/*</i></td></tr>
+<tr><th id="54">54</th><td><i> *</i></td></tr>
+<tr><th id="55">55</th><td><i> *                EXTERNAL RPC SERVER INTERFACE</i></td></tr>
+<tr><th id="56">56</th><td><i> *</i></td></tr>
+<tr><th id="57">57</th><td><i> */</i></td></tr>
+<tr><th id="58">58</th><td></td></tr>
+<tr><th id="59">59</th><td><em>int</em> <a class="decl" href="#tcp_rpcs_compact_parse_execute" title='tcp_rpcs_compact_parse_execute' data-ref="tcp_rpcs_compact_parse_execute">tcp_rpcs_compact_parse_execute</a> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col1 decl" id="1c" title='c' data-type='connection_job_t' data-ref="1c">c</dfn>);</td></tr>
+<tr><th id="60">60</th><td></td></tr>
+<tr><th id="61">61</th><td><a class="typedef" href="net-connections.h.html#conn_type_t" title='conn_type_t' data-type='struct conn_functions' data-ref="conn_type_t">conn_type_t</a> <dfn class="decl def" id="ct_tcp_rpc_ext_server" title='ct_tcp_rpc_ext_server' data-ref="ct_tcp_rpc_ext_server">ct_tcp_rpc_ext_server</dfn> = {</td></tr>
+<tr><th id="62">62</th><td>  .<a class="ref" href="net-connections.h.html#conn_functions::magic" title='conn_functions::magic' data-ref="conn_functions::magic">magic</a> = <a class="macro" href="net-connections.h.html#128" title="0x11ef55aa" data-ref="_M/CONN_FUNC_MAGIC">CONN_FUNC_MAGIC</a>,</td></tr>
+<tr><th id="63">63</th><td>  .<a class="ref" href="net-connections.h.html#conn_functions::flags" title='conn_functions::flags' data-ref="conn_functions::flags">flags</a> = <a class="macro" href="net-connections.h.html#77" title="0x40000" data-ref="_M/C_RAWMSG">C_RAWMSG</a>,</td></tr>
+<tr><th id="64">64</th><td>  .<a class="ref" href="net-connections.h.html#conn_functions::title" title='conn_functions::title' data-ref="conn_functions::title">title</a> = <q>"rpc_ext_server"</q>,</td></tr>
+<tr><th id="65">65</th><td>  .<a class="ref" href="net-connections.h.html#conn_functions::init_accepted" title='conn_functions::init_accepted' data-ref="conn_functions::init_accepted">init_accepted</a> = <a class="ref" href="net-tcp-rpc-server.h.html#tcp_rpcs_init_accepted_nohs" title='tcp_rpcs_init_accepted_nohs' data-ref="tcp_rpcs_init_accepted_nohs">tcp_rpcs_init_accepted_nohs</a>,</td></tr>
+<tr><th id="66">66</th><td>  .<a class="ref" href="net-connections.h.html#conn_functions::parse_execute" title='conn_functions::parse_execute' data-ref="conn_functions::parse_execute">parse_execute</a> = <a class="ref" href="#tcp_rpcs_compact_parse_execute" title='tcp_rpcs_compact_parse_execute' data-ref="tcp_rpcs_compact_parse_execute">tcp_rpcs_compact_parse_execute</a>,</td></tr>
+<tr><th id="67">67</th><td>  .<a class="ref" href="net-connections.h.html#conn_functions::close" title='conn_functions::close' data-ref="conn_functions::close">close</a> = <a class="ref" href="net-tcp-rpc-server.h.html#tcp_rpcs_close_connection" title='tcp_rpcs_close_connection' data-ref="tcp_rpcs_close_connection">tcp_rpcs_close_connection</a>,</td></tr>
+<tr><th id="68">68</th><td>  .<a class="ref" href="net-connections.h.html#conn_functions::flush" title='conn_functions::flush' data-ref="conn_functions::flush">flush</a> = <a class="ref" href="net-tcp-rpc-common.h.html#tcp_rpc_flush" title='tcp_rpc_flush' data-ref="tcp_rpc_flush">tcp_rpc_flush</a>,</td></tr>
+<tr><th id="69">69</th><td>  .<a class="ref" href="net-connections.h.html#conn_functions::write_packet" title='conn_functions::write_packet' data-ref="conn_functions::write_packet">write_packet</a> = <a class="ref" href="net-tcp-rpc-common.h.html#tcp_rpc_write_packet_compact" title='tcp_rpc_write_packet_compact' data-ref="tcp_rpc_write_packet_compact">tcp_rpc_write_packet_compact</a>,</td></tr>
+<tr><th id="70">70</th><td>  .<a class="ref" href="net-connections.h.html#conn_functions::connected" title='conn_functions::connected' data-ref="conn_functions::connected">connected</a> = <a class="ref" href="net-connections.h.html#server_failed" title='server_failed' data-ref="server_failed">server_failed</a>,</td></tr>
+<tr><th id="71">71</th><td>  .<a class="ref" href="net-connections.h.html#conn_functions::wakeup" title='conn_functions::wakeup' data-ref="conn_functions::wakeup">wakeup</a> = <a class="ref" href="net-tcp-rpc-server.h.html#tcp_rpcs_wakeup" title='tcp_rpcs_wakeup' data-ref="tcp_rpcs_wakeup">tcp_rpcs_wakeup</a>,</td></tr>
+<tr><th id="72">72</th><td>  .<a class="ref" href="net-connections.h.html#conn_functions::alarm" title='conn_functions::alarm' data-ref="conn_functions::alarm">alarm</a> = <a class="ref" href="net-tcp-rpc-server.h.html#tcp_rpcs_alarm" title='tcp_rpcs_alarm' data-ref="tcp_rpcs_alarm">tcp_rpcs_alarm</a>,</td></tr>
+<tr><th id="73">73</th><td>  .<a class="ref" href="net-connections.h.html#conn_functions::crypto_init" title='conn_functions::crypto_init' data-ref="conn_functions::crypto_init">crypto_init</a> = <a class="ref" href="net-crypto-aes.h.html#aes_crypto_ctr128_init" title='aes_crypto_ctr128_init' data-ref="aes_crypto_ctr128_init">aes_crypto_ctr128_init</a>,</td></tr>
+<tr><th id="74">74</th><td>  .<a class="ref" href="net-connections.h.html#conn_functions::crypto_free" title='conn_functions::crypto_free' data-ref="conn_functions::crypto_free">crypto_free</a> = <a class="ref" href="net-crypto-aes.h.html#aes_crypto_free" title='aes_crypto_free' data-ref="aes_crypto_free">aes_crypto_free</a>,</td></tr>
+<tr><th id="75">75</th><td>  .<a class="ref" href="net-connections.h.html#conn_functions::crypto_encrypt_output" title='conn_functions::crypto_encrypt_output' data-ref="conn_functions::crypto_encrypt_output">crypto_encrypt_output</a> = <a class="ref" href="net-tcp-connections.h.html#cpu_tcp_aes_crypto_ctr128_encrypt_output" title='cpu_tcp_aes_crypto_ctr128_encrypt_output' data-ref="cpu_tcp_aes_crypto_ctr128_encrypt_output">cpu_tcp_aes_crypto_ctr128_encrypt_output</a>,</td></tr>
+<tr><th id="76">76</th><td>  .<a class="ref" href="net-connections.h.html#conn_functions::crypto_decrypt_input" title='conn_functions::crypto_decrypt_input' data-ref="conn_functions::crypto_decrypt_input">crypto_decrypt_input</a> = <a class="ref" href="net-tcp-connections.h.html#cpu_tcp_aes_crypto_ctr128_decrypt_input" title='cpu_tcp_aes_crypto_ctr128_decrypt_input' data-ref="cpu_tcp_aes_crypto_ctr128_decrypt_input">cpu_tcp_aes_crypto_ctr128_decrypt_input</a>,</td></tr>
+<tr><th id="77">77</th><td>  .<a class="ref" href="net-connections.h.html#conn_functions::crypto_needed_output_bytes" title='conn_functions::crypto_needed_output_bytes' data-ref="conn_functions::crypto_needed_output_bytes">crypto_needed_output_bytes</a> = <a class="ref" href="net-tcp-connections.h.html#cpu_tcp_aes_crypto_ctr128_needed_output_bytes" title='cpu_tcp_aes_crypto_ctr128_needed_output_bytes' data-ref="cpu_tcp_aes_crypto_ctr128_needed_output_bytes">cpu_tcp_aes_crypto_ctr128_needed_output_bytes</a>,</td></tr>
+<tr><th id="78">78</th><td>};</td></tr>
+<tr><th id="79">79</th><td></td></tr>
+<tr><th id="80">80</th><td><em>int</em> <dfn class="decl" id="tcp_rpcs_default_execute" title='tcp_rpcs_default_execute' data-ref="tcp_rpcs_default_execute">tcp_rpcs_default_execute</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col2 decl" id="2c" title='c' data-type='connection_job_t' data-ref="2c">c</dfn>, <em>int</em> <dfn class="local col3 decl" id="3op" title='op' data-type='int' data-ref="3op">op</dfn>, <b>struct</b> <a class="type" href="net-msg.h.html#raw_message" title='raw_message' data-ref="raw_message">raw_message</a> *<dfn class="local col4 decl" id="4msg" title='msg' data-type='struct raw_message *' data-ref="4msg">msg</dfn>);</td></tr>
+<tr><th id="81">81</th><td></td></tr>
+<tr><th id="82">82</th><td><em>static</em> <em>unsigned</em> <em>char</em> <dfn class="tu decl def" id="ext_secret" title='ext_secret' data-type='unsigned char [16][16]' data-ref="ext_secret">ext_secret</dfn>[<var>16</var>][<var>16</var>];</td></tr>
+<tr><th id="83">83</th><td><em>static</em> <em>int</em> <dfn class="tu decl def" id="ext_secret_cnt" title='ext_secret_cnt' data-type='int' data-ref="ext_secret_cnt">ext_secret_cnt</dfn> = <var>0</var>;</td></tr>
+<tr><th id="84">84</th><td></td></tr>
+<tr><th id="85">85</th><td><em>void</em> <dfn class="decl def" id="tcp_rpcs_set_ext_secret" title='tcp_rpcs_set_ext_secret' data-ref="tcp_rpcs_set_ext_secret">tcp_rpcs_set_ext_secret</dfn>(<em>unsigned</em> <em>char</em> <dfn class="local col5 decl" id="5secret" title='secret' data-type='unsigned char *' data-ref="5secret">secret</dfn>[<var>16</var>]) {</td></tr>
+<tr><th id="86">86</th><td>  <a class="macro" href="../../include/assert.h.html#88" title="((ext_secret_cnt &lt; 16) ? (void) (0) : __assert_fail (&quot;ext_secret_cnt &lt; 16&quot;, &quot;/home/parallels/MTProxy/net/net-tcp-rpc-ext-server.c&quot;, 86, __PRETTY_FUNCTION__))" data-ref="_M/assert">assert</a> (<a class="tu ref" href="#ext_secret_cnt" title='ext_secret_cnt' data-use='r' data-ref="ext_secret_cnt">ext_secret_cnt</a> &lt; <var>16</var>);</td></tr>
+<tr><th id="87">87</th><td>  <a class="ref" href="../../include/string.h.html#memcpy" title='memcpy' data-ref="memcpy">memcpy</a> (<a class="tu ref" href="#ext_secret" title='ext_secret' data-use='r' data-ref="ext_secret">ext_secret</a>[<a class="tu ref" href="#ext_secret_cnt" title='ext_secret_cnt' data-use='w' data-ref="ext_secret_cnt">ext_secret_cnt</a> ++], <a class="local col5 ref" href="#5secret" title='secret' data-ref="5secret">secret</a>, <var>16</var>);</td></tr>
+<tr><th id="88">88</th><td>}</td></tr>
+<tr><th id="89">89</th><td></td></tr>
+<tr><th id="90">90</th><td><i>/*</i></td></tr>
+<tr><th id="91">91</th><td><i>struct tcp_rpc_server_functions default_tcp_rpc_ext_server = {</i></td></tr>
+<tr><th id="92">92</th><td><i>  .execute = tcp_rpcs_default_execute,</i></td></tr>
+<tr><th id="93">93</th><td><i>  .check_ready = server_check_ready,</i></td></tr>
+<tr><th id="94">94</th><td><i>  .flush_packet = tcp_rpc_flush_packet,</i></td></tr>
+<tr><th id="95">95</th><td><i>  .rpc_wakeup = tcp_rpcs_do_wakeup,</i></td></tr>
+<tr><th id="96">96</th><td><i>  .rpc_alarm = tcp_rpcs_do_wakeup,</i></td></tr>
+<tr><th id="97">97</th><td><i>  .rpc_check_perm = tcp_rpcs_default_check_perm,</i></td></tr>
+<tr><th id="98">98</th><td><i>  .rpc_init_crypto = tcp_rpcs_init_crypto,</i></td></tr>
+<tr><th id="99">99</th><td><i>  .rpc_ready = server_noop,</i></td></tr>
+<tr><th id="100">100</th><td><i>};</i></td></tr>
+<tr><th id="101">101</th><td><i>*/</i></td></tr>
+<tr><th id="102">102</th><td></td></tr>
+<tr><th id="103">103</th><td><em>int</em> <dfn class="decl def" id="tcp_rpcs_compact_parse_execute" title='tcp_rpcs_compact_parse_execute' data-ref="tcp_rpcs_compact_parse_execute">tcp_rpcs_compact_parse_execute</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col6 decl" id="6C" title='C' data-type='connection_job_t' data-ref="6C">C</dfn>) {</td></tr>
+<tr><th id="104">104</th><td>  <b>struct</b> <a class="type" href="net-tcp-rpc-common.h.html#tcp_rpc_data" title='tcp_rpc_data' data-ref="tcp_rpc_data">tcp_rpc_data</a> *<dfn class="local col7 decl" id="7D" title='D' data-type='struct tcp_rpc_data *' data-ref="7D">D</dfn> = <a class="macro" href="net-tcp-rpc-common.h.html#159" title="((struct tcp_rpc_data *) (((struct connection_info *)((C)-&gt;j_custom))-&gt;custom_data))" data-ref="_M/TCP_RPC_DATA">TCP_RPC_DATA</a> (<a class="local col6 ref" href="#6C" title='C' data-ref="6C">C</a>);</td></tr>
+<tr><th id="105">105</th><td>  <b>if</b> (<a class="local col7 ref" href="#7D" title='D' data-ref="7D">D</a>-&gt;<a class="ref" href="net-tcp-rpc-common.h.html#tcp_rpc_data::crypto_flags" title='tcp_rpc_data::crypto_flags' data-ref="tcp_rpc_data::crypto_flags">crypto_flags</a> &amp; <a class="macro" href="net-tcp-rpc-common.h.html#104" title="1024" data-ref="_M/RPCF_COMPACT_OFF">RPCF_COMPACT_OFF</a>) {</td></tr>
+<tr><th id="106">106</th><td>    <b>return</b> <a class="ref" href="net-tcp-rpc-server.h.html#tcp_rpcs_parse_execute" title='tcp_rpcs_parse_execute' data-ref="tcp_rpcs_parse_execute">tcp_rpcs_parse_execute</a> (<a class="local col6 ref" href="#6C" title='C' data-ref="6C">C</a>);</td></tr>
+<tr><th id="107">107</th><td>  }</td></tr>
+<tr><th id="108">108</th><td></td></tr>
+<tr><th id="109">109</th><td>  <b>struct</b> <a class="type" href="net-connections.h.html#connection_info" title='connection_info' data-ref="connection_info">connection_info</a> *<dfn class="local col8 decl" id="8c" title='c' data-type='struct connection_info *' data-ref="8c">c</dfn> = <a class="macro" href="net-connections.h.html#307" title="((struct connection_info *)((C)-&gt;j_custom))" data-ref="_M/CONN_INFO">CONN_INFO</a> (<a class="local col6 ref" href="#6C" title='C' data-ref="6C">C</a>);</td></tr>
+<tr><th id="110">110</th><td>  <em>int</em> <dfn class="local col9 decl" id="9len" title='len' data-type='int' data-ref="9len">len</dfn>;</td></tr>
+<tr><th id="111">111</th><td></td></tr>
+<tr><th id="112">112</th><td>  <a class="macro" href="../common/kprintf.h.html#48" title="do { if ((4) &gt; verbosity) { break; } kprintf ((&quot;%s. in_total_bytes = %d\n&quot;), __func__, c-&gt;in.total_bytes); } while (0)" data-ref="_M/vkprintf">vkprintf</a> (<var>4</var>, <q>"%s. in_total_bytes = %d\n"</q>, <b>__func__</b>, <a class="local col8 ref" href="#8c" title='c' data-ref="8c">c</a>-&gt;<a class="ref" href="net-connections.h.html#connection_info::in" title='connection_info::in' data-ref="connection_info::in">in</a>.<a class="ref" href="net-msg.h.html#raw_message::total_bytes" title='raw_message::total_bytes' data-ref="raw_message::total_bytes">total_bytes</a>);  </td></tr>
+<tr><th id="113">113</th><td></td></tr>
+<tr><th id="114">114</th><td>  <b>while</b> (<var>1</var>) {</td></tr>
+<tr><th id="115">115</th><td>    <b>if</b> (<a class="local col8 ref" href="#8c" title='c' data-ref="8c">c</a>-&gt;<a class="ref" href="net-connections.h.html#connection_info::flags" title='connection_info::flags' data-ref="connection_info::flags">flags</a> &amp; <a class="macro" href="net-connections.h.html#61" title="8" data-ref="_M/C_ERROR">C_ERROR</a>) {</td></tr>
+<tr><th id="116">116</th><td>      <b>return</b> <a class="macro" href="net-connections.h.html#52" title="(~(-1 &lt;&lt; 31))" data-ref="_M/NEED_MORE_BYTES">NEED_MORE_BYTES</a>;</td></tr>
+<tr><th id="117">117</th><td>    }</td></tr>
+<tr><th id="118">118</th><td>    <b>if</b> (<a class="local col8 ref" href="#8c" title='c' data-ref="8c">c</a>-&gt;<a class="ref" href="net-connections.h.html#connection_info::flags" title='connection_info::flags' data-ref="connection_info::flags">flags</a> &amp; <a class="macro" href="net-connections.h.html#81" title="0x400000" data-ref="_M/C_STOPPARSE">C_STOPPARSE</a>) {</td></tr>
+<tr><th id="119">119</th><td>      <b>return</b> <a class="macro" href="net-connections.h.html#52" title="(~(-1 &lt;&lt; 31))" data-ref="_M/NEED_MORE_BYTES">NEED_MORE_BYTES</a>;</td></tr>
+<tr><th id="120">120</th><td>    }</td></tr>
+<tr><th id="121">121</th><td>    <a class="local col9 ref" href="#9len" title='len' data-ref="9len">len</a> = <a class="local col8 ref" href="#8c" title='c' data-ref="8c">c</a>-&gt;<a class="ref" href="net-connections.h.html#connection_info::in" title='connection_info::in' data-ref="connection_info::in">in</a>.<a class="ref" href="net-msg.h.html#raw_message::total_bytes" title='raw_message::total_bytes' data-ref="raw_message::total_bytes">total_bytes</a>; </td></tr>
+<tr><th id="122">122</th><td>    <b>if</b> (<a class="local col9 ref" href="#9len" title='len' data-ref="9len">len</a> &lt;= <var>0</var>) {</td></tr>
+<tr><th id="123">123</th><td>      <b>return</b> <a class="macro" href="net-connections.h.html#52" title="(~(-1 &lt;&lt; 31))" data-ref="_M/NEED_MORE_BYTES">NEED_MORE_BYTES</a>;</td></tr>
+<tr><th id="124">124</th><td>    }</td></tr>
+<tr><th id="125">125</th><td></td></tr>
+<tr><th id="126">126</th><td>    <em>int</em> <dfn class="local col0 decl" id="10min_len" title='min_len' data-type='int' data-ref="10min_len">min_len</dfn> = (<a class="local col7 ref" href="#7D" title='D' data-ref="7D">D</a>-&gt;<a class="ref" href="net-tcp-rpc-common.h.html#tcp_rpc_data::flags" title='tcp_rpc_data::flags' data-ref="tcp_rpc_data::flags">flags</a> &amp; <a class="macro" href="net-tcp-rpc-common.h.html#109" title="0x20000000" data-ref="_M/RPC_F_MEDIUM">RPC_F_MEDIUM</a>) ? <var>4</var> : <var>1</var>;</td></tr>
+<tr><th id="127">127</th><td></td></tr>
+<tr><th id="128">128</th><td>    <b>if</b> (<a class="local col9 ref" href="#9len" title='len' data-ref="9len">len</a> &lt; <a class="local col0 ref" href="#10min_len" title='min_len' data-ref="10min_len">min_len</a> + <var>8</var>) {</td></tr>
+<tr><th id="129">129</th><td>      <b>return</b> <a class="local col0 ref" href="#10min_len" title='min_len' data-ref="10min_len">min_len</a> + <var>8</var> - <a class="local col9 ref" href="#9len" title='len' data-ref="9len">len</a>;</td></tr>
+<tr><th id="130">130</th><td>    }</td></tr>
+<tr><th id="131">131</th><td></td></tr>
+<tr><th id="132">132</th><td>    <em>int</em> <dfn class="local col1 decl" id="11packet_len" title='packet_len' data-type='int' data-ref="11packet_len">packet_len</dfn> = <var>0</var>;</td></tr>
+<tr><th id="133">133</th><td>    <a class="macro" href="../../include/assert.h.html#88" title="((rwm_fetch_lookup (&amp;c-&gt;in, &amp;packet_len, 4) == 4) ? (void) (0) : __assert_fail (&quot;rwm_fetch_lookup (&amp;c-&gt;in, &amp;packet_len, 4) == 4&quot;, &quot;/home/parallels/MTProxy/net/net-tcp-rpc-ext-server.c&quot;, 133, __PRETTY_FUNCTION__))" data-ref="_M/assert">assert</a> (<a class="ref" href="net-msg.h.html#rwm_fetch_lookup" title='rwm_fetch_lookup' data-ref="rwm_fetch_lookup">rwm_fetch_lookup</a> (&amp;<a class="local col8 ref" href="#8c" title='c' data-ref="8c">c</a>-&gt;<a class="ref" href="net-connections.h.html#connection_info::in" title='connection_info::in' data-ref="connection_info::in">in</a>, &amp;<a class="local col1 ref" href="#11packet_len" title='packet_len' data-ref="11packet_len">packet_len</a>, <var>4</var>) == <var>4</var>);</td></tr>
+<tr><th id="134">134</th><td></td></tr>
+<tr><th id="135">135</th><td>    <b>if</b> (<a class="local col7 ref" href="#7D" title='D' data-ref="7D">D</a>-&gt;<a class="ref" href="net-tcp-rpc-common.h.html#tcp_rpc_data::in_packet_num" title='tcp_rpc_data::in_packet_num' data-ref="tcp_rpc_data::in_packet_num">in_packet_num</a> == -<var>3</var>) {</td></tr>
+<tr><th id="136">136</th><td>      <a class="macro" href="../common/kprintf.h.html#48" title="do { if ((1) &gt; verbosity) { break; } kprintf ((&quot;trying to determine connection type\n&quot;)); } while (0)" data-ref="_M/vkprintf">vkprintf</a> (<var>1</var>, <q>"trying to determine connection type\n"</q>);</td></tr>
+<tr><th id="137">137</th><td><u>#<span data-ppcond="137">if</span> <a class="macro" href="net-tcp-rpc-ext-server.h.html#23" title="0" data-ref="_M/__ALLOW_UNOBFS__">__ALLOW_UNOBFS__</a></u></td></tr>
+<tr><th id="138">138</th><td>      <b>if</b> ((packet_len &amp; <var>0xff</var>) == <var>0xef</var>) {</td></tr>
+<tr><th id="139">139</th><td>        D-&gt;flags |= RPC_F_COMPACT;</td></tr>
+<tr><th id="140">140</th><td>        assert (rwm_skip_data (&amp;c-&gt;in, <var>1</var>) == <var>1</var>);</td></tr>
+<tr><th id="141">141</th><td>        D-&gt;in_packet_num = <var>0</var>;</td></tr>
+<tr><th id="142">142</th><td>        vkprintf (<var>1</var>, <q>"Short type\n"</q>);</td></tr>
+<tr><th id="143">143</th><td>        <b>continue</b>;</td></tr>
+<tr><th id="144">144</th><td>      } </td></tr>
+<tr><th id="145">145</th><td>      <b>if</b> (packet_len == <var>0xeeeeeeee</var>) {</td></tr>
+<tr><th id="146">146</th><td>        D-&gt;flags |= RPC_F_MEDIUM;</td></tr>
+<tr><th id="147">147</th><td>        assert (rwm_skip_data (&amp;c-&gt;in, <var>4</var>) == <var>4</var>);</td></tr>
+<tr><th id="148">148</th><td>        D-&gt;in_packet_num = <var>0</var>;</td></tr>
+<tr><th id="149">149</th><td>        vkprintf (<var>1</var>, <q>"Medium type\n"</q>);</td></tr>
+<tr><th id="150">150</th><td>        <b>continue</b>;</td></tr>
+<tr><th id="151">151</th><td>      }</td></tr>
+<tr><th id="152">152</th><td>        </td></tr>
+<tr><th id="153">153</th><td>      <i>// http</i></td></tr>
+<tr><th id="154">154</th><td>      <b>if</b> ((packet_len == *(<em>int</em> *)<q>"HEAD"</q> || packet_len == *(<em>int</em> *)<q>"POST"</q> || packet_len == *(<em>int</em> *)<q>"GET "</q> || packet_len == *(<em>int</em> *)<q>"OPTI"</q>) &amp;&amp; TCP_RPCS_FUNC(C)-&gt;http_fallback_type) {</td></tr>
+<tr><th id="155">155</th><td>        D-&gt;crypto_flags |= RPCF_COMPACT_OFF;</td></tr>
+<tr><th id="156">156</th><td>        vkprintf (<var>1</var>, <q>"HTTP type\n"</q>);</td></tr>
+<tr><th id="157">157</th><td>        <b>return</b> tcp_rpcs_parse_execute (C);</td></tr>
+<tr><th id="158">158</th><td>      }</td></tr>
+<tr><th id="159">159</th><td></td></tr>
+<tr><th id="160">160</th><td>      <em>int</em> tmp[<var>2</var>];</td></tr>
+<tr><th id="161">161</th><td>      assert (rwm_fetch_lookup (&amp;c-&gt;in, &amp;tmp, <var>8</var>) == <var>8</var>);</td></tr>
+<tr><th id="162">162</th><td>      <b>if</b> (!tmp[<var>1</var>]) {</td></tr>
+<tr><th id="163">163</th><td>        D-&gt;crypto_flags |= RPCF_COMPACT_OFF;</td></tr>
+<tr><th id="164">164</th><td>        vkprintf (<var>1</var>, <q>"Long type\n"</q>);</td></tr>
+<tr><th id="165">165</th><td>        <b>return</b> tcp_rpcs_parse_execute (C);</td></tr>
+<tr><th id="166">166</th><td>      }</td></tr>
+<tr><th id="167">167</th><td><u>#<span data-ppcond="137">endif</span></u></td></tr>
+<tr><th id="168">168</th><td></td></tr>
+<tr><th id="169">169</th><td>      <b>if</b> (<a class="local col9 ref" href="#9len" title='len' data-ref="9len">len</a> &lt; <var>64</var>) {</td></tr>
+<tr><th id="170">170</th><td><u>#<span data-ppcond="170">if</span> <a class="macro" href="net-tcp-rpc-ext-server.h.html#23" title="0" data-ref="_M/__ALLOW_UNOBFS__">__ALLOW_UNOBFS__</a></u></td></tr>
+<tr><th id="171">171</th><td>        vkprintf (<var>1</var>, <q>"random 64-byte header: first 0x%08x 0x%08x, need %d more bytes to distinguish\n"</q>, tmp[<var>0</var>], tmp[<var>1</var>], <var>64</var> - len);</td></tr>
+<tr><th id="172">172</th><td><u>#<span data-ppcond="170">else</span></u></td></tr>
+<tr><th id="173">173</th><td>        <a class="macro" href="../common/kprintf.h.html#48" title="do { if ((1) &gt; verbosity) { break; } kprintf ((&quot;\&quot;random\&quot; 64-byte header: have %d bytes, need %d more bytes to distinguish\n&quot;), len, 64 - len); } while (0)" data-ref="_M/vkprintf">vkprintf</a> (<var>1</var>, <q>"\"random\" 64-byte header: have %d bytes, need %d more bytes to distinguish\n"</q>, <a class="local col9 ref" href="#9len" title='len' data-ref="9len">len</a>, <var>64</var> - <a class="local col9 ref" href="#9len" title='len' data-ref="9len">len</a>);</td></tr>
+<tr><th id="174">174</th><td><u>#<span data-ppcond="170">endif</span></u></td></tr>
+<tr><th id="175">175</th><td>        <b>return</b> <var>64</var> - <a class="local col9 ref" href="#9len" title='len' data-ref="9len">len</a>;</td></tr>
+<tr><th id="176">176</th><td>      }</td></tr>
+<tr><th id="177">177</th><td></td></tr>
+<tr><th id="178">178</th><td>      <em>unsigned</em> <em>char</em> <dfn class="local col2 decl" id="12random_header" title='random_header' data-type='unsigned char [64]' data-ref="12random_header">random_header</dfn>[<var>64</var>];</td></tr>
+<tr><th id="179">179</th><td>      <em>unsigned</em> <em>char</em> <dfn class="local col3 decl" id="13k" title='k' data-type='unsigned char [48]' data-ref="13k">k</dfn>[<var>48</var>];</td></tr>
+<tr><th id="180">180</th><td>      <a class="macro" href="../../include/assert.h.html#88" title="((rwm_fetch_lookup (&amp;c-&gt;in, random_header, 64) == 64) ? (void) (0) : __assert_fail (&quot;rwm_fetch_lookup (&amp;c-&gt;in, random_header, 64) == 64&quot;, &quot;/home/parallels/MTProxy/net/net-tcp-rpc-ext-server.c&quot;, 180, __PRETTY_FUNCTION__))" data-ref="_M/assert">assert</a> (<a class="ref" href="net-msg.h.html#rwm_fetch_lookup" title='rwm_fetch_lookup' data-ref="rwm_fetch_lookup">rwm_fetch_lookup</a> (&amp;<a class="local col8 ref" href="#8c" title='c' data-ref="8c">c</a>-&gt;<a class="ref" href="net-connections.h.html#connection_info::in" title='connection_info::in' data-ref="connection_info::in">in</a>, <a class="local col2 ref" href="#12random_header" title='random_header' data-ref="12random_header">random_header</a>, <var>64</var>) == <var>64</var>);</td></tr>
+<tr><th id="181">181</th><td>        </td></tr>
+<tr><th id="182">182</th><td>      <em>unsigned</em> <em>char</em> <dfn class="local col4 decl" id="14random_header_sav" title='random_header_sav' data-type='unsigned char [64]' data-ref="14random_header_sav">random_header_sav</dfn>[<var>64</var>];</td></tr>
+<tr><th id="183">183</th><td>      <a class="ref" href="../../include/string.h.html#memcpy" title='memcpy' data-ref="memcpy">memcpy</a> (<a class="local col4 ref" href="#14random_header_sav" title='random_header_sav' data-ref="14random_header_sav">random_header_sav</a>, <a class="local col2 ref" href="#12random_header" title='random_header' data-ref="12random_header">random_header</a>, <var>64</var>);</td></tr>
+<tr><th id="184">184</th><td>      </td></tr>
+<tr><th id="185">185</th><td>      <b>struct</b> <a class="type" href="net-crypto-aes.h.html#aes_key_data" title='aes_key_data' data-ref="aes_key_data">aes_key_data</a> <dfn class="local col5 decl" id="15key_data" title='key_data' data-type='struct aes_key_data' data-ref="15key_data">key_data</dfn>;</td></tr>
+<tr><th id="186">186</th><td>      </td></tr>
+<tr><th id="187">187</th><td>      <em>int</em> <dfn class="local col6 decl" id="16ok" title='ok' data-type='int' data-ref="16ok">ok</dfn> = <var>0</var>;</td></tr>
+<tr><th id="188">188</th><td>      <em>int</em> <dfn class="local col7 decl" id="17secret_id" title='secret_id' data-type='int' data-ref="17secret_id">secret_id</dfn>;</td></tr>
+<tr><th id="189">189</th><td>      <b>for</b> (<a class="local col7 ref" href="#17secret_id" title='secret_id' data-ref="17secret_id">secret_id</a> = <var>0</var>; <a class="local col7 ref" href="#17secret_id" title='secret_id' data-ref="17secret_id">secret_id</a> &lt; <var>1</var> || <a class="local col7 ref" href="#17secret_id" title='secret_id' data-ref="17secret_id">secret_id</a> &lt; <a class="tu ref" href="#ext_secret_cnt" title='ext_secret_cnt' data-use='r' data-ref="ext_secret_cnt">ext_secret_cnt</a>; <a class="local col7 ref" href="#17secret_id" title='secret_id' data-ref="17secret_id">secret_id</a>++) {</td></tr>
+<tr><th id="190">190</th><td>        <b>if</b> (<a class="tu ref" href="#ext_secret_cnt" title='ext_secret_cnt' data-use='r' data-ref="ext_secret_cnt">ext_secret_cnt</a> &gt; <var>0</var>) {</td></tr>
+<tr><th id="191">191</th><td>          <a class="ref" href="../../include/string.h.html#memcpy" title='memcpy' data-ref="memcpy">memcpy</a> (<a class="local col3 ref" href="#13k" title='k' data-ref="13k">k</a>, <a class="local col2 ref" href="#12random_header" title='random_header' data-ref="12random_header">random_header</a> + <var>8</var>, <var>32</var>);</td></tr>
+<tr><th id="192">192</th><td>          <a class="ref" href="../../include/string.h.html#memcpy" title='memcpy' data-ref="memcpy">memcpy</a> (<a class="local col3 ref" href="#13k" title='k' data-ref="13k">k</a> + <var>32</var>, <a class="tu ref" href="#ext_secret" title='ext_secret' data-use='r' data-ref="ext_secret">ext_secret</a>[<a class="local col7 ref" href="#17secret_id" title='secret_id' data-ref="17secret_id">secret_id</a>], <var>16</var>);</td></tr>
+<tr><th id="193">193</th><td>          <a class="ref" href="../common/sha256.h.html#sha256" title='sha256' data-ref="sha256">sha256</a> (<a class="local col3 ref" href="#13k" title='k' data-ref="13k">k</a>, <var>48</var>, <a class="local col5 ref" href="#15key_data" title='key_data' data-ref="15key_data">key_data</a>.<a class="ref" href="net-crypto-aes.h.html#aes_key_data::read_key" title='aes_key_data::read_key' data-ref="aes_key_data::read_key">read_key</a>);</td></tr>
+<tr><th id="194">194</th><td>        } <b>else</b> {</td></tr>
+<tr><th id="195">195</th><td>          <a class="ref" href="../../include/string.h.html#memcpy" title='memcpy' data-ref="memcpy">memcpy</a> (<a class="local col5 ref" href="#15key_data" title='key_data' data-ref="15key_data">key_data</a>.<a class="ref" href="net-crypto-aes.h.html#aes_key_data::read_key" title='aes_key_data::read_key' data-ref="aes_key_data::read_key">read_key</a>, <a class="local col2 ref" href="#12random_header" title='random_header' data-ref="12random_header">random_header</a> + <var>8</var>, <var>32</var>);</td></tr>
+<tr><th id="196">196</th><td>        }</td></tr>
+<tr><th id="197">197</th><td>        <a class="ref" href="../../include/string.h.html#memcpy" title='memcpy' data-ref="memcpy">memcpy</a> (<a class="local col5 ref" href="#15key_data" title='key_data' data-ref="15key_data">key_data</a>.<a class="ref" href="net-crypto-aes.h.html#aes_key_data::read_iv" title='aes_key_data::read_iv' data-ref="aes_key_data::read_iv">read_iv</a>, <a class="local col2 ref" href="#12random_header" title='random_header' data-ref="12random_header">random_header</a> + <var>40</var>, <var>16</var>);</td></tr>
+<tr><th id="198">198</th><td></td></tr>
+<tr><th id="199">199</th><td>        <em>int</em> <dfn class="local col8 decl" id="18i" title='i' data-type='int' data-ref="18i">i</dfn>;</td></tr>
+<tr><th id="200">200</th><td>        <b>for</b> (<a class="local col8 ref" href="#18i" title='i' data-ref="18i">i</a> = <var>0</var>; <a class="local col8 ref" href="#18i" title='i' data-ref="18i">i</a> &lt; <var>32</var>; <a class="local col8 ref" href="#18i" title='i' data-ref="18i">i</a>++) {</td></tr>
+<tr><th id="201">201</th><td>          <a class="local col5 ref" href="#15key_data" title='key_data' data-ref="15key_data">key_data</a>.<a class="ref" href="net-crypto-aes.h.html#aes_key_data::write_key" title='aes_key_data::write_key' data-ref="aes_key_data::write_key">write_key</a>[<a class="local col8 ref" href="#18i" title='i' data-ref="18i">i</a>] = <a class="local col2 ref" href="#12random_header" title='random_header' data-ref="12random_header">random_header</a>[<var>55</var> - <a class="local col8 ref" href="#18i" title='i' data-ref="18i">i</a>];</td></tr>
+<tr><th id="202">202</th><td>        }</td></tr>
+<tr><th id="203">203</th><td>        <b>for</b> (<a class="local col8 ref" href="#18i" title='i' data-ref="18i">i</a> = <var>0</var>; <a class="local col8 ref" href="#18i" title='i' data-ref="18i">i</a> &lt; <var>16</var>; <a class="local col8 ref" href="#18i" title='i' data-ref="18i">i</a>++) {</td></tr>
+<tr><th id="204">204</th><td>          <a class="local col5 ref" href="#15key_data" title='key_data' data-ref="15key_data">key_data</a>.<a class="ref" href="net-crypto-aes.h.html#aes_key_data::write_iv" title='aes_key_data::write_iv' data-ref="aes_key_data::write_iv">write_iv</a>[<a class="local col8 ref" href="#18i" title='i' data-ref="18i">i</a>] = <a class="local col2 ref" href="#12random_header" title='random_header' data-ref="12random_header">random_header</a>[<var>23</var> - <a class="local col8 ref" href="#18i" title='i' data-ref="18i">i</a>];</td></tr>
+<tr><th id="205">205</th><td>        }</td></tr>
+<tr><th id="206">206</th><td></td></tr>
+<tr><th id="207">207</th><td>        <b>if</b> (<a class="tu ref" href="#ext_secret_cnt" title='ext_secret_cnt' data-use='r' data-ref="ext_secret_cnt">ext_secret_cnt</a> &gt; <var>0</var>) {</td></tr>
+<tr><th id="208">208</th><td>          <a class="ref" href="../../include/string.h.html#memcpy" title='memcpy' data-ref="memcpy">memcpy</a> (<a class="local col3 ref" href="#13k" title='k' data-ref="13k">k</a>, <a class="local col5 ref" href="#15key_data" title='key_data' data-ref="15key_data">key_data</a>.<a class="ref" href="net-crypto-aes.h.html#aes_key_data::write_key" title='aes_key_data::write_key' data-ref="aes_key_data::write_key">write_key</a>, <var>32</var>);</td></tr>
+<tr><th id="209">209</th><td>          <a class="ref" href="../common/sha256.h.html#sha256" title='sha256' data-ref="sha256">sha256</a> (<a class="local col3 ref" href="#13k" title='k' data-ref="13k">k</a>, <var>48</var>, <a class="local col5 ref" href="#15key_data" title='key_data' data-ref="15key_data">key_data</a>.<a class="ref" href="net-crypto-aes.h.html#aes_key_data::write_key" title='aes_key_data::write_key' data-ref="aes_key_data::write_key">write_key</a>);</td></tr>
+<tr><th id="210">210</th><td>        }</td></tr>
+<tr><th id="211">211</th><td></td></tr>
+<tr><th id="212">212</th><td>        <a class="ref" href="net-crypto-aes.h.html#aes_crypto_ctr128_init" title='aes_crypto_ctr128_init' data-ref="aes_crypto_ctr128_init">aes_crypto_ctr128_init</a> (<a class="local col6 ref" href="#6C" title='C' data-ref="6C">C</a>, &amp;<a class="local col5 ref" href="#15key_data" title='key_data' data-ref="15key_data">key_data</a>, <b>sizeof</b> (<a class="local col5 ref" href="#15key_data" title='key_data' data-ref="15key_data">key_data</a>));</td></tr>
+<tr><th id="213">213</th><td>        <a class="macro" href="../../include/assert.h.html#88" title="((c-&gt;crypto) ? (void) (0) : __assert_fail (&quot;c-&gt;crypto&quot;, &quot;/home/parallels/MTProxy/net/net-tcp-rpc-ext-server.c&quot;, 213, __PRETTY_FUNCTION__))" data-ref="_M/assert">assert</a> (<a class="local col8 ref" href="#8c" title='c' data-ref="8c">c</a>-&gt;<a class="ref" href="net-connections.h.html#connection_info::crypto" title='connection_info::crypto' data-ref="connection_info::crypto">crypto</a>);</td></tr>
+<tr><th id="214">214</th><td>        <b>struct</b> <a class="type" href="net-crypto-aes.h.html#aes_crypto" title='aes_crypto' data-ref="aes_crypto">aes_crypto</a> *<dfn class="local col9 decl" id="19T" title='T' data-type='struct aes_crypto *' data-ref="19T">T</dfn> = <a class="local col8 ref" href="#8c" title='c' data-ref="8c">c</a>-&gt;<a class="ref" href="net-connections.h.html#connection_info::crypto" title='connection_info::crypto' data-ref="connection_info::crypto">crypto</a>;</td></tr>
+<tr><th id="215">215</th><td></td></tr>
+<tr><th id="216">216</th><td>        <a class="local col9 ref" href="#19T" title='T' data-ref="19T">T</a>-&gt;<a class="ref" href="net-crypto-aes.h.html#aes_crypto::read_aeskey" title='aes_crypto::read_aeskey' data-ref="aes_crypto::read_aeskey">read_aeskey</a>.<a class="ref" href="../crypto/aesni256.h.html#tg_aes_ctx::type" title='tg_aes_ctx::type' data-ref="tg_aes_ctx::type">type</a>-&gt;<a class="ref" href="../crypto/aesni256.h.html#tg_aes_methods::ctr128_crypt" title='tg_aes_methods::ctr128_crypt' data-ref="tg_aes_methods::ctr128_crypt">ctr128_crypt</a> (&amp;<a class="local col9 ref" href="#19T" title='T' data-ref="19T">T</a>-&gt;<a class="ref" href="net-crypto-aes.h.html#aes_crypto::read_aeskey" title='aes_crypto::read_aeskey' data-ref="aes_crypto::read_aeskey">read_aeskey</a>, <a class="local col2 ref" href="#12random_header" title='random_header' data-ref="12random_header">random_header</a>, <a class="local col2 ref" href="#12random_header" title='random_header' data-ref="12random_header">random_header</a>, <var>64</var>, <a class="local col9 ref" href="#19T" title='T' data-ref="19T">T</a>-&gt;<a class="ref" href="net-crypto-aes.h.html#aes_crypto::read_iv" title='aes_crypto::read_iv' data-ref="aes_crypto::read_iv">read_iv</a>, <a class="local col9 ref" href="#19T" title='T' data-ref="19T">T</a>-&gt;<a class="ref" href="net-crypto-aes.h.html#aes_crypto::read_ebuf" title='aes_crypto::read_ebuf' data-ref="aes_crypto::read_ebuf">read_ebuf</a>, &amp;<a class="local col9 ref" href="#19T" title='T' data-ref="19T">T</a>-&gt;<a class="ref" href="net-crypto-aes.h.html#aes_crypto::read_num" title='aes_crypto::read_num' data-ref="aes_crypto::read_num">read_num</a>);</td></tr>
+<tr><th id="217">217</th><td>        <em>unsigned</em> <dfn class="local col0 decl" id="20tag" title='tag' data-type='unsigned int' data-ref="20tag">tag</dfn> = *(<em>unsigned</em> *)(<a class="local col2 ref" href="#12random_header" title='random_header' data-ref="12random_header">random_header</a> + <var>56</var>);</td></tr>
+<tr><th id="218">218</th><td></td></tr>
+<tr><th id="219">219</th><td>        <b>if</b> (<a class="local col0 ref" href="#20tag" title='tag' data-ref="20tag">tag</a> == <var>0xeeeeeeee</var> || <a class="local col0 ref" href="#20tag" title='tag' data-ref="20tag">tag</a> == <var>0xefefefef</var>) {</td></tr>
+<tr><th id="220">220</th><td>          <a class="macro" href="../../include/assert.h.html#88" title="((rwm_skip_data (&amp;c-&gt;in, 64) == 64) ? (void) (0) : __assert_fail (&quot;rwm_skip_data (&amp;c-&gt;in, 64) == 64&quot;, &quot;/home/parallels/MTProxy/net/net-tcp-rpc-ext-server.c&quot;, 220, __PRETTY_FUNCTION__))" data-ref="_M/assert">assert</a> (<a class="ref" href="net-msg.h.html#rwm_skip_data" title='rwm_skip_data' data-ref="rwm_skip_data">rwm_skip_data</a> (&amp;<a class="local col8 ref" href="#8c" title='c' data-ref="8c">c</a>-&gt;<a class="ref" href="net-connections.h.html#connection_info::in" title='connection_info::in' data-ref="connection_info::in">in</a>, <var>64</var>) == <var>64</var>);</td></tr>
+<tr><th id="221">221</th><td>          <a class="ref" href="net-msg.h.html#rwm_union" title='rwm_union' data-ref="rwm_union">rwm_union</a> (&amp;<a class="local col8 ref" href="#8c" title='c' data-ref="8c">c</a>-&gt;<a class="ref" href="net-connections.h.html#connection_info::in_u" title='connection_info::in_u' data-ref="connection_info::in_u">in_u</a>, &amp;<a class="local col8 ref" href="#8c" title='c' data-ref="8c">c</a>-&gt;<a class="ref" href="net-connections.h.html#connection_info::in" title='connection_info::in' data-ref="connection_info::in">in</a>);</td></tr>
+<tr><th id="222">222</th><td>          <a class="ref" href="net-msg.h.html#rwm_init" title='rwm_init' data-ref="rwm_init">rwm_init</a> (&amp;<a class="local col8 ref" href="#8c" title='c' data-ref="8c">c</a>-&gt;<a class="ref" href="net-connections.h.html#connection_info::in" title='connection_info::in' data-ref="connection_info::in">in</a>, <var>0</var>);</td></tr>
+<tr><th id="223">223</th><td>          <i>// T-&gt;read_pos = 64;</i></td></tr>
+<tr><th id="224">224</th><td>          <a class="local col7 ref" href="#7D" title='D' data-ref="7D">D</a>-&gt;<a class="ref" href="net-tcp-rpc-common.h.html#tcp_rpc_data::in_packet_num" title='tcp_rpc_data::in_packet_num' data-ref="tcp_rpc_data::in_packet_num">in_packet_num</a> = <var>0</var>;</td></tr>
+<tr><th id="225">225</th><td>          <b>switch</b> (<a class="local col0 ref" href="#20tag" title='tag' data-ref="20tag">tag</a>) {</td></tr>
+<tr><th id="226">226</th><td>            <b>case</b> <var>0xeeeeeeee</var>:</td></tr>
+<tr><th id="227">227</th><td>              <a class="local col7 ref" href="#7D" title='D' data-ref="7D">D</a>-&gt;<a class="ref" href="net-tcp-rpc-common.h.html#tcp_rpc_data::flags" title='tcp_rpc_data::flags' data-ref="tcp_rpc_data::flags">flags</a> |= <a class="macro" href="net-tcp-rpc-common.h.html#109" title="0x20000000" data-ref="_M/RPC_F_MEDIUM">RPC_F_MEDIUM</a> | <a class="macro" href="net-tcp-rpc-common.h.html#114" title="0x20000" data-ref="_M/RPC_F_EXTMODE2">RPC_F_EXTMODE2</a>;</td></tr>
+<tr><th id="228">228</th><td>              <b>break</b>;</td></tr>
+<tr><th id="229">229</th><td>            <b>case</b> <var>0xefefefef</var>:</td></tr>
+<tr><th id="230">230</th><td>              <a class="local col7 ref" href="#7D" title='D' data-ref="7D">D</a>-&gt;<a class="ref" href="net-tcp-rpc-common.h.html#tcp_rpc_data::flags" title='tcp_rpc_data::flags' data-ref="tcp_rpc_data::flags">flags</a> |= <a class="macro" href="net-tcp-rpc-common.h.html#110" title="0x40000000" data-ref="_M/RPC_F_COMPACT">RPC_F_COMPACT</a> | <a class="macro" href="net-tcp-rpc-common.h.html#114" title="0x20000" data-ref="_M/RPC_F_EXTMODE2">RPC_F_EXTMODE2</a>;</td></tr>
+<tr><th id="231">231</th><td>              <b>break</b>;</td></tr>
+<tr><th id="232">232</th><td>          }</td></tr>
+<tr><th id="233">233</th><td>          <a class="macro" href="../../include/assert.h.html#88" title="((c-&gt;type-&gt;crypto_decrypt_input (C) &gt;= 0) ? (void) (0) : __assert_fail (&quot;c-&gt;type-&gt;crypto_decrypt_input (C) &gt;= 0&quot;, &quot;/home/parallels/MTProxy/net/net-tcp-rpc-ext-server.c&quot;, 233, __PRETTY_FUNCTION__))" data-ref="_M/assert">assert</a> (<a class="local col8 ref" href="#8c" title='c' data-ref="8c">c</a>-&gt;<a class="ref" href="net-connections.h.html#connection_info::type" title='connection_info::type' data-ref="connection_info::type">type</a>-&gt;<a class="ref" href="net-connections.h.html#conn_functions::crypto_decrypt_input" title='conn_functions::crypto_decrypt_input' data-ref="conn_functions::crypto_decrypt_input">crypto_decrypt_input</a> (<a class="local col6 ref" href="#6C" title='C' data-ref="6C">C</a>) &gt;= <var>0</var>);</td></tr>
+<tr><th id="234">234</th><td></td></tr>
+<tr><th id="235">235</th><td>          <em>int</em> <dfn class="local col1 decl" id="21target" title='target' data-type='int' data-ref="21target">target</dfn> = *(<em>short</em> *)(<a class="local col2 ref" href="#12random_header" title='random_header' data-ref="12random_header">random_header</a> + <var>60</var>);</td></tr>
+<tr><th id="236">236</th><td>          <a class="local col7 ref" href="#7D" title='D' data-ref="7D">D</a>-&gt;<a class="ref" href="net-tcp-rpc-common.h.html#tcp_rpc_data::extra_int4" title='tcp_rpc_data::extra_int4' data-ref="tcp_rpc_data::extra_int4">extra_int4</a> = <a class="local col1 ref" href="#21target" title='target' data-ref="21target">target</a>;</td></tr>
+<tr><th id="237">237</th><td>          <a class="macro" href="../common/kprintf.h.html#48" title="do { if ((1) &gt; verbosity) { break; } kprintf ((&quot;tcp opportunistic encryption mode detected, tag = %08x, target=%d\n&quot;), tag, target); } while (0)" data-ref="_M/vkprintf">vkprintf</a> (<var>1</var>, <q>"tcp opportunistic encryption mode detected, tag = %08x, target=%d\n"</q>, <a class="local col0 ref" href="#20tag" title='tag' data-ref="20tag">tag</a>, <a class="local col1 ref" href="#21target" title='target' data-ref="21target">target</a>);</td></tr>
+<tr><th id="238">238</th><td>          <a class="local col6 ref" href="#16ok" title='ok' data-ref="16ok">ok</a> = <var>1</var>;</td></tr>
+<tr><th id="239">239</th><td>          <b>break</b>;</td></tr>
+<tr><th id="240">240</th><td>        } <b>else</b> {</td></tr>
+<tr><th id="241">241</th><td>          <a class="ref" href="net-crypto-aes.h.html#aes_crypto_free" title='aes_crypto_free' data-ref="aes_crypto_free">aes_crypto_free</a> (<a class="local col6 ref" href="#6C" title='C' data-ref="6C">C</a>);</td></tr>
+<tr><th id="242">242</th><td>          <a class="ref" href="../../include/string.h.html#memcpy" title='memcpy' data-ref="memcpy">memcpy</a> (<a class="local col2 ref" href="#12random_header" title='random_header' data-ref="12random_header">random_header</a>, <a class="local col4 ref" href="#14random_header_sav" title='random_header_sav' data-ref="14random_header_sav">random_header_sav</a>, <var>64</var>);</td></tr>
+<tr><th id="243">243</th><td>        }</td></tr>
+<tr><th id="244">244</th><td>      }</td></tr>
+<tr><th id="245">245</th><td></td></tr>
+<tr><th id="246">246</th><td>      <b>if</b> (<a class="local col6 ref" href="#16ok" title='ok' data-ref="16ok">ok</a>) {</td></tr>
+<tr><th id="247">247</th><td>        <b>continue</b>;</td></tr>
+<tr><th id="248">248</th><td>      }</td></tr>
+<tr><th id="249">249</th><td></td></tr>
+<tr><th id="250">250</th><td>      <b>if</b> (<a class="tu ref" href="#ext_secret_cnt" title='ext_secret_cnt' data-use='r' data-ref="ext_secret_cnt">ext_secret_cnt</a> &gt; <var>0</var>) {</td></tr>
+<tr><th id="251">251</th><td>        <a class="macro" href="../common/kprintf.h.html#48" title="do { if ((1) &gt; verbosity) { break; } kprintf ((&quot;invalid \&quot;random\&quot; 64-byte header, entering global skip mode\n&quot;)); } while (0)" data-ref="_M/vkprintf">vkprintf</a> (<var>1</var>, <q>"invalid \"random\" 64-byte header, entering global skip mode\n"</q>);</td></tr>
+<tr><th id="252">252</th><td>        <b>return</b> (-<var>1</var> <span class='warning' title="shifting a negative signed value is undefined">&lt;&lt;</span> <var>28</var>);</td></tr>
+<tr><th id="253">253</th><td>      }</td></tr>
+<tr><th id="254">254</th><td></td></tr>
+<tr><th id="255">255</th><td><u>#<span data-ppcond="255">if</span> <a class="macro" href="net-tcp-rpc-ext-server.h.html#23" title="0" data-ref="_M/__ALLOW_UNOBFS__">__ALLOW_UNOBFS__</a></u></td></tr>
+<tr><th id="256">256</th><td>      vkprintf (<var>1</var>, <q>"short type with 64-byte header: first 0x%08x 0x%08x\n"</q>, tmp[<var>0</var>], tmp[<var>1</var>]);</td></tr>
+<tr><th id="257">257</th><td>      D-&gt;flags |= RPC_F_COMPACT | RPC_F_EXTMODE1;</td></tr>
+<tr><th id="258">258</th><td>      D-&gt;in_packet_num = <var>0</var>;</td></tr>
+<tr><th id="259">259</th><td></td></tr>
+<tr><th id="260">260</th><td>      assert (len &gt;= <var>64</var>);</td></tr>
+<tr><th id="261">261</th><td>      assert (rwm_skip_data (&amp;c-&gt;in, <var>64</var>) == <var>64</var>);</td></tr>
+<tr><th id="262">262</th><td>      <b>continue</b>;</td></tr>
+<tr><th id="263">263</th><td><u>#<span data-ppcond="255">else</span></u></td></tr>
+<tr><th id="264">264</th><td>      <a class="macro" href="../common/kprintf.h.html#48" title="do { if ((1) &gt; verbosity) { break; } kprintf ((&quot;invalid \&quot;random\&quot; 64-byte header, entering global skip mode\n&quot;)); } while (0)" data-ref="_M/vkprintf">vkprintf</a> (<var>1</var>, <q>"invalid \"random\" 64-byte header, entering global skip mode\n"</q>);</td></tr>
+<tr><th id="265">265</th><td>      <b>return</b> (-<var>1</var> <span class='warning' title="shifting a negative signed value is undefined">&lt;&lt;</span> <var>28</var>);</td></tr>
+<tr><th id="266">266</th><td><u>#<span data-ppcond="255">endif</span></u></td></tr>
+<tr><th id="267">267</th><td>    }</td></tr>
+<tr><th id="268">268</th><td></td></tr>
+<tr><th id="269">269</th><td>    <em>int</em> <dfn class="local col2 decl" id="22packet_len_bytes" title='packet_len_bytes' data-type='int' data-ref="22packet_len_bytes">packet_len_bytes</dfn> = <var>4</var>;</td></tr>
+<tr><th id="270">270</th><td>    <b>if</b> (<a class="local col7 ref" href="#7D" title='D' data-ref="7D">D</a>-&gt;<a class="ref" href="net-tcp-rpc-common.h.html#tcp_rpc_data::flags" title='tcp_rpc_data::flags' data-ref="tcp_rpc_data::flags">flags</a> &amp; <a class="macro" href="net-tcp-rpc-common.h.html#109" title="0x20000000" data-ref="_M/RPC_F_MEDIUM">RPC_F_MEDIUM</a>) {</td></tr>
+<tr><th id="271">271</th><td>      <i>// packet len in `medium` mode</i></td></tr>
+<tr><th id="272">272</th><td>      <b>if</b> (<a class="local col7 ref" href="#7D" title='D' data-ref="7D">D</a>-&gt;<a class="ref" href="net-tcp-rpc-common.h.html#tcp_rpc_data::crypto_flags" title='tcp_rpc_data::crypto_flags' data-ref="tcp_rpc_data::crypto_flags">crypto_flags</a> &amp; <a class="macro" href="net-tcp-rpc-common.h.html#103" title="512" data-ref="_M/RPCF_QUICKACK">RPCF_QUICKACK</a>) {</td></tr>
+<tr><th id="273">273</th><td>        <a class="local col7 ref" href="#7D" title='D' data-ref="7D">D</a>-&gt;<a class="ref" href="net-tcp-rpc-common.h.html#tcp_rpc_data::flags" title='tcp_rpc_data::flags' data-ref="tcp_rpc_data::flags">flags</a> = (<a class="local col7 ref" href="#7D" title='D' data-ref="7D">D</a>-&gt;<a class="ref" href="net-tcp-rpc-common.h.html#tcp_rpc_data::flags" title='tcp_rpc_data::flags' data-ref="tcp_rpc_data::flags">flags</a> &amp; ~<a class="macro" href="net-tcp-rpc-common.h.html#112" title="0x80000000" data-ref="_M/RPC_F_QUICKACK">RPC_F_QUICKACK</a>) | (<a class="local col1 ref" href="#11packet_len" title='packet_len' data-ref="11packet_len">packet_len</a> &amp; <a class="macro" href="net-tcp-rpc-common.h.html#112" title="0x80000000" data-ref="_M/RPC_F_QUICKACK">RPC_F_QUICKACK</a>);</td></tr>
+<tr><th id="274">274</th><td>        <a class="local col1 ref" href="#11packet_len" title='packet_len' data-ref="11packet_len">packet_len</a> &amp;= ~<a class="macro" href="net-tcp-rpc-common.h.html#112" title="0x80000000" data-ref="_M/RPC_F_QUICKACK">RPC_F_QUICKACK</a>;</td></tr>
+<tr><th id="275">275</th><td>      }</td></tr>
+<tr><th id="276">276</th><td>    } <b>else</b> {</td></tr>
+<tr><th id="277">277</th><td>      <i>// packet len in `compact` mode</i></td></tr>
+<tr><th id="278">278</th><td>      <b>if</b> (<a class="local col1 ref" href="#11packet_len" title='packet_len' data-ref="11packet_len">packet_len</a> &amp; <var>0x80</var>) {</td></tr>
+<tr><th id="279">279</th><td>        <a class="local col7 ref" href="#7D" title='D' data-ref="7D">D</a>-&gt;<a class="ref" href="net-tcp-rpc-common.h.html#tcp_rpc_data::flags" title='tcp_rpc_data::flags' data-ref="tcp_rpc_data::flags">flags</a> |= <a class="macro" href="net-tcp-rpc-common.h.html#112" title="0x80000000" data-ref="_M/RPC_F_QUICKACK">RPC_F_QUICKACK</a>;</td></tr>
+<tr><th id="280">280</th><td>        <a class="local col1 ref" href="#11packet_len" title='packet_len' data-ref="11packet_len">packet_len</a> &amp;= ~<var>0x80</var>;</td></tr>
+<tr><th id="281">281</th><td>      } <b>else</b> {</td></tr>
+<tr><th id="282">282</th><td>        <a class="local col7 ref" href="#7D" title='D' data-ref="7D">D</a>-&gt;<a class="ref" href="net-tcp-rpc-common.h.html#tcp_rpc_data::flags" title='tcp_rpc_data::flags' data-ref="tcp_rpc_data::flags">flags</a> &amp;= ~<a class="macro" href="net-tcp-rpc-common.h.html#112" title="0x80000000" data-ref="_M/RPC_F_QUICKACK">RPC_F_QUICKACK</a>;</td></tr>
+<tr><th id="283">283</th><td>      }</td></tr>
+<tr><th id="284">284</th><td>      <b>if</b> ((<a class="local col1 ref" href="#11packet_len" title='packet_len' data-ref="11packet_len">packet_len</a> &amp; <var>0xff</var>) == <var>0x7f</var>) {</td></tr>
+<tr><th id="285">285</th><td>        <a class="local col1 ref" href="#11packet_len" title='packet_len' data-ref="11packet_len">packet_len</a> = ((<em>unsigned</em>) <a class="local col1 ref" href="#11packet_len" title='packet_len' data-ref="11packet_len">packet_len</a> &gt;&gt; <var>8</var>);</td></tr>
+<tr><th id="286">286</th><td>        <b>if</b> (<a class="local col1 ref" href="#11packet_len" title='packet_len' data-ref="11packet_len">packet_len</a> &lt; <var>0x7f</var>) {</td></tr>
+<tr><th id="287">287</th><td>          <a class="macro" href="../common/kprintf.h.html#48" title="do { if ((1) &gt; verbosity) { break; } kprintf ((&quot;error while parsing compact packet: got length %d in overlong encoding\n&quot;), packet_len); } while (0)" data-ref="_M/vkprintf">vkprintf</a> (<var>1</var>, <q>"error while parsing compact packet: got length %d in overlong encoding\n"</q>, <a class="local col1 ref" href="#11packet_len" title='packet_len' data-ref="11packet_len">packet_len</a>);</td></tr>
+<tr><th id="288">288</th><td>          <a class="ref" href="net-connections.h.html#fail_connection" title='fail_connection' data-ref="fail_connection">fail_connection</a> (<a class="local col6 ref" href="#6C" title='C' data-ref="6C">C</a>, -<var>1</var>);</td></tr>
+<tr><th id="289">289</th><td>          <b>return</b> <var>0</var>;</td></tr>
+<tr><th id="290">290</th><td>        }</td></tr>
+<tr><th id="291">291</th><td>      } <b>else</b> {</td></tr>
+<tr><th id="292">292</th><td>        <a class="local col1 ref" href="#11packet_len" title='packet_len' data-ref="11packet_len">packet_len</a> &amp;= <var>0x7f</var>;</td></tr>
+<tr><th id="293">293</th><td>        <a class="local col2 ref" href="#22packet_len_bytes" title='packet_len_bytes' data-ref="22packet_len_bytes">packet_len_bytes</a> = <var>1</var>;</td></tr>
+<tr><th id="294">294</th><td>      }</td></tr>
+<tr><th id="295">295</th><td>      <a class="local col1 ref" href="#11packet_len" title='packet_len' data-ref="11packet_len">packet_len</a> &lt;&lt;= <var>2</var>;</td></tr>
+<tr><th id="296">296</th><td>    }</td></tr>
+<tr><th id="297">297</th><td></td></tr>
+<tr><th id="298">298</th><td>    <b>if</b> (<a class="local col1 ref" href="#11packet_len" title='packet_len' data-ref="11packet_len">packet_len</a> &lt;= <var>0</var> || (<a class="local col1 ref" href="#11packet_len" title='packet_len' data-ref="11packet_len">packet_len</a> &amp; <var>0xc0000003</var>)) {</td></tr>
+<tr><th id="299">299</th><td>      <a class="macro" href="../common/kprintf.h.html#48" title="do { if ((1) &gt; verbosity) { break; } kprintf ((&quot;error while parsing packet: bad packet length %d\n&quot;), packet_len); } while (0)" data-ref="_M/vkprintf">vkprintf</a> (<var>1</var>, <q>"error while parsing packet: bad packet length %d\n"</q>, <a class="local col1 ref" href="#11packet_len" title='packet_len' data-ref="11packet_len">packet_len</a>);</td></tr>
+<tr><th id="300">300</th><td>      <a class="ref" href="net-connections.h.html#fail_connection" title='fail_connection' data-ref="fail_connection">fail_connection</a> (<a class="local col6 ref" href="#6C" title='C' data-ref="6C">C</a>, -<var>1</var>);</td></tr>
+<tr><th id="301">301</th><td>      <b>return</b> <var>0</var>;</td></tr>
+<tr><th id="302">302</th><td>    }</td></tr>
+<tr><th id="303">303</th><td></td></tr>
+<tr><th id="304">304</th><td>    <b>if</b> ((<a class="local col1 ref" href="#11packet_len" title='packet_len' data-ref="11packet_len">packet_len</a> &gt; <a class="macro" href="net-tcp-rpc-server.h.html#67" title="((struct tcp_rpc_server_functions *) (((struct connection_info *)((C)-&gt;j_custom))-&gt;extra))" data-ref="_M/TCP_RPCS_FUNC">TCP_RPCS_FUNC</a>(<a class="local col6 ref" href="#6C" title='C' data-ref="6C">C</a>)-&gt;<a class="ref" href="net-tcp-rpc-server.h.html#tcp_rpc_server_functions::max_packet_len" title='tcp_rpc_server_functions::max_packet_len' data-ref="tcp_rpc_server_functions::max_packet_len">max_packet_len</a> &amp;&amp; <a class="macro" href="net-tcp-rpc-server.h.html#67" title="((struct tcp_rpc_server_functions *) (((struct connection_info *)((C)-&gt;j_custom))-&gt;extra))" data-ref="_M/TCP_RPCS_FUNC">TCP_RPCS_FUNC</a>(<a class="local col6 ref" href="#6C" title='C' data-ref="6C">C</a>)-&gt;<a class="ref" href="net-tcp-rpc-server.h.html#tcp_rpc_server_functions::max_packet_len" title='tcp_rpc_server_functions::max_packet_len' data-ref="tcp_rpc_server_functions::max_packet_len">max_packet_len</a> &gt; <var>0</var>))  {</td></tr>
+<tr><th id="305">305</th><td>      <a class="macro" href="../common/kprintf.h.html#48" title="do { if ((1) &gt; verbosity) { break; } kprintf ((&quot;error while parsing packet: bad packet length %d\n&quot;), packet_len); } while (0)" data-ref="_M/vkprintf">vkprintf</a> (<var>1</var>, <q>"error while parsing packet: bad packet length %d\n"</q>, <a class="local col1 ref" href="#11packet_len" title='packet_len' data-ref="11packet_len">packet_len</a>);</td></tr>
+<tr><th id="306">306</th><td>      <a class="ref" href="net-connections.h.html#fail_connection" title='fail_connection' data-ref="fail_connection">fail_connection</a> (<a class="local col6 ref" href="#6C" title='C' data-ref="6C">C</a>, -<var>1</var>);</td></tr>
+<tr><th id="307">307</th><td>      <b>return</b> <var>0</var>;</td></tr>
+<tr><th id="308">308</th><td>    }</td></tr>
+<tr><th id="309">309</th><td></td></tr>
+<tr><th id="310">310</th><td>    <b>if</b> (<a class="local col9 ref" href="#9len" title='len' data-ref="9len">len</a> &lt; <a class="local col1 ref" href="#11packet_len" title='packet_len' data-ref="11packet_len">packet_len</a> + <a class="local col2 ref" href="#22packet_len_bytes" title='packet_len_bytes' data-ref="22packet_len_bytes">packet_len_bytes</a>) {</td></tr>
+<tr><th id="311">311</th><td>      <b>return</b> <a class="local col1 ref" href="#11packet_len" title='packet_len' data-ref="11packet_len">packet_len</a> + <a class="local col2 ref" href="#22packet_len_bytes" title='packet_len_bytes' data-ref="22packet_len_bytes">packet_len_bytes</a> - <a class="local col9 ref" href="#9len" title='len' data-ref="9len">len</a>;</td></tr>
+<tr><th id="312">312</th><td>    }</td></tr>
+<tr><th id="313">313</th><td></td></tr>
+<tr><th id="314">314</th><td>    <a class="macro" href="../../include/assert.h.html#88" title="((rwm_skip_data (&amp;c-&gt;in, packet_len_bytes) == packet_len_bytes) ? (void) (0) : __assert_fail (&quot;rwm_skip_data (&amp;c-&gt;in, packet_len_bytes) == packet_len_bytes&quot;, &quot;/home/parallels/MTProxy/net/net-tcp-rpc-ext-server.c&quot;, 314, __PRETTY_FUNCTION__))" data-ref="_M/assert">assert</a> (<a class="ref" href="net-msg.h.html#rwm_skip_data" title='rwm_skip_data' data-ref="rwm_skip_data">rwm_skip_data</a> (&amp;<a class="local col8 ref" href="#8c" title='c' data-ref="8c">c</a>-&gt;<a class="ref" href="net-connections.h.html#connection_info::in" title='connection_info::in' data-ref="connection_info::in">in</a>, <a class="local col2 ref" href="#22packet_len_bytes" title='packet_len_bytes' data-ref="22packet_len_bytes">packet_len_bytes</a>) == <a class="local col2 ref" href="#22packet_len_bytes" title='packet_len_bytes' data-ref="22packet_len_bytes">packet_len_bytes</a>);</td></tr>
+<tr><th id="315">315</th><td>    </td></tr>
+<tr><th id="316">316</th><td>    <b>struct</b> <a class="type" href="net-msg.h.html#raw_message" title='raw_message' data-ref="raw_message">raw_message</a> <dfn class="local col3 decl" id="23msg" title='msg' data-type='struct raw_message' data-ref="23msg">msg</dfn>;</td></tr>
+<tr><th id="317">317</th><td>    <em>int</em> <dfn class="local col4 decl" id="24packet_type" title='packet_type' data-type='int' data-ref="24packet_type">packet_type</dfn>;</td></tr>
+<tr><th id="318">318</th><td></td></tr>
+<tr><th id="319">319</th><td>    <a class="ref" href="net-msg.h.html#rwm_split_head" title='rwm_split_head' data-ref="rwm_split_head">rwm_split_head</a> (&amp;<a class="local col3 ref" href="#23msg" title='msg' data-ref="23msg">msg</a>, &amp;<a class="local col8 ref" href="#8c" title='c' data-ref="8c">c</a>-&gt;<a class="ref" href="net-connections.h.html#connection_info::in" title='connection_info::in' data-ref="connection_info::in">in</a>, <a class="local col1 ref" href="#11packet_len" title='packet_len' data-ref="11packet_len">packet_len</a>);</td></tr>
+<tr><th id="320">320</th><td></td></tr>
+<tr><th id="321">321</th><td>    <a class="macro" href="../../include/assert.h.html#88" title="((rwm_fetch_lookup (&amp;msg, &amp;packet_type, 4) == 4) ? (void) (0) : __assert_fail (&quot;rwm_fetch_lookup (&amp;msg, &amp;packet_type, 4) == 4&quot;, &quot;/home/parallels/MTProxy/net/net-tcp-rpc-ext-server.c&quot;, 321, __PRETTY_FUNCTION__))" data-ref="_M/assert">assert</a> (<a class="ref" href="net-msg.h.html#rwm_fetch_lookup" title='rwm_fetch_lookup' data-ref="rwm_fetch_lookup">rwm_fetch_lookup</a> (&amp;<a class="local col3 ref" href="#23msg" title='msg' data-ref="23msg">msg</a>, &amp;<a class="local col4 ref" href="#24packet_type" title='packet_type' data-ref="24packet_type">packet_type</a>, <var>4</var>) == <var>4</var>);</td></tr>
+<tr><th id="322">322</th><td></td></tr>
+<tr><th id="323">323</th><td>    <b>if</b> (<a class="local col7 ref" href="#7D" title='D' data-ref="7D">D</a>-&gt;<a class="ref" href="net-tcp-rpc-common.h.html#tcp_rpc_data::in_packet_num" title='tcp_rpc_data::in_packet_num' data-ref="tcp_rpc_data::in_packet_num">in_packet_num</a> &lt; <var>0</var>) {</td></tr>
+<tr><th id="324">324</th><td>      <a class="macro" href="../../include/assert.h.html#88" title="((D-&gt;in_packet_num == -3) ? (void) (0) : __assert_fail (&quot;D-&gt;in_packet_num == -3&quot;, &quot;/home/parallels/MTProxy/net/net-tcp-rpc-ext-server.c&quot;, 324, __PRETTY_FUNCTION__))" data-ref="_M/assert">assert</a> (<a class="local col7 ref" href="#7D" title='D' data-ref="7D">D</a>-&gt;<a class="ref" href="net-tcp-rpc-common.h.html#tcp_rpc_data::in_packet_num" title='tcp_rpc_data::in_packet_num' data-ref="tcp_rpc_data::in_packet_num">in_packet_num</a> == -<var>3</var>);</td></tr>
+<tr><th id="325">325</th><td>      <a class="local col7 ref" href="#7D" title='D' data-ref="7D">D</a>-&gt;<a class="ref" href="net-tcp-rpc-common.h.html#tcp_rpc_data::in_packet_num" title='tcp_rpc_data::in_packet_num' data-ref="tcp_rpc_data::in_packet_num">in_packet_num</a> = <var>0</var>;</td></tr>
+<tr><th id="326">326</th><td>    }</td></tr>
+<tr><th id="327">327</th><td></td></tr>
+<tr><th id="328">328</th><td>    <b>if</b> (<a class="ref" href="../common/kprintf.h.html#verbosity" title='verbosity' data-ref="verbosity">verbosity</a> &gt; <var>2</var>) {</td></tr>
+<tr><th id="329">329</th><td>      <a class="ref" href="../../include/stdio.h.html#fprintf" title='fprintf' data-ref="fprintf">fprintf</a> (<a class="macro" href="../../include/stdio.h.html#174" title="stderr" data-ref="_M/stderr">stderr</a>, <q>"received packet from connection %d (length %d, num %d, type %08x)\n"</q>, <a class="local col8 ref" href="#8c" title='c' data-ref="8c">c</a>-&gt;<a class="ref" href="net-connections.h.html#connection_info::fd" title='connection_info::fd' data-ref="connection_info::fd">fd</a>, <a class="local col1 ref" href="#11packet_len" title='packet_len' data-ref="11packet_len">packet_len</a>, <a class="local col7 ref" href="#7D" title='D' data-ref="7D">D</a>-&gt;<a class="ref" href="net-tcp-rpc-common.h.html#tcp_rpc_data::in_packet_num" title='tcp_rpc_data::in_packet_num' data-ref="tcp_rpc_data::in_packet_num">in_packet_num</a>, <a class="local col4 ref" href="#24packet_type" title='packet_type' data-ref="24packet_type">packet_type</a>);</td></tr>
+<tr><th id="330">330</th><td>      <a class="ref" href="net-msg.h.html#rwm_dump" title='rwm_dump' data-ref="rwm_dump">rwm_dump</a> (&amp;<a class="local col3 ref" href="#23msg" title='msg' data-ref="23msg">msg</a>);</td></tr>
+<tr><th id="331">331</th><td>    }</td></tr>
+<tr><th id="332">332</th><td></td></tr>
+<tr><th id="333">333</th><td>    <em>int</em> <dfn class="local col5 decl" id="25res" title='res' data-type='int' data-ref="25res">res</dfn> = -<var>1</var>;</td></tr>
+<tr><th id="334">334</th><td></td></tr>
+<tr><th id="335">335</th><td>    <i>/* main case */</i></td></tr>
+<tr><th id="336">336</th><td>    <a class="local col8 ref" href="#8c" title='c' data-ref="8c">c</a>-&gt;<a class="ref" href="net-connections.h.html#connection_info::last_response_time" title='connection_info::last_response_time' data-ref="connection_info::last_response_time">last_response_time</a> = <a class="ref" href="../common/precise-time.h.html#precise_now" title='precise_now' data-ref="precise_now">precise_now</a>;</td></tr>
+<tr><th id="337">337</th><td>    <b>if</b> (<a class="local col4 ref" href="#24packet_type" title='packet_type' data-ref="24packet_type">packet_type</a> == <a class="macro" href="../common/rpc-const.h.html#40" title="0x5730a2df" data-ref="_M/RPC_PING">RPC_PING</a>) {</td></tr>
+<tr><th id="338">338</th><td>      <a class="local col5 ref" href="#25res" title='res' data-ref="25res">res</a> = <a class="ref" href="#tcp_rpcs_default_execute" title='tcp_rpcs_default_execute' data-ref="tcp_rpcs_default_execute">tcp_rpcs_default_execute</a> (<a class="local col6 ref" href="#6C" title='C' data-ref="6C">C</a>, <a class="local col4 ref" href="#24packet_type" title='packet_type' data-ref="24packet_type">packet_type</a>, &amp;<a class="local col3 ref" href="#23msg" title='msg' data-ref="23msg">msg</a>);</td></tr>
+<tr><th id="339">339</th><td>    } <b>else</b> {</td></tr>
+<tr><th id="340">340</th><td>      <a class="local col5 ref" href="#25res" title='res' data-ref="25res">res</a> = <a class="macro" href="net-tcp-rpc-server.h.html#67" title="((struct tcp_rpc_server_functions *) (((struct connection_info *)((C)-&gt;j_custom))-&gt;extra))" data-ref="_M/TCP_RPCS_FUNC">TCP_RPCS_FUNC</a>(<a class="local col6 ref" href="#6C" title='C' data-ref="6C">C</a>)-&gt;<a class="ref" href="net-tcp-rpc-server.h.html#tcp_rpc_server_functions::execute" title='tcp_rpc_server_functions::execute' data-ref="tcp_rpc_server_functions::execute">execute</a> (<a class="local col6 ref" href="#6C" title='C' data-ref="6C">C</a>, <a class="local col4 ref" href="#24packet_type" title='packet_type' data-ref="24packet_type">packet_type</a>, &amp;<a class="local col3 ref" href="#23msg" title='msg' data-ref="23msg">msg</a>);</td></tr>
+<tr><th id="341">341</th><td>    }</td></tr>
+<tr><th id="342">342</th><td>    <b>if</b> (<a class="local col5 ref" href="#25res" title='res' data-ref="25res">res</a> &lt;= <var>0</var>) {</td></tr>
+<tr><th id="343">343</th><td>      <a class="ref" href="net-msg.h.html#rwm_free" title='rwm_free' data-ref="rwm_free">rwm_free</a> (&amp;<a class="local col3 ref" href="#23msg" title='msg' data-ref="23msg">msg</a>);</td></tr>
+<tr><th id="344">344</th><td>    }</td></tr>
+<tr><th id="345">345</th><td></td></tr>
+<tr><th id="346">346</th><td>    <a class="local col7 ref" href="#7D" title='D' data-ref="7D">D</a>-&gt;<a class="ref" href="net-tcp-rpc-common.h.html#tcp_rpc_data::in_packet_num" title='tcp_rpc_data::in_packet_num' data-ref="tcp_rpc_data::in_packet_num">in_packet_num</a>++;</td></tr>
+<tr><th id="347">347</th><td>  }</td></tr>
+<tr><th id="348">348</th><td>  <b>return</b> <a class="macro" href="net-connections.h.html#52" title="(~(-1 &lt;&lt; 31))" data-ref="_M/NEED_MORE_BYTES">NEED_MORE_BYTES</a>;</td></tr>
+<tr><th id="349">349</th><td>}</td></tr>
+<tr><th id="350">350</th><td></td></tr>
+<tr><th id="351">351</th><td><i>/*</i></td></tr>
+<tr><th id="352">352</th><td><i> *</i></td></tr>
+<tr><th id="353">353</th><td><i> *                END (EXTERNAL RPC SERVER)</i></td></tr>
+<tr><th id="354">354</th><td><i> *</i></td></tr>
+<tr><th id="355">355</th><td><i> */</i></td></tr>
+<tr><th id="356">356</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated on <em>2018-Jun-02</em> from project MTProxy revision <em>842f343decf6c463bdecf1862e357c4a03e4bc97</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

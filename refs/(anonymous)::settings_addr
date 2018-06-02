@@ -1,0 +1,8 @@
+<dec f='MTProxy/engine/engine.h' l='119' type='struct in_addr'/>
+<offset>0</offset>
+<use f='MTProxy/engine/engine-net.c' l='208' u='a' c='f_parse_option_net'/>
+<use f='MTProxy/engine/engine.c' l='228' u='m' c='engine_init'/>
+<use f='MTProxy/engine/engine.c' l='229' u='m' c='engine_init'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2227' u='r' c='mtfront_pre_init'/>
+<use f='MTProxy/net/net-events.c' l='664' u='m' c='client_socket'/>
+<use f='MTProxy/net/net-events.c' l='670' u='r' c='client_socket'/>

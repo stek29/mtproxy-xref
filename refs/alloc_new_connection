@@ -1,0 +1,12 @@
+<dec f='MTProxy/net/net-connections.h' l='430' type='connection_job_t alloc_new_connection(int cfd, conn_target_job_t SS, connection_job_t LL, unsigned int peer, unsigned char * peer_ipv6, int peer_port)'/>
+<def f='MTProxy/net/net-connections.c' l='590' ll='780' type='connection_job_t alloc_new_connection(int cfd, conn_target_job_t CTJ, listening_connection_job_t LCJ, unsigned int peer, unsigned char * peer_ipv6, int peer_port)'/>
+<use f='MTProxy/net/net-connections.c' l='1282' u='c' c='net_accept_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1285' u='c' c='net_accept_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1729' u='c' c='create_new_connections'/>
+<doc f='MTProxy/net/net-connections.c' l='584'>/*
+  allocates inbound or outbound connection
+  runs init_accepted or init_outbound
+  updates stats
+  creates socket_connection
+*/</doc>
+<doc f='MTProxy/net/net-connections.c' l='590'>/* {{{ */</doc>

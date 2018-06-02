@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-crypto-aes.h' l='42' type='int aes_crypto_ctr128_init(connection_job_t c, void * key_data, int key_data_len)'/>
+<def f='MTProxy/net/net-crypto-aes.c' l='99' ll='116' type='int aes_crypto_ctr128_init(connection_job_t c, void * key_data, int key_data_len)'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='73' u='r'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='73' u='r'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='212' u='c' c='tcp_rpcs_compact_parse_execute'/>

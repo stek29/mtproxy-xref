@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>md5.h source code [MTProxy/common/md5.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="https://code.woboq.org/data//qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="https://code.woboq.org/data//kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery-ui.min.js"></script>
+<script>var file = 'MTProxy/common/md5.h'; var root_path = '../..'; var data_path = 'https://code.woboq.org/data/';</script>
+<script src='https://code.woboq.org/data//codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='..'>MTProxy</a>/<a href='./'>common</a>/<a href='md5.h.html'>md5.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i class="doc">/**</i></td></tr>
+<tr><th id="2">2</th><td><i class="doc"> *<span class="command"> \file</span> md5.h</i></td></tr>
+<tr><th id="3">3</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="4">4</th><td><u>#<span data-ppcond="4">ifndef</span> <span class="macro" data-ref="_M/XYSSL_MD5_H">XYSSL_MD5_H</span></u></td></tr>
+<tr><th id="5">5</th><td><u>#define <dfn class="macro" id="_M/XYSSL_MD5_H" data-ref="_M/XYSSL_MD5_H">XYSSL_MD5_H</dfn></u></td></tr>
+<tr><th id="6">6</th><td></td></tr>
+<tr><th id="7">7</th><td><i class="doc">/**</i></td></tr>
+<tr><th id="8">8</th><td><i class="doc"> * <span class="command">\brief</span>          MD5 context structure</i></td></tr>
+<tr><th id="9">9</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="10">10</th><td><b>typedef</b> <b>struct</b></td></tr>
+<tr><th id="11">11</th><td>{</td></tr>
+<tr><th id="12">12</th><td>    <em>unsigned</em> <em>long</em> <dfn class="decl" id="(anonymous)::total" title='(anonymous struct)::total' data-ref="(anonymous)::total">total</dfn>[<var>2</var>];     <i class="doc">/*!&lt; number of bytes processed  */</i></td></tr>
+<tr><th id="13">13</th><td>    <em>unsigned</em> <em>long</em> <dfn class="decl" id="(anonymous)::state" title='(anonymous struct)::state' data-ref="(anonymous)::state">state</dfn>[<var>4</var>];     <i class="doc">/*!&lt; intermediate digest state  */</i></td></tr>
+<tr><th id="14">14</th><td>    <em>unsigned</em> <em>char</em> <dfn class="decl" id="(anonymous)::buffer" title='(anonymous struct)::buffer' data-ref="(anonymous)::buffer">buffer</dfn>[<var>64</var>];   <i class="doc">/*!&lt; data block being processed */</i></td></tr>
+<tr><th id="15">15</th><td></td></tr>
+<tr><th id="16">16</th><td>    <em>unsigned</em> <em>char</em> <dfn class="decl" id="(anonymous)::ipad" title='(anonymous struct)::ipad' data-ref="(anonymous)::ipad">ipad</dfn>[<var>64</var>];     <i class="doc">/*!&lt; HMAC: inner padding        */</i></td></tr>
+<tr><th id="17">17</th><td>    <em>unsigned</em> <em>char</em> <dfn class="decl" id="(anonymous)::opad" title='(anonymous struct)::opad' data-ref="(anonymous)::opad">opad</dfn>[<var>64</var>];     <i class="doc">/*!&lt; HMAC: outer padding        */</i></td></tr>
+<tr><th id="18">18</th><td>}</td></tr>
+<tr><th id="19">19</th><td><dfn class="typedef" id="md5_context" title='md5_context' data-type='struct md5_context' data-ref="md5_context">md5_context</dfn>;</td></tr>
+<tr><th id="20">20</th><td></td></tr>
+<tr><th id="21">21</th><td><u>#<span data-ppcond="21">ifdef</span> <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
+<tr><th id="22">22</th><td><b>extern</b> <q>"C"</q> {</td></tr>
+<tr><th id="23">23</th><td><u>#<span data-ppcond="21">endif</span></u></td></tr>
+<tr><th id="24">24</th><td></td></tr>
+<tr><th id="25">25</th><td><i class="doc">/**</i></td></tr>
+<tr><th id="26">26</th><td><i class="doc"> * <span class="command">\brief</span>          MD5 context setup</i></td></tr>
+<tr><th id="27">27</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="28">28</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">ctx</span>      context to be initialized</i></td></tr>
+<tr><th id="29">29</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="30">30</th><td><em>void</em> <a class="decl" href="md5.c.html#md5_starts" title='md5_starts' data-ref="md5_starts" id="md5_starts">md5_starts</a>( <a class="typedef" href="#md5_context" title='md5_context' data-type='struct md5_context' data-ref="md5_context">md5_context</a> *<dfn class="local col1 decl" id="1ctx" title='ctx' data-type='md5_context *' data-ref="1ctx">ctx</dfn> );</td></tr>
+<tr><th id="31">31</th><td></td></tr>
+<tr><th id="32">32</th><td><i class="doc">/**</i></td></tr>
+<tr><th id="33">33</th><td><i class="doc"> * <span class="command">\brief</span>          MD5 process buffer</i></td></tr>
+<tr><th id="34">34</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="35">35</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">ctx</span>      MD5 context</i></td></tr>
+<tr><th id="36">36</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">input</span>    buffer holding the  data</i></td></tr>
+<tr><th id="37">37</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">ilen</span>     length of the input data</i></td></tr>
+<tr><th id="38">38</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="39">39</th><td><em>void</em> <a class="decl" href="md5.c.html#md5_update" title='md5_update' data-ref="md5_update" id="md5_update">md5_update</a>( <a class="typedef" href="#md5_context" title='md5_context' data-type='struct md5_context' data-ref="md5_context">md5_context</a> *<dfn class="local col2 decl" id="2ctx" title='ctx' data-type='md5_context *' data-ref="2ctx">ctx</dfn>, <em>unsigned</em> <em>char</em> *<dfn class="local col3 decl" id="3input" title='input' data-type='unsigned char *' data-ref="3input">input</dfn>, <em>int</em> <dfn class="local col4 decl" id="4ilen" title='ilen' data-type='int' data-ref="4ilen">ilen</dfn> );</td></tr>
+<tr><th id="40">40</th><td></td></tr>
+<tr><th id="41">41</th><td><i class="doc">/**</i></td></tr>
+<tr><th id="42">42</th><td><i class="doc"> * <span class="command">\brief</span>          MD5 final digest</i></td></tr>
+<tr><th id="43">43</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="44">44</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">ctx</span>      MD5 context</i></td></tr>
+<tr><th id="45">45</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">output</span>   MD5 checksum result</i></td></tr>
+<tr><th id="46">46</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="47">47</th><td><em>void</em> <a class="decl" href="md5.c.html#md5_finish" title='md5_finish' data-ref="md5_finish" id="md5_finish">md5_finish</a>( <a class="typedef" href="#md5_context" title='md5_context' data-type='struct md5_context' data-ref="md5_context">md5_context</a> *<dfn class="local col5 decl" id="5ctx" title='ctx' data-type='md5_context *' data-ref="5ctx">ctx</dfn>, <em>unsigned</em> <em>char</em> <dfn class="local col6 decl" id="6output" title='output' data-type='unsigned char *' data-ref="6output">output</dfn>[<var>16</var>] );</td></tr>
+<tr><th id="48">48</th><td></td></tr>
+<tr><th id="49">49</th><td><i class="doc">/**</i></td></tr>
+<tr><th id="50">50</th><td><i class="doc"> * <span class="command">\brief</span>          Output = MD5( input buffer )</i></td></tr>
+<tr><th id="51">51</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="52">52</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">input</span>    buffer holding the  data</i></td></tr>
+<tr><th id="53">53</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">ilen</span>     length of the input data</i></td></tr>
+<tr><th id="54">54</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">output</span>   MD5 checksum result</i></td></tr>
+<tr><th id="55">55</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="56">56</th><td><em>void</em> <a class="decl" href="md5.c.html#md5" title='md5' data-ref="md5" id="md5">md5</a>( <em>unsigned</em> <em>char</em> *<dfn class="local col7 decl" id="7input" title='input' data-type='unsigned char *' data-ref="7input">input</dfn>, <em>int</em> <dfn class="local col8 decl" id="8ilen" title='ilen' data-type='int' data-ref="8ilen">ilen</dfn>, <em>unsigned</em> <em>char</em> <dfn class="local col9 decl" id="9output" title='output' data-type='unsigned char *' data-ref="9output">output</dfn>[<var>16</var>] );</td></tr>
+<tr><th id="57">57</th><td></td></tr>
+<tr><th id="58">58</th><td><em>void</em> <a class="decl" href="md5.c.html#md5_hex" title='md5_hex' data-ref="md5_hex" id="md5_hex">md5_hex</a> (<em>char</em> *<dfn class="local col0 decl" id="10input" title='input' data-type='char *' data-ref="10input">input</dfn>, <em>int</em> <dfn class="local col1 decl" id="11ilen" title='ilen' data-type='int' data-ref="11ilen">ilen</dfn>, <em>char</em> <dfn class="local col2 decl" id="12output" title='output' data-type='char *' data-ref="12output">output</dfn>[<var>32</var>]);</td></tr>
+<tr><th id="59">59</th><td></td></tr>
+<tr><th id="60">60</th><td></td></tr>
+<tr><th id="61">61</th><td><i class="doc">/**</i></td></tr>
+<tr><th id="62">62</th><td><i class="doc"> * <span class="command">\brief</span>          Output = MD5( file contents )</i></td></tr>
+<tr><th id="63">63</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="64">64</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">path</span>     input file name</i></td></tr>
+<tr><th id="65">65</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">output</span>   MD5 checksum result</i></td></tr>
+<tr><th id="66">66</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="67">67</th><td><i class="doc"> * <span class="command">\return</span>         0 if successful, 1 if fopen failed,</i></td></tr>
+<tr><th id="68">68</th><td><i class="doc"> *                 or 2 if fread failed</i></td></tr>
+<tr><th id="69">69</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="70">70</th><td><em>int</em> <a class="decl" href="md5.c.html#md5_file" title='md5_file' data-ref="md5_file" id="md5_file">md5_file</a>( <em>char</em> *<dfn class="local col3 decl" id="13path" title='path' data-type='char *' data-ref="13path">path</dfn>, <em>unsigned</em> <em>char</em> <dfn class="local col4 decl" id="14output" title='output' data-type='unsigned char *' data-ref="14output">output</dfn>[<var>16</var>] );</td></tr>
+<tr><th id="71">71</th><td></td></tr>
+<tr><th id="72">72</th><td><i class="doc">/**</i></td></tr>
+<tr><th id="73">73</th><td><i class="doc"> * <span class="command">\brief</span>          MD5 HMAC context setup</i></td></tr>
+<tr><th id="74">74</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="75">75</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">ctx</span>      HMAC context to be initialized</i></td></tr>
+<tr><th id="76">76</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">key</span>      HMAC secret key</i></td></tr>
+<tr><th id="77">77</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">keylen</span>   length of the HMAC key</i></td></tr>
+<tr><th id="78">78</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="79">79</th><td><em>void</em> <a class="decl" href="md5.c.html#md5_hmac_starts" title='md5_hmac_starts' data-ref="md5_hmac_starts" id="md5_hmac_starts">md5_hmac_starts</a>( <a class="typedef" href="#md5_context" title='md5_context' data-type='struct md5_context' data-ref="md5_context">md5_context</a> *<dfn class="local col5 decl" id="15ctx" title='ctx' data-type='md5_context *' data-ref="15ctx">ctx</dfn>, <em>unsigned</em> <em>char</em> *<dfn class="local col6 decl" id="16key" title='key' data-type='unsigned char *' data-ref="16key">key</dfn>, <em>int</em> <dfn class="local col7 decl" id="17keylen" title='keylen' data-type='int' data-ref="17keylen">keylen</dfn> );</td></tr>
+<tr><th id="80">80</th><td></td></tr>
+<tr><th id="81">81</th><td><i class="doc">/**</i></td></tr>
+<tr><th id="82">82</th><td><i class="doc"> * <span class="command">\brief</span>          MD5 HMAC process buffer</i></td></tr>
+<tr><th id="83">83</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="84">84</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">ctx</span>      HMAC context</i></td></tr>
+<tr><th id="85">85</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">input</span>    buffer holding the  data</i></td></tr>
+<tr><th id="86">86</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">ilen</span>     length of the input data</i></td></tr>
+<tr><th id="87">87</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="88">88</th><td><em>void</em> <a class="decl" href="md5.c.html#md5_hmac_update" title='md5_hmac_update' data-ref="md5_hmac_update" id="md5_hmac_update">md5_hmac_update</a>( <a class="typedef" href="#md5_context" title='md5_context' data-type='struct md5_context' data-ref="md5_context">md5_context</a> *<dfn class="local col8 decl" id="18ctx" title='ctx' data-type='md5_context *' data-ref="18ctx">ctx</dfn>, <em>unsigned</em> <em>char</em> *<dfn class="local col9 decl" id="19input" title='input' data-type='unsigned char *' data-ref="19input">input</dfn>, <em>int</em> <dfn class="local col0 decl" id="20ilen" title='ilen' data-type='int' data-ref="20ilen">ilen</dfn> );</td></tr>
+<tr><th id="89">89</th><td></td></tr>
+<tr><th id="90">90</th><td><i class="doc">/**</i></td></tr>
+<tr><th id="91">91</th><td><i class="doc"> * <span class="command">\brief</span>          MD5 HMAC final digest</i></td></tr>
+<tr><th id="92">92</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="93">93</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">ctx</span>      HMAC context</i></td></tr>
+<tr><th id="94">94</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">output</span>   MD5 HMAC checksum result</i></td></tr>
+<tr><th id="95">95</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="96">96</th><td><em>void</em> <a class="decl" href="md5.c.html#md5_hmac_finish" title='md5_hmac_finish' data-ref="md5_hmac_finish" id="md5_hmac_finish">md5_hmac_finish</a>( <a class="typedef" href="#md5_context" title='md5_context' data-type='struct md5_context' data-ref="md5_context">md5_context</a> *<dfn class="local col1 decl" id="21ctx" title='ctx' data-type='md5_context *' data-ref="21ctx">ctx</dfn>, <em>unsigned</em> <em>char</em> <dfn class="local col2 decl" id="22output" title='output' data-type='unsigned char *' data-ref="22output">output</dfn>[<var>16</var>] );</td></tr>
+<tr><th id="97">97</th><td></td></tr>
+<tr><th id="98">98</th><td><i class="doc">/**</i></td></tr>
+<tr><th id="99">99</th><td><i class="doc"> * <span class="command">\brief</span>          Output = HMAC-MD5( hmac key, input buffer )</i></td></tr>
+<tr><th id="100">100</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="101">101</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">key</span>      HMAC secret key</i></td></tr>
+<tr><th id="102">102</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">keylen</span>   length of the HMAC key</i></td></tr>
+<tr><th id="103">103</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">input</span>    buffer holding the  data</i></td></tr>
+<tr><th id="104">104</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">ilen</span>     length of the input data</i></td></tr>
+<tr><th id="105">105</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">output</span>   HMAC-MD5 result</i></td></tr>
+<tr><th id="106">106</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="107">107</th><td><em>void</em> <a class="decl" href="md5.c.html#md5_hmac" title='md5_hmac' data-ref="md5_hmac" id="md5_hmac">md5_hmac</a>( <em>unsigned</em> <em>char</em> *<dfn class="local col3 decl" id="23key" title='key' data-type='unsigned char *' data-ref="23key">key</dfn>, <em>int</em> <dfn class="local col4 decl" id="24keylen" title='keylen' data-type='int' data-ref="24keylen">keylen</dfn>,</td></tr>
+<tr><th id="108">108</th><td>               <em>unsigned</em> <em>char</em> *<dfn class="local col5 decl" id="25input" title='input' data-type='unsigned char *' data-ref="25input">input</dfn>, <em>int</em> <dfn class="local col6 decl" id="26ilen" title='ilen' data-type='int' data-ref="26ilen">ilen</dfn>,</td></tr>
+<tr><th id="109">109</th><td>               <em>unsigned</em> <em>char</em> <dfn class="local col7 decl" id="27output" title='output' data-type='unsigned char *' data-ref="27output">output</dfn>[<var>16</var>] );</td></tr>
+<tr><th id="110">110</th><td></td></tr>
+<tr><th id="111">111</th><td><i class="doc">/**</i></td></tr>
+<tr><th id="112">112</th><td><i class="doc"> * <span class="command">\brief</span>          Checkup routine</i></td></tr>
+<tr><th id="113">113</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="114">114</th><td><i class="doc"> * <span class="command">\return</span>         0 if successful, or 1 if the test failed</i></td></tr>
+<tr><th id="115">115</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="116">116</th><td><em>int</em> <dfn class="decl" id="md5_self_test" title='md5_self_test' data-ref="md5_self_test">md5_self_test</dfn>( <em>int</em> <dfn class="local col8 decl" id="28verbose" title='verbose' data-type='int' data-ref="28verbose">verbose</dfn> );</td></tr>
+<tr><th id="117">117</th><td></td></tr>
+<tr><th id="118">118</th><td><u>#<span data-ppcond="118">ifdef</span> <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
+<tr><th id="119">119</th><td>}</td></tr>
+<tr><th id="120">120</th><td><u>#<span data-ppcond="118">endif</span></u></td></tr>
+<tr><th id="121">121</th><td></td></tr>
+<tr><th id="122">122</th><td><u>#<span data-ppcond="4">endif</span> /* md5.h */</u></td></tr>
+<tr><th id="123">123</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='md5.c.html'>MTProxy/common/md5.c</a><br/>Generated on <em>2018-Jun-02</em> from project MTProxy revision <em>842f343decf6c463bdecf1862e357c4a03e4bc97</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

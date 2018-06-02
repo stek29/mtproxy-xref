@@ -1,0 +1,5 @@
+<def f='MTProxy/net/net-crypto-dh.h' l='26' ll='30'/>
+<size>264</size>
+<mbr r='crypto_temp_dh_params::magic' o='0' t='int'/>
+<mbr r='crypto_temp_dh_params::dh_params_select' o='32' t='int'/>
+<mbr r='crypto_temp_dh_params::a' o='64' t='unsigned char [256]'/>

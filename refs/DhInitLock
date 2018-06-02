@@ -1,0 +1,4 @@
+<def f='MTProxy/net/net-crypto-dh.c' l='109' type='pthread_mutex_t'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='116' u='a' c='init_dh_params'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='118' u='a' c='init_dh_params'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='140' u='a' c='init_dh_params'/>

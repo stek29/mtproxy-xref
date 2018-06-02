@@ -1,0 +1,5 @@
+<dec f='MTProxy/common/rpc-const.h' l='31'/>
+<use f='MTProxy/common/tl-parse.c' l='622' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='838' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='839' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='737' u='c'/>

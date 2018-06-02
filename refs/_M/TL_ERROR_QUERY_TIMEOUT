@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/rpc-const.h' l='108'/>
+<doc f='MTProxy/common/rpc-const.h' l='105'>//
+// Error processing query -3000...-3999
+//</doc>

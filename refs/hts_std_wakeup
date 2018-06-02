@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-http-server.h' l='97' type='int hts_std_wakeup(connection_job_t c)'/>
+<dec f='MTProxy/net/net-http-server.c' l='54' type='int hts_std_wakeup(connection_job_t c)'/>
+<use f='MTProxy/net/net-http-server.c' l='72'/>
+<use f='MTProxy/net/net-http-server.c' l='72'/>
+<def f='MTProxy/net/net-http-server.c' l='642' ll='648' type='int hts_std_wakeup(connection_job_t c)'/>

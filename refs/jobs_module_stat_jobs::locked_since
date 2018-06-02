@@ -1,0 +1,6 @@
+<dec f='MTProxy/jobs/jobs.c' l='74' type='double'/>
+<use f='MTProxy/jobs/jobs.c' l='105' u='r' c='jobs_prepare_stat'/>
+<use f='MTProxy/jobs/jobs.c' l='106' u='r' c='jobs_prepare_stat'/>
+<use f='MTProxy/jobs/jobs.c' l='918' u='w' c='job_thread_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='921' u='w' c='job_thread_ex'/>
+<offset>320</offset>

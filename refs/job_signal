@@ -1,0 +1,39 @@
+<dec f='MTProxy/jobs/jobs.h' l='355' type='void job_signal(int job_tag_int, job_t job, int signo)'/>
+<use f='MTProxy/engine/engine-rpc.c' l='525' u='c' c='process_query_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='557' u='c' c='process_query_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='580' u='c' c='process_query_job'/>
+<use f='MTProxy/engine/engine.c' l='473' u='c' c='default_engine_server_start'/>
+<def f='MTProxy/jobs/jobs.c' l='771' ll='774' type='void job_signal(int job_tag_int, job_t job, int signo)'/>
+<use f='MTProxy/jobs/jobs.c' l='785' u='c' c='job_decref'/>
+<use f='MTProxy/jobs/jobs.c' l='831' u='c' c='complete_subjob'/>
+<use f='MTProxy/jobs/jobs.c' l='837' u='c' c='complete_subjob'/>
+<use f='MTProxy/jobs/jobs.c' l='845' u='c' c='complete_subjob'/>
+<use f='MTProxy/jobs/jobs.c' l='1121' u='c' c='job_timer_wakeup_gateway'/>
+<use f='MTProxy/jobs/jobs.c' l='1291' u='c' c='jobs_check_all_timers'/>
+<use f='MTProxy/jobs/jobs.c' l='1406' u='c' c='job_timer_insert'/>
+<use f='MTProxy/jobs/jobs.c' l='1516' u='c' c='job_message_send'/>
+<doc f='MTProxy/jobs/jobs.c' l='770'>// destroys one reference to job; sends signal signo to it</doc>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='796' u='c' c='push_rpc_confirmation'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1391' u='c' c='hts_stats_execute'/>
+<use f='MTProxy/net/net-connections.c' l='317' u='c' c='connection_write_close'/>
+<use f='MTProxy/net/net-connections.c' l='391' u='c' c='fail_connection'/>
+<use f='MTProxy/net/net-connections.c' l='494' u='c' c='cpu_server_close_connection'/>
+<use f='MTProxy/net/net-connections.c' l='503' u='c' c='cpu_server_close_connection'/>
+<use f='MTProxy/net/net-connections.c' l='524' u='c' c='cpu_server_close_connection'/>
+<use f='MTProxy/net/net-connections.c' l='879' u='c' c='net_server_socket_reader'/>
+<use f='MTProxy/net/net-connections.c' l='940' u='c' c='net_server_socket_reader'/>
+<use f='MTProxy/net/net-connections.c' l='980' u='c' c='net_server_socket_writer'/>
+<use f='MTProxy/net/net-connections.c' l='990' u='c' c='net_server_socket_writer'/>
+<use f='MTProxy/net/net-connections.c' l='1022' u='c' c='net_server_socket_writer'/>
+<use f='MTProxy/net/net-connections.c' l='1052' u='c' c='net_server_socket_read_write'/>
+<use f='MTProxy/net/net-connections.c' l='1122' u='c' c='net_server_socket_read_write_gateway'/>
+<use f='MTProxy/net/net-connections.c' l='1128' u='c' c='net_server_socket_read_write_gateway'/>
+<use f='MTProxy/net/net-connections.c' l='1133' u='c' c='net_server_socket_read_write_gateway'/>
+<use f='MTProxy/net/net-connections.c' l='1889' u='c' c='destroy_target'/>
+<use f='MTProxy/net/net-http-server.c' l='204' u='c' c='write_http_error'/>
+<use f='MTProxy/net/net-http-server.c' l='875' u='c' c='http_flush'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='89' u='c' c='cpu_tcp_server_writer'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='63' u='c' c='tcp_rpc_conn_send_init'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='87' u='c' c='tcp_rpc_conn_send_im'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='110' u='c' c='tcp_rpc_conn_send'/>
+<use f='MTProxy/net/net-thread.c' l='113' u='c' c='notification_event_insert_conn'/>

@@ -1,0 +1,3 @@
+<dec f='MTProxy/net/net-timers.c' l='37' type='long long'/>
+<use f='MTProxy/net/net-timers.c' l='142' u='w' c='thread_run_timers'/>
+<offset>128</offset>

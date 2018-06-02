@@ -1,0 +1,4 @@
+<def f='MTProxy/net/net-rpc-targets.c' l='77' macro='1' type='struct jobs_module_stat_rpc_targets *[256]'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='77' macro='1' u='w'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='80' macro='1' u='r'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='81' macro='1' u='r'/>

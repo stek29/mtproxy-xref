@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/sys/epoll.h' l='68' type='2147483648'/>
+<use f='MTProxy/net/net-events.c' l='221' macro='1' u='r'/>

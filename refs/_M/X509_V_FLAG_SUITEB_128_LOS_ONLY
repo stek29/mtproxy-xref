@@ -1,0 +1,2 @@
+<dec f='include/openssl/x509_vfy.h' l='427'/>
+<doc f='include/openssl/x509_vfy.h' l='426'>/* Suite B 128 bit only mode: not normally used */</doc>

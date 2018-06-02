@@ -1,0 +1,3 @@
+<def f='MTProxy/common/mp-queue.c' l='62' macro='1' type='void jobs_module_thread_init_mp_queue()'/>
+<use f='MTProxy/common/mp-queue.c' l='62' macro='1' u='r'/>
+<use f='MTProxy/common/mp-queue.c' l='62' macro='1' u='r'/>

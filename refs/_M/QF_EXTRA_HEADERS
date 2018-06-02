@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-http-server.h' l='87'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1249' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1252' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1256' u='c'/>
+<use f='MTProxy/net/net-http-server.c' l='849' u='c'/>
+<use f='MTProxy/net/net-http-server.c' l='851' u='c'/>

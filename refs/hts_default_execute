@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-http-server.c' l='93' type='int hts_default_execute(connection_job_t c, struct raw_message * raw, int op)'/>
+<use f='MTProxy/net/net-http-server.c' l='96'/>
+<use f='MTProxy/net/net-http-server.c' l='96'/>
+<def f='MTProxy/net/net-http-server.c' l='101' ll='122' type='int hts_default_execute(connection_job_t c, struct raw_message * raw, int op)'/>
+<use f='MTProxy/net/net-http-server.c' l='568' u='r' c='hts_parse_execute'/>

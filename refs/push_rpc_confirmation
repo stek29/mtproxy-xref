@@ -1,0 +1,2 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='791' ll='797' type='void push_rpc_confirmation(int C_tag_int, job_t C, int confirm)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='854' u='c' c='process_client_packet'/>

@@ -1,0 +1,5 @@
+<dec f='MTProxy/engine/engine.h' l='205' type='void server_init(conn_type_t * listen_connection_type, void * listen_connection_extra)'/>
+<use f='MTProxy/engine/engine-net.c' l='133' u='c' c='engine_server_init'/>
+<def f='MTProxy/engine/engine.c' l='276' ll='318' type='void server_init(conn_type_t * listen_connection_type, void * listen_connection_extra)'/>
+<doc f='MTProxy/engine/engine.c' l='274'>/* }}} */</doc>
+<doc f='MTProxy/engine/engine.c' l='276'>/* {{{ */</doc>

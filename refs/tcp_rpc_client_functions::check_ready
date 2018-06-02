@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-tcp-rpc-client.h' l='32' type='int (*)(connection_job_t)'/>
+<offset>192</offset>
+<doc f='MTProxy/net/net-tcp-rpc-client.h' l='32'>/* invoked from rpc_client_check_ready() */</doc>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='772' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='97' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='497' u='r' c='tcp_rpc_client_check_ready'/>

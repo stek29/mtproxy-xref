@@ -1,0 +1,7 @@
+<dec f='include/arpa/inet.h' l='58' type='int inet_pton(int __af, const char *restrict __cp, void *restrict __buf)'/>
+<doc f='include/arpa/inet.h' l='55'>/* Convert from presentation format of an Internet number in buffer
+   starting at CP to the binary network format and store result for
+   interface type AF in buffer starting at BUF.  */</doc>
+<use f='MTProxy/engine/engine-net.c' l='208' u='c' c='f_parse_option_net'/>
+<use f='MTProxy/net/net-connections.c' l='2152' u='c' c='net_add_nat_info'/>
+<use f='MTProxy/net/net-connections.c' l='2156' u='c' c='net_add_nat_info'/>

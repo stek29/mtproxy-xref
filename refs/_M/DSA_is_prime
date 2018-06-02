@@ -1,0 +1,5 @@
+<dec f='include/openssl/dsa.h' l='257'/>
+<doc f='include/openssl/dsa.h' l='253'>/*
+ * Primality test according to FIPS PUB 186[-1], Appendix 2.1: 50 rounds of
+ * Rabin-Miller
+ */</doc>

@@ -1,0 +1,10 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='192' type='struct ext_connection_ref [4194304]'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='250' u='m' c='get_ext_connection_by_in_conn_id'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='251' u='m' c='get_ext_connection_by_in_conn_id'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='252' u='m' c='get_ext_connection_by_in_conn_id'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='285' u='m' c='get_ext_connection_by_in_conn_id'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='288' u='m' c='get_ext_connection_by_in_conn_id'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='289' u='m' c='get_ext_connection_by_in_conn_id'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='289' u='m' c='get_ext_connection_by_in_conn_id'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='302' u='m' c='find_ext_connection_by_out_conn_id'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='303' u='m' c='find_ext_connection_by_out_conn_id'/>

@@ -1,0 +1,8 @@
+<dec f='MTProxy/common/mp-queue.h' l='127'/>
+<doc f='MTProxy/common/mp-queue.h' l='126'>// flags for mpq_push / mpq_pop functions</doc>
+<use f='MTProxy/common/mp-queue.c' l='173' u='c'/>
+<use f='MTProxy/common/mp-queue.c' l='181' u='c'/>
+<use f='MTProxy/common/mp-queue.c' l='186' u='c'/>
+<use f='MTProxy/common/mp-queue.c' l='437' u='c'/>
+<use f='MTProxy/common/mp-queue.c' l='471' u='c'/>
+<use f='MTProxy/common/mp-queue.c' l='535' u='c'/>

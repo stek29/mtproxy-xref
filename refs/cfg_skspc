@@ -1,0 +1,8 @@
+<dec f='MTProxy/common/parse-config.h' l='27' type='int cfg_skspc()'/>
+<def f='MTProxy/common/parse-config.c' l='56' ll='61' type='int cfg_skspc()'/>
+<use f='MTProxy/common/parse-config.c' l='77' u='c' c='cfg_getword'/>
+<use f='MTProxy/common/parse-config.c' l='96' u='c' c='cfg_getstr'/>
+<use f='MTProxy/common/parse-config.c' l='106' u='c' c='cfg_getint'/>
+<use f='MTProxy/common/parse-config.c' l='117' u='c' c='cfg_getint_zero'/>
+<use f='MTProxy/common/parse-config.c' l='132' u='c' c='cfg_getint_signed_zero'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='286' u='c' c='parse_config'/>

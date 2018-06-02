@@ -1,0 +1,7 @@
+<dec f='MTProxy/crypto/aesni256.h' l='39' type='void (*)(struct tg_aes_ctx *, const unsigned char *, unsigned char *, int, unsigned char *, unsigned char *, unsigned int *)'/>
+<offset>192</offset>
+<use f='MTProxy/crypto/aesni256.c' l='114' u='w'/>
+<use f='MTProxy/crypto/aesni256.c' l='126' u='w'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='245' u='r' c='cpu_tcp_aes_crypto_ctr128_encrypt_output'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='261' u='r' c='cpu_tcp_aes_crypto_ctr128_decrypt_input'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='216' u='r' c='tcp_rpcs_compact_parse_execute'/>

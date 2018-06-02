@@ -1,0 +1,7 @@
+<dec f='MTProxy/net/net-connections.h' l='168' type='int (*)(connection_job_t, void *, int)'/>
+<offset>1792</offset>
+<doc f='MTProxy/net/net-connections.h' l='167'>// INLINE METHODS</doc>
+<doc f='MTProxy/net/net-connections.h' l='168'>/* &lt; 0 = error */</doc>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='85' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='73' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='80' u='w'/>

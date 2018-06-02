@@ -1,0 +1,16 @@
+<dec f='MTProxy/net/net-rpc-targets.h' l='36' type='struct tree_connection *'/>
+<offset>320</offset>
+<doc f='MTProxy/net/net-rpc-targets.h' l='34'>//connection_job_t first, last;
+  //conn_target_job_t target;</doc>
+<use f='MTProxy/net/net-rpc-targets.c' l='133' u='r' c='rpc_target_insert_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='136' u='r' c='rpc_target_insert_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='142' u='w' c='rpc_target_insert_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='142' u='r' c='rpc_target_insert_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='177' u='r' c='rpc_target_delete_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='180' u='r' c='rpc_target_delete_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='184' u='w' c='rpc_target_delete_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='184' u='r' c='rpc_target_delete_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='292' u='r' c='rpc_target_choose_connection'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='292' u='a' c='rpc_target_choose_connection'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='328' u='r' c='rpc_target_choose_random_connections'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='328' u='a' c='rpc_target_choose_random_connections'/>

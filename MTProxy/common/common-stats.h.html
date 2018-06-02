@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>common-stats.h source code [MTProxy/common/common-stats.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="stats_buffer "/>
+<link rel="stylesheet" href="https://code.woboq.org/data//qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="https://code.woboq.org/data//kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery-ui.min.js"></script>
+<script>var file = 'MTProxy/common/common-stats.h'; var root_path = '../..'; var data_path = 'https://code.woboq.org/data/';</script>
+<script src='https://code.woboq.org/data//codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='..'>MTProxy</a>/<a href='./'>common</a>/<a href='common-stats.h.html'>common-stats.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>    This file is part of Mtproto-proxy Library.</i></td></tr>
+<tr><th id="3">3</th><td><i></i></td></tr>
+<tr><th id="4">4</th><td><i>    Mtproto-proxy Library is free software: you can redistribute it and/or modify</i></td></tr>
+<tr><th id="5">5</th><td><i>    it under the terms of the GNU Lesser General Public License as published by</i></td></tr>
+<tr><th id="6">6</th><td><i>    the Free Software Foundation, either version 2 of the License, or</i></td></tr>
+<tr><th id="7">7</th><td><i>    (at your option) any later version.</i></td></tr>
+<tr><th id="8">8</th><td><i></i></td></tr>
+<tr><th id="9">9</th><td><i>    Mtproto-proxy Library is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="10">10</th><td><i>    but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="11">11</th><td><i>    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</i></td></tr>
+<tr><th id="12">12</th><td><i>    GNU Lesser General Public License for more details.</i></td></tr>
+<tr><th id="13">13</th><td><i></i></td></tr>
+<tr><th id="14">14</th><td><i>    You should have received a copy of the GNU Lesser General Public License</i></td></tr>
+<tr><th id="15">15</th><td><i>    along with Mtproto-proxy Library.  If not, see &lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</i></td></tr>
+<tr><th id="16">16</th><td><i></i></td></tr>
+<tr><th id="17">17</th><td><i>    Copyright 2012-2013 Vkontakte Ltd</i></td></tr>
+<tr><th id="18">18</th><td><i>              2012-2013 Anton Maydell</i></td></tr>
+<tr><th id="19">19</th><td><i>    </i></td></tr>
+<tr><th id="20">20</th><td><i>    Copyright 2014-2017 Telegram Messenger Inc             </i></td></tr>
+<tr><th id="21">21</th><td><i>              2014-2017 Anton Maydell</i></td></tr>
+<tr><th id="22">22</th><td><i>*/</i></td></tr>
+<tr><th id="23">23</th><td></td></tr>
+<tr><th id="24">24</th><td><u>#pragma once</u></td></tr>
+<tr><th id="25">25</th><td></td></tr>
+<tr><th id="26">26</th><td><u>#include <a href="../../include/string.h.html">&lt;string.h&gt;</a></u></td></tr>
+<tr><th id="27">27</th><td><u>#include <a href="../../include/x86_64-linux-gnu/sys/types.h.html">&lt;sys/types.h&gt;</a></u></td></tr>
+<tr><th id="28">28</th><td><u>#include <a href="../../include/stdio.h.html">&lt;stdio.h&gt;</a></u></td></tr>
+<tr><th id="29">29</th><td></td></tr>
+<tr><th id="30">30</th><td><u>#define <dfn class="macro" id="_M/AM_GET_MEMORY_USAGE_SELF" data-ref="_M/AM_GET_MEMORY_USAGE_SELF">AM_GET_MEMORY_USAGE_SELF</dfn> 1</u></td></tr>
+<tr><th id="31">31</th><td><u>#define <dfn class="macro" id="_M/AM_GET_MEMORY_USAGE_OVERALL" data-ref="_M/AM_GET_MEMORY_USAGE_OVERALL">AM_GET_MEMORY_USAGE_OVERALL</dfn> 2</u></td></tr>
+<tr><th id="32">32</th><td></td></tr>
+<tr><th id="33">33</th><td><u>#define <dfn class="macro" id="_M/SB_PRINT_I64" data-ref="_M/SB_PRINT_I64">SB_PRINT_I64</dfn>(x) sb_printf (&amp;sb, "%s\t%lld\n", #x, x)</u></td></tr>
+<tr><th id="34">34</th><td><u>#define <dfn class="macro" id="_M/SB_PRINT_I32" data-ref="_M/SB_PRINT_I32">SB_PRINT_I32</dfn>(x) sb_printf (&amp;sb, "%s\t%d\n", #x, x)</u></td></tr>
+<tr><th id="35">35</th><td><u>#define <dfn class="macro" id="_M/SB_PRINT_QUERIES" data-ref="_M/SB_PRINT_QUERIES">SB_PRINT_QUERIES</dfn>(x) sb_print_queries (&amp;sb, #x, x)</u></td></tr>
+<tr><th id="36">36</th><td><u>#define <dfn class="macro" id="_M/SB_PRINT_DOUBLE" data-ref="_M/SB_PRINT_DOUBLE">SB_PRINT_DOUBLE</dfn>(x) sb_printf (&amp;sb, "%s\t%.6lf\n", #x, x)</u></td></tr>
+<tr><th id="37">37</th><td><u>#define <dfn class="macro" id="_M/SB_PRINT_TIME" data-ref="_M/SB_PRINT_TIME">SB_PRINT_TIME</dfn>(x) sb_printf (&amp;sb, "%s\t%.6lfs\n", #x, x)</u></td></tr>
+<tr><th id="38">38</th><td><u>#define <dfn class="macro" id="_M/SB_PRINT_PERCENT" data-ref="_M/SB_PRINT_PERCENT">SB_PRINT_PERCENT</dfn>(x) sb_printf (&amp;sb, "%s\t%.3lf%%\n", #x, x)</u></td></tr>
+<tr><th id="39">39</th><td></td></tr>
+<tr><th id="40">40</th><td><u>#define <dfn class="macro" id="_M/SBP_PRINT_I32" data-ref="_M/SBP_PRINT_I32">SBP_PRINT_I32</dfn>(x) sb_printf (sb, "%s\t%d\n", #x, x)</u></td></tr>
+<tr><th id="41">41</th><td><u>#define <dfn class="macro" id="_M/SBP_PRINT_I64" data-ref="_M/SBP_PRINT_I64">SBP_PRINT_I64</dfn>(x) sb_printf (sb, "%s\t%lld\n", #x, x)</u></td></tr>
+<tr><th id="42">42</th><td><u>#define <dfn class="macro" id="_M/SBP_PRINT_QUERIES" data-ref="_M/SBP_PRINT_QUERIES">SBP_PRINT_QUERIES</dfn>(x) sb_print_queries (sb, #x, x)</u></td></tr>
+<tr><th id="43">43</th><td><u>#define <dfn class="macro" id="_M/SBP_PRINT_DOUBLE" data-ref="_M/SBP_PRINT_DOUBLE">SBP_PRINT_DOUBLE</dfn>(x) sb_printf (sb, "%s\t%.6lf\n", #x, x)</u></td></tr>
+<tr><th id="44">44</th><td><u>#define <dfn class="macro" id="_M/SBP_PRINT_TIME" data-ref="_M/SBP_PRINT_TIME">SBP_PRINT_TIME</dfn>(x) sb_printf (sb, "%s\t%.6lfs\n", #x, x)</u></td></tr>
+<tr><th id="45">45</th><td><u>#define <dfn class="macro" id="_M/SBP_PRINT_PERCENT" data-ref="_M/SBP_PRINT_PERCENT">SBP_PRINT_PERCENT</dfn>(x) sb_printf (sb, "%s\t%.3lf%%\n", #x, x)</u></td></tr>
+<tr><th id="46">46</th><td><u>#define <dfn class="macro" id="_M/SBP_PRINT_DATE" data-ref="_M/SBP_PRINT_DATE">SBP_PRINT_DATE</dfn>(x) sbp_print_date (sb, #x, x)</u></td></tr>
+<tr><th id="47">47</th><td></td></tr>
+<tr><th id="48">48</th><td><u>#define <dfn class="macro" id="_M/SBM_PRINT_I32" data-ref="_M/SBM_PRINT_I32">SBM_PRINT_I32</dfn>(x) sb_printf (sb, "%s%s\t%d\n", MODULE_STAT_PREFIX_NAME ?: "", #x, x)</u></td></tr>
+<tr><th id="49">49</th><td><u>#define <dfn class="macro" id="_M/SBM_PRINT_I64" data-ref="_M/SBM_PRINT_I64">SBM_PRINT_I64</dfn>(x) sb_printf (sb, "%s%s\t%lld\n", MODULE_STAT_PREFIX_NAME ?: "", #x, x)</u></td></tr>
+<tr><th id="50">50</th><td><u>#define <dfn class="macro" id="_M/SBM_PRINT_DOUBLE" data-ref="_M/SBM_PRINT_DOUBLE">SBM_PRINT_DOUBLE</dfn>(x) sb_printf (sb, "%s%s\t%.6lf\n", MODULE_STAT_PREFIX_NAME ?: "", #x, x)</u></td></tr>
+<tr><th id="51">51</th><td><u>#define <dfn class="macro" id="_M/SBM_PRINT_TIME" data-ref="_M/SBM_PRINT_TIME">SBM_PRINT_TIME</dfn>(x) sb_printf (sb, "%s%s\t%.6lfs\n", MODULE_STAT_PREFIX_NAME ?: "", #x, x)</u></td></tr>
+<tr><th id="52">52</th><td><u>#define <dfn class="macro" id="_M/SBM_PRINT_PERCENT" data-ref="_M/SBM_PRINT_PERCENT">SBM_PRINT_PERCENT</dfn>(x) sb_printf (sb, "%s%s\t%.3lf%%\n", MODULE_STAT_PREFIX_NAME ?: "", #x, x)</u></td></tr>
+<tr><th id="53">53</th><td></td></tr>
+<tr><th id="54">54</th><td><em>static</em> <b>inline</b> <em>double</em> <dfn class="decl def" id="safe_div" title='safe_div' data-ref="safe_div">safe_div</dfn> (<em>double</em> <dfn class="local col7 decl" id="1187x" title='x' data-type='double' data-ref="1187x">x</dfn>, <em>double</em> <dfn class="local col8 decl" id="1188y" title='y' data-type='double' data-ref="1188y">y</dfn>) { <b>return</b> <a class="local col8 ref" href="#1188y" title='y' data-ref="1188y">y</a> &gt; <var>0</var> ? <a class="local col7 ref" href="#1187x" title='x' data-ref="1187x">x</a>/<a class="local col8 ref" href="#1188y" title='y' data-ref="1188y">y</a> : <var>0</var>; }</td></tr>
+<tr><th id="55">55</th><td></td></tr>
+<tr><th id="56">56</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="57">57</th><td>  <em>long</em> <em>long</em> <dfn class="decl" id="(anonymous)::vm_size" title='(anonymous struct)::vm_size' data-ref="(anonymous)::vm_size">vm_size</dfn>;</td></tr>
+<tr><th id="58">58</th><td>  <em>long</em> <em>long</em> <dfn class="decl" id="(anonymous)::vm_rss" title='(anonymous struct)::vm_rss' data-ref="(anonymous)::vm_rss">vm_rss</dfn>;</td></tr>
+<tr><th id="59">59</th><td>  <em>long</em> <em>long</em> <dfn class="decl" id="(anonymous)::vm_data" title='(anonymous struct)::vm_data' data-ref="(anonymous)::vm_data">vm_data</dfn>;</td></tr>
+<tr><th id="60">60</th><td>  <em>long</em> <em>long</em> <dfn class="decl" id="(anonymous)::mem_free" title='(anonymous struct)::mem_free' data-ref="(anonymous)::mem_free">mem_free</dfn>;</td></tr>
+<tr><th id="61">61</th><td>  <em>long</em> <em>long</em> <dfn class="decl" id="(anonymous)::swap_total" title='(anonymous struct)::swap_total' data-ref="(anonymous)::swap_total">swap_total</dfn>;</td></tr>
+<tr><th id="62">62</th><td>  <em>long</em> <em>long</em> <dfn class="decl" id="(anonymous)::swap_free" title='(anonymous struct)::swap_free' data-ref="(anonymous)::swap_free">swap_free</dfn>;</td></tr>
+<tr><th id="63">63</th><td>  <em>long</em> <em>long</em> <dfn class="decl" id="(anonymous)::swap_used" title='(anonymous struct)::swap_used' data-ref="(anonymous)::swap_used">swap_used</dfn>;</td></tr>
+<tr><th id="64">64</th><td>  <em>long</em> <em>long</em> <dfn class="decl" id="(anonymous)::mem_cached" title='(anonymous struct)::mem_cached' data-ref="(anonymous)::mem_cached">mem_cached</dfn>;</td></tr>
+<tr><th id="65">65</th><td>} <dfn class="typedef" id="am_memory_stat_t" title='am_memory_stat_t' data-type='struct am_memory_stat_t' data-ref="am_memory_stat_t">am_memory_stat_t</dfn>;</td></tr>
+<tr><th id="66">66</th><td></td></tr>
+<tr><th id="67">67</th><td><em>int</em> <a class="decl" href="common-stats.c.html#am_get_memory_usage" title='am_get_memory_usage' data-ref="am_get_memory_usage" id="am_get_memory_usage">am_get_memory_usage</a> (<a class="typedef" href="../../include/x86_64-linux-gnu/sys/types.h.html#pid_t" title='pid_t' data-type='__pid_t' data-ref="pid_t">pid_t</a> <dfn class="local col9 decl" id="1189pid" title='pid' data-type='pid_t' data-ref="1189pid">pid</dfn>, <em>long</em> <em>long</em> *<dfn class="local col0 decl" id="1190a" title='a' data-type='long long *' data-ref="1190a">a</dfn>, <em>int</em> <dfn class="local col1 decl" id="1191m" title='m' data-type='int' data-ref="1191m">m</dfn>);</td></tr>
+<tr><th id="68">68</th><td><em>int</em> <a class="decl" href="common-stats.c.html#am_get_memory_stats" title='am_get_memory_stats' data-ref="am_get_memory_stats" id="am_get_memory_stats">am_get_memory_stats</a> (<a class="typedef" href="#am_memory_stat_t" title='am_memory_stat_t' data-type='struct am_memory_stat_t' data-ref="am_memory_stat_t">am_memory_stat_t</a> *<dfn class="local col2 decl" id="1192S" title='S' data-type='am_memory_stat_t *' data-ref="1192S">S</dfn>, <em>int</em> <dfn class="local col3 decl" id="1193flags" title='flags' data-type='int' data-ref="1193flags">flags</dfn>);</td></tr>
+<tr><th id="69">69</th><td></td></tr>
+<tr><th id="70">70</th><td><b>typedef</b> <b>struct</b> <dfn class="type def" id="stats_buffer" title='stats_buffer' data-ref="stats_buffer"><a class="type" href="#stats_buffer" title='stats_buffer' data-ref="stats_buffer">stats_buffer</a></dfn> {</td></tr>
+<tr><th id="71">71</th><td>  <em>char</em> *<dfn class="decl" id="stats_buffer::buff" title='stats_buffer::buff' data-ref="stats_buffer::buff">buff</dfn>;</td></tr>
+<tr><th id="72">72</th><td>  <em>int</em> <dfn class="decl" id="stats_buffer::pos" title='stats_buffer::pos' data-ref="stats_buffer::pos">pos</dfn>;</td></tr>
+<tr><th id="73">73</th><td>  <em>int</em> <dfn class="decl" id="stats_buffer::size" title='stats_buffer::size' data-ref="stats_buffer::size">size</dfn>;</td></tr>
+<tr><th id="74">74</th><td>  <em>int</em> <dfn class="decl" id="stats_buffer::flags" title='stats_buffer::flags' data-ref="stats_buffer::flags">flags</dfn>;</td></tr>
+<tr><th id="75">75</th><td>} <dfn class="typedef" id="stats_buffer_t" title='stats_buffer_t' data-type='struct stats_buffer' data-ref="stats_buffer_t">stats_buffer_t</dfn>;</td></tr>
+<tr><th id="76">76</th><td></td></tr>
+<tr><th id="77">77</th><td><em>void</em> <a class="decl" href="common-stats.c.html#sb_init" title='sb_init' data-ref="sb_init" id="sb_init">sb_init</a> (<a class="typedef" href="#stats_buffer_t" title='stats_buffer_t' data-type='struct stats_buffer' data-ref="stats_buffer_t">stats_buffer_t</a> *<dfn class="local col4 decl" id="1194sb" title='sb' data-type='stats_buffer_t *' data-ref="1194sb">sb</dfn>, <em>char</em> *<dfn class="local col5 decl" id="1195buff" title='buff' data-type='char *' data-ref="1195buff">buff</dfn>, <em>int</em> <dfn class="local col6 decl" id="1196size" title='size' data-type='int' data-ref="1196size">size</dfn>);</td></tr>
+<tr><th id="78">78</th><td><em>void</em> <a class="decl" href="common-stats.c.html#sb_alloc" title='sb_alloc' data-ref="sb_alloc" id="sb_alloc">sb_alloc</a> (<a class="typedef" href="#stats_buffer_t" title='stats_buffer_t' data-type='struct stats_buffer' data-ref="stats_buffer_t">stats_buffer_t</a> *<dfn class="local col7 decl" id="1197sb" title='sb' data-type='stats_buffer_t *' data-ref="1197sb">sb</dfn>, <em>int</em> <dfn class="local col8 decl" id="1198size" title='size' data-type='int' data-ref="1198size">size</dfn>);</td></tr>
+<tr><th id="79">79</th><td><em>void</em> <a class="decl" href="common-stats.c.html#sb_release" title='sb_release' data-ref="sb_release" id="sb_release">sb_release</a> (<a class="typedef" href="#stats_buffer_t" title='stats_buffer_t' data-type='struct stats_buffer' data-ref="stats_buffer_t">stats_buffer_t</a> *<dfn class="local col9 decl" id="1199sb" title='sb' data-type='stats_buffer_t *' data-ref="1199sb">sb</dfn>);</td></tr>
+<tr><th id="80">80</th><td></td></tr>
+<tr><th id="81">81</th><td><em>void</em> <a class="decl" href="common-stats.c.html#sb_prepare" title='sb_prepare' data-ref="sb_prepare" id="sb_prepare">sb_prepare</a> (<a class="typedef" href="#stats_buffer_t" title='stats_buffer_t' data-type='struct stats_buffer' data-ref="stats_buffer_t">stats_buffer_t</a> *<dfn class="local col0 decl" id="1200sb" title='sb' data-type='stats_buffer_t *' data-ref="1200sb">sb</dfn>);</td></tr>
+<tr><th id="82">82</th><td><em>void</em> <a class="decl" href="common-stats.c.html#sb_printf" title='sb_printf' data-ref="sb_printf" id="sb_printf">sb_printf</a> (<a class="typedef" href="#stats_buffer_t" title='stats_buffer_t' data-type='struct stats_buffer' data-ref="stats_buffer_t">stats_buffer_t</a> *<dfn class="local col1 decl" id="1201sb" title='sb' data-type='stats_buffer_t *' data-ref="1201sb">sb</dfn>, <em>const</em> <em>char</em> *<dfn class="local col2 decl" id="1202format" title='format' data-type='const char *' data-ref="1202format">format</dfn>, ...) <b>__attribute__</b> ((format (printf, <var>2</var>, <var>3</var>)));</td></tr>
+<tr><th id="83">83</th><td><em>void</em> <a class="decl" href="common-stats.c.html#sb_memory" title='sb_memory' data-ref="sb_memory" id="sb_memory">sb_memory</a> (<a class="typedef" href="#stats_buffer_t" title='stats_buffer_t' data-type='struct stats_buffer' data-ref="stats_buffer_t">stats_buffer_t</a> *<dfn class="local col3 decl" id="1203sb" title='sb' data-type='stats_buffer_t *' data-ref="1203sb">sb</dfn>, <em>int</em> <dfn class="local col4 decl" id="1204flags" title='flags' data-type='int' data-ref="1204flags">flags</dfn>);</td></tr>
+<tr><th id="84">84</th><td><em>void</em> <a class="decl" href="common-stats.c.html#sb_print_queries" title='sb_print_queries' data-ref="sb_print_queries" id="sb_print_queries">sb_print_queries</a> (<a class="typedef" href="#stats_buffer_t" title='stats_buffer_t' data-type='struct stats_buffer' data-ref="stats_buffer_t">stats_buffer_t</a> *<dfn class="local col5 decl" id="1205sb" title='sb' data-type='stats_buffer_t *' data-ref="1205sb">sb</dfn>, <em>const</em> <em>char</em> *<em>const</em> <dfn class="local col6 decl" id="1206desc" title='desc' data-type='const char *const' data-ref="1206desc">desc</dfn>, <em>long</em> <em>long</em> <dfn class="local col7 decl" id="1207q" title='q' data-type='long long' data-ref="1207q">q</dfn>);</td></tr>
+<tr><th id="85">85</th><td><em>void</em> <a class="decl" href="common-stats.c.html#sbp_print_date" title='sbp_print_date' data-ref="sbp_print_date" id="sbp_print_date">sbp_print_date</a> (<a class="typedef" href="#stats_buffer_t" title='stats_buffer_t' data-type='struct stats_buffer' data-ref="stats_buffer_t">stats_buffer_t</a> *<dfn class="local col8 decl" id="1208sb" title='sb' data-type='stats_buffer_t *' data-ref="1208sb">sb</dfn>, <em>const</em> <em>char</em> *<dfn class="local col9 decl" id="1209key" title='key' data-type='const char *' data-ref="1209key">key</dfn>, <a class="typedef" href="../../include/time.h.html#time_t" title='time_t' data-type='__time_t' data-ref="time_t">time_t</a> <dfn class="local col0 decl" id="1210unix_time" title='unix_time' data-type='time_t' data-ref="1210unix_time">unix_time</dfn>);</td></tr>
+<tr><th id="86">86</th><td></td></tr>
+<tr><th id="87">87</th><td><b>typedef</b> <em>void</em> (*<dfn class="typedef" id="stat_fun_t" title='stat_fun_t' data-type='void (*)(stats_buffer_t *)' data-ref="stat_fun_t">stat_fun_t</dfn>) (<a class="typedef" href="#stats_buffer_t" title='stats_buffer_t' data-type='struct stats_buffer' data-ref="stats_buffer_t">stats_buffer_t</a> *<dfn class="local col1 decl" id="1211sb" title='sb' data-type='stats_buffer_t *' data-ref="1211sb">sb</dfn>);</td></tr>
+<tr><th id="88">88</th><td><em>int</em> <a class="decl" href="common-stats.c.html#sb_register_stat_fun" title='sb_register_stat_fun' data-ref="sb_register_stat_fun" id="sb_register_stat_fun">sb_register_stat_fun</a> (<a class="typedef" href="#stat_fun_t" title='stat_fun_t' data-type='void (*)(stats_buffer_t *)' data-ref="stat_fun_t">stat_fun_t</a> <dfn class="local col2 decl" id="1212fun" title='fun' data-type='stat_fun_t' data-ref="1212fun">fun</dfn>);</td></tr>
+<tr><th id="89">89</th><td></td></tr>
+<tr><th id="90">90</th><td><em>int</em> <a class="decl" href="common-stats.c.html#sb_sum_i" title='sb_sum_i' data-ref="sb_sum_i" id="sb_sum_i">sb_sum_i</a> (<em>void</em> **<dfn class="local col3 decl" id="1213base" title='base' data-type='void **' data-ref="1213base">base</dfn>, <em>int</em> <dfn class="local col4 decl" id="1214len" title='len' data-type='int' data-ref="1214len">len</dfn>, <em>int</em> <dfn class="local col5 decl" id="1215offset" title='offset' data-type='int' data-ref="1215offset">offset</dfn>);</td></tr>
+<tr><th id="91">91</th><td><em>long</em> <em>long</em> <a class="decl" href="common-stats.c.html#sb_sum_ll" title='sb_sum_ll' data-ref="sb_sum_ll" id="sb_sum_ll">sb_sum_ll</a> (<em>void</em> **<dfn class="local col6 decl" id="1216base" title='base' data-type='void **' data-ref="1216base">base</dfn>, <em>int</em> <dfn class="local col7 decl" id="1217len" title='len' data-type='int' data-ref="1217len">len</dfn>, <em>int</em> <dfn class="local col8 decl" id="1218offset" title='offset' data-type='int' data-ref="1218offset">offset</dfn>);</td></tr>
+<tr><th id="92">92</th><td><em>double</em> <a class="decl" href="common-stats.c.html#sb_sum_f" title='sb_sum_f' data-ref="sb_sum_f" id="sb_sum_f">sb_sum_f</a> (<em>void</em> **<dfn class="local col9 decl" id="1219base" title='base' data-type='void **' data-ref="1219base">base</dfn>, <em>int</em> <dfn class="local col0 decl" id="1220len" title='len' data-type='int' data-ref="1220len">len</dfn>, <em>int</em> <dfn class="local col1 decl" id="1221offset" title='offset' data-type='int' data-ref="1221offset">offset</dfn>);</td></tr>
+<tr><th id="93">93</th><td></td></tr>
+<tr><th id="94">94</th><td><u>#define <dfn class="macro" id="_M/SB_SUM_I" data-ref="_M/SB_SUM_I">SB_SUM_I</dfn>(name) \</u></td></tr>
+<tr><th id="95">95</th><td><u>  sb_sum_i ((void **)MODULE_STAT_ARR, max_job_thread_id + 1, offsetof (MODULE_STAT_TYPE, name))</u></td></tr>
+<tr><th id="96">96</th><td></td></tr>
+<tr><th id="97">97</th><td><u>#define <dfn class="macro" id="_M/SB_SUM_LL" data-ref="_M/SB_SUM_LL">SB_SUM_LL</dfn>(name) \</u></td></tr>
+<tr><th id="98">98</th><td><u>  sb_sum_ll ((void **)MODULE_STAT_ARR, max_job_thread_id + 1, offsetof (MODULE_STAT_TYPE, name))</u></td></tr>
+<tr><th id="99">99</th><td></td></tr>
+<tr><th id="100">100</th><td><u>#define <dfn class="macro" id="_M/SB_SUM_F" data-ref="_M/SB_SUM_F">SB_SUM_F</dfn>(name) \</u></td></tr>
+<tr><th id="101">101</th><td><u>  sb_sum_f ((void **)MODULE_STAT_ARR, max_job_thread_id + 1, offsetof (MODULE_STAT_TYPE, name))</u></td></tr>
+<tr><th id="102">102</th><td></td></tr>
+<tr><th id="103">103</th><td><u>#define <dfn class="macro" id="_M/SB_SUM_ONE_I" data-ref="_M/SB_SUM_ONE_I">SB_SUM_ONE_I</dfn>(name) sb_printf (sb, "%s%s\t%d\n", MODULE_STAT_PREFIX_NAME ?: "", #name, SB_SUM_I(name))</u></td></tr>
+<tr><th id="104">104</th><td><u>#define <dfn class="macro" id="_M/SB_SUM_ONE_LL" data-ref="_M/SB_SUM_ONE_LL">SB_SUM_ONE_LL</dfn>(name) sb_printf (sb, "%s%s\t%lld\n", MODULE_STAT_PREFIX_NAME ?: "", #name, SB_SUM_LL(name))</u></td></tr>
+<tr><th id="105">105</th><td><u>#define <dfn class="macro" id="_M/SB_SUM_ONE_F" data-ref="_M/SB_SUM_ONE_F">SB_SUM_ONE_F</dfn>(name) sb_printf (sb, "%s%s\t%lf\n", MODULE_STAT_PREFIX_NAME ?: "", #name, SB_SUM_F(name))</u></td></tr>
+<tr><th id="106">106</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='common-stats.c.html'>MTProxy/common/common-stats.c</a><br/>Generated on <em>2018-Jun-02</em> from project MTProxy revision <em>842f343decf6c463bdecf1862e357c4a03e4bc97</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

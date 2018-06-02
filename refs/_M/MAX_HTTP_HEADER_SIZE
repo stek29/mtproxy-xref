@@ -1,0 +1,9 @@
+<dec f='MTProxy/net/net-http-server.h' l='30'/>
+<doc f='MTProxy/net/net-http-server.h' l='29'>//#include &quot;net/net-buffers.h&quot;</doc>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1375' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1425' u='c'/>
+<use f='MTProxy/net/net-http-server.c' l='331' u='c'/>
+<use f='MTProxy/net/net-http-server.c' l='335' u='c'/>
+<use f='MTProxy/net/net-http-server.c' l='440' u='c'/>
+<use f='MTProxy/net/net-http-server.c' l='444' u='c'/>
+<use f='MTProxy/net/net-http-server.c' l='563' u='c'/>

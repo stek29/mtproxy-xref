@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-connections.h' l='189' type='double'/>
+<offset>832</offset>
+<use f='MTProxy/net/net-connections.c' l='1583' u='w' c='compute_next_reconnect'/>
+<use f='MTProxy/net/net-connections.c' l='1707' u='r' c='create_new_connections'/>

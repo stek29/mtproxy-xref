@@ -1,0 +1,12 @@
+<dec f='include/netinet/in.h' l='259' type='struct in6_addr'/>
+<offset>64</offset>
+<doc f='include/netinet/in.h' l='259'>/* IPv6 address */</doc>
+<use f='MTProxy/net/net-connections.c' l='678' u='m' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='679' u='m' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='683' u='m' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1286' u='m' c='net_accept_new_connections'/>
+<use f='MTProxy/net/net-events.c' l='612' u='w' c='server_socket'/>
+<use f='MTProxy/net/net-events.c' l='725' u='a' c='client_socket_ipv6'/>
+<use f='MTProxy/net/net-events.c' l='786' u='a' c='get_my_ipv6'/>
+<use f='MTProxy/net/net-events.c' l='798' u='a' c='get_my_ipv6'/>
+<use f='MTProxy/net/net-events.c' l='803' u='a' c='get_my_ipv6'/>

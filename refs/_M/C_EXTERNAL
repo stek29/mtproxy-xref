@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-connections.h' l='74'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2274' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='658' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='660' u='c'/>

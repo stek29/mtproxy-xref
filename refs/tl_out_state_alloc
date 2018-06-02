@@ -1,0 +1,10 @@
+<dec f='MTProxy/common/tl-parse.h' l='814' type='struct tl_out_state * tl_out_state_alloc()'/>
+<def f='MTProxy/common/tl-parse.c' l='965' ll='968' type='struct tl_out_state * tl_out_state_alloc()'/>
+<use f='MTProxy/engine/engine-rpc.c' l='68' u='c' c='tl_aio_init_store'/>
+<use f='MTProxy/engine/engine-rpc.c' l='75' u='c' c='tl_aio_init_store'/>
+<use f='MTProxy/engine/engine-rpc.c' l='382' u='c' c='process_act_atom_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='492' u='c' c='process_query_job'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='784' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1574' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1610' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1765' macro='1' u='c'/>

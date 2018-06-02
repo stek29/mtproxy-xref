@@ -1,0 +1,4 @@
+<dec f='include/openssl/bn.h' l='439' type='void BN_clear_free(BIGNUM * a)'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='156' u='c' c='create_g_a'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='193' u='c' c='dh_inner_round'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='201' u='c' c='dh_inner_round'/>

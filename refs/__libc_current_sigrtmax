@@ -1,0 +1,11 @@
+<dec f='include/signal.h' l='371' type='int __libc_current_sigrtmax()'/>
+<doc f='include/signal.h' l='370'>/* Return number of available real-time signal with lowest priority.  */</doc>
+<use f='MTProxy/engine/engine.c' l='537' macro='1' u='c'/>
+<use f='MTProxy/engine/engine.c' l='538' macro='1' u='c'/>
+<use f='MTProxy/engine/engine.c' l='539' macro='1' u='c'/>
+<use f='MTProxy/engine/engine.c' l='540' macro='1' u='c'/>
+<use f='MTProxy/engine/engine.c' l='541' macro='1' u='c'/>
+<use f='MTProxy/engine/engine.c' l='576' macro='1' u='c'/>
+<use f='MTProxy/engine/engine.c' l='577' macro='1' u='c'/>
+<use f='MTProxy/jobs/jobs.c' l='764' macro='1' u='c'/>
+<use f='MTProxy/jobs/jobs.c' l='879' macro='1' u='c'/>

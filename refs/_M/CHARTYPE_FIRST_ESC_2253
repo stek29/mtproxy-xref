@@ -1,0 +1,2 @@
+<dec f='include/openssl/asn1.h' l='471'/>
+<doc f='include/openssl/asn1.h' l='470'>/* Character needs escaping if it is the first character */</doc>

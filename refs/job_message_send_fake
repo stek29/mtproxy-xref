@@ -1,0 +1,24 @@
+<dec f='MTProxy/jobs/jobs.h' l='369' type='void job_message_send_fake(int job_tag_int, job_t job, int (*)(job_t, struct job_message *, void *) receive_message, void * extra, int src_tag_int, job_t src, unsigned int type, struct raw_message * raw, int dup, int payload_ints, const unsigned int * payload, unsigned int flags, void (*)(struct job_message *) destructor)'/>
+<def f='MTProxy/jobs/jobs.c' l='1541' ll='1565' type='void job_message_send_fake(int job_tag_int, job_t job, int (*)(job_t, struct job_message *, void *) receive_message, void * extra, int src_tag_int, job_t src, unsigned int type, struct raw_message * raw, int dup, int payload_ints, const unsigned int * payload, unsigned int flags, void (*)(struct job_message *) destroy)'/>
+<doc f='MTProxy/jobs/jobs.c' l='1518'>/*
+void job_message_send_data (JOB_REF_ARG (job), JOB_REF_ARG (src), unsigned int type, void *ptr1, void *ptr2, int int1, long long long1, int payload_ints, const unsigned int *payload, unsigned int flags) {
+  assert (job-&gt;j_type &amp; JT_HAVE_MSG_QUEUE);
+  struct job_message *M = malloc (sizeof (*M) + payload_ints * 4);
+  M-&gt;type = type;
+  M-&gt;flags = 0;
+  M-&gt;src = PTR_MOVE (src);
+  M-&gt;payload_ints = payload_ints;
+  M-&gt;next = NULL;
+  M-&gt;flags = flags;
+  memcpy (M-&gt;payload, payload, payload_ints * 4);
+  M-&gt;message_ptr1 = ptr1;
+  M-&gt;message_ptr2 = ptr2;
+  M-&gt;message_int1 = int1;
+  M-&gt;message_long1 = long1;
+  M-&gt;message_magic = 0;
+  
+  struct job_message_queue *q = job_message_queue_get (job);
+  mpq_push_w (q-&gt;unsorted, M, 0);
+
+  job_signal (JOB_REF_PASS (job), JS_RUN);
+}*/</doc>

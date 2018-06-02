@@ -1,0 +1,10 @@
+<dec f='MTProxy/net/net-http-server.h' l='90'/>
+<use f='MTProxy/net/net-http-server.c' l='132' u='c'/>
+<use f='MTProxy/net/net-http-server.c' l='133' u='c'/>
+<use f='MTProxy/net/net-http-server.c' l='567' u='c'/>
+<use f='MTProxy/net/net-http-server.c' l='568' u='c'/>
+<use f='MTProxy/net/net-http-server.c' l='588' u='c'/>
+<use f='MTProxy/net/net-http-server.c' l='643' u='c'/>
+<use f='MTProxy/net/net-http-server.c' l='644' u='c'/>
+<use f='MTProxy/net/net-http-server.c' l='651' u='c'/>
+<use f='MTProxy/net/net-http-server.c' l='652' u='c'/>

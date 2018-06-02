@@ -1,0 +1,20 @@
+<def f='MTProxy/net/net-connections.h' l='246' ll='262'/>
+<size>168</size>
+<mbr r='socket_connection_info::timer' o='0' t='struct event_timer'/>
+<mbr r='socket_connection_info::fd' o='256' t='int'/>
+<mbr r='socket_connection_info::pad' o='288' t='int'/>
+<mbr r='socket_connection_info::flags' o='320' t='int'/>
+<mbr r='socket_connection_info::current_epoll_status' o='352' t='int'/>
+<mbr r='socket_connection_info::type' o='384' t='conn_type_t *'/>
+<mbr r='socket_connection_info::ev' o='448' t='event_t *'/>
+<mbr r='socket_connection_info::conn' o='512' t='connection_job_t'/>
+<mbr r='socket_connection_info::out_packet_queue' o='576' t='struct mp_queue *'/>
+<mbr r='socket_connection_info::out' o='640' t='struct raw_message'/>
+<mbr r='socket_connection_info::our_ip' o='896' t='unsigned int'/>
+<mbr r='socket_connection_info::remote_ip' o='928' t='unsigned int'/>
+<mbr r='socket_connection_info::our_port' o='960' t='unsigned int'/>
+<mbr r='socket_connection_info::remote_port' o='992' t='unsigned int'/>
+<mbr r='socket_connection_info::our_ipv6' o='1024' t='unsigned char [16]'/>
+<mbr r='socket_connection_info::remote_ipv6' o='1152' t='unsigned char [16]'/>
+<mbr r='socket_connection_info::write_low_watermark' o='1280' t='int'/>
+<mbr r='socket_connection_info::eagain_count' o='1312' t='int'/>

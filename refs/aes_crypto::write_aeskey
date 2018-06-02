@@ -1,0 +1,8 @@
+<dec f='MTProxy/net/net-crypto-aes.h' l='76' type='tg_aes_ctx_t'/>
+<offset>2688</offset>
+<use f='MTProxy/net/net-crypto-aes.c' l='91' u='a' c='aes_crypto_init'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='110' u='a' c='aes_crypto_ctr128_init'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='204' u='a' c='cpu_tcp_aes_crypto_encrypt_output'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='204' u='m' c='cpu_tcp_aes_crypto_encrypt_output'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='245' u='a' c='cpu_tcp_aes_crypto_ctr128_encrypt_output'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='245' u='m' c='cpu_tcp_aes_crypto_ctr128_encrypt_output'/>

@@ -1,0 +1,3 @@
+<dec f='MTProxy/net/net-events.h' l='122' type='int client_socket(in_addr_t in_addr, int port, int mode)'/>
+<use f='MTProxy/net/net-connections.c' l='1719' u='c' c='create_new_connections'/>
+<def f='MTProxy/net/net-events.c' l='628' ll='693' type='int client_socket(in_addr_t in_addr, int port, int mode)'/>

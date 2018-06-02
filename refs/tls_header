@@ -1,0 +1,13 @@
+<dec f='MTProxy/common/tl-parse.h' l='232' type='int tls_header(struct tl_out_state * tlio_out, struct tl_query_header * header)'/>
+<def f='MTProxy/common/tl-parse.c' l='836' ll='858' type='int tls_header(struct tl_out_state * tlio_out, struct tl_query_header * header)'/>
+<doc f='MTProxy/common/tl-parse.c' l='824'>/*
+int tls_init_any (struct tl_out_state *tlio_out, enum tl_type type, void *out, long long qid) {
+  switch (type) {
+  case tl_type_conn:
+    return tls_init_connection (tlio_out, (connection_job_t )out, qid);
+  case tl_type_tcp_raw_msg:
+    return tls_init_tcp_raw_msg (tlio_out, out, qid);
+  default:
+    assert (0);
+  }
+}*/</doc>

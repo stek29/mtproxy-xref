@@ -1,0 +1,9 @@
+<dec f='MTProxy/common/server-functions.h' l='63' type='int'/>
+<use f='MTProxy/common/common-stats.c' l='293' u='r' c='sb_print_queries'/>
+<def f='MTProxy/common/server-functions.c' l='71' type='int'/>
+<use f='MTProxy/common/tl-parse.c' l='72' u='r' c='tl_parse_prepare_stat'/>
+<use f='MTProxy/engine/engine.c' l='633' u='w' c='default_main'/>
+<use f='MTProxy/jobs/jobs.c' l='82' u='r' c='jobs_prepare_stat'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='581' u='r' c='mtfront_prepare_stats'/>
+<use f='MTProxy/net/net-stats.c' l='112' u='r' c='prepare_stats'/>
+<use f='MTProxy/net/net-stats.c' l='129' u='r' c='prepare_stats'/>

@@ -1,0 +1,7 @@
+<dec f='MTProxy/net/net-tcp-rpc-common.h' l='125' type='int'/>
+<offset>64</offset>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='453' u='w' c='tcp_rpcc_connected'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='48' u='w' c='tcp_rpc_conn_send_init'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='73' u='w' c='tcp_rpc_conn_send_im'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='163' u='w' c='tcp_rpc_write_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='517' u='w' c='tcp_rpcs_init_accepted'/>

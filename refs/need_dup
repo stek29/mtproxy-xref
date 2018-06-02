@@ -1,0 +1,2 @@
+<def f='MTProxy/engine/engine-rpc.c' l='155' ll='157' type='int need_dup(struct tl_act_extra * extra)'/>
+<use f='MTProxy/engine/engine-rpc.c' l='315' u='c' c='fetch_query'/>

@@ -1,0 +1,8 @@
+<dec f='MTProxy/net/net-tcp-rpc-common.h' l='88' type='void tcp_rpc_conn_send(int C_tag_int, job_t C, struct raw_message * raw, int flags)'/>
+<use f='MTProxy/common/tl-parse.c' l='295' u='c' c='__tl_tcp_raw_msg_store_flush'/>
+<use f='MTProxy/common/tl-parse.c' l='302' u='c' c='__tl_tcp_raw_msg_store_flush_unaligned'/>
+<doc f='MTProxy/net/net-tcp-rpc-common.h' l='85'>// Bit 1 - have to clone raw
+// Bit 2 - delete reference to connection
+// Bit 4 - raw is allocated pointer and it should be freed or reused</doc>
+<def f='MTProxy/net/net-tcp-rpc-common.c' l='90' ll='111' type='void tcp_rpc_conn_send(int C_tag_int, job_t C, struct raw_message * raw, int flags)'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='117' u='c' c='tcp_rpc_conn_send_data'/>

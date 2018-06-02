@@ -1,0 +1,9 @@
+<dec f='MTProxy/net/net-connections.h' l='355' type='int net_server_socket_read_write(connection_job_t C)'/>
+<def f='MTProxy/net/net-connections.c' l='1036' ll='1082' type='int net_server_socket_read_write(socket_connection_job_t C)'/>
+<use f='MTProxy/net/net-connections.c' l='1484' u='r' c='check_conn_functions'/>
+<doc f='MTProxy/net/net-connections.c' l='1031'>/*
+  checks if outbound connections become connected
+  merges contents of out_packet_queue mpq to out raw message
+  runs socket_reader and socket_writer
+*/</doc>
+<doc f='MTProxy/net/net-connections.c' l='1036'>/* {{{ */</doc>

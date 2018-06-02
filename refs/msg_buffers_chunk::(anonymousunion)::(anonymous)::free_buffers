@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-msg-buffers.h' l='85' type='int'/>
+<offset>32</offset>
+<use f='MTProxy/net/net-msg-buffers.c' l='211' u='w' c='alloc_new_msg_buffers_chunk'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='284' u='w' c='free_msg_buffers_chunk_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='474' u='r' c='alloc_msg_buffer_internal'/>

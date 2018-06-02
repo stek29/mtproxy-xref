@@ -1,0 +1,14 @@
+<def f='MTProxy/engine/engine.c' l='337' ll='340' type='struct event_precise_cron'/>
+<use f='MTProxy/engine/engine.c' l='338' u='a'/>
+<use f='MTProxy/engine/engine.c' l='339' u='a'/>
+<use f='MTProxy/engine/engine.c' l='338' u='a'/>
+<use f='MTProxy/engine/engine.c' l='339' u='a'/>
+<use f='MTProxy/engine/engine.c' l='343' u='a' c='precise_cron_function_insert'/>
+<use f='MTProxy/engine/engine.c' l='344' u='m' c='precise_cron_function_insert'/>
+<use f='MTProxy/engine/engine.c' l='369' u='m' c='do_precise_cron'/>
+<use f='MTProxy/engine/engine.c' l='369' u='a' c='do_precise_cron'/>
+<use f='MTProxy/engine/engine.c' l='370' u='r' c='do_precise_cron'/>
+<use f='MTProxy/engine/engine.c' l='373' u='m' c='do_precise_cron'/>
+<use f='MTProxy/engine/engine.c' l='373' u='m' c='do_precise_cron'/>
+<use f='MTProxy/engine/engine.c' l='373' u='a' c='do_precise_cron'/>
+<doc f='MTProxy/engine/engine.c' l='335'>/* {{{ precise cron */</doc>

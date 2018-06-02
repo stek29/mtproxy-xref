@@ -1,0 +1,2 @@
+<def f='MTProxy/engine/engine.c' l='514' ll='516' type='int default_get_op(struct tl_in_state * tlio_in)'/>
+<use f='MTProxy/engine/engine.c' l='555' u='r' c='check_server_functions'/>

@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-connections.c' l='95' type='int'/>
+<use f='MTProxy/net/net-connections.c' l='1652' u='w' c='destroy_dead_target_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1692' u='w' c='create_new_connections'/>
+<offset>128</offset>

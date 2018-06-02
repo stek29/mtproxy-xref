@@ -1,0 +1,2 @@
+<def f='MTProxy/mtproto/mtproto-config.c' l='144' ll='193' type='conn_target_job_t * cfg_parse_server_port(struct mf_config * MC, int flags)'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='294' u='c' c='parse_config'/>

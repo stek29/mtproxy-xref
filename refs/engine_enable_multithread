@@ -1,0 +1,2 @@
+<def f='MTProxy/engine/engine.h' l='190' macro='1' type='void engine_enable_multithread()'/>
+<use f='MTProxy/engine/engine.c' l='664' u='c' c='f_parse_option_engine'/>

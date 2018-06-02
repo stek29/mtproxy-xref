@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-connections.h' l='91' type='1'/>
+<use f='MTProxy/net/net-connections.c' l='548' u='r' c='do_connection_job'/>
+<use f='MTProxy/net/net-connections.c' l='549' u='r' c='do_connection_job'/>
+<use f='MTProxy/net/net-connections.c' l='656' u='r' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1448' u='r' c='server_check_ready'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='508' u='r' c='tcp_rpcc_default_check_ready'/>

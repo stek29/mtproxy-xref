@@ -1,0 +1,15 @@
+<dec f='MTProxy/mtproto/mtproto-config.h' l='60' type='char *'/>
+<def f='MTProxy/mtproto/mtproto-config.c' l='66' type='char *'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='254' u='r' c='parse_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='366' u='r' c='do_reload_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='368' u='r' c='do_reload_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='388' u='r' c='do_reload_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='400' u='r' c='do_reload_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='420' u='r' c='do_reload_config'/>
+<doc f='MTProxy/mtproto/mtproto-config.c' l='61'>//#define MAX_CONFIG_SIZE (1 &lt;&lt; 20)
+
+//char config_buff[MAX_CONFIG_SIZE+4], *config_filename, *cfg_start, *cfg_end, *cfg_cur;
+//int config_bytes, cfg_lno, cfg_lex = -1;</doc>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='655' u='r' c='mtfront_prepare_stats'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2207' u='w' c='mtfront_parse_extra_args'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2208' u='r' c='mtfront_parse_extra_args'/>

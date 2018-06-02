@@ -1,0 +1,2 @@
+<def f='MTProxy/net/net-rpc-targets.c' l='227' ll='251' type='void check_connection(connection_job_t C, void * ex, void * ex2, void * ex3)'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='303' u='r' c='rpc_target_choose_connection'/>

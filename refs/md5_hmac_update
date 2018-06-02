@@ -1,0 +1,13 @@
+<dec f='MTProxy/common/md5.h' l='88' type='void md5_hmac_update(md5_context * ctx, unsigned char * input, int ilen)'/>
+<def f='MTProxy/common/md5.c' l='365' ll='368' type='void md5_hmac_update(md5_context * ctx, unsigned char * input, int ilen)'/>
+<use f='MTProxy/common/md5.c' l='395' u='c' c='md5_hmac'/>
+<doc f='MTProxy/common/md5.c' l='362'>/*
+ * MD5 HMAC process buffer
+ */</doc>
+<doc f='MTProxy/common/md5.h' l='81'>/**
+ * \brief          MD5 HMAC process buffer
+ *
+ * \param ctx      HMAC context
+ * \param input    buffer holding the  data
+ * \param ilen     length of the input data
+ */</doc>

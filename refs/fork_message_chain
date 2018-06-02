@@ -1,0 +1,13 @@
+<dec f='MTProxy/net/net-msg.h' l='124' type='int fork_message_chain(struct raw_message * raw)'/>
+<use f='MTProxy/net/net-msg.c' l='139' u='c' c='rwm_lock_last_part'/>
+<use f='MTProxy/net/net-msg.c' l='142' u='c' c='rwm_lock_last_part'/>
+<use f='MTProxy/net/net-msg.c' l='150' u='c' c='rwm_lock_last_part'/>
+<def f='MTProxy/net/net-msg.c' l='252' ll='322' type='int fork_message_chain(struct raw_message * raw)'/>
+<doc f='MTProxy/net/net-msg.c' l='245'>/* }}} */
+
+// after this function non-empty raw message raw should have following properties:
+//   refcnt of all msg_parts in raw is 1
+//   raw-&gt;first_offset = raw-&gt;first-&gt;offset
+//   raw-&gt;last_offset = raw-&gt;last-&gt;offset
+//   raw-&gt;last-&gt;next = NULL</doc>
+<doc f='MTProxy/net/net-msg.c' l='252'>/* {{{ */</doc>

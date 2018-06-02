@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-connections.h' l='227' type='int'/>
+<offset>3776</offset>
+<use f='MTProxy/net/net-connections.c' l='2078' u='r' c='check_connection_stopped'/>
+<use f='MTProxy/net/net-connections.c' l='2078' u='r' c='check_connection_stopped'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='245' u='r' c='check_connection'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='247' u='r' c='check_connection'/>

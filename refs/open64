@@ -1,0 +1,12 @@
+<dec f='include/fcntl.h' l='159' type='int open(const char * __file, int __oflag)'/>
+<dec f='include/fcntl.h' l='166' type='int open64(const char * __file, int __oflag)'/>
+<use f='MTProxy/common/common-stats.c' l='42' u='c' c='read_whole_file'/>
+<use f='MTProxy/common/kprintf.c' l='52' u='c' c='reopen_logs_ext'/>
+<use f='MTProxy/common/kprintf.c' l='60' u='c' c='reopen_logs_ext'/>
+<use f='MTProxy/common/parse-config.c' l='245' u='c' c='load_config'/>
+<use f='MTProxy/common/resolver.c' l='279' u='c' c='kdb_load_hosts_internal'/>
+<use f='MTProxy/common/resolver.c' l='411' u='c' c='detect_hostname'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='366' u='c' c='do_reload_config'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='139' u='c' c='aes_load_pwd_file'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='159' u='c' c='aes_load_pwd_file'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='180' u='c' c='aes_load_pwd_file'/>

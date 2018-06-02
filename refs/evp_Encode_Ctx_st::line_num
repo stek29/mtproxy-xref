@@ -1,0 +1,3 @@
+<dec f='include/openssl/evp.h' l='480' type='int'/>
+<offset>704</offset>
+<doc f='include/openssl/evp.h' l='479'>/* number read on current line */</doc>

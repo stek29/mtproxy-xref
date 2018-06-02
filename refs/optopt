@@ -1,0 +1,3 @@
+<dec f='include/getopt.h' l='80' type='int'/>
+<dec f='include/getopt.h' l='80' type='int'/>
+<doc f='include/getopt.h' l='78'>/* Set to an option character which was unrecognized.  */</doc>

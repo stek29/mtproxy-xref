@@ -1,0 +1,6 @@
+<def f='MTProxy/crypto/aesni256.h' l='35' ll='40'/>
+<size>32</size>
+<mbr r='tg_aes_methods::cbc_crypt' o='0' t='void (*)(struct tg_aes_ctx *, const unsigned char *, unsigned char *, int, unsigned char *)'/>
+<mbr r='tg_aes_methods::ige_crypt' o='64' t='void (*)(struct tg_aes_ctx *, const unsigned char *, unsigned char *, int, unsigned char *)'/>
+<mbr r='tg_aes_methods::ctr_crypt' o='128' t='void (*)(struct tg_aes_ctx *, const unsigned char *, unsigned char *, int, unsigned char *, unsigned long long)'/>
+<mbr r='tg_aes_methods::ctr128_crypt' o='192' t='void (*)(struct tg_aes_ctx *, const unsigned char *, unsigned char *, int, unsigned char *, unsigned char *, unsigned int *)'/>

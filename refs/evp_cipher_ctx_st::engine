@@ -1,0 +1,4 @@
+<dec f='include/openssl/evp.h' l='451' type='ENGINE *'/>
+<offset>64</offset>
+<doc f='include/openssl/evp.h' l='451'>/* functional reference if &apos;cipher&apos; is
+                                 * ENGINE-provided */</doc>

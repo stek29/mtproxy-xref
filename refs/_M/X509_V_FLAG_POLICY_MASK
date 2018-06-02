@@ -1,0 +1,2 @@
+<dec f='include/openssl/x509_vfy.h' l='449'/>
+<doc f='include/openssl/x509_vfy.h' l='448'>/* Internal use: mask of policy related options */</doc>

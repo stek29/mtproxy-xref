@@ -1,0 +1,5 @@
+<def f='MTProxy/common/server-functions.c' l='183' type='pthread_t'/>
+<use f='MTProxy/common/server-functions.c' l='186' u='r' c='kill_main'/>
+<use f='MTProxy/common/server-functions.c' l='186' u='r' c='kill_main'/>
+<use f='MTProxy/common/server-functions.c' l='187' u='r' c='kill_main'/>
+<use f='MTProxy/common/server-functions.c' l='237' u='w' c='set_debug_handlers'/>

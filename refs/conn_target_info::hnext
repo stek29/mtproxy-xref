@@ -1,0 +1,10 @@
+<dec f='MTProxy/net/net-connections.h' l='192' type='conn_target_job_t'/>
+<offset>1216</offset>
+<use f='MTProxy/net/net-connections.c' l='1773' u='r' c='find_target'/>
+<use f='MTProxy/net/net-connections.c' l='1774' u='w' c='find_target'/>
+<use f='MTProxy/net/net-connections.c' l='1780' u='a' c='find_target'/>
+<use f='MTProxy/net/net-connections.c' l='1784' u='w' c='find_target'/>
+<use f='MTProxy/net/net-connections.c' l='1810' u='r' c='find_target_ipv6'/>
+<use f='MTProxy/net/net-connections.c' l='1811' u='w' c='find_target_ipv6'/>
+<use f='MTProxy/net/net-connections.c' l='1817' u='a' c='find_target_ipv6'/>
+<use f='MTProxy/net/net-connections.c' l='1821' u='w' c='find_target_ipv6'/>

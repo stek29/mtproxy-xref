@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-tcp-rpc-common.h' l='91' type='void tcp_rpc_conn_send_data_init(connection_job_t c, int len, void * Q)'/>
+<def f='MTProxy/net/net-tcp-rpc-common.c' l='120' ll='125' type='void tcp_rpc_conn_send_data_init(connection_job_t c, int len, void * Q)'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='545' u='c' c='tcp_rpcs_init_fake_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='642' u='c' c='tcp_rpcs_init_crypto'/>

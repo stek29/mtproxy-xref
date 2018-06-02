@@ -1,0 +1,5 @@
+<dec f='MTProxy/engine/engine.h' l='112' type='struct http_server_functions *'/>
+<offset>5952</offset>
+<use f='MTProxy/engine/engine.c' l='599' u='r' c='default_main'/>
+<use f='MTProxy/engine/engine.c' l='605' u='r' c='default_main'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2304' u='w'/>

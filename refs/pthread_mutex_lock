@@ -1,0 +1,5 @@
+<dec f='include/pthread.h' l='762' type='int pthread_mutex_lock(pthread_mutex_t * __mutex)'/>
+<doc f='include/pthread.h' l='761'>/* Lock a mutex.  */</doc>
+<use f='MTProxy/net/net-connections.c' l='1830' u='c' c='free_target'/>
+<use f='MTProxy/net/net-connections.c' l='1945' u='c' c='create_target'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='116' u='c' c='init_dh_params'/>

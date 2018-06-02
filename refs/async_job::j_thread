@@ -1,0 +1,9 @@
+<dec f='MTProxy/jobs/jobs.h' l='181' type='struct job_thread *'/>
+<offset>320</offset>
+<doc f='MTProxy/jobs/jobs.h' l='181'>// thread currently processing this job</doc>
+<use f='MTProxy/jobs/jobs.c' l='607' u='w' c='try_lock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='614' u='r' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='615' u='r' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='763' u='r' c='job_send_signals'/>
+<use f='MTProxy/jobs/jobs.c' l='764' u='r' c='job_send_signals'/>
+<use f='MTProxy/jobs/jobs.c' l='1088' u='w' c='create_async_job'/>

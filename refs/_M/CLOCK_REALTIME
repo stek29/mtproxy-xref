@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/bits/time.h' l='61'/>
+<use f='MTProxy/common/precise-time.c' l='70' u='c'/>
+<use f='MTProxy/common/precise-time.c' l='80' u='c'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='226' u='c'/>

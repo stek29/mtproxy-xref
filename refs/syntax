@@ -1,0 +1,21 @@
+<dec f='MTProxy/common/parse-config.h' l='31' type='void syntax(const char * msg)'/>
+<def f='MTProxy/common/parse-config.c' l='151' ll='168' type='void syntax(const char * msg)'/>
+<use f='MTProxy/common/parse-config.c' l='188' u='c' c='expect_lexem'/>
+<use f='MTProxy/common/parse-config.c' l='198' u='c' c='expect_word'/>
+<use f='MTProxy/common/parse-config.c' l='209' u='c' c='cfg_gethost_ex'/>
+<use f='MTProxy/common/parse-config.c' l='218' u='c' c='cfg_gethost_ex'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='146' u='c' c='cfg_parse_server_port'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='162' u='c' c='cfg_parse_server_port'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='173' u='c' c='cfg_parse_server_port'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='178' u='c' c='cfg_parse_server_port'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='269' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='277' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='284' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='292' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='311' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='315' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='322' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='328' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='334' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='344' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='348' macro='1' u='c'/>

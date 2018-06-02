@@ -1,0 +1,17 @@
+<dec f='MTProxy/common/tl-parse.h' l='106' type='void *'/>
+<use f='MTProxy/common/tl-parse.c' l='168' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='171' macro='1' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='176' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='178' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='179' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='180' macro='1' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='187' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='188' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='189' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='190' macro='1' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='379' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='380' macro='1' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='385' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='386' macro='1' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='393' macro='1' u='w'/>
+<offset>192</offset>

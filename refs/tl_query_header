@@ -1,0 +1,9 @@
+<def f='MTProxy/common/tl-parse.h' l='140' ll='148'/>
+<size>40</size>
+<mbr r='tl_query_header::qid' o='0' t='long long'/>
+<mbr r='tl_query_header::actor_id' o='64' t='long long'/>
+<mbr r='tl_query_header::flags' o='128' t='int'/>
+<mbr r='tl_query_header::op' o='160' t='int'/>
+<mbr r='tl_query_header::real_op' o='192' t='int'/>
+<mbr r='tl_query_header::ref_cnt' o='224' t='int'/>
+<mbr r='tl_query_header::qw_params' o='256' t='struct query_work_params *'/>

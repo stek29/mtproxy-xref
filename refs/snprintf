@@ -1,0 +1,7 @@
+<dec f='include/stdio.h' l='386' type='int snprintf(char *restrict __s, size_t __maxlen, const char *restrict __format)'/>
+<use f='MTProxy/common/common-stats.c' l='97' u='c' c='am_get_memory_usage'/>
+<doc f='include/stdio.h' l='385'>/* Maximum chars of output to write in MAXLEN.  */</doc>
+<use f='MTProxy/common/kprintf.c' l='257' u='c' c='kprintf'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1256' u='c' c='process_http_query'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1576' u='c' c='http_send_message'/>
+<use f='MTProxy/net/net-http-server.c' l='845' u='c' c='write_basic_http_header_raw'/>

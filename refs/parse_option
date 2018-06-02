@@ -1,0 +1,9 @@
+<dec f='MTProxy/common/server-functions.h' l='94' type='void parse_option(const char * name, int arg, int * var, int val, const char * help)'/>
+<def f='MTProxy/common/server-functions.c' l='375' ll='383' type='void parse_option(const char * name, int arg, int * var, int val, const char * help)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2192' u='c' c='mtfront_prepare_parse_options'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2193' u='c' c='mtfront_prepare_parse_options'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2194' u='c' c='mtfront_prepare_parse_options'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2195' u='c' c='mtfront_prepare_parse_options'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2196' u='c' c='mtfront_prepare_parse_options'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2198' u='c' c='mtfront_prepare_parse_options'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2199' u='c' c='mtfront_prepare_parse_options'/>

@@ -1,0 +1,6 @@
+<dec f='MTProxy/engine/engine-rpc.h' l='85' type='int'/>
+<use f='MTProxy/engine/engine-rpc.h' l='109' u='w' c='tl_act_extra_init'/>
+<offset>0</offset>
+<use f='MTProxy/engine/engine-rpc-common.c' l='80' u='w' c='tl_simple_parse_function'/>
+<use f='MTProxy/engine/engine-rpc.c' l='149' u='r' c='tl_default_act_dup'/>
+<use f='MTProxy/engine/engine-rpc.c' l='150' u='r' c='tl_default_act_dup'/>

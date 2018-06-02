@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>net-tcp-rpc-ext-server.h source code [MTProxy/net/net-tcp-rpc-ext-server.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="https://code.woboq.org/data//qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="https://code.woboq.org/data//kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery-ui.min.js"></script>
+<script>var file = 'MTProxy/net/net-tcp-rpc-ext-server.h'; var root_path = '../..'; var data_path = 'https://code.woboq.org/data/';</script>
+<script src='https://code.woboq.org/data//codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='..'>MTProxy</a>/<a href='./'>net</a>/<a href='net-tcp-rpc-ext-server.h.html'>net-tcp-rpc-ext-server.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>    This file is part of Mtproto-proxy Library.</i></td></tr>
+<tr><th id="3">3</th><td><i></i></td></tr>
+<tr><th id="4">4</th><td><i>    Mtproto-proxy Library is free software: you can redistribute it and/or modify</i></td></tr>
+<tr><th id="5">5</th><td><i>    it under the terms of the GNU Lesser General Public License as published by</i></td></tr>
+<tr><th id="6">6</th><td><i>    the Free Software Foundation, either version 2 of the License, or</i></td></tr>
+<tr><th id="7">7</th><td><i>    (at your option) any later version.</i></td></tr>
+<tr><th id="8">8</th><td><i></i></td></tr>
+<tr><th id="9">9</th><td><i>    Mtproto-proxy Library is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="10">10</th><td><i>    but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="11">11</th><td><i>    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</i></td></tr>
+<tr><th id="12">12</th><td><i>    GNU Lesser General Public License for more details.</i></td></tr>
+<tr><th id="13">13</th><td><i></i></td></tr>
+<tr><th id="14">14</th><td><i>    You should have received a copy of the GNU Lesser General Public License</i></td></tr>
+<tr><th id="15">15</th><td><i>    along with Mtproto-proxy Library.  If not, see &lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</i></td></tr>
+<tr><th id="16">16</th><td><i></i></td></tr>
+<tr><th id="17">17</th><td><i>    Copyright 2016-2018 Telegram Messenger Inc                 </i></td></tr>
+<tr><th id="18">18</th><td><i>              2016-2018 Nikolai Durov</i></td></tr>
+<tr><th id="19">19</th><td><i>*/</i></td></tr>
+<tr><th id="20">20</th><td></td></tr>
+<tr><th id="21">21</th><td><u>#pragma once</u></td></tr>
+<tr><th id="22">22</th><td></td></tr>
+<tr><th id="23">23</th><td><u>#define <dfn class="macro" id="_M/__ALLOW_UNOBFS__" data-ref="_M/__ALLOW_UNOBFS__">__ALLOW_UNOBFS__</dfn> 0</u></td></tr>
+<tr><th id="24">24</th><td></td></tr>
+<tr><th id="25">25</th><td><u>#include <a href="net-tcp-rpc-server.h.html">"net/net-tcp-rpc-server.h"</a></u></td></tr>
+<tr><th id="26">26</th><td><u>#include <a href="net-connections.h.html">"net/net-connections.h"</a></u></td></tr>
+<tr><th id="27">27</th><td></td></tr>
+<tr><th id="28">28</th><td><b>extern</b> <a class="typedef" href="net-connections.h.html#conn_type_t" title='conn_type_t' data-type='struct conn_functions' data-ref="conn_type_t">conn_type_t</a> <dfn class="decl" id="ct_tcp_rpc_ext_server" title='ct_tcp_rpc_ext_server' data-ref="ct_tcp_rpc_ext_server">ct_tcp_rpc_ext_server</dfn>;</td></tr>
+<tr><th id="29">29</th><td><i>// extern struct tcp_rpc_server_functions default_tcp_rpc_server;</i></td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td><em>int</em> <dfn class="decl" id="tcp_rpcs_compact_parse_execute" title='tcp_rpcs_compact_parse_execute' data-ref="tcp_rpcs_compact_parse_execute">tcp_rpcs_compact_parse_execute</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col3 decl" id="2513c" title='c' data-type='connection_job_t' data-ref="2513c">c</dfn>);</td></tr>
+<tr><th id="32">32</th><td><em>void</em> <dfn class="decl" id="tcp_rpcs_set_ext_secret" title='tcp_rpcs_set_ext_secret' data-ref="tcp_rpcs_set_ext_secret">tcp_rpcs_set_ext_secret</dfn>(<em>unsigned</em> <em>char</em> <dfn class="local col4 decl" id="2514secret" title='secret' data-type='unsigned char *' data-ref="2514secret">secret</dfn>[<var>16</var>]);</td></tr>
+<tr><th id="33">33</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../mtproto/mtproto-proxy.c.html'>MTProxy/mtproto/mtproto-proxy.c</a><br/>Generated on <em>2018-Jun-02</em> from project MTProxy revision <em>842f343decf6c463bdecf1862e357c4a03e4bc97</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

@@ -1,0 +1,7 @@
+<dec f='MTProxy/net/net-connections.h' l='93' type='3'/>
+<doc f='MTProxy/net/net-connections.h' l='93'>// connection in bad state (it will be probably closed)</doc>
+<use f='MTProxy/net/net-connections.c' l='386' u='r' c='fail_connection'/>
+<use f='MTProxy/net/net-connections.c' l='476' u='r' c='cpu_server_close_connection'/>
+<use f='MTProxy/net/net-connections.c' l='550' u='r' c='do_connection_job'/>
+<use f='MTProxy/net/net-connections.c' l='1451' u='r' c='server_check_ready'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='164' u='r' c='cpu_tcp_server_reader'/>

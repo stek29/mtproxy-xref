@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-msg.h' l='123' type='int rwm_check(struct raw_message * raw)'/>
+<def f='MTProxy/net/net-msg.c' l='864' ll='889' type='int rwm_check(struct raw_message * raw)'/>
+<doc f='MTProxy/net/net-msg.c' l='862'>/* }}} */</doc>
+<doc f='MTProxy/net/net-msg.c' l='864'>/* {{{ */</doc>

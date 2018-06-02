@@ -1,0 +1,11 @@
+<def f='MTProxy/net/net-crypto-aes.h' l='72' ll='79'/>
+<size>608</size>
+<doc f='MTProxy/net/net-crypto-aes.h' l='71'>/* for c-&gt;crypto */</doc>
+<mbr r='aes_crypto::read_iv' o='0' t='unsigned char [16]'/>
+<mbr r='aes_crypto::write_iv' o='128' t='unsigned char [16]'/>
+<mbr r='aes_crypto::read_ebuf' o='256' t='unsigned char [16]'/>
+<mbr r='aes_crypto::write_ebuf' o='384' t='unsigned char [16]'/>
+<mbr r='aes_crypto::read_aeskey' o='512' t='tg_aes_ctx_t'/>
+<mbr r='aes_crypto::write_aeskey' o='2688' t='tg_aes_ctx_t'/>
+<mbr r='aes_crypto::read_num' o='4800' t='unsigned int'/>
+<mbr r='aes_crypto::write_num' o='4832' t='unsigned int'/>

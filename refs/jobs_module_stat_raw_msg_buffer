@@ -1,0 +1,15 @@
+<def f='MTProxy/net/net-msg-buffers.c' l='44' macro='1'/>
+<def f='MTProxy/net/net-msg-buffers.c' l='51' macro='1' type='struct jobs_module_stat_raw_msg_buffer *'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='51' macro='1' u='w'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='221' macro='1' u='r'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='224' macro='1' u='r'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='291' macro='1' u='r'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='484' macro='1' u='r'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='485' macro='1' u='r'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='519' macro='1' u='r'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='520' macro='1' u='r'/>
+<size>32</size>
+<mbr r='jobs_module_stat_raw_msg_buffer::total_used_buffers_size' o='0' t='long long'/>
+<mbr r='jobs_module_stat_raw_msg_buffer::total_used_buffers' o='64' t='int'/>
+<mbr r='jobs_module_stat_raw_msg_buffer::allocated_buffer_bytes' o='128' t='long long'/>
+<mbr r='jobs_module_stat_raw_msg_buffer::buffer_chunk_alloc_ops' o='192' t='long long'/>

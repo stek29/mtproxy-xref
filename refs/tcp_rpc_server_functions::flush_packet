@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-tcp-rpc-server.h' l='36' type='int (*)(connection_job_t)'/>
+<offset>256</offset>
+<doc f='MTProxy/net/net-tcp-rpc-server.h' l='36'>/* execute this to push response to client */</doc>
+<use f='MTProxy/engine/engine-net.c' l='116' u='w'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1017' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='92' u='w'/>

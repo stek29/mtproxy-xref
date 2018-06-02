@@ -1,0 +1,5 @@
+<def f='MTProxy/mtproto/mtproto-common.h' l='109' ll='113'/>
+<size>16</size>
+<mbr r='rpc_simple_ack::type' o='0' t='int'/>
+<mbr r='rpc_simple_ack::ext_conn_id' o='32' t='long long'/>
+<mbr r='rpc_simple_ack::confirm_key' o='96' t='int'/>

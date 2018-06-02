@@ -1,0 +1,2 @@
+<dec f='MTProxy/engine/engine-rpc.c' l='277' type='struct paramed_type * paramed_type_dup(struct paramed_type * P)'/>
+<def f='MTProxy/engine/engine-rpc.c' l='278' type='struct paramed_type * paramed_type_dup(struct paramed_type * P)'/>

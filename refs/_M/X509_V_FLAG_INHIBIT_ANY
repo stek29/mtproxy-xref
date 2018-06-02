@@ -1,0 +1,2 @@
+<dec f='include/openssl/x509_vfy.h' l='413'/>
+<doc f='include/openssl/x509_vfy.h' l='412'>/* Policy variable inhibit-any-policy */</doc>

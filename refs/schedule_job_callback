@@ -1,0 +1,5 @@
+<dec f='MTProxy/mtproto/mtproto-proxy.c' l='727' type='void schedule_job_callback(int context, job_callback_func_t func, void * data, int len)'/>
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='747' ll='754' type='void schedule_job_callback(int context, job_callback_func_t func, void * data, int len)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1048' u='c' c='mtproto_http_close'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1517' u='c' c='ext_rpcs_execute'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1592' u='c' c='http_send_message'/>

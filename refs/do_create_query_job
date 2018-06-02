@@ -1,0 +1,5 @@
+<def f='MTProxy/engine/engine-rpc.c' l='812' ll='824' type='int do_create_query_job(struct raw_message * raw, int type, struct process_id * pid, void * conn)'/>
+<use f='MTProxy/engine/engine-rpc.c' l='841' u='c' c='default_tl_tcp_rpcs_execute'/>
+<use f='MTProxy/engine/engine-rpc.c' l='843' u='c' c='default_tl_tcp_rpcs_execute'/>
+<doc f='MTProxy/engine/engine-rpc.c' l='810'>/* }}} */</doc>
+<doc f='MTProxy/engine/engine-rpc.c' l='812'>/* {{{ */</doc>

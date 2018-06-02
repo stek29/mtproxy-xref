@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-http-server.c' l='60' type='int hts_write_packet(connection_job_t C, struct raw_message * raw)'/>
+<use f='MTProxy/net/net-http-server.c' l='74'/>
+<use f='MTProxy/net/net-http-server.c' l='74'/>
+<def f='MTProxy/net/net-http-server.c' l='209' ll='212' type='int hts_write_packet(connection_job_t C, struct raw_message * raw)'/>

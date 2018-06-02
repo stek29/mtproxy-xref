@@ -1,0 +1,2 @@
+<use f='MTProxy/net/net-connections.c' l='1641' u='c' c='destroy_dead_target_connections'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='184' u='c' c='rpc_target_delete_conn'/>

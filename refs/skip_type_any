@@ -1,0 +1,2 @@
+<dec f='MTProxy/engine/engine-rpc.c' l='248' type='int skip_type_any(struct tl_in_state * tlio_in, struct paramed_type * P)'/>
+<def f='MTProxy/engine/engine-rpc.c' l='249' type='int skip_type_any(struct tl_in_state * tlio_in, struct paramed_type * P)'/>

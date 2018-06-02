@@ -1,0 +1,10 @@
+<dec f='include/stdio.h' l='433' type='int sscanf(const char *restrict __s, const char *restrict __format)'/>
+<use f='MTProxy/common/common-stats.c' l='132' u='c' c='am_get_memory_stats'/>
+<use f='MTProxy/common/common-stats.c' l='140' u='c' c='am_get_memory_stats'/>
+<use f='MTProxy/common/common-stats.c' l='148' u='c' c='am_get_memory_stats'/>
+<use f='MTProxy/common/common-stats.c' l='153' u='c' c='am_get_memory_stats'/>
+<doc f='include/stdio.h' l='432'>/* Read formatted input from S.  */</doc>
+<use f='MTProxy/common/server-functions.c' l='251' u='c' c='parse_memory_limit'/>
+<use f='MTProxy/engine/engine-net.c' l='156' u='c' c='f_parse_option_net'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1119' u='c' c='parse_text_ipv4'/>
+<use f='MTProxy/net/net-http-server.c' l='735' u='c' c='gen_http_time'/>

@@ -1,0 +1,2 @@
+<def f='MTProxy/engine/engine.c' l='75' type='unsigned char [16]'/>
+<use f='MTProxy/engine/engine.c' l='236' u='r' c='engine_init'/>

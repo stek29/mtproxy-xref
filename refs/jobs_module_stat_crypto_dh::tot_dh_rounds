@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-crypto-dh.c' l='54' type='long long [3]'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='173' u='w' c='dh_first_round'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='219' u='w' c='dh_second_round'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='232' u='w' c='dh_third_round'/>
+<offset>0</offset>

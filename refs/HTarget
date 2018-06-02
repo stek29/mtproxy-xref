@@ -1,0 +1,8 @@
+<def f='MTProxy/net/net-connections.c' l='1759' type='conn_target_job_t [99961]'/>
+<use f='MTProxy/net/net-connections.c' l='1768' u='r' c='find_target'/>
+<use f='MTProxy/net/net-connections.c' l='1784' u='r' c='find_target'/>
+<use f='MTProxy/net/net-connections.c' l='1785' u='w' c='find_target'/>
+<use f='MTProxy/net/net-connections.c' l='1802' u='r' c='find_target_ipv6'/>
+<use f='MTProxy/net/net-connections.c' l='1821' u='r' c='find_target_ipv6'/>
+<use f='MTProxy/net/net-connections.c' l='1822' u='w' c='find_target_ipv6'/>
+<doc f='MTProxy/net/net-connections.c' l='1757'>/* }}} */</doc>

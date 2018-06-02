@@ -1,0 +1,2 @@
+<dec f='MTProxy/common/server-functions.h' l='98' type='void parse_option_long_alias(const char * name, const char * alias_name)'/>
+<def f='MTProxy/common/server-functions.c' l='480' ll='496' type='void parse_option_long_alias(const char * name, const char * alias_name)'/>

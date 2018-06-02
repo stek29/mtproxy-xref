@@ -1,0 +1,8 @@
+<dec f='include/netinet/in.h' l='257' type='in_port_t'/>
+<offset>16</offset>
+<doc f='include/netinet/in.h' l='257'>/* Transport layer port # */</doc>
+<use f='MTProxy/net/net-connections.c' l='680' u='r' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='684' u='r' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1286' u='r' c='net_accept_new_connections'/>
+<use f='MTProxy/net/net-events.c' l='611' u='w' c='server_socket'/>
+<use f='MTProxy/net/net-events.c' l='724' u='w' c='client_socket_ipv6'/>

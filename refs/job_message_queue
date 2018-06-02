@@ -1,0 +1,6 @@
+<def f='MTProxy/jobs/jobs.h' l='251' ll='255'/>
+<size>32</size>
+<mbr r='job_message_queue::unsorted' o='0' t='struct mp_queue *'/>
+<mbr r='job_message_queue::first' o='64' t='struct job_message *'/>
+<mbr r='job_message_queue::last' o='128' t='struct job_message *'/>
+<mbr r='job_message_queue::payload_magic' o='192' t='unsigned int'/>

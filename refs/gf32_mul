@@ -1,0 +1,6 @@
+<def f='MTProxy/common/crc32.c' l='678' ll='689' type='unsigned int gf32_mul(unsigned int a, unsigned int b, unsigned int poly)'/>
+<use f='MTProxy/common/crc32.c' l='693' u='c' c='gf32_pow'/>
+<use f='MTProxy/common/crc32.c' l='695' u='c' c='gf32_pow'/>
+<use f='MTProxy/common/crc32.c' l='736' u='c' c='gf32_compute_powers_clmul'/>
+<use f='MTProxy/common/crc32.c' l='739' u='c' c='gf32_compute_powers_clmul'/>
+<use f='MTProxy/common/crc32.c' l='742' u='c' c='gf32_compute_powers_clmul'/>

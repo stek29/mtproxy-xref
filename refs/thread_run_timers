@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-timers.h' l='34' type='int thread_run_timers()'/>
+<use f='MTProxy/jobs/jobs.c' l='1270' u='c' c='do_timer_manager_job'/>
+<dec f='MTProxy/net/net-events.c' l='307' type='int thread_run_timers()'/>
+<use f='MTProxy/net/net-events.c' l='309' u='c' c='epoll_run_timers'/>
+<def f='MTProxy/net/net-timers.c' l='122' ll='157' type='int thread_run_timers()'/>

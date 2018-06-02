@@ -1,0 +1,4 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='223' ll='297' type='struct ext_connection * get_ext_connection_by_in_conn_id(int in_fd, int in_gen, long long in_conn_id, int mode, int * created)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='313' u='c' c='create_ext_connection'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='363' u='c' c='remove_ext_connection'/>
+<doc f='MTProxy/mtproto/mtproto-proxy.c' l='222'>// mode: 0 = find, 1 = delete, 2 = create if not found, 3 = find or create</doc>

@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-crypto-dh.h' l='39' type='void fetch_tot_dh_rounds_stat(long long * _tot_dh_rounds)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='429' u='c' c='update_local_stats_copy'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='585' u='c' c='mtfront_prepare_stats'/>
+<def f='MTProxy/net/net-crypto-dh.c' l='65' ll='70' type='void fetch_tot_dh_rounds_stat(long long * _tot_dh_rounds)'/>

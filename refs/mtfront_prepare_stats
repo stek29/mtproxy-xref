@@ -1,0 +1,9 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='576' ll='718' type='void mtfront_prepare_stats(stats_buffer_t * sb)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1384' u='c' c='hts_stats_execute'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2296'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2296'/>
+<doc f='MTProxy/mtproto/mtproto-proxy.c' l='569'>/*
+ *
+ *		SERVER
+ *
+ */</doc>

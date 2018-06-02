@@ -1,0 +1,7 @@
+<def f='MTProxy/net/net-msg.c' l='690' ll='697' type='int rwm_process_memcpy(void * extra, const void * data, int len)'/>
+<use f='MTProxy/net/net-msg.c' l='710' u='r' c='rwm_fetch_data_back'/>
+<use f='MTProxy/net/net-msg.c' l='724' u='r' c='rwm_fetch_lookup_back'/>
+<use f='MTProxy/net/net-msg.c' l='1142' u='r' c='rwm_fetch_data'/>
+<use f='MTProxy/net/net-msg.c' l='1156' u='r' c='rwm_fetch_lookup'/>
+<doc f='MTProxy/net/net-msg.c' l='688'>/* }}} */</doc>
+<doc f='MTProxy/net/net-msg.c' l='690'>/* {{{ */</doc>

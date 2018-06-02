@@ -1,0 +1,3 @@
+<def f='MTProxy/net/net-msg-buffers.c' l='91' ll='104' type='void init_buffer_chunk_headers()'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='330' u='c' c='init_msg_buffers'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='493' u='c' c='alloc_msg_buffer'/>

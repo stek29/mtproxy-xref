@@ -1,0 +1,22 @@
+<dec f='MTProxy/net/net-connections.h' l='248' type='int'/>
+<offset>256</offset>
+<use f='MTProxy/net/net-connections.c' l='331' u='r' c='cond_disable_qack'/>
+<use f='MTProxy/net/net-connections.c' l='802' u='r' c='fail_socket_connection'/>
+<use f='MTProxy/net/net-connections.c' l='803' u='r' c='fail_socket_connection'/>
+<use f='MTProxy/net/net-connections.c' l='868' u='r' c='net_server_socket_reader'/>
+<use f='MTProxy/net/net-connections.c' l='878' u='r' c='net_server_socket_reader'/>
+<use f='MTProxy/net/net-connections.c' l='890' u='r' c='net_server_socket_reader'/>
+<use f='MTProxy/net/net-connections.c' l='973' u='r' c='net_server_socket_writer'/>
+<use f='MTProxy/net/net-connections.c' l='979' u='r' c='net_server_socket_writer'/>
+<use f='MTProxy/net/net-connections.c' l='989' u='r' c='net_server_socket_writer'/>
+<use f='MTProxy/net/net-connections.c' l='1004' u='r' c='net_server_socket_writer'/>
+<use f='MTProxy/net/net-connections.c' l='1026' u='r' c='net_server_socket_writer'/>
+<use f='MTProxy/net/net-connections.c' l='1058' u='r' c='net_server_socket_read_write'/>
+<use f='MTProxy/net/net-connections.c' l='1118' u='r' c='net_server_socket_read_write_gateway'/>
+<use f='MTProxy/net/net-connections.c' l='1119' u='r' c='net_server_socket_read_write_gateway'/>
+<use f='MTProxy/net/net-connections.c' l='1126' u='r' c='net_server_socket_read_write_gateway'/>
+<use f='MTProxy/net/net-connections.c' l='1159' u='r' c='do_socket_connection_job'/>
+<use f='MTProxy/net/net-connections.c' l='1187' u='w' c='alloc_new_socket_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1202' u='r' c='alloc_new_socket_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1208' u='r' c='alloc_new_socket_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1211' u='r' c='alloc_new_socket_connection'/>

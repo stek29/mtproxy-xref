@@ -1,0 +1,7 @@
+<def f='MTProxy/common/crc32.c' l='670' ll='676' type='unsigned int gf32_mulx(unsigned int a, unsigned int poly)'/>
+<use f='MTProxy/common/crc32.c' l='682' u='c' c='gf32_mul'/>
+<use f='MTProxy/common/crc32.c' l='742' u='c' c='gf32_compute_powers_clmul'/>
+<use f='MTProxy/common/crc32.c' l='957' u='c' c='crc32_find_corrupted_bit'/>
+<use f='MTProxy/common/crc32.c' l='959' u='c' c='crc32_find_corrupted_bit'/>
+<use f='MTProxy/common/crc32.c' l='966' u='c' c='crc32_find_corrupted_bit'/>
+<doc f='MTProxy/common/crc32.c' l='668'>/* {{{ GF-32 */</doc>

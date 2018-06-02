@@ -1,0 +1,9 @@
+<dec f='MTProxy/net/net-connections.h' l='424' type='int'/>
+<def f='MTProxy/net/net-connections.c' l='2141' type='int'/>
+<use f='MTProxy/net/net-connections.c' l='2160' u='r' c='net_add_nat_info'/>
+<use f='MTProxy/net/net-connections.c' l='2164' u='r' c='net_add_nat_info'/>
+<use f='MTProxy/net/net-connections.c' l='2165' u='r' c='net_add_nat_info'/>
+<use f='MTProxy/net/net-connections.c' l='2166' u='w' c='net_add_nat_info'/>
+<use f='MTProxy/net/net-connections.c' l='2171' u='r' c='nat_translate_ip'/>
+<use f='MTProxy/net/net-connections.c' l='2172' u='r' c='nat_translate_ip'/>
+<doc f='MTProxy/net/net-connections.c' l='2139'>// -----</doc>

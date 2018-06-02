@@ -1,0 +1,2 @@
+<dec f='MTProxy/common/resolver.h' l='34' type='char * detect_hostname()'/>
+<def f='MTProxy/common/resolver.c' l='404' ll='448' type='char * detect_hostname()'/>

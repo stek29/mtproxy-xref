@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-events.h' l='69' type='int'/>
+<offset>192</offset>
+<doc f='MTProxy/net/net-events.h' l='69'>// priority (0-9)</doc>
+<use f='MTProxy/net/net-events.c' l='92' u='r' c='greater_ev'/>
+<use f='MTProxy/net/net-events.c' l='92' u='r' c='greater_ev'/>
+<use f='MTProxy/net/net-events.c' l='194' u='w' c='epoll_sethandler'/>

@@ -1,0 +1,3 @@
+<def f='MTProxy/common/crc32.h' l='44' ll='46' type='unsigned int compute_crc32(const void * data, long len)'/>
+<use f='MTProxy/common/crc32.c' l='1008' u='c' c='crc32_check_and_repair'/>
+<use f='MTProxy/common/crc32.c' l='1018' u='c' c='crc32_check_and_repair'/>

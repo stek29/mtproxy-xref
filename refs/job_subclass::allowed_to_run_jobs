@@ -1,0 +1,5 @@
+<dec f='MTProxy/jobs/jobs.h' l='192' type='int'/>
+<offset>64</offset>
+<use f='MTProxy/jobs/jobs.c' l='971' u='a' c='process_one_sublist'/>
+<use f='MTProxy/jobs/jobs.c' l='987' u='r' c='process_one_sublist'/>
+<use f='MTProxy/jobs/jobs.c' l='999' u='r' c='process_one_sublist'/>

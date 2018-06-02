@@ -1,0 +1,7 @@
+<dec f='MTProxy/engine/engine.h' l='153' type='void signal_set_pending(int sig)'/>
+<def f='MTProxy/engine/engine-signals.c' l='44' ll='46' type='void signal_set_pending(int sig)'/>
+<use f='MTProxy/engine/engine-signals.c' l='80' u='c' c='sigint_handler'/>
+<use f='MTProxy/engine/engine-signals.c' l='88' u='c' c='sigterm_handler'/>
+<use f='MTProxy/engine/engine-signals.c' l='105' u='c' c='default_signal_handler'/>
+<use f='MTProxy/engine/engine-signals.c' l='120' u='c' c='quiet_signal_handler'/>
+<doc f='MTProxy/engine/engine-signals.c' l='42'>/* {{{ PENDING SIGNALS */</doc>

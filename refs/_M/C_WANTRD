@@ -1,0 +1,8 @@
+<dec f='MTProxy/net/net-connections.h' l='57'/>
+<doc f='MTProxy/net/net-connections.h' l='56'>/* for connection flags */</doc>
+<use f='MTProxy/net/net-connections.c' l='854' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='854' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='1048' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='1060' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='1060' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='1190' u='c'/>

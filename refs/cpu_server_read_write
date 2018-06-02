@@ -1,0 +1,7 @@
+<dec f='MTProxy/net/net-connections.h' l='346' type='int cpu_server_read_write(connection_job_t C)'/>
+<def f='MTProxy/net/net-connections.c' l='399' ll='405' type='int cpu_server_read_write(connection_job_t C)'/>
+<use f='MTProxy/net/net-connections.c' l='1533' u='r' c='check_conn_functions'/>
+<doc f='MTProxy/net/net-connections.c' l='396'>/* 
+  just runs -&gt;reader and -&gt;writer virtual methods
+*/</doc>
+<doc f='MTProxy/net/net-connections.c' l='399'>/* {{{ */</doc>

@@ -1,0 +1,6 @@
+<dec f='include/netinet/in.h' l='220' type='union (anonymous union at /usr/include/netinet/in.h:213:5)'/>
+<offset>0</offset>
+<use f='MTProxy/net/net-connections.c' l='678' macro='1' u='m'/>
+<use f='MTProxy/net/net-connections.c' l='679' macro='1' u='m'/>
+<use f='MTProxy/net/net-connections.c' l='683' macro='1' u='m'/>
+<use f='MTProxy/net/net-connections.c' l='1286' macro='1' u='m'/>

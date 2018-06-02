@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-connections.h' l='326' type='int clear_connection_timeout(connection_job_t C)'/>
+<dec f='MTProxy/net/net-connections.h' l='360' type='int clear_connection_timeout(connection_job_t C)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1565' u='c' c='http_send_message'/>
+<def f='MTProxy/net/net-connections.c' l='369' ll='372' type='int clear_connection_timeout(connection_job_t C)'/>
+<doc f='MTProxy/net/net-connections.c' l='367'>/* }}} */</doc>
+<doc f='MTProxy/net/net-connections.c' l='369'>/* {{{ */</doc>

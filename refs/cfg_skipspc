@@ -1,0 +1,5 @@
+<dec f='MTProxy/common/parse-config.h' l='26' type='int cfg_skipspc()'/>
+<def f='MTProxy/common/parse-config.c' l='42' ll='54' type='int cfg_skipspc()'/>
+<use f='MTProxy/common/parse-config.c' l='64' u='c' c='cfg_getlex'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='69' u='c' c='cfg_getlex_ext'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='263' u='c' c='parse_config'/>

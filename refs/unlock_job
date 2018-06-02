@@ -1,0 +1,17 @@
+<dec f='MTProxy/jobs/jobs.h' l='296' type='int unlock_job(int job_tag_int, job_t job)'/>
+<use f='MTProxy/engine/engine.c' l='455' u='c' c='default_engine_server_start'/>
+<def f='MTProxy/jobs/jobs.c' l='613' ll='742' type='int unlock_job(int job_tag_int, job_t job)'/>
+<use f='MTProxy/jobs/jobs.c' l='755' u='c' c='job_send_signals'/>
+<use f='MTProxy/jobs/jobs.c' l='760' u='c' c='job_send_signals'/>
+<use f='MTProxy/jobs/jobs.c' l='804' u='c' c='process_one_job'/>
+<use f='MTProxy/jobs/jobs.c' l='808' u='c' c='process_one_job'/>
+<use f='MTProxy/jobs/jobs.c' l='1114' u='c' c='schedule_job'/>
+<use f='MTProxy/jobs/jobs.c' l='1191' u='c' c='create_job_list'/>
+<use f='MTProxy/jobs/jobs.c' l='1207' u='c' c='insert_node_into_job_list'/>
+<use f='MTProxy/jobs/jobs.c' l='1304' u='c' c='alloc_timer_manager'/>
+<use f='MTProxy/jobs/jobs.c' l='1348' u='c' c='job_timer_alloc'/>
+<use f='MTProxy/net/net-connections.c' l='1216' u='c' c='alloc_new_socket_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1290' u='c' c='net_accept_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1371' u='c' c='init_listening_connection_ext'/>
+<use f='MTProxy/net/net-connections.c' l='1735' u='c' c='create_new_connections'/>
+<use f='MTProxy/net/net-thread.c' l='103' u='c' c='notification_event_job_create'/>

@@ -1,0 +1,9 @@
+<dec f='MTProxy/common/mp-queue.h' l='112' type='struct mp_queue_block * alloc_mpq_block(mqn_value_t first_val, int allow_recursion, int is_small)'/>
+<doc f='MTProxy/common/mp-queue.h' l='111'>/* functions for one mp_queue_block */</doc>
+<def f='MTProxy/common/mp-queue.c' l='168' ll='240' type='struct mp_queue_block * alloc_mpq_block(mqn_value_t first_val, int allow_recursion, int is_small)'/>
+<use f='MTProxy/common/mp-queue.c' l='374' u='c' c='init_mp_queue'/>
+<use f='MTProxy/common/mp-queue.c' l='575' u='c' c='mpq_push'/>
+<use f='MTProxy/common/mp-queue.c' l='578' u='c' c='mpq_push'/>
+<doc f='MTProxy/common/mp-queue.c' l='165'>/* functions for one mp_queue_block */
+
+// may invoke mpq_pop()/mpq_push() if allow_recursion=1</doc>

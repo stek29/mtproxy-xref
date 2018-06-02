@@ -1,0 +1,10 @@
+<dec f='MTProxy/common/pid.h' l='56' type='int matches_pid(struct process_id * X, struct process_id * Y)'/>
+<doc f='MTProxy/common/pid.h' l='55'>/* returns 1 if X is a special case of Y, 2 if they match completely */</doc>
+<def f='MTProxy/common/pid.c' l='69' ll='77' type='int matches_pid(npid_t * X, npid_t * Y)'/>
+<doc f='MTProxy/common/pid.c' l='68'>/* returns 1 if X is a special case of Y, 2 if they match completely */</doc>
+<use f='MTProxy/net/net-rpc-targets.c' l='241' u='c' c='check_connection'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='246' u='c' c='check_connection'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='270' u='c' c='check_connection_arr'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='299' u='c' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='309' u='c' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='289' u='c' c='tcp_rpcs_process_handshake_packet'/>

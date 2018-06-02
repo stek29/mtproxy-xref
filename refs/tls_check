@@ -1,0 +1,24 @@
+<def f='MTProxy/common/tl-parse.h' l='548' ll='552' type='int tls_check(struct tl_out_state * tlio_out, int size)'/>
+<use f='MTProxy/common/tl-parse.h' l='563' u='c' c='tls_get_ptr'/>
+<use f='MTProxy/common/tl-parse.h' l='575' u='c' c='tls_get_prepend_ptr'/>
+<use f='MTProxy/common/tl-parse.h' l='587' u='c' c='tls_int'/>
+<use f='MTProxy/common/tl-parse.h' l='595' u='c' c='tls_long'/>
+<use f='MTProxy/common/tl-parse.h' l='603' u='c' c='tls_double'/>
+<use f='MTProxy/common/tl-parse.h' l='611' u='c' c='tls_string_len'/>
+<use f='MTProxy/common/tl-parse.h' l='626' u='c' c='tls_raw_msg'/>
+<use f='MTProxy/common/tl-parse.h' l='643' u='c' c='tls_pad'/>
+<use f='MTProxy/common/tl-parse.h' l='654' u='c' c='tls_raw_data'/>
+<use f='MTProxy/common/tl-parse.h' l='662' u='c' c='tls_string_data'/>
+<use f='MTProxy/common/tl-parse.h' l='713' u='c' c='tl_copy_through'/>
+<use f='MTProxy/common/tl-parse.c' l='837' u='c' c='tls_header'/>
+<doc f='MTProxy/common/tl-parse.h' l='537'>/*
+static inline int tl_fetch_move (int offset) {
+  if (tl_fetch_check (offset) &lt; 0) {
+    return -1;
+  }
+  TL_IN_METHODS-&gt;fetch_move (offset);
+  TL_IN_POS += offset;
+  TL_IN_REMAINING -= offset;
+  return offset;
+}*/</doc>
+<doc f='MTProxy/common/tl-parse.h' l='548'>/* {{{ */</doc>

@@ -1,0 +1,8 @@
+<dec f='MTProxy/common/rpc-const.h' l='126'/>
+<doc f='MTProxy/common/rpc-const.h' l='123'>//
+// Different errors -4000...-4999
+//</doc>
+<use f='MTProxy/engine/engine-rpc.c' l='424' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='450' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='483' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='571' u='c'/>

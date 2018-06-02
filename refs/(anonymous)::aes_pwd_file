@@ -1,0 +1,6 @@
+<dec f='MTProxy/engine/engine.h' l='135' type='char *'/>
+<use f='MTProxy/engine/engine.h' l='193' u='r' c='engine_set_aes_pwd_file'/>
+<use f='MTProxy/engine/engine.h' l='193' u='r' c='engine_set_aes_pwd_file'/>
+<use f='MTProxy/engine/engine.h' l='193' u='w' c='engine_set_aes_pwd_file'/>
+<use f='MTProxy/engine/engine.h' l='193' u='r' c='engine_get_aes_pwd_file'/>
+<offset>512</offset>

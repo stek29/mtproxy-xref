@@ -1,0 +1,20 @@
+<dec f='MTProxy/common/md5.h' l='39' type='void md5_update(md5_context * ctx, unsigned char * input, int ilen)'/>
+<def f='MTProxy/common/md5.c' l='198' ll='237' type='void md5_update(md5_context * ctx, unsigned char * input, int ilen)'/>
+<use f='MTProxy/common/md5.c' l='266' u='c' c='md5_finish'/>
+<use f='MTProxy/common/md5.c' l='267' u='c' c='md5_finish'/>
+<use f='MTProxy/common/md5.c' l='283' u='c' c='md5'/>
+<use f='MTProxy/common/md5.c' l='316' u='c' c='md5_file'/>
+<use f='MTProxy/common/md5.c' l='357' u='c' c='md5_hmac_starts'/>
+<use f='MTProxy/common/md5.c' l='367' u='c' c='md5_hmac_update'/>
+<use f='MTProxy/common/md5.c' l='379' u='c' c='md5_hmac_finish'/>
+<use f='MTProxy/common/md5.c' l='380' u='c' c='md5_hmac_finish'/>
+<doc f='MTProxy/common/md5.c' l='195'>/*
+ * MD5 process buffer
+ */</doc>
+<doc f='MTProxy/common/md5.h' l='32'>/**
+ * \brief          MD5 process buffer
+ *
+ * \param ctx      MD5 context
+ * \param input    buffer holding the  data
+ * \param ilen     length of the input data
+ */</doc>

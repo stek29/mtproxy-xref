@@ -1,0 +1,11 @@
+<dec f='MTProxy/net/net-events.h' l='133' type='struct sockaddr_in6'/>
+<offset>0</offset>
+<use f='MTProxy/net/net-connections.c' l='675' u='m' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='678' u='m' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='679' u='m' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='680' u='m' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='683' u='m' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='684' u='m' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1274' u='m' c='net_accept_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1286' u='m' c='net_accept_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1286' u='m' c='net_accept_new_connections'/>

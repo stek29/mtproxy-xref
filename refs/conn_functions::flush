@@ -1,0 +1,10 @@
+<dec f='MTProxy/net/net-connections.h' l='145' type='int (*)(connection_job_t)'/>
+<offset>832</offset>
+<doc f='MTProxy/net/net-connections.h' l='145'>/* generates necessary padding and writes as much bytes as possible */</doc>
+<use f='MTProxy/net/net-connections.c' l='1526' u='r' c='check_conn_functions'/>
+<use f='MTProxy/net/net-connections.c' l='1527' u='w' c='check_conn_functions'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='71' u='r' c='cpu_tcp_server_writer'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='83' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='156' u='r' c='tcp_rpc_flush_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='68' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='75' u='w'/>

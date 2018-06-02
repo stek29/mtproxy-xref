@@ -1,0 +1,4 @@
+<dec f='MTProxy/mtproto/mtproto-config.h' l='35' type='int'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='123' u='w' c='clear_mf_cluster'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='197' u='w' c='init_old_mf_cluster'/>
+<offset>96</offset>

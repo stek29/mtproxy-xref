@@ -1,0 +1,6 @@
+<dec f='MTProxy/engine/engine-signals.h' l='30' type='void sigint_immediate_handler(const int sig)'/>
+<def f='MTProxy/engine/engine-signals.c' l='61' ll='66' type='void sigint_immediate_handler(const int sig)'/>
+<use f='MTProxy/engine/engine-signals.c' l='81' u='r' c='sigint_handler'/>
+<doc f='MTProxy/engine/engine-signals.c' l='59'>/* }}} */</doc>
+<doc f='MTProxy/engine/engine-signals.c' l='61'>/* {{{ */</doc>
+<use f='MTProxy/engine/engine.c' l='114' u='r' c='set_signals_handlers'/>

@@ -1,0 +1,6 @@
+<dec f='MTProxy/common/server-functions.h' l='65' type='const char *'/>
+<def f='MTProxy/common/server-functions.c' l='74' type='const char *'/>
+<use f='MTProxy/common/server-functions.c' l='244' u='r' c='usage'/>
+<use f='MTProxy/common/server-functions.c' l='244' u='r' c='usage'/>
+<use f='MTProxy/engine/engine.c' l='612' u='w' c='default_main'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2092' u='r' c='usage'/>

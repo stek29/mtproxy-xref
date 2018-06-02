@@ -1,0 +1,11 @@
+<dec f='MTProxy/net/net-http-server.h' l='48' type='int'/>
+<offset>64</offset>
+<use f='MTProxy/net/net-http-server.c' l='267' u='w' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='268' u='r' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='285' u='r' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='292' u='r' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='331' u='r' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='346' u='r' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='350' u='r' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='471' u='w' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='472' u='w' c='hts_parse_execute'/>

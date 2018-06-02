@@ -1,0 +1,351 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>dsa.h source code [include/openssl/dsa.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="DSA_SIG_st,dsa_method,dsa_st "/>
+<link rel="stylesheet" href="https://code.woboq.org/data//qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="https://code.woboq.org/data//kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery-ui.min.js"></script>
+<script>var file = 'include/openssl/dsa.h'; var root_path = '../..'; var data_path = 'https://code.woboq.org/data/';</script>
+<script src='https://code.woboq.org/data//codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='..'>include</a>/<a href='./'>openssl</a>/<a href='dsa.h.html'>dsa.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/* crypto/dsa/dsa.h */</i></td></tr>
+<tr><th id="2">2</th><td><i>/* Copyright (C) 1995-1998 Eric Young (eay@cryptsoft.com)</i></td></tr>
+<tr><th id="3">3</th><td><i> * All rights reserved.</i></td></tr>
+<tr><th id="4">4</th><td><i> *</i></td></tr>
+<tr><th id="5">5</th><td><i> * This package is an SSL implementation written</i></td></tr>
+<tr><th id="6">6</th><td><i> * by Eric Young (eay@cryptsoft.com).</i></td></tr>
+<tr><th id="7">7</th><td><i> * The implementation was written so as to conform with Netscapes SSL.</i></td></tr>
+<tr><th id="8">8</th><td><i> *</i></td></tr>
+<tr><th id="9">9</th><td><i> * This library is free for commercial and non-commercial use as long as</i></td></tr>
+<tr><th id="10">10</th><td><i> * the following conditions are aheared to.  The following conditions</i></td></tr>
+<tr><th id="11">11</th><td><i> * apply to all code found in this distribution, be it the RC4, RSA,</i></td></tr>
+<tr><th id="12">12</th><td><i> * lhash, DES, etc., code; not just the SSL code.  The SSL documentation</i></td></tr>
+<tr><th id="13">13</th><td><i> * included with this distribution is covered by the same copyright terms</i></td></tr>
+<tr><th id="14">14</th><td><i> * except that the holder is Tim Hudson (tjh@cryptsoft.com).</i></td></tr>
+<tr><th id="15">15</th><td><i> *</i></td></tr>
+<tr><th id="16">16</th><td><i> * Copyright remains Eric Young's, and as such any Copyright notices in</i></td></tr>
+<tr><th id="17">17</th><td><i> * the code are not to be removed.</i></td></tr>
+<tr><th id="18">18</th><td><i> * If this package is used in a product, Eric Young should be given attribution</i></td></tr>
+<tr><th id="19">19</th><td><i> * as the author of the parts of the library used.</i></td></tr>
+<tr><th id="20">20</th><td><i> * This can be in the form of a textual message at program startup or</i></td></tr>
+<tr><th id="21">21</th><td><i> * in documentation (online or textual) provided with the package.</i></td></tr>
+<tr><th id="22">22</th><td><i> *</i></td></tr>
+<tr><th id="23">23</th><td><i> * Redistribution and use in source and binary forms, with or without</i></td></tr>
+<tr><th id="24">24</th><td><i> * modification, are permitted provided that the following conditions</i></td></tr>
+<tr><th id="25">25</th><td><i> * are met:</i></td></tr>
+<tr><th id="26">26</th><td><i> * 1. Redistributions of source code must retain the copyright</i></td></tr>
+<tr><th id="27">27</th><td><i> *    notice, this list of conditions and the following disclaimer.</i></td></tr>
+<tr><th id="28">28</th><td><i> * 2. Redistributions in binary form must reproduce the above copyright</i></td></tr>
+<tr><th id="29">29</th><td><i> *    notice, this list of conditions and the following disclaimer in the</i></td></tr>
+<tr><th id="30">30</th><td><i> *    documentation and/or other materials provided with the distribution.</i></td></tr>
+<tr><th id="31">31</th><td><i> * 3. All advertising materials mentioning features or use of this software</i></td></tr>
+<tr><th id="32">32</th><td><i> *    must display the following acknowledgement:</i></td></tr>
+<tr><th id="33">33</th><td><i> *    "This product includes cryptographic software written by</i></td></tr>
+<tr><th id="34">34</th><td><i> *     Eric Young (eay@cryptsoft.com)"</i></td></tr>
+<tr><th id="35">35</th><td><i> *    The word 'cryptographic' can be left out if the rouines from the library</i></td></tr>
+<tr><th id="36">36</th><td><i> *    being used are not cryptographic related :-).</i></td></tr>
+<tr><th id="37">37</th><td><i> * 4. If you include any Windows specific code (or a derivative thereof) from</i></td></tr>
+<tr><th id="38">38</th><td><i> *    the apps directory (application code) you must include an acknowledgement:</i></td></tr>
+<tr><th id="39">39</th><td><i> *    "This product includes software written by Tim Hudson (tjh@cryptsoft.com)"</i></td></tr>
+<tr><th id="40">40</th><td><i> *</i></td></tr>
+<tr><th id="41">41</th><td><i> * THIS SOFTWARE IS PROVIDED BY ERIC YOUNG ``AS IS'' AND</i></td></tr>
+<tr><th id="42">42</th><td><i> * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE</i></td></tr>
+<tr><th id="43">43</th><td><i> * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE</i></td></tr>
+<tr><th id="44">44</th><td><i> * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE</i></td></tr>
+<tr><th id="45">45</th><td><i> * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL</i></td></tr>
+<tr><th id="46">46</th><td><i> * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS</i></td></tr>
+<tr><th id="47">47</th><td><i> * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)</i></td></tr>
+<tr><th id="48">48</th><td><i> * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT</i></td></tr>
+<tr><th id="49">49</th><td><i> * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY</i></td></tr>
+<tr><th id="50">50</th><td><i> * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF</i></td></tr>
+<tr><th id="51">51</th><td><i> * SUCH DAMAGE.</i></td></tr>
+<tr><th id="52">52</th><td><i> *</i></td></tr>
+<tr><th id="53">53</th><td><i> * The licence and distribution terms for any publically available version or</i></td></tr>
+<tr><th id="54">54</th><td><i> * derivative of this code cannot be changed.  i.e. this code cannot simply be</i></td></tr>
+<tr><th id="55">55</th><td><i> * copied and put under another distribution licence</i></td></tr>
+<tr><th id="56">56</th><td><i> * [including the GNU Public Licence.]</i></td></tr>
+<tr><th id="57">57</th><td><i> */</i></td></tr>
+<tr><th id="58">58</th><td></td></tr>
+<tr><th id="59">59</th><td><i>/*</i></td></tr>
+<tr><th id="60">60</th><td><i> * The DSS routines are based on patches supplied by</i></td></tr>
+<tr><th id="61">61</th><td><i> * Steven Schoch &lt;schoch@sheba.arc.nasa.gov&gt;.  He basically did the</i></td></tr>
+<tr><th id="62">62</th><td><i> * work and I have just tweaked them a little to fit into my</i></td></tr>
+<tr><th id="63">63</th><td><i> * stylistic vision for SSLeay :-) */</i></td></tr>
+<tr><th id="64">64</th><td></td></tr>
+<tr><th id="65">65</th><td><u>#<span data-ppcond="65">ifndef</span> <span class="macro" data-ref="_M/HEADER_DSA_H">HEADER_DSA_H</span></u></td></tr>
+<tr><th id="66">66</th><td><u># define <dfn class="macro" id="_M/HEADER_DSA_H" data-ref="_M/HEADER_DSA_H">HEADER_DSA_H</dfn></u></td></tr>
+<tr><th id="67">67</th><td></td></tr>
+<tr><th id="68">68</th><td><u># include <a href="e_os2.h.html">&lt;openssl/e_os2.h&gt;</a></u></td></tr>
+<tr><th id="69">69</th><td></td></tr>
+<tr><th id="70">70</th><td><u># <span data-ppcond="70">ifdef</span> <span class="macro" data-ref="_M/OPENSSL_NO_DSA">OPENSSL_NO_DSA</span></u></td></tr>
+<tr><th id="71">71</th><td><u>#  error DSA is disabled.</u></td></tr>
+<tr><th id="72">72</th><td><u># <span data-ppcond="70">endif</span></u></td></tr>
+<tr><th id="73">73</th><td></td></tr>
+<tr><th id="74">74</th><td><u># <span data-ppcond="74">ifndef</span> <span class="macro" data-ref="_M/OPENSSL_NO_BIO">OPENSSL_NO_BIO</span></u></td></tr>
+<tr><th id="75">75</th><td><u>#  include <a href="bio.h.html">&lt;openssl/bio.h&gt;</a></u></td></tr>
+<tr><th id="76">76</th><td><u># <span data-ppcond="74">endif</span></u></td></tr>
+<tr><th id="77">77</th><td><u># include <a href="crypto.h.html">&lt;openssl/crypto.h&gt;</a></u></td></tr>
+<tr><th id="78">78</th><td><u># include <a href="ossl_typ.h.html">&lt;openssl/ossl_typ.h&gt;</a></u></td></tr>
+<tr><th id="79">79</th><td></td></tr>
+<tr><th id="80">80</th><td><u># <span data-ppcond="80">ifndef</span> <span class="macro" data-ref="_M/OPENSSL_NO_DEPRECATED">OPENSSL_NO_DEPRECATED</span></u></td></tr>
+<tr><th id="81">81</th><td><u>#  include <a href="bn.h.html">&lt;openssl/bn.h&gt;</a></u></td></tr>
+<tr><th id="82">82</th><td><u>#  <span data-ppcond="82">ifndef</span> <span class="macro" data-ref="_M/OPENSSL_NO_DH">OPENSSL_NO_DH</span></u></td></tr>
+<tr><th id="83">83</th><td><u>#   include <a href="dh.h.html">&lt;openssl/dh.h&gt;</a></u></td></tr>
+<tr><th id="84">84</th><td><u>#  <span data-ppcond="82">endif</span></u></td></tr>
+<tr><th id="85">85</th><td><u># <span data-ppcond="80">endif</span></u></td></tr>
+<tr><th id="86">86</th><td></td></tr>
+<tr><th id="87">87</th><td><u># <span data-ppcond="87">ifndef</span> <span class="macro" data-ref="_M/OPENSSL_DSA_MAX_MODULUS_BITS">OPENSSL_DSA_MAX_MODULUS_BITS</span></u></td></tr>
+<tr><th id="88">88</th><td><u>#  define <dfn class="macro" id="_M/OPENSSL_DSA_MAX_MODULUS_BITS" data-ref="_M/OPENSSL_DSA_MAX_MODULUS_BITS">OPENSSL_DSA_MAX_MODULUS_BITS</dfn>   10000</u></td></tr>
+<tr><th id="89">89</th><td><u># <span data-ppcond="87">endif</span></u></td></tr>
+<tr><th id="90">90</th><td></td></tr>
+<tr><th id="91">91</th><td><u># define <dfn class="macro" id="_M/DSA_FLAG_CACHE_MONT_P" data-ref="_M/DSA_FLAG_CACHE_MONT_P">DSA_FLAG_CACHE_MONT_P</dfn>   0x01</u></td></tr>
+<tr><th id="92">92</th><td><i>/*</i></td></tr>
+<tr><th id="93">93</th><td><i> * new with 0.9.7h; the built-in DSA implementation now uses constant time</i></td></tr>
+<tr><th id="94">94</th><td><i> * modular exponentiation for secret exponents by default. This flag causes</i></td></tr>
+<tr><th id="95">95</th><td><i> * the faster variable sliding window method to be used for all exponents.</i></td></tr>
+<tr><th id="96">96</th><td><i> */</i></td></tr>
+<tr><th id="97">97</th><td><u># define <dfn class="macro" id="_M/DSA_FLAG_NO_EXP_CONSTTIME" data-ref="_M/DSA_FLAG_NO_EXP_CONSTTIME">DSA_FLAG_NO_EXP_CONSTTIME</dfn>       0x02</u></td></tr>
+<tr><th id="98">98</th><td></td></tr>
+<tr><th id="99">99</th><td><i>/*</i></td></tr>
+<tr><th id="100">100</th><td><i> * If this flag is set the DSA method is FIPS compliant and can be used in</i></td></tr>
+<tr><th id="101">101</th><td><i> * FIPS mode. This is set in the validated module method. If an application</i></td></tr>
+<tr><th id="102">102</th><td><i> * sets this flag in its own methods it is its reposibility to ensure the</i></td></tr>
+<tr><th id="103">103</th><td><i> * result is compliant.</i></td></tr>
+<tr><th id="104">104</th><td><i> */</i></td></tr>
+<tr><th id="105">105</th><td></td></tr>
+<tr><th id="106">106</th><td><u># define <dfn class="macro" id="_M/DSA_FLAG_FIPS_METHOD" data-ref="_M/DSA_FLAG_FIPS_METHOD">DSA_FLAG_FIPS_METHOD</dfn>                    0x0400</u></td></tr>
+<tr><th id="107">107</th><td></td></tr>
+<tr><th id="108">108</th><td><i>/*</i></td></tr>
+<tr><th id="109">109</th><td><i> * If this flag is set the operations normally disabled in FIPS mode are</i></td></tr>
+<tr><th id="110">110</th><td><i> * permitted it is then the applications responsibility to ensure that the</i></td></tr>
+<tr><th id="111">111</th><td><i> * usage is compliant.</i></td></tr>
+<tr><th id="112">112</th><td><i> */</i></td></tr>
+<tr><th id="113">113</th><td></td></tr>
+<tr><th id="114">114</th><td><u># define <dfn class="macro" id="_M/DSA_FLAG_NON_FIPS_ALLOW" data-ref="_M/DSA_FLAG_NON_FIPS_ALLOW">DSA_FLAG_NON_FIPS_ALLOW</dfn>                 0x0400</u></td></tr>
+<tr><th id="115">115</th><td></td></tr>
+<tr><th id="116">116</th><td><u>#<span data-ppcond="116">ifdef</span>  <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
+<tr><th id="117">117</th><td><b>extern</b> <q>"C"</q> {</td></tr>
+<tr><th id="118">118</th><td><u>#<span data-ppcond="116">endif</span></u></td></tr>
+<tr><th id="119">119</th><td></td></tr>
+<tr><th id="120">120</th><td><i>/* Already defined in ossl_typ.h */</i></td></tr>
+<tr><th id="121">121</th><td><i>/* typedef struct dsa_st DSA; */</i></td></tr>
+<tr><th id="122">122</th><td><i>/* typedef struct dsa_method DSA_METHOD; */</i></td></tr>
+<tr><th id="123">123</th><td></td></tr>
+<tr><th id="124">124</th><td><b>typedef</b> <b>struct</b> <dfn class="type def" id="DSA_SIG_st" title='DSA_SIG_st' data-ref="DSA_SIG_st"><a class="type" href="#DSA_SIG_st" title='DSA_SIG_st' data-ref="DSA_SIG_st">DSA_SIG_st</a></dfn> {</td></tr>
+<tr><th id="125">125</th><td>    <a class="typedef" href="ossl_typ.h.html#BIGNUM" title='BIGNUM' data-type='struct bignum_st' data-ref="BIGNUM">BIGNUM</a> *<dfn class="decl" id="DSA_SIG_st::r" title='DSA_SIG_st::r' data-ref="DSA_SIG_st::r">r</dfn>;</td></tr>
+<tr><th id="126">126</th><td>    <a class="typedef" href="ossl_typ.h.html#BIGNUM" title='BIGNUM' data-type='struct bignum_st' data-ref="BIGNUM">BIGNUM</a> *<dfn class="decl" id="DSA_SIG_st::s" title='DSA_SIG_st::s' data-ref="DSA_SIG_st::s">s</dfn>;</td></tr>
+<tr><th id="127">127</th><td>} <dfn class="typedef" id="DSA_SIG" title='DSA_SIG' data-type='struct DSA_SIG_st' data-ref="DSA_SIG">DSA_SIG</dfn>;</td></tr>
+<tr><th id="128">128</th><td></td></tr>
+<tr><th id="129">129</th><td><b>struct</b> <dfn class="type def" id="dsa_method" title='dsa_method' data-ref="dsa_method">dsa_method</dfn> {</td></tr>
+<tr><th id="130">130</th><td>    <em>const</em> <em>char</em> *<dfn class="decl" id="dsa_method::name" title='dsa_method::name' data-ref="dsa_method::name">name</dfn>;</td></tr>
+<tr><th id="131">131</th><td>    <a class="typedef" href="#DSA_SIG" title='DSA_SIG' data-type='struct DSA_SIG_st' data-ref="DSA_SIG">DSA_SIG</a> *(*<dfn class="decl" id="dsa_method::dsa_do_sign" title='dsa_method::dsa_do_sign' data-ref="dsa_method::dsa_do_sign">dsa_do_sign</dfn>) (<em>const</em> <em>unsigned</em> <em>char</em> *<dfn class="local col1 decl" id="501dgst" title='dgst' data-type='const unsigned char *' data-ref="501dgst">dgst</dfn>, <em>int</em> <dfn class="local col2 decl" id="502dlen" title='dlen' data-type='int' data-ref="502dlen">dlen</dfn>, <a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col3 decl" id="503dsa" title='dsa' data-type='DSA *' data-ref="503dsa">dsa</dfn>);</td></tr>
+<tr><th id="132">132</th><td>    <em>int</em> (*<dfn class="decl" id="dsa_method::dsa_sign_setup" title='dsa_method::dsa_sign_setup' data-ref="dsa_method::dsa_sign_setup">dsa_sign_setup</dfn>) (<a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col4 decl" id="504dsa" title='dsa' data-type='DSA *' data-ref="504dsa">dsa</dfn>, <a class="typedef" href="ossl_typ.h.html#BN_CTX" title='BN_CTX' data-type='struct bignum_ctx' data-ref="BN_CTX">BN_CTX</a> *<dfn class="local col5 decl" id="505ctx_in" title='ctx_in' data-type='BN_CTX *' data-ref="505ctx_in">ctx_in</dfn>, <a class="typedef" href="ossl_typ.h.html#BIGNUM" title='BIGNUM' data-type='struct bignum_st' data-ref="BIGNUM">BIGNUM</a> **<dfn class="local col6 decl" id="506kinvp" title='kinvp' data-type='BIGNUM **' data-ref="506kinvp">kinvp</dfn>,</td></tr>
+<tr><th id="133">133</th><td>                           <a class="typedef" href="ossl_typ.h.html#BIGNUM" title='BIGNUM' data-type='struct bignum_st' data-ref="BIGNUM">BIGNUM</a> **<dfn class="local col7 decl" id="507rp" title='rp' data-type='BIGNUM **' data-ref="507rp">rp</dfn>);</td></tr>
+<tr><th id="134">134</th><td>    <em>int</em> (*<dfn class="decl" id="dsa_method::dsa_do_verify" title='dsa_method::dsa_do_verify' data-ref="dsa_method::dsa_do_verify">dsa_do_verify</dfn>) (<em>const</em> <em>unsigned</em> <em>char</em> *<dfn class="local col8 decl" id="508dgst" title='dgst' data-type='const unsigned char *' data-ref="508dgst">dgst</dfn>, <em>int</em> <dfn class="local col9 decl" id="509dgst_len" title='dgst_len' data-type='int' data-ref="509dgst_len">dgst_len</dfn>,</td></tr>
+<tr><th id="135">135</th><td>                          <a class="typedef" href="#DSA_SIG" title='DSA_SIG' data-type='struct DSA_SIG_st' data-ref="DSA_SIG">DSA_SIG</a> *<dfn class="local col0 decl" id="510sig" title='sig' data-type='DSA_SIG *' data-ref="510sig">sig</dfn>, <a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col1 decl" id="511dsa" title='dsa' data-type='DSA *' data-ref="511dsa">dsa</dfn>);</td></tr>
+<tr><th id="136">136</th><td>    <em>int</em> (*<dfn class="decl" id="dsa_method::dsa_mod_exp" title='dsa_method::dsa_mod_exp' data-ref="dsa_method::dsa_mod_exp">dsa_mod_exp</dfn>) (<a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col2 decl" id="512dsa" title='dsa' data-type='DSA *' data-ref="512dsa">dsa</dfn>, <a class="typedef" href="ossl_typ.h.html#BIGNUM" title='BIGNUM' data-type='struct bignum_st' data-ref="BIGNUM">BIGNUM</a> *<dfn class="local col3 decl" id="513rr" title='rr' data-type='BIGNUM *' data-ref="513rr">rr</dfn>, <a class="typedef" href="ossl_typ.h.html#BIGNUM" title='BIGNUM' data-type='struct bignum_st' data-ref="BIGNUM">BIGNUM</a> *<dfn class="local col4 decl" id="514a1" title='a1' data-type='BIGNUM *' data-ref="514a1">a1</dfn>, <a class="typedef" href="ossl_typ.h.html#BIGNUM" title='BIGNUM' data-type='struct bignum_st' data-ref="BIGNUM">BIGNUM</a> *<dfn class="local col5 decl" id="515p1" title='p1' data-type='BIGNUM *' data-ref="515p1">p1</dfn>,</td></tr>
+<tr><th id="137">137</th><td>                        <a class="typedef" href="ossl_typ.h.html#BIGNUM" title='BIGNUM' data-type='struct bignum_st' data-ref="BIGNUM">BIGNUM</a> *<dfn class="local col6 decl" id="516a2" title='a2' data-type='BIGNUM *' data-ref="516a2">a2</dfn>, <a class="typedef" href="ossl_typ.h.html#BIGNUM" title='BIGNUM' data-type='struct bignum_st' data-ref="BIGNUM">BIGNUM</a> *<dfn class="local col7 decl" id="517p2" title='p2' data-type='BIGNUM *' data-ref="517p2">p2</dfn>, <a class="typedef" href="ossl_typ.h.html#BIGNUM" title='BIGNUM' data-type='struct bignum_st' data-ref="BIGNUM">BIGNUM</a> *<dfn class="local col8 decl" id="518m" title='m' data-type='BIGNUM *' data-ref="518m">m</dfn>, <a class="typedef" href="ossl_typ.h.html#BN_CTX" title='BN_CTX' data-type='struct bignum_ctx' data-ref="BN_CTX">BN_CTX</a> *<dfn class="local col9 decl" id="519ctx" title='ctx' data-type='BN_CTX *' data-ref="519ctx">ctx</dfn>,</td></tr>
+<tr><th id="138">138</th><td>                        <a class="typedef" href="ossl_typ.h.html#BN_MONT_CTX" title='BN_MONT_CTX' data-type='struct bn_mont_ctx_st' data-ref="BN_MONT_CTX">BN_MONT_CTX</a> *<dfn class="local col0 decl" id="520in_mont" title='in_mont' data-type='BN_MONT_CTX *' data-ref="520in_mont">in_mont</dfn>);</td></tr>
+<tr><th id="139">139</th><td>    <i>/* Can be null */</i></td></tr>
+<tr><th id="140">140</th><td>    <em>int</em> (*<dfn class="decl" id="dsa_method::bn_mod_exp" title='dsa_method::bn_mod_exp' data-ref="dsa_method::bn_mod_exp">bn_mod_exp</dfn>) (<a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col1 decl" id="521dsa" title='dsa' data-type='DSA *' data-ref="521dsa">dsa</dfn>, <a class="typedef" href="ossl_typ.h.html#BIGNUM" title='BIGNUM' data-type='struct bignum_st' data-ref="BIGNUM">BIGNUM</a> *<dfn class="local col2 decl" id="522r" title='r' data-type='BIGNUM *' data-ref="522r">r</dfn>, <a class="typedef" href="ossl_typ.h.html#BIGNUM" title='BIGNUM' data-type='struct bignum_st' data-ref="BIGNUM">BIGNUM</a> *<dfn class="local col3 decl" id="523a" title='a' data-type='BIGNUM *' data-ref="523a">a</dfn>, <em>const</em> <a class="typedef" href="ossl_typ.h.html#BIGNUM" title='BIGNUM' data-type='struct bignum_st' data-ref="BIGNUM">BIGNUM</a> *<dfn class="local col4 decl" id="524p" title='p' data-type='const BIGNUM *' data-ref="524p">p</dfn>,</td></tr>
+<tr><th id="141">141</th><td>                       <em>const</em> <a class="typedef" href="ossl_typ.h.html#BIGNUM" title='BIGNUM' data-type='struct bignum_st' data-ref="BIGNUM">BIGNUM</a> *<dfn class="local col5 decl" id="525m" title='m' data-type='const BIGNUM *' data-ref="525m">m</dfn>, <a class="typedef" href="ossl_typ.h.html#BN_CTX" title='BN_CTX' data-type='struct bignum_ctx' data-ref="BN_CTX">BN_CTX</a> *<dfn class="local col6 decl" id="526ctx" title='ctx' data-type='BN_CTX *' data-ref="526ctx">ctx</dfn>, <a class="typedef" href="ossl_typ.h.html#BN_MONT_CTX" title='BN_MONT_CTX' data-type='struct bn_mont_ctx_st' data-ref="BN_MONT_CTX">BN_MONT_CTX</a> *<dfn class="local col7 decl" id="527m_ctx" title='m_ctx' data-type='BN_MONT_CTX *' data-ref="527m_ctx">m_ctx</dfn>);</td></tr>
+<tr><th id="142">142</th><td>    <em>int</em> (*<dfn class="decl" id="dsa_method::init" title='dsa_method::init' data-ref="dsa_method::init">init</dfn>) (<a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col8 decl" id="528dsa" title='dsa' data-type='DSA *' data-ref="528dsa">dsa</dfn>);</td></tr>
+<tr><th id="143">143</th><td>    <em>int</em> (*<dfn class="decl" id="dsa_method::finish" title='dsa_method::finish' data-ref="dsa_method::finish">finish</dfn>) (<a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col9 decl" id="529dsa" title='dsa' data-type='DSA *' data-ref="529dsa">dsa</dfn>);</td></tr>
+<tr><th id="144">144</th><td>    <em>int</em> <dfn class="decl" id="dsa_method::flags" title='dsa_method::flags' data-ref="dsa_method::flags">flags</dfn>;</td></tr>
+<tr><th id="145">145</th><td>    <em>char</em> *<dfn class="decl" id="dsa_method::app_data" title='dsa_method::app_data' data-ref="dsa_method::app_data">app_data</dfn>;</td></tr>
+<tr><th id="146">146</th><td>    <i>/* If this is non-NULL, it is used to generate DSA parameters */</i></td></tr>
+<tr><th id="147">147</th><td>    <em>int</em> (*<dfn class="decl" id="dsa_method::dsa_paramgen" title='dsa_method::dsa_paramgen' data-ref="dsa_method::dsa_paramgen">dsa_paramgen</dfn>) (<a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col0 decl" id="530dsa" title='dsa' data-type='DSA *' data-ref="530dsa">dsa</dfn>, <em>int</em> <dfn class="local col1 decl" id="531bits" title='bits' data-type='int' data-ref="531bits">bits</dfn>,</td></tr>
+<tr><th id="148">148</th><td>                         <em>const</em> <em>unsigned</em> <em>char</em> *<dfn class="local col2 decl" id="532seed" title='seed' data-type='const unsigned char *' data-ref="532seed">seed</dfn>, <em>int</em> <dfn class="local col3 decl" id="533seed_len" title='seed_len' data-type='int' data-ref="533seed_len">seed_len</dfn>,</td></tr>
+<tr><th id="149">149</th><td>                         <em>int</em> *<dfn class="local col4 decl" id="534counter_ret" title='counter_ret' data-type='int *' data-ref="534counter_ret">counter_ret</dfn>, <em>unsigned</em> <em>long</em> *<dfn class="local col5 decl" id="535h_ret" title='h_ret' data-type='unsigned long *' data-ref="535h_ret">h_ret</dfn>,</td></tr>
+<tr><th id="150">150</th><td>                         <a class="typedef" href="ossl_typ.h.html#BN_GENCB" title='BN_GENCB' data-type='struct bn_gencb_st' data-ref="BN_GENCB">BN_GENCB</a> *<dfn class="local col6 decl" id="536cb" title='cb' data-type='BN_GENCB *' data-ref="536cb">cb</dfn>);</td></tr>
+<tr><th id="151">151</th><td>    <i>/* If this is non-NULL, it is used to generate DSA keys */</i></td></tr>
+<tr><th id="152">152</th><td>    <em>int</em> (*<dfn class="decl" id="dsa_method::dsa_keygen" title='dsa_method::dsa_keygen' data-ref="dsa_method::dsa_keygen">dsa_keygen</dfn>) (<a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col7 decl" id="537dsa" title='dsa' data-type='DSA *' data-ref="537dsa">dsa</dfn>);</td></tr>
+<tr><th id="153">153</th><td>};</td></tr>
+<tr><th id="154">154</th><td></td></tr>
+<tr><th id="155">155</th><td><b>struct</b> <dfn class="type def" id="dsa_st" title='dsa_st' data-ref="dsa_st">dsa_st</dfn> {</td></tr>
+<tr><th id="156">156</th><td>    <i>/*</i></td></tr>
+<tr><th id="157">157</th><td><i>     * This first variable is used to pick up errors where a DSA is passed</i></td></tr>
+<tr><th id="158">158</th><td><i>     * instead of of a EVP_PKEY</i></td></tr>
+<tr><th id="159">159</th><td><i>     */</i></td></tr>
+<tr><th id="160">160</th><td>    <em>int</em> <dfn class="decl" id="dsa_st::pad" title='dsa_st::pad' data-ref="dsa_st::pad">pad</dfn>;</td></tr>
+<tr><th id="161">161</th><td>    <em>long</em> <dfn class="decl" id="dsa_st::version" title='dsa_st::version' data-ref="dsa_st::version">version</dfn>;</td></tr>
+<tr><th id="162">162</th><td>    <em>int</em> <dfn class="decl" id="dsa_st::write_params" title='dsa_st::write_params' data-ref="dsa_st::write_params">write_params</dfn>;</td></tr>
+<tr><th id="163">163</th><td>    <a class="typedef" href="ossl_typ.h.html#BIGNUM" title='BIGNUM' data-type='struct bignum_st' data-ref="BIGNUM">BIGNUM</a> *<dfn class="decl" id="dsa_st::p" title='dsa_st::p' data-ref="dsa_st::p">p</dfn>;</td></tr>
+<tr><th id="164">164</th><td>    <a class="typedef" href="ossl_typ.h.html#BIGNUM" title='BIGNUM' data-type='struct bignum_st' data-ref="BIGNUM">BIGNUM</a> *<dfn class="decl" id="dsa_st::q" title='dsa_st::q' data-ref="dsa_st::q">q</dfn>;                  <i>/* == 20 */</i></td></tr>
+<tr><th id="165">165</th><td>    <a class="typedef" href="ossl_typ.h.html#BIGNUM" title='BIGNUM' data-type='struct bignum_st' data-ref="BIGNUM">BIGNUM</a> *<dfn class="decl" id="dsa_st::g" title='dsa_st::g' data-ref="dsa_st::g">g</dfn>;</td></tr>
+<tr><th id="166">166</th><td>    <a class="typedef" href="ossl_typ.h.html#BIGNUM" title='BIGNUM' data-type='struct bignum_st' data-ref="BIGNUM">BIGNUM</a> *<dfn class="decl" id="dsa_st::pub_key" title='dsa_st::pub_key' data-ref="dsa_st::pub_key">pub_key</dfn>;            <i>/* y public key */</i></td></tr>
+<tr><th id="167">167</th><td>    <a class="typedef" href="ossl_typ.h.html#BIGNUM" title='BIGNUM' data-type='struct bignum_st' data-ref="BIGNUM">BIGNUM</a> *<dfn class="decl" id="dsa_st::priv_key" title='dsa_st::priv_key' data-ref="dsa_st::priv_key">priv_key</dfn>;           <i>/* x private key */</i></td></tr>
+<tr><th id="168">168</th><td>    <a class="typedef" href="ossl_typ.h.html#BIGNUM" title='BIGNUM' data-type='struct bignum_st' data-ref="BIGNUM">BIGNUM</a> *<dfn class="decl" id="dsa_st::kinv" title='dsa_st::kinv' data-ref="dsa_st::kinv">kinv</dfn>;               <i>/* Signing pre-calc */</i></td></tr>
+<tr><th id="169">169</th><td>    <a class="typedef" href="ossl_typ.h.html#BIGNUM" title='BIGNUM' data-type='struct bignum_st' data-ref="BIGNUM">BIGNUM</a> *<dfn class="decl" id="dsa_st::r" title='dsa_st::r' data-ref="dsa_st::r">r</dfn>;                  <i>/* Signing pre-calc */</i></td></tr>
+<tr><th id="170">170</th><td>    <em>int</em> <dfn class="decl" id="dsa_st::flags" title='dsa_st::flags' data-ref="dsa_st::flags">flags</dfn>;</td></tr>
+<tr><th id="171">171</th><td>    <i>/* Normally used to cache montgomery values */</i></td></tr>
+<tr><th id="172">172</th><td>    <a class="typedef" href="ossl_typ.h.html#BN_MONT_CTX" title='BN_MONT_CTX' data-type='struct bn_mont_ctx_st' data-ref="BN_MONT_CTX">BN_MONT_CTX</a> *<dfn class="decl" id="dsa_st::method_mont_p" title='dsa_st::method_mont_p' data-ref="dsa_st::method_mont_p">method_mont_p</dfn>;</td></tr>
+<tr><th id="173">173</th><td>    <em>int</em> <dfn class="decl" id="dsa_st::references" title='dsa_st::references' data-ref="dsa_st::references">references</dfn>;</td></tr>
+<tr><th id="174">174</th><td>    <a class="typedef" href="ossl_typ.h.html#CRYPTO_EX_DATA" title='CRYPTO_EX_DATA' data-type='struct crypto_ex_data_st' data-ref="CRYPTO_EX_DATA">CRYPTO_EX_DATA</a> <dfn class="decl" id="dsa_st::ex_data" title='dsa_st::ex_data' data-ref="dsa_st::ex_data">ex_data</dfn>;</td></tr>
+<tr><th id="175">175</th><td>    <em>const</em> <a class="typedef" href="ossl_typ.h.html#DSA_METHOD" title='DSA_METHOD' data-type='struct dsa_method' data-ref="DSA_METHOD">DSA_METHOD</a> *<dfn class="decl" id="dsa_st::meth" title='dsa_st::meth' data-ref="dsa_st::meth">meth</dfn>;</td></tr>
+<tr><th id="176">176</th><td>    <i>/* functional reference if 'meth' is ENGINE-provided */</i></td></tr>
+<tr><th id="177">177</th><td>    <a class="typedef" href="ossl_typ.h.html#ENGINE" title='ENGINE' data-type='struct engine_st' data-ref="ENGINE">ENGINE</a> *<dfn class="decl" id="dsa_st::engine" title='dsa_st::engine' data-ref="dsa_st::engine">engine</dfn>;</td></tr>
+<tr><th id="178">178</th><td>};</td></tr>
+<tr><th id="179">179</th><td></td></tr>
+<tr><th id="180">180</th><td><u># define <dfn class="macro" id="_M/d2i_DSAparams_fp" data-ref="_M/d2i_DSAparams_fp">d2i_DSAparams_fp</dfn>(fp,x) (DSA *)ASN1_d2i_fp((char *(*)())DSA_new, \</u></td></tr>
+<tr><th id="181">181</th><td><u>                (char *(*)())d2i_DSAparams,(fp),(unsigned char **)(x))</u></td></tr>
+<tr><th id="182">182</th><td><u># define <dfn class="macro" id="_M/i2d_DSAparams_fp" data-ref="_M/i2d_DSAparams_fp">i2d_DSAparams_fp</dfn>(fp,x) ASN1_i2d_fp(i2d_DSAparams,(fp), \</u></td></tr>
+<tr><th id="183">183</th><td><u>                (unsigned char *)(x))</u></td></tr>
+<tr><th id="184">184</th><td><u># define <dfn class="macro" id="_M/d2i_DSAparams_bio" data-ref="_M/d2i_DSAparams_bio">d2i_DSAparams_bio</dfn>(bp,x) ASN1_d2i_bio_of(DSA,DSA_new,d2i_DSAparams,bp,x)</u></td></tr>
+<tr><th id="185">185</th><td><u># define <dfn class="macro" id="_M/i2d_DSAparams_bio" data-ref="_M/i2d_DSAparams_bio">i2d_DSAparams_bio</dfn>(bp,x) ASN1_i2d_bio_of_const(DSA,i2d_DSAparams,bp,x)</u></td></tr>
+<tr><th id="186">186</th><td></td></tr>
+<tr><th id="187">187</th><td><a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="decl" id="DSAparams_dup" title='DSAparams_dup' data-ref="DSAparams_dup">DSAparams_dup</dfn>(<a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col8 decl" id="538x" title='x' data-type='DSA *' data-ref="538x">x</dfn>);</td></tr>
+<tr><th id="188">188</th><td><a class="typedef" href="#DSA_SIG" title='DSA_SIG' data-type='struct DSA_SIG_st' data-ref="DSA_SIG">DSA_SIG</a> *<dfn class="decl" id="DSA_SIG_new" title='DSA_SIG_new' data-ref="DSA_SIG_new">DSA_SIG_new</dfn>(<em>void</em>);</td></tr>
+<tr><th id="189">189</th><td><em>void</em> <dfn class="decl" id="DSA_SIG_free" title='DSA_SIG_free' data-ref="DSA_SIG_free">DSA_SIG_free</dfn>(<a class="typedef" href="#DSA_SIG" title='DSA_SIG' data-type='struct DSA_SIG_st' data-ref="DSA_SIG">DSA_SIG</a> *<dfn class="local col9 decl" id="539a" title='a' data-type='DSA_SIG *' data-ref="539a">a</dfn>);</td></tr>
+<tr><th id="190">190</th><td><em>int</em> <dfn class="decl" id="i2d_DSA_SIG" title='i2d_DSA_SIG' data-ref="i2d_DSA_SIG">i2d_DSA_SIG</dfn>(<em>const</em> <a class="typedef" href="#DSA_SIG" title='DSA_SIG' data-type='struct DSA_SIG_st' data-ref="DSA_SIG">DSA_SIG</a> *<dfn class="local col0 decl" id="540a" title='a' data-type='const DSA_SIG *' data-ref="540a">a</dfn>, <em>unsigned</em> <em>char</em> **<dfn class="local col1 decl" id="541pp" title='pp' data-type='unsigned char **' data-ref="541pp">pp</dfn>);</td></tr>
+<tr><th id="191">191</th><td><a class="typedef" href="#DSA_SIG" title='DSA_SIG' data-type='struct DSA_SIG_st' data-ref="DSA_SIG">DSA_SIG</a> *<dfn class="decl" id="d2i_DSA_SIG" title='d2i_DSA_SIG' data-ref="d2i_DSA_SIG">d2i_DSA_SIG</dfn>(<a class="typedef" href="#DSA_SIG" title='DSA_SIG' data-type='struct DSA_SIG_st' data-ref="DSA_SIG">DSA_SIG</a> **<dfn class="local col2 decl" id="542v" title='v' data-type='DSA_SIG **' data-ref="542v">v</dfn>, <em>const</em> <em>unsigned</em> <em>char</em> **<dfn class="local col3 decl" id="543pp" title='pp' data-type='const unsigned char **' data-ref="543pp">pp</dfn>, <em>long</em> <dfn class="local col4 decl" id="544length" title='length' data-type='long' data-ref="544length">length</dfn>);</td></tr>
+<tr><th id="192">192</th><td></td></tr>
+<tr><th id="193">193</th><td><a class="typedef" href="#DSA_SIG" title='DSA_SIG' data-type='struct DSA_SIG_st' data-ref="DSA_SIG">DSA_SIG</a> *<dfn class="decl" id="DSA_do_sign" title='DSA_do_sign' data-ref="DSA_do_sign">DSA_do_sign</dfn>(<em>const</em> <em>unsigned</em> <em>char</em> *<dfn class="local col5 decl" id="545dgst" title='dgst' data-type='const unsigned char *' data-ref="545dgst">dgst</dfn>, <em>int</em> <dfn class="local col6 decl" id="546dlen" title='dlen' data-type='int' data-ref="546dlen">dlen</dfn>, <a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col7 decl" id="547dsa" title='dsa' data-type='DSA *' data-ref="547dsa">dsa</dfn>);</td></tr>
+<tr><th id="194">194</th><td><em>int</em> <dfn class="decl" id="DSA_do_verify" title='DSA_do_verify' data-ref="DSA_do_verify">DSA_do_verify</dfn>(<em>const</em> <em>unsigned</em> <em>char</em> *<dfn class="local col8 decl" id="548dgst" title='dgst' data-type='const unsigned char *' data-ref="548dgst">dgst</dfn>, <em>int</em> <dfn class="local col9 decl" id="549dgst_len" title='dgst_len' data-type='int' data-ref="549dgst_len">dgst_len</dfn>,</td></tr>
+<tr><th id="195">195</th><td>                  <a class="typedef" href="#DSA_SIG" title='DSA_SIG' data-type='struct DSA_SIG_st' data-ref="DSA_SIG">DSA_SIG</a> *<dfn class="local col0 decl" id="550sig" title='sig' data-type='DSA_SIG *' data-ref="550sig">sig</dfn>, <a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col1 decl" id="551dsa" title='dsa' data-type='DSA *' data-ref="551dsa">dsa</dfn>);</td></tr>
+<tr><th id="196">196</th><td></td></tr>
+<tr><th id="197">197</th><td><em>const</em> <a class="typedef" href="ossl_typ.h.html#DSA_METHOD" title='DSA_METHOD' data-type='struct dsa_method' data-ref="DSA_METHOD">DSA_METHOD</a> *<dfn class="decl" id="DSA_OpenSSL" title='DSA_OpenSSL' data-ref="DSA_OpenSSL">DSA_OpenSSL</dfn>(<em>void</em>);</td></tr>
+<tr><th id="198">198</th><td></td></tr>
+<tr><th id="199">199</th><td><em>void</em> <dfn class="decl" id="DSA_set_default_method" title='DSA_set_default_method' data-ref="DSA_set_default_method">DSA_set_default_method</dfn>(<em>const</em> <a class="typedef" href="ossl_typ.h.html#DSA_METHOD" title='DSA_METHOD' data-type='struct dsa_method' data-ref="DSA_METHOD">DSA_METHOD</a> *);</td></tr>
+<tr><th id="200">200</th><td><em>const</em> <a class="typedef" href="ossl_typ.h.html#DSA_METHOD" title='DSA_METHOD' data-type='struct dsa_method' data-ref="DSA_METHOD">DSA_METHOD</a> *<dfn class="decl" id="DSA_get_default_method" title='DSA_get_default_method' data-ref="DSA_get_default_method">DSA_get_default_method</dfn>(<em>void</em>);</td></tr>
+<tr><th id="201">201</th><td><em>int</em> <dfn class="decl" id="DSA_set_method" title='DSA_set_method' data-ref="DSA_set_method">DSA_set_method</dfn>(<a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col2 decl" id="552dsa" title='dsa' data-type='DSA *' data-ref="552dsa">dsa</dfn>, <em>const</em> <a class="typedef" href="ossl_typ.h.html#DSA_METHOD" title='DSA_METHOD' data-type='struct dsa_method' data-ref="DSA_METHOD">DSA_METHOD</a> *);</td></tr>
+<tr><th id="202">202</th><td></td></tr>
+<tr><th id="203">203</th><td><a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="decl" id="DSA_new" title='DSA_new' data-ref="DSA_new">DSA_new</dfn>(<em>void</em>);</td></tr>
+<tr><th id="204">204</th><td><a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="decl" id="DSA_new_method" title='DSA_new_method' data-ref="DSA_new_method">DSA_new_method</dfn>(<a class="typedef" href="ossl_typ.h.html#ENGINE" title='ENGINE' data-type='struct engine_st' data-ref="ENGINE">ENGINE</a> *<dfn class="local col3 decl" id="553engine" title='engine' data-type='ENGINE *' data-ref="553engine">engine</dfn>);</td></tr>
+<tr><th id="205">205</th><td><em>void</em> <dfn class="decl" id="DSA_free" title='DSA_free' data-ref="DSA_free">DSA_free</dfn>(<a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col4 decl" id="554r" title='r' data-type='DSA *' data-ref="554r">r</dfn>);</td></tr>
+<tr><th id="206">206</th><td><i>/* "up" the DSA object's reference count */</i></td></tr>
+<tr><th id="207">207</th><td><em>int</em> <dfn class="decl" id="DSA_up_ref" title='DSA_up_ref' data-ref="DSA_up_ref">DSA_up_ref</dfn>(<a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col5 decl" id="555r" title='r' data-type='DSA *' data-ref="555r">r</dfn>);</td></tr>
+<tr><th id="208">208</th><td><em>int</em> <dfn class="decl" id="DSA_size" title='DSA_size' data-ref="DSA_size">DSA_size</dfn>(<em>const</em> <a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *);</td></tr>
+<tr><th id="209">209</th><td>        <i>/* next 4 return -1 on error */</i></td></tr>
+<tr><th id="210">210</th><td><em>int</em> <dfn class="decl" id="DSA_sign_setup" title='DSA_sign_setup' data-ref="DSA_sign_setup">DSA_sign_setup</dfn>(<a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col6 decl" id="556dsa" title='dsa' data-type='DSA *' data-ref="556dsa">dsa</dfn>, <a class="typedef" href="ossl_typ.h.html#BN_CTX" title='BN_CTX' data-type='struct bignum_ctx' data-ref="BN_CTX">BN_CTX</a> *<dfn class="local col7 decl" id="557ctx_in" title='ctx_in' data-type='BN_CTX *' data-ref="557ctx_in">ctx_in</dfn>, <a class="typedef" href="ossl_typ.h.html#BIGNUM" title='BIGNUM' data-type='struct bignum_st' data-ref="BIGNUM">BIGNUM</a> **<dfn class="local col8 decl" id="558kinvp" title='kinvp' data-type='BIGNUM **' data-ref="558kinvp">kinvp</dfn>, <a class="typedef" href="ossl_typ.h.html#BIGNUM" title='BIGNUM' data-type='struct bignum_st' data-ref="BIGNUM">BIGNUM</a> **<dfn class="local col9 decl" id="559rp" title='rp' data-type='BIGNUM **' data-ref="559rp">rp</dfn>);</td></tr>
+<tr><th id="211">211</th><td><em>int</em> <dfn class="decl" id="DSA_sign" title='DSA_sign' data-ref="DSA_sign">DSA_sign</dfn>(<em>int</em> <dfn class="local col0 decl" id="560type" title='type' data-type='int' data-ref="560type">type</dfn>, <em>const</em> <em>unsigned</em> <em>char</em> *<dfn class="local col1 decl" id="561dgst" title='dgst' data-type='const unsigned char *' data-ref="561dgst">dgst</dfn>, <em>int</em> <dfn class="local col2 decl" id="562dlen" title='dlen' data-type='int' data-ref="562dlen">dlen</dfn>,</td></tr>
+<tr><th id="212">212</th><td>             <em>unsigned</em> <em>char</em> *<dfn class="local col3 decl" id="563sig" title='sig' data-type='unsigned char *' data-ref="563sig">sig</dfn>, <em>unsigned</em> <em>int</em> *<dfn class="local col4 decl" id="564siglen" title='siglen' data-type='unsigned int *' data-ref="564siglen">siglen</dfn>, <a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col5 decl" id="565dsa" title='dsa' data-type='DSA *' data-ref="565dsa">dsa</dfn>);</td></tr>
+<tr><th id="213">213</th><td><em>int</em> <dfn class="decl" id="DSA_verify" title='DSA_verify' data-ref="DSA_verify">DSA_verify</dfn>(<em>int</em> <dfn class="local col6 decl" id="566type" title='type' data-type='int' data-ref="566type">type</dfn>, <em>const</em> <em>unsigned</em> <em>char</em> *<dfn class="local col7 decl" id="567dgst" title='dgst' data-type='const unsigned char *' data-ref="567dgst">dgst</dfn>, <em>int</em> <dfn class="local col8 decl" id="568dgst_len" title='dgst_len' data-type='int' data-ref="568dgst_len">dgst_len</dfn>,</td></tr>
+<tr><th id="214">214</th><td>               <em>const</em> <em>unsigned</em> <em>char</em> *<dfn class="local col9 decl" id="569sigbuf" title='sigbuf' data-type='const unsigned char *' data-ref="569sigbuf">sigbuf</dfn>, <em>int</em> <dfn class="local col0 decl" id="570siglen" title='siglen' data-type='int' data-ref="570siglen">siglen</dfn>, <a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col1 decl" id="571dsa" title='dsa' data-type='DSA *' data-ref="571dsa">dsa</dfn>);</td></tr>
+<tr><th id="215">215</th><td><em>int</em> <dfn class="decl" id="DSA_get_ex_new_index" title='DSA_get_ex_new_index' data-ref="DSA_get_ex_new_index">DSA_get_ex_new_index</dfn>(<em>long</em> <dfn class="local col2 decl" id="572argl" title='argl' data-type='long' data-ref="572argl">argl</dfn>, <em>void</em> *<dfn class="local col3 decl" id="573argp" title='argp' data-type='void *' data-ref="573argp">argp</dfn>, <a class="typedef" href="ossl_typ.h.html#CRYPTO_EX_new" title='CRYPTO_EX_new' data-type='int (void *, void *, CRYPTO_EX_DATA *, int, long, void *)' data-ref="CRYPTO_EX_new">CRYPTO_EX_new</a> *<dfn class="local col4 decl" id="574new_func" title='new_func' data-type='CRYPTO_EX_new *' data-ref="574new_func">new_func</dfn>,</td></tr>
+<tr><th id="216">216</th><td>                         <a class="typedef" href="ossl_typ.h.html#CRYPTO_EX_dup" title='CRYPTO_EX_dup' data-type='int (CRYPTO_EX_DATA *, CRYPTO_EX_DATA *, void *, int, long, void *)' data-ref="CRYPTO_EX_dup">CRYPTO_EX_dup</a> *<dfn class="local col5 decl" id="575dup_func" title='dup_func' data-type='CRYPTO_EX_dup *' data-ref="575dup_func">dup_func</dfn>, <a class="typedef" href="ossl_typ.h.html#CRYPTO_EX_free" title='CRYPTO_EX_free' data-type='void (void *, void *, CRYPTO_EX_DATA *, int, long, void *)' data-ref="CRYPTO_EX_free">CRYPTO_EX_free</a> *<dfn class="local col6 decl" id="576free_func" title='free_func' data-type='CRYPTO_EX_free *' data-ref="576free_func">free_func</dfn>);</td></tr>
+<tr><th id="217">217</th><td><em>int</em> <dfn class="decl" id="DSA_set_ex_data" title='DSA_set_ex_data' data-ref="DSA_set_ex_data">DSA_set_ex_data</dfn>(<a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col7 decl" id="577d" title='d' data-type='DSA *' data-ref="577d">d</dfn>, <em>int</em> <dfn class="local col8 decl" id="578idx" title='idx' data-type='int' data-ref="578idx">idx</dfn>, <em>void</em> *<dfn class="local col9 decl" id="579arg" title='arg' data-type='void *' data-ref="579arg">arg</dfn>);</td></tr>
+<tr><th id="218">218</th><td><em>void</em> *<dfn class="decl" id="DSA_get_ex_data" title='DSA_get_ex_data' data-ref="DSA_get_ex_data">DSA_get_ex_data</dfn>(<a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col0 decl" id="580d" title='d' data-type='DSA *' data-ref="580d">d</dfn>, <em>int</em> <dfn class="local col1 decl" id="581idx" title='idx' data-type='int' data-ref="581idx">idx</dfn>);</td></tr>
+<tr><th id="219">219</th><td></td></tr>
+<tr><th id="220">220</th><td><a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="decl" id="d2i_DSAPublicKey" title='d2i_DSAPublicKey' data-ref="d2i_DSAPublicKey">d2i_DSAPublicKey</dfn>(<a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> **<dfn class="local col2 decl" id="582a" title='a' data-type='DSA **' data-ref="582a">a</dfn>, <em>const</em> <em>unsigned</em> <em>char</em> **<dfn class="local col3 decl" id="583pp" title='pp' data-type='const unsigned char **' data-ref="583pp">pp</dfn>, <em>long</em> <dfn class="local col4 decl" id="584length" title='length' data-type='long' data-ref="584length">length</dfn>);</td></tr>
+<tr><th id="221">221</th><td><a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="decl" id="d2i_DSAPrivateKey" title='d2i_DSAPrivateKey' data-ref="d2i_DSAPrivateKey">d2i_DSAPrivateKey</dfn>(<a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> **<dfn class="local col5 decl" id="585a" title='a' data-type='DSA **' data-ref="585a">a</dfn>, <em>const</em> <em>unsigned</em> <em>char</em> **<dfn class="local col6 decl" id="586pp" title='pp' data-type='const unsigned char **' data-ref="586pp">pp</dfn>, <em>long</em> <dfn class="local col7 decl" id="587length" title='length' data-type='long' data-ref="587length">length</dfn>);</td></tr>
+<tr><th id="222">222</th><td><a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="decl" id="d2i_DSAparams" title='d2i_DSAparams' data-ref="d2i_DSAparams">d2i_DSAparams</dfn>(<a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> **<dfn class="local col8 decl" id="588a" title='a' data-type='DSA **' data-ref="588a">a</dfn>, <em>const</em> <em>unsigned</em> <em>char</em> **<dfn class="local col9 decl" id="589pp" title='pp' data-type='const unsigned char **' data-ref="589pp">pp</dfn>, <em>long</em> <dfn class="local col0 decl" id="590length" title='length' data-type='long' data-ref="590length">length</dfn>);</td></tr>
+<tr><th id="223">223</th><td></td></tr>
+<tr><th id="224">224</th><td><i>/* Deprecated version */</i></td></tr>
+<tr><th id="225">225</th><td><u># <span data-ppcond="225">ifndef</span> <span class="macro" data-ref="_M/OPENSSL_NO_DEPRECATED">OPENSSL_NO_DEPRECATED</span></u></td></tr>
+<tr><th id="226">226</th><td><a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="decl" id="DSA_generate_parameters" title='DSA_generate_parameters' data-ref="DSA_generate_parameters">DSA_generate_parameters</dfn>(<em>int</em> <dfn class="local col1 decl" id="591bits" title='bits' data-type='int' data-ref="591bits">bits</dfn>,</td></tr>
+<tr><th id="227">227</th><td>                             <em>unsigned</em> <em>char</em> *<dfn class="local col2 decl" id="592seed" title='seed' data-type='unsigned char *' data-ref="592seed">seed</dfn>, <em>int</em> <dfn class="local col3 decl" id="593seed_len" title='seed_len' data-type='int' data-ref="593seed_len">seed_len</dfn>,</td></tr>
+<tr><th id="228">228</th><td>                             <em>int</em> *<dfn class="local col4 decl" id="594counter_ret" title='counter_ret' data-type='int *' data-ref="594counter_ret">counter_ret</dfn>, <em>unsigned</em> <em>long</em> *<dfn class="local col5 decl" id="595h_ret" title='h_ret' data-type='unsigned long *' data-ref="595h_ret">h_ret</dfn>, <em>void</em></td></tr>
+<tr><th id="229">229</th><td>                              (*<dfn class="local col6 decl" id="596callback" title='callback' data-type='void (*)(int, int, void *)' data-ref="596callback">callback</dfn>) (<em>int</em>, <em>int</em>, <em>void</em> *), <em>void</em> *<dfn class="local col7 decl" id="597cb_arg" title='cb_arg' data-type='void *' data-ref="597cb_arg">cb_arg</dfn>);</td></tr>
+<tr><th id="230">230</th><td><u># <span data-ppcond="225">endif</span>                         /* !defined(OPENSSL_NO_DEPRECATED) */</u></td></tr>
+<tr><th id="231">231</th><td></td></tr>
+<tr><th id="232">232</th><td><i>/* New version */</i></td></tr>
+<tr><th id="233">233</th><td><em>int</em> <dfn class="decl" id="DSA_generate_parameters_ex" title='DSA_generate_parameters_ex' data-ref="DSA_generate_parameters_ex">DSA_generate_parameters_ex</dfn>(<a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col8 decl" id="598dsa" title='dsa' data-type='DSA *' data-ref="598dsa">dsa</dfn>, <em>int</em> <dfn class="local col9 decl" id="599bits" title='bits' data-type='int' data-ref="599bits">bits</dfn>,</td></tr>
+<tr><th id="234">234</th><td>                               <em>const</em> <em>unsigned</em> <em>char</em> *<dfn class="local col0 decl" id="600seed" title='seed' data-type='const unsigned char *' data-ref="600seed">seed</dfn>, <em>int</em> <dfn class="local col1 decl" id="601seed_len" title='seed_len' data-type='int' data-ref="601seed_len">seed_len</dfn>,</td></tr>
+<tr><th id="235">235</th><td>                               <em>int</em> *<dfn class="local col2 decl" id="602counter_ret" title='counter_ret' data-type='int *' data-ref="602counter_ret">counter_ret</dfn>, <em>unsigned</em> <em>long</em> *<dfn class="local col3 decl" id="603h_ret" title='h_ret' data-type='unsigned long *' data-ref="603h_ret">h_ret</dfn>,</td></tr>
+<tr><th id="236">236</th><td>                               <a class="typedef" href="ossl_typ.h.html#BN_GENCB" title='BN_GENCB' data-type='struct bn_gencb_st' data-ref="BN_GENCB">BN_GENCB</a> *<dfn class="local col4 decl" id="604cb" title='cb' data-type='BN_GENCB *' data-ref="604cb">cb</dfn>);</td></tr>
+<tr><th id="237">237</th><td></td></tr>
+<tr><th id="238">238</th><td><em>int</em> <dfn class="decl" id="DSA_generate_key" title='DSA_generate_key' data-ref="DSA_generate_key">DSA_generate_key</dfn>(<a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col5 decl" id="605a" title='a' data-type='DSA *' data-ref="605a">a</dfn>);</td></tr>
+<tr><th id="239">239</th><td><em>int</em> <dfn class="decl" id="i2d_DSAPublicKey" title='i2d_DSAPublicKey' data-ref="i2d_DSAPublicKey">i2d_DSAPublicKey</dfn>(<em>const</em> <a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col6 decl" id="606a" title='a' data-type='const DSA *' data-ref="606a">a</dfn>, <em>unsigned</em> <em>char</em> **<dfn class="local col7 decl" id="607pp" title='pp' data-type='unsigned char **' data-ref="607pp">pp</dfn>);</td></tr>
+<tr><th id="240">240</th><td><em>int</em> <dfn class="decl" id="i2d_DSAPrivateKey" title='i2d_DSAPrivateKey' data-ref="i2d_DSAPrivateKey">i2d_DSAPrivateKey</dfn>(<em>const</em> <a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col8 decl" id="608a" title='a' data-type='const DSA *' data-ref="608a">a</dfn>, <em>unsigned</em> <em>char</em> **<dfn class="local col9 decl" id="609pp" title='pp' data-type='unsigned char **' data-ref="609pp">pp</dfn>);</td></tr>
+<tr><th id="241">241</th><td><em>int</em> <dfn class="decl" id="i2d_DSAparams" title='i2d_DSAparams' data-ref="i2d_DSAparams">i2d_DSAparams</dfn>(<em>const</em> <a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col0 decl" id="610a" title='a' data-type='const DSA *' data-ref="610a">a</dfn>, <em>unsigned</em> <em>char</em> **<dfn class="local col1 decl" id="611pp" title='pp' data-type='unsigned char **' data-ref="611pp">pp</dfn>);</td></tr>
+<tr><th id="242">242</th><td></td></tr>
+<tr><th id="243">243</th><td><u># <span data-ppcond="243">ifndef</span> <span class="macro" data-ref="_M/OPENSSL_NO_BIO">OPENSSL_NO_BIO</span></u></td></tr>
+<tr><th id="244">244</th><td><em>int</em> <dfn class="decl" id="DSAparams_print" title='DSAparams_print' data-ref="DSAparams_print">DSAparams_print</dfn>(<a class="typedef" href="bio.h.html#BIO" title='BIO' data-type='struct bio_st' data-ref="BIO">BIO</a> *<dfn class="local col2 decl" id="612bp" title='bp' data-type='BIO *' data-ref="612bp">bp</dfn>, <em>const</em> <a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col3 decl" id="613x" title='x' data-type='const DSA *' data-ref="613x">x</dfn>);</td></tr>
+<tr><th id="245">245</th><td><em>int</em> <dfn class="decl" id="DSA_print" title='DSA_print' data-ref="DSA_print">DSA_print</dfn>(<a class="typedef" href="bio.h.html#BIO" title='BIO' data-type='struct bio_st' data-ref="BIO">BIO</a> *<dfn class="local col4 decl" id="614bp" title='bp' data-type='BIO *' data-ref="614bp">bp</dfn>, <em>const</em> <a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col5 decl" id="615x" title='x' data-type='const DSA *' data-ref="615x">x</dfn>, <em>int</em> <dfn class="local col6 decl" id="616off" title='off' data-type='int' data-ref="616off">off</dfn>);</td></tr>
+<tr><th id="246">246</th><td><u># <span data-ppcond="243">endif</span></u></td></tr>
+<tr><th id="247">247</th><td><u># <span data-ppcond="247">ifndef</span> <span class="macro" data-ref="_M/OPENSSL_NO_FP_API">OPENSSL_NO_FP_API</span></u></td></tr>
+<tr><th id="248">248</th><td><em>int</em> <dfn class="decl" id="DSAparams_print_fp" title='DSAparams_print_fp' data-ref="DSAparams_print_fp">DSAparams_print_fp</dfn>(<a class="typedef" href="../stdio.h.html#FILE" title='FILE' data-type='struct _IO_FILE' data-ref="FILE">FILE</a> *<dfn class="local col7 decl" id="617fp" title='fp' data-type='FILE *' data-ref="617fp">fp</dfn>, <em>const</em> <a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col8 decl" id="618x" title='x' data-type='const DSA *' data-ref="618x">x</dfn>);</td></tr>
+<tr><th id="249">249</th><td><em>int</em> <dfn class="decl" id="DSA_print_fp" title='DSA_print_fp' data-ref="DSA_print_fp">DSA_print_fp</dfn>(<a class="typedef" href="../stdio.h.html#FILE" title='FILE' data-type='struct _IO_FILE' data-ref="FILE">FILE</a> *<dfn class="local col9 decl" id="619bp" title='bp' data-type='FILE *' data-ref="619bp">bp</dfn>, <em>const</em> <a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col0 decl" id="620x" title='x' data-type='const DSA *' data-ref="620x">x</dfn>, <em>int</em> <dfn class="local col1 decl" id="621off" title='off' data-type='int' data-ref="621off">off</dfn>);</td></tr>
+<tr><th id="250">250</th><td><u># <span data-ppcond="247">endif</span></u></td></tr>
+<tr><th id="251">251</th><td></td></tr>
+<tr><th id="252">252</th><td><u># define <dfn class="macro" id="_M/DSS_prime_checks" data-ref="_M/DSS_prime_checks">DSS_prime_checks</dfn> 50</u></td></tr>
+<tr><th id="253">253</th><td><i>/*</i></td></tr>
+<tr><th id="254">254</th><td><i> * Primality test according to FIPS PUB 186[-1], Appendix 2.1: 50 rounds of</i></td></tr>
+<tr><th id="255">255</th><td><i> * Rabin-Miller</i></td></tr>
+<tr><th id="256">256</th><td><i> */</i></td></tr>
+<tr><th id="257">257</th><td><u># define <dfn class="macro" id="_M/DSA_is_prime" data-ref="_M/DSA_is_prime">DSA_is_prime</dfn>(n, callback, cb_arg) \</u></td></tr>
+<tr><th id="258">258</th><td><u>        BN_is_prime(n, DSS_prime_checks, callback, NULL, cb_arg)</u></td></tr>
+<tr><th id="259">259</th><td></td></tr>
+<tr><th id="260">260</th><td><u># <span data-ppcond="260">ifndef</span> <span class="macro" data-ref="_M/OPENSSL_NO_DH">OPENSSL_NO_DH</span></u></td></tr>
+<tr><th id="261">261</th><td><i>/*</i></td></tr>
+<tr><th id="262">262</th><td><i> * Convert DSA structure (key or just parameters) into DH structure (be</i></td></tr>
+<tr><th id="263">263</th><td><i> * careful to avoid small subgroup attacks when using this!)</i></td></tr>
+<tr><th id="264">264</th><td><i> */</i></td></tr>
+<tr><th id="265">265</th><td><a class="typedef" href="ossl_typ.h.html#DH" title='DH' data-type='struct dh_st' data-ref="DH">DH</a> *<dfn class="decl" id="DSA_dup_DH" title='DSA_dup_DH' data-ref="DSA_dup_DH">DSA_dup_DH</dfn>(<em>const</em> <a class="typedef" href="ossl_typ.h.html#DSA" title='DSA' data-type='struct dsa_st' data-ref="DSA">DSA</a> *<dfn class="local col2 decl" id="622r" title='r' data-type='const DSA *' data-ref="622r">r</dfn>);</td></tr>
+<tr><th id="266">266</th><td><u># <span data-ppcond="260">endif</span></u></td></tr>
+<tr><th id="267">267</th><td></td></tr>
+<tr><th id="268">268</th><td><u># define <dfn class="macro" id="_M/EVP_PKEY_CTX_set_dsa_paramgen_bits" data-ref="_M/EVP_PKEY_CTX_set_dsa_paramgen_bits">EVP_PKEY_CTX_set_dsa_paramgen_bits</dfn>(ctx, nbits) \</u></td></tr>
+<tr><th id="269">269</th><td><u>        EVP_PKEY_CTX_ctrl(ctx, EVP_PKEY_DSA, EVP_PKEY_OP_PARAMGEN, \</u></td></tr>
+<tr><th id="270">270</th><td><u>                                EVP_PKEY_CTRL_DSA_PARAMGEN_BITS, nbits, NULL)</u></td></tr>
+<tr><th id="271">271</th><td></td></tr>
+<tr><th id="272">272</th><td><u># define <dfn class="macro" id="_M/EVP_PKEY_CTRL_DSA_PARAMGEN_BITS" data-ref="_M/EVP_PKEY_CTRL_DSA_PARAMGEN_BITS">EVP_PKEY_CTRL_DSA_PARAMGEN_BITS</dfn>         (EVP_PKEY_ALG_CTRL + 1)</u></td></tr>
+<tr><th id="273">273</th><td><u># define <dfn class="macro" id="_M/EVP_PKEY_CTRL_DSA_PARAMGEN_Q_BITS" data-ref="_M/EVP_PKEY_CTRL_DSA_PARAMGEN_Q_BITS">EVP_PKEY_CTRL_DSA_PARAMGEN_Q_BITS</dfn>       (EVP_PKEY_ALG_CTRL + 2)</u></td></tr>
+<tr><th id="274">274</th><td><u># define <dfn class="macro" id="_M/EVP_PKEY_CTRL_DSA_PARAMGEN_MD" data-ref="_M/EVP_PKEY_CTRL_DSA_PARAMGEN_MD">EVP_PKEY_CTRL_DSA_PARAMGEN_MD</dfn>           (EVP_PKEY_ALG_CTRL + 3)</u></td></tr>
+<tr><th id="275">275</th><td></td></tr>
+<tr><th id="276">276</th><td><i>/* BEGIN ERROR CODES */</i></td></tr>
+<tr><th id="277">277</th><td><i>/*</i></td></tr>
+<tr><th id="278">278</th><td><i> * The following lines are auto generated by the script mkerr.pl. Any changes</i></td></tr>
+<tr><th id="279">279</th><td><i> * made after this point may be overwritten when the script is next run.</i></td></tr>
+<tr><th id="280">280</th><td><i> */</i></td></tr>
+<tr><th id="281">281</th><td><em>void</em> <dfn class="decl" id="ERR_load_DSA_strings" title='ERR_load_DSA_strings' data-ref="ERR_load_DSA_strings">ERR_load_DSA_strings</dfn>(<em>void</em>);</td></tr>
+<tr><th id="282">282</th><td></td></tr>
+<tr><th id="283">283</th><td><i>/* Error codes for the DSA functions. */</i></td></tr>
+<tr><th id="284">284</th><td></td></tr>
+<tr><th id="285">285</th><td><i>/* Function codes. */</i></td></tr>
+<tr><th id="286">286</th><td><u># define <dfn class="macro" id="_M/DSA_F_D2I_DSA_SIG" data-ref="_M/DSA_F_D2I_DSA_SIG">DSA_F_D2I_DSA_SIG</dfn>                                110</u></td></tr>
+<tr><th id="287">287</th><td><u># define <dfn class="macro" id="_M/DSA_F_DO_DSA_PRINT" data-ref="_M/DSA_F_DO_DSA_PRINT">DSA_F_DO_DSA_PRINT</dfn>                               104</u></td></tr>
+<tr><th id="288">288</th><td><u># define <dfn class="macro" id="_M/DSA_F_DSAPARAMS_PRINT" data-ref="_M/DSA_F_DSAPARAMS_PRINT">DSA_F_DSAPARAMS_PRINT</dfn>                            100</u></td></tr>
+<tr><th id="289">289</th><td><u># define <dfn class="macro" id="_M/DSA_F_DSAPARAMS_PRINT_FP" data-ref="_M/DSA_F_DSAPARAMS_PRINT_FP">DSA_F_DSAPARAMS_PRINT_FP</dfn>                         101</u></td></tr>
+<tr><th id="290">290</th><td><u># define <dfn class="macro" id="_M/DSA_F_DSA_BUILTIN_PARAMGEN2" data-ref="_M/DSA_F_DSA_BUILTIN_PARAMGEN2">DSA_F_DSA_BUILTIN_PARAMGEN2</dfn>                      126</u></td></tr>
+<tr><th id="291">291</th><td><u># define <dfn class="macro" id="_M/DSA_F_DSA_DO_SIGN" data-ref="_M/DSA_F_DSA_DO_SIGN">DSA_F_DSA_DO_SIGN</dfn>                                112</u></td></tr>
+<tr><th id="292">292</th><td><u># define <dfn class="macro" id="_M/DSA_F_DSA_DO_VERIFY" data-ref="_M/DSA_F_DSA_DO_VERIFY">DSA_F_DSA_DO_VERIFY</dfn>                              113</u></td></tr>
+<tr><th id="293">293</th><td><u># define <dfn class="macro" id="_M/DSA_F_DSA_GENERATE_KEY" data-ref="_M/DSA_F_DSA_GENERATE_KEY">DSA_F_DSA_GENERATE_KEY</dfn>                           124</u></td></tr>
+<tr><th id="294">294</th><td><u># define <dfn class="macro" id="_M/DSA_F_DSA_GENERATE_PARAMETERS_EX" data-ref="_M/DSA_F_DSA_GENERATE_PARAMETERS_EX">DSA_F_DSA_GENERATE_PARAMETERS_EX</dfn>                 123</u></td></tr>
+<tr><th id="295">295</th><td><u># define <dfn class="macro" id="_M/DSA_F_DSA_NEW_METHOD" data-ref="_M/DSA_F_DSA_NEW_METHOD">DSA_F_DSA_NEW_METHOD</dfn>                             103</u></td></tr>
+<tr><th id="296">296</th><td><u># define <dfn class="macro" id="_M/DSA_F_DSA_PARAM_DECODE" data-ref="_M/DSA_F_DSA_PARAM_DECODE">DSA_F_DSA_PARAM_DECODE</dfn>                           119</u></td></tr>
+<tr><th id="297">297</th><td><u># define <dfn class="macro" id="_M/DSA_F_DSA_PRINT_FP" data-ref="_M/DSA_F_DSA_PRINT_FP">DSA_F_DSA_PRINT_FP</dfn>                               105</u></td></tr>
+<tr><th id="298">298</th><td><u># define <dfn class="macro" id="_M/DSA_F_DSA_PRIV_DECODE" data-ref="_M/DSA_F_DSA_PRIV_DECODE">DSA_F_DSA_PRIV_DECODE</dfn>                            115</u></td></tr>
+<tr><th id="299">299</th><td><u># define <dfn class="macro" id="_M/DSA_F_DSA_PRIV_ENCODE" data-ref="_M/DSA_F_DSA_PRIV_ENCODE">DSA_F_DSA_PRIV_ENCODE</dfn>                            116</u></td></tr>
+<tr><th id="300">300</th><td><u># define <dfn class="macro" id="_M/DSA_F_DSA_PUB_DECODE" data-ref="_M/DSA_F_DSA_PUB_DECODE">DSA_F_DSA_PUB_DECODE</dfn>                             117</u></td></tr>
+<tr><th id="301">301</th><td><u># define <dfn class="macro" id="_M/DSA_F_DSA_PUB_ENCODE" data-ref="_M/DSA_F_DSA_PUB_ENCODE">DSA_F_DSA_PUB_ENCODE</dfn>                             118</u></td></tr>
+<tr><th id="302">302</th><td><u># define <dfn class="macro" id="_M/DSA_F_DSA_SIGN" data-ref="_M/DSA_F_DSA_SIGN">DSA_F_DSA_SIGN</dfn>                                   106</u></td></tr>
+<tr><th id="303">303</th><td><u># define <dfn class="macro" id="_M/DSA_F_DSA_SIGN_SETUP" data-ref="_M/DSA_F_DSA_SIGN_SETUP">DSA_F_DSA_SIGN_SETUP</dfn>                             107</u></td></tr>
+<tr><th id="304">304</th><td><u># define <dfn class="macro" id="_M/DSA_F_DSA_SIG_NEW" data-ref="_M/DSA_F_DSA_SIG_NEW">DSA_F_DSA_SIG_NEW</dfn>                                109</u></td></tr>
+<tr><th id="305">305</th><td><u># define <dfn class="macro" id="_M/DSA_F_DSA_SIG_PRINT" data-ref="_M/DSA_F_DSA_SIG_PRINT">DSA_F_DSA_SIG_PRINT</dfn>                              125</u></td></tr>
+<tr><th id="306">306</th><td><u># define <dfn class="macro" id="_M/DSA_F_DSA_VERIFY" data-ref="_M/DSA_F_DSA_VERIFY">DSA_F_DSA_VERIFY</dfn>                                 108</u></td></tr>
+<tr><th id="307">307</th><td><u># define <dfn class="macro" id="_M/DSA_F_I2D_DSA_SIG" data-ref="_M/DSA_F_I2D_DSA_SIG">DSA_F_I2D_DSA_SIG</dfn>                                111</u></td></tr>
+<tr><th id="308">308</th><td><u># define <dfn class="macro" id="_M/DSA_F_OLD_DSA_PRIV_DECODE" data-ref="_M/DSA_F_OLD_DSA_PRIV_DECODE">DSA_F_OLD_DSA_PRIV_DECODE</dfn>                        122</u></td></tr>
+<tr><th id="309">309</th><td><u># define <dfn class="macro" id="_M/DSA_F_PKEY_DSA_CTRL" data-ref="_M/DSA_F_PKEY_DSA_CTRL">DSA_F_PKEY_DSA_CTRL</dfn>                              120</u></td></tr>
+<tr><th id="310">310</th><td><u># define <dfn class="macro" id="_M/DSA_F_PKEY_DSA_KEYGEN" data-ref="_M/DSA_F_PKEY_DSA_KEYGEN">DSA_F_PKEY_DSA_KEYGEN</dfn>                            121</u></td></tr>
+<tr><th id="311">311</th><td><u># define <dfn class="macro" id="_M/DSA_F_SIG_CB" data-ref="_M/DSA_F_SIG_CB">DSA_F_SIG_CB</dfn>                                     114</u></td></tr>
+<tr><th id="312">312</th><td></td></tr>
+<tr><th id="313">313</th><td><i>/* Reason codes. */</i></td></tr>
+<tr><th id="314">314</th><td><u># define <dfn class="macro" id="_M/DSA_R_BAD_Q_VALUE" data-ref="_M/DSA_R_BAD_Q_VALUE">DSA_R_BAD_Q_VALUE</dfn>                                102</u></td></tr>
+<tr><th id="315">315</th><td><u># define <dfn class="macro" id="_M/DSA_R_BN_DECODE_ERROR" data-ref="_M/DSA_R_BN_DECODE_ERROR">DSA_R_BN_DECODE_ERROR</dfn>                            108</u></td></tr>
+<tr><th id="316">316</th><td><u># define <dfn class="macro" id="_M/DSA_R_BN_ERROR" data-ref="_M/DSA_R_BN_ERROR">DSA_R_BN_ERROR</dfn>                                   109</u></td></tr>
+<tr><th id="317">317</th><td><u># define <dfn class="macro" id="_M/DSA_R_DATA_TOO_LARGE_FOR_KEY_SIZE" data-ref="_M/DSA_R_DATA_TOO_LARGE_FOR_KEY_SIZE">DSA_R_DATA_TOO_LARGE_FOR_KEY_SIZE</dfn>                100</u></td></tr>
+<tr><th id="318">318</th><td><u># define <dfn class="macro" id="_M/DSA_R_DECODE_ERROR" data-ref="_M/DSA_R_DECODE_ERROR">DSA_R_DECODE_ERROR</dfn>                               104</u></td></tr>
+<tr><th id="319">319</th><td><u># define <dfn class="macro" id="_M/DSA_R_INVALID_DIGEST_TYPE" data-ref="_M/DSA_R_INVALID_DIGEST_TYPE">DSA_R_INVALID_DIGEST_TYPE</dfn>                        106</u></td></tr>
+<tr><th id="320">320</th><td><u># define <dfn class="macro" id="_M/DSA_R_INVALID_PARAMETERS" data-ref="_M/DSA_R_INVALID_PARAMETERS">DSA_R_INVALID_PARAMETERS</dfn>                         112</u></td></tr>
+<tr><th id="321">321</th><td><u># define <dfn class="macro" id="_M/DSA_R_MISSING_PARAMETERS" data-ref="_M/DSA_R_MISSING_PARAMETERS">DSA_R_MISSING_PARAMETERS</dfn>                         101</u></td></tr>
+<tr><th id="322">322</th><td><u># define <dfn class="macro" id="_M/DSA_R_MODULUS_TOO_LARGE" data-ref="_M/DSA_R_MODULUS_TOO_LARGE">DSA_R_MODULUS_TOO_LARGE</dfn>                          103</u></td></tr>
+<tr><th id="323">323</th><td><u># define <dfn class="macro" id="_M/DSA_R_NEED_NEW_SETUP_VALUES" data-ref="_M/DSA_R_NEED_NEW_SETUP_VALUES">DSA_R_NEED_NEW_SETUP_VALUES</dfn>                      110</u></td></tr>
+<tr><th id="324">324</th><td><u># define <dfn class="macro" id="_M/DSA_R_NON_FIPS_DSA_METHOD" data-ref="_M/DSA_R_NON_FIPS_DSA_METHOD">DSA_R_NON_FIPS_DSA_METHOD</dfn>                        111</u></td></tr>
+<tr><th id="325">325</th><td><u># define <dfn class="macro" id="_M/DSA_R_NO_PARAMETERS_SET" data-ref="_M/DSA_R_NO_PARAMETERS_SET">DSA_R_NO_PARAMETERS_SET</dfn>                          107</u></td></tr>
+<tr><th id="326">326</th><td><u># define <dfn class="macro" id="_M/DSA_R_PARAMETER_ENCODING_ERROR" data-ref="_M/DSA_R_PARAMETER_ENCODING_ERROR">DSA_R_PARAMETER_ENCODING_ERROR</dfn>                   105</u></td></tr>
+<tr><th id="327">327</th><td><u># define <dfn class="macro" id="_M/DSA_R_Q_NOT_PRIME" data-ref="_M/DSA_R_Q_NOT_PRIME">DSA_R_Q_NOT_PRIME</dfn>                                113</u></td></tr>
+<tr><th id="328">328</th><td></td></tr>
+<tr><th id="329">329</th><td><u>#<span data-ppcond="329">ifdef</span>  <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
+<tr><th id="330">330</th><td>}</td></tr>
+<tr><th id="331">331</th><td><u>#<span data-ppcond="329">endif</span></u></td></tr>
+<tr><th id="332">332</th><td><u>#<span data-ppcond="65">endif</span></u></td></tr>
+<tr><th id="333">333</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../MTProxy/mtproto/mtproto-proxy.c.html'>MTProxy/mtproto/mtproto-proxy.c</a><br/>Generated on <em>2018-Jun-02</em> from project include<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

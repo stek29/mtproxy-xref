@@ -1,0 +1,6 @@
+<def f='MTProxy/common/pid.h' l='29' ll='34'/>
+<size>12</size>
+<mbr r='process_id::ip' o='0' t='unsigned int'/>
+<mbr r='process_id::port' o='32' t='short'/>
+<mbr r='process_id::pid' o='48' t='unsigned short'/>
+<mbr r='process_id::utime' o='64' t='int'/>

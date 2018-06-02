@@ -1,0 +1,10 @@
+<dec f='MTProxy/net/net-timers.h' l='31' type='double'/>
+<offset>192</offset>
+<use f='MTProxy/jobs/jobs.c' l='1119' u='r' c='job_timer_wakeup_gateway'/>
+<use f='MTProxy/jobs/jobs.c' l='1243' u='r' c='do_immediate_timer_insert'/>
+<use f='MTProxy/jobs/jobs.c' l='1357' u='r' c='job_timer_check'/>
+<use f='MTProxy/jobs/jobs.c' l='1357' u='r' c='job_timer_check'/>
+<use f='MTProxy/jobs/jobs.c' l='1370' u='r' c='job_timer_insert'/>
+<use f='MTProxy/jobs/jobs.c' l='1371' u='w' c='job_timer_insert'/>
+<use f='MTProxy/jobs/jobs.c' l='1416' u='r' c='job_timer_active'/>
+<use f='MTProxy/jobs/jobs.c' l='1421' u='r' c='job_timer_wakeup_time'/>

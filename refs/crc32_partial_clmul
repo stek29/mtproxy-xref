@@ -1,0 +1,3 @@
+<dec f='MTProxy/common/crc32.h' l='67' type='unsigned int crc32_partial_clmul(const void * data, long len, unsigned int crc)'/>
+<def f='MTProxy/common/crc32.c' l='489' ll='539' type='unsigned int crc32_partial_clmul(const void * data, long len, unsigned int crc)'/>
+<use f='MTProxy/common/crc32.c' l='1040' u='r' c='crc32_init'/>

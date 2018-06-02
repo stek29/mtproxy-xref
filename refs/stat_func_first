@@ -1,0 +1,4 @@
+<def f='MTProxy/common/common-stats.c' l='173' type='struct stat_fun_en *'/>
+<use f='MTProxy/common/common-stats.c' l='177' u='r' c='sb_register_stat_fun'/>
+<use f='MTProxy/common/common-stats.c' l='189' u='w' c='sb_register_stat_fun'/>
+<use f='MTProxy/common/common-stats.c' l='240' u='r' c='sb_prepare'/>

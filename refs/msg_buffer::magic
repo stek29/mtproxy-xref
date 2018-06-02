@@ -1,0 +1,8 @@
+<dec f='MTProxy/net/net-msg-buffers.h' l='63' type='int'/>
+<offset>96</offset>
+<use f='MTProxy/net/net-msg-buffers.c' l='481' u='w' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='505' u='r' c='free_std_msg_buffer'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='515' u='w' c='free_std_msg_buffer'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='548' u='r' c='free_msg_buffer'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='549' u='r' c='free_msg_buffer'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='551' u='r' c='free_msg_buffer'/>

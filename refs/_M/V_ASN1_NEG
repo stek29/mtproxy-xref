@@ -1,0 +1,6 @@
+<dec f='include/openssl/asn1.h' l='136'/>
+<doc f='include/openssl/asn1.h' l='130'>/*
+ * NB the constants below are used internally by ASN1_INTEGER
+ * and ASN1_ENUMERATED to indicate the sign. They are *not* on
+ * the wire tag values.
+ */</doc>

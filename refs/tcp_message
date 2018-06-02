@@ -1,0 +1,6 @@
+<def f='MTProxy/net/net-tcp-rpc-common.h' l='30' ll='35'/>
+<size>48</size>
+<mbr r='tcp_message::c' o='0' t='connection_job_t'/>
+<mbr r='tcp_message::op' o='64' t='int'/>
+<mbr r='tcp_message::packet_num' o='96' t='int'/>
+<mbr r='tcp_message::raw' o='128' t='struct raw_message'/>

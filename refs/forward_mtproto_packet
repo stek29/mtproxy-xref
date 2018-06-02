@@ -1,0 +1,4 @@
+<dec f='MTProxy/mtproto/mtproto-proxy.c' l='1114' type='int forward_mtproto_packet(struct tl_in_state * tlio_in, connection_job_t C, int len, int * remote_ip_port, int rpc_flags)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1292' u='c' c='process_http_query'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1486' u='c' c='do_rpcs_execute'/>
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='1661' ll='1689' type='int forward_mtproto_packet(struct tl_in_state * tlio_in, connection_job_t C, int len, int * remote_ip_port, int rpc_flags)'/>

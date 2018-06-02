@@ -1,0 +1,8 @@
+<dec f='MTProxy/net/net-msg.h' l='114' type='int rwm_trunc(struct raw_message * raw, int len)'/>
+<use f='MTProxy/common/tl-parse.c' l='164' u='c' c='__tl_raw_msg_fetch_lookup_raw_message'/>
+<use f='MTProxy/common/tl-parse.c' l='224' u='c' c='__tl_raw_msg_raw_msg_copy_through'/>
+<use f='MTProxy/net/net-http-server.c' l='585' u='c' c='hts_parse_execute'/>
+<def f='MTProxy/net/net-msg.c' l='728' ll='735' type='int rwm_trunc(struct raw_message * raw, int len)'/>
+<use f='MTProxy/net/net-msg.c' l='1222' u='c' c='rwm_from_tl_string'/>
+<doc f='MTProxy/net/net-msg.c' l='726'>/* }}} */</doc>
+<doc f='MTProxy/net/net-msg.c' l='728'>/* {{{ */</doc>

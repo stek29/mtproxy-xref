@@ -1,0 +1,2 @@
+<dec f='MTProxy/common/crc32.h' l='71' type='uint64_t crc64_feed_byte(uint64_t crc, unsigned char b)'/>
+<def f='MTProxy/common/crc32.c' l='613' ll='615' type='uint64_t crc64_feed_byte(uint64_t crc, unsigned char b)'/>

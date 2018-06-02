@@ -1,0 +1,5 @@
+<dec f='MTProxy/common/server-functions.h' l='102' type='long long parse_memory_limit(const char * s)'/>
+<doc f='MTProxy/common/server-functions.h' l='100'>//void set_backlog (const char *arg);
+//void set_maxconn (const char *arg);</doc>
+<def f='MTProxy/common/server-functions.c' l='248' ll='268' type='long long parse_memory_limit(const char * s)'/>
+<use f='MTProxy/common/server-functions.c' l='619' u='c' c='builtin_parse_option'/>

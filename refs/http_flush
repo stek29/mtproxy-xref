@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-http-server.h' l='101' type='void http_flush(connection_job_t C, struct raw_message * raw)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1260' u='c' c='process_http_query'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1554' u='c' c='finish_postponed_http_response'/>
+<def f='MTProxy/net/net-http-server.c' l='866' ll='876' type='void http_flush(connection_job_t C, struct raw_message * raw)'/>

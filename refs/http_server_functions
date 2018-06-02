@@ -1,0 +1,7 @@
+<def f='MTProxy/net/net-http-server.h' l='32' ll='38'/>
+<size>40</size>
+<mbr r='http_server_functions::info' o='0' t='void *'/>
+<mbr r='http_server_functions::execute' o='64' t='int (*)(connection_job_t, struct raw_message *, int)'/>
+<mbr r='http_server_functions::ht_wakeup' o='128' t='int (*)(connection_job_t)'/>
+<mbr r='http_server_functions::ht_alarm' o='192' t='int (*)(connection_job_t)'/>
+<mbr r='http_server_functions::ht_close' o='256' t='int (*)(connection_job_t, int)'/>

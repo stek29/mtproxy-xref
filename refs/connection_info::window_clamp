@@ -1,0 +1,7 @@
+<dec f='MTProxy/net/net-connections.h' l='234' type='int'/>
+<offset>4096</offset>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2065' u='w' c='mtfront_pre_loop'/>
+<use f='MTProxy/net/net-connections.c' l='729' u='w' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='730' u='r' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='731' u='a' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='732' u='r' c='alloc_new_connection'/>

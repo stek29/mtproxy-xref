@@ -1,0 +1,44 @@
+<def f='MTProxy/common/proc-stat.h' l='22' ll='65'/>
+<size>552</size>
+<mbr r='proc_stats::pid' o='0' t='int'/>
+<mbr r='proc_stats::comm' o='32' t='char [256]'/>
+<mbr r='proc_stats::state' o='2080' t='char'/>
+<mbr r='proc_stats::ppid' o='2112' t='int'/>
+<mbr r='proc_stats::pgrp' o='2144' t='int'/>
+<mbr r='proc_stats::session' o='2176' t='int'/>
+<mbr r='proc_stats::tty_nr' o='2208' t='int'/>
+<mbr r='proc_stats::tpgid' o='2240' t='int'/>
+<mbr r='proc_stats::flags' o='2304' t='unsigned long'/>
+<mbr r='proc_stats::minflt' o='2368' t='unsigned long'/>
+<mbr r='proc_stats::cminflt' o='2432' t='unsigned long'/>
+<mbr r='proc_stats::majflt' o='2496' t='unsigned long'/>
+<mbr r='proc_stats::cmajflt' o='2560' t='unsigned long'/>
+<mbr r='proc_stats::utime' o='2624' t='unsigned long'/>
+<mbr r='proc_stats::stime' o='2688' t='unsigned long'/>
+<mbr r='proc_stats::cutime' o='2752' t='long'/>
+<mbr r='proc_stats::cstime' o='2816' t='long'/>
+<mbr r='proc_stats::priority' o='2880' t='long'/>
+<mbr r='proc_stats::nice' o='2944' t='long'/>
+<mbr r='proc_stats::num_threads' o='3008' t='long'/>
+<mbr r='proc_stats::itrealvalue' o='3072' t='long'/>
+<mbr r='proc_stats::starttime' o='3136' t='unsigned long'/>
+<mbr r='proc_stats::vsize' o='3200' t='unsigned long'/>
+<mbr r='proc_stats::rss' o='3264' t='long'/>
+<mbr r='proc_stats::rlim' o='3328' t='unsigned long'/>
+<mbr r='proc_stats::startcode' o='3392' t='unsigned long'/>
+<mbr r='proc_stats::endcode' o='3456' t='unsigned long'/>
+<mbr r='proc_stats::startstack' o='3520' t='unsigned long'/>
+<mbr r='proc_stats::kstkesp' o='3584' t='unsigned long'/>
+<mbr r='proc_stats::kstkeip' o='3648' t='unsigned long'/>
+<mbr r='proc_stats::signal' o='3712' t='unsigned long'/>
+<mbr r='proc_stats::blocked' o='3776' t='unsigned long'/>
+<mbr r='proc_stats::sigignore' o='3840' t='unsigned long'/>
+<mbr r='proc_stats::sigcatch' o='3904' t='unsigned long'/>
+<mbr r='proc_stats::wchan' o='3968' t='unsigned long'/>
+<mbr r='proc_stats::nswap' o='4032' t='unsigned long'/>
+<mbr r='proc_stats::cnswap' o='4096' t='unsigned long'/>
+<mbr r='proc_stats::exit_signal' o='4160' t='int'/>
+<mbr r='proc_stats::processor' o='4192' t='int'/>
+<mbr r='proc_stats::rt_priority' o='4224' t='unsigned long'/>
+<mbr r='proc_stats::policy' o='4288' t='unsigned long'/>
+<mbr r='proc_stats::delayacct_blkio_ticks' o='4352' t='unsigned long long'/>

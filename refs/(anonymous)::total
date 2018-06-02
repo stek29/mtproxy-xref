@@ -1,0 +1,14 @@
+<dec f='MTProxy/common/md5.h' l='12' type='unsigned long [2]'/>
+<use f='MTProxy/common/md5.c' l='63' u='w' c='md5_starts'/>
+<use f='MTProxy/common/md5.c' l='64' u='w' c='md5_starts'/>
+<use f='MTProxy/common/md5.c' l='206' u='r' c='md5_update'/>
+<use f='MTProxy/common/md5.c' l='209' u='w' c='md5_update'/>
+<use f='MTProxy/common/md5.c' l='210' u='w' c='md5_update'/>
+<use f='MTProxy/common/md5.c' l='212' u='r' c='md5_update'/>
+<use f='MTProxy/common/md5.c' l='213' u='w' c='md5_update'/>
+<use f='MTProxy/common/md5.c' l='256' u='r' c='md5_finish'/>
+<use f='MTProxy/common/md5.c' l='257' u='r' c='md5_finish'/>
+<use f='MTProxy/common/md5.c' l='258' u='r' c='md5_finish'/>
+<use f='MTProxy/common/md5.c' l='263' u='r' c='md5_finish'/>
+<offset>0</offset>
+<doc f='MTProxy/common/md5.h' l='12'>/*!&lt; number of bytes processed  */</doc>

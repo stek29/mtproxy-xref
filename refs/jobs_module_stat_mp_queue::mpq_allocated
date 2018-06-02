@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/mp-queue.c' l='59' type='int'/>
+<use f='MTProxy/common/mp-queue.c' l='407' u='w' c='alloc_mp_queue_w'/>
+<use f='MTProxy/common/mp-queue.c' l='429' u='w' c='free_mp_queue'/>
+<offset>32</offset>

@@ -1,0 +1,7 @@
+<dec f='MTProxy/net/net-connections.h' l='172' type='int (*)(connection_job_t)'/>
+<offset>2048</offset>
+<doc f='MTProxy/net/net-connections.h' l='172'>/* returns # of bytes needed to complete last output block */</doc>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='89' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='208' u='r' c='tcp_rpc_flush'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='77' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='84' u='w'/>

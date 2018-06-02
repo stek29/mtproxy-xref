@@ -1,0 +1,8 @@
+<def f='MTProxy/engine/engine.c' l='520' ll='526' type='void check_signal_handler(server_functions_t * F, int sig, void (*)(void) default_f)'/>
+<use f='MTProxy/engine/engine.c' l='535' u='c' c='check_server_functions'/>
+<use f='MTProxy/engine/engine.c' l='536' u='c' c='check_server_functions'/>
+<use f='MTProxy/engine/engine.c' l='537' u='c' c='check_server_functions'/>
+<use f='MTProxy/engine/engine.c' l='538' u='c' c='check_server_functions'/>
+<use f='MTProxy/engine/engine.c' l='539' u='c' c='check_server_functions'/>
+<use f='MTProxy/engine/engine.c' l='540' u='c' c='check_server_functions'/>
+<use f='MTProxy/engine/engine.c' l='541' u='c' c='check_server_functions'/>

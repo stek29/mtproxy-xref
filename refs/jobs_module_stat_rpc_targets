@@ -1,0 +1,9 @@
+<def f='MTProxy/net/net-rpc-targets.c' l='72' macro='1'/>
+<def f='MTProxy/net/net-rpc-targets.c' l='77' macro='1' type='struct jobs_module_stat_rpc_targets *'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='77' macro='1' u='w'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='99' macro='1' u='r'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='143' macro='1' u='r'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='185' macro='1' u='r'/>
+<size>16</size>
+<mbr r='jobs_module_stat_rpc_targets::total_rpc_targets' o='0' t='long long'/>
+<mbr r='jobs_module_stat_rpc_targets::total_connections_in_rpc_targets' o='64' t='long long'/>

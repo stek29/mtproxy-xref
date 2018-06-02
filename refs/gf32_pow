@@ -1,0 +1,3 @@
+<def f='MTProxy/common/crc32.c' l='691' ll='698' type='unsigned int gf32_pow(unsigned int a, int k, unsigned int poly)'/>
+<use f='MTProxy/common/crc32.c' l='693' u='c' c='gf32_pow'/>
+<use f='MTProxy/common/crc32.c' l='961' u='c' c='crc32_find_corrupted_bit'/>

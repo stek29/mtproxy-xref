@@ -1,0 +1,5 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='1920' ll='1923' type='int mtfront_data_sent(connection_job_t c, int bytes_sent)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1934' u='a' c='init_ct_server_mtfront'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1935' u='a' c='init_ct_server_mtfront'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1936' u='a' c='init_ct_server_mtfront'/>
+<doc f='MTProxy/mtproto/mtproto-proxy.c' l='1919'>// invoked in NET-CPU context!</doc>

@@ -1,0 +1,26 @@
+<dec f='include/string.h' l='65' type='int memcmp(const void * __s1, const void * __s2, size_t __n)'/>
+<use f='MTProxy/common/common-stats.c' l='131' u='c' c='am_get_memory_stats'/>
+<use f='MTProxy/common/common-stats.c' l='139' u='c' c='am_get_memory_stats'/>
+<use f='MTProxy/common/common-stats.c' l='147' u='c' c='am_get_memory_stats'/>
+<use f='MTProxy/common/common-stats.c' l='152' u='c' c='am_get_memory_stats'/>
+<doc f='include/string.h' l='64'>/* Compare N bytes of S1 and S2.  */</doc>
+<use f='MTProxy/common/parse-config.c' l='197' u='c' c='expect_word'/>
+<use f='MTProxy/common/pid.c' l='70' u='c' c='matches_pid'/>
+<use f='MTProxy/common/pid.c' l='80' u='c' c='process_id_is_newer'/>
+<use f='MTProxy/common/resolver.c' l='130' u='c' c='getHash'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='76' u='c' c='cfg_getlex_ext'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='80' u='c' c='cfg_getlex_ext'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='86' u='c' c='cfg_getlex_ext'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='89' u='c' c='cfg_getlex_ext'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='95' u='c' c='cfg_getlex_ext'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='101' u='c' c='cfg_getlex_ext'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1247' u='c' c='process_http_query'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1378' u='c' c='hts_stats_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='270' u='c' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='273' u='c' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='275' u='c' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='278' u='c' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='300' u='c' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='302' u='c' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='740' u='c' c='gen_http_time'/>
+<use f='MTProxy/net/net-msg.c' l='220' u='c' c='rwm_compare'/>

@@ -1,0 +1,18 @@
+<dec f='MTProxy/common/mp-queue.h' l='135' type='long mpq_push_w(struct mp_queue * MQ, mqn_value_t val, int flags)'/>
+<def f='MTProxy/common/mp-queue.c' l='658' ll='667' type='long mpq_push_w(struct mp_queue * MQ, mqn_value_t v, int flags)'/>
+<use f='MTProxy/jobs/jobs.c' l='713' u='c' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='729' u='c' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='733' u='c' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='1405' u='c' c='job_timer_insert'/>
+<use f='MTProxy/jobs/jobs.c' l='1514' u='c' c='job_message_send'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='795' u='c' c='push_rpc_confirmation'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1390' u='c' c='hts_stats_execute'/>
+<use f='MTProxy/net/net-connections.c' l='939' u='c' c='net_server_socket_reader'/>
+<use f='MTProxy/net/net-connections.c' l='2105' u='c' c='insert_free_later_struct'/>
+<use f='MTProxy/net/net-http-server.c' l='203' u='c' c='write_http_error'/>
+<use f='MTProxy/net/net-http-server.c' l='868' u='c' c='http_flush'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='563' u='c' c='free_msg_buffer'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='85' u='c' c='cpu_tcp_server_writer'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='62' u='c' c='tcp_rpc_conn_send_init'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='109' u='c' c='tcp_rpc_conn_send'/>
+<use f='MTProxy/net/net-thread.c' l='112' u='c' c='notification_event_insert_conn'/>

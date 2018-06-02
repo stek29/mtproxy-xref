@@ -1,0 +1,6 @@
+<def f='MTProxy/jobs/jobs.h' l='410' ll='415'/>
+<size>16</size>
+<mbr r='job_message_payload::job' o='0' t='job_t'/>
+<mbr r='job_message_payload::message_class' o='64' t='int'/>
+<mbr r='job_message_payload::payload_ints' o='96' t='int'/>
+<mbr r='job_message_payload::payload' o='128' t='unsigned int [0]'/>

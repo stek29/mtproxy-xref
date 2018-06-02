@@ -1,0 +1,25 @@
+<def f='MTProxy/net/net-http-server.h' l='45' ll='67'/>
+<size>112</size>
+<doc f='MTProxy/net/net-http-server.h' l='44'>/* in conn-&gt;custom_data, 104 bytes */</doc>
+<mbr r='hts_data::query_type' o='0' t='int'/>
+<mbr r='hts_data::query_flags' o='32' t='int'/>
+<mbr r='hts_data::query_words' o='64' t='int'/>
+<mbr r='hts_data::header_size' o='96' t='int'/>
+<mbr r='hts_data::first_line_size' o='128' t='int'/>
+<mbr r='hts_data::data_size' o='160' t='int'/>
+<mbr r='hts_data::host_offset' o='192' t='int'/>
+<mbr r='hts_data::host_size' o='224' t='int'/>
+<mbr r='hts_data::uri_offset' o='256' t='int'/>
+<mbr r='hts_data::uri_size' o='288' t='int'/>
+<mbr r='hts_data::http_ver' o='320' t='int'/>
+<mbr r='hts_data::wlen' o='352' t='int'/>
+<mbr r='hts_data::word' o='384' t='char [16]'/>
+<mbr r='hts_data::extra' o='512' t='void *'/>
+<mbr r='hts_data::extra_int' o='576' t='int'/>
+<mbr r='hts_data::extra_int2' o='608' t='int'/>
+<mbr r='hts_data::extra_int3' o='640' t='int'/>
+<mbr r='hts_data::extra_int4' o='672' t='int'/>
+<mbr r='hts_data::extra_double' o='704' t='double'/>
+<mbr r='hts_data::extra_double2' o='768' t='double'/>
+<mbr r='hts_data::parse_state' o='832' t='int'/>
+<mbr r='hts_data::query_seqno' o='864' t='int'/>

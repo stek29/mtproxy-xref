@@ -1,0 +1,3 @@
+<dec f='MTProxy/net/net-http-server.h' l='114' type='char * cur_http_date()'/>
+<def f='MTProxy/net/net-http-server.c' l='774' ll='779' type='char * cur_http_date()'/>
+<use f='MTProxy/net/net-http-server.c' l='846' u='c' c='write_basic_http_header_raw'/>

@@ -1,0 +1,5 @@
+<dec f='MTProxy/engine/engine.h' l='76' type='void (*)(void)'/>
+<offset>320</offset>
+<use f='MTProxy/engine/engine.c' l='325' u='r' c='server_exit'/>
+<use f='MTProxy/engine/engine.c' l='543' u='r' c='check_server_functions'/>
+<use f='MTProxy/engine/engine.c' l='543' u='w' c='check_server_functions'/>

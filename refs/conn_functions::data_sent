@@ -1,0 +1,8 @@
+<dec f='MTProxy/net/net-connections.h' l='164' type='int (*)(connection_job_t, int)'/>
+<offset>1664</offset>
+<doc f='MTProxy/net/net-connections.h' l='164'>/* invoked after w&gt;0 bytes are written into socket */</doc>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1934' u='w' c='init_ct_server_mtfront'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1935' u='w' c='init_ct_server_mtfront'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1936' u='w' c='init_ct_server_mtfront'/>
+<use f='MTProxy/net/net-connections.c' l='1008' u='r' c='net_server_socket_writer'/>
+<use f='MTProxy/net/net-connections.c' l='1009' u='r' c='net_server_socket_writer'/>

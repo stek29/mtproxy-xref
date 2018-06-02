@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-msg.h' l='128' type='int rwm_prepare_iovec(const struct raw_message * raw, struct iovec * iov, int iov_len, int bytes)'/>
+<use f='MTProxy/net/net-connections.c' l='245' u='c' c='tcp_prepare_iovec'/>
+<def f='MTProxy/net/net-msg.c' l='656' ll='687' type='int rwm_prepare_iovec(const struct raw_message * raw, struct iovec * iov, int iov_len, int bytes)'/>
+<doc f='MTProxy/net/net-msg.c' l='654'>/* }}} */</doc>
+<doc f='MTProxy/net/net-msg.c' l='656'>/* {{{ */</doc>

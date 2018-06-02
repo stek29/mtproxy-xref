@@ -1,0 +1,3 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='1005' ll='1007' type='struct http_server_functions'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2304' u='a'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2304' u='a'/>

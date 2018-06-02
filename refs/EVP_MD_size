@@ -1,0 +1,1 @@
+<dec f='include/openssl/evp.h' l='520' type='int EVP_MD_size(const EVP_MD * md)'/>

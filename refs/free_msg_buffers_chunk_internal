@@ -1,0 +1,2 @@
+<def f='MTProxy/net/net-msg-buffers.c' l='268' ll='308' type='void free_msg_buffers_chunk_internal(struct msg_buffers_chunk * C, struct msg_buffers_chunk * CH)'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='315' u='c' c='free_msg_buffers_chunk'/>

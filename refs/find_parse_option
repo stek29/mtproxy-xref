@@ -1,0 +1,6 @@
+<def f='MTProxy/common/server-functions.c' l='274' ll='286' type='int find_parse_option(int val)'/>
+<use f='MTProxy/common/server-functions.c' l='334' u='c' c='parse_option_internal'/>
+<use f='MTProxy/common/server-functions.c' l='392' u='c' c='remove_parse_option_completely'/>
+<use f='MTProxy/common/server-functions.c' l='409' u='c' c='remove_parse_option'/>
+<use f='MTProxy/common/server-functions.c' l='455' u='c' c='parse_option_alias'/>
+<use f='MTProxy/common/server-functions.c' l='628' u='c' c='parse_one_option'/>

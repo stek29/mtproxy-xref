@@ -1,0 +1,7 @@
+<def f='MTProxy/net/net-connections.h' l='400' ll='406'/>
+<size>88</size>
+<mbr r='query_info::ev' o='0' t='struct event_timer'/>
+<mbr r='query_info::raw' o='256' t='struct raw_message'/>
+<mbr r='query_info::src_type' o='512' t='int'/>
+<mbr r='query_info::src_pid' o='544' t='struct process_id'/>
+<mbr r='query_info::conn' o='640' t='void *'/>

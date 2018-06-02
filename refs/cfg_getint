@@ -1,0 +1,6 @@
+<dec f='MTProxy/common/parse-config.h' l='41' type='long long cfg_getint()'/>
+<def f='MTProxy/common/parse-config.c' l='105' ll='114' type='long long cfg_getint()'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='171' u='c' c='cfg_parse_server_port'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='267' u='c' c='parse_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='320' u='c' c='parse_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='326' u='c' c='parse_config'/>

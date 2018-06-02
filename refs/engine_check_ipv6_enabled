@@ -1,0 +1,5 @@
+<def f='MTProxy/engine/engine.h' l='187' macro='1' type='int engine_check_ipv6_enabled()'/>
+<use f='MTProxy/engine/engine-net.c' l='58' u='c' c='try_open_port'/>
+<use f='MTProxy/engine/engine.c' l='301' u='c' c='server_init'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2056' u='c' c='mtfront_pre_loop'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2224' u='c' c='mtfront_pre_init'/>

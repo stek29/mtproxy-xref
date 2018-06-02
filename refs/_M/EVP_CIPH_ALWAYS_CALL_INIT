@@ -1,0 +1,2 @@
+<dec f='include/openssl/evp.h' l='356'/>
+<doc f='include/openssl/evp.h' l='355'>/* Set if the cipher&apos;s init() function should be called if key is NULL */</doc>

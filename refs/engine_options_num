@@ -1,0 +1,3 @@
+<dec f='MTProxy/common/server-functions.h' l='47' type='int'/>
+<def f='MTProxy/common/server-functions.c' l='67' type='int'/>
+<use f='MTProxy/common/server-functions.c' l='637' u='w' c='parse_engine_options_long'/>

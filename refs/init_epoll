@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-events.h' l='84' type='int init_epoll()'/>
+<use f='MTProxy/engine/engine.c' l='281' u='c' c='server_init'/>
+<use f='MTProxy/engine/engine.c' l='645' u='c' c='default_main'/>
+<def f='MTProxy/net/net-events.c' l='72' ll='86' type='int init_epoll()'/>

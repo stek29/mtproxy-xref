@@ -1,0 +1,5 @@
+<dec f='MTProxy/engine/engine.h' l='84' type='void (*)(stats_buffer_t *)'/>
+<offset>704</offset>
+<use f='MTProxy/engine/engine.c' l='495' u='r' c='engine_prepare_stats'/>
+<use f='MTProxy/engine/engine.c' l='496' u='r' c='engine_prepare_stats'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2296' u='w'/>

@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-connections.h' l='165' type='int (*)(connection_job_t)'/>
+<offset>1728</offset>
+<doc f='MTProxy/net/net-connections.h' l='165'>/* invoked from server_writer when Out.total_bytes crosses write_low_watermark (&quot;greater or equal&quot; -&gt; &quot;less&quot;) */</doc>
+<use f='MTProxy/net/net-connections.c' l='1015' u='r' c='net_server_socket_writer'/>
+<use f='MTProxy/net/net-connections.c' l='1016' u='r' c='net_server_socket_writer'/>

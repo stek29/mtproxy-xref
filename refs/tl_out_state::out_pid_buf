@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/tl-parse.h' l='134' type='struct process_id'/>
+<use f='MTProxy/common/tl-parse.c' l='773' u='a' c='tls_init_raw_msg'/>
+<use f='MTProxy/common/tl-parse.c' l='774' u='a' c='tls_init_raw_msg'/>
+<offset>576</offset>

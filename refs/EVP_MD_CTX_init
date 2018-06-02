@@ -1,0 +1,3 @@
+<dec f='include/openssl/evp.h' l='586' type='void EVP_MD_CTX_init(EVP_MD_CTX * ctx)'/>
+<use f='MTProxy/common/sha1.c' l='25' u='c' c='sha1_starts'/>
+<use f='MTProxy/common/sha256.c' l='25' u='c' c='sha256_starts'/>

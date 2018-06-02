@@ -1,0 +1,16 @@
+<dec f='MTProxy/net/net-events.h' l='70' type='int'/>
+<offset>224</offset>
+<doc f='MTProxy/net/net-events.h' l='70'>// position in heap (0=not in queue)</doc>
+<use f='MTProxy/net/net-events.c' l='102' u='r' c='pop_heap_head'/>
+<use f='MTProxy/net/net-events.c' l='103' u='w' c='pop_heap_head'/>
+<use f='MTProxy/net/net-events.c' l='114' u='w' c='pop_heap_head'/>
+<use f='MTProxy/net/net-events.c' l='118' u='w' c='pop_heap_head'/>
+<use f='MTProxy/net/net-events.c' l='126' u='r' c='remove_event_from_heap'/>
+<use f='MTProxy/net/net-events.c' l='129' u='w' c='remove_event_from_heap'/>
+<use f='MTProxy/net/net-events.c' l='135' u='w' c='remove_event_from_heap'/>
+<use f='MTProxy/net/net-events.c' l='150' u='w' c='remove_event_from_heap'/>
+<use f='MTProxy/net/net-events.c' l='154' u='w' c='remove_event_from_heap'/>
+<use f='MTProxy/net/net-events.c' l='164' u='r' c='put_event_into_heap'/>
+<use f='MTProxy/net/net-events.c' l='171' u='w' c='put_event_into_heap'/>
+<use f='MTProxy/net/net-events.c' l='175' u='w' c='put_event_into_heap'/>
+<use f='MTProxy/net/net-events.c' l='299' u='r' c='epoll_close'/>

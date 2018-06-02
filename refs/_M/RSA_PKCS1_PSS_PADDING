@@ -1,0 +1,2 @@
+<dec f='include/openssl/rsa.h' l='313'/>
+<doc f='include/openssl/rsa.h' l='312'>/* EVP_PKEY_ only */</doc>

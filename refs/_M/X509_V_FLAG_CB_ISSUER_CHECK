@@ -1,0 +1,2 @@
+<dec f='include/openssl/x509_vfy.h' l='395'/>
+<doc f='include/openssl/x509_vfy.h' l='394'>/* Send issuer+subject checks to verify_cb */</doc>

@@ -1,0 +1,1 @@
+<dec f='include/openssl/ec.h' l='711' type='int EC_GROUP_get_trinomial_basis(const EC_GROUP * , unsigned int * k)'/>

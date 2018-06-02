@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-tcp-rpc-server.h' l='38' type='int (*)(connection_job_t, struct tcp_rpc_nonce_packet *)'/>
+<offset>384</offset>
+<doc f='MTProxy/net/net-tcp-rpc-server.h' l='38'>/* 1 = ok; -1 = no crypto */</doc>
+<use f='MTProxy/engine/engine-net.c' l='118' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='96' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='230' u='r' c='tcp_rpcs_process_nonce_packet'/>

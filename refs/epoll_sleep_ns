@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-events.h' l='145' type='int'/>
+<use f='MTProxy/engine/engine.c' l='665' u='w' c='f_parse_option_engine'/>
+<def f='MTProxy/net/net-events.c' l='363' type='int'/>
+<use f='MTProxy/net/net-events.c' l='371' u='r' c='epoll_fetch_events'/>

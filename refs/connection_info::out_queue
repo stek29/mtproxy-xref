@@ -1,0 +1,13 @@
+<dec f='MTProxy/net/net-connections.h' l='239' type='struct mp_queue *'/>
+<offset>5248</offset>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='795' u='r' c='push_rpc_confirmation'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1390' u='r' c='hts_stats_execute'/>
+<use f='MTProxy/net/net-connections.c' l='427' u='r' c='cpu_server_free_connection'/>
+<use f='MTProxy/net/net-connections.c' l='433' u='r' c='cpu_server_free_connection'/>
+<use f='MTProxy/net/net-connections.c' l='434' u='w' c='cpu_server_free_connection'/>
+<use f='MTProxy/net/net-connections.c' l='692' u='w' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='773' u='r' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-http-server.c' l='203' u='r' c='write_http_error'/>
+<use f='MTProxy/net/net-http-server.c' l='868' u='r' c='http_flush'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='64' u='r' c='cpu_tcp_server_writer'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='109' u='r' c='tcp_rpc_conn_send'/>

@@ -1,0 +1,2 @@
+<dec f='MTProxy/common/mp-queue.h' l='120' type='struct mp_queue * alloc_mp_queue()'/>
+<def f='MTProxy/common/mp-queue.c' l='395' ll='401' type='struct mp_queue * alloc_mp_queue()'/>

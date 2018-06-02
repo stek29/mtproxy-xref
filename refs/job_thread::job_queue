@@ -1,0 +1,5 @@
+<dec f='MTProxy/jobs/jobs.h' l='227' type='struct mp_queue *'/>
+<offset>256</offset>
+<use f='MTProxy/jobs/jobs.c' l='461' u='w' c='create_job_thread_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='464' u='r' c='create_job_thread_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='905' u='r' c='job_thread_ex'/>

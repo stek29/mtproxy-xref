@@ -1,0 +1,5 @@
+<dec f='MTProxy/common/mp-queue.h' l='133' type='int mpq_is_empty(struct mp_queue * MQ)'/>
+<def f='MTProxy/common/mp-queue.c' l='484' ll='529' type='int mpq_is_empty(struct mp_queue * MQ)'/>
+<doc f='MTProxy/common/mp-queue.c' l='482'>/* 1 = definitely empty (for some serialization), 0 = possibly non-empty;
+   may invoke mpq_push() to discard empty block */</doc>
+<use f='MTProxy/net/net-msg-buffers.c' l='156' u='c' c='unlock_chunk'/>

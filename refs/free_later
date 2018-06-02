@@ -1,0 +1,6 @@
+<def f='MTProxy/net/net-connections.h' l='394' ll='397'/>
+<size>16</size>
+<doc f='MTProxy/net/net-connections.h' l='391'>//struct tree_connection *get_connection_tree_ptr (struct tree_connection **);
+//void free_connection_tree_ptr (struct tree_connection *);</doc>
+<mbr r='free_later::ptr' o='0' t='void *'/>
+<mbr r='free_later::free' o='64' t='void (*)(void *)'/>

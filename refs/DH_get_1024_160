@@ -1,0 +1,2 @@
+<dec f='include/openssl/dh.h' l='239' type='DH * DH_get_1024_160()'/>
+<doc f='include/openssl/dh.h' l='238'>/* RFC 5114 parameters */</doc>

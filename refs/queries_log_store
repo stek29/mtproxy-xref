@@ -1,0 +1,2 @@
+<dec f='MTProxy/common/server-functions.c' l='216' type='void queries_log_store(void * N, int limit, int max_size, int max_entry_size, int plain)'/>
+<def f='MTProxy/common/server-functions.c' l='217' type='void queries_log_store(void * N, int limit, int max_size, int max_entry_size, int plain)'/>

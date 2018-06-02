@@ -1,0 +1,8 @@
+<dec f='MTProxy/jobs/jobs.h' l='242' type='unsigned int'/>
+<use f='MTProxy/jobs/jobs.h' l='378' u='r' c='job_message_answer_true'/>
+<offset>32</offset>
+<use f='MTProxy/jobs/jobs.c' l='1504' u='w' c='job_message_send'/>
+<use f='MTProxy/jobs/jobs.c' l='1508' u='w' c='job_message_send'/>
+<use f='MTProxy/jobs/jobs.c' l='1545' u='w' c='job_message_send_fake'/>
+<use f='MTProxy/jobs/jobs.c' l='1549' u='w' c='job_message_send_fake'/>
+<use f='MTProxy/jobs/jobs.c' l='1588' u='r' c='job_message_queue_work'/>

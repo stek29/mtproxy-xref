@@ -1,0 +1,4 @@
+<dec f='include/openssl/ec.h' l='429' type='void EC_POINT_free(EC_POINT * point)'/>
+<doc f='include/openssl/ec.h' l='426'>/** Frees a EC_POINT object
+ *  \param  point  EC_POINT object to be freed
+ */</doc>

@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/bits/confname.h' l='77' type='2'/>
+<use f='MTProxy/jobs/jobs.c' l='207' macro='1' u='r'/>

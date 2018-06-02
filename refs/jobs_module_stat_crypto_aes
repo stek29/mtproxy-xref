@@ -1,0 +1,12 @@
+<def f='MTProxy/net/net-crypto-aes.c' l='54' macro='1'/>
+<def f='MTProxy/net/net-crypto-aes.c' l='58' macro='1' type='struct jobs_module_stat_crypto_aes *'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='58' macro='1' u='w'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='87' macro='1' u='r'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='106' macro='1' u='r'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='122' macro='1' u='r'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='127' macro='1' u='r'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='335' macro='1' u='r'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='341' macro='1' u='r'/>
+<size>8</size>
+<mbr r='jobs_module_stat_crypto_aes::allocated_aes_crypto' o='0' t='int'/>
+<mbr r='jobs_module_stat_crypto_aes::allocated_aes_crypto_temp' o='32' t='int'/>

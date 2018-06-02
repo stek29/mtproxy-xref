@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-msg.c' l='62' type='int'/>
+<use f='MTProxy/net/net-msg.c' l='73' u='w' c='alloc_msg_part'/>
+<use f='MTProxy/net/net-msg.c' l='74' u='w' c='free_msg_part'/>
+<offset>32</offset>

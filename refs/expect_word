@@ -1,0 +1,2 @@
+<dec f='MTProxy/common/parse-config.h' l='34' type='int expect_word(const char * name, int len)'/>
+<def f='MTProxy/common/parse-config.c' l='195' ll='203' type='int expect_word(const char * name, int len)'/>

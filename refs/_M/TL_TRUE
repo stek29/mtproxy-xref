@@ -1,0 +1,4 @@
+<dec f='MTProxy/jobs/jobs.h' l='375'/>
+<use f='MTProxy/jobs/jobs.h' l='378' u='c'/>
+<dec f='MTProxy/common/rpc-const.h' l='58'/>
+<use f='MTProxy/engine/engine-rpc-common.c' l='61' u='c'/>

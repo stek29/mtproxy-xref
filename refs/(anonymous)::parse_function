@@ -1,0 +1,4 @@
+<dec f='MTProxy/engine/engine.h' l='103' type='struct tl_act_extra *(*)(struct tl_in_state *, long long)'/>
+<offset>1472</offset>
+<use f='MTProxy/engine/engine.c' l='644' u='r' c='default_main'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2303' u='w'/>

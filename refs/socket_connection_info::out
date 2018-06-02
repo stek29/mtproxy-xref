@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-connections.h' l='256' type='struct raw_message'/>
+<offset>640</offset>
+<use f='MTProxy/net/net-connections.c' l='839' u='a' c='net_server_socket_free'/>
+<use f='MTProxy/net/net-connections.c' l='953' u='a' c='net_server_socket_writer'/>
+<use f='MTProxy/net/net-connections.c' l='1064' u='a' c='net_server_socket_read_write'/>
+<use f='MTProxy/net/net-connections.c' l='1215' u='a' c='alloc_new_socket_connection'/>

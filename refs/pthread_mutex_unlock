@@ -1,0 +1,7 @@
+<dec f='include/pthread.h' l='773' type='int pthread_mutex_unlock(pthread_mutex_t * __mutex)'/>
+<doc f='include/pthread.h' l='772'>/* Unlock a mutex.  */</doc>
+<use f='MTProxy/net/net-connections.c' l='1833' u='c' c='free_target'/>
+<use f='MTProxy/net/net-connections.c' l='1847' u='c' c='free_target'/>
+<use f='MTProxy/net/net-connections.c' l='1999' u='c' c='create_target'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='118' u='c' c='init_dh_params'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='140' u='c' c='init_dh_params'/>

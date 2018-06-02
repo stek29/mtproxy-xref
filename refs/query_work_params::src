@@ -1,0 +1,13 @@
+<dec f='MTProxy/engine/engine-rpc.h' l='40' type='struct raw_message'/>
+<offset>384</offset>
+<use f='MTProxy/engine/engine-rpc.c' l='597' u='m' c='process_query_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='598' u='a' c='process_query_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='616' u='a' c='process_parse_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='619' u='a' c='process_parse_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='619' u='m' c='process_parse_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='647' u='a' c='process_query_custom_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='647' u='m' c='process_query_custom_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='668' u='m' c='process_query_custom_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='669' u='a' c='process_query_custom_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='698' u='a' c='create_query_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='721' u='a' c='create_query_custom_job'/>

@@ -1,0 +1,2 @@
+<dec f='MTProxy/common/mp-queue.h' l='146' type='void * get_ptr_multithread_copy(void ** ptr, void (*)(void *) incref)'/>
+<def f='MTProxy/common/mp-queue.c' l='669' ll='693' type='void * get_ptr_multithread_copy(void ** ptr, void (*)(void *) incref)'/>

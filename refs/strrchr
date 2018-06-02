@@ -1,0 +1,2 @@
+<dec f='include/string.h' l='258' type='char * strrchr(const char * __s, int __c)'/>
+<use f='MTProxy/net/net-connections.c' l='2145' u='c' c='net_add_nat_info'/>

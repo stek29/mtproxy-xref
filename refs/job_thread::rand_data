@@ -1,0 +1,6 @@
+<dec f='MTProxy/jobs/jobs.h' l='234' type='struct drand48_data'/>
+<offset>1280</offset>
+<use f='MTProxy/jobs/jobs.c' l='374' u='a' c='lrand48_j'/>
+<use f='MTProxy/jobs/jobs.c' l='384' u='a' c='mrand48_j'/>
+<use f='MTProxy/jobs/jobs.c' l='394' u='a' c='drand48_j'/>
+<use f='MTProxy/jobs/jobs.c' l='466' u='a' c='create_job_thread_ex'/>

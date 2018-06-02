@@ -1,0 +1,5 @@
+lrand48_j|lrand48_j
+lru_delete_conn|lru_delete_conn
+lru_delete_ext_conn|lru_delete_ext_conn
+lru_insert_conn|lru_insert_conn
+lru_insert_ext_conn|lru_insert_ext_conn

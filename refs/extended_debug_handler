@@ -1,0 +1,5 @@
+<def f='MTProxy/common/server-functions.c' l='222' ll='230' type='void extended_debug_handler(int sig, siginfo_t * info, void * cont)'/>
+<use f='MTProxy/common/server-functions.c' l='233' u='r' c='set_debug_handlers'/>
+<use f='MTProxy/common/server-functions.c' l='234' u='r' c='set_debug_handlers'/>
+<use f='MTProxy/common/server-functions.c' l='235' u='r' c='set_debug_handlers'/>
+<use f='MTProxy/common/server-functions.c' l='236' u='r' c='set_debug_handlers'/>

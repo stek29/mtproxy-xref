@@ -1,0 +1,5 @@
+<def f='MTProxy/net/net-thread.c' l='106' ll='114' type='void notification_event_insert_conn(connection_job_t C, int type)'/>
+<use f='MTProxy/net/net-thread.c' l='117' u='c' c='notification_event_insert_tcp_conn_close'/>
+<use f='MTProxy/net/net-thread.c' l='121' u='c' c='notification_event_insert_tcp_conn_ready'/>
+<use f='MTProxy/net/net-thread.c' l='125' u='c' c='notification_event_insert_tcp_conn_alarm'/>
+<use f='MTProxy/net/net-thread.c' l='129' u='c' c='notification_event_insert_tcp_conn_wakeup'/>

@@ -1,0 +1,3 @@
+<dec f='MTProxy/common/resolver.h' l='33' type='struct hostent * kdb_gethostbyname(const char * name)'/>
+<use f='MTProxy/common/parse-config.c' l='216' u='c' c='cfg_gethost_ex'/>
+<def f='MTProxy/common/resolver.c' l='359' ll='402' type='struct hostent * kdb_gethostbyname(const char * name)'/>

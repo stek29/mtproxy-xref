@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/server-functions.h' l='82' type='int (*)(int)'/>
+<offset>320</offset>
+<use f='MTProxy/common/server-functions.c' l='348' u='w' c='parse_option_internal'/>
+<use f='MTProxy/common/server-functions.c' l='633' u='r' c='parse_one_option'/>

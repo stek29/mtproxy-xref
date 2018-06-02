@@ -1,0 +1,12 @@
+<dec f='MTProxy/common/common-stats.h' l='40'/>
+<use f='MTProxy/common/mp-queue.c' l='65' u='c'/>
+<use f='MTProxy/common/mp-queue.c' l='66' u='c'/>
+<use f='MTProxy/common/mp-queue.c' l='67' u='c'/>
+<use f='MTProxy/common/mp-queue.c' l='68' u='c'/>
+<use f='MTProxy/common/mp-queue.c' l='69' u='c'/>
+<use f='MTProxy/common/mp-queue.c' l='70' u='c'/>
+<use f='MTProxy/common/mp-queue.c' l='71' u='c'/>
+<use f='MTProxy/common/mp-queue.c' l='72' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='149' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='151' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='152' u='c'/>

@@ -1,0 +1,4 @@
+<def f='MTProxy/common/server-functions.c' l='288' ll='300' type='int find_parse_option_name(const char * name)'/>
+<use f='MTProxy/common/server-functions.c' l='464' u='c' c='parse_option_alias'/>
+<use f='MTProxy/common/server-functions.c' l='481' u='c' c='parse_option_long_alias'/>
+<use f='MTProxy/common/server-functions.c' l='486' u='c' c='parse_option_long_alias'/>

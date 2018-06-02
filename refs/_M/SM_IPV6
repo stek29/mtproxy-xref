@@ -1,0 +1,13 @@
+<dec f='MTProxy/net/net-events.h' l='113'/>
+<use f='MTProxy/engine/engine-net.c' l='58' u='c'/>
+<use f='MTProxy/engine/engine.c' l='304' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2056' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2224' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='1358' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='1719' u='c'/>
+<use f='MTProxy/net/net-events.c' l='452' u='c'/>
+<use f='MTProxy/net/net-events.c' l='457' u='c'/>
+<use f='MTProxy/net/net-events.c' l='594' u='c'/>
+<use f='MTProxy/net/net-events.c' l='633' u='c'/>
+<use f='MTProxy/net/net-events.c' l='662' u='c'/>
+<use f='MTProxy/net/net-events.c' l='700' u='c'/>

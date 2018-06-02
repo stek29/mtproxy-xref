@@ -1,0 +1,5 @@
+<dec f='MTProxy/jobs/jobs.c' l='71' type='long long'/>
+<use f='MTProxy/jobs/jobs.c' l='643' u='w' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='673' u='w' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='1072' u='w' c='create_async_job'/>
+<offset>192</offset>

@@ -1,0 +1,11 @@
+<dec f='MTProxy/jobs/jobs.h' l='435'/>
+<use f='MTProxy/common/mp-queue.c' l='57' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='59' u='c'/>
+<use f='MTProxy/jobs/jobs.c' l='69' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='93' u='c'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='54' u='c'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='53' u='c'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='44' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='60' u='c'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='72' u='c'/>
+<use f='MTProxy/net/net-timers.c' l='34' u='c'/>

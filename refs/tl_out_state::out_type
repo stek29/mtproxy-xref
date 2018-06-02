@@ -1,0 +1,10 @@
+<dec f='MTProxy/common/tl-parse.h' l='121' type='enum tl_type'/>
+<use f='MTProxy/common/tl-parse.h' l='172' u='r' c='tls_check'/>
+<use f='MTProxy/common/tl-parse.h' l='172' u='w' c='tls_clear'/>
+<use f='MTProxy/common/tl-parse.h' l='172' u='r' c='tl_copy_through'/>
+<use f='MTProxy/common/tl-parse.c' l='744' macro='1' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='749' macro='1' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='861' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='865' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='913' macro='1' u='w'/>
+<offset>0</offset>

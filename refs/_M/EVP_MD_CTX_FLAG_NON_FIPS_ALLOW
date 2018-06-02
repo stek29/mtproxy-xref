@@ -1,0 +1,5 @@
+<dec f='include/openssl/evp.h' l='293'/>
+<doc f='include/openssl/evp.h' l='288'>/*
+ * FIPS and pad options are ignored in 1.0.0, definitions are here so we
+ * don&apos;t accidentally reuse the values for other purposes.
+ */</doc>

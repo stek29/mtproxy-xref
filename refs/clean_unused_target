@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-connections.h' l='322' type='int clean_unused_target(conn_target_job_t S)'/>
+<def f='MTProxy/net/net-connections.c' l='1862' ll='1875' type='int clean_unused_target(conn_target_job_t CTJ)'/>
+<use f='MTProxy/net/net-connections.c' l='1911' u='c' c='do_conn_target_job'/>
+<doc f='MTProxy/net/net-connections.c' l='1862'>/* {{{ */</doc>

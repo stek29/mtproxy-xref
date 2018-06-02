@@ -1,0 +1,9 @@
+<dec f='MTProxy/net/net-msg-buffers.h' l='49'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='134' u='c'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='194' u='c'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='269' u='c'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='312' u='c'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='404' u='c'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='505' u='c'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='535' u='c'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='555' u='c'/>

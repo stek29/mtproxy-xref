@@ -1,0 +1,5 @@
+<dec f='MTProxy/crypto/aesni256.h' l='50' type='void tg_aes_set_encrypt_key(tg_aes_ctx_t * ctx, unsigned char * key, int bits)'/>
+<def f='MTProxy/crypto/aesni256.c' l='117' ll='120' type='void tg_aes_set_encrypt_key(tg_aes_ctx_t * ctx, unsigned char * key, int bits)'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='91' u='c' c='aes_crypto_init'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='108' u='c' c='aes_crypto_ctr128_init'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='110' u='c' c='aes_crypto_ctr128_init'/>

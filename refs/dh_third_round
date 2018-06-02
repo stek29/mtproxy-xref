@@ -1,0 +1,3 @@
+<dec f='MTProxy/net/net-crypto-dh.h' l='37' type='int dh_third_round(unsigned char * g_ab, const unsigned char * g_b, struct crypto_temp_dh_params * dh_params)'/>
+<def f='MTProxy/net/net-crypto-dh.c' l='224' ll='235' type='int dh_third_round(unsigned char * g_ab, const unsigned char * g_b, struct crypto_temp_dh_params * dh_params)'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='211' u='c' c='tcp_rpcc_process_nonce_packet'/>

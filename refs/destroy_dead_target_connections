@@ -1,0 +1,7 @@
+<def f='MTProxy/net/net-connections.c' l='1623' ll='1671' type='void destroy_dead_target_connections(conn_target_job_t CTJ)'/>
+<use f='MTProxy/net/net-connections.c' l='1681' u='c' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1910' u='c' c='do_conn_target_job'/>
+<doc f='MTProxy/net/net-connections.c' l='1620'>/*
+  Deletes failed connections (with flag C_ERROR) from target&apos;s tree
+*/</doc>
+<doc f='MTProxy/net/net-connections.c' l='1623'>/* {{{ */</doc>

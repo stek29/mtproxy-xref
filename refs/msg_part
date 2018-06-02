@@ -1,0 +1,11 @@
+<def f='MTProxy/net/net-msg.h' l='56' ll='69'/>
+<size>32</size>
+<doc f='MTProxy/net/net-msg.h' l='52'>/*
+ *        MESSAGE PARTS (struct msg_part)
+ */</doc>
+<mbr r='msg_part::refcnt' o='0' t='int'/>
+<mbr r='msg_part::magic' o='32' t='int'/>
+<mbr r='msg_part::next' o='64' t='struct msg_part *'/>
+<mbr r='msg_part::part' o='128' t='struct msg_buffer *'/>
+<mbr r='msg_part::offset' o='192' t='int'/>
+<mbr r='msg_part::data_end' o='224' t='int'/>

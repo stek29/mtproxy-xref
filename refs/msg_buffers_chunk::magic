@@ -1,0 +1,19 @@
+<dec f='MTProxy/net/net-msg-buffers.h' l='68' type='int'/>
+<offset>0</offset>
+<use f='MTProxy/net/net-msg-buffers.c' l='96' u='w' c='init_buffer_chunk_headers'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='122' u='a' c='lock_chunk_head'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='130' u='w' c='unlock_chunk_head'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='134' u='r' c='try_lock_chunk'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='134' u='a' c='try_lock_chunk'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='154' u='w' c='unlock_chunk'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='164' u='r' c='alloc_new_msg_buffers_chunk'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='194' u='w' c='alloc_new_msg_buffers_chunk'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='269' u='r' c='free_msg_buffers_chunk_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='270' u='r' c='free_msg_buffers_chunk_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='276' u='w' c='free_msg_buffers_chunk_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='312' u='r' c='free_msg_buffers_chunk'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='345' u='r' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='404' u='r' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='505' u='r' c='free_std_msg_buffer'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='534' u='r' c='free_msg_buffer_job'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='554' u='r' c='free_msg_buffer'/>

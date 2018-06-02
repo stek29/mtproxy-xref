@@ -1,0 +1,13 @@
+<dec f='MTProxy/net/net-msg.h' l='108' type='int rwm_push_data_front(struct raw_message * raw, const void * data, int alloc_bytes)'/>
+<def f='MTProxy/net/net-msg.c' l='487' ll='552' type='int rwm_push_data_front(struct raw_message * raw, const void * data, int alloc_bytes)'/>
+<use f='MTProxy/net/net-msg.c' l='1197' u='c' c='rwm_to_tl_string'/>
+<use f='MTProxy/net/net-msg.c' l='1199' u='c' c='rwm_to_tl_string'/>
+<use f='MTProxy/net/net-msg.c' l='1201' u='c' c='rwm_to_tl_string'/>
+<doc f='MTProxy/net/net-msg.c' l='485'>/* }}} */</doc>
+<doc f='MTProxy/net/net-msg.c' l='487'>/* {{{ */</doc>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='55' u='c' c='tcp_rpc_conn_send_init'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='80' u='c' c='tcp_rpc_conn_send_im'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='165' u='c' c='tcp_rpc_write_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='191' u='c' c='tcp_rpc_write_packet_compact'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='194' u='c' c='tcp_rpc_write_packet_compact'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='197' u='c' c='tcp_rpc_write_packet_compact'/>

@@ -1,0 +1,7 @@
+<dec f='MTProxy/net/net-tcp-rpc-client.h' l='61' type='int tcp_rpcc_start_crypto(connection_job_t c, char * nonce, int key_select, unsigned char * temp_key, int temp_key_len)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='776'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='776'/>
+<dec f='MTProxy/net/net-tcp-rpc-client.c' l='69' type='int tcp_rpcc_start_crypto(connection_job_t c, char * nonce, int key_select, unsigned char * temp_key, int temp_key_len)'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='101'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='101'/>
+<def f='MTProxy/net/net-tcp-rpc-client.c' l='652' ll='684' type='int tcp_rpcc_start_crypto(connection_job_t C, char * nonce, int key_select, unsigned char * temp_key, int temp_key_len)'/>

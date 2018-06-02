@@ -1,0 +1,2 @@
+<dec f='include/linux/futex.h' l='11'/>
+<use f='MTProxy/common/mp-queue.c' l='124' u='c'/>

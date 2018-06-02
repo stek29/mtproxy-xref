@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-msg-buffers.h' l='74' type='int'/>
+<offset>384</offset>
+<doc f='MTProxy/net/net-msg-buffers.h' l='74'>/* least two-power &gt;= tot_buffers */</doc>
+<use f='MTProxy/net/net-msg-buffers.c' l='203' u='w' c='alloc_new_msg_buffers_chunk'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='407' u='r' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='507' u='r' c='free_std_msg_buffer'/>

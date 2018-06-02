@@ -1,0 +1,4 @@
+<dec f='include/openssl/evp.h' l='1202'/>
+<doc f='include/openssl/evp.h' l='1199'>/*
+ * Method handles all operations: don&apos;t assume any digest related defaults.
+ */</doc>

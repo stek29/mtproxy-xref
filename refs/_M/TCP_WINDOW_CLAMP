@@ -1,0 +1,4 @@
+<dec f='include/netinet/tcp.h' l='49'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2066' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='731' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='736' u='c'/>

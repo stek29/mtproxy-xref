@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/sys/epoll.h' l='60' type='16'/>
+<use f='MTProxy/net/net-connections.c' l='1125' macro='1' u='r'/>

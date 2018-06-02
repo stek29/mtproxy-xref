@@ -1,0 +1,35 @@
+<dec f='MTProxy/common/common-stats.h' l='72' type='int'/>
+<use f='MTProxy/common/common-stats.c' l='197' u='w' c='sb_init'/>
+<use f='MTProxy/common/common-stats.c' l='208' u='w' c='sb_alloc'/>
+<use f='MTProxy/common/common-stats.c' l='222' u='w' c='sb_truncate'/>
+<use f='MTProxy/common/common-stats.c' l='223' u='r' c='sb_truncate'/>
+<use f='MTProxy/common/common-stats.c' l='223' u='r' c='sb_truncate'/>
+<use f='MTProxy/common/common-stats.c' l='224' u='w' c='sb_truncate'/>
+<use f='MTProxy/common/common-stats.c' l='226' u='w' c='sb_truncate'/>
+<use f='MTProxy/common/common-stats.c' l='230' u='r' c='sb_full'/>
+<use f='MTProxy/common/common-stats.c' l='230' u='r' c='sb_full'/>
+<use f='MTProxy/common/common-stats.c' l='230' u='r' c='sb_full'/>
+<use f='MTProxy/common/common-stats.c' l='234' u='w' c='sb_prepare'/>
+<use f='MTProxy/common/common-stats.c' l='250' u='r' c='sb_printf'/>
+<use f='MTProxy/common/common-stats.c' l='251' u='r' c='sb_printf'/>
+<use f='MTProxy/common/common-stats.c' l='254' u='w' c='sb_printf'/>
+<use f='MTProxy/common/common-stats.c' l='256' u='r' c='sb_printf'/>
+<use f='MTProxy/common/common-stats.c' l='258' u='r' c='sb_printf'/>
+<use f='MTProxy/common/common-stats.c' l='262' u='w' c='sb_printf'/>
+<use f='MTProxy/common/common-stats.c' l='264' u='r' c='sb_printf'/>
+<offset>64</offset>
+<use f='MTProxy/common/mp-queue.c' l='75' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='90' macro='1' u='r'/>
+<use f='MTProxy/engine/engine.c' l='498' u='r' c='engine_prepare_stats'/>
+<use f='MTProxy/jobs/jobs.c' l='323' macro='1' u='r'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1388' u='r' c='hts_stats_execute'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1389' u='r' c='hts_stats_execute'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1389' u='r' c='hts_stats_execute'/>
+<use f='MTProxy/net/net-connections.c' l='172' macro='1' u='r'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='67' macro='1' u='r'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='63' macro='1' u='r'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='68' macro='1' u='r'/>
+<use f='MTProxy/net/net-msg.c' l='70' macro='1' u='r'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='82' macro='1' u='r'/>
+<use f='MTProxy/net/net-stats.c' l='157' u='r' c='prepare_stats'/>
+<use f='MTProxy/net/net-timers.c' l='48' macro='1' u='r'/>

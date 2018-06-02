@@ -1,0 +1,5 @@
+<dec f='MTProxy/common/kprintf.h' l='32' type='const char *'/>
+<def f='MTProxy/common/kprintf.c' l='46' type='const char *'/>
+<use f='MTProxy/common/kprintf.c' l='60' u='r' c='reopen_logs_ext'/>
+<use f='MTProxy/common/kprintf.c' l='60' u='r' c='reopen_logs_ext'/>
+<use f='MTProxy/common/server-functions.c' l='603' u='w' c='builtin_parse_option'/>

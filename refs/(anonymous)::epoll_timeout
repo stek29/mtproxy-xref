@@ -1,0 +1,6 @@
+<dec f='MTProxy/engine/engine.h' l='100' type='int'/>
+<offset>1344</offset>
+<use f='MTProxy/engine/engine.c' l='552' u='r' c='check_server_functions'/>
+<use f='MTProxy/engine/engine.c' l='552' u='w' c='check_server_functions'/>
+<use f='MTProxy/engine/engine.c' l='594' u='r' c='default_main'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2300' u='w'/>

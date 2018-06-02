@@ -1,0 +1,2 @@
+<def f='MTProxy/net/net-stats.c' l='87' ll='89' type='int recent_idle_percent()'/>
+<doc f='MTProxy/net/net-stats.c' l='85'>//static double safe_div (double x, double y) { return y &gt; 0 ? x/y : 0; }</doc>

@@ -1,0 +1,8 @@
+<dec f='MTProxy/net/net-msg.h' l='150' type='int rwm_encrypt_decrypt_to(struct raw_message * raw, struct raw_message * res, int bytes, tg_aes_ctx_t * ctx, void (*)(tg_aes_ctx_t *, const void *, void *, int, unsigned char *, void *, void *) crypt, unsigned char * iv, int block_size, void * extra, void * extra2)'/>
+<doc f='MTProxy/net/net-msg.h' l='148'>// int rwm_encrypt_decrypt (struct raw_message *raw, int bytes, tg_aes_ctx_t *ctx, unsigned char iv[32]);
+// int rwm_encrypt_decrypt_cbc (struct raw_message *raw, int bytes, tg_aes_ctx_t *ctx, unsigned char iv[16]);</doc>
+<def f='MTProxy/net/net-msg.c' l='1339' ll='1386' type='int rwm_encrypt_decrypt_to(struct raw_message * raw, struct raw_message * res, int bytes, struct tg_aes_ctx * ctx, void (*)(struct tg_aes_ctx *, const void *, void *, int, unsigned char *, void *, void *) crypt, unsigned char * iv, int block_size, void * extra, void * extra2)'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='204' u='c' c='cpu_tcp_aes_crypto_encrypt_output'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='221' u='c' c='cpu_tcp_aes_crypto_decrypt_input'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='245' u='c' c='cpu_tcp_aes_crypto_ctr128_encrypt_output'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='261' u='c' c='cpu_tcp_aes_crypto_ctr128_decrypt_input'/>

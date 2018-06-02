@@ -1,0 +1,5 @@
+<def f='MTProxy/jobs/jobs.h' l='335' ll='339'/>
+<size>16</size>
+<mbr r='job_list_node::jl_next' o='0' t='struct job_list_node *'/>
+<mbr r='job_list_node::jl_type' o='64' t='job_list_node_type_t'/>
+<mbr r='job_list_node::jl_custom' o='128' t='int [0]'/>

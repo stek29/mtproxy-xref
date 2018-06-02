@@ -1,0 +1,33 @@
+<dec f='MTProxy/net/net-msg-buffers.h' l='69' type='int'/>
+<offset>32</offset>
+<use f='MTProxy/net/net-connections.c' l='233' u='r' c='prealloc_tcp_buffers'/>
+<use f='MTProxy/net/net-connections.c' l='236' u='r' c='prealloc_tcp_buffers'/>
+<use f='MTProxy/net/net-connections.c' l='238' u='r' c='prealloc_tcp_buffers'/>
+<use f='MTProxy/net/net-connections.c' l='935' u='r' c='net_server_socket_reader'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='97' u='w' c='init_buffer_chunk_headers'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='107' u='r' c='prepare_bs_inv'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='175' u='r' c='alloc_new_msg_buffers_chunk'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='195' u='w' c='alloc_new_msg_buffers_chunk'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='272' u='r' c='free_msg_buffers_chunk_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='272' u='r' c='free_msg_buffers_chunk_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='340' u='r' c='get_buffer_no'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='474' u='r' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='477' u='r' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='484' u='r' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='497' u='r' c='alloc_msg_buffer'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='520' u='r' c='free_std_msg_buffer'/>
+<use f='MTProxy/net/net-msg.c' l='387' u='r' c='rwm_push_data_ext'/>
+<use f='MTProxy/net/net-msg.c' l='420' u='r' c='rwm_push_data_ext'/>
+<use f='MTProxy/net/net-msg.c' l='456' u='r' c='rwm_push_data_ext'/>
+<use f='MTProxy/net/net-msg.c' l='520' u='r' c='rwm_push_data_front'/>
+<use f='MTProxy/net/net-msg.c' l='597' u='r' c='rwm_prepend_alloc'/>
+<use f='MTProxy/net/net-msg.c' l='629' u='r' c='rwm_postpone_alloc'/>
+<use f='MTProxy/net/net-msg.c' l='639' u='r' c='rwm_postpone_alloc'/>
+<use f='MTProxy/net/net-msg.c' l='876' u='r' c='rwm_check'/>
+<use f='MTProxy/net/net-msg.c' l='1250' u='r' c='rwm_process_encrypt_decrypt'/>
+<use f='MTProxy/net/net-msg.c' l='1255' u='r' c='rwm_process_encrypt_decrypt'/>
+<use f='MTProxy/net/net-msg.c' l='1280' u='r' c='rwm_process_encrypt_decrypt'/>
+<use f='MTProxy/net/net-msg.c' l='1303' u='r' c='rwm_process_encrypt_decrypt'/>
+<use f='MTProxy/net/net-msg.c' l='1312' u='r' c='rwm_process_encrypt_decrypt'/>
+<use f='MTProxy/net/net-msg.c' l='1316' u='r' c='rwm_process_encrypt_decrypt'/>
+<use f='MTProxy/net/net-msg.c' l='1370' u='r' c='rwm_encrypt_decrypt_to'/>

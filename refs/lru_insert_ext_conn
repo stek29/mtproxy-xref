@@ -1,0 +1,2 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='1860' ll='1866' type='void lru_insert_ext_conn(struct ext_connection * Ext)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1878' u='c' c='lru_insert_conn'/>

@@ -1,0 +1,2 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='781' type='int'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='953' u='w' c='mtfront_client_ready'/>

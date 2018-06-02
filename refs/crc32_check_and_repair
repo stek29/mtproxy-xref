@@ -1,0 +1,11 @@
+<dec f='MTProxy/common/crc32.h' l='61' type='int crc32_check_and_repair(void * input, int l, unsigned int * input_crc32, int force_exit)'/>
+<doc f='MTProxy/common/crc32.h' l='52'>/* crc32_check_and_repair returns
+   0 : Cyclic redundancy check is ok
+   1 : Cyclic redundancy check fails, but we fix one bit in input
+   2 : Cyclic redundancy check fails, but we fix one bit in input_crc32
+  -1 : Cyclic redundancy check fails, no repair possible. 
+       In this case *input_crc32 will be equal crc32 (input, l)
+
+  Case force_exit == 1 (case 1, 2: kprintf call, case -1: assert fail).
+*/</doc>
+<def f='MTProxy/common/crc32.c' l='1007' ll='1034' type='int crc32_check_and_repair(void * input, int l, unsigned int * input_crc32, int force_exit)'/>

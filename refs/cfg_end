@@ -1,0 +1,5 @@
+<dec f='MTProxy/common/parse-config.h' l='23' type='char *'/>
+<def f='MTProxy/common/parse-config.c' l='39' type='char *'/>
+<use f='MTProxy/common/parse-config.c' l='234' u='w' c='reset_config'/>
+<use f='MTProxy/common/parse-config.c' l='235' u='r' c='reset_config'/>
+<use f='MTProxy/common/parse-config.c' l='287' u='w' c='close_config'/>

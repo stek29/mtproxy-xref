@@ -1,0 +1,7 @@
+<def f='MTProxy/net/net-connections.c' l='262' type='void assert_main_thread()'/>
+<use f='MTProxy/net/net-connections.c' l='594' u='c' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='793' u='c' c='fail_socket_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1091' u='c' c='net_server_socket_read_write_gateway'/>
+<use f='MTProxy/net/net-connections.c' l='1179' u='c' c='alloc_new_socket_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1679' u='c' c='create_new_connections'/>
+<doc f='MTProxy/net/net-connections.c' l='260'>/* }}} */</doc>

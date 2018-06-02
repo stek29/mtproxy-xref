@@ -1,0 +1,2 @@
+<def f='MTProxy/net/net-msg.c' l='1240' ll='1336' type='int rwm_process_encrypt_decrypt(struct rwm_encrypt_decrypt_tmp * x, const void * data, int len)'/>
+<use f='MTProxy/net/net-msg.c' l='1381' u='r' c='rwm_encrypt_decrypt_to'/>

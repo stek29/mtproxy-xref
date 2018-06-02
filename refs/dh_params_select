@@ -1,0 +1,17 @@
+<dec f='MTProxy/net/net-crypto-dh.h' l='32' type='int'/>
+<def f='MTProxy/net/net-crypto-dh.c' l='77' type='int'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='113' u='r' c='init_dh_params'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='117' u='r' c='init_dh_params'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='137' u='w' c='init_dh_params'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='138' u='r' c='init_dh_params'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='170' u='r' c='dh_first_round'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='185' u='r' c='tcp_rpcc_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='188' u='r' c='tcp_rpcc_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='607' u='r' c='tcp_rpcc_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='609' u='r' c='tcp_rpcc_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='632' u='r' c='tcp_rpcc_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='184' u='r' c='tcp_rpcs_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='187' u='r' c='tcp_rpcs_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='597' u='r' c='tcp_rpcs_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='597' u='r' c='tcp_rpcs_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='636' u='r' c='tcp_rpcs_init_crypto'/>

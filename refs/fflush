@@ -1,0 +1,7 @@
+<dec f='include/stdio.h' l='242' type='int fflush(FILE * __stream)'/>
+<doc f='include/stdio.h' l='238'>/* Flush STREAM, or all streams if STREAM is NULL.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */</doc>
+<use f='MTProxy/common/kprintf.c' l='50' u='c' c='reopen_logs_ext'/>
+<use f='MTProxy/common/kprintf.c' l='51' u='c' c='reopen_logs_ext'/>

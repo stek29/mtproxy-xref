@@ -1,0 +1,5 @@
+<def f='MTProxy/net/net-connections.c' l='1297' ll='1309' type='int do_listening_connection_job(job_t job, int op, struct job_thread * JT)'/>
+<use f='MTProxy/net/net-connections.c' l='1324' u='r' c='init_listening_connection_ext'/>
+<use f='MTProxy/net/net-connections.c' l='1414' u='a' c='connection_get_by_fd'/>
+<doc f='MTProxy/net/net-connections.c' l='1295'>/* }}} */</doc>
+<doc f='MTProxy/net/net-connections.c' l='1297'>/* {{{ */</doc>

@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-http-server.h' l='36' type='int (*)(connection_job_t)'/>
+<offset>192</offset>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1001' u='w'/>
+<use f='MTProxy/net/net-http-server.c' l='98' u='w'/>
+<use f='MTProxy/net/net-http-server.c' l='651' u='r' c='hts_std_alarm'/>
+<use f='MTProxy/net/net-http-server.c' l='652' u='r' c='hts_std_alarm'/>

@@ -1,0 +1,2 @@
+<dec f='MTProxy/common/pid.h' l='58' type='int process_id_is_newer(struct process_id * a, struct process_id * b)'/>
+<def f='MTProxy/common/pid.c' l='79' ll='86' type='int process_id_is_newer(struct process_id * a, struct process_id * b)'/>

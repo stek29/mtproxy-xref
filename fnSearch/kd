@@ -1,0 +1,4 @@
+kdb_cpuid|kdb_cpuid
+kdb_write|kdb_write
+kdb_gethostbyname|kdb_gethostbyname
+kdb_load_hosts|kdb_load_hosts

@@ -1,0 +1,15 @@
+<dec f='MTProxy/net/net-tcp-rpc-common.h' l='41' type='int'/>
+<offset>64</offset>
+<doc f='MTProxy/net/net-tcp-rpc-common.h' l='41'>/* 0 = NONE, 1 = AES */</doc>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='135' u='r' c='tcp_rpcc_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='137' u='r' c='tcp_rpcc_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='168' u='r' c='tcp_rpcc_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='538' u='w' c='tcp_rpcc_init_fake_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='624' u='w' c='tcp_rpcc_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='629' u='w' c='tcp_rpcc_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='638' u='w' c='tcp_rpcc_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='140' u='r' c='tcp_rpcs_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='171' u='r' c='tcp_rpcs_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='540' u='w' c='tcp_rpcs_init_fake_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='593' u='r' c='tcp_rpcs_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='630' u='w' c='tcp_rpcs_init_crypto'/>

@@ -1,0 +1,6 @@
+<def f='MTProxy/net/net-connections.h' l='313' type='const char * show_our_ip(connection_job_t c)'/>
+<use f='MTProxy/net/net-connections.c' l='696' u='c' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='698' u='c' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='469' u='c' c='tcp_rpcc_connected'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='591' u='c' c='tcp_rpcc_default_check_perm'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='502' u='c' c='tcp_rpcs_init_accepted'/>

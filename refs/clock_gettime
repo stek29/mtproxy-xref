@@ -1,0 +1,4 @@
+<dec f='include/time.h' l='342' type='int clock_gettime(clockid_t __clock_id, struct timespec * __tp)'/>
+<use f='MTProxy/common/precise-time.c' l='38' u='c' c='get_utime_monotonic'/>
+<use f='MTProxy/common/precise-time.c' l='64' u='c' c='get_utime'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='226' u='c' c='aes_generate_nonce'/>

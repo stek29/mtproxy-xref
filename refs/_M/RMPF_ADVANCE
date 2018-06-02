@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-msg.h' l='137'/>
+<use f='MTProxy/net/net-msg.c' l='925' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='987' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='1042' u='c'/>

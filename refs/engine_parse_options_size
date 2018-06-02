@@ -1,0 +1,7 @@
+<def f='MTProxy/common/server-functions.c' l='271' type='int'/>
+<use f='MTProxy/common/server-functions.c' l='339' u='r' c='parse_option_internal'/>
+<use f='MTProxy/common/server-functions.c' l='340' u='r' c='parse_option_internal'/>
+<use f='MTProxy/common/server-functions.c' l='341' u='w' c='parse_option_internal'/>
+<use f='MTProxy/common/server-functions.c' l='341' u='r' c='parse_option_internal'/>
+<use f='MTProxy/common/server-functions.c' l='342' u='r' c='parse_option_internal'/>
+<use f='MTProxy/common/server-functions.c' l='344' u='r' c='parse_option_internal'/>

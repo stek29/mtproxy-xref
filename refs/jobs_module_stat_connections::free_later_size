@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-connections.c' l='112' type='int'/>
+<use f='MTProxy/net/net-connections.c' l='2106' u='w' c='insert_free_later_struct'/>
+<use f='MTProxy/net/net-connections.c' l='2115' u='w' c='free_later_act'/>
+<offset>1728</offset>

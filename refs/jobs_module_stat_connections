@@ -1,0 +1,98 @@
+<def f='MTProxy/net/net-connections.c' l='93' macro='1'/>
+<def f='MTProxy/net/net-connections.c' l='116' macro='1' type='struct jobs_module_stat_connections *'/>
+<use f='MTProxy/net/net-connections.c' l='116' macro='1' u='w'/>
+<use f='MTProxy/net/net-connections.c' l='453' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='455' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='458' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='480' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='482' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='485' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='489' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='497' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='500' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='505' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='508' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='513' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='545' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='546' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='602' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='616' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='711' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='712' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='713' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='717' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='718' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='719' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='720' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='721' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='758' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='762' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='841' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='869' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='875' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='898' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='974' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='986' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='996' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='1218' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='1245' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='1254' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='1264' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='1369' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='1652' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='1656' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='1659' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='1692' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='1696' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='1699' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='1849' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='1850' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='1886' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='1887' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='1933' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='1960' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='1961' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='1983' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='1984' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='2106' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='2107' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='2115' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='2128' macro='1' u='r'/>
+<size>232</size>
+<mbr r='jobs_module_stat_connections::active_connections' o='0' t='int'/>
+<mbr r='jobs_module_stat_connections::active_dh_connections' o='32' t='int'/>
+<mbr r='jobs_module_stat_connections::outbound_connections' o='64' t='int'/>
+<mbr r='jobs_module_stat_connections::active_outbound_connections' o='96' t='int'/>
+<mbr r='jobs_module_stat_connections::ready_outbound_connections' o='128' t='int'/>
+<mbr r='jobs_module_stat_connections::listening_connections' o='160' t='int'/>
+<mbr r='jobs_module_stat_connections::allocated_outbound_connections' o='192' t='int'/>
+<mbr r='jobs_module_stat_connections::allocated_inbound_connections' o='224' t='int'/>
+<mbr r='jobs_module_stat_connections::inbound_connections' o='256' t='int'/>
+<mbr r='jobs_module_stat_connections::active_inbound_connections' o='288' t='int'/>
+<mbr r='jobs_module_stat_connections::outbound_connections_created' o='320' t='long long'/>
+<mbr r='jobs_module_stat_connections::inbound_connections_accepted' o='384' t='long long'/>
+<mbr r='jobs_module_stat_connections::ready_targets' o='448' t='int'/>
+<mbr r='jobs_module_stat_connections::netw_queries' o='512' t='long long'/>
+<mbr r='jobs_module_stat_connections::netw_update_queries' o='576' t='long long'/>
+<mbr r='jobs_module_stat_connections::total_failed_connections' o='640' t='long long'/>
+<mbr r='jobs_module_stat_connections::total_connect_failures' o='704' t='long long'/>
+<mbr r='jobs_module_stat_connections::unused_connections_closed' o='768' t='long long'/>
+<mbr r='jobs_module_stat_connections::allocated_targets' o='832' t='int'/>
+<mbr r='jobs_module_stat_connections::active_targets' o='864' t='int'/>
+<mbr r='jobs_module_stat_connections::inactive_targets' o='896' t='int'/>
+<mbr r='jobs_module_stat_connections::free_targets' o='928' t='int'/>
+<mbr r='jobs_module_stat_connections::allocated_connections' o='960' t='int'/>
+<mbr r='jobs_module_stat_connections::allocated_socket_connections' o='992' t='int'/>
+<mbr r='jobs_module_stat_connections::accept_calls_failed' o='1024' t='long long'/>
+<mbr r='jobs_module_stat_connections::accept_nonblock_set_failed' o='1088' t='long long'/>
+<mbr r='jobs_module_stat_connections::accept_connection_limit_failed' o='1152' t='long long'/>
+<mbr r='jobs_module_stat_connections::accept_rate_limit_failed' o='1216' t='long long'/>
+<mbr r='jobs_module_stat_connections::accept_init_accepted_failed' o='1280' t='long long'/>
+<mbr r='jobs_module_stat_connections::tcp_readv_calls' o='1344' t='long long'/>
+<mbr r='jobs_module_stat_connections::tcp_writev_calls' o='1408' t='long long'/>
+<mbr r='jobs_module_stat_connections::tcp_readv_intr' o='1472' t='long long'/>
+<mbr r='jobs_module_stat_connections::tcp_writev_intr' o='1536' t='long long'/>
+<mbr r='jobs_module_stat_connections::tcp_readv_bytes' o='1600' t='long long'/>
+<mbr r='jobs_module_stat_connections::tcp_writev_bytes' o='1664' t='long long'/>
+<mbr r='jobs_module_stat_connections::free_later_size' o='1728' t='int'/>
+<mbr r='jobs_module_stat_connections::free_later_total' o='1792' t='long long'/>

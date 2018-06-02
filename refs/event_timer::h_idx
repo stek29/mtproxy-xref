@@ -1,0 +1,11 @@
+<dec f='MTProxy/net/net-timers.h' l='27' type='int'/>
+<offset>0</offset>
+<use f='MTProxy/jobs/jobs.c' l='1241' u='r' c='do_immediate_timer_insert'/>
+<use f='MTProxy/net/net-timers.c' l='63' u='w' c='basic_et_adjust'/>
+<use f='MTProxy/net/net-timers.c' l='75' u='w' c='basic_et_adjust'/>
+<use f='MTProxy/net/net-timers.c' l='80' u='w' c='basic_et_adjust'/>
+<use f='MTProxy/net/net-timers.c' l='90' u='r' c='insert_event_timer'/>
+<use f='MTProxy/net/net-timers.c' l='91' u='r' c='insert_event_timer'/>
+<use f='MTProxy/net/net-timers.c' l='105' u='r' c='remove_event_timer'/>
+<use f='MTProxy/net/net-timers.c' l='112' u='w' c='remove_event_timer'/>
+<use f='MTProxy/net/net-timers.c' l='139' u='r' c='thread_run_timers'/>

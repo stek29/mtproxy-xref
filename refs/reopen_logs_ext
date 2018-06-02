@@ -1,0 +1,6 @@
+<dec f='MTProxy/common/kprintf.h' l='35' type='void reopen_logs_ext(int slave_mode)'/>
+<def f='MTProxy/common/kprintf.c' l='48' ll='70' type='void reopen_logs_ext(int slave_mode)'/>
+<use f='MTProxy/common/kprintf.c' l='73' u='c' c='reopen_logs'/>
+<use f='MTProxy/engine/engine.c' l='93' u='c' c='default_sigusr1'/>
+<use f='MTProxy/engine/engine.c' l='288' u='c' c='server_init'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2079' u='c' c='mtfront_sigusr1_handler'/>

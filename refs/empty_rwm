@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-msg.h' l='157' type='struct raw_message'/>
+<use f='MTProxy/jobs/jobs.h' l='372' u='a' c='job_message_send_empty'/>
+<use f='MTProxy/jobs/jobs.h' l='378' u='a' c='job_message_answer_true'/>
+<def f='MTProxy/net/net-msg.c' l='49' ll='56' type='struct raw_message'/>

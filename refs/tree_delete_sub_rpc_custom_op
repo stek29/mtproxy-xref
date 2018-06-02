@@ -1,0 +1,2 @@
+<dec f='MTProxy/vv/vv-tree.c' l='117' macro='1' type='void tree_delete_sub_rpc_custom_op(struct tree_rpc_custom_op ** T, struct rpc_custom_op * x)'/>
+<def f='MTProxy/vv/vv-tree.c' l='443' macro='1' type='void tree_delete_sub_rpc_custom_op(struct tree_rpc_custom_op ** T, struct rpc_custom_op * x)'/>

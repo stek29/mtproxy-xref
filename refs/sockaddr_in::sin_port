@@ -1,0 +1,8 @@
+<dec f='include/netinet/in.h' l='242' type='in_port_t'/>
+<offset>16</offset>
+<doc f='include/netinet/in.h' l='242'>/* Port number.  */</doc>
+<use f='MTProxy/net/net-connections.c' l='671' u='r' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1283' u='r' c='net_accept_new_connections'/>
+<use f='MTProxy/net/net-events.c' l='599' u='w' c='server_socket'/>
+<use f='MTProxy/net/net-events.c' l='669' u='w' c='client_socket'/>
+<use f='MTProxy/net/net-events.c' l='682' u='w' c='client_socket'/>

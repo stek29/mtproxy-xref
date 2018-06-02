@@ -1,0 +1,13 @@
+<def f='MTProxy/net/net-timers.c' l='34' macro='1'/>
+<def f='MTProxy/net/net-timers.c' l='41' macro='1' type='struct jobs_module_stat_timers *'/>
+<use f='MTProxy/net/net-timers.c' l='41' macro='1' u='w'/>
+<use f='MTProxy/net/net-timers.c' l='88' macro='1' u='r'/>
+<use f='MTProxy/net/net-timers.c' l='94' macro='1' u='r'/>
+<use f='MTProxy/net/net-timers.c' l='109' macro='1' u='r'/>
+<use f='MTProxy/net/net-timers.c' l='110' macro='1' u='r'/>
+<use f='MTProxy/net/net-timers.c' l='142' macro='1' u='r'/>
+<size>32</size>
+<mbr r='jobs_module_stat_timers::event_timer_insert_ops' o='0' t='long long'/>
+<mbr r='jobs_module_stat_timers::event_timer_remove_ops' o='64' t='long long'/>
+<mbr r='jobs_module_stat_timers::event_timer_alarms' o='128' t='long long'/>
+<mbr r='jobs_module_stat_timers::total_timers' o='192' t='int'/>

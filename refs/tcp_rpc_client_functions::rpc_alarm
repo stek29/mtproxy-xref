@@ -1,0 +1,3 @@
+<dec f='MTProxy/net/net-tcp-rpc-client.h' l='38' type='int (*)(connection_job_t)'/>
+<offset>576</offset>
+<use f='MTProxy/net/net-thread.c' l='63' u='r' c='run_notification_event'/>

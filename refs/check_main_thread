@@ -1,0 +1,4 @@
+<dec f='MTProxy/jobs/jobs.h' l='352' type='void check_main_thread()'/>
+<def f='MTProxy/jobs/jobs.c' l='415' ll='418' type='void check_main_thread()'/>
+<use f='MTProxy/jobs/jobs.c' l='432' u='c' c='create_job_thread_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='514' u='c' c='create_job_class_threads'/>

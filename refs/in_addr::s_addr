@@ -1,0 +1,28 @@
+<dec f='include/netinet/in.h' l='33' type='in_addr_t'/>
+<offset>0</offset>
+<use f='MTProxy/engine/engine-net.c' l='61' u='w' c='try_open_port'/>
+<use f='MTProxy/engine/engine.c' l='228' u='r' c='engine_init'/>
+<use f='MTProxy/engine/engine.c' l='229' u='r' c='engine_init'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='159' u='w' c='cfg_parse_server_port'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='231' u='r' c='dump_mf_cluster'/>
+<use f='MTProxy/net/net-connections.c' l='670' u='r' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1283' u='r' c='net_accept_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1714' u='r' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1719' u='r' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1719' u='r' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1721' u='r' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1730' u='r' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1765' u='r' c='find_target'/>
+<use f='MTProxy/net/net-connections.c' l='1766' u='r' c='find_target'/>
+<use f='MTProxy/net/net-connections.c' l='1771' u='r' c='find_target'/>
+<use f='MTProxy/net/net-connections.c' l='1771' u='r' c='find_target'/>
+<use f='MTProxy/net/net-connections.c' l='1808' u='r' c='find_target_ipv6'/>
+<use f='MTProxy/net/net-connections.c' l='1839' u='r' c='free_target'/>
+<use f='MTProxy/net/net-connections.c' l='1948' u='r' c='create_target'/>
+<use f='MTProxy/net/net-connections.c' l='1986' u='r' c='create_target'/>
+<use f='MTProxy/net/net-connections.c' l='2164' u='r' c='net_add_nat_info'/>
+<use f='MTProxy/net/net-connections.c' l='2165' u='r' c='net_add_nat_info'/>
+<use f='MTProxy/net/net-events.c' l='664' u='r' c='client_socket'/>
+<use f='MTProxy/net/net-events.c' l='683' u='w' c='client_socket'/>
+<use f='MTProxy/net/net-events.c' l='752' u='r' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='753' u='r' c='get_my_ipv4'/>

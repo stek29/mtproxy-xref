@@ -1,0 +1,4 @@
+<def f='MTProxy/crypto/aesni256.h' l='42' ll='48'/>
+<size>264</size>
+<mbr r='tg_aes_ctx::u' o='0' t='union (anonymous union at /home/parallels/MTProxy/./crypto/aesni256.h:43:3)'/>
+<mbr r='tg_aes_ctx::type' o='2048' t='const struct tg_aes_methods *'/>

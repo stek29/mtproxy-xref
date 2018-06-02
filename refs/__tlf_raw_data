@@ -1,0 +1,11 @@
+<def f='MTProxy/common/tl-parse.h' l='268' ll='272' type='void __tlf_raw_data(struct tl_in_state * tlio_in, void * buf, int size)'/>
+<use f='MTProxy/common/tl-parse.h' l='330' u='c' c='tlf_int'/>
+<use f='MTProxy/common/tl-parse.h' l='341' u='c' c='tlf_double'/>
+<use f='MTProxy/common/tl-parse.h' l='352' u='c' c='tlf_long'/>
+<use f='MTProxy/common/tl-parse.h' l='381' u='c' c='tlf_string_len'/>
+<use f='MTProxy/common/tl-parse.h' l='387' u='c' c='tlf_string_len'/>
+<use f='MTProxy/common/tl-parse.h' l='409' u='c' c='tlf_pad'/>
+<use f='MTProxy/common/tl-parse.h' l='424' u='c' c='tlf_raw_data'/>
+<use f='MTProxy/common/tl-parse.h' l='434' u='c' c='tlf_string_data'/>
+<doc f='MTProxy/common/tl-parse.h' l='266'>/* }}} */</doc>
+<doc f='MTProxy/common/tl-parse.h' l='268'>/* {{{ */</doc>

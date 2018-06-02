@@ -1,0 +1,16 @@
+<dec f='include/asm-generic/socket.h' l='7'/>
+<doc f='include/asm-generic/socket.h' l='6'>/* For setsockopt(2) */</doc>
+<use f='MTProxy/net/net-connections.c' l='737' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='1118' u='c'/>
+<use f='MTProxy/net/net-events.c' l='493' u='c'/>
+<use f='MTProxy/net/net-events.c' l='506' u='c'/>
+<use f='MTProxy/net/net-events.c' l='531' u='c'/>
+<use f='MTProxy/net/net-events.c' l='544' u='c'/>
+<use f='MTProxy/net/net-events.c' l='573' u='c'/>
+<use f='MTProxy/net/net-events.c' l='578' u='c'/>
+<use f='MTProxy/net/net-events.c' l='580' u='c'/>
+<use f='MTProxy/net/net-events.c' l='591' u='c'/>
+<use f='MTProxy/net/net-events.c' l='646' u='c'/>
+<use f='MTProxy/net/net-events.c' l='651' u='c'/>
+<use f='MTProxy/net/net-events.c' l='712' u='c'/>
+<use f='MTProxy/net/net-events.c' l='717' u='c'/>

@@ -1,0 +1,1 @@
+<def f='MTProxy/jobs/jobs.h' l='417' ll='424' type='struct job_message_payload * job_message_payload_alloc(int job_tag_int, job_t job, int message_class, int payload_ints, unsigned int * payload)'/>

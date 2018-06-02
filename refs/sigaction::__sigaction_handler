@@ -1,0 +1,5 @@
+<dec f='include/x86_64-linux-gnu/bits/sigaction.h' l='35' type='union (anonymous union at /usr/include/x86_64-linux-gnu/bits/sigaction.h:28:5)'/>
+<offset>0</offset>
+<use f='MTProxy/common/server-functions.c' l='196' macro='1' u='m'/>
+<use f='MTProxy/common/server-functions.c' l='208' macro='1' u='m'/>
+<use f='MTProxy/jobs/jobs.c' l='877' macro='1' u='m'/>

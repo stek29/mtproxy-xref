@@ -1,0 +1,2 @@
+<dec f='MTProxy/net/net-events.h' l='142' type='const char * conv_addr6(const unsigned char * a, char * buf)'/>
+<def f='MTProxy/net/net-events.c' l='872' ll='879' type='const char * conv_addr6(const unsigned char * a, char * buf)'/>

@@ -1,0 +1,7 @@
+<dec f='MTProxy/common/tl-parse.h' l='53' type='void tl_query_header_delete(struct tl_query_header * h)'/>
+<def f='MTProxy/common/tl-parse.c' l='94' ll='98' type='void tl_query_header_delete(struct tl_query_header * h)'/>
+<use f='MTProxy/engine/engine-rpc.c' l='140' u='c' c='tl_default_act_free'/>
+<use f='MTProxy/engine/engine-rpc.c' l='186' u='c' c='engine_work_rpc_req_result'/>
+<use f='MTProxy/engine/engine-rpc.c' l='197' u='c' c='engine_work_rpc_req_result'/>
+<use f='MTProxy/engine/engine-rpc.c' l='600' u='c' c='process_query_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='769' u='c' c='query_job_run'/>

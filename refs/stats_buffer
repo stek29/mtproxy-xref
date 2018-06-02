@@ -1,0 +1,6 @@
+<def f='MTProxy/common/common-stats.h' l='70' ll='75'/>
+<size>24</size>
+<mbr r='stats_buffer::buff' o='0' t='char *'/>
+<mbr r='stats_buffer::pos' o='64' t='int'/>
+<mbr r='stats_buffer::size' o='96' t='int'/>
+<mbr r='stats_buffer::flags' o='128' t='int'/>

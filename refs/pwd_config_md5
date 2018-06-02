@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-config.h' l='39' type='char [33]'/>
+<def f='MTProxy/net/net-config.c' l='43' type='char [33]'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='66' c='crypto_aes_prepare_stat'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='211' u='r' c='aes_load_pwd_file'/>

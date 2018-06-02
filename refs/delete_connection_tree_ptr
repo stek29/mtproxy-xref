@@ -1,0 +1,2 @@
+<dec f='MTProxy/net/net-connections.h' l='385' type='void delete_connection_tree_ptr(struct tree_connection * T)'/>
+<doc f='MTProxy/net/net-connections.h' l='383'>//void wakeup_main_thread (void);</doc>

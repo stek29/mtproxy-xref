@@ -1,0 +1,10 @@
+<def f='MTProxy/common/tl-parse.h' l='282' ll='289' type='int tlf_lookup_int(struct tl_in_state * tlio_in)'/>
+<use f='MTProxy/common/tl-parse.c' l='636' macro='1' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='701' macro='1' u='c'/>
+<doc f='MTProxy/common/tl-parse.h' l='280'>/* }}} */</doc>
+<doc f='MTProxy/common/tl-parse.h' l='282'>/* {{{ */</doc>
+<use f='MTProxy/engine/engine-rpc-common.c' l='90' macro='1' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='201' macro='1' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='295' u='c' c='fetch_query'/>
+<use f='MTProxy/engine/engine-rpc.c' l='733' u='c' c='query_job_run'/>
+<use f='MTProxy/engine/engine.c' l='515' macro='1' u='c'/>

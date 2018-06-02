@@ -1,0 +1,4 @@
+<dec f='MTProxy/engine/engine-rpc.c' l='255' type='void tl_printf_clear()'/>
+<def f='MTProxy/engine/engine-rpc.c' l='256' type='void tl_printf_clear()'/>
+<use f='MTProxy/engine/engine-rpc.c' l='265' u='c' c='do_fetch_function_any'/>
+<use f='MTProxy/engine/engine-rpc.c' l='270' u='c' c='do_fetch_type_any'/>

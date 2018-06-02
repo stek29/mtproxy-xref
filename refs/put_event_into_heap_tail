@@ -1,0 +1,2 @@
+<dec f='MTProxy/net/net-events.h' l='88' type='int put_event_into_heap_tail(event_t * ev, int ts_delta)'/>
+<def f='MTProxy/net/net-events.c' l='179' ll='182' type='int put_event_into_heap_tail(event_t * ev, int ts_delta)'/>

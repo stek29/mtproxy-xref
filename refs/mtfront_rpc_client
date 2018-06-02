@@ -1,0 +1,5 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='154' type='struct tcp_rpc_client_functions'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='162' u='a'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='162' u='a'/>
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='770' ll='779' type='struct tcp_rpc_client_functions'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2273' u='m' c='mtfront_pre_start'/>

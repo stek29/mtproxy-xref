@@ -1,0 +1,20 @@
+<dec f='MTProxy/common/tl-parse.h' l='193' type='int tlf_set_error_format(struct tl_in_state * tlio_in, int errnum, const char * format)'/>
+<use f='MTProxy/common/tl-parse.h' l='252' u='c' c='tlf_check'/>
+<use f='MTProxy/common/tl-parse.h' l='257' u='c' c='tlf_check'/>
+<use f='MTProxy/common/tl-parse.h' l='390' u='c' c='tlf_string_len'/>
+<use f='MTProxy/common/tl-parse.h' l='394' u='c' c='tlf_string_len'/>
+<use f='MTProxy/common/tl-parse.h' l='504' u='c' c='tlf_end'/>
+<use f='MTProxy/common/tl-parse.h' l='514' u='c' c='tlf_check_str_end'/>
+<use f='MTProxy/common/tl-parse.h' l='730' u='c' c='tlf_int_range'/>
+<use f='MTProxy/common/tl-parse.h' l='750' u='c' c='tlf_int_subset'/>
+<use f='MTProxy/common/tl-parse.h' l='760' u='c' c='tlf_long_range'/>
+<def f='MTProxy/common/tl-parse.c' l='112' ll='126' type='int tlf_set_error_format(struct tl_in_state * tlio_in, int errnum, const char * format)'/>
+<use f='MTProxy/common/tl-parse.c' l='600' macro='1' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='604' macro='1' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='672' macro='1' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='676' macro='1' u='c'/>
+<doc f='MTProxy/common/tl-parse.h' l='188'>//#define TL_COPY_THROUGH (tlio-&gt;copy_through)
+
+//#define TL_ATTEMPT_NUM (tlio)-&gt;attempt_num</doc>
+<use f='MTProxy/engine/engine-rpc.c' l='295' u='c' c='fetch_query'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1842' macro='1' u='c'/>

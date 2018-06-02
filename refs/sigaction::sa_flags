@@ -1,0 +1,6 @@
+<dec f='include/x86_64-linux-gnu/bits/sigaction.h' l='46' type='int'/>
+<offset>1088</offset>
+<doc f='include/x86_64-linux-gnu/bits/sigaction.h' l='45'>/* Special flags.  */</doc>
+<use f='MTProxy/common/server-functions.c' l='195' u='w' c='ksignal'/>
+<use f='MTProxy/common/server-functions.c' l='207' u='w' c='ksignal_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='876' u='w' c='set_job_interrupt_signal_handler'/>

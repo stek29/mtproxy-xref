@@ -1,0 +1,2 @@
+<def f='MTProxy/engine/engine.h' l='198' macro='1' type='int engine_get_required_tcp_cpu_threads()'/>
+<use f='MTProxy/engine/engine.c' l='255' u='c' c='engine_init'/>

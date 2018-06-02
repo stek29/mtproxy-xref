@@ -1,0 +1,55 @@
+<dec f='MTProxy/jobs/jobs.h' l='291' type='void job_decref(int job_tag_int, job_t job)'/>
+<use f='MTProxy/jobs/jobs.h' l='293' u='c' c='job_decref_f'/>
+<use f='MTProxy/net/net-connections.h' l='339' u='c' c='connection_decref'/>
+<doc f='MTProxy/jobs/jobs.h' l='291'>// if job-&gt;j_refcnt becomes 0, invokes j_execute with op = JS_FREE</doc>
+<use f='MTProxy/common/tl-parse.c' l='285' u='c' c='__tl_tcp_raw_msg_store_clear'/>
+<use f='MTProxy/engine/engine-rpc.c' l='370' u='c' c='process_act_atom_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='377' u='c' c='process_act_atom_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='406' u='c' c='process_act_atom_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='434' u='c' c='process_act_atom_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='455' u='c' c='process_act_atom_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='461' u='c' c='process_act_atom_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='489' u='c' c='process_query_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='784' u='c' c='do_query_job_run'/>
+<use f='MTProxy/jobs/jobs.c' l='737' u='c' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='751' u='c' c='job_send_signals'/>
+<use f='MTProxy/jobs/jobs.c' l='766' u='c' c='job_send_signals'/>
+<def f='MTProxy/jobs/jobs.c' l='777' ll='786' type='void job_decref(int job_tag_int, job_t job)'/>
+<use f='MTProxy/jobs/jobs.c' l='810' u='c' c='process_one_job'/>
+<use f='MTProxy/jobs/jobs.c' l='820' u='c' c='complete_subjob'/>
+<use f='MTProxy/jobs/jobs.c' l='840' u='c' c='complete_subjob'/>
+<use f='MTProxy/jobs/jobs.c' l='849' u='c' c='complete_subjob'/>
+<use f='MTProxy/jobs/jobs.c' l='1124' u='c' c='job_timer_wakeup_gateway'/>
+<use f='MTProxy/jobs/jobs.c' l='1255' u='c' c='do_immediate_timer_insert'/>
+<use f='MTProxy/jobs/jobs.c' l='1281' u='c' c='do_timer_manager_job'/>
+<use f='MTProxy/jobs/jobs.c' l='1326' u='c' c='do_timer_job'/>
+<use f='MTProxy/jobs/jobs.c' l='1459' u='c' c='job_message_queue_free'/>
+<use f='MTProxy/jobs/jobs.c' l='1471' u='c' c='job_message_queue_free'/>
+<use f='MTProxy/jobs/jobs.c' l='1492' u='c' c='job_message_free_default'/>
+<use f='MTProxy/jobs/jobs.c' l='1564' u='c' c='job_message_send_fake'/>
+<doc f='MTProxy/jobs/jobs.c' l='776'>// destroys one reference to job</doc>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='358' u='c' c='remove_ext_connection'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='906' u='c' c='client_packet_job_run'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1338' u='c' c='http_query_job_run'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1344' u='c' c='http_query_job_run'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1488' u='c' c='do_rpcs_execute'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1558' u='c' c='finish_postponed_http_response'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1599' u='c' c='client_send_message'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1615' u='c' c='client_send_message'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1618' u='c' c='client_send_message'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1640' u='c' c='choose_proxy_target'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1720' u='c' c='forward_tcp_query'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1735' u='c' c='forward_tcp_query'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1895' u='c' c='check_all_conn_buffers'/>
+<use f='MTProxy/net/net-connections.c' l='827' u='c' c='net_server_socket_free'/>
+<use f='MTProxy/net/net-connections.c' l='1394' u='c' c='connection_event_incref'/>
+<use f='MTProxy/net/net-connections.c' l='1422' u='c' c='connection_get_by_fd'/>
+<use f='MTProxy/net/net-connections.c' l='1427' u='c' c='connection_get_by_fd'/>
+<use f='MTProxy/net/net-connections.c' l='1435' u='c' c='connection_get_by_fd_generation'/>
+<use f='MTProxy/net/net-connections.c' l='1852' u='c' c='free_target'/>
+<use f='MTProxy/net/net-connections.c' l='1891' u='c' c='destroy_target'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='357' u='c' c='rpc_target_get_state'/>
+<use f='MTProxy/net/net-thread.c' l='56' u='c' c='run_notification_event'/>
+<use f='MTProxy/net/net-thread.c' l='60' u='c' c='run_notification_event'/>
+<use f='MTProxy/net/net-thread.c' l='64' u='c' c='run_notification_event'/>
+<use f='MTProxy/net/net-thread.c' l='68' u='c' c='run_notification_event'/>

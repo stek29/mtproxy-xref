@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/parse-config.h' l='35' type='void reset_config()'/>
+<def f='MTProxy/common/parse-config.c' l='231' ll='237' type='void reset_config()'/>
+<use f='MTProxy/common/parse-config.c' l='268' u='c' c='load_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='259' u='c' c='parse_config'/>

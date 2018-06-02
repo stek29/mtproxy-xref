@@ -1,0 +1,9 @@
+<dec f='MTProxy/vv/vv-io.h' l='26'/>
+<use f='MTProxy/common/tl-parse.c' l='869' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='911' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='930' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='934' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='74' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='79' u='c'/>
+<use f='MTProxy/engine/engine.c' l='272' u='c'/>
+<use f='MTProxy/net/net-stats.c' l='126' u='c'/>

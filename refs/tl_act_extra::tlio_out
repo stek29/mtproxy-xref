@@ -1,0 +1,6 @@
+<dec f='MTProxy/engine/engine-rpc.h' l='94' type='struct tl_out_state *'/>
+<offset>384</offset>
+<use f='MTProxy/engine/engine-rpc-common.c' l='61' u='r' c='tl_act_nop'/>
+<use f='MTProxy/engine/engine-rpc-common.c' l='66' u='r' c='tl_act_stat'/>
+<use f='MTProxy/engine/engine-rpc.c' l='384' u='w' c='process_act_atom_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='388' u='w' c='process_act_atom_subjob'/>

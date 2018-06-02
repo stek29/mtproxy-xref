@@ -1,0 +1,8 @@
+<dec f='MTProxy/net/net-connections.h' l='348' type='int cpu_server_free_connection(connection_job_t C)'/>
+<doc f='MTProxy/net/net-connections.h' l='347'>//int cpu_free_tmp_buffers (connection_job_t C);</doc>
+<def f='MTProxy/net/net-connections.c' l='411' ll='462' type='int cpu_server_free_connection(connection_job_t C)'/>
+<use f='MTProxy/net/net-connections.c' l='1536' u='r' c='check_conn_functions'/>
+<doc f='MTProxy/net/net-connections.c' l='408'>/*
+  frees connection structure, including mpq and buffers
+*/</doc>
+<doc f='MTProxy/net/net-connections.c' l='411'>/* {{{ */</doc>

@@ -1,0 +1,4 @@
+<dec f='MTProxy/engine/engine-rpc.h' l='98' type='struct tl_query_header *'/>
+<offset>640</offset>
+<use f='MTProxy/engine/engine-rpc.c' l='139' u='r' c='tl_default_act_free'/>
+<use f='MTProxy/engine/engine-rpc.c' l='140' u='r' c='tl_default_act_free'/>

@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>net-thread.c source code [MTProxy/net/net-thread.c] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="notification_event,notification_event_job_extra "/>
+<link rel="stylesheet" href="https://code.woboq.org/data//qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="https://code.woboq.org/data//kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery-ui.min.js"></script>
+<script>var file = 'MTProxy/net/net-thread.c'; var root_path = '../..'; var data_path = 'https://code.woboq.org/data/';</script>
+<script src='https://code.woboq.org/data//codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='..'>MTProxy</a>/<a href='./'>net</a>/<a href='net-thread.c.html'>net-thread.c</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>    This file is part of Mtproto-proxy Library.</i></td></tr>
+<tr><th id="3">3</th><td><i></i></td></tr>
+<tr><th id="4">4</th><td><i>    Mtproto-proxy Library is free software: you can redistribute it and/or modify</i></td></tr>
+<tr><th id="5">5</th><td><i>    it under the terms of the GNU Lesser General Public License as published by</i></td></tr>
+<tr><th id="6">6</th><td><i>    the Free Software Foundation, either version 2 of the License, or</i></td></tr>
+<tr><th id="7">7</th><td><i>    (at your option) any later version.</i></td></tr>
+<tr><th id="8">8</th><td><i></i></td></tr>
+<tr><th id="9">9</th><td><i>    Mtproto-proxy Library is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="10">10</th><td><i>    but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="11">11</th><td><i>    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</i></td></tr>
+<tr><th id="12">12</th><td><i>    GNU Lesser General Public License for more details.</i></td></tr>
+<tr><th id="13">13</th><td><i></i></td></tr>
+<tr><th id="14">14</th><td><i>    You should have received a copy of the GNU Lesser General Public License</i></td></tr>
+<tr><th id="15">15</th><td><i>    along with Mtproto-proxy Library.  If not, see &lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</i></td></tr>
+<tr><th id="16">16</th><td><i></i></td></tr>
+<tr><th id="17">17</th><td><i>    Copyright 2015-2016 Telegram Messenger Inc             </i></td></tr>
+<tr><th id="18">18</th><td><i>              2015-2016 Vitaly Valtman     </i></td></tr>
+<tr><th id="19">19</th><td><i>    </i></td></tr>
+<tr><th id="20">20</th><td><i>*/</i></td></tr>
+<tr><th id="21">21</th><td><u>#define <dfn class="macro" id="_M/_FILE_OFFSET_BITS" data-ref="_M/_FILE_OFFSET_BITS">_FILE_OFFSET_BITS</dfn> 64</u></td></tr>
+<tr><th id="22">22</th><td><u>#include <a href="../../include/assert.h.html">&lt;assert.h&gt;</a></u></td></tr>
+<tr><th id="23">23</th><td><u>#include <a href="../../include/unistd.h.html">&lt;unistd.h&gt;</a></u></td></tr>
+<tr><th id="24">24</th><td><u>#include <a href="../../include/stdlib.h.html">&lt;stdlib.h&gt;</a></u></td></tr>
+<tr><th id="25">25</th><td><u>#include <a href="../../include/string.h.html">&lt;string.h&gt;</a></u></td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td><u>#include <a href="net-thread.h.html">"net/net-thread.h"</a></u></td></tr>
+<tr><th id="28">28</th><td><u>#include <a href="net-connections.h.html">"net/net-connections.h"</a></u></td></tr>
+<tr><th id="29">29</th><td><u>#include <a href="net-msg.h.html">"net/net-msg.h"</a></u></td></tr>
+<tr><th id="30">30</th><td><u>#include <a href="net-msg-buffers.h.html">"net/net-msg-buffers.h"</a></u></td></tr>
+<tr><th id="31">31</th><td><u>#include <a href="net-tcp-rpc-client.h.html">"net/net-tcp-rpc-client.h"</a></u></td></tr>
+<tr><th id="32">32</th><td><u>#include <a href="net-tcp-rpc-common.h.html">"net/net-tcp-rpc-common.h"</a></u></td></tr>
+<tr><th id="33">33</th><td><u>#include <a href="net-tcp-rpc-server.h.html">"net/net-tcp-rpc-server.h"</a></u></td></tr>
+<tr><th id="34">34</th><td></td></tr>
+<tr><th id="35">35</th><td><u>#include <a href="../common/mp-queue.h.html">"common/mp-queue.h"</a></u></td></tr>
+<tr><th id="36">36</th><td><u>#include <a href="../common/kprintf.h.html">"common/kprintf.h"</a></u></td></tr>
+<tr><th id="37">37</th><td><u>#include <a href="../common/server-functions.h.html">"common/server-functions.h"</a></u></td></tr>
+<tr><th id="38">38</th><td></td></tr>
+<tr><th id="39">39</th><td><u>#define <dfn class="macro" id="_M/NEV_TCP_CONN_READY" data-ref="_M/NEV_TCP_CONN_READY">NEV_TCP_CONN_READY</dfn> 1</u></td></tr>
+<tr><th id="40">40</th><td><u>#define <dfn class="macro" id="_M/NEV_TCP_CONN_CLOSE" data-ref="_M/NEV_TCP_CONN_CLOSE">NEV_TCP_CONN_CLOSE</dfn> 2</u></td></tr>
+<tr><th id="41">41</th><td><u>#define <dfn class="macro" id="_M/NEV_TCP_CONN_ALARM" data-ref="_M/NEV_TCP_CONN_ALARM">NEV_TCP_CONN_ALARM</dfn> 3</u></td></tr>
+<tr><th id="42">42</th><td><u>#define <dfn class="macro" id="_M/NEV_TCP_CONN_WAKEUP" data-ref="_M/NEV_TCP_CONN_WAKEUP">NEV_TCP_CONN_WAKEUP</dfn> 4</u></td></tr>
+<tr><th id="43">43</th><td></td></tr>
+<tr><th id="44">44</th><td><b>struct</b> <dfn class="type def" id="notification_event" title='notification_event' data-ref="notification_event">notification_event</dfn> {</td></tr>
+<tr><th id="45">45</th><td>  <em>int</em> <dfn class="tu decl" id="notification_event::type" title='notification_event::type' data-type='int' data-ref="notification_event::type">type</dfn>;</td></tr>
+<tr><th id="46">46</th><td>  <em>void</em> *<dfn class="tu decl" id="notification_event::who" title='notification_event::who' data-type='void *' data-ref="notification_event::who">who</dfn>;</td></tr>
+<tr><th id="47">47</th><td>};</td></tr>
+<tr><th id="48">48</th><td></td></tr>
+<tr><th id="49">49</th><td><em>void</em> <dfn class="decl def" id="run_notification_event" title='run_notification_event' data-ref="run_notification_event">run_notification_event</dfn> (<b>struct</b> <a class="type" href="#notification_event" title='notification_event' data-ref="notification_event">notification_event</a> *<dfn class="local col1 decl" id="1ev" title='ev' data-type='struct notification_event *' data-ref="1ev">ev</dfn>) {</td></tr>
+<tr><th id="50">50</th><td>  <a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col2 decl" id="2C" title='C' data-type='connection_job_t' data-ref="2C">C</dfn> = <a class="local col1 ref" href="#1ev" title='ev' data-ref="1ev">ev</a>-&gt;<a class="tu ref" href="#notification_event::who" title='notification_event::who' data-use='r' data-ref="notification_event::who">who</a>;</td></tr>
+<tr><th id="51">51</th><td>  <b>switch</b> (<a class="local col1 ref" href="#1ev" title='ev' data-ref="1ev">ev</a>-&gt;<a class="tu ref" href="#notification_event::type" title='notification_event::type' data-use='r' data-ref="notification_event::type">type</a>) {</td></tr>
+<tr><th id="52">52</th><td>  <b>case</b> <a class="macro" href="#39" title="1" data-ref="_M/NEV_TCP_CONN_READY">NEV_TCP_CONN_READY</a>:</td></tr>
+<tr><th id="53">53</th><td>    <b>if</b> (<a class="macro" href="net-tcp-rpc-client.h.html#65" title="((struct tcp_rpc_client_functions *) (((struct connection_info *)((C)-&gt;j_custom))-&gt;extra))" data-ref="_M/TCP_RPCC_FUNC">TCP_RPCC_FUNC</a>(<a class="local col2 ref" href="#2C" title='C' data-ref="2C">C</a>)-&gt;<a class="ref" href="net-tcp-rpc-client.h.html#tcp_rpc_client_functions::rpc_ready" title='tcp_rpc_client_functions::rpc_ready' data-ref="tcp_rpc_client_functions::rpc_ready">rpc_ready</a> &amp;&amp; <a class="macro" href="net-tcp-rpc-client.h.html#65" title="((struct tcp_rpc_client_functions *) (((struct connection_info *)((C)-&gt;j_custom))-&gt;extra))" data-ref="_M/TCP_RPCC_FUNC">TCP_RPCC_FUNC</a>(<a class="local col2 ref" href="#2C" title='C' data-ref="2C">C</a>)-&gt;<a class="ref" href="net-tcp-rpc-client.h.html#tcp_rpc_client_functions::rpc_ready" title='tcp_rpc_client_functions::rpc_ready' data-ref="tcp_rpc_client_functions::rpc_ready">rpc_ready</a> (<a class="local col2 ref" href="#2C" title='C' data-ref="2C">C</a>) &lt; <var>0</var>) {</td></tr>
+<tr><th id="54">54</th><td>      <a class="ref" href="net-connections.h.html#fail_connection" title='fail_connection' data-ref="fail_connection">fail_connection</a> (<a class="local col2 ref" href="#2C" title='C' data-ref="2C">C</a>, -<var>8</var>);</td></tr>
+<tr><th id="55">55</th><td>    }</td></tr>
+<tr><th id="56">56</th><td>    <a class="ref" href="../jobs/jobs.h.html#job_decref" title='job_decref' data-ref="job_decref">job_decref</a> (<a class="macro" href="../jobs/jobs.h.html#47" title="1, ({ typeof(C) __ptr_v_save = C; C = ((void*)0); __ptr_v_save; })" data-ref="_M/JOB_REF_PASS">JOB_REF_PASS</a> (<a class="local col2 ref" href="#2C" title='C' data-ref="2C">C</a>));</td></tr>
+<tr><th id="57">57</th><td>    <b>break</b>;</td></tr>
+<tr><th id="58">58</th><td>  <b>case</b> <a class="macro" href="#40" title="2" data-ref="_M/NEV_TCP_CONN_CLOSE">NEV_TCP_CONN_CLOSE</a>:</td></tr>
+<tr><th id="59">59</th><td>    <a class="macro" href="net-tcp-rpc-client.h.html#65" title="((struct tcp_rpc_client_functions *) (((struct connection_info *)((C)-&gt;j_custom))-&gt;extra))" data-ref="_M/TCP_RPCC_FUNC">TCP_RPCC_FUNC</a>(<a class="local col2 ref" href="#2C" title='C' data-ref="2C">C</a>)-&gt;<a class="ref" href="net-tcp-rpc-client.h.html#tcp_rpc_client_functions::rpc_close" title='tcp_rpc_client_functions::rpc_close' data-ref="tcp_rpc_client_functions::rpc_close">rpc_close</a> (<a class="local col2 ref" href="#2C" title='C' data-ref="2C">C</a>, <var>0</var>);</td></tr>
+<tr><th id="60">60</th><td>    <a class="ref" href="../jobs/jobs.h.html#job_decref" title='job_decref' data-ref="job_decref">job_decref</a> (<a class="macro" href="../jobs/jobs.h.html#47" title="1, ({ typeof(C) __ptr_v_save = C; C = ((void*)0); __ptr_v_save; })" data-ref="_M/JOB_REF_PASS">JOB_REF_PASS</a> (<a class="local col2 ref" href="#2C" title='C' data-ref="2C">C</a>));</td></tr>
+<tr><th id="61">61</th><td>    <b>break</b>;</td></tr>
+<tr><th id="62">62</th><td>  <b>case</b> <a class="macro" href="#41" title="3" data-ref="_M/NEV_TCP_CONN_ALARM">NEV_TCP_CONN_ALARM</a>:</td></tr>
+<tr><th id="63">63</th><td>    <a class="macro" href="net-tcp-rpc-client.h.html#65" title="((struct tcp_rpc_client_functions *) (((struct connection_info *)((C)-&gt;j_custom))-&gt;extra))" data-ref="_M/TCP_RPCC_FUNC">TCP_RPCC_FUNC</a>(<a class="local col2 ref" href="#2C" title='C' data-ref="2C">C</a>)-&gt;<a class="ref" href="net-tcp-rpc-client.h.html#tcp_rpc_client_functions::rpc_alarm" title='tcp_rpc_client_functions::rpc_alarm' data-ref="tcp_rpc_client_functions::rpc_alarm">rpc_alarm</a> (<a class="local col2 ref" href="#2C" title='C' data-ref="2C">C</a>);</td></tr>
+<tr><th id="64">64</th><td>    <a class="ref" href="../jobs/jobs.h.html#job_decref" title='job_decref' data-ref="job_decref">job_decref</a> (<a class="macro" href="../jobs/jobs.h.html#47" title="1, ({ typeof(C) __ptr_v_save = C; C = ((void*)0); __ptr_v_save; })" data-ref="_M/JOB_REF_PASS">JOB_REF_PASS</a> (<a class="local col2 ref" href="#2C" title='C' data-ref="2C">C</a>));</td></tr>
+<tr><th id="65">65</th><td>    <b>break</b>;</td></tr>
+<tr><th id="66">66</th><td>  <b>case</b> <a class="macro" href="#42" title="4" data-ref="_M/NEV_TCP_CONN_WAKEUP">NEV_TCP_CONN_WAKEUP</a>:</td></tr>
+<tr><th id="67">67</th><td>    <a class="macro" href="net-tcp-rpc-client.h.html#65" title="((struct tcp_rpc_client_functions *) (((struct connection_info *)((C)-&gt;j_custom))-&gt;extra))" data-ref="_M/TCP_RPCC_FUNC">TCP_RPCC_FUNC</a>(<a class="local col2 ref" href="#2C" title='C' data-ref="2C">C</a>)-&gt;<a class="ref" href="net-tcp-rpc-client.h.html#tcp_rpc_client_functions::rpc_wakeup" title='tcp_rpc_client_functions::rpc_wakeup' data-ref="tcp_rpc_client_functions::rpc_wakeup">rpc_wakeup</a> (<a class="local col2 ref" href="#2C" title='C' data-ref="2C">C</a>);</td></tr>
+<tr><th id="68">68</th><td>    <a class="ref" href="../jobs/jobs.h.html#job_decref" title='job_decref' data-ref="job_decref">job_decref</a> (<a class="macro" href="../jobs/jobs.h.html#47" title="1, ({ typeof(C) __ptr_v_save = C; C = ((void*)0); __ptr_v_save; })" data-ref="_M/JOB_REF_PASS">JOB_REF_PASS</a> (<a class="local col2 ref" href="#2C" title='C' data-ref="2C">C</a>));</td></tr>
+<tr><th id="69">69</th><td>    <b>break</b>;</td></tr>
+<tr><th id="70">70</th><td>  <b>default</b>:</td></tr>
+<tr><th id="71">71</th><td>    <a class="macro" href="../../include/assert.h.html#88" title="((0) ? (void) (0) : __assert_fail (&quot;0&quot;, &quot;/home/parallels/MTProxy/net/net-thread.c&quot;, 71, __PRETTY_FUNCTION__))" data-ref="_M/assert">assert</a> (<var>0</var>);</td></tr>
+<tr><th id="72">72</th><td>  }</td></tr>
+<tr><th id="73">73</th><td>  <a class="ref" href="../../include/stdlib.h.html#free" title='free' data-ref="free">free</a> (<a class="local col1 ref" href="#1ev" title='ev' data-ref="1ev">ev</a>);</td></tr>
+<tr><th id="74">74</th><td>}</td></tr>
+<tr><th id="75">75</th><td></td></tr>
+<tr><th id="76">76</th><td><b>struct</b> <dfn class="type def" id="notification_event_job_extra" title='notification_event_job_extra' data-ref="notification_event_job_extra">notification_event_job_extra</dfn> {</td></tr>
+<tr><th id="77">77</th><td>  <b>struct</b> <a class="type" href="../common/mp-queue.h.html#mp_queue" title='mp_queue' data-ref="mp_queue">mp_queue</a> *<dfn class="tu decl" id="notification_event_job_extra::queue" title='notification_event_job_extra::queue' data-type='struct mp_queue *' data-ref="notification_event_job_extra::queue">queue</dfn>;</td></tr>
+<tr><th id="78">78</th><td>};</td></tr>
+<tr><th id="79">79</th><td><em>static</em> <a class="typedef" href="../jobs/jobs.h.html#job_t" title='job_t' data-type='struct async_job *' data-ref="job_t">job_t</a> <dfn class="tu decl def" id="notification_job" title='notification_job' data-type='job_t' data-ref="notification_job">notification_job</dfn>;</td></tr>
+<tr><th id="80">80</th><td></td></tr>
+<tr><th id="81">81</th><td><em>int</em> <dfn class="decl def" id="notification_event_run" title='notification_event_run' data-ref="notification_event_run">notification_event_run</dfn> (<a class="typedef" href="../jobs/jobs.h.html#job_t" title='job_t' data-type='struct async_job *' data-ref="job_t">job_t</a> <dfn class="local col3 decl" id="3job" title='job' data-type='job_t' data-ref="3job">job</dfn>, <em>int</em> <dfn class="local col4 decl" id="4op" title='op' data-type='int' data-ref="4op">op</dfn>, <b>struct</b> <a class="type" href="../jobs/jobs.h.html#job_thread" title='job_thread' data-ref="job_thread">job_thread</a> *<dfn class="local col5 decl" id="5JT" title='JT' data-type='struct job_thread *' data-ref="5JT">JT</dfn>) {   </td></tr>
+<tr><th id="82">82</th><td>  <b>if</b> (<a class="local col4 ref" href="#4op" title='op' data-ref="4op">op</a> != <a class="macro" href="../jobs/jobs.h.html#68" title="0" data-ref="_M/JS_RUN">JS_RUN</a>) {</td></tr>
+<tr><th id="83">83</th><td>    <b>return</b> <a class="macro" href="../jobs/jobs.h.html#64" title="-1" data-ref="_M/JOB_ERROR">JOB_ERROR</a>;</td></tr>
+<tr><th id="84">84</th><td>  }</td></tr>
+<tr><th id="85">85</th><td>  <b>struct</b> <a class="type" href="#notification_event_job_extra" title='notification_event_job_extra' data-ref="notification_event_job_extra">notification_event_job_extra</a> *<dfn class="local col6 decl" id="6E" title='E' data-type='struct notification_event_job_extra *' data-ref="6E">E</dfn> = (<em>void</em> *)<a class="local col3 ref" href="#3job" title='job' data-ref="3job">job</a>-&gt;<a class="ref" href="../jobs/jobs.h.html#async_job::j_custom" title='async_job::j_custom' data-ref="async_job::j_custom">j_custom</a>;</td></tr>
+<tr><th id="86">86</th><td></td></tr>
+<tr><th id="87">87</th><td>  <b>while</b> (<var>1</var>) {</td></tr>
+<tr><th id="88">88</th><td>    <b>struct</b> <a class="type" href="#notification_event" title='notification_event' data-ref="notification_event">notification_event</a> *<dfn class="local col7 decl" id="7ev" title='ev' data-type='struct notification_event *' data-ref="7ev">ev</dfn> = <a class="ref" href="../common/mp-queue.h.html#mpq_pop_nw" title='mpq_pop_nw' data-ref="mpq_pop_nw">mpq_pop_nw</a> (<a class="local col6 ref" href="#6E" title='E' data-ref="6E">E</a>-&gt;<a class="tu ref" href="#notification_event_job_extra::queue" title='notification_event_job_extra::queue' data-use='r' data-ref="notification_event_job_extra::queue">queue</a>, <var>4</var>);</td></tr>
+<tr><th id="89">89</th><td>    <b>if</b> (!<a class="local col7 ref" href="#7ev" title='ev' data-ref="7ev">ev</a>) { <b>break</b>; }</td></tr>
+<tr><th id="90">90</th><td></td></tr>
+<tr><th id="91">91</th><td>    <a class="ref" href="#run_notification_event" title='run_notification_event' data-ref="run_notification_event">run_notification_event</a> (<a class="local col7 ref" href="#7ev" title='ev' data-ref="7ev">ev</a>);</td></tr>
+<tr><th id="92">92</th><td>  }</td></tr>
+<tr><th id="93">93</th><td></td></tr>
+<tr><th id="94">94</th><td>  <b>return</b> <var>0</var>;</td></tr>
+<tr><th id="95">95</th><td>}</td></tr>
+<tr><th id="96">96</th><td></td></tr>
+<tr><th id="97">97</th><td><em>void</em> <dfn class="decl def" id="notification_event_job_create" title='notification_event_job_create' data-ref="notification_event_job_create">notification_event_job_create</dfn> (<em>void</em>) {</td></tr>
+<tr><th id="98">98</th><td>  <a class="tu ref" href="#notification_job" title='notification_job' data-use='w' data-ref="notification_job">notification_job</a> = <a class="ref" href="../jobs/jobs.h.html#create_async_job" title='create_async_job' data-ref="create_async_job">create_async_job</a> (<a class="ref" href="#notification_event_run" title='notification_event_run' data-ref="notification_event_run">notification_event_run</a>, <a class="macro" href="../jobs/jobs.h.html#137" title="((((unsigned long long)(8) &lt;&lt; ((0) * 4 + 32))) | (0x1000000U &lt;&lt; (0)))" data-ref="_M/JSC_ALLOW">JSC_ALLOW</a> (<a class="macro" href="../jobs/jobs.h.html#93" title="8" data-ref="_M/JC_ENGINE">JC_ENGINE</a>, <a class="macro" href="../jobs/jobs.h.html#68" title="0" data-ref="_M/JS_RUN">JS_RUN</a>) | <a class="macro" href="../jobs/jobs.h.html#137" title="((((unsigned long long)(8) &lt;&lt; ((7) * 4 + 32))) | (0x1000000U &lt;&lt; (7)))" data-ref="_M/JSC_ALLOW">JSC_ALLOW</a> (<a class="macro" href="../jobs/jobs.h.html#93" title="8" data-ref="_M/JC_ENGINE">JC_ENGINE</a>, <a class="macro" href="../jobs/jobs.h.html#74" title="7" data-ref="_M/JS_FINISH">JS_FINISH</a>), <var>0</var>, <b>sizeof</b> (<b>struct</b> <a class="type" href="#notification_event_job_extra" title='notification_event_job_extra' data-ref="notification_event_job_extra">notification_event_job_extra</a>), <var>0</var>, <a class="macro" href="../jobs/jobs.h.html#48" title="1, ((void*)0)" data-ref="_M/JOB_REF_NULL">JOB_REF_NULL</a>);</td></tr>
+<tr><th id="99">99</th><td></td></tr>
+<tr><th id="100">100</th><td>  <b>struct</b> <a class="type" href="#notification_event_job_extra" title='notification_event_job_extra' data-ref="notification_event_job_extra">notification_event_job_extra</a> *<dfn class="local col8 decl" id="8E" title='E' data-type='struct notification_event_job_extra *' data-ref="8E">E</dfn> = (<em>void</em> *)<a class="tu ref" href="#notification_job" title='notification_job' data-use='r' data-ref="notification_job">notification_job</a>-&gt;<a class="ref" href="../jobs/jobs.h.html#async_job::j_custom" title='async_job::j_custom' data-ref="async_job::j_custom">j_custom</a>;</td></tr>
+<tr><th id="101">101</th><td>  <a class="local col8 ref" href="#8E" title='E' data-ref="8E">E</a>-&gt;<a class="tu ref" href="#notification_event_job_extra::queue" title='notification_event_job_extra::queue' data-use='w' data-ref="notification_event_job_extra::queue">queue</a> = <a class="ref" href="../common/mp-queue.h.html#alloc_mp_queue_w" title='alloc_mp_queue_w' data-ref="alloc_mp_queue_w">alloc_mp_queue_w</a> ();</td></tr>
+<tr><th id="102">102</th><td>  </td></tr>
+<tr><th id="103">103</th><td>  <a class="ref" href="../jobs/jobs.h.html#unlock_job" title='unlock_job' data-ref="unlock_job">unlock_job</a> (<a class="macro" href="../jobs/jobs.h.html#49" title="1, job_incref (notification_job)" data-ref="_M/JOB_REF_CREATE_PASS">JOB_REF_CREATE_PASS</a> (<a class="tu ref" href="#notification_job" title='notification_job' data-use='r' data-ref="notification_job">notification_job</a>));</td></tr>
+<tr><th id="104">104</th><td>}</td></tr>
+<tr><th id="105">105</th><td></td></tr>
+<tr><th id="106">106</th><td><em>void</em> <dfn class="decl def" id="notification_event_insert_conn" title='notification_event_insert_conn' data-ref="notification_event_insert_conn">notification_event_insert_conn</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col9 decl" id="9C" title='C' data-type='connection_job_t' data-ref="9C">C</dfn>, <em>int</em> <dfn class="local col0 decl" id="10type" title='type' data-type='int' data-ref="10type">type</dfn>) {</td></tr>
+<tr><th id="107">107</th><td>  <b>struct</b> <a class="type" href="#notification_event" title='notification_event' data-ref="notification_event">notification_event</a> *<dfn class="local col1 decl" id="11ev" title='ev' data-type='struct notification_event *' data-ref="11ev">ev</dfn> = <a class="ref" href="../../include/stdlib.h.html#malloc" title='malloc' data-ref="malloc">malloc</a> (<b>sizeof</b> (*<a class="local col1 ref" href="#11ev" title='ev' data-ref="11ev">ev</a>));</td></tr>
+<tr><th id="108">108</th><td>  <a class="local col1 ref" href="#11ev" title='ev' data-ref="11ev">ev</a>-&gt;<a class="tu ref" href="#notification_event::who" title='notification_event::who' data-use='w' data-ref="notification_event::who">who</a> = <a class="ref" href="../jobs/jobs.h.html#job_incref" title='job_incref' data-ref="job_incref">job_incref</a> (<a class="local col9 ref" href="#9C" title='C' data-ref="9C">C</a>);</td></tr>
+<tr><th id="109">109</th><td>  <a class="local col1 ref" href="#11ev" title='ev' data-ref="11ev">ev</a>-&gt;<a class="tu ref" href="#notification_event::type" title='notification_event::type' data-use='w' data-ref="notification_event::type">type</a> = <a class="local col0 ref" href="#10type" title='type' data-ref="10type">type</a>;</td></tr>
+<tr><th id="110">110</th><td></td></tr>
+<tr><th id="111">111</th><td>  <b>struct</b> <a class="type" href="#notification_event_job_extra" title='notification_event_job_extra' data-ref="notification_event_job_extra">notification_event_job_extra</a> *<dfn class="local col2 decl" id="12E" title='E' data-type='struct notification_event_job_extra *' data-ref="12E">E</dfn> = (<em>void</em> *)<a class="tu ref" href="#notification_job" title='notification_job' data-use='r' data-ref="notification_job">notification_job</a>-&gt;<a class="ref" href="../jobs/jobs.h.html#async_job::j_custom" title='async_job::j_custom' data-ref="async_job::j_custom">j_custom</a>;</td></tr>
+<tr><th id="112">112</th><td>  <a class="ref" href="../common/mp-queue.h.html#mpq_push_w" title='mpq_push_w' data-ref="mpq_push_w">mpq_push_w</a> (<a class="local col2 ref" href="#12E" title='E' data-ref="12E">E</a>-&gt;<a class="tu ref" href="#notification_event_job_extra::queue" title='notification_event_job_extra::queue' data-use='r' data-ref="notification_event_job_extra::queue">queue</a>, <a class="local col1 ref" href="#11ev" title='ev' data-ref="11ev">ev</a>, <var>0</var>);</td></tr>
+<tr><th id="113">113</th><td>  <a class="ref" href="../jobs/jobs.h.html#job_signal" title='job_signal' data-ref="job_signal">job_signal</a> (<a class="macro" href="../jobs/jobs.h.html#49" title="1, job_incref (notification_job)" data-ref="_M/JOB_REF_CREATE_PASS">JOB_REF_CREATE_PASS</a> (<a class="tu ref" href="#notification_job" title='notification_job' data-use='r' data-ref="notification_job">notification_job</a>), <a class="macro" href="../jobs/jobs.h.html#68" title="0" data-ref="_M/JS_RUN">JS_RUN</a>);</td></tr>
+<tr><th id="114">114</th><td>}</td></tr>
+<tr><th id="115">115</th><td></td></tr>
+<tr><th id="116">116</th><td><em>void</em> <dfn class="decl def" id="notification_event_insert_tcp_conn_close" title='notification_event_insert_tcp_conn_close' data-ref="notification_event_insert_tcp_conn_close">notification_event_insert_tcp_conn_close</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col3 decl" id="13C" title='C' data-type='connection_job_t' data-ref="13C">C</dfn>) {</td></tr>
+<tr><th id="117">117</th><td>  <a class="ref" href="#notification_event_insert_conn" title='notification_event_insert_conn' data-ref="notification_event_insert_conn">notification_event_insert_conn</a> (<a class="local col3 ref" href="#13C" title='C' data-ref="13C">C</a>, <a class="macro" href="#40" title="2" data-ref="_M/NEV_TCP_CONN_CLOSE">NEV_TCP_CONN_CLOSE</a>);</td></tr>
+<tr><th id="118">118</th><td>}</td></tr>
+<tr><th id="119">119</th><td></td></tr>
+<tr><th id="120">120</th><td><em>void</em> <dfn class="decl def" id="notification_event_insert_tcp_conn_ready" title='notification_event_insert_tcp_conn_ready' data-ref="notification_event_insert_tcp_conn_ready">notification_event_insert_tcp_conn_ready</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col4 decl" id="14C" title='C' data-type='connection_job_t' data-ref="14C">C</dfn>) {</td></tr>
+<tr><th id="121">121</th><td>  <a class="ref" href="#notification_event_insert_conn" title='notification_event_insert_conn' data-ref="notification_event_insert_conn">notification_event_insert_conn</a> (<a class="local col4 ref" href="#14C" title='C' data-ref="14C">C</a>, <a class="macro" href="#39" title="1" data-ref="_M/NEV_TCP_CONN_READY">NEV_TCP_CONN_READY</a>);</td></tr>
+<tr><th id="122">122</th><td>}</td></tr>
+<tr><th id="123">123</th><td></td></tr>
+<tr><th id="124">124</th><td><em>void</em> <dfn class="decl def" id="notification_event_insert_tcp_conn_alarm" title='notification_event_insert_tcp_conn_alarm' data-ref="notification_event_insert_tcp_conn_alarm">notification_event_insert_tcp_conn_alarm</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col5 decl" id="15C" title='C' data-type='connection_job_t' data-ref="15C">C</dfn>) {</td></tr>
+<tr><th id="125">125</th><td>  <a class="ref" href="#notification_event_insert_conn" title='notification_event_insert_conn' data-ref="notification_event_insert_conn">notification_event_insert_conn</a> (<a class="local col5 ref" href="#15C" title='C' data-ref="15C">C</a>, <a class="macro" href="#41" title="3" data-ref="_M/NEV_TCP_CONN_ALARM">NEV_TCP_CONN_ALARM</a>);</td></tr>
+<tr><th id="126">126</th><td>}</td></tr>
+<tr><th id="127">127</th><td></td></tr>
+<tr><th id="128">128</th><td><em>void</em> <dfn class="decl def" id="notification_event_insert_tcp_conn_wakeup" title='notification_event_insert_tcp_conn_wakeup' data-ref="notification_event_insert_tcp_conn_wakeup">notification_event_insert_tcp_conn_wakeup</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col6 decl" id="16C" title='C' data-type='connection_job_t' data-ref="16C">C</dfn>) {</td></tr>
+<tr><th id="129">129</th><td>  <a class="ref" href="#notification_event_insert_conn" title='notification_event_insert_conn' data-ref="notification_event_insert_conn">notification_event_insert_conn</a> (<a class="local col6 ref" href="#16C" title='C' data-ref="16C">C</a>, <a class="macro" href="#42" title="4" data-ref="_M/NEV_TCP_CONN_WAKEUP">NEV_TCP_CONN_WAKEUP</a>);</td></tr>
+<tr><th id="130">130</th><td>}</td></tr>
+<tr><th id="131">131</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated on <em>2018-Jun-02</em> from project MTProxy revision <em>842f343decf6c463bdecf1862e357c4a03e4bc97</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

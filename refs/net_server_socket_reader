@@ -1,0 +1,8 @@
+<dec f='MTProxy/net/net-connections.h' l='353' type='int net_server_socket_reader(connection_job_t C)'/>
+<def f='MTProxy/net/net-connections.c' l='850' ll='943' type='int net_server_socket_reader(socket_connection_job_t C)'/>
+<use f='MTProxy/net/net-connections.c' l='1487' u='r' c='check_conn_functions'/>
+<doc f='MTProxy/net/net-connections.c' l='846'>/* 
+  Reads data from socket until all data is read
+  Then puts it to conn-&gt;in_queue and send JS_RUN signal
+*/</doc>
+<doc f='MTProxy/net/net-connections.c' l='850'>/* {{{ */</doc>

@@ -1,0 +1,29 @@
+<dec f='MTProxy/net/net-msg.h' l='62' type='int'/>
+<offset>0</offset>
+<use f='MTProxy/net/net-msg.c' l='80' u='w' c='new_msg_part'/>
+<use f='MTProxy/net/net-msg.c' l='100' u='r' c='msg_part_decref'/>
+<use f='MTProxy/net/net-msg.c' l='101' u='w' c='msg_part_decref'/>
+<use f='MTProxy/net/net-msg.c' l='103' u='a' c='msg_part_decref'/>
+<use f='MTProxy/net/net-msg.c' l='109' u='r' c='msg_part_decref'/>
+<use f='MTProxy/net/net-msg.c' l='165' u='r' c='rwm_lock_first_part'/>
+<use f='MTProxy/net/net-msg.c' l='183' u='a' c='rwm_lock_first_part'/>
+<use f='MTProxy/net/net-msg.c' l='261' u='r' c='fork_message_chain'/>
+<use f='MTProxy/net/net-msg.c' l='267' u='r' c='fork_message_chain'/>
+<use f='MTProxy/net/net-msg.c' l='277' u='r' c='fork_message_chain'/>
+<use f='MTProxy/net/net-msg.c' l='346' u='r' c='rwm_clone'/>
+<use f='MTProxy/net/net-msg.c' l='347' u='w' c='rwm_clone'/>
+<use f='MTProxy/net/net-msg.c' l='349' u='a' c='rwm_clone'/>
+<use f='MTProxy/net/net-msg.c' l='500' u='r' c='rwm_push_data_front'/>
+<use f='MTProxy/net/net-msg.c' l='586' u='r' c='rwm_prepend_alloc'/>
+<use f='MTProxy/net/net-msg.c' l='755' u='a' c='rwm_split'/>
+<use f='MTProxy/net/net-msg.c' l='770' u='r' c='rwm_split'/>
+<use f='MTProxy/net/net-msg.c' l='784' u='w' c='rwm_split'/>
+<use f='MTProxy/net/net-msg.c' l='786' u='a' c='rwm_split'/>
+<use f='MTProxy/net/net-msg.c' l='825' u='a' c='rwm_union'/>
+<use f='MTProxy/net/net-msg.c' l='927' u='a' c='rwm_process_ex'/>
+<use f='MTProxy/net/net-msg.c' l='952' u='r' c='rwm_process_ex'/>
+<use f='MTProxy/net/net-msg.c' l='984' u='r' c='rwm_process_ex'/>
+<use f='MTProxy/net/net-msg.c' l='993' u='w' c='rwm_process_ex'/>
+<use f='MTProxy/net/net-msg.c' l='995' u='a' c='rwm_process_ex'/>
+<use f='MTProxy/net/net-msg.c' l='1176' u='r' c='rwm_get_block_ptr_bytes'/>
+<use f='MTProxy/net/net-msg.c' l='1181' u='a' c='rwm_get_block_ptr_bytes'/>

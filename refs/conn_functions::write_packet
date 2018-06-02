@@ -1,0 +1,8 @@
+<dec f='MTProxy/net/net-connections.h' l='144' type='int (*)(connection_job_t, struct raw_message *)'/>
+<offset>768</offset>
+<doc f='MTProxy/net/net-connections.h' l='144'>/* adds necessary headers to packet */</doc>
+<use f='MTProxy/net/net-http-server.c' l='74' u='w'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='67' u='r' c='cpu_tcp_server_writer'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='84' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='69' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='76' u='w'/>

@@ -1,0 +1,3 @@
+<dec f='include/linux/futex.h' l='10'/>
+<use f='MTProxy/common/mp-queue.c' l='145' u='c'/>
+<doc f='include/linux/futex.h' l='7'>/* Second argument to futex syscall */</doc>

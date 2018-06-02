@@ -1,0 +1,5 @@
+<dec f='include/unistd.h' l='634' type='__pid_t getppid()'/>
+<doc f='include/unistd.h' l='633'>/* Get the process ID of the calling process&apos;s parent.  */</doc>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2024' u='c' c='check_children_status'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2025' u='c' c='check_children_status'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2250' u='c' c='mtfront_pre_init'/>

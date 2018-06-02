@@ -1,0 +1,2 @@
+<def f='MTProxy/net/net-msg-buffers.h' l='103' ll='108' type='void msg_buffer_decref(struct msg_buffer * buffer)'/>
+<use f='MTProxy/net/net-msg.c' l='110' u='c' c='msg_part_decref'/>

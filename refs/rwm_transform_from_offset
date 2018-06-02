@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-msg.h' l='145' type='int rwm_transform_from_offset(struct raw_message * raw, int bytes, int offset, int (*)(void *, void *, int) transform_block, void * extra)'/>
+<doc f='MTProxy/net/net-msg.h' l='144'>/* warning: in current realization refcnt of message chain should be 1 */</doc>
+<def f='MTProxy/net/net-msg.c' l='1056' ll='1058' type='int rwm_transform_from_offset(struct raw_message * raw, int bytes, int offset, int (*)(void *, void *, int) transform_block, void * extra)'/>
+<doc f='MTProxy/net/net-msg.c' l='1054'>/* }}} */</doc>
+<doc f='MTProxy/net/net-msg.c' l='1056'>/* {{{ */</doc>

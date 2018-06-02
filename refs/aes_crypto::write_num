@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-crypto-aes.h' l='77' type='unsigned int'/>
+<offset>4832</offset>
+<use f='MTProxy/net/net-crypto-aes.c' l='94' u='w' c='aes_crypto_init'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='113' u='w' c='aes_crypto_ctr128_init'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='245' u='a' c='cpu_tcp_aes_crypto_ctr128_encrypt_output'/>

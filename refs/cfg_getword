@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/parse-config.h' l='29' type='int cfg_getword()'/>
+<def f='MTProxy/common/parse-config.c' l='76' ll='93' type='int cfg_getword()'/>
+<use f='MTProxy/common/parse-config.c' l='196' u='c' c='expect_word'/>
+<use f='MTProxy/common/parse-config.c' l='207' u='c' c='cfg_gethost_ex'/>

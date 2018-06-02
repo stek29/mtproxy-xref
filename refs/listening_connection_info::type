@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-connections.h' l='270' type='conn_type_t *'/>
+<offset>384</offset>
+<use f='MTProxy/net/net-connections.c' l='651' u='r' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='702' u='r' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1331' u='w' c='init_listening_connection_ext'/>

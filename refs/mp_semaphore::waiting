@@ -1,0 +1,5 @@
+<dec f='MTProxy/common/mp-queue.h' l='32' type='volatile int'/>
+<offset>32</offset>
+<use f='MTProxy/common/mp-queue.c' l='123' u='r' c='mp_sem_post'/>
+<use f='MTProxy/common/mp-queue.c' l='144' u='a' c='mp_sem_wait'/>
+<use f='MTProxy/common/mp-queue.c' l='146' u='a' c='mp_sem_wait'/>

@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/sha256.h' l='36' type='void sha256(const unsigned char * input, int ilen, unsigned char * output)'/>
+<def f='MTProxy/common/sha256.c' l='39' ll='45' type='void sha256(const unsigned char * input, int ilen, unsigned char * output)'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='193' u='c' c='tcp_rpcs_compact_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='209' u='c' c='tcp_rpcs_compact_parse_execute'/>

@@ -1,0 +1,13 @@
+<use f='MTProxy/common/mp-queue.c' l='206' u='c' c='alloc_mpq_block'/>
+<use f='MTProxy/common/mp-queue.c' l='211' u='c' c='alloc_mpq_block'/>
+<use f='MTProxy/jobs/jobs.c' l='606' u='c' c='try_lock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='626' u='c' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='703' u='c' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='825' u='c' c='complete_subjob'/>
+<use f='MTProxy/jobs/jobs.c' l='973' u='c' c='process_one_sublist'/>
+<use f='MTProxy/jobs/jobs.c' l='1000' u='c' c='process_one_sublist'/>
+<use f='MTProxy/net/net-connections.c' l='549' u='c' c='do_connection_job'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='122' u='c' c='lock_chunk_head'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='134' u='c' c='try_lock_chunk'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='235' u='c' c='alloc_new_msg_buffers_chunk'/>
+<use f='MTProxy/net/net-msg.c' l='141' u='c' c='rwm_lock_last_part'/>

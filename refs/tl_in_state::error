@@ -1,0 +1,38 @@
+<dec f='MTProxy/common/tl-parse.h' l='113' type='char *'/>
+<use f='MTProxy/common/tl-parse.h' l='185' u='r' c='tlf_check'/>
+<use f='MTProxy/common/tl-parse.h' l='185' u='r' c='tlf_error'/>
+<use f='MTProxy/common/tl-parse.h' l='804' u='r' c='tlf_copy_error'/>
+<use f='MTProxy/common/tl-parse.h' l='805' c='tlf_copy_error'/>
+<use f='MTProxy/common/tl-parse.h' l='805' u='r' c='tlf_copy_error'/>
+<use f='MTProxy/common/tl-parse.h' l='805' u='r' c='tlf_copy_error'/>
+<use f='MTProxy/common/tl-parse.h' l='805' u='r' c='tlf_copy_error'/>
+<use f='MTProxy/common/tl-parse.h' l='805' u='r' c='tlf_copy_error'/>
+<use f='MTProxy/common/tl-parse.h' l='805' u='r' c='tlf_copy_error'/>
+<use f='MTProxy/common/tl-parse.h' l='805' u='r' c='tlf_copy_error'/>
+<use f='MTProxy/common/tl-parse.c' l='113' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='124' macro='1' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='550' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='554' macro='1' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='569' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='570' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='571' macro='1' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='959' u='r' c='tl_in_state_free'/>
+<use f='MTProxy/common/tl-parse.c' l='960' c='tl_in_state_free'/>
+<use f='MTProxy/common/tl-parse.c' l='960' u='r' c='tl_in_state_free'/>
+<use f='MTProxy/common/tl-parse.c' l='960' u='w' c='tl_in_state_free'/>
+<offset>384</offset>
+<use f='MTProxy/engine/engine-rpc.c' l='287' c='fetch_query'/>
+<use f='MTProxy/engine/engine-rpc.c' l='287' u='r' c='fetch_query'/>
+<use f='MTProxy/engine/engine-rpc.c' l='287' u='r' c='fetch_query'/>
+<use f='MTProxy/engine/engine-rpc.c' l='287' u='r' c='fetch_query'/>
+<use f='MTProxy/engine/engine-rpc.c' l='287' u='r' c='fetch_query'/>
+<use f='MTProxy/engine/engine-rpc.c' l='287' u='r' c='fetch_query'/>
+<use f='MTProxy/engine/engine-rpc.c' l='287' u='r' c='fetch_query'/>
+<use f='MTProxy/engine/engine-rpc.c' l='296' c='fetch_query'/>
+<use f='MTProxy/engine/engine-rpc.c' l='296' u='r' c='fetch_query'/>
+<use f='MTProxy/engine/engine-rpc.c' l='296' u='r' c='fetch_query'/>
+<use f='MTProxy/engine/engine-rpc.c' l='296' u='r' c='fetch_query'/>
+<use f='MTProxy/engine/engine-rpc.c' l='296' u='r' c='fetch_query'/>
+<use f='MTProxy/engine/engine-rpc.c' l='296' u='r' c='fetch_query'/>
+<use f='MTProxy/engine/engine-rpc.c' l='296' u='r' c='fetch_query'/>
+<use f='MTProxy/engine/engine-rpc.c' l='755' u='r' c='query_job_run'/>

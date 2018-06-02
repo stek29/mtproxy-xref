@@ -1,0 +1,9 @@
+<def f='MTProxy/net/net-msg.c' l='160' ll='189' type='struct msg_part * rwm_lock_first_part(struct raw_message * raw)'/>
+<use f='MTProxy/net/net-msg.c' l='497' u='c' c='rwm_push_data_front'/>
+<use f='MTProxy/net/net-msg.c' l='583' u='c' c='rwm_prepend_alloc'/>
+<use f='MTProxy/net/net-msg.c' l='823' u='c' c='rwm_union'/>
+<doc f='MTProxy/net/net-msg.c' l='156'>/* }}} */
+
+// after this function non-empty raw message raw should have following properties:
+//   raw-&gt;first_offset == raw-&gt;first-&gt;offset</doc>
+<doc f='MTProxy/net/net-msg.c' l='160'>/* {{{ */</doc>

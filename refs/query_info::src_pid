@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-connections.h' l='404' type='struct process_id'/>
+<offset>544</offset>
+<use f='MTProxy/engine/engine-rpc.c' l='708' u='r' c='create_query_custom_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='753' u='a' c='query_job_run'/>
+<use f='MTProxy/engine/engine-rpc.c' l='764' u='a' c='query_job_run'/>
+<use f='MTProxy/engine/engine-rpc.c' l='819' u='w' c='do_create_query_job'/>

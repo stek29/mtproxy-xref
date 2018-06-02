@@ -1,0 +1,5 @@
+<dec f='MTProxy/common/tl-parse.h' l='38'/>
+<use f='MTProxy/common/tl-parse.h' l='503' u='c'/>
+<doc f='MTProxy/common/tl-parse.h' l='34'>//#define RPC_INVOKE_REQ 0x2374df3d
+//#define RPC_REQ_RESULT 0x63aeda4e
+//#define RPC_REQ_ERROR 0x7ae432f5</doc>

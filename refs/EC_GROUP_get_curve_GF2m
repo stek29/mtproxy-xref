@@ -1,0 +1,9 @@
+<dec f='include/openssl/ec.h' l='331' type='int EC_GROUP_get_curve_GF2m(const EC_GROUP * group, BIGNUM * p, BIGNUM * a, BIGNUM * b, BN_CTX * ctx)'/>
+<doc f='include/openssl/ec.h' l='323'>/** Gets the parameter of the ec over GF2m defined by y^2 + x*y = x^3 + a*x^2 + b
+ *  \param  group  EC_GROUP object
+ *  \param  p      BIGNUM for the polynomial defining the underlying field
+ *  \param  a      BIGNUM for parameter a of the equation
+ *  \param  b      BIGNUM for parameter b of the equation
+ *  \param  ctx    BN_CTX object (optional)
+ *  \return 1 on success and 0 if an error occured
+ */</doc>

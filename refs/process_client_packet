@@ -1,0 +1,2 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='806' ll='881' type='int process_client_packet(struct tl_in_state * tlio_in, int op, connection_job_t C)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='890' u='c' c='client_packet_job_run'/>

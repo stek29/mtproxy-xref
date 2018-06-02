@@ -1,0 +1,8 @@
+<dec f='MTProxy/engine/engine.h' l='79' type='unsigned long long'/>
+<offset>448</offset>
+<use f='MTProxy/engine/engine-signals.c' l='137' u='r' c='engine_process_signals'/>
+<use f='MTProxy/engine/engine.c' l='521' u='r' c='check_signal_handler'/>
+<use f='MTProxy/engine/engine.c' l='533' u='w' c='check_server_functions'/>
+<use f='MTProxy/engine/engine.c' l='533' u='r' c='check_server_functions'/>
+<use f='MTProxy/engine/engine.c' l='559' u='r' c='check_server_functions'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2308' u='w' c='main'/>

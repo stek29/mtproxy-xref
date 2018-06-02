@@ -1,0 +1,5 @@
+<dec f='MTProxy/common/sha256.h' l='34' type='void sha256_update(sha256_context * ctx, const unsigned char * input, int ilen)'/>
+<def f='MTProxy/common/sha256.c' l='29' ll='31' type='void sha256_update(sha256_context * ctx, const unsigned char * input, int ilen)'/>
+<use f='MTProxy/common/sha256.c' l='42' u='c' c='sha256'/>
+<use f='MTProxy/common/sha256.c' l='50' u='c' c='sha256_two_chunks'/>
+<use f='MTProxy/common/sha256.c' l='51' u='c' c='sha256_two_chunks'/>

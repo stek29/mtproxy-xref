@@ -1,0 +1,14 @@
+<dec f='MTProxy/jobs/jobs.h' l='184' type='job_t'/>
+<use f='MTProxy/jobs/jobs.h' l='310' u='r' c='check_parent_job_validity'/>
+<use f='MTProxy/jobs/jobs.h' l='313' u='r' c='parent_job_aborted'/>
+<use f='MTProxy/jobs/jobs.h' l='313' u='r' c='parent_job_aborted'/>
+<offset>448</offset>
+<doc f='MTProxy/jobs/jobs.h' l='184'>// parent (dependent) job or 0</doc>
+<use f='MTProxy/jobs/jobs.c' l='853' u='r' c='complete_job'/>
+<use f='MTProxy/jobs/jobs.c' l='859' c='complete_job'/>
+<use f='MTProxy/jobs/jobs.c' l='859' u='r' c='complete_job'/>
+<use f='MTProxy/jobs/jobs.c' l='859' u='w' c='complete_job'/>
+<use f='MTProxy/jobs/jobs.c' l='1091' u='w' c='create_async_job'/>
+<use f='MTProxy/jobs/jobs.c' l='1106' u='r' c='create_async_job'/>
+<use f='MTProxy/jobs/jobs.c' l='1120' u='r' c='job_timer_wakeup_gateway'/>
+<use f='MTProxy/jobs/jobs.c' l='1123' u='r' c='job_timer_wakeup_gateway'/>

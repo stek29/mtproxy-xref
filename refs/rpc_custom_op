@@ -1,0 +1,4 @@
+<def f='MTProxy/engine/engine.h' l='52' ll='55'/>
+<size>12</size>
+<mbr r='rpc_custom_op::op' o='0' t='unsigned int'/>
+<mbr r='rpc_custom_op::func' o='32' t='void (*)(struct tl_in_state *, struct query_work_params *)'/>

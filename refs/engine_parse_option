@@ -1,0 +1,12 @@
+<def f='MTProxy/common/server-functions.h' l='75' ll='86'/>
+<size>64</size>
+<mbr r='engine_parse_option::vals' o='0' t='int *'/>
+<mbr r='engine_parse_option::val_cnt' o='64' t='int'/>
+<mbr r='engine_parse_option::base_val' o='96' t='int'/>
+<mbr r='engine_parse_option::smallest_val' o='128' t='int'/>
+<mbr r='engine_parse_option::longopts' o='192' t='const char **'/>
+<mbr r='engine_parse_option::longopts_cnt' o='256' t='int'/>
+<mbr r='engine_parse_option::func' o='320' t='int (*)(int)'/>
+<mbr r='engine_parse_option::help' o='384' t='char *'/>
+<mbr r='engine_parse_option::flags' o='448' t='unsigned int'/>
+<mbr r='engine_parse_option::arg' o='480' t='int'/>

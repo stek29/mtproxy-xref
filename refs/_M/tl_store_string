@@ -1,0 +1,7 @@
+<dec f='MTProxy/common/tl-parse.h' l='677'/>
+<use f='MTProxy/engine/engine-rpc.c' l='859' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='860' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1802' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1806' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1807' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1808' u='c'/>

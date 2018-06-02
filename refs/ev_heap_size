@@ -1,0 +1,14 @@
+<dec f='MTProxy/net/net-events.h' l='79' type='int'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='434' u='r' c='update_local_stats_copy'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='698' u='r' c='mtfront_prepare_stats'/>
+<def f='MTProxy/net/net-events.c' l='63' type='int'/>
+<use f='MTProxy/net/net-events.c' l='98' u='r' c='pop_heap_head'/>
+<use f='MTProxy/net/net-events.c' l='104' u='w' c='pop_heap_head'/>
+<use f='MTProxy/net/net-events.c' l='123' u='r' c='remove_event_from_heap'/>
+<use f='MTProxy/net/net-events.c' l='156' u='w' c='remove_event_from_heap'/>
+<use f='MTProxy/net/net-events.c' l='164' u='w' c='put_event_into_heap'/>
+<use f='MTProxy/net/net-events.c' l='319' u='r' c='epoll_runqueue'/>
+<use f='MTProxy/net/net-events.c' l='323' u='r' c='epoll_runqueue'/>
+<use f='MTProxy/net/net-events.c' l='326' u='r' c='epoll_runqueue'/>
+<use f='MTProxy/net/net-events.c' l='406' u='r' c='epoll_work'/>
+<use f='MTProxy/net/net-stats.c' l='135' u='r' c='prepare_stats'/>

@@ -1,0 +1,6 @@
+<dec f='MTProxy/vv/vv-io.h' l='27'/>
+<use f='MTProxy/engine/engine.c' l='231' u='c'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='121' u='c'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='165' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='146' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='109' u='c'/>

@@ -1,0 +1,227 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>engine.h source code [MTProxy/engine/engine.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="event_precise_cron,rpc_custom_op "/>
+<link rel="stylesheet" href="https://code.woboq.org/data//qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="https://code.woboq.org/data//kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery-ui.min.js"></script>
+<script>var file = 'MTProxy/engine/engine.h'; var root_path = '../..'; var data_path = 'https://code.woboq.org/data/';</script>
+<script src='https://code.woboq.org/data//codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='..'>MTProxy</a>/<a href='./'>engine</a>/<a href='engine.h.html'>engine.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>    This file is part of Mtproto-proxy Library.</i></td></tr>
+<tr><th id="3">3</th><td><i></i></td></tr>
+<tr><th id="4">4</th><td><i>    Mtproto-proxy Library is free software: you can redistribute it and/or modify</i></td></tr>
+<tr><th id="5">5</th><td><i>    it under the terms of the GNU Lesser General Public License as published by</i></td></tr>
+<tr><th id="6">6</th><td><i>    the Free Software Foundation, either version 2 of the License, or</i></td></tr>
+<tr><th id="7">7</th><td><i>    (at your option) any later version.</i></td></tr>
+<tr><th id="8">8</th><td><i></i></td></tr>
+<tr><th id="9">9</th><td><i>    Mtproto-proxy Library is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="10">10</th><td><i>    but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="11">11</th><td><i>    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</i></td></tr>
+<tr><th id="12">12</th><td><i>    GNU Lesser General Public License for more details.</i></td></tr>
+<tr><th id="13">13</th><td><i></i></td></tr>
+<tr><th id="14">14</th><td><i>    You should have received a copy of the GNU Lesser General Public License</i></td></tr>
+<tr><th id="15">15</th><td><i>    along with Mtproto-proxy Library.  If not, see &lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</i></td></tr>
+<tr><th id="16">16</th><td><i></i></td></tr>
+<tr><th id="17">17</th><td><i>    Copyright 2013 Vkontakte Ltd</i></td></tr>
+<tr><th id="18">18</th><td><i>              2013 Vitaliy Valtman              </i></td></tr>
+<tr><th id="19">19</th><td><i>              2013 Anton Maydell</i></td></tr>
+<tr><th id="20">20</th><td><i>    </i></td></tr>
+<tr><th id="21">21</th><td><i>    Copyright 2014 Telegram Messenger Inc             </i></td></tr>
+<tr><th id="22">22</th><td><i>              2014 Vitaly Valtman     </i></td></tr>
+<tr><th id="23">23</th><td><i>              2014 Anton Maydell</i></td></tr>
+<tr><th id="24">24</th><td><i>    </i></td></tr>
+<tr><th id="25">25</th><td><i>    Copyright 2015-2016 Telegram Messenger Inc             </i></td></tr>
+<tr><th id="26">26</th><td><i>              2015-2016 Vitaliy Valtman</i></td></tr>
+<tr><th id="27">27</th><td><i>*/</i></td></tr>
+<tr><th id="28">28</th><td></td></tr>
+<tr><th id="29">29</th><td><u>#pragma once</u></td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td><i>// GLIBC DEFINES RTMAX as function</i></td></tr>
+<tr><th id="32">32</th><td><i>// engine_init () asserts, that OUT_SIGRTMAX == SIGRTMAX</i></td></tr>
+<tr><th id="33">33</th><td><u>#define <dfn class="macro" id="_M/OUR_SIGRTMAX" data-ref="_M/OUR_SIGRTMAX">OUR_SIGRTMAX</dfn> 64</u></td></tr>
+<tr><th id="34">34</th><td></td></tr>
+<tr><th id="35">35</th><td><u>#include <a href="../common/common-stats.h.html">"common/common-stats.h"</a></u></td></tr>
+<tr><th id="36">36</th><td><u>#include <a href="engine-rpc.h.html">"engine/engine-rpc.h"</a></u></td></tr>
+<tr><th id="37">37</th><td><u>#include <a href="../common/tl-parse.h.html">"common/tl-parse.h"</a></u></td></tr>
+<tr><th id="38">38</th><td></td></tr>
+<tr><th id="39">39</th><td><u>#include <a href="../net/net-connections.h.html">"net/net-connections.h"</a></u></td></tr>
+<tr><th id="40">40</th><td><u>#include <a href="../net/net-tcp-rpc-server.h.html">"net/net-tcp-rpc-server.h"</a></u></td></tr>
+<tr><th id="41">41</th><td><u>#include <a href="../net/net-http-server.h.html">"net/net-http-server.h"</a></u></td></tr>
+<tr><th id="42">42</th><td></td></tr>
+<tr><th id="43">43</th><td><u>#define <dfn class="macro" id="_M/DEFAULT_LONG_QUERY_THRES" data-ref="_M/DEFAULT_LONG_QUERY_THRES">DEFAULT_LONG_QUERY_THRES</dfn> 0.1</u></td></tr>
+<tr><th id="44">44</th><td></td></tr>
+<tr><th id="45">45</th><td><u>#define <dfn class="macro" id="_M/SIG2INT" data-ref="_M/SIG2INT">SIG2INT</dfn>(sig) (((sig) == 64) ? 1ull : (1ull &lt;&lt; (unsigned long long)(sig)))</u></td></tr>
+<tr><th id="46">46</th><td><u>#define <dfn class="macro" id="_M/SIG_INTERRUPT_MASK" data-ref="_M/SIG_INTERRUPT_MASK">SIG_INTERRUPT_MASK</dfn> (SIG2INT(SIGTERM) | SIG2INT(SIGINT))</u></td></tr>
+<tr><th id="47">47</th><td></td></tr>
+<tr><th id="48">48</th><td><b>extern</b> <em>double</em> <dfn class="decl" id="precise_now_diff" title='precise_now_diff' data-ref="precise_now_diff">precise_now_diff</dfn>;</td></tr>
+<tr><th id="49">49</th><td></td></tr>
+<tr><th id="50">50</th><td><u>#pragma pack(push,4)</u></td></tr>
+<tr><th id="51">51</th><td></td></tr>
+<tr><th id="52">52</th><td><b>struct</b> <dfn class="type def" id="rpc_custom_op" title='rpc_custom_op' data-ref="rpc_custom_op">rpc_custom_op</dfn> {</td></tr>
+<tr><th id="53">53</th><td>  <em>unsigned</em> <dfn class="decl" id="rpc_custom_op::op" title='rpc_custom_op::op' data-ref="rpc_custom_op::op">op</dfn>;</td></tr>
+<tr><th id="54">54</th><td>  <em>void</em> (*<dfn class="decl" id="rpc_custom_op::func" title='rpc_custom_op::func' data-ref="rpc_custom_op::func">func</dfn>)(<b>struct</b> <a class="type" href="../common/tl-parse.h.html#tl_in_state" title='tl_in_state' data-ref="tl_in_state">tl_in_state</a> *<dfn class="local col2 decl" id="402tlio_in" title='tlio_in' data-type='struct tl_in_state *' data-ref="402tlio_in">tlio_in</dfn>, <b>struct</b> <a class="type" href="engine-rpc.h.html#query_work_params" title='query_work_params' data-ref="query_work_params">query_work_params</a> *<dfn class="local col3 decl" id="403params" title='params' data-type='struct query_work_params *' data-ref="403params">params</dfn>);</td></tr>
+<tr><th id="55">55</th><td>};</td></tr>
+<tr><th id="56">56</th><td></td></tr>
+<tr><th id="57">57</th><td><u>#pragma pack(pop)</u></td></tr>
+<tr><th id="58">58</th><td></td></tr>
+<tr><th id="59">59</th><td><u>#define <dfn class="macro" id="_M/ENGINE_NO_AUTO_APPEND" data-ref="_M/ENGINE_NO_AUTO_APPEND">ENGINE_NO_AUTO_APPEND</dfn> 2</u></td></tr>
+<tr><th id="60">60</th><td><u>#define <dfn class="macro" id="_M/ENGINE_NO_PORT" data-ref="_M/ENGINE_NO_PORT">ENGINE_NO_PORT</dfn> 4</u></td></tr>
+<tr><th id="61">61</th><td></td></tr>
+<tr><th id="62">62</th><td><u>#define <dfn class="macro" id="_M/ENGINE_ENABLE_IPV6" data-ref="_M/ENGINE_ENABLE_IPV6">ENGINE_ENABLE_IPV6</dfn> 0x4ull</u></td></tr>
+<tr><th id="63">63</th><td><u>#define <dfn class="macro" id="_M/ENGINE_ENABLE_TCP" data-ref="_M/ENGINE_ENABLE_TCP">ENGINE_ENABLE_TCP</dfn> 0x10ull</u></td></tr>
+<tr><th id="64">64</th><td><u>#define <dfn class="macro" id="_M/ENGINE_ENABLE_MULTITHREAD" data-ref="_M/ENGINE_ENABLE_MULTITHREAD">ENGINE_ENABLE_MULTITHREAD</dfn> 0x1000000ull</u></td></tr>
+<tr><th id="65">65</th><td><u>#define <dfn class="macro" id="_M/ENGINE_ENABLE_SLAVE_MODE" data-ref="_M/ENGINE_ENABLE_SLAVE_MODE">ENGINE_ENABLE_SLAVE_MODE</dfn> 0x2000000ull</u></td></tr>
+<tr><th id="66">66</th><td></td></tr>
+<tr><th id="67">67</th><td><u>#define <dfn class="macro" id="_M/ENGINE_DEFAULT_ENABLED_MODULES" data-ref="_M/ENGINE_DEFAULT_ENABLED_MODULES">ENGINE_DEFAULT_ENABLED_MODULES</dfn> (ENGINE_ENABLE_TCP)</u></td></tr>
+<tr><th id="68">68</th><td></td></tr>
+<tr><th id="69">69</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="70">70</th><td>  <em>void</em> (*<dfn class="decl" id="(anonymous)::cron" title='(anonymous struct)::cron' data-ref="(anonymous)::cron">cron</dfn>) (<em>void</em>);</td></tr>
+<tr><th id="71">71</th><td>  <em>void</em> (*<dfn class="decl" id="(anonymous)::precise_cron" title='(anonymous struct)::precise_cron' data-ref="(anonymous)::precise_cron">precise_cron</dfn>) (<em>void</em>);</td></tr>
+<tr><th id="72">72</th><td>  <em>void</em> (*<dfn class="decl" id="(anonymous)::on_exit" title='(anonymous struct)::on_exit' data-ref="(anonymous)::on_exit">on_exit</dfn>) (<em>void</em>);</td></tr>
+<tr><th id="73">73</th><td>  <em>int</em> (*<dfn class="decl" id="(anonymous)::on_waiting_exit" title='(anonymous struct)::on_waiting_exit' data-ref="(anonymous)::on_waiting_exit">on_waiting_exit</dfn>) (<em>void</em>); <i>//returns 0 -&gt; stop wait and exit, X &gt; 0 wait X microsenconds */</i></td></tr>
+<tr><th id="74">74</th><td>  <em>void</em> (*<dfn class="decl" id="(anonymous)::on_safe_quit" title='(anonymous struct)::on_safe_quit' data-ref="(anonymous)::on_safe_quit">on_safe_quit</dfn>) (<em>void</em>);</td></tr>
+<tr><th id="75">75</th><td></td></tr>
+<tr><th id="76">76</th><td>  <em>void</em> (*<dfn class="decl" id="(anonymous)::close_net_sockets" title='(anonymous struct)::close_net_sockets' data-ref="(anonymous)::close_net_sockets">close_net_sockets</dfn>) (<em>void</em>);</td></tr>
+<tr><th id="77">77</th><td></td></tr>
+<tr><th id="78">78</th><td>  <em>unsigned</em> <em>long</em> <em>long</em> <dfn class="decl" id="(anonymous)::flags" title='(anonymous struct)::flags' data-ref="(anonymous)::flags">flags</dfn>;</td></tr>
+<tr><th id="79">79</th><td>  <em>unsigned</em> <em>long</em> <em>long</em> <dfn class="decl" id="(anonymous)::allowed_signals" title='(anonymous struct)::allowed_signals' data-ref="(anonymous)::allowed_signals">allowed_signals</dfn>;</td></tr>
+<tr><th id="80">80</th><td>  <em>unsigned</em> <em>long</em> <em>long</em> <dfn class="decl" id="(anonymous)::forbidden_signals" title='(anonymous struct)::forbidden_signals' data-ref="(anonymous)::forbidden_signals">forbidden_signals</dfn>;</td></tr>
+<tr><th id="81">81</th><td>  <em>unsigned</em> <em>long</em> <em>long</em> <dfn class="decl" id="(anonymous)::default_modules" title='(anonymous struct)::default_modules' data-ref="(anonymous)::default_modules">default_modules</dfn>;</td></tr>
+<tr><th id="82">82</th><td>  <em>unsigned</em> <em>long</em> <em>long</em> <dfn class="decl" id="(anonymous)::default_modules_disabled" title='(anonymous struct)::default_modules_disabled' data-ref="(anonymous)::default_modules_disabled">default_modules_disabled</dfn>;</td></tr>
+<tr><th id="83">83</th><td>  </td></tr>
+<tr><th id="84">84</th><td>  <em>void</em> (*<dfn class="decl" id="(anonymous)::prepare_stats" title='(anonymous struct)::prepare_stats' data-ref="(anonymous)::prepare_stats">prepare_stats</dfn>)(<a class="typedef" href="../common/common-stats.h.html#stats_buffer_t" title='stats_buffer_t' data-type='struct stats_buffer' data-ref="stats_buffer_t">stats_buffer_t</a> *<dfn class="local col4 decl" id="404sb" title='sb' data-type='stats_buffer_t *' data-ref="404sb">sb</dfn>);</td></tr>
+<tr><th id="85">85</th><td></td></tr>
+<tr><th id="86">86</th><td>  <em>void</em> (*<dfn class="decl" id="(anonymous)::prepare_parse_options" title='(anonymous struct)::prepare_parse_options' data-ref="(anonymous)::prepare_parse_options">prepare_parse_options</dfn>)(<em>void</em>);</td></tr>
+<tr><th id="87">87</th><td>  <em>int</em> (*<dfn class="decl" id="(anonymous)::parse_option" title='(anonymous struct)::parse_option' data-ref="(anonymous)::parse_option">parse_option</dfn>)(<em>int</em> <dfn class="local col5 decl" id="405val" title='val' data-type='int' data-ref="405val">val</dfn>);</td></tr>
+<tr><th id="88">88</th><td>  <em>void</em> (*<dfn class="decl" id="(anonymous)::parse_extra_args" title='(anonymous struct)::parse_extra_args' data-ref="(anonymous)::parse_extra_args">parse_extra_args</dfn>)(<em>int</em> <dfn class="local col6 decl" id="406count" title='count' data-type='int' data-ref="406count">count</dfn>, <em>char</em> *<dfn class="local col7 decl" id="407args" title='args' data-type='char **' data-ref="407args">args</dfn>[]);</td></tr>
+<tr><th id="89">89</th><td></td></tr>
+<tr><th id="90">90</th><td>  <em>void</em> (*<dfn class="decl" id="(anonymous)::pre_init" title='(anonymous struct)::pre_init' data-ref="(anonymous)::pre_init">pre_init</dfn>)(<em>void</em>);</td></tr>
+<tr><th id="91">91</th><td></td></tr>
+<tr><th id="92">92</th><td>  <em>void</em> (*<dfn class="decl" id="(anonymous)::pre_start" title='(anonymous struct)::pre_start' data-ref="(anonymous)::pre_start">pre_start</dfn>)(<em>void</em>);</td></tr>
+<tr><th id="93">93</th><td></td></tr>
+<tr><th id="94">94</th><td>  <em>void</em> (*<dfn class="decl" id="(anonymous)::pre_loop" title='(anonymous struct)::pre_loop' data-ref="(anonymous)::pre_loop">pre_loop</dfn>)(<em>void</em>);</td></tr>
+<tr><th id="95">95</th><td>  <em>int</em> (*<dfn class="decl" id="(anonymous)::run_script" title='(anonymous struct)::run_script' data-ref="(anonymous)::run_script">run_script</dfn>)(<em>void</em>);</td></tr>
+<tr><th id="96">96</th><td></td></tr>
+<tr><th id="97">97</th><td>  <em>const</em> <em>char</em> *<dfn class="decl" id="(anonymous)::FullVersionStr" title='(anonymous struct)::FullVersionStr' data-ref="(anonymous)::FullVersionStr">FullVersionStr</dfn>;</td></tr>
+<tr><th id="98">98</th><td>  <em>const</em> <em>char</em> *<dfn class="decl" id="(anonymous)::ShortVersionStr" title='(anonymous struct)::ShortVersionStr' data-ref="(anonymous)::ShortVersionStr">ShortVersionStr</dfn>;</td></tr>
+<tr><th id="99">99</th><td></td></tr>
+<tr><th id="100">100</th><td>  <em>int</em> <dfn class="decl" id="(anonymous)::epoll_timeout" title='(anonymous struct)::epoll_timeout' data-ref="(anonymous)::epoll_timeout">epoll_timeout</dfn>;</td></tr>
+<tr><th id="101">101</th><td>  <em>double</em> <dfn class="decl" id="(anonymous)::aio_timeout" title='(anonymous struct)::aio_timeout' data-ref="(anonymous)::aio_timeout">aio_timeout</dfn>;</td></tr>
+<tr><th id="102">102</th><td></td></tr>
+<tr><th id="103">103</th><td>  <b>struct</b> <a class="type" href="engine-rpc.h.html#tl_act_extra" title='tl_act_extra' data-ref="tl_act_extra">tl_act_extra</a> *(*<dfn class="decl" id="(anonymous)::parse_function" title='(anonymous struct)::parse_function' data-ref="(anonymous)::parse_function">parse_function</dfn>) (<b>struct</b> <a class="type" href="../common/tl-parse.h.html#tl_in_state" title='tl_in_state' data-ref="tl_in_state">tl_in_state</a> *<dfn class="local col8 decl" id="408tlio_in" title='tlio_in' data-type='struct tl_in_state *' data-ref="408tlio_in">tlio_in</dfn>, <em>long</em> <em>long</em> <dfn class="local col9 decl" id="409actor_id" title='actor_id' data-type='long long' data-ref="409actor_id">actor_id</dfn>);</td></tr>
+<tr><th id="104">104</th><td>  <em>int</em> (*<dfn class="decl" id="(anonymous)::get_op" title='(anonymous struct)::get_op' data-ref="(anonymous)::get_op">get_op</dfn>)(<b>struct</b> <a class="type" href="../common/tl-parse.h.html#tl_in_state" title='tl_in_state' data-ref="tl_in_state">tl_in_state</a> *<dfn class="local col0 decl" id="410tlio_in" title='tlio_in' data-type='struct tl_in_state *' data-ref="410tlio_in">tlio_in</dfn>);</td></tr>
+<tr><th id="105">105</th><td></td></tr>
+<tr><th id="106">106</th><td>  <em>void</em> (*<dfn class="decl" id="(anonymous)::signal_handlers" title='(anonymous struct)::signal_handlers' data-ref="(anonymous)::signal_handlers">signal_handlers</dfn>[<var>65</var>])(<em>void</em>);</td></tr>
+<tr><th id="107">107</th><td>  <b>struct</b> <a class="type" href="#rpc_custom_op" title='rpc_custom_op' data-ref="rpc_custom_op">rpc_custom_op</a> *<dfn class="decl" id="(anonymous)::custom_ops" title='(anonymous struct)::custom_ops' data-ref="(anonymous)::custom_ops">custom_ops</dfn>;</td></tr>
+<tr><th id="108">108</th><td></td></tr>
+<tr><th id="109">109</th><td>  <b>struct</b> <a class="type" href="../net/net-tcp-rpc-server.h.html#tcp_rpc_server_functions" title='tcp_rpc_server_functions' data-ref="tcp_rpc_server_functions">tcp_rpc_server_functions</a> *<dfn class="decl" id="(anonymous)::tcp_methods" title='(anonymous struct)::tcp_methods' data-ref="(anonymous)::tcp_methods">tcp_methods</dfn>;</td></tr>
+<tr><th id="110">110</th><td></td></tr>
+<tr><th id="111">111</th><td>  <a class="typedef" href="../net/net-connections.h.html#conn_type_t" title='conn_type_t' data-type='struct conn_functions' data-ref="conn_type_t">conn_type_t</a> *<dfn class="decl" id="(anonymous)::http_type" title='(anonymous struct)::http_type' data-ref="(anonymous)::http_type">http_type</dfn>;</td></tr>
+<tr><th id="112">112</th><td>  <b>struct</b> <a class="type" href="../net/net-http-server.h.html#http_server_functions" title='http_server_functions' data-ref="http_server_functions">http_server_functions</a> *<dfn class="decl" id="(anonymous)::http_functions" title='(anonymous struct)::http_functions' data-ref="(anonymous)::http_functions">http_functions</dfn>;</td></tr>
+<tr><th id="113">113</th><td></td></tr>
+<tr><th id="114">114</th><td>  <em>int</em> <dfn class="decl" id="(anonymous)::cron_subclass" title='(anonymous struct)::cron_subclass' data-ref="(anonymous)::cron_subclass">cron_subclass</dfn>;</td></tr>
+<tr><th id="115">115</th><td>  <em>int</em> <dfn class="decl" id="(anonymous)::precise_cron_subclass" title='(anonymous struct)::precise_cron_subclass' data-ref="(anonymous)::precise_cron_subclass">precise_cron_subclass</dfn>;</td></tr>
+<tr><th id="116">116</th><td>} <dfn class="typedef" id="server_functions_t" title='server_functions_t' data-type='struct server_functions_t' data-ref="server_functions_t">server_functions_t</dfn>;</td></tr>
+<tr><th id="117">117</th><td></td></tr>
+<tr><th id="118">118</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="119">119</th><td>  <b>struct</b> <a class="type" href="../../include/netinet/in.h.html#in_addr" title='in_addr' data-ref="in_addr">in_addr</a> <dfn class="decl" id="(anonymous)::settings_addr" title='(anonymous struct)::settings_addr' data-ref="(anonymous)::settings_addr">settings_addr</dfn>;</td></tr>
+<tr><th id="120">120</th><td>  <em>int</em> <dfn class="decl" id="(anonymous)::do_not_open_port" title='(anonymous struct)::do_not_open_port' data-ref="(anonymous)::do_not_open_port">do_not_open_port</dfn>;</td></tr>
+<tr><th id="121">121</th><td>  <em>int</em> <dfn class="decl" id="(anonymous)::epoll_wait_timeout" title='(anonymous struct)::epoll_wait_timeout' data-ref="(anonymous)::epoll_wait_timeout">epoll_wait_timeout</dfn>;</td></tr>
+<tr><th id="122">122</th><td>  <em>int</em> <dfn class="decl" id="(anonymous)::sfd" title='(anonymous struct)::sfd' data-ref="(anonymous)::sfd">sfd</dfn>;</td></tr>
+<tr><th id="123">123</th><td></td></tr>
+<tr><th id="124">124</th><td>  <em>unsigned</em> <em>long</em> <em>long</em> <dfn class="decl" id="(anonymous)::modules" title='(anonymous struct)::modules' data-ref="(anonymous)::modules">modules</dfn>;</td></tr>
+<tr><th id="125">125</th><td>  <em>int</em> <dfn class="decl" id="(anonymous)::port" title='(anonymous struct)::port' data-ref="(anonymous)::port">port</dfn>;</td></tr>
+<tr><th id="126">126</th><td>  <em>int</em> <dfn class="decl" id="(anonymous)::start_port" title='(anonymous struct)::start_port' data-ref="(anonymous)::start_port">start_port</dfn>, <dfn class="decl" id="(anonymous)::end_port" title='(anonymous struct)::end_port' data-ref="(anonymous)::end_port">end_port</dfn>;</td></tr>
+<tr><th id="127">127</th><td></td></tr>
+<tr><th id="128">128</th><td>  <em>int</em> <dfn class="decl" id="(anonymous)::backlog" title='(anonymous struct)::backlog' data-ref="(anonymous)::backlog">backlog</dfn>;</td></tr>
+<tr><th id="129">129</th><td>  <em>int</em> <dfn class="decl" id="(anonymous)::maxconn" title='(anonymous struct)::maxconn' data-ref="(anonymous)::maxconn">maxconn</dfn>;</td></tr>
+<tr><th id="130">130</th><td>  <em>int</em> <dfn class="decl" id="(anonymous)::required_io_threads" title='(anonymous struct)::required_io_threads' data-ref="(anonymous)::required_io_threads">required_io_threads</dfn>;</td></tr>
+<tr><th id="131">131</th><td>  <em>int</em> <dfn class="decl" id="(anonymous)::required_cpu_threads" title='(anonymous struct)::required_cpu_threads' data-ref="(anonymous)::required_cpu_threads">required_cpu_threads</dfn>;</td></tr>
+<tr><th id="132">132</th><td>  <em>int</em> <dfn class="decl" id="(anonymous)::required_tcp_cpu_threads" title='(anonymous struct)::required_tcp_cpu_threads' data-ref="(anonymous)::required_tcp_cpu_threads">required_tcp_cpu_threads</dfn>;</td></tr>
+<tr><th id="133">133</th><td>  <em>int</em> <dfn class="decl" id="(anonymous)::required_tcp_io_threads" title='(anonymous struct)::required_tcp_io_threads' data-ref="(anonymous)::required_tcp_io_threads">required_tcp_io_threads</dfn>;</td></tr>
+<tr><th id="134">134</th><td>  </td></tr>
+<tr><th id="135">135</th><td>  <em>char</em> *<dfn class="decl" id="(anonymous)::aes_pwd_file" title='(anonymous struct)::aes_pwd_file' data-ref="(anonymous)::aes_pwd_file">aes_pwd_file</dfn>;</td></tr>
+<tr><th id="136">136</th><td></td></tr>
+<tr><th id="137">137</th><td>  <a class="typedef" href="#server_functions_t" title='server_functions_t' data-type='struct server_functions_t' data-ref="server_functions_t">server_functions_t</a> *<dfn class="decl" id="(anonymous)::F" title='(anonymous struct)::F' data-ref="(anonymous)::F">F</dfn>;</td></tr>
+<tr><th id="138">138</th><td>} <dfn class="typedef" id="engine_t" title='engine_t' data-type='struct engine_t' data-ref="engine_t">engine_t</dfn>;</td></tr>
+<tr><th id="139">139</th><td></td></tr>
+<tr><th id="140">140</th><td><b>typedef</b> <b>struct</b> <dfn class="type def" id="event_precise_cron" title='event_precise_cron' data-ref="event_precise_cron"><a class="type" href="#event_precise_cron" title='event_precise_cron' data-ref="event_precise_cron">event_precise_cron</a></dfn> {</td></tr>
+<tr><th id="141">141</th><td>  <b>struct</b> <a class="type" href="#event_precise_cron" title='event_precise_cron' data-ref="event_precise_cron">event_precise_cron</a> *<dfn class="decl" id="event_precise_cron::next" title='event_precise_cron::next' data-ref="event_precise_cron::next">next</dfn>, *<dfn class="decl" id="event_precise_cron::prev" title='event_precise_cron::prev' data-ref="event_precise_cron::prev">prev</dfn>;</td></tr>
+<tr><th id="142">142</th><td>  <em>void</em> (*<dfn class="decl" id="event_precise_cron::wakeup" title='event_precise_cron::wakeup' data-ref="event_precise_cron::wakeup">wakeup</dfn>)(<b>struct</b> <a class="type" href="#event_precise_cron" title='event_precise_cron' data-ref="event_precise_cron">event_precise_cron</a> *<dfn class="local col1 decl" id="411arg" title='arg' data-type='struct event_precise_cron *' data-ref="411arg">arg</dfn>);</td></tr>
+<tr><th id="143">143</th><td>} <dfn class="typedef" id="event_precise_cron_t" title='event_precise_cron_t' data-type='struct event_precise_cron' data-ref="event_precise_cron_t">event_precise_cron_t</dfn>;</td></tr>
+<tr><th id="144">144</th><td></td></tr>
+<tr><th id="145">145</th><td><em>void</em> <dfn class="decl" id="precise_cron_function_insert" title='precise_cron_function_insert' data-ref="precise_cron_function_insert">precise_cron_function_insert</dfn> (<b>struct</b> <a class="type" href="#event_precise_cron" title='event_precise_cron' data-ref="event_precise_cron">event_precise_cron</a> *<dfn class="local col2 decl" id="412ev" title='ev' data-type='struct event_precise_cron *' data-ref="412ev">ev</dfn>);</td></tr>
+<tr><th id="146">146</th><td><em>void</em> <dfn class="decl" id="precise_cron_function_remove" title='precise_cron_function_remove' data-ref="precise_cron_function_remove">precise_cron_function_remove</dfn> (<b>struct</b> <a class="type" href="#event_precise_cron" title='event_precise_cron' data-ref="event_precise_cron">event_precise_cron</a> *<dfn class="local col3 decl" id="413ev" title='ev' data-type='struct event_precise_cron *' data-ref="413ev">ev</dfn>);</td></tr>
+<tr><th id="147">147</th><td></td></tr>
+<tr><th id="148">148</th><td><em>void</em> <dfn class="decl" id="set_signals_handlers" title='set_signals_handlers' data-ref="set_signals_handlers">set_signals_handlers</dfn> (<em>void</em>);</td></tr>
+<tr><th id="149">149</th><td><em>void</em> <dfn class="decl" id="engine_init" title='engine_init' data-ref="engine_init">engine_init</dfn> (<em>const</em> <em>char</em> *<em>const</em> <dfn class="local col4 decl" id="414pwd_filename" title='pwd_filename' data-type='const char *const' data-ref="414pwd_filename">pwd_filename</dfn>, <em>int</em> <dfn class="local col5 decl" id="415do_not_open_port" title='do_not_open_port' data-type='int' data-ref="415do_not_open_port">do_not_open_port</dfn>);</td></tr>
+<tr><th id="150">150</th><td><em>void</em> <dfn class="decl" id="engine_set_epoll_wait_timeout" title='engine_set_epoll_wait_timeout' data-ref="engine_set_epoll_wait_timeout">engine_set_epoll_wait_timeout</dfn> (<em>int</em> <dfn class="local col6 decl" id="416epoll_wait_timeout" title='epoll_wait_timeout' data-type='int' data-ref="416epoll_wait_timeout">epoll_wait_timeout</dfn>);</td></tr>
+<tr><th id="151">151</th><td><em>int</em> <dfn class="decl" id="signal_check_pending_and_clear" title='signal_check_pending_and_clear' data-ref="signal_check_pending_and_clear">signal_check_pending_and_clear</dfn> (<em>int</em> <dfn class="local col7 decl" id="417sig" title='sig' data-type='int' data-ref="417sig">sig</dfn>);</td></tr>
+<tr><th id="152">152</th><td><em>int</em> <dfn class="decl" id="signal_check_pending" title='signal_check_pending' data-ref="signal_check_pending">signal_check_pending</dfn> (<em>int</em> <dfn class="local col8 decl" id="418sig" title='sig' data-type='int' data-ref="418sig">sig</dfn>);</td></tr>
+<tr><th id="153">153</th><td><em>void</em> <dfn class="decl" id="signal_set_pending" title='signal_set_pending' data-ref="signal_set_pending">signal_set_pending</dfn> (<em>int</em> <dfn class="local col9 decl" id="419sig" title='sig' data-type='int' data-ref="419sig">sig</dfn>);</td></tr>
+<tr><th id="154">154</th><td></td></tr>
+<tr><th id="155">155</th><td><u>#define <dfn class="macro" id="_M/ENGINE_FLAG_PARAM" data-ref="_M/ENGINE_FLAG_PARAM">ENGINE_FLAG_PARAM</dfn>(name,flag) \</u></td></tr>
+<tr><th id="156">156</th><td><u>  static inline void engine_enable_ ## name (void) { <a class="ref" href="#engine_state" title='engine_state' data-ref="engine_state">engine_state</a>-&gt;<a class="ref" href="#(anonymous)::modules" title='(anonymous struct)::modules' data-ref="(anonymous)::modules">modules</a> |= ENGINE_ENABLE_ ## flag; } \</u></td></tr>
+<tr><th id="157">157</th><td><u>  static inline void engine_disable_ ## name (void) { <a class="ref" href="#engine_state" title='engine_state' data-ref="engine_state">engine_state</a>-&gt;<a class="ref" href="#(anonymous)::modules" title='(anonymous struct)::modules' data-ref="(anonymous)::modules">modules</a> &amp;= ~ENGINE_ENABLE_ ## flag; } \</u></td></tr>
+<tr><th id="158">158</th><td><u>  static inline int engine_check_ ## name ## _enabled (void) { return (<a class="ref" href="#engine_state" title='engine_state' data-ref="engine_state">engine_state</a>-&gt;<a class="ref" href="#(anonymous)::modules" title='(anonymous struct)::modules' data-ref="(anonymous)::modules">modules</a> &amp; ENGINE_ENABLE_ ## flag) != 0; } \</u></td></tr>
+<tr><th id="159">159</th><td><u>  static inline int engine_check_ ## name ## _disabled (void) { return (<a class="ref" href="#engine_state" title='engine_state' data-ref="engine_state">engine_state</a>-&gt;<a class="ref" href="#(anonymous)::modules" title='(anonymous struct)::modules' data-ref="(anonymous)::modules">modules</a> &amp; ENGINE_ENABLE_ ## flag) == 0; }</u> \</td></tr>
+<tr><th id="160">160</th><td></td></tr>
+<tr><th id="161">161</th><td><u>#define <dfn class="macro" id="_M/ENGINE_STR_PARAM" data-ref="_M/ENGINE_STR_PARAM">ENGINE_STR_PARAM</dfn>(name,field) \</u></td></tr>
+<tr><th id="162">162</th><td><u>  static inline void engine_set_ ## name (const char *<dfn class="local col0 decl" id="420s" title='s' data-type='const char *' data-ref="420s">s</dfn>) { \</u></td></tr>
+<tr><th id="163">163</th><td><u>    if (<a class="ref" href="#engine_state" title='engine_state' data-ref="engine_state">engine_state</a>-&gt;field) { \</u></td></tr>
+<tr><th id="164">164</th><td><u>      <a class="ref" href="../../include/stdlib.h.html#free" title='free' data-ref="free">free</a> (<a class="ref" href="#engine_state" title='engine_state' data-ref="engine_state">engine_state</a>-&gt;field); \</u></td></tr>
+<tr><th id="165">165</th><td><u>    } \</u></td></tr>
+<tr><th id="166">166</th><td><u>    <a class="ref" href="#engine_state" title='engine_state' data-ref="engine_state">engine_state</a>-&gt;field = <a class="local col0 ref" href="#193" title='s' data-ref="420s">s</a> ? strdup (<a class="local col0 ref" href="#193" title='s' data-ref="420s">s</a>) : NULL; \</u></td></tr>
+<tr><th id="167">167</th><td><u>  } \</u></td></tr>
+<tr><th id="168">168</th><td><u>  static inline const char *engine_get_ ## name (void) { \</u></td></tr>
+<tr><th id="169">169</th><td><u>    return <a class="ref" href="#engine_state" title='engine_state' data-ref="engine_state">engine_state</a>-&gt;field; \</u></td></tr>
+<tr><th id="170">170</th><td><u>  }</u> \</td></tr>
+<tr><th id="171">171</th><td></td></tr>
+<tr><th id="172">172</th><td></td></tr>
+<tr><th id="173">173</th><td><u>#define <dfn class="macro" id="_M/ENGINE_T_PARAM" data-ref="_M/ENGINE_T_PARAM">ENGINE_T_PARAM</dfn>(type,name,field) \</u></td></tr>
+<tr><th id="174">174</th><td><u>  static inline void engine_set_ ## name (type <dfn class="local col1 decl" id="421s" title='s' data-type='int' data-ref="421s"><dfn class="local col2 decl" id="422s" title='s' data-type='int' data-ref="422s"><dfn class="local col3 decl" id="423s" title='s' data-type='int' data-ref="423s"><dfn class="local col4 decl" id="424s" title='s' data-type='int' data-ref="424s"><dfn class="local col5 decl" id="425s" title='s' data-type='int' data-ref="425s">s</dfn></dfn></dfn></dfn></dfn>) { \</u></td></tr>
+<tr><th id="175">175</th><td><u>    <a class="ref" href="#engine_state" title='engine_state' data-ref="engine_state">engine_state</a>-&gt;field = <a class="local col1 ref" href="#195" title='s' data-ref="421s"><a class="local col2 ref" href="#196" title='s' data-ref="422s"><a class="local col3 ref" href="#197" title='s' data-ref="423s"><a class="local col4 ref" href="#198" title='s' data-ref="424s"><a class="local col5 ref" href="#199" title='s' data-ref="425s">s</a></a></a></a></a>;\</u></td></tr>
+<tr><th id="176">176</th><td><u>  } \</u></td></tr>
+<tr><th id="177">177</th><td><u>  static inline type engine_get_ ## name (void) { \</u></td></tr>
+<tr><th id="178">178</th><td><u>    return <a class="ref" href="#engine_state" title='engine_state' data-ref="engine_state">engine_state</a>-&gt;field; \</u></td></tr>
+<tr><th id="179">179</th><td><u>  }</u> \</td></tr>
+<tr><th id="180">180</th><td></td></tr>
+<tr><th id="181">181</th><td><u>#define <dfn class="macro" id="_M/ENGINE_INT_PARAM" data-ref="_M/ENGINE_INT_PARAM">ENGINE_INT_PARAM</dfn>(name,field) ENGINE_T_PARAM(int,name,field)</u></td></tr>
+<tr><th id="182">182</th><td><u>#define <dfn class="macro" id="_M/ENGINE_DOUBLE_PARAM" data-ref="_M/ENGINE_DOUBLE_PARAM">ENGINE_DOUBLE_PARAM</dfn>(name,field) ENGINE_T_PARAM(double,name,field)</u></td></tr>
+<tr><th id="183">183</th><td><u>#define <dfn class="macro" id="_M/ENGINE_LONG_PARAM" data-ref="_M/ENGINE_LONG_PARAM">ENGINE_LONG_PARAM</dfn>(name,field) ENGINE_T_PARAM(long long,name,field)</u></td></tr>
+<tr><th id="184">184</th><td></td></tr>
+<tr><th id="185">185</th><td><b>extern</b> <a class="typedef" href="#engine_t" title='engine_t' data-type='struct engine_t' data-ref="engine_t">engine_t</a> *<dfn class="decl" id="engine_state" title='engine_state' data-ref="engine_state">engine_state</dfn>;</td></tr>
+<tr><th id="186">186</th><td></td></tr>
+<tr><th id="187">187</th><td><a class="macro" href="#155" title="static inline void engine_enable_ipv6 (void) { engine_state-&gt;modules |= 0x4ull; } static inline void engine_disable_ipv6 (void) { engine_state-&gt;modules &amp;= ~0x4ull; } static inline int engine_check_ipv6_enabled (void) { return (engine_state-&gt;modules &amp; 0x4ull) != 0; } static inline int engine_check_ipv6_disabled (void) { return (engine_state-&gt;modules &amp; 0x4ull) == 0; }" data-ref="_M/ENGINE_FLAG_PARAM">ENGINE_FLAG_PARAM</a>(ipv6,IPV6)</td></tr>
+<tr><th id="188">188</th><td><a class="macro" href="#155" title="static inline void engine_enable_tcp (void) { engine_state-&gt;modules |= 0x10ull; } static inline void engine_disable_tcp (void) { engine_state-&gt;modules &amp;= ~0x10ull; } static inline int engine_check_tcp_enabled (void) { return (engine_state-&gt;modules &amp; 0x10ull) != 0; } static inline int engine_check_tcp_disabled (void) { return (engine_state-&gt;modules &amp; 0x10ull) == 0; }" data-ref="_M/ENGINE_FLAG_PARAM">ENGINE_FLAG_PARAM</a>(tcp,TCP)</td></tr>
+<tr><th id="189">189</th><td></td></tr>
+<tr><th id="190">190</th><td><a class="macro" href="#155" title="static inline void engine_enable_multithread (void) { engine_state-&gt;modules |= 0x1000000ull; } static inline void engine_disable_multithread (void) { engine_state-&gt;modules &amp;= ~0x1000000ull; } static inline int engine_check_multithread_enabled (void) { return (engine_state-&gt;modules &amp; 0x1000000ull) != 0; } static inline int engine_check_multithread_disabled (void) { return (engine_state-&gt;modules &amp; 0x1000000ull) == 0; }" data-ref="_M/ENGINE_FLAG_PARAM">ENGINE_FLAG_PARAM</a>(multithread,MULTITHREAD)</td></tr>
+<tr><th id="191">191</th><td><a class="macro" href="#155" title="static inline void engine_enable_slave_mode (void) { engine_state-&gt;modules |= 0x2000000ull; } static inline void engine_disable_slave_mode (void) { engine_state-&gt;modules &amp;= ~0x2000000ull; } static inline int engine_check_slave_mode_enabled (void) { return (engine_state-&gt;modules &amp; 0x2000000ull) != 0; } static inline int engine_check_slave_mode_disabled (void) { return (engine_state-&gt;modules &amp; 0x2000000ull) == 0; }" data-ref="_M/ENGINE_FLAG_PARAM">ENGINE_FLAG_PARAM</a>(slave_mode,SLAVE_MODE)</td></tr>
+<tr><th id="192">192</th><td></td></tr>
+<tr><th id="193">193</th><td><a class="macro" href="#161" title="static inline void engine_set_aes_pwd_file (const char *s) { if (engine_state-&gt;aes_pwd_file) { free (engine_state-&gt;aes_pwd_file); } engine_state-&gt;aes_pwd_file = s ? (__extension__ (__builtin_constant_p (s) &amp;&amp; ((size_t)(const void *)((s) + 1) - (size_t)(const void *)(s) == 1) ? (((const char *) (s))[0] == &apos;\0&apos; ? (char *) calloc ((size_t) 1, (size_t) 1) : ({ size_t __len = strlen (s) + 1; char *__retval = (char *) malloc (__len); if (__retval != ((void*)0)) __retval = (char *) memcpy (__retval, s, __len); __retval; })) : __strdup (s))) : ((void*)0); } static inline const char *engine_get_aes_pwd_file (void) { return engine_state-&gt;aes_pwd_file; }" data-ref="_M/ENGINE_STR_PARAM">ENGINE_STR_PARAM</a>(aes_pwd_file,<a class="ref" href="#(anonymous)::aes_pwd_file" title='(anonymous struct)::aes_pwd_file' data-ref="(anonymous)::aes_pwd_file">aes_pwd_file</a>) </td></tr>
+<tr><th id="194">194</th><td> </td></tr>
+<tr><th id="195">195</th><td><a class="macro" href="#181" title="static inline void engine_set_backlog (int s) { engine_state-&gt;backlog = s; } static inline int engine_get_backlog (void) { return engine_state-&gt;backlog; }" data-ref="_M/ENGINE_INT_PARAM">ENGINE_INT_PARAM</a>(backlog,<a class="ref" href="#(anonymous)::backlog" title='(anonymous struct)::backlog' data-ref="(anonymous)::backlog">backlog</a>);</td></tr>
+<tr><th id="196">196</th><td><a class="macro" href="#181" title="static inline void engine_set_required_io_threads (int s) { engine_state-&gt;required_io_threads = s; } static inline int engine_get_required_io_threads (void) { return engine_state-&gt;required_io_threads; }" data-ref="_M/ENGINE_INT_PARAM">ENGINE_INT_PARAM</a>(required_io_threads,<a class="ref" href="#(anonymous)::required_io_threads" title='(anonymous struct)::required_io_threads' data-ref="(anonymous)::required_io_threads">required_io_threads</a>);</td></tr>
+<tr><th id="197">197</th><td><a class="macro" href="#181" title="static inline void engine_set_required_cpu_threads (int s) { engine_state-&gt;required_cpu_threads = s; } static inline int engine_get_required_cpu_threads (void) { return engine_state-&gt;required_cpu_threads; }" data-ref="_M/ENGINE_INT_PARAM">ENGINE_INT_PARAM</a>(required_cpu_threads,<a class="ref" href="#(anonymous)::required_cpu_threads" title='(anonymous struct)::required_cpu_threads' data-ref="(anonymous)::required_cpu_threads">required_cpu_threads</a>);</td></tr>
+<tr><th id="198">198</th><td><a class="macro" href="#181" title="static inline void engine_set_required_tcp_cpu_threads (int s) { engine_state-&gt;required_tcp_cpu_threads = s; } static inline int engine_get_required_tcp_cpu_threads (void) { return engine_state-&gt;required_tcp_cpu_threads; }" data-ref="_M/ENGINE_INT_PARAM">ENGINE_INT_PARAM</a>(required_tcp_cpu_threads,<a class="ref" href="#(anonymous)::required_tcp_cpu_threads" title='(anonymous struct)::required_tcp_cpu_threads' data-ref="(anonymous)::required_tcp_cpu_threads">required_tcp_cpu_threads</a>);</td></tr>
+<tr><th id="199">199</th><td><a class="macro" href="#181" title="static inline void engine_set_required_tcp_io_threads (int s) { engine_state-&gt;required_tcp_io_threads = s; } static inline int engine_get_required_tcp_io_threads (void) { return engine_state-&gt;required_tcp_io_threads; }" data-ref="_M/ENGINE_INT_PARAM">ENGINE_INT_PARAM</a>(required_tcp_io_threads,<a class="ref" href="#(anonymous)::required_tcp_io_threads" title='(anonymous struct)::required_tcp_io_threads' data-ref="(anonymous)::required_tcp_io_threads">required_tcp_io_threads</a>);</td></tr>
+<tr><th id="200">200</th><td></td></tr>
+<tr><th id="201">201</th><td><em>void</em> <a class="decl" href="../common/kprintf.h.html#reopen_logs" title='reopen_logs' data-ref="reopen_logs" id="reopen_logs">reopen_logs</a> (<em>void</em>);</td></tr>
+<tr><th id="202">202</th><td><em>int</em> <dfn class="decl" id="default_main" title='default_main' data-ref="default_main">default_main</dfn> (<a class="typedef" href="#server_functions_t" title='server_functions_t' data-type='struct server_functions_t' data-ref="server_functions_t">server_functions_t</a> *<dfn class="local col6 decl" id="426F" title='F' data-type='server_functions_t *' data-ref="426F">F</dfn>, <em>int</em> <dfn class="local col7 decl" id="427argc" title='argc' data-type='int' data-ref="427argc">argc</dfn>, <em>char</em> *<dfn class="local col8 decl" id="428argv" title='argv' data-type='char **' data-ref="428argv">argv</dfn>[]);</td></tr>
+<tr><th id="203">203</th><td><em>void</em> <dfn class="decl" id="default_parse_extra_args" title='default_parse_extra_args' data-ref="default_parse_extra_args">default_parse_extra_args</dfn> (<em>int</em> <dfn class="local col9 decl" id="429argc" title='argc' data-type='int' data-ref="429argc">argc</dfn>, <em>char</em> *<dfn class="local col0 decl" id="430argv" title='argv' data-type='char **' data-ref="430argv">argv</dfn>[]);</td></tr>
+<tr><th id="204">204</th><td><em>void</em> <dfn class="decl" id="engine_tl_init" title='engine_tl_init' data-ref="engine_tl_init">engine_tl_init</dfn> (<b>struct</b> <a class="type" href="engine-rpc.h.html#tl_act_extra" title='tl_act_extra' data-ref="tl_act_extra">tl_act_extra</a> *(*<dfn class="local col1 decl" id="431parse" title='parse' data-type='struct tl_act_extra *(*)(struct tl_in_state *, long long)' data-ref="431parse">parse</dfn>)(<b>struct</b> <a class="type" href="../common/tl-parse.h.html#tl_in_state" title='tl_in_state' data-ref="tl_in_state">tl_in_state</a> *,<em>long</em> <em>long</em>), <em>void</em> (*<dfn class="local col2 decl" id="432stat" title='stat' data-type='void (*)()' data-ref="432stat">stat</dfn>)(), <em>int</em> (<dfn class="local col3 decl" id="433get_op" title='get_op' data-type='int (*)(struct tl_in_state *)' data-ref="433get_op">get_op</dfn>)(<b>struct</b> <a class="type" href="../common/tl-parse.h.html#tl_in_state" title='tl_in_state' data-ref="tl_in_state">tl_in_state</a> *), <em>double</em> <dfn class="local col4 decl" id="434timeout" title='timeout' data-type='double' data-ref="434timeout">timeout</dfn>, <em>const</em> <em>char</em> *<dfn class="local col5 decl" id="435name" title='name' data-type='const char *' data-ref="435name">name</dfn>);</td></tr>
+<tr><th id="205">205</th><td><em>void</em> <dfn class="decl" id="server_init" title='server_init' data-ref="server_init">server_init</dfn> (<a class="typedef" href="../net/net-connections.h.html#conn_type_t" title='conn_type_t' data-type='struct conn_functions' data-ref="conn_type_t">conn_type_t</a> *<dfn class="local col6 decl" id="436listen_connection_type" title='listen_connection_type' data-type='conn_type_t *' data-ref="436listen_connection_type">listen_connection_type</dfn>, <em>void</em> *<dfn class="local col7 decl" id="437listen_connection_extra" title='listen_connection_extra' data-type='void *' data-ref="437listen_connection_extra">listen_connection_extra</dfn>);</td></tr>
+<tr><th id="206">206</th><td><em>void</em> <dfn class="decl" id="usage" title='usage' data-ref="usage">usage</dfn> (<em>void</em>);</td></tr>
+<tr><th id="207">207</th><td></td></tr>
+<tr><th id="208">208</th><td><b>extern</b> <a class="typedef" href="#engine_t" title='engine_t' data-type='struct engine_t' data-ref="engine_t">engine_t</a> *<a class="decl" href="#engine_state" title='engine_state' data-ref="engine_state">engine_state</a>;</td></tr>
+<tr><th id="209">209</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../common/tl-parse.c.html'>MTProxy/common/tl-parse.c</a><br/>Generated on <em>2018-Jun-02</em> from project MTProxy revision <em>842f343decf6c463bdecf1862e357c4a03e4bc97</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

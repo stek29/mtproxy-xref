@@ -1,0 +1,2 @@
+<dec f='include/time.h' l='249' type='struct tm * gmtime_r(const time_t *restrict __timer, struct tm *restrict __tp)'/>
+<use f='MTProxy/common/common-stats.c' l='325' u='c' c='sbp_print_date'/>

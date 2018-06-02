@@ -1,0 +1,6 @@
+<dec f='include/stdio.h' l='390' type='int vsnprintf(char *restrict __s, size_t __maxlen, const char *restrict __format, struct __va_list_tag * __arg)'/>
+<use f='MTProxy/common/common-stats.c' l='254' u='c' c='sb_printf'/>
+<use f='MTProxy/common/common-stats.c' l='262' u='c' c='sb_printf'/>
+<use f='MTProxy/common/kprintf.c' l='262' u='c' c='kprintf'/>
+<use f='MTProxy/common/tl-parse.c' l='120' u='c' c='tlf_set_error_format'/>
+<use f='MTProxy/common/tl-parse.c' l='136' u='c' c='tls_set_error_format'/>

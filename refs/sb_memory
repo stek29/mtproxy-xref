@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/common-stats.h' l='83' type='void sb_memory(stats_buffer_t * sb, int flags)'/>
+<def f='MTProxy/common/common-stats.c' l='272' ll='290' type='void sb_memory(stats_buffer_t * sb, int flags)'/>
+<doc f='MTProxy/common/common-stats.c' l='270'>/************************************************************************************/</doc>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='589' u='c' c='mtfront_prepare_stats'/>

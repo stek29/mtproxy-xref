@@ -1,0 +1,3 @@
+<dec f='include/openssl/bn.h' l='435' type='int BN_num_bits(const BIGNUM * a)'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='158' macro='1' u='c'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='195' macro='1' u='c'/>

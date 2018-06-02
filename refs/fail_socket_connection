@@ -1,0 +1,9 @@
+<dec f='MTProxy/net/net-connections.h' l='330' type='void fail_socket_connection(socket_connection_job_t C, int who)'/>
+<def f='MTProxy/net/net-connections.c' l='792' ll='810' type='void fail_socket_connection(socket_connection_job_t C, int who)'/>
+<use f='MTProxy/net/net-connections.c' l='1144' u='c' c='do_socket_connection_job'/>
+<doc f='MTProxy/net/net-connections.c' l='787'>/*
+  Have to have lock on socket_connection to run this method
+
+  removes event from evemt heap and epoll
+*/</doc>
+<doc f='MTProxy/net/net-connections.c' l='792'>/* {{{ */</doc>

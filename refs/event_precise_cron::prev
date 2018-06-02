@@ -1,0 +1,14 @@
+<dec f='MTProxy/engine/engine.h' l='141' type='struct event_precise_cron *'/>
+<offset>64</offset>
+<use f='MTProxy/engine/engine.c' l='339' u='w'/>
+<use f='MTProxy/engine/engine.c' l='344' u='w' c='precise_cron_function_insert'/>
+<use f='MTProxy/engine/engine.c' l='344' u='r' c='precise_cron_function_insert'/>
+<use f='MTProxy/engine/engine.c' l='345' u='w' c='precise_cron_function_insert'/>
+<use f='MTProxy/engine/engine.c' l='345' u='r' c='precise_cron_function_insert'/>
+<use f='MTProxy/engine/engine.c' l='349' u='w' c='precise_cron_function_remove'/>
+<use f='MTProxy/engine/engine.c' l='349' u='r' c='precise_cron_function_remove'/>
+<use f='MTProxy/engine/engine.c' l='350' u='r' c='precise_cron_function_remove'/>
+<use f='MTProxy/engine/engine.c' l='351' u='w' c='precise_cron_function_remove'/>
+<use f='MTProxy/engine/engine.c' l='371' u='w' c='do_precise_cron'/>
+<use f='MTProxy/engine/engine.c' l='372' u='r' c='do_precise_cron'/>
+<use f='MTProxy/engine/engine.c' l='373' u='w' c='do_precise_cron'/>

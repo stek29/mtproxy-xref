@@ -1,0 +1,10 @@
+<dec f='MTProxy/net/net-connections.h' l='221' type='double'/>
+<offset>3520</offset>
+<use f='MTProxy/engine/engine-rpc.c' l='837' u='w' c='default_tl_tcp_rpcs_execute'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='919' u='w' c='rpcc_execute'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='960' u='w' c='mtfront_client_ready'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='139' u='w' c='tcp_rpc_default_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='150' u='w' c='tcp_rpc_default_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='336' u='w' c='tcp_rpcs_compact_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='105' u='w' c='tcp_rpcs_default_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='436' u='w' c='tcp_rpcs_parse_execute'/>

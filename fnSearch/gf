@@ -1,0 +1,7 @@
+gf32_combine_clmul|gf32_combine_clmul
+gf32_combine_generic|gf32_combine_generic
+gf32_compute_powers_clmul|gf32_compute_powers_clmul
+gf32_compute_powers_generic|gf32_compute_powers_generic
+gf32_mul|gf32_mul
+gf32_mulx|gf32_mulx
+gf32_pow|gf32_pow

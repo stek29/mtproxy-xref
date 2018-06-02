@@ -1,0 +1,20 @@
+<def f='MTProxy/net/net-tcp-rpc-server.h' l='31' ll='48'/>
+<size>136</size>
+<mbr r='tcp_rpc_server_functions::info' o='0' t='void *'/>
+<mbr r='tcp_rpc_server_functions::rpc_extra' o='64' t='void *'/>
+<mbr r='tcp_rpc_server_functions::execute' o='128' t='int (*)(connection_job_t, int, struct raw_message *)'/>
+<mbr r='tcp_rpc_server_functions::check_ready' o='192' t='int (*)(connection_job_t)'/>
+<mbr r='tcp_rpc_server_functions::flush_packet' o='256' t='int (*)(connection_job_t)'/>
+<mbr r='tcp_rpc_server_functions::rpc_check_perm' o='320' t='int (*)(connection_job_t)'/>
+<mbr r='tcp_rpc_server_functions::rpc_init_crypto' o='384' t='int (*)(connection_job_t, struct tcp_rpc_nonce_packet *)'/>
+<mbr r='tcp_rpc_server_functions::nop' o='448' t='void *'/>
+<mbr r='tcp_rpc_server_functions::rpc_wakeup' o='512' t='int (*)(connection_job_t)'/>
+<mbr r='tcp_rpc_server_functions::rpc_alarm' o='576' t='int (*)(connection_job_t)'/>
+<mbr r='tcp_rpc_server_functions::rpc_ready' o='640' t='int (*)(connection_job_t)'/>
+<mbr r='tcp_rpc_server_functions::rpc_close' o='704' t='int (*)(connection_job_t, int)'/>
+<mbr r='tcp_rpc_server_functions::max_packet_len' o='768' t='int'/>
+<mbr r='tcp_rpc_server_functions::mode_flags' o='800' t='int'/>
+<mbr r='tcp_rpc_server_functions::memcache_fallback_type' o='832' t='void *'/>
+<mbr r='tcp_rpc_server_functions::memcache_fallback_extra' o='896' t='void *'/>
+<mbr r='tcp_rpc_server_functions::http_fallback_type' o='960' t='void *'/>
+<mbr r='tcp_rpc_server_functions::http_fallback_extra' o='1024' t='void *'/>

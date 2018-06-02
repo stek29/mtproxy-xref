@@ -1,0 +1,3 @@
+<def f='MTProxy/common/tl-parse.h' l='776' ll='790' type='int _tlf_raw_message(struct tl_in_state * tlio_in, struct raw_message * raw, int len, int advance)'/>
+<use f='MTProxy/common/tl-parse.h' l='793' u='c' c='tlf_raw_message'/>
+<use f='MTProxy/common/tl-parse.h' l='798' u='c' c='tlf_lookup_raw_message'/>

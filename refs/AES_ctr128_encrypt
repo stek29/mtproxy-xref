@@ -1,0 +1,2 @@
+<dec f='include/openssl/aes.h' l='122' type='void AES_ctr128_encrypt(const unsigned char * in, unsigned char * out, size_t length, const AES_KEY * key, unsigned char * ivec, unsigned char * ecount_buf, unsigned int * num)'/>
+<use f='MTProxy/crypto/aesni256.c' l='107' u='c' c='tg_ssl_aes_ctr128_crypt'/>

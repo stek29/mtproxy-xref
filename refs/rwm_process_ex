@@ -1,0 +1,10 @@
+<dec f='MTProxy/net/net-msg.h' l='139' type='int rwm_process_ex(struct raw_message * raw, int bytes, int offset, int flags, int (*)(void *, const void *, int) process_block, void * extra)'/>
+<use f='MTProxy/net/net-msg.c' l='710' u='c' c='rwm_fetch_data_back'/>
+<use f='MTProxy/net/net-msg.c' l='724' u='c' c='rwm_fetch_lookup_back'/>
+<def f='MTProxy/net/net-msg.c' l='908' ll='1038' type='int rwm_process_ex(struct raw_message * raw, int bytes, int offset, int flags, int (*)(void *, const void *, int) process_block, void * extra)'/>
+<use f='MTProxy/net/net-msg.c' l='1042' u='c' c='rwm_process_and_advance'/>
+<use f='MTProxy/net/net-msg.c' l='1047' u='c' c='rwm_process'/>
+<use f='MTProxy/net/net-msg.c' l='1052' u='c' c='rwm_process_from_offset'/>
+<use f='MTProxy/net/net-msg.c' l='1057' u='c' c='rwm_transform_from_offset'/>
+<doc f='MTProxy/net/net-msg.c' l='906'>/* }}} */</doc>
+<doc f='MTProxy/net/net-msg.c' l='908'>/* {{{ */</doc>

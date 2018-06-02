@@ -1,0 +1,3 @@
+<def f='MTProxy/net/net-crypto-aes.c' l='60' macro='1' type='int crypto_aes_prepare_stat(stats_buffer_t * sb)'/>
+<dec f='MTProxy/net/net-stats.c' l='77' type='int crypto_aes_prepare_stat(stats_buffer_t * sb)'/>
+<use f='MTProxy/net/net-stats.c' l='147' u='c' c='prepare_stats'/>

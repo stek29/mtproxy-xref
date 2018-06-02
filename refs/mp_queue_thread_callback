@@ -1,0 +1,2 @@
+<def f='MTProxy/common/mp-queue.c' l='62' macro='1' type='struct thread_callback'/>
+<use f='MTProxy/common/mp-queue.c' l='62' macro='1' u='a'/>

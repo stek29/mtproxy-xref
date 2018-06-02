@@ -1,0 +1,11 @@
+<def f='MTProxy/common/tl-parse.c' l='69' macro='1' type='struct jobs_module_stat_tl_parse *[256]'/>
+<use f='MTProxy/common/tl-parse.c' l='69' macro='1' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='73' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='74' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='75' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='76' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='77' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='78' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='79' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='80' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='88' macro='1' u='r'/>

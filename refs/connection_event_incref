@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-connections.c' l='207' type='void connection_event_incref(int fd, long long val)'/>
+<use f='MTProxy/net/net-connections.c' l='802' u='c' c='fail_socket_connection'/>
+<def f='MTProxy/net/net-connections.c' l='1388' ll='1396' type='void connection_event_incref(int fd, long long val)'/>
+<use f='MTProxy/net/net-connections.c' l='1412' u='c' c='connection_get_by_fd'/>
+<doc f='MTProxy/net/net-connections.c' l='1387'>/* {{{ connection refcnt */</doc>

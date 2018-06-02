@@ -1,0 +1,15 @@
+<dec f='include/netinet/in.h' l='51'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2066' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='325' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='608' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='731' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='736' u='c'/>
+<use f='MTProxy/net/net-events.c' l='581' u='c'/>
+<use f='MTProxy/net/net-events.c' l='584' u='c'/>
+<use f='MTProxy/net/net-events.c' l='585' u='c'/>
+<use f='MTProxy/net/net-events.c' l='587' u='c'/>
+<use f='MTProxy/net/net-events.c' l='653' u='c'/>
+<use f='MTProxy/net/net-events.c' l='656' u='c'/>
+<use f='MTProxy/net/net-events.c' l='657' u='c'/>
+<use f='MTProxy/net/net-events.c' l='659' u='c'/>
+<use f='MTProxy/net/net-events.c' l='718' u='c'/>

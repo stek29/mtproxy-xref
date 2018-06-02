@@ -1,0 +1,3 @@
+<dec f='MTProxy/common/mp-queue.h' l='136' type='mqn_value_t mpq_pop_w(struct mp_queue * MQ, int flags)'/>
+<def f='MTProxy/common/mp-queue.c' l='600' ll='632' type='mqn_value_t mpq_pop_w(struct mp_queue * MQ, int flags)'/>
+<use f='MTProxy/jobs/jobs.c' l='919' u='c' c='job_thread_ex'/>

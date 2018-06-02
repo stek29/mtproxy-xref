@@ -1,0 +1,12 @@
+<dec f='MTProxy/net/net-connections.h' l='135' type='int (*)(connection_job_t)'/>
+<offset>192</offset>
+<doc f='MTProxy/net/net-connections.h' l='135'>/* initialize a new accept()&apos;ed connection */</doc>
+<use f='MTProxy/net/net-connections.c' l='702' u='r' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1503' u='r' c='check_conn_functions'/>
+<use f='MTProxy/net/net-connections.c' l='1505' u='w' c='check_conn_functions'/>
+<use f='MTProxy/net/net-connections.c' l='1507' u='w' c='check_conn_functions'/>
+<use f='MTProxy/net/net-http-server.c' l='67' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='76' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='65' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='72' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='343' u='r' c='tcp_rpcs_parse_execute'/>

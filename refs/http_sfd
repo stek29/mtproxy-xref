@@ -1,0 +1,7 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='2050' type='int [128]'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2060' u='r' c='mtfront_pre_loop'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2063' u='r' c='mtfront_pre_loop'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2066' u='r' c='mtfront_pre_loop'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2067' u='r' c='mtfront_pre_loop'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2227' u='w' c='mtfront_pre_init'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2228' u='r' c='mtfront_pre_init'/>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>net-http-server.h source code [MTProxy/net/net-http-server.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="hts_data,hts_query_type,http_server_functions "/>
+<link rel="stylesheet" href="https://code.woboq.org/data//qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="https://code.woboq.org/data//kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery-ui.min.js"></script>
+<script>var file = 'MTProxy/net/net-http-server.h'; var root_path = '../..'; var data_path = 'https://code.woboq.org/data/';</script>
+<script src='https://code.woboq.org/data//codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='..'>MTProxy</a>/<a href='./'>net</a>/<a href='net-http-server.h.html'>net-http-server.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>    This file is part of Mtproto-proxy Library.</i></td></tr>
+<tr><th id="3">3</th><td><i></i></td></tr>
+<tr><th id="4">4</th><td><i>    Mtproto-proxy Library is free software: you can redistribute it and/or modify</i></td></tr>
+<tr><th id="5">5</th><td><i>    it under the terms of the GNU Lesser General Public License as published by</i></td></tr>
+<tr><th id="6">6</th><td><i>    the Free Software Foundation, either version 2 of the License, or</i></td></tr>
+<tr><th id="7">7</th><td><i>    (at your option) any later version.</i></td></tr>
+<tr><th id="8">8</th><td><i></i></td></tr>
+<tr><th id="9">9</th><td><i>    Mtproto-proxy Library is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="10">10</th><td><i>    but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="11">11</th><td><i>    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</i></td></tr>
+<tr><th id="12">12</th><td><i>    GNU Lesser General Public License for more details.</i></td></tr>
+<tr><th id="13">13</th><td><i></i></td></tr>
+<tr><th id="14">14</th><td><i>    You should have received a copy of the GNU Lesser General Public License</i></td></tr>
+<tr><th id="15">15</th><td><i>    along with Mtproto-proxy Library.  If not, see &lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</i></td></tr>
+<tr><th id="16">16</th><td><i></i></td></tr>
+<tr><th id="17">17</th><td><i>    Copyright 2010-2012 Vkontakte Ltd</i></td></tr>
+<tr><th id="18">18</th><td><i>              2010-2012 Nikolai Durov</i></td></tr>
+<tr><th id="19">19</th><td><i>              2010-2012 Andrey Lopatin</i></td></tr>
+<tr><th id="20">20</th><td><i>                   2012 Anton Maydell</i></td></tr>
+<tr><th id="21">21</th><td><i>    </i></td></tr>
+<tr><th id="22">22</th><td><i>    Copyright 2014-2016 Telegram Messenger Inc             </i></td></tr>
+<tr><th id="23">23</th><td><i>              2015-2016 Vitaly Valtman</i></td></tr>
+<tr><th id="24">24</th><td><i>*/</i></td></tr>
+<tr><th id="25">25</th><td></td></tr>
+<tr><th id="26">26</th><td><u>#pragma once</u></td></tr>
+<tr><th id="27">27</th><td></td></tr>
+<tr><th id="28">28</th><td><u>#include <a href="net-connections.h.html">"net/net-connections.h"</a></u></td></tr>
+<tr><th id="29">29</th><td><i>//#include "net/net-buffers.h"</i></td></tr>
+<tr><th id="30">30</th><td><u>#define	<dfn class="macro" id="_M/MAX_HTTP_HEADER_SIZE" data-ref="_M/MAX_HTTP_HEADER_SIZE">MAX_HTTP_HEADER_SIZE</dfn>	16384</u></td></tr>
+<tr><th id="31">31</th><td></td></tr>
+<tr><th id="32">32</th><td><b>struct</b> <dfn class="type def" id="http_server_functions" title='http_server_functions' data-ref="http_server_functions">http_server_functions</dfn> {</td></tr>
+<tr><th id="33">33</th><td>  <em>void</em> *<dfn class="decl" id="http_server_functions::info" title='http_server_functions::info' data-ref="http_server_functions::info">info</dfn>;</td></tr>
+<tr><th id="34">34</th><td>  <em>int</em> (*<dfn class="decl" id="http_server_functions::execute" title='http_server_functions::execute' data-ref="http_server_functions::execute">execute</dfn>)(<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col4 decl" id="364c" title='c' data-type='connection_job_t' data-ref="364c">c</dfn>, <b>struct</b> <a class="type" href="net-msg.h.html#raw_message" title='raw_message' data-ref="raw_message">raw_message</a> *<dfn class="local col5 decl" id="365raw" title='raw' data-type='struct raw_message *' data-ref="365raw">raw</dfn>, <em>int</em> <dfn class="local col6 decl" id="366op" title='op' data-type='int' data-ref="366op">op</dfn>);		<i>/* invoked from parse_execute() */</i></td></tr>
+<tr><th id="35">35</th><td>  <em>int</em> (*<dfn class="decl" id="http_server_functions::ht_wakeup" title='http_server_functions::ht_wakeup' data-ref="http_server_functions::ht_wakeup">ht_wakeup</dfn>)(<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col7 decl" id="367c" title='c' data-type='connection_job_t' data-ref="367c">c</dfn>);</td></tr>
+<tr><th id="36">36</th><td>  <em>int</em> (*<dfn class="decl" id="http_server_functions::ht_alarm" title='http_server_functions::ht_alarm' data-ref="http_server_functions::ht_alarm">ht_alarm</dfn>)(<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col8 decl" id="368c" title='c' data-type='connection_job_t' data-ref="368c">c</dfn>);</td></tr>
+<tr><th id="37">37</th><td>  <em>int</em> (*<dfn class="decl" id="http_server_functions::ht_close" title='http_server_functions::ht_close' data-ref="http_server_functions::ht_close">ht_close</dfn>)(<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col9 decl" id="369c" title='c' data-type='connection_job_t' data-ref="369c">c</dfn>, <em>int</em> <dfn class="local col0 decl" id="370who" title='who' data-type='int' data-ref="370who">who</dfn>);</td></tr>
+<tr><th id="38">38</th><td>};</td></tr>
+<tr><th id="39">39</th><td></td></tr>
+<tr><th id="40">40</th><td><u>#define	<dfn class="macro" id="_M/HTTP_V09" data-ref="_M/HTTP_V09">HTTP_V09</dfn>	9</u></td></tr>
+<tr><th id="41">41</th><td><u>#define	<dfn class="macro" id="_M/HTTP_V10" data-ref="_M/HTTP_V10">HTTP_V10</dfn>	0x100</u></td></tr>
+<tr><th id="42">42</th><td><u>#define	<dfn class="macro" id="_M/HTTP_V11" data-ref="_M/HTTP_V11">HTTP_V11</dfn>	0x101</u></td></tr>
+<tr><th id="43">43</th><td></td></tr>
+<tr><th id="44">44</th><td><i>/* in conn-&gt;custom_data, 104 bytes */</i></td></tr>
+<tr><th id="45">45</th><td><b>struct</b> <dfn class="type def" id="hts_data" title='hts_data' data-ref="hts_data">hts_data</dfn> {</td></tr>
+<tr><th id="46">46</th><td>  <em>int</em> <dfn class="decl" id="hts_data::query_type" title='hts_data::query_type' data-ref="hts_data::query_type">query_type</dfn>;</td></tr>
+<tr><th id="47">47</th><td>  <em>int</em> <dfn class="decl" id="hts_data::query_flags" title='hts_data::query_flags' data-ref="hts_data::query_flags">query_flags</dfn>;</td></tr>
+<tr><th id="48">48</th><td>  <em>int</em> <dfn class="decl" id="hts_data::query_words" title='hts_data::query_words' data-ref="hts_data::query_words">query_words</dfn>;</td></tr>
+<tr><th id="49">49</th><td>  <em>int</em> <dfn class="decl" id="hts_data::header_size" title='hts_data::header_size' data-ref="hts_data::header_size">header_size</dfn>;</td></tr>
+<tr><th id="50">50</th><td>  <em>int</em> <dfn class="decl" id="hts_data::first_line_size" title='hts_data::first_line_size' data-ref="hts_data::first_line_size">first_line_size</dfn>;</td></tr>
+<tr><th id="51">51</th><td>  <em>int</em> <dfn class="decl" id="hts_data::data_size" title='hts_data::data_size' data-ref="hts_data::data_size">data_size</dfn>;</td></tr>
+<tr><th id="52">52</th><td>  <em>int</em> <dfn class="decl" id="hts_data::host_offset" title='hts_data::host_offset' data-ref="hts_data::host_offset">host_offset</dfn>;</td></tr>
+<tr><th id="53">53</th><td>  <em>int</em> <dfn class="decl" id="hts_data::host_size" title='hts_data::host_size' data-ref="hts_data::host_size">host_size</dfn>;</td></tr>
+<tr><th id="54">54</th><td>  <em>int</em> <dfn class="decl" id="hts_data::uri_offset" title='hts_data::uri_offset' data-ref="hts_data::uri_offset">uri_offset</dfn>;</td></tr>
+<tr><th id="55">55</th><td>  <em>int</em> <dfn class="decl" id="hts_data::uri_size" title='hts_data::uri_size' data-ref="hts_data::uri_size">uri_size</dfn>;</td></tr>
+<tr><th id="56">56</th><td>  <em>int</em> <dfn class="decl" id="hts_data::http_ver" title='hts_data::http_ver' data-ref="hts_data::http_ver">http_ver</dfn>;</td></tr>
+<tr><th id="57">57</th><td>  <em>int</em> <dfn class="decl" id="hts_data::wlen" title='hts_data::wlen' data-ref="hts_data::wlen">wlen</dfn>;</td></tr>
+<tr><th id="58">58</th><td>  <em>char</em> <dfn class="decl" id="hts_data::word" title='hts_data::word' data-ref="hts_data::word">word</dfn>[<var>16</var>];</td></tr>
+<tr><th id="59">59</th><td>  <em>void</em> *<dfn class="decl" id="hts_data::extra" title='hts_data::extra' data-ref="hts_data::extra">extra</dfn>;  </td></tr>
+<tr><th id="60">60</th><td>  <em>int</em> <dfn class="decl" id="hts_data::extra_int" title='hts_data::extra_int' data-ref="hts_data::extra_int">extra_int</dfn>;</td></tr>
+<tr><th id="61">61</th><td>  <em>int</em> <dfn class="decl" id="hts_data::extra_int2" title='hts_data::extra_int2' data-ref="hts_data::extra_int2">extra_int2</dfn>;</td></tr>
+<tr><th id="62">62</th><td>  <em>int</em> <dfn class="decl" id="hts_data::extra_int3" title='hts_data::extra_int3' data-ref="hts_data::extra_int3">extra_int3</dfn>;</td></tr>
+<tr><th id="63">63</th><td>  <em>int</em> <dfn class="decl" id="hts_data::extra_int4" title='hts_data::extra_int4' data-ref="hts_data::extra_int4">extra_int4</dfn>;</td></tr>
+<tr><th id="64">64</th><td>  <em>double</em> <dfn class="decl" id="hts_data::extra_double" title='hts_data::extra_double' data-ref="hts_data::extra_double">extra_double</dfn>, <dfn class="decl" id="hts_data::extra_double2" title='hts_data::extra_double2' data-ref="hts_data::extra_double2">extra_double2</dfn>;</td></tr>
+<tr><th id="65">65</th><td>  <em>int</em> <dfn class="decl" id="hts_data::parse_state" title='hts_data::parse_state' data-ref="hts_data::parse_state">parse_state</dfn>;</td></tr>
+<tr><th id="66">66</th><td>  <em>int</em> <dfn class="decl" id="hts_data::query_seqno" title='hts_data::query_seqno' data-ref="hts_data::query_seqno">query_seqno</dfn>;</td></tr>
+<tr><th id="67">67</th><td>};</td></tr>
+<tr><th id="68">68</th><td></td></tr>
+<tr><th id="69">69</th><td><i>/* for hts_data.query_type */</i></td></tr>
+<tr><th id="70">70</th><td><b>enum</b> <dfn class="type def" id="hts_query_type" title='hts_query_type' data-ref="hts_query_type">hts_query_type</dfn> {</td></tr>
+<tr><th id="71">71</th><td>  <dfn class="enum" id="hts_query_type::htqt_none" title='hts_query_type::htqt_none' data-ref="hts_query_type::htqt_none">htqt_none</dfn>,</td></tr>
+<tr><th id="72">72</th><td>  <dfn class="enum" id="hts_query_type::htqt_head" title='hts_query_type::htqt_head' data-ref="hts_query_type::htqt_head">htqt_head</dfn>,</td></tr>
+<tr><th id="73">73</th><td>  <dfn class="enum" id="hts_query_type::htqt_get" title='hts_query_type::htqt_get' data-ref="hts_query_type::htqt_get">htqt_get</dfn>,</td></tr>
+<tr><th id="74">74</th><td>  <dfn class="enum" id="hts_query_type::htqt_post" title='hts_query_type::htqt_post' data-ref="hts_query_type::htqt_post">htqt_post</dfn>,</td></tr>
+<tr><th id="75">75</th><td>  <dfn class="enum" id="hts_query_type::htqt_options" title='hts_query_type::htqt_options' data-ref="hts_query_type::htqt_options">htqt_options</dfn>,</td></tr>
+<tr><th id="76">76</th><td>  <dfn class="enum" id="hts_query_type::htqt_error" title='hts_query_type::htqt_error' data-ref="hts_query_type::htqt_error">htqt_error</dfn>,</td></tr>
+<tr><th id="77">77</th><td>  <dfn class="enum" id="hts_query_type::htqt_empty" title='hts_query_type::htqt_empty' data-ref="hts_query_type::htqt_empty">htqt_empty</dfn></td></tr>
+<tr><th id="78">78</th><td>};</td></tr>
+<tr><th id="79">79</th><td></td></tr>
+<tr><th id="80">80</th><td><u>#define	<dfn class="macro" id="_M/QF_ERROR" data-ref="_M/QF_ERROR">QF_ERROR</dfn>	1</u></td></tr>
+<tr><th id="81">81</th><td><u>#define <dfn class="macro" id="_M/QF_HOST" data-ref="_M/QF_HOST">QF_HOST</dfn>		2</u></td></tr>
+<tr><th id="82">82</th><td><u>#define <dfn class="macro" id="_M/QF_DATASIZE" data-ref="_M/QF_DATASIZE">QF_DATASIZE</dfn>	4</u></td></tr>
+<tr><th id="83">83</th><td><u>#define	<dfn class="macro" id="_M/QF_CONNECTION" data-ref="_M/QF_CONNECTION">QF_CONNECTION</dfn>	8</u></td></tr>
+<tr><th id="84">84</th><td><u>#define	<dfn class="macro" id="_M/QF_TRANSFER_ENCODING" data-ref="_M/QF_TRANSFER_ENCODING">QF_TRANSFER_ENCODING</dfn> 16</u></td></tr>
+<tr><th id="85">85</th><td><u>#define	<dfn class="macro" id="_M/QF_TRANSFER_ENCODING_CHUNKED" data-ref="_M/QF_TRANSFER_ENCODING_CHUNKED">QF_TRANSFER_ENCODING_CHUNKED</dfn> 32</u></td></tr>
+<tr><th id="86">86</th><td><u>#define	<dfn class="macro" id="_M/QF_KEEPALIVE" data-ref="_M/QF_KEEPALIVE">QF_KEEPALIVE</dfn>	0x100</u></td></tr>
+<tr><th id="87">87</th><td><u>#define	<dfn class="macro" id="_M/QF_EXTRA_HEADERS" data-ref="_M/QF_EXTRA_HEADERS">QF_EXTRA_HEADERS</dfn>	0x200</u></td></tr>
+<tr><th id="88">88</th><td></td></tr>
+<tr><th id="89">89</th><td><u>#define	<dfn class="macro" id="_M/HTS_DATA" data-ref="_M/HTS_DATA">HTS_DATA</dfn>(c)	((struct hts_data *) (CONN_INFO(c)-&gt;custom_data))</u></td></tr>
+<tr><th id="90">90</th><td><u>#define	<dfn class="macro" id="_M/HTS_FUNC" data-ref="_M/HTS_FUNC">HTS_FUNC</dfn>(c)	((struct http_server_functions *) (CONN_INFO(c)-&gt;extra))</u></td></tr>
+<tr><th id="91">91</th><td></td></tr>
+<tr><th id="92">92</th><td><b>extern</b> <a class="typedef" href="net-connections.h.html#conn_type_t" title='conn_type_t' data-type='struct conn_functions' data-ref="conn_type_t">conn_type_t</a> <dfn class="decl" id="ct_http_server" title='ct_http_server' data-ref="ct_http_server">ct_http_server</dfn>;</td></tr>
+<tr><th id="93">93</th><td><b>extern</b> <b>struct</b> <a class="type" href="#http_server_functions" title='http_server_functions' data-ref="http_server_functions">http_server_functions</a> <dfn class="decl" id="default_http_server" title='default_http_server' data-ref="default_http_server">default_http_server</dfn>;</td></tr>
+<tr><th id="94">94</th><td></td></tr>
+<tr><th id="95">95</th><td><em>int</em> <dfn class="decl" id="hts_do_wakeup" title='hts_do_wakeup' data-ref="hts_do_wakeup">hts_do_wakeup</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col1 decl" id="371c" title='c' data-type='connection_job_t' data-ref="371c">c</dfn>);</td></tr>
+<tr><th id="96">96</th><td><em>int</em> <dfn class="decl" id="hts_parse_execute" title='hts_parse_execute' data-ref="hts_parse_execute">hts_parse_execute</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col2 decl" id="372c" title='c' data-type='connection_job_t' data-ref="372c">c</dfn>);</td></tr>
+<tr><th id="97">97</th><td><em>int</em> <dfn class="decl" id="hts_std_wakeup" title='hts_std_wakeup' data-ref="hts_std_wakeup">hts_std_wakeup</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col3 decl" id="373c" title='c' data-type='connection_job_t' data-ref="373c">c</dfn>);</td></tr>
+<tr><th id="98">98</th><td><em>int</em> <dfn class="decl" id="hts_std_alarm" title='hts_std_alarm' data-ref="hts_std_alarm">hts_std_alarm</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col4 decl" id="374c" title='c' data-type='connection_job_t' data-ref="374c">c</dfn>);</td></tr>
+<tr><th id="99">99</th><td><em>int</em> <dfn class="decl" id="hts_init_accepted" title='hts_init_accepted' data-ref="hts_init_accepted">hts_init_accepted</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col5 decl" id="375c" title='c' data-type='connection_job_t' data-ref="375c">c</dfn>);</td></tr>
+<tr><th id="100">100</th><td><em>int</em> <dfn class="decl" id="hts_close_connection" title='hts_close_connection' data-ref="hts_close_connection">hts_close_connection</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col6 decl" id="376c" title='c' data-type='connection_job_t' data-ref="376c">c</dfn>, <em>int</em> <dfn class="local col7 decl" id="377who" title='who' data-type='int' data-ref="377who">who</dfn>);</td></tr>
+<tr><th id="101">101</th><td><em>void</em> <dfn class="decl" id="http_flush" title='http_flush' data-ref="http_flush">http_flush</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col8 decl" id="378C" title='C' data-type='connection_job_t' data-ref="378C">C</dfn>, <b>struct</b> <a class="type" href="net-msg.h.html#raw_message" title='raw_message' data-ref="raw_message">raw_message</a> *<dfn class="local col9 decl" id="379raw" title='raw' data-type='struct raw_message *' data-ref="379raw">raw</dfn>);</td></tr>
+<tr><th id="102">102</th><td></td></tr>
+<tr><th id="103">103</th><td><b>extern</b> <em>int</em> <dfn class="decl" id="http_connections" title='http_connections' data-ref="http_connections">http_connections</dfn>;</td></tr>
+<tr><th id="104">104</th><td><b>extern</b> <em>long</em> <em>long</em> <dfn class="decl" id="http_queries" title='http_queries' data-ref="http_queries">http_queries</dfn>, <dfn class="decl" id="http_bad_headers" title='http_bad_headers' data-ref="http_bad_headers">http_bad_headers</dfn>, <dfn class="decl" id="http_queries_size" title='http_queries_size' data-ref="http_queries_size">http_queries_size</dfn>;</td></tr>
+<tr><th id="105">105</th><td></td></tr>
+<tr><th id="106">106</th><td><b>extern</b> <em>char</em> *<dfn class="decl" id="extra_http_response_headers" title='extra_http_response_headers' data-ref="extra_http_response_headers">extra_http_response_headers</dfn>;</td></tr>
+<tr><th id="107">107</th><td></td></tr>
+<tr><th id="108">108</th><td><i>/* useful functions */</i></td></tr>
+<tr><th id="109">109</th><td><em>int</em> <dfn class="decl" id="get_http_header" title='get_http_header' data-ref="get_http_header">get_http_header</dfn> (<em>const</em> <em>char</em> *<dfn class="local col0 decl" id="380qHeaders" title='qHeaders' data-type='const char *' data-ref="380qHeaders">qHeaders</dfn>, <em>const</em> <em>int</em> <dfn class="local col1 decl" id="381qHeadersLen" title='qHeadersLen' data-type='const int' data-ref="381qHeadersLen">qHeadersLen</dfn>, <em>char</em> *<dfn class="local col2 decl" id="382buffer" title='buffer' data-type='char *' data-ref="382buffer">buffer</dfn>, <em>int</em> <dfn class="local col3 decl" id="383b_len" title='b_len' data-type='int' data-ref="383b_len">b_len</dfn>, <em>const</em> <em>char</em> *<dfn class="local col4 decl" id="384arg_name" title='arg_name' data-type='const char *' data-ref="384arg_name">arg_name</dfn>, <em>const</em> <em>int</em> <dfn class="local col5 decl" id="385arg_len" title='arg_len' data-type='const int' data-ref="385arg_len">arg_len</dfn>);</td></tr>
+<tr><th id="110">110</th><td></td></tr>
+<tr><th id="111">111</th><td><u>#define	<dfn class="macro" id="_M/HTTP_DATE_LEN" data-ref="_M/HTTP_DATE_LEN">HTTP_DATE_LEN</dfn>	29</u></td></tr>
+<tr><th id="112">112</th><td><em>void</em> <dfn class="decl" id="gen_http_date" title='gen_http_date' data-ref="gen_http_date">gen_http_date</dfn> (<em>char</em> <dfn class="local col6 decl" id="386date_buffer" title='date_buffer' data-type='char *' data-ref="386date_buffer">date_buffer</dfn>[<var>29</var>], <em>int</em> <dfn class="local col7 decl" id="387time" title='time' data-type='int' data-ref="387time">time</dfn>);</td></tr>
+<tr><th id="113">113</th><td><em>int</em> <dfn class="decl" id="gen_http_time" title='gen_http_time' data-ref="gen_http_time">gen_http_time</dfn> (<em>char</em> *<dfn class="local col8 decl" id="388date_buffer" title='date_buffer' data-type='char *' data-ref="388date_buffer">date_buffer</dfn>, <em>int</em> *<dfn class="local col9 decl" id="389time" title='time' data-type='int *' data-ref="389time">time</dfn>);</td></tr>
+<tr><th id="114">114</th><td><em>char</em> *<dfn class="decl" id="cur_http_date" title='cur_http_date' data-ref="cur_http_date">cur_http_date</dfn> (<em>void</em>);</td></tr>
+<tr><th id="115">115</th><td><i>//int write_basic_http_header (connection_job_t c, int code, int date, int len, const char *add_header, const char *content_type);</i></td></tr>
+<tr><th id="116">116</th><td><em>int</em> <dfn class="decl" id="write_basic_http_header_raw" title='write_basic_http_header_raw' data-ref="write_basic_http_header_raw">write_basic_http_header_raw</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col0 decl" id="390c" title='c' data-type='connection_job_t' data-ref="390c">c</dfn>, <b>struct</b> <a class="type" href="net-msg.h.html#raw_message" title='raw_message' data-ref="raw_message">raw_message</a> *<dfn class="local col1 decl" id="391raw" title='raw' data-type='struct raw_message *' data-ref="391raw">raw</dfn>, <em>int</em> <dfn class="local col2 decl" id="392code" title='code' data-type='int' data-ref="392code">code</dfn>, <em>int</em> <dfn class="local col3 decl" id="393date" title='date' data-type='int' data-ref="393date">date</dfn>, <em>int</em> <dfn class="local col4 decl" id="394len" title='len' data-type='int' data-ref="394len">len</dfn>, <em>const</em> <em>char</em> *<dfn class="local col5 decl" id="395add_header" title='add_header' data-type='const char *' data-ref="395add_header">add_header</dfn>, <em>const</em> <em>char</em> *<dfn class="local col6 decl" id="396content_type" title='content_type' data-type='const char *' data-ref="396content_type">content_type</dfn>);</td></tr>
+<tr><th id="117">117</th><td><em>int</em> <dfn class="decl" id="write_http_error" title='write_http_error' data-ref="write_http_error">write_http_error</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col7 decl" id="397c" title='c' data-type='connection_job_t' data-ref="397c">c</dfn>, <em>int</em> <dfn class="local col8 decl" id="398code" title='code' data-type='int' data-ref="398code">code</dfn>);</td></tr>
+<tr><th id="118">118</th><td><em>int</em> <dfn class="decl" id="write_http_error_raw" title='write_http_error_raw' data-ref="write_http_error_raw">write_http_error_raw</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col9 decl" id="399c" title='c' data-type='connection_job_t' data-ref="399c">c</dfn>, <b>struct</b> <a class="type" href="net-msg.h.html#raw_message" title='raw_message' data-ref="raw_message">raw_message</a> *<dfn class="local col0 decl" id="400raw" title='raw' data-type='struct raw_message *' data-ref="400raw">raw</dfn>, <em>int</em> <dfn class="local col1 decl" id="401code" title='code' data-type='int' data-ref="401code">code</dfn>);</td></tr>
+<tr><th id="119">119</th><td></td></tr>
+<tr><th id="120">120</th><td><i>/* END */</i></td></tr>
+<tr><th id="121">121</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../common/tl-parse.c.html'>MTProxy/common/tl-parse.c</a><br/>Generated on <em>2018-Jun-02</em> from project MTProxy revision <em>842f343decf6c463bdecf1862e357c4a03e4bc97</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

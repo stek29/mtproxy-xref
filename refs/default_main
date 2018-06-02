@@ -1,0 +1,4 @@
+<dec f='MTProxy/engine/engine.h' l='202' type='int default_main(server_functions_t * F, int argc, char ** argv)'/>
+<def f='MTProxy/engine/engine.c' l='587' ll='649' type='int default_main(server_functions_t * F, int argc, char ** argv)'/>
+<doc f='MTProxy/engine/engine.c' l='585'>/* }}} */</doc>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2311' u='c' c='main'/>

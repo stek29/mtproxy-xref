@@ -1,0 +1,2 @@
+<dec f='MTProxy/common/parse-config.h' l='28' type='int cfg_getlex()'/>
+<def f='MTProxy/common/parse-config.c' l='63' ll='74' type='int cfg_getlex()'/>

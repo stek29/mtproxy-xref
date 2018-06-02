@@ -1,0 +1,5 @@
+<def f='MTProxy/common/tl-parse.h' l='275' ll='279' type='void __tlf_skip_raw_data(struct tl_in_state * tlio_in, int size)'/>
+<use f='MTProxy/common/tl-parse.h' l='447' u='c' c='tlf_skip_string_data'/>
+<use f='MTProxy/common/tl-parse.h' l='532' u='c' c='tlf_skip'/>
+<doc f='MTProxy/common/tl-parse.h' l='273'>/* }}} */</doc>
+<doc f='MTProxy/common/tl-parse.h' l='275'>/* {{{ */</doc>

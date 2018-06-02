@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-msg.h' l='129' type='int rwm_dump_sizes(struct raw_message * raw)'/>
+<use f='MTProxy/net/net-msg.c' l='318' u='c' c='fork_message_chain'/>
+<def f='MTProxy/net/net-msg.c' l='840' ll='861' type='int rwm_dump_sizes(struct raw_message * raw)'/>
+<use f='MTProxy/net/net-msg.c' l='884' u='c' c='rwm_check'/>
+<doc f='MTProxy/net/net-msg.c' l='838'>/* }}} */</doc>
+<doc f='MTProxy/net/net-msg.c' l='840'>/* {{{ */</doc>

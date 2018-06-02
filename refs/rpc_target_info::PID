@@ -1,0 +1,23 @@
+<dec f='MTProxy/net/net-rpc-targets.h' l='37' type='struct process_id'/>
+<offset>384</offset>
+<use f='MTProxy/net/net-rpc-targets.c' l='90' u='w' c='rpc_target_alloc'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='118' u='w' c='rpc_target_insert_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='119' u='m' c='rpc_target_insert_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='121' u='m' c='rpc_target_insert_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='121' u='m' c='rpc_target_insert_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='121' u='m' c='rpc_target_insert_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='121' u='m' c='rpc_target_insert_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='121' u='m' c='rpc_target_insert_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='128' u='r' c='rpc_target_insert_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='160' u='w' c='rpc_target_delete_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='161' u='m' c='rpc_target_delete_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='162' u='m' c='rpc_target_delete_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='165' u='m' c='rpc_target_delete_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='165' u='m' c='rpc_target_delete_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='165' u='m' c='rpc_target_delete_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='165' u='m' c='rpc_target_delete_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='165' u='m' c='rpc_target_delete_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='172' u='r' c='rpc_target_delete_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='197' u='w' c='rpc_target_lookup'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='198' u='m' c='rpc_target_lookup'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='198' u='m' c='rpc_target_lookup'/>

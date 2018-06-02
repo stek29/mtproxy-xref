@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-connections.h' l='334' type='conn_target_job_t create_target(struct conn_target_info * source, int * was_created)'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='188' u='c' c='cfg_parse_server_port'/>
+<def f='MTProxy/net/net-connections.c' l='1941' ll='2002' type='conn_target_job_t create_target(struct conn_target_info * source, int * was_created)'/>
+<doc f='MTProxy/net/net-connections.c' l='1939'>/* }}} */</doc>
+<doc f='MTProxy/net/net-connections.c' l='1941'>/* {{{ */</doc>

@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-http-server.h' l='99' type='int hts_init_accepted(connection_job_t c)'/>
+<dec f='MTProxy/net/net-http-server.c' l='58' type='int hts_init_accepted(connection_job_t c)'/>
+<use f='MTProxy/net/net-http-server.c' l='67'/>
+<use f='MTProxy/net/net-http-server.c' l='67'/>
+<def f='MTProxy/net/net-http-server.c' l='124' ll='127' type='int hts_init_accepted(connection_job_t c)'/>

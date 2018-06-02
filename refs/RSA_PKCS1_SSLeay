@@ -1,0 +1,2 @@
+<dec f='include/openssl/rsa.h' l='358' type='const RSA_METHOD * RSA_PKCS1_SSLeay()'/>
+<doc f='include/openssl/rsa.h' l='357'>/* these are the actual SSLeay RSA functions */</doc>

@@ -1,0 +1,9 @@
+<dec f='MTProxy/net/net-rpc-targets.h' l='40'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='88' u='c'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='131' u='c'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='175' u='c'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='200' u='c'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='292' u='c'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='292' u='c'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='328' u='c'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='328' u='c'/>

@@ -1,0 +1,9 @@
+<dec f='include/openssl/ec.h' l='320' type='int EC_GROUP_set_curve_GF2m(EC_GROUP * group, const BIGNUM * p, const BIGNUM * a, const BIGNUM * b, BN_CTX * ctx)'/>
+<doc f='include/openssl/ec.h' l='312'>/** Sets the parameter of a ec over GF2m defined by y^2 + x*y = x^3 + a*x^2 + b
+ *  \param  group  EC_GROUP object
+ *  \param  p      BIGNUM with the polynomial defining the underlying field
+ *  \param  a      BIGNUM with parameter a of the equation
+ *  \param  b      BIGNUM with parameter b of the equation
+ *  \param  ctx    BN_CTX object (optional)
+ *  \return 1 on success and 0 if an error occured
+ */</doc>

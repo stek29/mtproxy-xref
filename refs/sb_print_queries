@@ -1,0 +1,2 @@
+<dec f='MTProxy/common/common-stats.h' l='84' type='void sb_print_queries(stats_buffer_t * sb, const char *const desc, long long q)'/>
+<def f='MTProxy/common/common-stats.c' l='292' ll='294' type='void sb_print_queries(stats_buffer_t * sb, const char *const desc, long long q)'/>

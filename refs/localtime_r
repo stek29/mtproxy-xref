@@ -1,0 +1,2 @@
+<dec f='include/time.h' l='254' type='struct tm * localtime_r(const time_t *restrict __timer, struct tm *restrict __tp)'/>
+<use f='MTProxy/common/kprintf.c' l='253' u='c' c='kprintf'/>

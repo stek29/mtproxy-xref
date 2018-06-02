@@ -1,0 +1,3 @@
+<dec f='include/openssl/dsa.h' l='166' type='BIGNUM *'/>
+<offset>384</offset>
+<doc f='include/openssl/dsa.h' l='166'>/* y public key */</doc>

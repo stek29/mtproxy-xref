@@ -1,0 +1,3 @@
+<dec f='include/x86_64-linux-gnu/bits/sigaction.h' l='61'/>
+<use f='MTProxy/common/server-functions.c' l='195' u='c'/>
+<use f='MTProxy/common/server-functions.c' l='207' u='c'/>

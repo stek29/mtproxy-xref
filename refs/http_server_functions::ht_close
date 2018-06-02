@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-http-server.h' l='37' type='int (*)(connection_job_t, int)'/>
+<offset>256</offset>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1002' u='w'/>
+<use f='MTProxy/net/net-http-server.c' l='132' u='r' c='hts_close_connection'/>
+<use f='MTProxy/net/net-http-server.c' l='133' u='r' c='hts_close_connection'/>

@@ -1,0 +1,2 @@
+<dec f='MTProxy/common/precise-time.h' l='49' type='long long get_precise_time(unsigned int precision)'/>
+<def f='MTProxy/common/precise-time.c' l='77' ll='83' type='long long get_precise_time(unsigned int precision)'/>

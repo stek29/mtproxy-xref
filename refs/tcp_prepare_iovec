@@ -1,0 +1,4 @@
+<def f='MTProxy/net/net-connections.c' l='244' ll='259' type='int tcp_prepare_iovec(struct iovec * iov, int * iovcnt, int maxcnt, struct raw_message * raw)'/>
+<use f='MTProxy/net/net-connections.c' l='969' u='c' c='net_server_socket_writer'/>
+<doc f='MTProxy/net/net-connections.c' l='242'>/* }}} */</doc>
+<doc f='MTProxy/net/net-connections.c' l='244'>/* {{{ */</doc>

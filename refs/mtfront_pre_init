@@ -1,0 +1,4 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='2212' ll='2260' type='void mtfront_pre_init()'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2292'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2292'/>
+<doc f='MTProxy/mtproto/mtproto-proxy.c' l='2211'>// executed BEFORE dropping privileges</doc>

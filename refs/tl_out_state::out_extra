@@ -1,0 +1,17 @@
+<dec f='MTProxy/common/tl-parse.h' l='124' type='void *'/>
+<use f='MTProxy/common/tl-parse.h' l='181' u='w' c='tls_clear'/>
+<use f='MTProxy/common/tl-parse.c' l='285' macro='1' c='__tl_tcp_raw_msg_store_clear'/>
+<use f='MTProxy/common/tl-parse.c' l='285' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='285' macro='1' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='287' macro='1' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='294' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='295' macro='1' c='__tl_tcp_raw_msg_store_flush'/>
+<use f='MTProxy/common/tl-parse.c' l='295' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='295' macro='1' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='301' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='302' macro='1' c='__tl_tcp_raw_msg_store_flush_unaligned'/>
+<use f='MTProxy/common/tl-parse.c' l='302' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='302' macro='1' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='741' macro='1' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='915' macro='1' u='w'/>
+<offset>192</offset>

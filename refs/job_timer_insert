@@ -1,0 +1,12 @@
+<dec f='MTProxy/jobs/jobs.h' l='357' type='void job_timer_insert(job_t job, double timeout)'/>
+<use f='MTProxy/engine/engine-rpc.c' l='697' u='c' c='create_query_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='718' u='c' c='create_query_custom_job'/>
+<use f='MTProxy/engine/engine.c' l='406' u='c' c='precise_cron_job_run'/>
+<use f='MTProxy/engine/engine.c' l='450' u='c' c='default_engine_server_start'/>
+<use f='MTProxy/jobs/jobs.c' l='1324' u='c' c='do_timer_job'/>
+<def f='MTProxy/jobs/jobs.c' l='1366' ll='1407' type='void job_timer_insert(job_t job, double timeout)'/>
+<use f='MTProxy/jobs/jobs.c' l='1411' u='c' c='job_timer_remove'/>
+<use f='MTProxy/net/net-connections.c' l='360' u='c' c='set_connection_timeout'/>
+<use f='MTProxy/net/net-connections.c' l='1899' u='c' c='do_conn_target_job'/>
+<use f='MTProxy/net/net-connections.c' l='1920' u='c' c='do_conn_target_job'/>
+<use f='MTProxy/net/net-connections.c' l='1926' u='c' c='do_conn_target_job'/>

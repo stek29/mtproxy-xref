@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/bits/socket.h' l='155' macro='1' type='sa_family_t'/>
+<offset>0</offset>
+<use f='MTProxy/net/net-events.c' l='746' u='r' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='783' u='r' c='get_my_ipv6'/>

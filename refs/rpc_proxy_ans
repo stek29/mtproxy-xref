@@ -1,0 +1,6 @@
+<def f='MTProxy/mtproto/mtproto-common.h' l='92' ll='97'/>
+<size>16</size>
+<mbr r='rpc_proxy_ans::type' o='0' t='int'/>
+<mbr r='rpc_proxy_ans::flags' o='32' t='int'/>
+<mbr r='rpc_proxy_ans::ext_conn_id' o='64' t='long long'/>
+<mbr r='rpc_proxy_ans::data' o='128' t='int []'/>

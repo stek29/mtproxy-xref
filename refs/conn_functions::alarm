@@ -1,0 +1,9 @@
+<dec f='MTProxy/net/net-connections.h' l='152' type='int (*)(connection_job_t)'/>
+<offset>1152</offset>
+<doc f='MTProxy/net/net-connections.h' l='152'>/* invoked when timer is out */</doc>
+<use f='MTProxy/net/net-connections.c' l='564' u='r' c='do_connection_job'/>
+<use f='MTProxy/net/net-connections.c' l='1520' u='r' c='check_conn_functions'/>
+<use f='MTProxy/net/net-connections.c' l='1521' u='w' c='check_conn_functions'/>
+<use f='MTProxy/net/net-http-server.c' l='73' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='72' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='79' u='w'/>

@@ -1,0 +1,3 @@
+<def f='MTProxy/net/net-msg.c' l='65' macro='1' type='void jobs_module_thread_init_raw_msg()'/>
+<use f='MTProxy/net/net-msg.c' l='65' macro='1'/>
+<use f='MTProxy/net/net-msg.c' l='65' macro='1'/>

@@ -1,0 +1,7 @@
+<dec f='include/unistd.h' l='606' type='void _exit(int __status)'/>
+<doc f='include/unistd.h' l='605'>/* Terminate program execution with the low-order 8 bits of STATUS.  */</doc>
+<use f='MTProxy/common/server-functions.c' l='212' u='c' c='ksignal_ex'/>
+<use f='MTProxy/common/server-functions.c' l='229' u='c' c='extended_debug_handler'/>
+<use f='MTProxy/engine/engine-signals.c' l='65' u='c' c='sigint_immediate_handler'/>
+<use f='MTProxy/engine/engine-signals.c' l='73' u='c' c='sigterm_immediate_handler'/>
+<use f='MTProxy/jobs/jobs.c' l='881' u='c' c='set_job_interrupt_signal_handler'/>

@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-msg-buffers.h' l='94' type='long long'/>
+<offset>128</offset>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='505' u='w' c='add_stats'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='505' u='r' c='add_stats'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='73' u='w' c='fetch_buffers_stat'/>

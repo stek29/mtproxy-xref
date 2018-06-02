@@ -1,0 +1,2 @@
+<dec f='MTProxy/common/server-functions.h' l='99' type='void remove_parse_option(int val)'/>
+<def f='MTProxy/common/server-functions.c' l='408' ll='452' type='void remove_parse_option(int val)'/>

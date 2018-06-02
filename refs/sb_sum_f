@@ -1,0 +1,2 @@
+<dec f='MTProxy/common/common-stats.h' l='92' type='double sb_sum_f(void ** base, int len, int offset)'/>
+<def f='MTProxy/common/common-stats.c' l='314' ll='321' type='double sb_sum_f(void ** base, int len, int offset)'/>

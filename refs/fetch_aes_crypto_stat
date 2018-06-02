@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-crypto-aes.h' l='48' type='void fetch_aes_crypto_stat(int * allocated_aes_crypto_ptr, int * allocated_aes_crypto_temp_ptr)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='431' u='c' c='update_local_stats_copy'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='586' u='c' c='mtfront_prepare_stats'/>
+<def f='MTProxy/net/net-crypto-aes.c' l='69' ll='76' type='void fetch_aes_crypto_stat(int * allocated_aes_crypto_ptr, int * allocated_aes_crypto_temp_ptr)'/>

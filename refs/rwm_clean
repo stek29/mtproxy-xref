@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-msg.h' l='121' type='void rwm_clean(struct raw_message * raw)'/>
+<def f='MTProxy/net/net-msg.c' l='325' ll='330' type='void rwm_clean(struct raw_message * raw)'/>
+<use f='MTProxy/net/net-msg.c' l='338' u='c' c='rwm_clear'/>
+<doc f='MTProxy/net/net-msg.c' l='323'>/* }}} */</doc>
+<doc f='MTProxy/net/net-msg.c' l='325'>/* {{{ */</doc>

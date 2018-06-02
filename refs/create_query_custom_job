@@ -1,0 +1,4 @@
+<def f='MTProxy/engine/engine-rpc.c' l='704' ll='724' type='int create_query_custom_job(job_t job, struct raw_message * raw, double timeout, int fd, int generation)'/>
+<use f='MTProxy/engine/engine-rpc.c' l='742' u='c' c='query_job_run'/>
+<doc f='MTProxy/engine/engine-rpc.c' l='702'>/* }}} */</doc>
+<doc f='MTProxy/engine/engine-rpc.c' l='704'>/* {{{ */</doc>

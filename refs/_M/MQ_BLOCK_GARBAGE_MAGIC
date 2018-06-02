@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/mp-queue.h' l='72'/>
+<use f='MTProxy/common/mp-queue.c' l='177' u='c'/>
+<use f='MTProxy/common/mp-queue.c' l='470' u='c'/>
+<use f='MTProxy/common/mp-queue.c' l='522' u='c'/>

@@ -1,0 +1,4 @@
+<dec f='MTProxy/engine/engine-rpc.c' l='253' type='void free_vars_to_be_freed()'/>
+<def f='MTProxy/engine/engine-rpc.c' l='254' type='void free_vars_to_be_freed()'/>
+<use f='MTProxy/engine/engine-rpc.c' l='259' u='c' c='do_skip_function_any'/>
+<use f='MTProxy/engine/engine-rpc.c' l='264' u='c' c='do_fetch_function_any'/>

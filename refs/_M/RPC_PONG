@@ -1,0 +1,6 @@
+<dec f='MTProxy/common/rpc-const.h' l='41'/>
+<use f='MTProxy/engine/engine-rpc.c' l='840' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='811' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='922' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='142' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='108' u='c'/>

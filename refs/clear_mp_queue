@@ -1,0 +1,5 @@
+<dec f='MTProxy/common/mp-queue.h' l='123' type='void clear_mp_queue(struct mp_queue * MQ)'/>
+<doc f='MTProxy/common/mp-queue.h' l='123'>// frees all mpq block chain; invoke only if nobody else is using mp-queue</doc>
+<def f='MTProxy/common/mp-queue.c' l='413' ll='426' type='void clear_mp_queue(struct mp_queue * MQ)'/>
+<use f='MTProxy/common/mp-queue.c' l='430' u='c' c='free_mp_queue'/>
+<doc f='MTProxy/common/mp-queue.c' l='412'>/* invoke only if sure that nobody else may be using this mp_queue in parallel */</doc>

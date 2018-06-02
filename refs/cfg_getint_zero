@@ -1,0 +1,2 @@
+<dec f='MTProxy/common/parse-config.h' l='42' type='long long cfg_getint_zero()'/>
+<def f='MTProxy/common/parse-config.c' l='116' ll='129' type='long long cfg_getint_zero()'/>

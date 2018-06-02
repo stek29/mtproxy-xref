@@ -1,0 +1,2 @@
+<dec f='MTProxy/crypto/aesni256.h' l='52' type='void tg_aes_ctx_cleanup(tg_aes_ctx_t * ctx)'/>
+<def f='MTProxy/crypto/aesni256.c' l='134' ll='136' type='void tg_aes_ctx_cleanup(tg_aes_ctx_t * ctx)'/>

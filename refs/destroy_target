@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-connections.h' l='333' type='int destroy_target(int CTJ_tag_int, job_t CTJ)'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='132' u='c' c='clear_config'/>
+<def f='MTProxy/net/net-connections.c' l='1878' ll='1894' type='int destroy_target(int CTJ_tag_int, job_t CTJ)'/>
+<doc f='MTProxy/net/net-connections.c' l='1876'>/* }}} */</doc>
+<doc f='MTProxy/net/net-connections.c' l='1878'>/* {{{ */</doc>

@@ -1,0 +1,6 @@
+<dec f='MTProxy/engine/engine.h' l='126' type='int'/>
+<offset>256</offset>
+<use f='MTProxy/engine/engine-net.c' l='98' u='r' c='engine_do_open_port'/>
+<use f='MTProxy/engine/engine-net.c' l='170' u='w' c='f_parse_option_net'/>
+<use f='MTProxy/engine/engine.c' l='221' u='r' c='engine_init'/>
+<use f='MTProxy/engine/engine.c' l='222' u='r' c='engine_init'/>

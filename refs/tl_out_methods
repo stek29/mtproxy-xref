@@ -1,0 +1,15 @@
+<def f='MTProxy/common/tl-parse.h' l='76' ll='90'/>
+<size>168</size>
+<mbr r='tl_out_methods::store_get_ptr' o='0' t='void *(*)(struct tl_out_state *, int)'/>
+<mbr r='tl_out_methods::store_get_prepend_ptr' o='64' t='void *(*)(struct tl_out_state *, int)'/>
+<mbr r='tl_out_methods::store_raw_data' o='128' t='void (*)(struct tl_out_state *, const void *, int)'/>
+<mbr r='tl_out_methods::store_raw_msg' o='192' t='void (*)(struct tl_out_state *, struct raw_message *)'/>
+<mbr r='tl_out_methods::store_read_back' o='256' t='void (*)(struct tl_out_state *, int)'/>
+<mbr r='tl_out_methods::store_read_back_nondestruct' o='320' t='void (*)(struct tl_out_state *, void *, int)'/>
+<mbr r='tl_out_methods::store_crc32_partial' o='384' t='unsigned int (*)(struct tl_out_state *, int, unsigned int)'/>
+<mbr r='tl_out_methods::store_flush' o='448' t='void (*)(struct tl_out_state *)'/>
+<mbr r='tl_out_methods::store_clear' o='512' t='void (*)(struct tl_out_state *)'/>
+<mbr r='tl_out_methods::copy_through' o='576' t='void (*[10])(struct tl_in_state *, struct tl_out_state *, int, int)'/>
+<mbr r='tl_out_methods::store_prefix' o='1216' t='void (*)(struct tl_out_state *)'/>
+<mbr r='tl_out_methods::flags' o='1280' t='int'/>
+<mbr r='tl_out_methods::prepend_bytes' o='1312' t='int'/>

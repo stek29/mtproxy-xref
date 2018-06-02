@@ -1,0 +1,14 @@
+<dec f='include/x86_64-linux-gnu/bits/string2.h' l='1278' type='char * __strdup(const char * __string)'/>
+<use f='MTProxy/common/parse-config.c' l='265' macro='1' u='c'/>
+<use f='MTProxy/common/server-functions.c' l='387' macro='1' u='c'/>
+<use f='MTProxy/common/tl-parse.h' l='805' macro='1' u='c'/>
+<use f='MTProxy/engine/engine.h' l='193' macro='1' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='124' macro='1' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='140' macro='1' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='554' macro='1' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='287' macro='1' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='296' macro='1' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='366' macro='1' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='430' macro='1' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='449' macro='1' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='482' macro='1' u='c'/>

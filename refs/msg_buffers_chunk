@@ -1,0 +1,17 @@
+<def f='MTProxy/net/net-msg-buffers.h' l='67' ll='89'/>
+<size>96</size>
+<mbr r='msg_buffers_chunk::magic' o='0' t='int'/>
+<mbr r='msg_buffers_chunk::buffer_size' o='32' t='int'/>
+<mbr r='msg_buffers_chunk::free_buffer' o='64' t='int (*)(struct msg_buffers_chunk *, struct msg_buffer *)'/>
+<mbr r='msg_buffers_chunk::ch_next' o='128' t='struct msg_buffers_chunk *'/>
+<mbr r='msg_buffers_chunk::ch_prev' o='192' t='struct msg_buffers_chunk *'/>
+<mbr r='msg_buffers_chunk::ch_head' o='256' t='struct msg_buffers_chunk *'/>
+<mbr r='msg_buffers_chunk::first_buffer' o='320' t='struct msg_buffer *'/>
+<mbr r='msg_buffers_chunk::two_power' o='384' t='int'/>
+<mbr r='msg_buffers_chunk::tot_buffers' o='416' t='int'/>
+<mbr r='msg_buffers_chunk::bs_inverse' o='448' t='int'/>
+<mbr r='msg_buffers_chunk::bs_shift' o='480' t='int'/>
+<mbr r='msg_buffers_chunk::free_block_queue' o='512' t='struct mp_queue *'/>
+<mbr r='msg_buffers_chunk::thread_class' o='576' t='int'/>
+<mbr r='msg_buffers_chunk::thread_subclass' o='608' t='int'/>
+<mbr r='msg_buffers_chunk::refcnt' o='640' t='int'/>

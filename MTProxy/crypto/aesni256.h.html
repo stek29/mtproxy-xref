@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>aesni256.h source code [MTProxy/crypto/aesni256.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="aesni256_ctx,tg_aes_ctx,tg_aes_methods "/>
+<link rel="stylesheet" href="https://code.woboq.org/data//qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="https://code.woboq.org/data//kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery-ui.min.js"></script>
+<script>var file = 'MTProxy/crypto/aesni256.h'; var root_path = '../..'; var data_path = 'https://code.woboq.org/data/';</script>
+<script src='https://code.woboq.org/data//codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='..'>MTProxy</a>/<a href='./'>crypto</a>/<a href='aesni256.h.html'>aesni256.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>    This file is part of Mtproto-proxy Library.</i></td></tr>
+<tr><th id="3">3</th><td><i></i></td></tr>
+<tr><th id="4">4</th><td><i>    Mtproto-proxy Library is free software: you can redistribute it and/or modify</i></td></tr>
+<tr><th id="5">5</th><td><i>    it under the terms of the GNU Lesser General Public License as published by</i></td></tr>
+<tr><th id="6">6</th><td><i>    the Free Software Foundation, either version 2 of the License, or</i></td></tr>
+<tr><th id="7">7</th><td><i>    (at your option) any later version.</i></td></tr>
+<tr><th id="8">8</th><td><i></i></td></tr>
+<tr><th id="9">9</th><td><i>    Mtproto-proxy Library is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="10">10</th><td><i>    but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="11">11</th><td><i>    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</i></td></tr>
+<tr><th id="12">12</th><td><i>    GNU Lesser General Public License for more details.</i></td></tr>
+<tr><th id="13">13</th><td><i></i></td></tr>
+<tr><th id="14">14</th><td><i>    You should have received a copy of the GNU Lesser General Public License</i></td></tr>
+<tr><th id="15">15</th><td><i>    along with Mtproto-proxy Library.  If not, see &lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</i></td></tr>
+<tr><th id="16">16</th><td><i></i></td></tr>
+<tr><th id="17">17</th><td><i>    Copyright 2012-2013 Vkontakte Ltd</i></td></tr>
+<tr><th id="18">18</th><td><i>              2012-2013 Anton Maydell</i></td></tr>
+<tr><th id="19">19</th><td><i>    </i></td></tr>
+<tr><th id="20">20</th><td><i>    Copyright 2014-2016 Telegram Messenger Inc</i></td></tr>
+<tr><th id="21">21</th><td><i>              2014-2016 Anton Maydell</i></td></tr>
+<tr><th id="22">22</th><td><i>*/</i></td></tr>
+<tr><th id="23">23</th><td></td></tr>
+<tr><th id="24">24</th><td><u>#pragma once</u></td></tr>
+<tr><th id="25">25</th><td></td></tr>
+<tr><th id="26">26</th><td><u>#include <a href="../../include/openssl/aes.h.html">&lt;openssl/aes.h&gt;</a></u></td></tr>
+<tr><th id="27">27</th><td></td></tr>
+<tr><th id="28">28</th><td><b>struct</b> <dfn class="type def" id="aesni256_ctx" title='aesni256_ctx' data-ref="aesni256_ctx">aesni256_ctx</dfn> {</td></tr>
+<tr><th id="29">29</th><td>  <em>unsigned</em> <em>char</em> <dfn class="decl" id="aesni256_ctx::a" title='aesni256_ctx::a' data-ref="aesni256_ctx::a">a</dfn>[<var>256</var>];</td></tr>
+<tr><th id="30">30</th><td>};</td></tr>
+<tr><th id="31">31</th><td></td></tr>
+<tr><th id="32">32</th><td><i>//TODO: move cbc_crypt, ige_crypt, ctr_crypt to the virtual method table</i></td></tr>
+<tr><th id="33">33</th><td><b>struct</b> <a class="type" href="#tg_aes_ctx" title='tg_aes_ctx' data-ref="tg_aes_ctx">tg_aes_ctx</a>;</td></tr>
+<tr><th id="34">34</th><td></td></tr>
+<tr><th id="35">35</th><td><b>struct</b> <dfn class="type def" id="tg_aes_methods" title='tg_aes_methods' data-ref="tg_aes_methods">tg_aes_methods</dfn> {</td></tr>
+<tr><th id="36">36</th><td>  <em>void</em> (*<dfn class="decl" id="tg_aes_methods::cbc_crypt" title='tg_aes_methods::cbc_crypt' data-ref="tg_aes_methods::cbc_crypt">cbc_crypt</dfn>) (<b>struct</b> <a class="type" href="#tg_aes_ctx" title='tg_aes_ctx' data-ref="tg_aes_ctx">tg_aes_ctx</a> *<dfn class="local col2 decl" id="1562ctx" title='ctx' data-type='struct tg_aes_ctx *' data-ref="1562ctx">ctx</dfn>, <em>const</em> <em>unsigned</em> <em>char</em> *<dfn class="local col3 decl" id="1563in" title='in' data-type='const unsigned char *' data-ref="1563in">in</dfn>, <em>unsigned</em> <em>char</em> *<dfn class="local col4 decl" id="1564out" title='out' data-type='unsigned char *' data-ref="1564out">out</dfn>, <em>int</em> <dfn class="local col5 decl" id="1565size" title='size' data-type='int' data-ref="1565size">size</dfn>, <em>unsigned</em> <em>char</em> <dfn class="local col6 decl" id="1566iv" title='iv' data-type='unsigned char *' data-ref="1566iv">iv</dfn>[<var>16</var>]);</td></tr>
+<tr><th id="37">37</th><td>  <em>void</em> (*<dfn class="decl" id="tg_aes_methods::ige_crypt" title='tg_aes_methods::ige_crypt' data-ref="tg_aes_methods::ige_crypt">ige_crypt</dfn>) (<b>struct</b> <a class="type" href="#tg_aes_ctx" title='tg_aes_ctx' data-ref="tg_aes_ctx">tg_aes_ctx</a> *<dfn class="local col7 decl" id="1567ctx" title='ctx' data-type='struct tg_aes_ctx *' data-ref="1567ctx">ctx</dfn>, <em>const</em> <em>unsigned</em> <em>char</em> *<dfn class="local col8 decl" id="1568in" title='in' data-type='const unsigned char *' data-ref="1568in">in</dfn>, <em>unsigned</em> <em>char</em> *<dfn class="local col9 decl" id="1569out" title='out' data-type='unsigned char *' data-ref="1569out">out</dfn>, <em>int</em> <dfn class="local col0 decl" id="1570size" title='size' data-type='int' data-ref="1570size">size</dfn>, <em>unsigned</em> <em>char</em> <dfn class="local col1 decl" id="1571iv" title='iv' data-type='unsigned char *' data-ref="1571iv">iv</dfn>[<var>32</var>]);</td></tr>
+<tr><th id="38">38</th><td>  <em>void</em> (*<dfn class="decl" id="tg_aes_methods::ctr_crypt" title='tg_aes_methods::ctr_crypt' data-ref="tg_aes_methods::ctr_crypt">ctr_crypt</dfn>) (<b>struct</b> <a class="type" href="#tg_aes_ctx" title='tg_aes_ctx' data-ref="tg_aes_ctx">tg_aes_ctx</a> *<dfn class="local col2 decl" id="1572ctx" title='ctx' data-type='struct tg_aes_ctx *' data-ref="1572ctx">ctx</dfn>, <em>const</em> <em>unsigned</em> <em>char</em> *<dfn class="local col3 decl" id="1573in" title='in' data-type='const unsigned char *' data-ref="1573in">in</dfn>, <em>unsigned</em> <em>char</em> *<dfn class="local col4 decl" id="1574out" title='out' data-type='unsigned char *' data-ref="1574out">out</dfn>, <em>int</em> <dfn class="local col5 decl" id="1575size" title='size' data-type='int' data-ref="1575size">size</dfn>, <em>unsigned</em> <em>char</em> <dfn class="local col6 decl" id="1576iv" title='iv' data-type='unsigned char *' data-ref="1576iv">iv</dfn>[<var>16</var>], <em>unsigned</em> <em>long</em> <em>long</em> <dfn class="local col7 decl" id="1577offset" title='offset' data-type='unsigned long long' data-ref="1577offset">offset</dfn>);</td></tr>
+<tr><th id="39">39</th><td>  <em>void</em> (*<dfn class="decl" id="tg_aes_methods::ctr128_crypt" title='tg_aes_methods::ctr128_crypt' data-ref="tg_aes_methods::ctr128_crypt">ctr128_crypt</dfn>) (<b>struct</b> <a class="type" href="#tg_aes_ctx" title='tg_aes_ctx' data-ref="tg_aes_ctx">tg_aes_ctx</a> *<dfn class="local col8 decl" id="1578ctx" title='ctx' data-type='struct tg_aes_ctx *' data-ref="1578ctx">ctx</dfn>, <em>const</em> <em>unsigned</em> <em>char</em> *<dfn class="local col9 decl" id="1579in" title='in' data-type='const unsigned char *' data-ref="1579in">in</dfn>, <em>unsigned</em> <em>char</em> *<dfn class="local col0 decl" id="1580out" title='out' data-type='unsigned char *' data-ref="1580out">out</dfn>, <em>int</em> <dfn class="local col1 decl" id="1581size" title='size' data-type='int' data-ref="1581size">size</dfn>, <em>unsigned</em> <em>char</em> <dfn class="local col2 decl" id="1582iv" title='iv' data-type='unsigned char *' data-ref="1582iv">iv</dfn>[<var>16</var>], <em>unsigned</em> <em>char</em> <dfn class="local col3 decl" id="1583ecount_buf" title='ecount_buf' data-type='unsigned char *' data-ref="1583ecount_buf">ecount_buf</dfn>[<var>16</var>], <em>unsigned</em> <em>int</em> *<dfn class="local col4 decl" id="1584num" title='num' data-type='unsigned int *' data-ref="1584num">num</dfn>);</td></tr>
+<tr><th id="40">40</th><td>};</td></tr>
+<tr><th id="41">41</th><td></td></tr>
+<tr><th id="42">42</th><td><b>typedef</b> <b>struct</b> <dfn class="type def" id="tg_aes_ctx" title='tg_aes_ctx' data-ref="tg_aes_ctx"><a class="type" href="#tg_aes_ctx" title='tg_aes_ctx' data-ref="tg_aes_ctx">tg_aes_ctx</a></dfn> {</td></tr>
+<tr><th id="43">43</th><td>  <b>union</b> {</td></tr>
+<tr><th id="44">44</th><td>    <a class="typedef" href="../../include/openssl/aes.h.html#AES_KEY" title='AES_KEY' data-type='struct aes_key_st' data-ref="AES_KEY">AES_KEY</a> <dfn class="decl" id="tg_aes_ctx::(anonymous)::key" title='tg_aes_ctx::(anonymous union)::key' data-ref="tg_aes_ctx::(anonymous)::key">key</dfn>;</td></tr>
+<tr><th id="45">45</th><td>    <b>struct</b> <a class="type" href="#aesni256_ctx" title='aesni256_ctx' data-ref="aesni256_ctx">aesni256_ctx</a> <dfn class="decl" id="tg_aes_ctx::(anonymous)::ctx" title='tg_aes_ctx::(anonymous union)::ctx' data-ref="tg_aes_ctx::(anonymous)::ctx">ctx</dfn>;</td></tr>
+<tr><th id="46">46</th><td>  } <dfn class="decl" id="tg_aes_ctx::u" title='tg_aes_ctx::u' data-ref="tg_aes_ctx::u">u</dfn>;</td></tr>
+<tr><th id="47">47</th><td>  <em>const</em> <b>struct</b> <a class="type" href="#tg_aes_methods" title='tg_aes_methods' data-ref="tg_aes_methods">tg_aes_methods</a> *<dfn class="decl" id="tg_aes_ctx::type" title='tg_aes_ctx::type' data-ref="tg_aes_ctx::type">type</dfn>;</td></tr>
+<tr><th id="48">48</th><td>} <dfn class="typedef" id="tg_aes_ctx_t" title='tg_aes_ctx_t' data-type='struct tg_aes_ctx' data-ref="tg_aes_ctx_t">tg_aes_ctx_t</dfn>;</td></tr>
+<tr><th id="49">49</th><td></td></tr>
+<tr><th id="50">50</th><td><em>void</em> <dfn class="decl" id="tg_aes_set_encrypt_key" title='tg_aes_set_encrypt_key' data-ref="tg_aes_set_encrypt_key">tg_aes_set_encrypt_key</dfn> (<a class="typedef" href="#tg_aes_ctx_t" title='tg_aes_ctx_t' data-type='struct tg_aes_ctx' data-ref="tg_aes_ctx_t">tg_aes_ctx_t</a> *<dfn class="local col5 decl" id="1585ctx" title='ctx' data-type='tg_aes_ctx_t *' data-ref="1585ctx">ctx</dfn>, <em>unsigned</em> <em>char</em> *<dfn class="local col6 decl" id="1586key" title='key' data-type='unsigned char *' data-ref="1586key">key</dfn>, <em>int</em> <dfn class="local col7 decl" id="1587bits" title='bits' data-type='int' data-ref="1587bits">bits</dfn>);</td></tr>
+<tr><th id="51">51</th><td><em>void</em> <dfn class="decl" id="tg_aes_set_decrypt_key" title='tg_aes_set_decrypt_key' data-ref="tg_aes_set_decrypt_key">tg_aes_set_decrypt_key</dfn> (<a class="typedef" href="#tg_aes_ctx_t" title='tg_aes_ctx_t' data-type='struct tg_aes_ctx' data-ref="tg_aes_ctx_t">tg_aes_ctx_t</a> *<dfn class="local col8 decl" id="1588ctx" title='ctx' data-type='tg_aes_ctx_t *' data-ref="1588ctx">ctx</dfn>, <em>unsigned</em> <em>char</em> *<dfn class="local col9 decl" id="1589key" title='key' data-type='unsigned char *' data-ref="1589key">key</dfn>, <em>int</em> <dfn class="local col0 decl" id="1590bits" title='bits' data-type='int' data-ref="1590bits">bits</dfn>);</td></tr>
+<tr><th id="52">52</th><td><em>void</em> <dfn class="decl" id="tg_aes_ctx_cleanup" title='tg_aes_ctx_cleanup' data-ref="tg_aes_ctx_cleanup">tg_aes_ctx_cleanup</dfn> (<a class="typedef" href="#tg_aes_ctx_t" title='tg_aes_ctx_t' data-type='struct tg_aes_ctx' data-ref="tg_aes_ctx_t">tg_aes_ctx_t</a> *<dfn class="local col1 decl" id="1591ctx" title='ctx' data-type='tg_aes_ctx_t *' data-ref="1591ctx">ctx</dfn>);</td></tr>
+<tr><th id="53">53</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../common/common-stats.c.html'>MTProxy/common/common-stats.c</a><br/>Generated on <em>2018-Jun-02</em> from project MTProxy revision <em>842f343decf6c463bdecf1862e357c4a03e4bc97</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

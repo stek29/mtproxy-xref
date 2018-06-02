@@ -1,0 +1,24 @@
+<def f='MTProxy/jobs/jobs.h' l='220' ll='238'/>
+<size>256</size>
+<mbr r='job_thread::pthread_id' o='0' t='pthread_t'/>
+<mbr r='job_thread::id' o='64' t='int'/>
+<mbr r='job_thread::thread_class' o='96' t='int'/>
+<mbr r='job_thread::job_class_mask' o='128' t='int'/>
+<mbr r='job_thread::status' o='160' t='int'/>
+<mbr r='job_thread::jobs_performed' o='192' t='long long'/>
+<mbr r='job_thread::job_queue' o='256' t='struct mp_queue *'/>
+<mbr r='job_thread::current_job' o='320' t='struct async_job *'/>
+<mbr r='job_thread::current_job_start_time' o='384' t='double'/>
+<mbr r='job_thread::last_job_time' o='448' t='double'/>
+<mbr r='job_thread::tot_jobs_time' o='512' t='double'/>
+<mbr r='job_thread::jobs_running' o='576' t='int [16]'/>
+<mbr r='job_thread::jobs_created' o='1088' t='long long'/>
+<mbr r='job_thread::jobs_active' o='1152' t='long long'/>
+<mbr r='job_thread::thread_system_id' o='1216' t='int'/>
+<mbr r='job_thread::rand_data' o='1280' t='struct drand48_data'/>
+<mbr r='job_thread::timer_manager' o='1472' t='job_t'/>
+<mbr r='job_thread::wakeup_time' o='1536' t='double'/>
+<mbr r='job_thread::job_class' o='1600' t='struct job_class *'/>
+<dec f='MTProxy/jobs/jobs.c' l='422' type='void * job_thread(void * arg)'/>
+<use f='MTProxy/jobs/jobs.c' l='504' u='r' c='create_job_thread'/>
+<def f='MTProxy/jobs/jobs.c' l='1024' ll='1026' type='void * job_thread(void * arg)'/>

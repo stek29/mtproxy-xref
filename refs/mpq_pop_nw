@@ -1,0 +1,18 @@
+<dec f='MTProxy/common/mp-queue.h' l='137' type='mqn_value_t mpq_pop_nw(struct mp_queue * MQ, int flags)'/>
+<def f='MTProxy/common/mp-queue.c' l='634' ll='656' type='mqn_value_t mpq_pop_nw(struct mp_queue * MQ, int flags)'/>
+<use f='MTProxy/jobs/jobs.c' l='915' u='c' c='job_thread_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='988' u='c' c='process_one_sublist'/>
+<use f='MTProxy/jobs/jobs.c' l='1042' u='c' c='run_pending_main_jobs'/>
+<use f='MTProxy/jobs/jobs.c' l='1278' u='c' c='do_timer_manager_job'/>
+<use f='MTProxy/jobs/jobs.c' l='1469' u='c' c='job_message_queue_free'/>
+<use f='MTProxy/jobs/jobs.c' l='1572' u='c' c='job_message_queue_work'/>
+<use f='MTProxy/net/net-connections.c' l='427' u='c' c='cpu_server_free_connection'/>
+<use f='MTProxy/net/net-connections.c' l='437' u='c' c='cpu_server_free_connection'/>
+<use f='MTProxy/net/net-connections.c' l='831' u='c' c='net_server_socket_free'/>
+<use f='MTProxy/net/net-connections.c' l='1067' u='c' c='net_server_socket_read_write'/>
+<use f='MTProxy/net/net-connections.c' l='2113' u='c' c='free_later_act'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='138' u='c' c='try_lock_chunk'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='149' u='c' c='unlock_chunk'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='64' u='c' c='cpu_tcp_server_writer'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='104' u='c' c='cpu_tcp_server_reader'/>
+<use f='MTProxy/net/net-thread.c' l='88' u='c' c='notification_event_run'/>

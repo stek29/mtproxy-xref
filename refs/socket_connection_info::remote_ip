@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-connections.h' l='257' type='unsigned int'/>
+<use f='MTProxy/net/net-connections.h' l='316' u='r' c='show_remote_socket_ip'/>
+<offset>928</offset>
+<use f='MTProxy/net/net-connections.c' l='1196' u='w' c='alloc_new_socket_connection'/>

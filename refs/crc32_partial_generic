@@ -1,0 +1,5 @@
+<dec f='MTProxy/common/crc32.h' l='66' type='unsigned int crc32_partial_generic(const void * data, long len, unsigned int crc)'/>
+<doc f='MTProxy/common/crc32.h' l='65'>/* these functions are exported only for testing purpose */</doc>
+<def f='MTProxy/common/crc32.c' l='367' ll='402' type='unsigned int crc32_partial_generic(const void * data, long len, unsigned int crc)'/>
+<use f='MTProxy/common/crc32.c' l='491' u='c' c='crc32_partial_clmul'/>
+<use f='MTProxy/common/crc32.c' l='1045' u='r' c='crc32_init'/>

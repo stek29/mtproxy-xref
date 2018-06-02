@@ -1,0 +1,2 @@
+<def f='MTProxy/jobs/jobs.h' l='371' ll='373' type='void job_message_send_empty(int job_tag_int, job_t job, int src_tag_int, job_t src, unsigned int type, unsigned int flags)'/>
+<doc f='MTProxy/jobs/jobs.h' l='370'>//void job_message_send_data (JOB_REF_ARG (job), JOB_REF_ARG (src), unsigned int type, void *ptr1, void *ptr2, int int1, long long long1, int payload_ints, const unsigned int *payload, unsigned int flags);</doc>

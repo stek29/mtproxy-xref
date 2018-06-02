@@ -1,0 +1,28 @@
+<dec f='MTProxy/net/net-msg-buffers.h' l='58' type='struct msg_buffers_chunk *'/>
+<offset>0</offset>
+<use f='MTProxy/net/net-connections.c' l='233' u='r' c='prealloc_tcp_buffers'/>
+<use f='MTProxy/net/net-connections.c' l='236' u='r' c='prealloc_tcp_buffers'/>
+<use f='MTProxy/net/net-connections.c' l='238' u='r' c='prealloc_tcp_buffers'/>
+<use f='MTProxy/net/net-connections.c' l='935' u='r' c='net_server_socket_reader'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='140' u='r' c='try_lock_chunk'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='151' u='r' c='unlock_chunk'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='409' u='r' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='479' u='w' c='alloc_msg_buffer_internal'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='505' u='r' c='free_std_msg_buffer'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='533' u='r' c='free_msg_buffer_job'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='553' u='r' c='free_msg_buffer'/>
+<use f='MTProxy/net/net-msg.c' l='387' u='r' c='rwm_push_data_ext'/>
+<use f='MTProxy/net/net-msg.c' l='420' u='r' c='rwm_push_data_ext'/>
+<use f='MTProxy/net/net-msg.c' l='456' u='r' c='rwm_push_data_ext'/>
+<use f='MTProxy/net/net-msg.c' l='520' u='r' c='rwm_push_data_front'/>
+<use f='MTProxy/net/net-msg.c' l='597' u='r' c='rwm_prepend_alloc'/>
+<use f='MTProxy/net/net-msg.c' l='629' u='r' c='rwm_postpone_alloc'/>
+<use f='MTProxy/net/net-msg.c' l='639' u='r' c='rwm_postpone_alloc'/>
+<use f='MTProxy/net/net-msg.c' l='876' u='r' c='rwm_check'/>
+<use f='MTProxy/net/net-msg.c' l='1250' u='r' c='rwm_process_encrypt_decrypt'/>
+<use f='MTProxy/net/net-msg.c' l='1255' u='r' c='rwm_process_encrypt_decrypt'/>
+<use f='MTProxy/net/net-msg.c' l='1280' u='r' c='rwm_process_encrypt_decrypt'/>
+<use f='MTProxy/net/net-msg.c' l='1303' u='r' c='rwm_process_encrypt_decrypt'/>
+<use f='MTProxy/net/net-msg.c' l='1312' u='r' c='rwm_process_encrypt_decrypt'/>
+<use f='MTProxy/net/net-msg.c' l='1316' u='r' c='rwm_process_encrypt_decrypt'/>
+<use f='MTProxy/net/net-msg.c' l='1370' u='r' c='rwm_encrypt_decrypt_to'/>

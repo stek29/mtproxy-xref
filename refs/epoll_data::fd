@@ -1,0 +1,6 @@
+<dec f='include/x86_64-linux-gnu/sys/epoll.h' l='82' type='int'/>
+<offset>0</offset>
+<use f='MTProxy/net/net-events.c' l='264' u='w' c='epoll_insert'/>
+<use f='MTProxy/net/net-events.c' l='266' u='r' c='epoll_insert'/>
+<use f='MTProxy/net/net-events.c' l='269' u='r' c='epoll_insert'/>
+<use f='MTProxy/net/net-events.c' l='386' u='r' c='epoll_fetch_events'/>

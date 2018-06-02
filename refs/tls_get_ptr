@@ -1,0 +1,6 @@
+<def f='MTProxy/common/tl-parse.h' l='562' ll='570' type='void * tls_get_ptr(struct tl_out_state * tlio_out, int size)'/>
+<doc f='MTProxy/common/tl-parse.h' l='560'>/* }}} */</doc>
+<doc f='MTProxy/common/tl-parse.h' l='562'>/* {{{ */</doc>
+<use f='MTProxy/engine/engine-rpc.c' l='512' u='c' c='process_query_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='854' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1798' macro='1' u='c'/>

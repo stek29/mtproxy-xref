@@ -1,0 +1,5 @@
+<def f='MTProxy/common/tl-parse.h' l='709' ll='724' type='int tl_copy_through(struct tl_in_state * tlio_in, struct tl_out_state * tlio_out, int len, int advance)'/>
+<doc f='MTProxy/common/tl-parse.h' l='709'>/* {{{ */</doc>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1577' u='c' c='http_send_message'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1611' u='c' c='client_send_message'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1814' u='c' c='forward_tcp_query'/>

@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-connections.h' l='81'/>
+<use f='MTProxy/net/net-http-server.c' l='229' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='118' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='316' u='c'/>

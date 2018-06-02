@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-events.h' l='73' type='event_handler_t'/>
+<offset>384</offset>
+<use f='MTProxy/net/net-events.c' l='196' u='w' c='epoll_sethandler'/>
+<use f='MTProxy/net/net-events.c' l='330' u='r' c='epoll_runqueue'/>
+<use f='MTProxy/net/net-events.c' l='331' u='r' c='epoll_runqueue'/>

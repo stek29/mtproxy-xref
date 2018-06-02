@@ -1,0 +1,26 @@
+<dec f='MTProxy/net/net-msg.h' l='104' type='void rwm_clone(struct raw_message * dest_raw, struct raw_message * src_raw)'/>
+<use f='MTProxy/common/tl-parse.h' l='632' u='c' c='tls_raw_msg'/>
+<use f='MTProxy/common/tl-parse.c' l='163' u='c' c='__tl_raw_msg_fetch_lookup_raw_message'/>
+<use f='MTProxy/common/tl-parse.c' l='170' u='c' c='__tl_raw_msg_fetch_mark'/>
+<use f='MTProxy/common/tl-parse.c' l='215' u='c' c='__tl_raw_msg_store_read_back_nondestruct'/>
+<use f='MTProxy/common/tl-parse.c' l='223' u='c' c='__tl_raw_msg_raw_msg_copy_through'/>
+<use f='MTProxy/common/tl-parse.c' l='585' u='c' c='tlf_init_raw_message'/>
+<use f='MTProxy/engine/engine-rpc.c' l='400' u='c' c='process_act_atom_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='616' u='c' c='process_parse_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='698' u='c' c='create_query_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='721' u='c' c='create_query_custom_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='740' u='c' c='query_job_run'/>
+<use f='MTProxy/engine/engine-rpc.c' l='763' u='c' c='query_job_run'/>
+<use f='MTProxy/jobs/jobs.c' l='1511' u='c' c='job_message_send'/>
+<use f='MTProxy/jobs/jobs.c' l='1552' u='c' c='job_message_send_fake'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1444' u='c' c='hts_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='226' u='c' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='583' u='c' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='633' u='c' c='hts_parse_execute'/>
+<def f='MTProxy/net/net-msg.c' l='342' ll='353' type='void rwm_clone(struct raw_message * dest_raw, struct raw_message * src_raw)'/>
+<use f='MTProxy/net/net-msg.c' l='895' u='c' c='rwm_dump'/>
+<doc f='MTProxy/net/net-msg.c' l='340'>/* }}} */</doc>
+<doc f='MTProxy/net/net-msg.c' l='342'>/* {{{ */</doc>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='51' u='c' c='tcp_rpc_conn_send_init'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='76' u='c' c='tcp_rpc_conn_send_im'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='103' u='c' c='tcp_rpc_conn_send'/>

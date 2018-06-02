@@ -1,0 +1,4 @@
+<dec f='MTProxy/jobs/jobs.h' l='299' type='void complete_job(job_t job)'/>
+<doc f='MTProxy/jobs/jobs.h' l='299'>// if JF_COMPLETED is not set, sets it and acts according to JFS_PARENT_*</doc>
+<use f='MTProxy/jobs/jobs.c' l='688' u='c' c='unlock_job'/>
+<def f='MTProxy/jobs/jobs.c' l='852' ll='864' type='void complete_job(job_t job)'/>

@@ -1,0 +1,2 @@
+<def f='MTProxy/common/server-functions.h' l='113' ll='115' type='void mfence()'/>
+<use f='MTProxy/common/mp-queue.c' l='679' u='c' c='get_ptr_multithread_copy'/>

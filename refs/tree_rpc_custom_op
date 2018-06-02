@@ -1,0 +1,6 @@
+<def f='MTProxy/vv/vv-tree.c' l='60' macro='1'/>
+<size>32</size>
+<mbr r='tree_rpc_custom_op::left' o='0' t='struct tree_rpc_custom_op *'/>
+<mbr r='tree_rpc_custom_op::right' o='64' t='struct tree_rpc_custom_op *'/>
+<mbr r='tree_rpc_custom_op::x' o='128' t='struct rpc_custom_op *'/>
+<mbr r='tree_rpc_custom_op::y' o='192' t='int'/>

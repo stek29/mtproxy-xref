@@ -1,0 +1,30 @@
+<dec f='MTProxy/vv/vv-tree.c' l='61' type='struct tree_rpc_custom_op *'/>
+<use f='MTProxy/vv/vv-tree.c' l='144' u='r' c='tree_lookup_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='153' u='r' c='tree_lookup_next_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='187' u='r' c='tree_lookup_ptr_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='221' u='a' c='tree_split_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='221' u='r' c='tree_split_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='286' u='w' c='tree_insert_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='286' u='r' c='tree_insert_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='307' u='a' c='tree_insert_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='412' u='w' c='tree_merge_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='412' u='r' c='tree_merge_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='427' u='r' c='tree_delete_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='429' u='w' c='tree_delete_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='433' u='w' c='tree_delete_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='433' u='r' c='tree_delete_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='488' u='r' c='tree_get_min_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='489' u='r' c='tree_get_min_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='503' u='r' c='tree_act_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='510' u='r' c='tree_act_ex_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='517' u='r' c='tree_act_ex2_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='524' u='r' c='tree_act_ex3_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='535' u='r' c='tree_clear_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='554' u='r' c='tree_check_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='554' u='r' c='tree_check_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='554' u='r' c='tree_check_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='554' u='r' c='tree_check_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='556' u='r' c='tree_check_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='564' u='r' c='tree_count_rpc_custom_op'/>
+<use f='MTProxy/vv/vv-tree.c' l='580' u='w' c='tree_alloc_rpc_custom_op'/>
+<offset>0</offset>

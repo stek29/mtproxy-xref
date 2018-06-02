@@ -1,0 +1,9 @@
+<dec f='MTProxy/engine/engine-rpc.h' l='44' type='int'/>
+<offset>800</offset>
+<use f='MTProxy/engine/engine-rpc.c' l='485' u='r' c='process_query_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='501' u='r' c='process_query_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='522' u='w' c='process_query_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='532' u='r' c='process_query_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='550' u='w' c='process_query_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='562' u='r' c='process_query_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='574' u='w' c='process_query_job'/>

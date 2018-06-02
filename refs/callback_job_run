@@ -1,0 +1,2 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='734' ll='745' type='int callback_job_run(job_t job, int op, struct job_thread * JT)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='748' u='r' c='schedule_job_callback'/>

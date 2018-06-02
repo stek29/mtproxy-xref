@@ -1,0 +1,4 @@
+<dec f='include/getopt.h' l='106' type='const char *'/>
+<offset>0</offset>
+<use f='MTProxy/common/server-functions.c' l='668' u='w' c='parse_engine_options_long'/>
+<use f='MTProxy/common/server-functions.c' l='702' u='r' c='parse_engine_options_long'/>

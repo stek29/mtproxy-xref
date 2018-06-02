@@ -1,0 +1,7 @@
+<dec f='MTProxy/net/net-tcp-rpc-client.h' l='39' type='int (*)(connection_job_t)'/>
+<offset>640</offset>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='777' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='102' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='417' u='r' c='tcp_rpcc_parse_execute'/>
+<use f='MTProxy/net/net-thread.c' l='53' u='r' c='run_notification_event'/>
+<use f='MTProxy/net/net-thread.c' l='53' u='r' c='run_notification_event'/>

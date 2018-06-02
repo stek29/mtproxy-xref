@@ -1,0 +1,3 @@
+<dec f='MTProxy/net/net-connections.h' l='395' type='void *'/>
+<offset>0</offset>
+<use f='MTProxy/net/net-connections.c' l='2116' u='r' c='free_later_act'/>

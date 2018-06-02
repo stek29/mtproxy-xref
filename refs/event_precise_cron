@@ -1,0 +1,5 @@
+<def f='MTProxy/engine/engine.h' l='140' ll='143'/>
+<size>24</size>
+<mbr r='event_precise_cron::next' o='0' t='struct event_precise_cron *'/>
+<mbr r='event_precise_cron::prev' o='64' t='struct event_precise_cron *'/>
+<mbr r='event_precise_cron::wakeup' o='128' t='void (*)(struct event_precise_cron *)'/>

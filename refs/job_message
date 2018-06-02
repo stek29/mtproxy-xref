@@ -1,0 +1,10 @@
+<def f='MTProxy/jobs/jobs.h' l='240' ll='249'/>
+<size>72</size>
+<mbr r='job_message::type' o='0' t='unsigned int'/>
+<mbr r='job_message::flags' o='32' t='unsigned int'/>
+<mbr r='job_message::payload_ints' o='64' t='unsigned int'/>
+<mbr r='job_message::src' o='128' t='job_t'/>
+<mbr r='job_message::destructor' o='192' t='void (*)(struct job_message *)'/>
+<mbr r='job_message::message' o='256' t='struct raw_message'/>
+<mbr r='job_message::next' o='512' t='struct job_message *'/>
+<mbr r='job_message::payload' o='576' t='unsigned int [0]'/>

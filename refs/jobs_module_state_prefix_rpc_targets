@@ -1,0 +1,3 @@
+<def f='MTProxy/net/net-rpc-targets.c' l='77' macro='1' type='char *'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='80' macro='1' u='r'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='81' macro='1' u='r'/>

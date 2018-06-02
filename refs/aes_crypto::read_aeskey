@@ -1,0 +1,10 @@
+<dec f='MTProxy/net/net-crypto-aes.h' l='75' type='tg_aes_ctx_t'/>
+<offset>512</offset>
+<use f='MTProxy/net/net-crypto-aes.c' l='89' u='a' c='aes_crypto_init'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='108' u='a' c='aes_crypto_ctr128_init'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='221' u='a' c='cpu_tcp_aes_crypto_decrypt_input'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='221' u='m' c='cpu_tcp_aes_crypto_decrypt_input'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='261' u='a' c='cpu_tcp_aes_crypto_ctr128_decrypt_input'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='261' u='m' c='cpu_tcp_aes_crypto_ctr128_decrypt_input'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='216' u='m' c='tcp_rpcs_compact_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='216' u='a' c='tcp_rpcs_compact_parse_execute'/>

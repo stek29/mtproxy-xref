@@ -1,0 +1,5 @@
+<dec f='MTProxy/common/common-stats.h' l='77' type='void sb_init(stats_buffer_t * sb, char * buff, int size)'/>
+<def f='MTProxy/common/common-stats.c' l='195' ll='200' type='void sb_init(stats_buffer_t * sb, char * buff, int size)'/>
+<doc f='MTProxy/common/common-stats.c' l='194'>/************************ stats buffer functions **********************************/</doc>
+<use f='MTProxy/engine/engine.c' l='494' u='c' c='engine_prepare_stats'/>
+<use f='MTProxy/net/net-stats.c' l='107' u='c' c='prepare_stats'/>

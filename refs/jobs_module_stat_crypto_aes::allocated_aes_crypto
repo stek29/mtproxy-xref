@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-crypto-aes.c' l='55' type='int'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='87' u='w' c='aes_crypto_init'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='106' u='w' c='aes_crypto_ctr128_init'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='122' u='w' c='aes_crypto_free'/>
+<offset>0</offset>

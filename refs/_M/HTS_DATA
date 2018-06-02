@@ -1,0 +1,15 @@
+<dec f='MTProxy/net/net-http-server.h' l='89'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1249' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1252' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1256' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1256' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1335' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1356' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1400' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1527' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1537' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1566' u='c'/>
+<use f='MTProxy/net/net-http-server.c' l='102' u='c'/>
+<use f='MTProxy/net/net-http-server.c' l='218' u='c'/>
+<use f='MTProxy/net/net-http-server.c' l='835' u='c'/>
+<use f='MTProxy/net/net-http-server.c' l='870' u='c'/>

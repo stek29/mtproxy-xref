@@ -1,0 +1,3 @@
+<dec f='MTProxy/common/tl-parse.h' l='216' type='int tls_init_tcp_raw_msg_unaligned(struct tl_out_state * tlio_out, int c_tag_int, job_t c, long long qid)'/>
+<def f='MTProxy/common/tl-parse.c' l='800' ll='812' type='int tls_init_tcp_raw_msg_unaligned(struct tl_out_state * tlio_out, int c_tag_int, job_t c, long long qid)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1574' macro='1' u='c'/>

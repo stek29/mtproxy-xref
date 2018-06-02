@@ -1,0 +1,6 @@
+<dec f='MTProxy/mtproto/mtproto-proxy.c' l='140' type='void lru_insert_conn(connection_job_t c)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1055' u='c' c='mtproto_ext_rpc_ready'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1081' u='c' c='mtproto_proxy_rpc_ready'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1304' u='c' c='http_query_job_run'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1480' u='c' c='do_rpcs_execute'/>
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='1875' ll='1880' type='void lru_insert_conn(connection_job_t c)'/>

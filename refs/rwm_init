@@ -1,0 +1,23 @@
+<dec f='MTProxy/net/net-msg.h' l='102' type='int rwm_init(struct raw_message * raw, int alloc_bytes)'/>
+<use f='MTProxy/common/tl-parse.c' l='322' u='c' c='__tl_str_fetch_raw_message'/>
+<use f='MTProxy/common/tl-parse.c' l='328' u='c' c='__tl_str_fetch_lookup_raw_message'/>
+<use f='MTProxy/common/tl-parse.c' l='583' u='c' c='tlf_init_raw_message'/>
+<use f='MTProxy/common/tl-parse.c' l='781' u='c' c='tls_init_raw_msg'/>
+<use f='MTProxy/common/tl-parse.c' l='795' u='c' c='tls_init_tcp_raw_msg'/>
+<use f='MTProxy/common/tl-parse.c' l='809' u='c' c='tls_init_tcp_raw_msg_unaligned'/>
+<use f='MTProxy/common/tl-parse.c' l='821' u='c' c='tls_init_raw_msg_nosend'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1387' u='c' c='hts_stats_execute'/>
+<use f='MTProxy/net/net-connections.c' l='643' u='c' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='644' u='c' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='645' u='c' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='646' u='c' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='860' u='c' c='net_server_socket_reader'/>
+<use f='MTProxy/net/net-connections.c' l='1215' u='c' c='alloc_new_socket_connection'/>
+<use f='MTProxy/net/net-http-server.c' l='200' u='c' c='write_http_error'/>
+<def f='MTProxy/net/net-msg.c' l='563' ll='565' type='int rwm_init(struct raw_message * raw, int alloc_bytes)'/>
+<doc f='MTProxy/net/net-msg.c' l='561'>/* }}} */</doc>
+<doc f='MTProxy/net/net-msg.c' l='563'>/* {{{ */</doc>
+<use f='MTProxy/net/net-tcp-connections.c' l='78' u='c' c='cpu_tcp_server_writer'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='81' u='c' c='cpu_tcp_server_writer'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='372' u='c' c='tcp_rpcc_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='222' u='c' c='tcp_rpcs_compact_parse_execute'/>

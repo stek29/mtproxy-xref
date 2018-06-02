@@ -1,0 +1,14 @@
+<dec f='MTProxy/common/tl-parse.h' l='207' type='int tlf_init_raw_message(struct tl_in_state * tlio_in, struct raw_message * msg, int size, int dup)'/>
+<def f='MTProxy/common/tl-parse.c' l='577' ll='588' type='int tlf_init_raw_message(struct tl_in_state * tlio_in, struct raw_message * msg, int size, int dup)'/>
+<doc f='MTProxy/common/tl-parse.h' l='201'>//int tlf_init_connection (struct tl_in_state *tlio_in, connection_job_t c, int size);
+//int tlf_init_iterator (struct tl_in_state *tlio_in, nb_iterator_t *it, int size);
+//int tlf_init_iterator_noskip (struct tl_in_state *tlio_in, nb_iterator_t *it, int size);
+// dup = 0 - delete reference
+// dup = 1 - make msg valid raw message of size 0
+// dup = 2 - clone message</doc>
+<use f='MTProxy/engine/engine-rpc.c' l='619' u='c' c='process_parse_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='647' u='c' c='process_query_custom_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='731' u='c' c='query_job_run'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='889' u='c' c='client_packet_job_run'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1306' u='c' c='http_query_job_run'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1484' u='c' c='do_rpcs_execute'/>

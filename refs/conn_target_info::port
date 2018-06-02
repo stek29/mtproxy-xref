@@ -1,0 +1,28 @@
+<dec f='MTProxy/net/net-connections.h' l='186' type='int'/>
+<offset>672</offset>
+<use f='MTProxy/mtproto/mtproto-config.c' l='131' u='r' c='clear_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='171' u='w' c='cfg_parse_server_port'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='172' u='r' c='cfg_parse_server_port'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='177' u='r' c='cfg_parse_server_port'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='177' u='r' c='cfg_parse_server_port'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='178' u='r' c='cfg_parse_server_port'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='190' u='r' c='cfg_parse_server_port'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='231' u='r' c='dump_mf_cluster'/>
+<use f='MTProxy/net/net-connections.c' l='1715' u='r' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1717' u='r' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1719' u='r' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1719' u='r' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1722' u='r' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1724' u='r' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1730' u='r' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1771' u='r' c='find_target'/>
+<use f='MTProxy/net/net-connections.c' l='1808' u='r' c='find_target_ipv6'/>
+<use f='MTProxy/net/net-connections.c' l='1840' u='r' c='free_target'/>
+<use f='MTProxy/net/net-connections.c' l='1841' u='r' c='free_target'/>
+<use f='MTProxy/net/net-connections.c' l='1843' u='r' c='free_target'/>
+<use f='MTProxy/net/net-connections.c' l='1844' u='r' c='free_target'/>
+<use f='MTProxy/net/net-connections.c' l='1949' u='r' c='create_target'/>
+<use f='MTProxy/net/net-connections.c' l='1950' u='r' c='create_target'/>
+<use f='MTProxy/net/net-connections.c' l='1987' u='r' c='create_target'/>
+<use f='MTProxy/net/net-connections.c' l='1989' u='r' c='create_target'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='224' u='r' c='rpc_target_lookup_target'/>

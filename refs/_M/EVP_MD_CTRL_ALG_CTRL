@@ -1,0 +1,2 @@
+<dec f='include/openssl/evp.h' l='232'/>
+<doc f='include/openssl/evp.h' l='230'>/* Minimum Algorithm specific ctrl value */</doc>

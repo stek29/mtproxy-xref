@@ -1,0 +1,5 @@
+<dec f='MTProxy/engine/engine.h' l='129' type='int'/>
+<offset>320</offset>
+<use f='MTProxy/engine/engine-net.c' l='140' u='w' c='set_maxconn'/>
+<use f='MTProxy/engine/engine.c' l='206' u='r' c='engine_init'/>
+<use f='MTProxy/engine/engine.c' l='581' u='w' c='engine_startup'/>

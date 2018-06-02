@@ -1,0 +1,9 @@
+<dec f='MTProxy/net/net-http-server.h' l='34' type='int (*)(connection_job_t, struct raw_message *, int)'/>
+<offset>64</offset>
+<doc f='MTProxy/net/net-http-server.h' l='34'>/* invoked from parse_execute() */</doc>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1000' u='w'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1006' u='w'/>
+<use f='MTProxy/net/net-http-server.c' l='96' u='w'/>
+<use f='MTProxy/net/net-http-server.c' l='567' u='r' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='568' u='w' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='588' u='r' c='hts_parse_execute'/>

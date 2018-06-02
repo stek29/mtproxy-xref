@@ -1,0 +1,5 @@
+<dec f='MTProxy/common/precise-time.h' l='46' type='double get_utime(int clock_id)'/>
+<doc f='MTProxy/common/precise-time.h' l='45'>/* common/server-functions.h */</doc>
+<def f='MTProxy/common/precise-time.c' l='61' ll='75' type='double get_utime(int clock_id)'/>
+<use f='MTProxy/common/precise-time.c' l='80' u='c' c='get_precise_time'/>
+<use f='MTProxy/net/net-stats.c' l='136' u='c' c='prepare_stats'/>

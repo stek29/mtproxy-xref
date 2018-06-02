@@ -1,0 +1,3 @@
+<dec f='MTProxy/net/net-connections.h' l='143' type='int (*)(connection_job_t, int)'/>
+<offset>704</offset>
+<doc f='MTProxy/net/net-connections.h' l='143'>/* invoked from net_aio.c::check_aio_completion when aio read operation is complete */</doc>

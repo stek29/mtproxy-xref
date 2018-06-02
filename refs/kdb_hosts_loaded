@@ -1,0 +1,11 @@
+<def f='MTProxy/common/resolver.h' l='30' type='int'/>
+<def f='MTProxy/common/resolver.c' l='41' type='int'/>
+<use f='MTProxy/common/resolver.c' l='334' u='r' c='kdb_load_hosts'/>
+<use f='MTProxy/common/resolver.c' l='335' u='w' c='kdb_load_hosts'/>
+<use f='MTProxy/common/resolver.c' l='337' u='r' c='kdb_load_hosts'/>
+<use f='MTProxy/common/resolver.c' l='340' u='r' c='kdb_load_hosts'/>
+<use f='MTProxy/common/resolver.c' l='344' u='r' c='kdb_load_hosts'/>
+<use f='MTProxy/common/resolver.c' l='350' u='w' c='kdb_load_hosts'/>
+<use f='MTProxy/common/resolver.c' l='360' u='r' c='kdb_gethostbyname'/>
+<use f='MTProxy/common/resolver.c' l='380' u='r' c='kdb_gethostbyname'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2235' u='r' c='mtfront_pre_init'/>

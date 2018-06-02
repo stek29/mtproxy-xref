@@ -1,0 +1,11 @@
+<dec f='MTProxy/net/net-connections.h' l='357' type='int net_accept_new_connections(connection_job_t C)'/>
+<def f='MTProxy/net/net-connections.c' l='1230' ll='1294' type='int net_accept_new_connections(listening_connection_job_t LCJ)'/>
+<use f='MTProxy/net/net-connections.c' l='1301' u='c' c='do_listening_connection_job'/>
+<use f='MTProxy/net/net-connections.c' l='1498' u='r' c='check_conn_functions'/>
+<doc f='MTProxy/net/net-connections.c' l='1226'>/*
+  accepts new connections
+  executes alloc_new_connection ()
+*/</doc>
+<doc f='MTProxy/net/net-connections.c' l='1230'>/* {{{ */</doc>
+<use f='MTProxy/net/net-http-server.c' l='66'/>
+<use f='MTProxy/net/net-http-server.c' l='66'/>

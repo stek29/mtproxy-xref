@@ -1,0 +1,3 @@
+<dec f='MTProxy/mtproto/mtproto-config.h' l='63' type='int'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='238' u='r' c='preinit_config'/>
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='151' type='int'/>

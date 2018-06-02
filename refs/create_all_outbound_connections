@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-connections.h' l='321' type='int create_all_outbound_connections()'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='411' u='c' c='do_reload_config'/>
+<def f='MTProxy/net/net-connections.c' l='2048' ll='2050' type='int create_all_outbound_connections()'/>
+<doc f='MTProxy/net/net-connections.c' l='2046'>/* }}} */</doc>
+<doc f='MTProxy/net/net-connections.c' l='2048'>/* {{{ */</doc>

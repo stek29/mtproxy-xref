@@ -1,0 +1,10 @@
+<dec f='MTProxy/jobs/jobs.h' l='170' type='int'/>
+<offset>64</offset>
+<doc f='MTProxy/jobs/jobs.h' l='170'>// bits (4*n)..(4*n-3): queue class of signal n, n=0..7</doc>
+<use f='MTProxy/jobs/jobs.c' l='618' u='r' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='653' u='r' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='664' u='r' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='678' u='r' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='1061' u='w' c='job_change_signals'/>
+<use f='MTProxy/jobs/jobs.c' l='1083' u='w' c='create_async_job'/>
+<use f='MTProxy/jobs/jobs.c' l='1106' u='r' c='create_async_job'/>

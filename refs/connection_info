@@ -1,0 +1,47 @@
+<def f='MTProxy/net/net-connections.h' l='197' ll='244'/>
+<size>664</size>
+<mbr r='connection_info::timer' o='0' t='struct event_timer'/>
+<mbr r='connection_info::fd' o='256' t='int'/>
+<mbr r='connection_info::generation' o='288' t='int'/>
+<mbr r='connection_info::flags' o='320' t='int'/>
+<mbr r='connection_info::type' o='384' t='conn_type_t *'/>
+<mbr r='connection_info::extra' o='448' t='void *'/>
+<mbr r='connection_info::target' o='512' t='conn_target_job_t'/>
+<mbr r='connection_info::io_conn' o='576' t='connection_job_t'/>
+<mbr r='connection_info::basic_type' o='640' t='int'/>
+<mbr r='connection_info::status' o='672' t='int'/>
+<mbr r='connection_info::error' o='704' t='int'/>
+<mbr r='connection_info::unread_res_bytes' o='736' t='int'/>
+<mbr r='connection_info::skip_bytes' o='768' t='int'/>
+<mbr r='connection_info::pending_queries' o='800' t='int'/>
+<mbr r='connection_info::queries_ok' o='832' t='int'/>
+<mbr r='connection_info::custom_data' o='864' t='char [256]'/>
+<mbr r='connection_info::our_ip' o='2912' t='unsigned int'/>
+<mbr r='connection_info::remote_ip' o='2944' t='unsigned int'/>
+<mbr r='connection_info::our_port' o='2976' t='unsigned int'/>
+<mbr r='connection_info::remote_port' o='3008' t='unsigned int'/>
+<mbr r='connection_info::our_ipv6' o='3040' t='unsigned char [16]'/>
+<mbr r='connection_info::remote_ipv6' o='3168' t='unsigned char [16]'/>
+<mbr r='connection_info::query_start_time' o='3328' t='double'/>
+<mbr r='connection_info::last_query_time' o='3392' t='double'/>
+<mbr r='connection_info::last_query_sent_time' o='3456' t='double'/>
+<mbr r='connection_info::last_response_time' o='3520' t='double'/>
+<mbr r='connection_info::last_query_timeout' o='3584' t='double'/>
+<mbr r='connection_info::limit_per_write' o='3648' t='int'/>
+<mbr r='connection_info::limit_per_sec' o='3680' t='int'/>
+<mbr r='connection_info::last_write_time' o='3712' t='int'/>
+<mbr r='connection_info::written_per_sec' o='3744' t='int'/>
+<mbr r='connection_info::unreliability' o='3776' t='int'/>
+<mbr r='connection_info::ready' o='3808' t='int'/>
+<mbr r='connection_info::write_low_watermark' o='3840' t='int'/>
+<mbr r='connection_info::crypto' o='3904' t='void *'/>
+<mbr r='connection_info::crypto_temp' o='3968' t='void *'/>
+<mbr r='connection_info::listening' o='4032' t='int'/>
+<mbr r='connection_info::listening_generation' o='4064' t='int'/>
+<mbr r='connection_info::window_clamp' o='4096' t='int'/>
+<mbr r='connection_info::in_u' o='4160' t='struct raw_message'/>
+<mbr r='connection_info::in' o='4416' t='struct raw_message'/>
+<mbr r='connection_info::out' o='4672' t='struct raw_message'/>
+<mbr r='connection_info::out_p' o='4928' t='struct raw_message'/>
+<mbr r='connection_info::in_queue' o='5184' t='struct mp_queue *'/>
+<mbr r='connection_info::out_queue' o='5248' t='struct mp_queue *'/>

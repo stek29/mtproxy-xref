@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>net-tcp-rpc-common.h source code [MTProxy/net/net-tcp-rpc-common.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="tcp_message,tcp_rpc_data,tcp_rpc_handshake_error_packet,tcp_rpc_handshake_packet,tcp_rpc_nonce_dh_packet,tcp_rpc_nonce_ext_packet,tcp_rpc_nonce_packet "/>
+<link rel="stylesheet" href="https://code.woboq.org/data//qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="https://code.woboq.org/data//kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery-ui.min.js"></script>
+<script>var file = 'MTProxy/net/net-tcp-rpc-common.h'; var root_path = '../..'; var data_path = 'https://code.woboq.org/data/';</script>
+<script src='https://code.woboq.org/data//codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='..'>MTProxy</a>/<a href='./'>net</a>/<a href='net-tcp-rpc-common.h.html'>net-tcp-rpc-common.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>    This file is part of Mtproto-proxy Library.</i></td></tr>
+<tr><th id="3">3</th><td><i></i></td></tr>
+<tr><th id="4">4</th><td><i>    Mtproto-proxy Library is free software: you can redistribute it and/or modify</i></td></tr>
+<tr><th id="5">5</th><td><i>    it under the terms of the GNU Lesser General Public License as published by</i></td></tr>
+<tr><th id="6">6</th><td><i>    the Free Software Foundation, either version 2 of the License, or</i></td></tr>
+<tr><th id="7">7</th><td><i>    (at your option) any later version.</i></td></tr>
+<tr><th id="8">8</th><td><i></i></td></tr>
+<tr><th id="9">9</th><td><i>    Mtproto-proxy Library is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="10">10</th><td><i>    but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="11">11</th><td><i>    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</i></td></tr>
+<tr><th id="12">12</th><td><i>    GNU Lesser General Public License for more details.</i></td></tr>
+<tr><th id="13">13</th><td><i></i></td></tr>
+<tr><th id="14">14</th><td><i>    You should have received a copy of the GNU Lesser General Public License</i></td></tr>
+<tr><th id="15">15</th><td><i>    along with Mtproto-proxy Library.  If not, see &lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</i></td></tr>
+<tr><th id="16">16</th><td><i></i></td></tr>
+<tr><th id="17">17</th><td><i>    Copyright 2010-2013 Vkontakte Ltd</i></td></tr>
+<tr><th id="18">18</th><td><i>              2010-2013 Nikolai Durov</i></td></tr>
+<tr><th id="19">19</th><td><i>              2010-2013 Andrey Lopatin</i></td></tr>
+<tr><th id="20">20</th><td><i>                   2013 Vitaliy Valtman</i></td></tr>
+<tr><th id="21">21</th><td><i>    </i></td></tr>
+<tr><th id="22">22</th><td><i>    Copyright 2014-2016 Telegram Messenger Inc                 </i></td></tr>
+<tr><th id="23">23</th><td><i>              2015-2016 Vitaly Valtman     </i></td></tr>
+<tr><th id="24">24</th><td><i>*/</i></td></tr>
+<tr><th id="25">25</th><td></td></tr>
+<tr><th id="26">26</th><td><u>#pragma once</u></td></tr>
+<tr><th id="27">27</th><td></td></tr>
+<tr><th id="28">28</th><td><u>#include <a href="../common/pid.h.html">"pid.h"</a></u></td></tr>
+<tr><th id="29">29</th><td></td></tr>
+<tr><th id="30">30</th><td><b>struct</b> <dfn class="type def" id="tcp_message" title='tcp_message' data-ref="tcp_message">tcp_message</dfn> {</td></tr>
+<tr><th id="31">31</th><td>  <a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="decl" id="tcp_message::c" title='tcp_message::c' data-ref="tcp_message::c">c</dfn>;</td></tr>
+<tr><th id="32">32</th><td>  <em>int</em> <dfn class="decl" id="tcp_message::op" title='tcp_message::op' data-ref="tcp_message::op">op</dfn>;</td></tr>
+<tr><th id="33">33</th><td>  <em>int</em> <dfn class="decl" id="tcp_message::packet_num" title='tcp_message::packet_num' data-ref="tcp_message::packet_num">packet_num</dfn>;</td></tr>
+<tr><th id="34">34</th><td>  <b>struct</b> <a class="type" href="net-msg.h.html#raw_message" title='raw_message' data-ref="raw_message">raw_message</a> <dfn class="decl" id="tcp_message::raw" title='tcp_message::raw' data-ref="tcp_message::raw">raw</dfn>;</td></tr>
+<tr><th id="35">35</th><td>};</td></tr>
+<tr><th id="36">36</th><td></td></tr>
+<tr><th id="37">37</th><td><u>#pragma pack(push,4)</u></td></tr>
+<tr><th id="38">38</th><td><b>struct</b> <dfn class="type def" id="tcp_rpc_nonce_packet" title='tcp_rpc_nonce_packet' data-ref="tcp_rpc_nonce_packet">tcp_rpc_nonce_packet</dfn> {</td></tr>
+<tr><th id="39">39</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_nonce_packet::type" title='tcp_rpc_nonce_packet::type' data-ref="tcp_rpc_nonce_packet::type">type</dfn>;</td></tr>
+<tr><th id="40">40</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_nonce_packet::key_select" title='tcp_rpc_nonce_packet::key_select' data-ref="tcp_rpc_nonce_packet::key_select">key_select</dfn>;        <i>/* least significant 32 bits of key to use */</i></td></tr>
+<tr><th id="41">41</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_nonce_packet::crypto_schema" title='tcp_rpc_nonce_packet::crypto_schema' data-ref="tcp_rpc_nonce_packet::crypto_schema">crypto_schema</dfn>;     <i>/* 0 = NONE, 1 = AES */</i></td></tr>
+<tr><th id="42">42</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_nonce_packet::crypto_ts" title='tcp_rpc_nonce_packet::crypto_ts' data-ref="tcp_rpc_nonce_packet::crypto_ts">crypto_ts</dfn>;</td></tr>
+<tr><th id="43">43</th><td>  <em>char</em> <dfn class="decl" id="tcp_rpc_nonce_packet::crypto_nonce" title='tcp_rpc_nonce_packet::crypto_nonce' data-ref="tcp_rpc_nonce_packet::crypto_nonce">crypto_nonce</dfn>[<var>16</var>];</td></tr>
+<tr><th id="44">44</th><td>};</td></tr>
+<tr><th id="45">45</th><td></td></tr>
+<tr><th id="46">46</th><td><u>#define <dfn class="macro" id="_M/RPC_MAX_EXTRA_KEYS" data-ref="_M/RPC_MAX_EXTRA_KEYS">RPC_MAX_EXTRA_KEYS</dfn>	8</u></td></tr>
+<tr><th id="47">47</th><td></td></tr>
+<tr><th id="48">48</th><td><b>struct</b> <dfn class="type def" id="tcp_rpc_nonce_ext_packet" title='tcp_rpc_nonce_ext_packet' data-ref="tcp_rpc_nonce_ext_packet">tcp_rpc_nonce_ext_packet</dfn> {</td></tr>
+<tr><th id="49">49</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_nonce_ext_packet::type" title='tcp_rpc_nonce_ext_packet::type' data-ref="tcp_rpc_nonce_ext_packet::type">type</dfn>;              <i>/* type = RPC_NONCE */</i></td></tr>
+<tr><th id="50">50</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_nonce_ext_packet::key_select" title='tcp_rpc_nonce_ext_packet::key_select' data-ref="tcp_rpc_nonce_ext_packet::key_select">key_select</dfn>;        <i>/* least significant 32 bits of key to use */</i></td></tr>
+<tr><th id="51">51</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_nonce_ext_packet::crypto_schema" title='tcp_rpc_nonce_ext_packet::crypto_schema' data-ref="tcp_rpc_nonce_ext_packet::crypto_schema">crypto_schema</dfn>;     <i>/* 2 = AES+extra keys */</i></td></tr>
+<tr><th id="52">52</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_nonce_ext_packet::crypto_ts" title='tcp_rpc_nonce_ext_packet::crypto_ts' data-ref="tcp_rpc_nonce_ext_packet::crypto_ts">crypto_ts</dfn>;</td></tr>
+<tr><th id="53">53</th><td>  <em>char</em> <dfn class="decl" id="tcp_rpc_nonce_ext_packet::crypto_nonce" title='tcp_rpc_nonce_ext_packet::crypto_nonce' data-ref="tcp_rpc_nonce_ext_packet::crypto_nonce">crypto_nonce</dfn>[<var>16</var>];</td></tr>
+<tr><th id="54">54</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_nonce_ext_packet::extra_keys_count" title='tcp_rpc_nonce_ext_packet::extra_keys_count' data-ref="tcp_rpc_nonce_ext_packet::extra_keys_count">extra_keys_count</dfn>;</td></tr>
+<tr><th id="55">55</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_nonce_ext_packet::extra_key_select" title='tcp_rpc_nonce_ext_packet::extra_key_select' data-ref="tcp_rpc_nonce_ext_packet::extra_key_select">extra_key_select</dfn>[<a class="macro" href="#46" title="8" data-ref="_M/RPC_MAX_EXTRA_KEYS">RPC_MAX_EXTRA_KEYS</a>];</td></tr>
+<tr><th id="56">56</th><td>};</td></tr>
+<tr><th id="57">57</th><td></td></tr>
+<tr><th id="58">58</th><td><b>struct</b> <dfn class="type def" id="tcp_rpc_nonce_dh_packet" title='tcp_rpc_nonce_dh_packet' data-ref="tcp_rpc_nonce_dh_packet">tcp_rpc_nonce_dh_packet</dfn> {</td></tr>
+<tr><th id="59">59</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_nonce_dh_packet::type" title='tcp_rpc_nonce_dh_packet::type' data-ref="tcp_rpc_nonce_dh_packet::type">type</dfn>;              <i>/* type = RPC_NONCE */</i></td></tr>
+<tr><th id="60">60</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_nonce_dh_packet::key_select" title='tcp_rpc_nonce_dh_packet::key_select' data-ref="tcp_rpc_nonce_dh_packet::key_select">key_select</dfn>;        <i>/* least significant 32 bits of key to use */</i></td></tr>
+<tr><th id="61">61</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_nonce_dh_packet::crypto_schema" title='tcp_rpc_nonce_dh_packet::crypto_schema' data-ref="tcp_rpc_nonce_dh_packet::crypto_schema">crypto_schema</dfn>;     <i>/* 3 = AES+extra keys+DH */</i></td></tr>
+<tr><th id="62">62</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_nonce_dh_packet::crypto_ts" title='tcp_rpc_nonce_dh_packet::crypto_ts' data-ref="tcp_rpc_nonce_dh_packet::crypto_ts">crypto_ts</dfn>;</td></tr>
+<tr><th id="63">63</th><td>  <em>char</em> <dfn class="decl" id="tcp_rpc_nonce_dh_packet::crypto_nonce" title='tcp_rpc_nonce_dh_packet::crypto_nonce' data-ref="tcp_rpc_nonce_dh_packet::crypto_nonce">crypto_nonce</dfn>[<var>16</var>];</td></tr>
+<tr><th id="64">64</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_nonce_dh_packet::extra_keys_count" title='tcp_rpc_nonce_dh_packet::extra_keys_count' data-ref="tcp_rpc_nonce_dh_packet::extra_keys_count">extra_keys_count</dfn>;</td></tr>
+<tr><th id="65">65</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_nonce_dh_packet::extra_key_select" title='tcp_rpc_nonce_dh_packet::extra_key_select' data-ref="tcp_rpc_nonce_dh_packet::extra_key_select">extra_key_select</dfn>[<a class="macro" href="#46" title="8" data-ref="_M/RPC_MAX_EXTRA_KEYS">RPC_MAX_EXTRA_KEYS</a>];</td></tr>
+<tr><th id="66">66</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_nonce_dh_packet::dh_params_select" title='tcp_rpc_nonce_dh_packet::dh_params_select' data-ref="tcp_rpc_nonce_dh_packet::dh_params_select">dh_params_select</dfn>;	 <i>/* least significant 32 bits of SHA1 of DH params : g:int p:string */</i></td></tr>
+<tr><th id="67">67</th><td>  <em>unsigned</em> <em>char</em> <dfn class="decl" id="tcp_rpc_nonce_dh_packet::g_a" title='tcp_rpc_nonce_dh_packet::g_a' data-ref="tcp_rpc_nonce_dh_packet::g_a">g_a</dfn>[<var>256</var>];</td></tr>
+<tr><th id="68">68</th><td>};</td></tr>
+<tr><th id="69">69</th><td></td></tr>
+<tr><th id="70">70</th><td><b>struct</b> <dfn class="type def" id="tcp_rpc_handshake_packet" title='tcp_rpc_handshake_packet' data-ref="tcp_rpc_handshake_packet">tcp_rpc_handshake_packet</dfn> {</td></tr>
+<tr><th id="71">71</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_handshake_packet::type" title='tcp_rpc_handshake_packet::type' data-ref="tcp_rpc_handshake_packet::type">type</dfn>;</td></tr>
+<tr><th id="72">72</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_handshake_packet::flags" title='tcp_rpc_handshake_packet::flags' data-ref="tcp_rpc_handshake_packet::flags">flags</dfn>;</td></tr>
+<tr><th id="73">73</th><td>  <b>struct</b> <a class="type" href="../common/pid.h.html#process_id" title='process_id' data-ref="process_id">process_id</a> <dfn class="decl" id="tcp_rpc_handshake_packet::sender_pid" title='tcp_rpc_handshake_packet::sender_pid' data-ref="tcp_rpc_handshake_packet::sender_pid">sender_pid</dfn>;</td></tr>
+<tr><th id="74">74</th><td>  <b>struct</b> <a class="type" href="../common/pid.h.html#process_id" title='process_id' data-ref="process_id">process_id</a> <dfn class="decl" id="tcp_rpc_handshake_packet::peer_pid" title='tcp_rpc_handshake_packet::peer_pid' data-ref="tcp_rpc_handshake_packet::peer_pid">peer_pid</dfn>;</td></tr>
+<tr><th id="75">75</th><td>  <i>/* more ints? */</i></td></tr>
+<tr><th id="76">76</th><td>};</td></tr>
+<tr><th id="77">77</th><td></td></tr>
+<tr><th id="78">78</th><td><b>struct</b> <dfn class="type def" id="tcp_rpc_handshake_error_packet" title='tcp_rpc_handshake_error_packet' data-ref="tcp_rpc_handshake_error_packet">tcp_rpc_handshake_error_packet</dfn> {</td></tr>
+<tr><th id="79">79</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_handshake_error_packet::type" title='tcp_rpc_handshake_error_packet::type' data-ref="tcp_rpc_handshake_error_packet::type">type</dfn>;</td></tr>
+<tr><th id="80">80</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_handshake_error_packet::error_code" title='tcp_rpc_handshake_error_packet::error_code' data-ref="tcp_rpc_handshake_error_packet::error_code">error_code</dfn>;</td></tr>
+<tr><th id="81">81</th><td>  <b>struct</b> <a class="type" href="../common/pid.h.html#process_id" title='process_id' data-ref="process_id">process_id</a> <dfn class="decl" id="tcp_rpc_handshake_error_packet::sender_pid" title='tcp_rpc_handshake_error_packet::sender_pid' data-ref="tcp_rpc_handshake_error_packet::sender_pid">sender_pid</dfn>;</td></tr>
+<tr><th id="82">82</th><td>};</td></tr>
+<tr><th id="83">83</th><td><u>#pragma pack(pop)</u></td></tr>
+<tr><th id="84">84</th><td></td></tr>
+<tr><th id="85">85</th><td><i>// Bit 1 - have to clone raw</i></td></tr>
+<tr><th id="86">86</th><td><i>// Bit 2 - delete reference to connection</i></td></tr>
+<tr><th id="87">87</th><td><i>// Bit 4 - raw is allocated pointer and it should be freed or reused</i></td></tr>
+<tr><th id="88">88</th><td><em>void</em> <dfn class="decl" id="tcp_rpc_conn_send" title='tcp_rpc_conn_send' data-ref="tcp_rpc_conn_send">tcp_rpc_conn_send</dfn> (<a class="macro" href="../jobs/jobs.h.html#46" title="int C_tag_int, job_t C" data-ref="_M/JOB_REF_ARG">JOB_REF_ARG</a> (<dfn class="local col3 decl" id="223C" title='C' data-type='job_t' data-ref="223C">C</dfn>), <b>struct</b> <a class="type" href="net-msg.h.html#raw_message" title='raw_message' data-ref="raw_message">raw_message</a> *<dfn class="local col4 decl" id="224raw" title='raw' data-type='struct raw_message *' data-ref="224raw">raw</dfn>, <em>int</em> <dfn class="local col5 decl" id="225flags" title='flags' data-type='int' data-ref="225flags">flags</dfn>);</td></tr>
+<tr><th id="89">89</th><td><em>void</em> <dfn class="decl" id="tcp_rpc_conn_send_data" title='tcp_rpc_conn_send_data' data-ref="tcp_rpc_conn_send_data">tcp_rpc_conn_send_data</dfn> (<a class="macro" href="../jobs/jobs.h.html#46" title="int C_tag_int, job_t C" data-ref="_M/JOB_REF_ARG">JOB_REF_ARG</a> (<dfn class="local col6 decl" id="226C" title='C' data-type='job_t' data-ref="226C">C</dfn>), <em>int</em> <dfn class="local col7 decl" id="227len" title='len' data-type='int' data-ref="227len">len</dfn>, <em>void</em> *<dfn class="local col8 decl" id="228Q" title='Q' data-type='void *' data-ref="228Q">Q</dfn>);</td></tr>
+<tr><th id="90">90</th><td><em>void</em> <dfn class="decl" id="tcp_rpc_conn_send_init" title='tcp_rpc_conn_send_init' data-ref="tcp_rpc_conn_send_init">tcp_rpc_conn_send_init</dfn> (<a class="macro" href="../jobs/jobs.h.html#31" title="" data-ref="_M/__joblocked">__joblocked</a> <a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col9 decl" id="229C" title='C' data-type='connection_job_t' data-ref="229C">C</dfn>, <b>struct</b> <a class="type" href="net-msg.h.html#raw_message" title='raw_message' data-ref="raw_message">raw_message</a> *<dfn class="local col0 decl" id="230raw" title='raw' data-type='struct raw_message *' data-ref="230raw">raw</dfn>, <em>int</em> <dfn class="local col1 decl" id="231flags" title='flags' data-type='int' data-ref="231flags">flags</dfn>);</td></tr>
+<tr><th id="91">91</th><td><em>void</em> <dfn class="decl" id="tcp_rpc_conn_send_data_init" title='tcp_rpc_conn_send_data_init' data-ref="tcp_rpc_conn_send_data_init">tcp_rpc_conn_send_data_init</dfn> (<a class="macro" href="../jobs/jobs.h.html#31" title="" data-ref="_M/__joblocked">__joblocked</a> <a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col2 decl" id="232c" title='c' data-type='connection_job_t' data-ref="232c">c</dfn>, <em>int</em> <dfn class="local col3 decl" id="233len" title='len' data-type='int' data-ref="233len">len</dfn>, <em>void</em> *<dfn class="local col4 decl" id="234Q" title='Q' data-type='void *' data-ref="234Q">Q</dfn>);</td></tr>
+<tr><th id="92">92</th><td><em>void</em> <dfn class="decl" id="tcp_rpc_conn_send_im" title='tcp_rpc_conn_send_im' data-ref="tcp_rpc_conn_send_im">tcp_rpc_conn_send_im</dfn> (<a class="macro" href="../jobs/jobs.h.html#46" title="int C_tag_int, job_t C" data-ref="_M/JOB_REF_ARG">JOB_REF_ARG</a> (<dfn class="local col5 decl" id="235C" title='C' data-type='job_t' data-ref="235C">C</dfn>), <b>struct</b> <a class="type" href="net-msg.h.html#raw_message" title='raw_message' data-ref="raw_message">raw_message</a> *<dfn class="local col6 decl" id="236raw" title='raw' data-type='struct raw_message *' data-ref="236raw">raw</dfn>, <em>int</em> <dfn class="local col7 decl" id="237flags" title='flags' data-type='int' data-ref="237flags">flags</dfn>);</td></tr>
+<tr><th id="93">93</th><td><em>void</em> <dfn class="decl" id="tcp_rpc_conn_send_data_im" title='tcp_rpc_conn_send_data_im' data-ref="tcp_rpc_conn_send_data_im">tcp_rpc_conn_send_data_im</dfn> (<a class="macro" href="../jobs/jobs.h.html#46" title="int C_tag_int, job_t C" data-ref="_M/JOB_REF_ARG">JOB_REF_ARG</a> (<dfn class="local col8 decl" id="238C" title='C' data-type='job_t' data-ref="238C">C</dfn>), <em>int</em> <dfn class="local col9 decl" id="239len" title='len' data-type='int' data-ref="239len">len</dfn>, <em>void</em> *<dfn class="local col0 decl" id="240Q" title='Q' data-type='void *' data-ref="240Q">Q</dfn>);</td></tr>
+<tr><th id="94">94</th><td><em>int</em> <dfn class="decl" id="tcp_rpc_default_execute" title='tcp_rpc_default_execute' data-ref="tcp_rpc_default_execute">tcp_rpc_default_execute</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col1 decl" id="241C" title='C' data-type='connection_job_t' data-ref="241C">C</dfn>, <em>int</em> <dfn class="local col2 decl" id="242op" title='op' data-type='int' data-ref="242op">op</dfn>, <b>struct</b> <a class="type" href="net-msg.h.html#raw_message" title='raw_message' data-ref="raw_message">raw_message</a> *<dfn class="local col3 decl" id="243raw" title='raw' data-type='struct raw_message *' data-ref="243raw">raw</dfn>);</td></tr>
+<tr><th id="95">95</th><td></td></tr>
+<tr><th id="96">96</th><td><i>/* for crypto_flags in struct tcp_rpc_data */</i></td></tr>
+<tr><th id="97">97</th><td><u>#define <dfn class="macro" id="_M/RPCF_ALLOW_UNENC" data-ref="_M/RPCF_ALLOW_UNENC">RPCF_ALLOW_UNENC</dfn>	1</u></td></tr>
+<tr><th id="98">98</th><td><u>#define <dfn class="macro" id="_M/RPCF_ALLOW_ENC" data-ref="_M/RPCF_ALLOW_ENC">RPCF_ALLOW_ENC</dfn>		2</u></td></tr>
+<tr><th id="99">99</th><td><u>#define <dfn class="macro" id="_M/RPCF_REQ_DH" data-ref="_M/RPCF_REQ_DH">RPCF_REQ_DH</dfn>		4</u></td></tr>
+<tr><th id="100">100</th><td><u>#define <dfn class="macro" id="_M/RPCF_ALLOW_SKIP_DH" data-ref="_M/RPCF_ALLOW_SKIP_DH">RPCF_ALLOW_SKIP_DH</dfn>	8</u></td></tr>
+<tr><th id="101">101</th><td><u>#define <dfn class="macro" id="_M/RPCF_ENC_SENT" data-ref="_M/RPCF_ENC_SENT">RPCF_ENC_SENT</dfn>		16</u></td></tr>
+<tr><th id="102">102</th><td><u>#define <dfn class="macro" id="_M/RPCF_SEQNO_HOLES" data-ref="_M/RPCF_SEQNO_HOLES">RPCF_SEQNO_HOLES</dfn>	256</u></td></tr>
+<tr><th id="103">103</th><td><u>#define <dfn class="macro" id="_M/RPCF_QUICKACK" data-ref="_M/RPCF_QUICKACK">RPCF_QUICKACK</dfn>		512</u></td></tr>
+<tr><th id="104">104</th><td><u>#define <dfn class="macro" id="_M/RPCF_COMPACT_OFF" data-ref="_M/RPCF_COMPACT_OFF">RPCF_COMPACT_OFF</dfn>	1024</u></td></tr>
+<tr><th id="105">105</th><td><u>#define <dfn class="macro" id="_M/RPCF_USE_CRC32C" data-ref="_M/RPCF_USE_CRC32C">RPCF_USE_CRC32C</dfn>		2048</u></td></tr>
+<tr><th id="106">106</th><td></td></tr>
+<tr><th id="107">107</th><td><i>/* for flags in struct tcp_rpc_data */</i></td></tr>
+<tr><th id="108">108</th><td><u>#define <dfn class="macro" id="_M/RPC_F_DROPPED" data-ref="_M/RPC_F_DROPPED">RPC_F_DROPPED</dfn>		0x10000000</u></td></tr>
+<tr><th id="109">109</th><td><u>#define <dfn class="macro" id="_M/RPC_F_MEDIUM" data-ref="_M/RPC_F_MEDIUM">RPC_F_MEDIUM</dfn>		0x20000000</u></td></tr>
+<tr><th id="110">110</th><td><u>#define <dfn class="macro" id="_M/RPC_F_COMPACT" data-ref="_M/RPC_F_COMPACT">RPC_F_COMPACT</dfn>		0x40000000</u></td></tr>
+<tr><th id="111">111</th><td><u>#define <dfn class="macro" id="_M/RPC_F_COMPACT_MEDIUM" data-ref="_M/RPC_F_COMPACT_MEDIUM">RPC_F_COMPACT_MEDIUM</dfn>	(RPC_F_COMPACT | RPC_F_MEDIUM)</u></td></tr>
+<tr><th id="112">112</th><td><u>#define <dfn class="macro" id="_M/RPC_F_QUICKACK" data-ref="_M/RPC_F_QUICKACK">RPC_F_QUICKACK</dfn>		0x80000000</u></td></tr>
+<tr><th id="113">113</th><td><u>#define <dfn class="macro" id="_M/RPC_F_EXTMODE1" data-ref="_M/RPC_F_EXTMODE1">RPC_F_EXTMODE1</dfn>		0x10000</u></td></tr>
+<tr><th id="114">114</th><td><u>#define <dfn class="macro" id="_M/RPC_F_EXTMODE2" data-ref="_M/RPC_F_EXTMODE2">RPC_F_EXTMODE2</dfn>		0x20000</u></td></tr>
+<tr><th id="115">115</th><td><u>#define <dfn class="macro" id="_M/RPC_F_EXTMODE3" data-ref="_M/RPC_F_EXTMODE3">RPC_F_EXTMODE3</dfn>		0x30000</u></td></tr>
+<tr><th id="116">116</th><td></td></tr>
+<tr><th id="117">117</th><td><i>/* in conn-&gt;custom_data */</i></td></tr>
+<tr><th id="118">118</th><td><b>struct</b> <dfn class="type def" id="tcp_rpc_data" title='tcp_rpc_data' data-ref="tcp_rpc_data">tcp_rpc_data</dfn> {</td></tr>
+<tr><th id="119">119</th><td>  <i>//int packet_len;</i></td></tr>
+<tr><th id="120">120</th><td><i>  //int packet_num;</i></td></tr>
+<tr><th id="121">121</th><td><i>  //int packet_type;</i></td></tr>
+<tr><th id="122">122</th><td><i>  //int packet_crc32;</i></td></tr>
+<tr><th id="123">123</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_data::flags" title='tcp_rpc_data::flags' data-ref="tcp_rpc_data::flags">flags</dfn>;</td></tr>
+<tr><th id="124">124</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_data::in_packet_num" title='tcp_rpc_data::in_packet_num' data-ref="tcp_rpc_data::in_packet_num">in_packet_num</dfn>;</td></tr>
+<tr><th id="125">125</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_data::out_packet_num" title='tcp_rpc_data::out_packet_num' data-ref="tcp_rpc_data::out_packet_num">out_packet_num</dfn>;</td></tr>
+<tr><th id="126">126</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_data::crypto_flags" title='tcp_rpc_data::crypto_flags' data-ref="tcp_rpc_data::crypto_flags">crypto_flags</dfn>;					<i>/* 1 = allow unencrypted, 2 = allow encrypted, 4 = require DH, 8 = crypto NONCE packet sent, 256 = packet numbers not sequential, 512 = allow quick ack packets, 1024 = compact mode off, 2048 = use CRC32-C instead of CRC32 */</i></td></tr>
+<tr><th id="127">127</th><td>  <b>struct</b> <a class="type" href="../common/pid.h.html#process_id" title='process_id' data-ref="process_id">process_id</a> <dfn class="decl" id="tcp_rpc_data::remote_pid" title='tcp_rpc_data::remote_pid' data-ref="tcp_rpc_data::remote_pid">remote_pid</dfn>;</td></tr>
+<tr><th id="128">128</th><td>  <em>char</em> <dfn class="decl" id="tcp_rpc_data::nonce" title='tcp_rpc_data::nonce' data-ref="tcp_rpc_data::nonce">nonce</dfn>[<var>16</var>];</td></tr>
+<tr><th id="129">129</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_data::nonce_time" title='tcp_rpc_data::nonce_time' data-ref="tcp_rpc_data::nonce_time">nonce_time</dfn>;</td></tr>
+<tr><th id="130">130</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_data::in_rpc_target" title='tcp_rpc_data::in_rpc_target' data-ref="tcp_rpc_data::in_rpc_target">in_rpc_target</dfn>;</td></tr>
+<tr><th id="131">131</th><td>  <b>union</b> {</td></tr>
+<tr><th id="132">132</th><td>    <em>void</em> *<dfn class="decl" id="tcp_rpc_data::(anonymous)::user_data" title='tcp_rpc_data::(anonymous union)::user_data' data-ref="tcp_rpc_data::(anonymous)::user_data">user_data</dfn>;</td></tr>
+<tr><th id="133">133</th><td>    <em>void</em> *<dfn class="decl" id="tcp_rpc_data::(anonymous)::extra" title='tcp_rpc_data::(anonymous union)::extra' data-ref="tcp_rpc_data::(anonymous)::extra">extra</dfn>;</td></tr>
+<tr><th id="134">134</th><td>  };</td></tr>
+<tr><th id="135">135</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_data::extra_int" title='tcp_rpc_data::extra_int' data-ref="tcp_rpc_data::extra_int">extra_int</dfn>;</td></tr>
+<tr><th id="136">136</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_data::extra_int2" title='tcp_rpc_data::extra_int2' data-ref="tcp_rpc_data::extra_int2">extra_int2</dfn>;</td></tr>
+<tr><th id="137">137</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_data::extra_int3" title='tcp_rpc_data::extra_int3' data-ref="tcp_rpc_data::extra_int3">extra_int3</dfn>;</td></tr>
+<tr><th id="138">138</th><td>  <em>int</em> <dfn class="decl" id="tcp_rpc_data::extra_int4" title='tcp_rpc_data::extra_int4' data-ref="tcp_rpc_data::extra_int4">extra_int4</dfn>;</td></tr>
+<tr><th id="139">139</th><td>  <em>double</em> <dfn class="decl" id="tcp_rpc_data::extra_double" title='tcp_rpc_data::extra_double' data-ref="tcp_rpc_data::extra_double">extra_double</dfn>, <dfn class="decl" id="tcp_rpc_data::extra_double2" title='tcp_rpc_data::extra_double2' data-ref="tcp_rpc_data::extra_double2">extra_double2</dfn>;</td></tr>
+<tr><th id="140">140</th><td>  <a class="typedef" href="../common/crc32.h.html#crc32_partial_func_t" title='crc32_partial_func_t' data-type='unsigned int (*)(const void *, long, unsigned int)' data-ref="crc32_partial_func_t">crc32_partial_func_t</a> <dfn class="decl" id="tcp_rpc_data::custom_crc_partial" title='tcp_rpc_data::custom_crc_partial' data-ref="tcp_rpc_data::custom_crc_partial">custom_crc_partial</dfn>;</td></tr>
+<tr><th id="141">141</th><td>};</td></tr>
+<tr><th id="142">142</th><td></td></tr>
+<tr><th id="143">143</th><td><i>//extern int default_rpc_flags;  /* 0 = compatibility mode, RPC_USE_CRC32C = allow both CRC32C and CRC32 */</i></td></tr>
+<tr><th id="144">144</th><td></td></tr>
+<tr><th id="145">145</th><td><u>#define <dfn class="macro" id="_M/RPC_NONCE" data-ref="_M/RPC_NONCE">RPC_NONCE</dfn> 0x7acb87aa</u></td></tr>
+<tr><th id="146">146</th><td><u>#define <dfn class="macro" id="_M/RPC_HANDSHAKE" data-ref="_M/RPC_HANDSHAKE">RPC_HANDSHAKE</dfn> 0x7682eef5</u></td></tr>
+<tr><th id="147">147</th><td><u>#define <dfn class="macro" id="_M/RPC_HANDSHAKE_ERROR" data-ref="_M/RPC_HANDSHAKE_ERROR">RPC_HANDSHAKE_ERROR</dfn> 0x6a27beda</u></td></tr>
+<tr><th id="148">148</th><td></td></tr>
+<tr><th id="149">149</th><td><u>#define <dfn class="macro" id="_M/RPC_CRYPTO_NONE" data-ref="_M/RPC_CRYPTO_NONE">RPC_CRYPTO_NONE</dfn> 0</u></td></tr>
+<tr><th id="150">150</th><td><u>#define <dfn class="macro" id="_M/RPC_CRYPTO_AES" data-ref="_M/RPC_CRYPTO_AES">RPC_CRYPTO_AES</dfn>  1</u></td></tr>
+<tr><th id="151">151</th><td><u>#define <dfn class="macro" id="_M/RPC_CRYPTO_AES_EXT" data-ref="_M/RPC_CRYPTO_AES_EXT">RPC_CRYPTO_AES_EXT</dfn>  2</u></td></tr>
+<tr><th id="152">152</th><td><u>#define <dfn class="macro" id="_M/RPC_CRYPTO_AES_DH" data-ref="_M/RPC_CRYPTO_AES_DH">RPC_CRYPTO_AES_DH</dfn>   3</u></td></tr>
+<tr><th id="153">153</th><td></td></tr>
+<tr><th id="154">154</th><td><u>#define	<dfn class="macro" id="_M/RPC_MF_COMPACT_ALLOW" data-ref="_M/RPC_MF_COMPACT_ALLOW">RPC_MF_COMPACT_ALLOW</dfn>	1</u></td></tr>
+<tr><th id="155">155</th><td><u>#define	<dfn class="macro" id="_M/RPC_MF_COMPACT_FORCE" data-ref="_M/RPC_MF_COMPACT_FORCE">RPC_MF_COMPACT_FORCE</dfn>	2</u></td></tr>
+<tr><th id="156">156</th><td><u>#define <dfn class="macro" id="_M/RPC_MF_IGNORE_PID" data-ref="_M/RPC_MF_IGNORE_PID">RPC_MF_IGNORE_PID</dfn>	4</u></td></tr>
+<tr><th id="157">157</th><td><u>#define <dfn class="macro" id="_M/RPC_MF_OPPORT_CRYPTO" data-ref="_M/RPC_MF_OPPORT_CRYPTO">RPC_MF_OPPORT_CRYPTO</dfn>	8</u></td></tr>
+<tr><th id="158">158</th><td></td></tr>
+<tr><th id="159">159</th><td><u>#define	<dfn class="macro" id="_M/TCP_RPC_DATA" data-ref="_M/TCP_RPC_DATA">TCP_RPC_DATA</dfn>(c)	((struct tcp_rpc_data *) (CONN_INFO(c)-&gt;custom_data))</u></td></tr>
+<tr><th id="160">160</th><td></td></tr>
+<tr><th id="161">161</th><td><em>int</em> <dfn class="decl" id="tcp_rpc_flush_packet" title='tcp_rpc_flush_packet' data-ref="tcp_rpc_flush_packet">tcp_rpc_flush_packet</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col4 decl" id="244C" title='C' data-type='connection_job_t' data-ref="244C">C</dfn>);</td></tr>
+<tr><th id="162">162</th><td><em>int</em> <dfn class="decl" id="tcp_rpc_write_packet" title='tcp_rpc_write_packet' data-ref="tcp_rpc_write_packet">tcp_rpc_write_packet</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col5 decl" id="245C" title='C' data-type='connection_job_t' data-ref="245C">C</dfn>, <b>struct</b> <a class="type" href="net-msg.h.html#raw_message" title='raw_message' data-ref="raw_message">raw_message</a> *<dfn class="local col6 decl" id="246raw" title='raw' data-type='struct raw_message *' data-ref="246raw">raw</dfn>);</td></tr>
+<tr><th id="163">163</th><td><em>int</em> <dfn class="decl" id="tcp_rpc_write_packet_compact" title='tcp_rpc_write_packet_compact' data-ref="tcp_rpc_write_packet_compact">tcp_rpc_write_packet_compact</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col7 decl" id="247C" title='C' data-type='connection_job_t' data-ref="247C">C</dfn>, <b>struct</b> <a class="type" href="net-msg.h.html#raw_message" title='raw_message' data-ref="raw_message">raw_message</a> *<dfn class="local col8 decl" id="248raw" title='raw' data-type='struct raw_message *' data-ref="248raw">raw</dfn>);</td></tr>
+<tr><th id="164">164</th><td><em>int</em> <dfn class="decl" id="tcp_rpc_flush" title='tcp_rpc_flush' data-ref="tcp_rpc_flush">tcp_rpc_flush</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col9 decl" id="249C" title='C' data-type='connection_job_t' data-ref="249C">C</dfn>);</td></tr>
+<tr><th id="165">165</th><td><em>void</em> <dfn class="decl" id="tcp_rpc_send_ping" title='tcp_rpc_send_ping' data-ref="tcp_rpc_send_ping">tcp_rpc_send_ping</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col0 decl" id="250C" title='C' data-type='connection_job_t' data-ref="250C">C</dfn>, <em>long</em> <em>long</em> <dfn class="local col1 decl" id="251ping_id" title='ping_id' data-type='long long' data-ref="251ping_id">ping_id</dfn>);</td></tr>
+<tr><th id="166">166</th><td><em>unsigned</em> <dfn class="decl" id="tcp_set_default_rpc_flags" title='tcp_set_default_rpc_flags' data-ref="tcp_set_default_rpc_flags">tcp_set_default_rpc_flags</dfn> (<em>unsigned</em> <dfn class="local col2 decl" id="252and_flags" title='and_flags' data-type='unsigned int' data-ref="252and_flags">and_flags</dfn>, <em>unsigned</em> <dfn class="local col3 decl" id="253or_flags" title='or_flags' data-type='unsigned int' data-ref="253or_flags">or_flags</dfn>);</td></tr>
+<tr><th id="167">167</th><td><em>unsigned</em> <dfn class="decl" id="tcp_get_default_rpc_flags" title='tcp_get_default_rpc_flags' data-ref="tcp_get_default_rpc_flags">tcp_get_default_rpc_flags</dfn> (<em>void</em>);</td></tr>
+<tr><th id="168">168</th><td><em>void</em> <dfn class="decl" id="tcp_set_max_dh_accept_rate" title='tcp_set_max_dh_accept_rate' data-ref="tcp_set_max_dh_accept_rate">tcp_set_max_dh_accept_rate</dfn> (<em>int</em> <dfn class="local col4 decl" id="254rate" title='rate' data-type='int' data-ref="254rate">rate</dfn>);</td></tr>
+<tr><th id="169">169</th><td><em>int</em> <dfn class="decl" id="tcp_add_dh_accept" title='tcp_add_dh_accept' data-ref="tcp_add_dh_accept">tcp_add_dh_accept</dfn> (<em>void</em>);</td></tr>
+<tr><th id="170">170</th><td></td></tr>
+<tr><th id="171">171</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../common/tl-parse.c.html'>MTProxy/common/tl-parse.c</a><br/>Generated on <em>2018-Jun-02</em> from project MTProxy revision <em>842f343decf6c463bdecf1862e357c4a03e4bc97</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

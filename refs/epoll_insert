@@ -1,0 +1,9 @@
+<dec f='MTProxy/net/net-events.h' l='93' type='int epoll_insert(int fd, int flags)'/>
+<use f='MTProxy/engine/engine.c' l='284' u='c' c='server_init'/>
+<use f='MTProxy/net/net-connections.c' l='803' u='c' c='fail_socket_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1159' u='c' c='do_socket_connection_job'/>
+<use f='MTProxy/net/net-connections.c' l='1211' u='c' c='alloc_new_socket_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1305' u='c' c='do_listening_connection_job'/>
+<use f='MTProxy/net/net-connections.c' l='1367' u='c' c='init_listening_connection_ext'/>
+<def f='MTProxy/net/net-events.c' l='240' ll='274' type='int epoll_insert(int fd, int flags)'/>
+<use f='MTProxy/net/net-events.c' l='352' u='c' c='epoll_runqueue'/>

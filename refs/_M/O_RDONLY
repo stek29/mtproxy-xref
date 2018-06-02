@@ -1,0 +1,9 @@
+<dec f='include/x86_64-linux-gnu/bits/fcntl-linux.h' l='43'/>
+<use f='MTProxy/common/common-stats.c' l='42' u='c'/>
+<use f='MTProxy/common/parse-config.c' l='245' u='c'/>
+<use f='MTProxy/common/resolver.c' l='279' u='c'/>
+<use f='MTProxy/common/resolver.c' l='411' u='c'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='366' u='c'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='139' u='c'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='159' u='c'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='180' u='c'/>

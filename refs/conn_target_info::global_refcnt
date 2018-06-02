@@ -1,0 +1,11 @@
+<dec f='MTProxy/net/net-connections.h' l='194' type='int'/>
+<offset>1280</offset>
+<use f='MTProxy/net/net-connections.c' l='1832' u='r' c='free_target'/>
+<use f='MTProxy/net/net-connections.c' l='1837' u='r' c='free_target'/>
+<use f='MTProxy/net/net-connections.c' l='1866' u='r' c='clean_unused_target'/>
+<use f='MTProxy/net/net-connections.c' l='1882' u='r' c='destroy_target'/>
+<use f='MTProxy/net/net-connections.c' l='1885' u='a' c='destroy_target'/>
+<use f='MTProxy/net/net-connections.c' l='1909' u='r' c='do_conn_target_job'/>
+<use f='MTProxy/net/net-connections.c' l='1919' u='r' c='do_conn_target_job'/>
+<use f='MTProxy/net/net-connections.c' l='1959' u='a' c='create_target'/>
+<use f='MTProxy/net/net-connections.c' l='1995' u='w' c='create_target'/>

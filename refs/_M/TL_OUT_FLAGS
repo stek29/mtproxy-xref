@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/tl-parse.h' l='183'/>
+<use f='MTProxy/common/tl-parse.c' l='884' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='890' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='908' u='c'/>

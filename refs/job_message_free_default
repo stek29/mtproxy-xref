@@ -1,0 +1,5 @@
+<def f='MTProxy/jobs/jobs.c' l='1490' ll='1498' type='void job_message_free_default(struct job_message * M)'/>
+<use f='MTProxy/jobs/jobs.c' l='1556' u='c' c='job_message_send_fake'/>
+<use f='MTProxy/jobs/jobs.c' l='1561' u='c' c='job_message_send_fake'/>
+<use f='MTProxy/jobs/jobs.c' l='1605' u='c' c='job_message_queue_work'/>
+<use f='MTProxy/jobs/jobs.c' l='1610' u='c' c='job_message_queue_work'/>

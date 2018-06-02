@@ -1,0 +1,26 @@
+<dec f='MTProxy/net/net-http-server.h' l='51' type='int'/>
+<offset>160</offset>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1363' u='r' c='hts_stats_execute'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1402' u='r' c='hts_execute'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1412' u='r' c='hts_execute'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1416' u='r' c='hts_execute'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1416' u='r' c='hts_execute'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1421' u='r' c='hts_execute'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1422' u='w' c='hts_execute'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1429' u='r' c='hts_execute'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1430' u='r' c='hts_execute'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1437' u='r' c='hts_execute'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1454' u='r' c='hts_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='121' u='r' c='hts_default_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='247' u='w' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='352' u='r' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='357' u='w' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='411' u='r' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='424' u='w' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='572' u='r' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='575' u='r' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='580' u='r' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='592' u='r' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='600' u='r' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='602' u='r' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='602' u='r' c='hts_parse_execute'/>

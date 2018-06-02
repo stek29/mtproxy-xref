@@ -1,0 +1,2 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='1299' ll='1353' type='int http_query_job_run(job_t job, int op, struct job_thread * JT)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1440' u='r' c='hts_execute'/>

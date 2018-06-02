@@ -1,0 +1,3 @@
+<dec f='MTProxy/mtproto/mtproto-common.h' l='64' type='long long'/>
+<offset>192</offset>
+<doc f='MTProxy/mtproto/mtproto-common.h' l='63'>// encrypted part, starts with encrypted header</doc>

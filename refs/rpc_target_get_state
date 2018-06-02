@@ -1,0 +1,2 @@
+<dec f='MTProxy/net/net-rpc-targets.h' l='54' type='int rpc_target_get_state(rpc_target_job_t S, struct process_id * PID)'/>
+<def f='MTProxy/net/net-rpc-targets.c' l='350' ll='361' type='int rpc_target_get_state(rpc_target_job_t S, struct process_id * pid)'/>

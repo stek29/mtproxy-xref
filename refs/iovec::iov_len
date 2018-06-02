@@ -1,0 +1,12 @@
+<dec f='include/x86_64-linux-gnu/bits/uio.h' l='46' type='size_t'/>
+<offset>64</offset>
+<doc f='include/x86_64-linux-gnu/bits/uio.h' l='46'>/* Length of data.  */</doc>
+<use f='MTProxy/net/net-connections.c' l='236' u='w' c='prealloc_tcp_buffers'/>
+<use f='MTProxy/net/net-connections.c' l='251' u='r' c='tcp_prepare_iovec'/>
+<use f='MTProxy/net/net-connections.c' l='904' u='r' c='net_server_socket_reader'/>
+<use f='MTProxy/net/net-connections.c' l='904' u='r' c='net_server_socket_reader'/>
+<use f='MTProxy/net/net-connections.c' l='916' u='r' c='net_server_socket_reader'/>
+<use f='MTProxy/net/net-connections.c' l='916' u='r' c='net_server_socket_reader'/>
+<use f='MTProxy/net/net-connections.c' l='935' u='w' c='net_server_socket_reader'/>
+<use f='MTProxy/net/net-msg.c' l='672' u='w' c='rwm_prepare_iovec'/>
+<use f='MTProxy/net/net-msg.c' l='676' u='w' c='rwm_prepare_iovec'/>

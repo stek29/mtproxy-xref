@@ -1,0 +1,4 @@
+<def f='MTProxy/net/net-events.c' l='362' type='struct epoll_event [524288]'/>
+<use f='MTProxy/net/net-events.c' l='373' u='r' c='epoll_fetch_events'/>
+<use f='MTProxy/net/net-events.c' l='386' u='m' c='epoll_fetch_events'/>
+<use f='MTProxy/net/net-events.c' l='390' u='m' c='epoll_fetch_events'/>

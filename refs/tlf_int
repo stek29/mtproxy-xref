@@ -1,0 +1,19 @@
+<def f='MTProxy/common/tl-parse.h' l='325' ll='332' type='int tlf_int(struct tl_in_state * tlio_in)'/>
+<use f='MTProxy/common/tl-parse.h' l='728' u='c' c='tlf_int_range'/>
+<use f='MTProxy/common/tl-parse.h' l='748' u='c' c='tlf_int_subset'/>
+<use f='MTProxy/common/tl-parse.c' l='595' macro='1' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='619' macro='1' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='640' macro='1' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='644' macro='1' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='649' macro='1' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='667' macro='1' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='690' macro='1' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='704' macro='1' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='712' macro='1' u='c'/>
+<doc f='MTProxy/common/tl-parse.h' l='325'>/* {{{ */</doc>
+<use f='MTProxy/engine/engine-rpc-common.c' l='71' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='808' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='815' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='839' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1569' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1836' macro='1' u='c'/>

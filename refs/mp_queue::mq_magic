@@ -1,0 +1,17 @@
+<dec f='MTProxy/common/mp-queue.h' l='91' type='int'/>
+<offset>64</offset>
+<use f='MTProxy/common/mp-queue.c' l='372' u='r' c='init_mp_queue'/>
+<use f='MTProxy/common/mp-queue.c' l='372' u='r' c='init_mp_queue'/>
+<use f='MTProxy/common/mp-queue.c' l='375' u='w' c='init_mp_queue'/>
+<use f='MTProxy/common/mp-queue.c' l='377' u='r' c='init_mp_queue'/>
+<use f='MTProxy/common/mp-queue.c' l='380' u='r' c='init_mp_queue'/>
+<use f='MTProxy/common/mp-queue.c' l='392' u='w' c='init_mp_queue_w'/>
+<use f='MTProxy/common/mp-queue.c' l='415' u='r' c='clear_mp_queue'/>
+<use f='MTProxy/common/mp-queue.c' l='415' u='r' c='clear_mp_queue'/>
+<use f='MTProxy/common/mp-queue.c' l='425' u='w' c='clear_mp_queue'/>
+<use f='MTProxy/common/mp-queue.c' l='601' u='r' c='mpq_pop_w'/>
+<use f='MTProxy/common/mp-queue.c' l='635' u='r' c='mpq_pop_nw'/>
+<use f='MTProxy/common/mp-queue.c' l='659' u='r' c='mpq_push_w'/>
+<use f='MTProxy/jobs/jobs.c' l='526' u='r' c='init_async_jobs'/>
+<use f='MTProxy/jobs/jobs.c' l='567' u='r' c='create_job_class'/>
+<use f='MTProxy/jobs/jobs.c' l='1033' u='r' c='run_pending_main_jobs'/>

@@ -1,0 +1,2 @@
+<dec f='MTProxy/net/net-rpc-targets.h' l='44' type='rpc_target_job_t rpc_target_lookup_target(conn_target_job_t targ)'/>
+<def f='MTProxy/net/net-rpc-targets.c' l='219' ll='225' type='rpc_target_job_t rpc_target_lookup_target(conn_target_job_t SS)'/>

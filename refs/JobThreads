@@ -1,0 +1,13 @@
+<dec f='MTProxy/jobs/jobs.h' l='431' type='struct job_thread []'/>
+<def f='MTProxy/jobs/jobs.c' l='57' type='struct job_thread [256]'/>
+<use f='MTProxy/jobs/jobs.c' l='100' u='m' c='jobs_prepare_stat'/>
+<use f='MTProxy/jobs/jobs.c' l='101' u='m' c='jobs_prepare_stat'/>
+<use f='MTProxy/jobs/jobs.c' l='178' u='m' c='jobs_prepare_stat'/>
+<use f='MTProxy/jobs/jobs.c' l='179' u='m' c='jobs_prepare_stat'/>
+<use f='MTProxy/jobs/jobs.c' l='292' u='a' c='jobs_prepare_stat'/>
+<use f='MTProxy/jobs/jobs.c' l='346' u='m' c='update_all_thread_stats'/>
+<use f='MTProxy/jobs/jobs.c' l='449' u='m' c='create_job_thread_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='449' u='m' c='create_job_thread_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='450' u='a' c='create_job_thread_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='1289' u='a' c='jobs_check_all_timers'/>
+<use f='MTProxy/jobs/jobs.c' l='1400' u='m' c='job_timer_insert'/>

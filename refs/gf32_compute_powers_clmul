@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/crc32.h' l='75' type='void gf32_compute_powers_clmul(unsigned int * P, unsigned int poly)'/>
+<def f='MTProxy/common/crc32.c' l='732' ll='745' type='void gf32_compute_powers_clmul(unsigned int * P, unsigned int poly)'/>
+<use f='MTProxy/common/crc32.c' l='808' u='c' c='compute_crc32_combine_clmul'/>
+<use f='MTProxy/common/crc32c.c' l='623' u='c' c='crc32c_combine_clmul'/>

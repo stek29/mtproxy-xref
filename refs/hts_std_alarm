@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-http-server.h' l='98' type='int hts_std_alarm(connection_job_t c)'/>
+<dec f='MTProxy/net/net-http-server.c' l='56' type='int hts_std_alarm(connection_job_t c)'/>
+<use f='MTProxy/net/net-http-server.c' l='73'/>
+<use f='MTProxy/net/net-http-server.c' l='73'/>
+<def f='MTProxy/net/net-http-server.c' l='650' ll='656' type='int hts_std_alarm(connection_job_t c)'/>

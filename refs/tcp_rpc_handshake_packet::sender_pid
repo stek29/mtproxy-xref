@@ -1,0 +1,13 @@
+<dec f='MTProxy/net/net-tcp-rpc-common.h' l='73' type='struct process_id'/>
+<offset>64</offset>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='254' u='a' c='tcp_rpcc_send_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='299' u='a' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='301' u='m' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='301' u='m' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='301' u='m' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='301' u='m' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='305' u='m' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='306' u='m' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='308' u='a' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='244' u='a' c='tcp_rpcs_send_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='288' u='a' c='tcp_rpcs_process_handshake_packet'/>

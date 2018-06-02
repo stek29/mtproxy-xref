@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/tl-parse.h' l='219' type='int tls_init_str(struct tl_out_state * tlio_out, char * s, long long qid, int size)'/>
+<def f='MTProxy/common/tl-parse.c' l='814' ll='817' type='int tls_init_str(struct tl_out_state * tlio_out, char * s, long long qid, int size)'/>
+<doc f='MTProxy/common/tl-parse.h' l='217'>//int tls_init_tcp_raw_msg_keep_error (struct tl_out_state *tlio_out, connection_job_t c, long long qid);
+//int tls_init_simple (struct tl_out_state *tlio_out, connection_job_t c);</doc>

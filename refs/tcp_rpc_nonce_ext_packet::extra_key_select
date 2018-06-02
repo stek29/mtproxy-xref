@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-tcp-rpc-common.h' l='55' type='int [8]'/>
+<offset>288</offset>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='196' u='r' c='tcp_rpcc_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='192' u='r' c='tcp_rpcs_process_nonce_packet'/>

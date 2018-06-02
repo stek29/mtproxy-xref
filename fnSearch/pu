@@ -1,0 +1,6 @@
+putc_unlocked|putc_unlocked
+putchar|putchar
+putchar_unlocked|putchar_unlocked
+push_rpc_confirmation|push_rpc_confirmation
+put_event_into_heap|put_event_into_heap
+put_event_into_heap_tail|put_event_into_heap_tail

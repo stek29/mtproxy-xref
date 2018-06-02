@@ -1,0 +1,2 @@
+<dec f='include/openssl/evp.h' l='720' type='const EVP_MD * EVP_sha1()'/>
+<use f='MTProxy/common/sha1.c' l='26' u='c' c='sha1_starts'/>

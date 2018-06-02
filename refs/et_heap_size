@@ -1,0 +1,15 @@
+<def f='MTProxy/net/net-timers.c' l='52' type='int'/>
+<use f='MTProxy/net/net-timers.c' l='67' u='r' c='basic_et_adjust'/>
+<use f='MTProxy/net/net-timers.c' l='68' u='r' c='basic_et_adjust'/>
+<use f='MTProxy/net/net-timers.c' l='92' u='r' c='insert_event_timer'/>
+<use f='MTProxy/net/net-timers.c' l='95' u='r' c='insert_event_timer'/>
+<use f='MTProxy/net/net-timers.c' l='96' u='w' c='insert_event_timer'/>
+<use f='MTProxy/net/net-timers.c' l='111' u='r' c='remove_event_timer'/>
+<use f='MTProxy/net/net-timers.c' l='114' u='w' c='remove_event_timer'/>
+<use f='MTProxy/net/net-timers.c' l='115' u='r' c='remove_event_timer'/>
+<use f='MTProxy/net/net-timers.c' l='128' u='r' c='thread_run_timers'/>
+<use f='MTProxy/net/net-timers.c' l='134' u='r' c='thread_run_timers'/>
+<use f='MTProxy/net/net-timers.c' l='137' u='r' c='thread_run_timers'/>
+<use f='MTProxy/net/net-timers.c' l='145' u='r' c='thread_run_timers'/>
+<use f='MTProxy/net/net-timers.c' l='151' u='r' c='thread_run_timers'/>
+<use f='MTProxy/net/net-timers.c' l='160' u='r' c='timers_get_first'/>

@@ -1,0 +1,36 @@
+<def f='MTProxy/net/net-connections.h' l='130' ll='173'/>
+<size>264</size>
+<mbr r='conn_functions::magic' o='0' t='int'/>
+<mbr r='conn_functions::flags' o='32' t='int'/>
+<mbr r='conn_functions::title' o='64' t='char *'/>
+<mbr r='conn_functions::accept' o='128' t='int (*)(connection_job_t)'/>
+<mbr r='conn_functions::init_accepted' o='192' t='int (*)(connection_job_t)'/>
+<mbr r='conn_functions::reader' o='256' t='int (*)(connection_job_t)'/>
+<mbr r='conn_functions::writer' o='320' t='int (*)(connection_job_t)'/>
+<mbr r='conn_functions::close' o='384' t='int (*)(connection_job_t, int)'/>
+<mbr r='conn_functions::parse_execute' o='448' t='int (*)(connection_job_t)'/>
+<mbr r='conn_functions::init_outbound' o='512' t='int (*)(connection_job_t)'/>
+<mbr r='conn_functions::connected' o='576' t='int (*)(connection_job_t)'/>
+<mbr r='conn_functions::check_ready' o='640' t='int (*)(connection_job_t)'/>
+<mbr r='conn_functions::wakeup_aio' o='704' t='int (*)(connection_job_t, int)'/>
+<mbr r='conn_functions::write_packet' o='768' t='int (*)(connection_job_t, struct raw_message *)'/>
+<mbr r='conn_functions::flush' o='832' t='int (*)(connection_job_t)'/>
+<mbr r='conn_functions::free' o='896' t='int (*)(connection_job_t)'/>
+<mbr r='conn_functions::free_buffers' o='960' t='int (*)(connection_job_t)'/>
+<mbr r='conn_functions::read_write' o='1024' t='int (*)(connection_job_t)'/>
+<mbr r='conn_functions::wakeup' o='1088' t='int (*)(connection_job_t)'/>
+<mbr r='conn_functions::alarm' o='1152' t='int (*)(connection_job_t)'/>
+<mbr r='conn_functions::socket_read_write' o='1216' t='int (*)(connection_job_t)'/>
+<mbr r='conn_functions::socket_reader' o='1280' t='int (*)(connection_job_t)'/>
+<mbr r='conn_functions::socket_writer' o='1344' t='int (*)(connection_job_t)'/>
+<mbr r='conn_functions::socket_connected' o='1408' t='int (*)(connection_job_t)'/>
+<mbr r='conn_functions::socket_free' o='1472' t='int (*)(connection_job_t)'/>
+<mbr r='conn_functions::socket_close' o='1536' t='int (*)(connection_job_t)'/>
+<mbr r='conn_functions::data_received' o='1600' t='int (*)(connection_job_t, int)'/>
+<mbr r='conn_functions::data_sent' o='1664' t='int (*)(connection_job_t, int)'/>
+<mbr r='conn_functions::ready_to_write' o='1728' t='int (*)(connection_job_t)'/>
+<mbr r='conn_functions::crypto_init' o='1792' t='int (*)(connection_job_t, void *, int)'/>
+<mbr r='conn_functions::crypto_free' o='1856' t='int (*)(connection_job_t)'/>
+<mbr r='conn_functions::crypto_encrypt_output' o='1920' t='int (*)(connection_job_t)'/>
+<mbr r='conn_functions::crypto_decrypt_input' o='1984' t='int (*)(connection_job_t)'/>
+<mbr r='conn_functions::crypto_needed_output_bytes' o='2048' t='int (*)(connection_job_t)'/>

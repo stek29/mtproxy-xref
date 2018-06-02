@@ -1,0 +1,10 @@
+<dec f='MTProxy/common/rpc-const.h' l='82'/>
+<use f='MTProxy/common/tl-parse.h' l='383' u='c'/>
+<use f='MTProxy/common/tl-parse.h' l='411' u='c'/>
+<doc f='MTProxy/common/rpc-const.h' l='74'>//
+// Error codes
+//
+
+//
+// Query syntax errors -1000...-1999
+//</doc>

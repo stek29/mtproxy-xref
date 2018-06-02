@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-msg-buffers.h' l='102' type='int free_msg_buffer(struct msg_buffer * X)'/>
+<use f='MTProxy/net/net-msg-buffers.h' l='106' u='c' c='msg_buffer_decref'/>
+<dec f='MTProxy/net/net-msg-buffers.h' l='115' type='int free_msg_buffer(struct msg_buffer * buffer)'/>
+<def f='MTProxy/net/net-msg-buffers.c' l='547' ll='580' type='int free_msg_buffer(struct msg_buffer * X)'/>

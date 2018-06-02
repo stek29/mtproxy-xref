@@ -1,0 +1,7 @@
+<dec f='MTProxy/mtproto/mtproto-config.h' l='33' type='int'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='117' u='w' c='forget_cluster_targets'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='199' u='w' c='init_old_mf_cluster'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='213' u='w' c='extend_old_mf_cluster'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='229' u='r' c='dump_mf_cluster'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='231' u='r' c='dump_mf_cluster'/>
+<offset>32</offset>

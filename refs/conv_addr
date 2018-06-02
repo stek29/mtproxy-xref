@@ -1,0 +1,3 @@
+<dec f='MTProxy/net/net-events.h' l='140' type='const char * conv_addr(in_addr_t a, char * buf)'/>
+<def f='MTProxy/net/net-events.c' l='823' ll='830' type='const char * conv_addr(in_addr_t a, char * buf)'/>
+<doc f='MTProxy/net/net-events.c' l='821'>/* IPv4/IPv6 address formatting functions */</doc>

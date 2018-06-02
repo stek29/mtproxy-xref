@@ -1,0 +1,2 @@
+<dec f='MTProxy/net/net-crypto-aes.h' l='44' type='int aes_crypto_encrypt_output(connection_job_t c)'/>
+<doc f='MTProxy/net/net-crypto-aes.h' l='44'>/* 0 = all ok, &gt;0 = so much more bytes needed to encrypt last block */</doc>

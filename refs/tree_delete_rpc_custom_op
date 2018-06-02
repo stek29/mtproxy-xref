@@ -1,0 +1,5 @@
+<dec f='MTProxy/vv/vv-tree.c' l='116' macro='1' type='struct tree_rpc_custom_op * tree_delete_rpc_custom_op(struct tree_rpc_custom_op * T, struct rpc_custom_op * x)'/>
+<def f='MTProxy/vv/vv-tree.c' l='420' macro='1' type='struct tree_rpc_custom_op * tree_delete_rpc_custom_op(struct tree_rpc_custom_op * T, struct rpc_custom_op * x)'/>
+<use f='MTProxy/vv/vv-tree.c' l='433' macro='1' u='c'/>
+<use f='MTProxy/vv/vv-tree.c' l='435' macro='1' u='c'/>
+<use f='MTProxy/vv/vv-tree.c' l='452' macro='1' u='c'/>

@@ -1,0 +1,5 @@
+<dec f='MTProxy/mtproto/mtproto-config.h' l='53' type='struct mf_cluster *'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='224' u='r' c='mf_cluster_lookup'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='242' u='w' c='preinit_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='350' u='w' c='parse_config'/>
+<offset>448</offset>

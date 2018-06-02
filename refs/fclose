@@ -1,0 +1,9 @@
+<dec f='include/stdio.h' l='237' type='int fclose(FILE * __stream)'/>
+<doc f='include/stdio.h' l='233'>/* Close STREAM.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */</doc>
+<use f='MTProxy/common/md5.c' l='324' u='c' c='md5_file'/>
+<use f='MTProxy/common/md5.c' l='328' u='c' c='md5_file'/>
+<use f='MTProxy/common/proc-stat.c' l='81' u='c' c='read_proc_stats'/>
+<use f='MTProxy/common/proc-stat.c' l='84' u='c' c='read_proc_stats'/>

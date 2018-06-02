@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/mp-queue.h' l='139' type='int mp_sem_post(mp_sem_t * sem)'/>
+<def f='MTProxy/common/mp-queue.c' l='121' ll='127' type='int mp_sem_post(mp_sem_t * sem)'/>
+<use f='MTProxy/common/mp-queue.c' l='664' u='c' c='mpq_push_w'/>
+<doc f='MTProxy/common/mp-queue.c' l='119'>/* custom semaphore implementation using futexes */</doc>

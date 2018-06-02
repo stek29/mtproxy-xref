@@ -1,0 +1,16 @@
+<dec f='MTProxy/engine/engine.h' l='45'/>
+<use f='MTProxy/engine/engine-signals.c' l='45' u='c'/>
+<use f='MTProxy/engine/engine-signals.c' l='49' u='c'/>
+<use f='MTProxy/engine/engine-signals.c' l='53' u='c'/>
+<use f='MTProxy/engine/engine-signals.c' l='55' u='c'/>
+<use f='MTProxy/engine/engine-signals.c' l='152' u='c'/>
+<use f='MTProxy/engine/engine.c' l='521' u='c'/>
+<use f='MTProxy/engine/engine.c' l='528' u='c'/>
+<use f='MTProxy/engine/engine.c' l='528' u='c'/>
+<use f='MTProxy/engine/engine.c' l='528' u='c'/>
+<use f='MTProxy/engine/engine.c' l='528' u='c'/>
+<use f='MTProxy/engine/engine.c' l='528' u='c'/>
+<use f='MTProxy/engine/engine.c' l='528' u='c'/>
+<use f='MTProxy/engine/engine.c' l='528' u='c'/>
+<use f='MTProxy/engine/engine.c' l='559' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2308' u='c'/>

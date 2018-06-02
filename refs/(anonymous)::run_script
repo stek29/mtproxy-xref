@@ -1,0 +1,4 @@
+<dec f='MTProxy/engine/engine.h' l='95' type='int (*)(void)'/>
+<offset>1152</offset>
+<use f='MTProxy/engine/engine.c' l='635' u='r' c='default_main'/>
+<use f='MTProxy/engine/engine.c' l='636' u='r' c='default_main'/>

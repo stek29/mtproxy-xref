@@ -1,0 +1,43 @@
+<dec f='MTProxy/net/net-msg.h' l='83'/>
+<doc f='MTProxy/net/net-msg.h' l='78'>/*
+ *        RAW MESSAGES (struct raw_message) = chains of MESSAGE PARTs
+ */
+
+// ordinary raw message (changing refcnt of pointed msg_parts)</doc>
+<use f='MTProxy/common/tl-parse.c' l='230' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='53' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='130' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='161' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='196' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='204' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='205' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='253' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='326' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='334' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='335' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='343' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='345' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='357' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='364' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='488' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='558' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='569' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='612' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='657' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='701' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='715' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='729' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='739' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='754' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='782' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='797' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='806' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='841' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='865' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='893' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='910' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='926' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='991' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='1003' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='1195' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='1212' u='c'/>

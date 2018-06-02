@@ -1,0 +1,5 @@
+<def f='MTProxy/common/tl-parse.h' l='727' ll='733' type='int tlf_int_range(struct tl_in_state * tlio_in, int min, int max)'/>
+<use f='MTProxy/common/tl-parse.h' l='738' u='c' c='tlf_positive_int'/>
+<use f='MTProxy/common/tl-parse.h' l='743' u='c' c='tlf_nonnegative_int'/>
+<doc f='MTProxy/common/tl-parse.h' l='725'>/* }}} */</doc>
+<doc f='MTProxy/common/tl-parse.h' l='727'>/* {{{ */</doc>

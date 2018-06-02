@@ -1,0 +1,5 @@
+<dec f='MTProxy/common/precise-time.h' l='52' type='double get_double_time()'/>
+<doc f='MTProxy/common/precise-time.h' l='51'>/* ??? */</doc>
+<def f='MTProxy/common/precise-time.c' l='47' ll='59' type='double get_double_time()'/>
+<use f='MTProxy/engine/engine.c' l='78' u='c' c='default_cron'/>
+<use f='MTProxy/engine/engine.c' l='574' u='c' c='engine_startup'/>

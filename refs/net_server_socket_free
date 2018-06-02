@@ -1,0 +1,7 @@
+<def f='MTProxy/net/net-connections.c' l='817' ll='843' type='int net_server_socket_free(socket_connection_job_t C)'/>
+<use f='MTProxy/net/net-connections.c' l='1542' u='r' c='check_conn_functions'/>
+<doc f='MTProxy/net/net-connections.c' l='813'>/*
+  Frees socket_connection structure
+  Removes link to cpu_connection
+*/</doc>
+<doc f='MTProxy/net/net-connections.c' l='817'>/* {{{ */</doc>

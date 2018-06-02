@@ -1,0 +1,4 @@
+<dec f='MTProxy/jobs/jobs.h' l='270' type='int create_job_class(int job_class, int min_threads, int max_threads, int excl)'/>
+<use f='MTProxy/jobs/jobs.c' l='548' u='c' c='create_new_job_class'/>
+<def f='MTProxy/jobs/jobs.c' l='555' ll='572' type='int create_job_class(int job_class, int min_threads, int max_threads, int excl)'/>
+<use f='MTProxy/jobs/jobs.c' l='594' u='c' c='create_job_class_sub'/>

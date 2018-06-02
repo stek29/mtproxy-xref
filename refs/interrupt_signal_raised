@@ -1,0 +1,4 @@
+<dec f='MTProxy/engine/engine-signals.h' l='40' type='int interrupt_signal_raised()'/>
+<def f='MTProxy/engine/engine-signals.c' l='127' ll='129' type='int interrupt_signal_raised()'/>
+<doc f='MTProxy/engine/engine-signals.c' l='127'>/* {{{ */</doc>
+<use f='MTProxy/engine/engine.c' l='461' u='c' c='default_engine_server_start'/>

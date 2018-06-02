@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/pid.h' l='51' type='void init_common_PID()'/>
+<def f='MTProxy/common/pid.c' l='39' ll='48' type='void init_common_PID()'/>
+<use f='MTProxy/common/pid.c' l='55' u='c' c='init_client_PID'/>
+<use f='MTProxy/common/pid.c' l='65' u='c' c='init_server_PID'/>

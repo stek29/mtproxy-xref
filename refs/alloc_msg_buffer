@@ -1,0 +1,14 @@
+<dec f='MTProxy/net/net-msg-buffers.h' l='113' type='struct msg_buffer * alloc_msg_buffer(struct msg_buffer * neighbor, int size_hint)'/>
+<use f='MTProxy/net/net-connections.c' l='228' u='c' c='prealloc_tcp_buffers'/>
+<use f='MTProxy/net/net-connections.c' l='928' u='c' c='net_server_socket_reader'/>
+<def f='MTProxy/net/net-msg-buffers.c' l='491' ll='502' type='struct msg_buffer * alloc_msg_buffer(struct msg_buffer * neighbor, int size_hint)'/>
+<doc f='MTProxy/net/net-msg-buffers.c' l='490'>/* allocates buffer of at least given size, -1 = maximal */</doc>
+<use f='MTProxy/net/net-msg.c' l='376' u='c' c='rwm_push_data_ext'/>
+<use f='MTProxy/net/net-msg.c' l='450' u='c' c='rwm_push_data_ext'/>
+<use f='MTProxy/net/net-msg.c' l='518' u='c' c='rwm_push_data_front'/>
+<use f='MTProxy/net/net-msg.c' l='595' u='c' c='rwm_prepend_alloc'/>
+<use f='MTProxy/net/net-msg.c' l='637' u='c' c='rwm_postpone_alloc'/>
+<use f='MTProxy/net/net-msg.c' l='1244' u='c' c='rwm_process_encrypt_decrypt'/>
+<use f='MTProxy/net/net-msg.c' l='1274' u='c' c='rwm_process_encrypt_decrypt'/>
+<use f='MTProxy/net/net-msg.c' l='1306' u='c' c='rwm_process_encrypt_decrypt'/>
+<use f='MTProxy/net/net-msg.c' l='1354' u='c' c='rwm_encrypt_decrypt_to'/>

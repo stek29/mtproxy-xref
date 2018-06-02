@@ -1,0 +1,22 @@
+<dec f='MTProxy/common/tl-parse.h' l='592'/>
+<use f='MTProxy/common/tl-parse.c' l='841' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='843' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='845' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='849' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='853' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='854' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='871' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='873' u='c'/>
+<doc f='MTProxy/common/tl-parse.h' l='591'>/* }}} */</doc>
+<use f='MTProxy/engine/engine-rpc.c' l='852' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='785' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1767' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1768' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1776' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1777' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1781' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1789' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1790' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1794' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1801' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1805' u='c'/>

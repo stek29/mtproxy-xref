@@ -1,0 +1,2 @@
+<dec f='MTProxy/net/net-http-server.h' l='113' type='int gen_http_time(char * date_buffer, int * time)'/>
+<def f='MTProxy/net/net-http-server.c' l='730' ll='772' type='int gen_http_time(char * date_buffer, int * time)'/>

@@ -1,0 +1,9 @@
+<dec f='include/asm-generic/errno.h' l='108'/>
+<use f='include/x86_64-linux-gnu/bits/errno.h' l='30' u='a'/>
+<use f='MTProxy/engine/engine-rpc.c' l='355' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='446' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='658' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='798' u='c'/>
+<use f='MTProxy/jobs/jobs.c' l='1164' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='901' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1326' u='c'/>

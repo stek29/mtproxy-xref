@@ -1,0 +1,5 @@
+<dec f='MTProxy/jobs/jobs.h' l='90'/>
+<use f='MTProxy/engine/engine.c' l='264' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='1182' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='1182' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='1182' u='c'/>

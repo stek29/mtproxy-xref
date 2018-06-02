@@ -1,0 +1,2 @@
+<def f='MTProxy/engine/engine.h' l='187' macro='1' type='void engine_enable_ipv6()'/>
+<use f='MTProxy/engine/engine-net.c' l='175' u='c' c='f_parse_option_net'/>

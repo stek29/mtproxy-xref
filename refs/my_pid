@@ -1,0 +1,4 @@
+<def f='MTProxy/net/net-stats.c' l='70' type='int'/>
+<use f='MTProxy/net/net-stats.c' l='109' u='r' c='prepare_stats'/>
+<use f='MTProxy/net/net-stats.c' l='110' u='w' c='prepare_stats'/>
+<use f='MTProxy/net/net-stats.c' l='128' u='r' c='prepare_stats'/>

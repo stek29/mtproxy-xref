@@ -1,0 +1,23 @@
+<dec f='include/string.h' l='394' type='unsigned long strlen(const char * __s)'/>
+<doc f='include/string.h' l='393'>/* Return the length of S.  */</doc>
+<use f='MTProxy/common/parse-config.c' l='265' macro='1' u='c'/>
+<use f='MTProxy/common/resolver.c' l='364' u='c' c='kdb_gethostbyname'/>
+<use f='MTProxy/common/server-functions.c' l='178' u='c' c='print_backtrace'/>
+<use f='MTProxy/common/server-functions.c' l='387' macro='1' u='c'/>
+<use f='MTProxy/common/server-functions.c' l='512' u='c' c='parse_usage'/>
+<use f='MTProxy/common/server-functions.c' l='535' u='c' c='parse_usage'/>
+<use f='MTProxy/common/tl-parse.h' l='805' macro='1' u='c'/>
+<use f='MTProxy/engine/engine.h' l='193' macro='1' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='124' macro='1' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='140' macro='1' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='554' macro='1' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='874' macro='1' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='287' macro='1' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='296' macro='1' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='366' macro='1' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='430' macro='1' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='449' macro='1' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='482' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2153' u='c' c='f_parse_option'/>
+<use f='MTProxy/net/net-events.c' l='749' macro='1' u='c'/>
+<use f='MTProxy/net/net-events.c' l='749' macro='1' u='c'/>

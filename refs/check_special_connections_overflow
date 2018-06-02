@@ -1,0 +1,2 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='2031' ll='2039' type='void check_special_connections_overflow()'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2044' u='c' c='cron'/>

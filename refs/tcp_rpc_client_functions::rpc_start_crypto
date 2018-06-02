@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-tcp-rpc-client.h' l='36' type='int (*)(connection_job_t, char *, int, unsigned char *, int)'/>
+<offset>448</offset>
+<doc f='MTProxy/net/net-tcp-rpc-client.h' l='36'>/* 1 = ok; -1 = no crypto */</doc>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='776' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='101' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='227' u='r' c='tcp_rpcc_process_nonce_packet'/>

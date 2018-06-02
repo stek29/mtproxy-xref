@@ -1,0 +1,27 @@
+<dec f='MTProxy/net/net-tcp-rpc-common.h' l='124' type='int'/>
+<offset>32</offset>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='120' u='r' c='tcp_rpcc_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='286' u='r' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='400' u='r' c='tcp_rpcc_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='401' u='r' c='tcp_rpcc_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='408' u='w' c='tcp_rpcc_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='433' u='w' c='tcp_rpcc_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='508' u='r' c='tcp_rpcc_default_check_ready'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='577' u='w' c='tcp_rpcc_init_outbound'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='135' u='r' c='tcp_rpcs_compact_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='224' u='w' c='tcp_rpcs_compact_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='323' u='r' c='tcp_rpcs_compact_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='324' u='r' c='tcp_rpcs_compact_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='325' u='w' c='tcp_rpcs_compact_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='329' u='r' c='tcp_rpcs_compact_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='346' u='w' c='tcp_rpcs_compact_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='126' u='r' c='tcp_rpcs_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='275' u='r' c='tcp_rpcs_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='337' u='r' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='406' u='r' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='407' u='w' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='410' u='r' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='411' u='r' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='447' u='w' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='516' u='w' c='tcp_rpcs_init_accepted'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='524' u='w' c='tcp_rpcs_init_accepted_nohs'/>

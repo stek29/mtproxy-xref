@@ -1,0 +1,4 @@
+<dec f='MTProxy/engine/engine-rpc.c' l='243' type='struct paramed_type * skip_function_any(struct tl_in_state * tlio_in)'/>
+<def f='MTProxy/engine/engine-rpc.c' l='244' type='struct paramed_type * skip_function_any(struct tl_in_state * tlio_in)'/>
+<use f='MTProxy/engine/engine-rpc.c' l='260' u='c' c='do_skip_function_any'/>
+<doc f='MTProxy/engine/engine-rpc.c' l='241'>/* {{{ auto TL parse functions weak declaration */</doc>

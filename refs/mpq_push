@@ -1,0 +1,9 @@
+<dec f='MTProxy/common/mp-queue.h' l='131' type='long mpq_push(struct mp_queue * MQ, mqn_value_t val, int flags)'/>
+<use f='MTProxy/common/mp-queue.c' l='181' u='c' c='alloc_mpq_block'/>
+<use f='MTProxy/common/mp-queue.c' l='471' u='c' c='mpq_pop'/>
+<use f='MTProxy/common/mp-queue.c' l='523' u='c' c='mpq_is_empty'/>
+<def f='MTProxy/common/mp-queue.c' l='533' ll='598' type='long mpq_push(struct mp_queue * MQ, mqn_value_t val, int flags)'/>
+<use f='MTProxy/common/mp-queue.c' l='593' u='c' c='mpq_push'/>
+<use f='MTProxy/common/mp-queue.c' l='660' u='c' c='mpq_push_w'/>
+<doc f='MTProxy/common/mp-queue.c' l='531'>/* may invoke mpq_alloc_block (which recursively invokes mpq_pop) 
+   or mpq_push() (without needing to hold hazard pointer) to deal with blocks */</doc>

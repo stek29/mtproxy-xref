@@ -1,0 +1,10 @@
+<dec f='MTProxy/net/net-connections.h' l='342' type='connection_job_t connection_get_by_fd_generation(int fd, int generation)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='342' u='c' c='remove_ext_connection'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='352' u='c' c='remove_ext_connection'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='822' u='c' c='process_client_packet'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='844' u='c' c='process_client_packet'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1331' u='c' c='http_query_job_run'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1717' u='c' c='forward_tcp_query'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1890' u='c' c='check_all_conn_buffers'/>
+<use f='MTProxy/net/net-connections.c' l='522' u='c' c='cpu_server_close_connection'/>
+<def f='MTProxy/net/net-connections.c' l='1432' ll='1440' type='connection_job_t connection_get_by_fd_generation(int fd, int generation)'/>

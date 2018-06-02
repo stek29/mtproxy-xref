@@ -1,0 +1,7 @@
+<def f='MTProxy/net/net-timers.h' l='26' ll='32'/>
+<size>32</size>
+<mbr r='event_timer::h_idx' o='0' t='int'/>
+<mbr r='event_timer::flags' o='32' t='int'/>
+<mbr r='event_timer::wakeup' o='64' t='int (*)(event_timer_t *)'/>
+<mbr r='event_timer::wakeup_time' o='128' t='double'/>
+<mbr r='event_timer::real_wakeup_time' o='192' t='double'/>

@@ -1,0 +1,9 @@
+<dec f='MTProxy/engine/engine.h' l='33'/>
+<doc f='MTProxy/engine/engine.h' l='31'>// GLIBC DEFINES RTMAX as function
+// engine_init () asserts, that OUT_SIGRTMAX == SIGRTMAX</doc>
+<use f='MTProxy/engine/engine.c' l='528' u='c'/>
+<use f='MTProxy/engine/engine.c' l='528' u='c'/>
+<use f='MTProxy/engine/engine.c' l='528' u='c'/>
+<use f='MTProxy/engine/engine.c' l='528' u='c'/>
+<use f='MTProxy/engine/engine.c' l='528' u='c'/>
+<use f='MTProxy/engine/engine.c' l='576' u='c'/>

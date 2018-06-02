@@ -1,0 +1,6 @@
+<dec f='MTProxy/jobs/jobs.h' l='336' type='struct job_list_node *'/>
+<offset>0</offset>
+<use f='MTProxy/jobs/jobs.c' l='1174' u='r' c='process_job_list'/>
+<use f='MTProxy/jobs/jobs.c' l='1175' u='w' c='process_job_list'/>
+<use f='MTProxy/jobs/jobs.c' l='1199' u='w' c='insert_node_into_job_list'/>
+<use f='MTProxy/jobs/jobs.c' l='1204' u='w' c='insert_node_into_job_list'/>

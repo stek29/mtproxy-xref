@@ -1,0 +1,5 @@
+<dec f='MTProxy/engine/engine.h' l='148' type='void set_signals_handlers()'/>
+<def f='MTProxy/engine/engine.c' l='113' ll='118' type='void set_signals_handlers()'/>
+<use f='MTProxy/engine/engine.c' l='588' u='c' c='default_main'/>
+<doc f='MTProxy/engine/engine.c' l='111'>/* }}} */</doc>
+<doc f='MTProxy/engine/engine.c' l='113'>/* {{{ */</doc>

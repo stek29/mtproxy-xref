@@ -1,0 +1,19 @@
+<def f='MTProxy/jobs/jobs.h' l='167' ll='186'/>
+<size>64</size>
+<doc f='MTProxy/jobs/jobs.h' l='165'>/* all fields here, with the exception of bits 24..31 and JF_LOCKED of j_flags, j_error, j_refcnt, j_children, may be changed only
+   by somebody who already owns a lock to this job, or has the only pointer to it. */</doc>
+<doc f='MTProxy/jobs/jobs.h' l='167'>// must be partially compatible with `struct connection`</doc>
+<mbr r='async_job::j_flags' o='0' t='int'/>
+<mbr r='async_job::j_status' o='32' t='int'/>
+<mbr r='async_job::j_sigclass' o='64' t='int'/>
+<mbr r='async_job::j_refcnt' o='96' t='int'/>
+<mbr r='async_job::j_error' o='128' t='int'/>
+<mbr r='async_job::j_children' o='160' t='int'/>
+<mbr r='async_job::j_align' o='192' t='int'/>
+<mbr r='async_job::j_custom_bytes' o='224' t='int'/>
+<mbr r='async_job::j_type' o='256' t='unsigned int'/>
+<mbr r='async_job::j_subclass' o='288' t='int'/>
+<mbr r='async_job::j_thread' o='320' t='struct job_thread *'/>
+<mbr r='async_job::j_execute' o='384' t='job_function_t'/>
+<mbr r='async_job::j_parent' o='448' t='job_t'/>
+<mbr r='async_job::j_custom' o='512' t='long long [0]'/>

@@ -1,0 +1,9 @@
+<dec f='include/x86_64-linux-gnu/sys/socket.h' l='219' type='int getsockopt(int __fd, int __level, int __optname, void *restrict __optval, socklen_t *restrict __optlen)'/>
+<doc f='include/x86_64-linux-gnu/sys/socket.h' l='216'>/* Put the current value for socket FD&apos;s option OPTNAME at protocol level LEVEL
+   into OPTVAL (which is *OPTLEN bytes long), and set *OPTLEN to the value&apos;s
+   actual length.  Returns 0 on success, -1 for errors.  */</doc>
+<use f='MTProxy/net/net-connections.c' l='736' u='c' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='737' u='c' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1118' u='c' c='net_server_socket_read_write_gateway'/>
+<use f='MTProxy/net/net-events.c' l='493' u='c' c='maximize_sndbuf'/>
+<use f='MTProxy/net/net-events.c' l='531' u='c' c='maximize_rcvbuf'/>

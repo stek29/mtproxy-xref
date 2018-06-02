@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/crc32.h' l='42' type='crc64_combine_func_t'/>
+<def f='MTProxy/common/crc32.c' l='611' type='crc64_combine_func_t'/>
+<use f='MTProxy/common/crc32.c' l='1043' u='w' c='crc32_init'/>
+<use f='MTProxy/common/crc32.c' l='1048' u='w' c='crc32_init'/>

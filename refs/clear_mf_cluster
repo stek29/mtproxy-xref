@@ -1,0 +1,2 @@
+<def f='MTProxy/mtproto/mtproto-config.c' l='121' ll='125' type='void clear_mf_cluster(struct mf_group_stats * GS, struct mf_cluster * MFC, int do_destroy_targets)'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='137' u='c' c='clear_config'/>

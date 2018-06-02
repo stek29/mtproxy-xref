@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/server-functions.c' l='165' type='const char * get_version_string()'/>
+<def f='MTProxy/common/server-functions.c' l='166' ll='168' type='const char * get_version_string()'/>
+<use f='MTProxy/common/server-functions.c' l='176' u='c' c='print_backtrace'/>
+<def f='MTProxy/engine/engine.c' l='162' ll='168' type='const char * get_version_string()'/>

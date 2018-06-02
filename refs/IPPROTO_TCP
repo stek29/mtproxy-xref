@@ -1,0 +1,16 @@
+<dec f='include/netinet/in.h' l='50' type='6'/>
+<doc f='include/netinet/in.h' l='50'>/* Transmission Control Protocol.  */</doc>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2066' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='325' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='608' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='731' macro='1' u='r'/>
+<use f='MTProxy/net/net-connections.c' l='736' macro='1' u='r'/>
+<use f='MTProxy/net/net-events.c' l='581' macro='1' u='r'/>
+<use f='MTProxy/net/net-events.c' l='584' macro='1' u='r'/>
+<use f='MTProxy/net/net-events.c' l='585' macro='1' u='r'/>
+<use f='MTProxy/net/net-events.c' l='587' macro='1' u='r'/>
+<use f='MTProxy/net/net-events.c' l='653' macro='1' u='r'/>
+<use f='MTProxy/net/net-events.c' l='656' macro='1' u='r'/>
+<use f='MTProxy/net/net-events.c' l='657' macro='1' u='r'/>
+<use f='MTProxy/net/net-events.c' l='659' macro='1' u='r'/>
+<use f='MTProxy/net/net-events.c' l='718' macro='1' u='r'/>

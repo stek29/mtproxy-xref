@@ -1,0 +1,2 @@
+<use f='MTProxy/common/mp-queue.c' l='364' u='c' c='mpq_block_push'/>
+<use f='MTProxy/engine/engine-signals.c' l='45' u='c' c='signal_set_pending'/>

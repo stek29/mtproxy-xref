@@ -1,0 +1,13 @@
+<dec f='MTProxy/jobs/jobs.h' l='358' type='void job_timer_remove(job_t job)'/>
+<use f='MTProxy/engine/engine-rpc.c' l='523' u='c' c='process_query_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='578' u='c' c='process_query_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='651' u='c' c='process_query_custom_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='656' u='c' c='process_query_custom_subjob'/>
+<use f='MTProxy/jobs/jobs.c' l='1160' u='c' c='process_job_list'/>
+<use f='MTProxy/jobs/jobs.c' l='1331' u='c' c='do_timer_job'/>
+<use f='MTProxy/jobs/jobs.c' l='1361' u='c' c='job_timer_check'/>
+<def f='MTProxy/jobs/jobs.c' l='1409' ll='1412' type='void job_timer_remove(job_t job)'/>
+<use f='MTProxy/net/net-connections.c' l='363' u='c' c='set_connection_timeout'/>
+<use f='MTProxy/net/net-connections.c' l='529' u='c' c='cpu_server_close_connection'/>
+<use f='MTProxy/net/net-connections.c' l='799' u='c' c='fail_socket_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1873' u='c' c='clean_unused_target'/>

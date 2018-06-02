@@ -1,0 +1,24 @@
+<dec f='include/stdio.h' l='362' type='int printf(const char *restrict __format)'/>
+<doc f='include/stdio.h' l='358'>/* Write formatted output to stdout.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */</doc>
+<use f='MTProxy/common/server-functions.c' l='243' u='c' c='usage'/>
+<use f='MTProxy/common/server-functions.c' l='528' u='c' c='parse_usage'/>
+<use f='MTProxy/common/server-functions.c' l='532' u='c' c='parse_usage'/>
+<use f='MTProxy/common/server-functions.c' l='536' u='c' c='parse_usage'/>
+<use f='MTProxy/common/server-functions.c' l='541' u='c' c='parse_usage'/>
+<use f='MTProxy/common/server-functions.c' l='544' u='c' c='parse_usage'/>
+<use f='MTProxy/common/server-functions.c' l='549' u='c' c='parse_usage'/>
+<use f='MTProxy/common/server-functions.c' l='552' u='c' c='parse_usage'/>
+<use f='MTProxy/common/server-functions.c' l='556' u='c' c='parse_usage'/>
+<use f='MTProxy/common/server-functions.c' l='559' u='c' c='parse_usage'/>
+<use f='MTProxy/common/server-functions.c' l='563' u='c' c='parse_usage'/>
+<use f='MTProxy/common/server-functions.c' l='565' u='c' c='parse_usage'/>
+<use f='MTProxy/common/server-functions.c' l='568' u='c' c='parse_usage'/>
+<use f='MTProxy/common/server-functions.c' l='570' u='c' c='parse_usage'/>
+<use f='MTProxy/common/server-functions.c' l='574' u='c' c='parse_usage'/>
+<use f='MTProxy/common/server-functions.c' l='577' u='c' c='parse_usage'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2092' u='c' c='usage'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2093' u='c' c='usage'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2094' u='c' c='usage'/>

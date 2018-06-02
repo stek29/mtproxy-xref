@@ -1,0 +1,13 @@
+<dec f='MTProxy/net/net-msg-buffers.h' l='30'/>
+<use f='MTProxy/net/net-msg.c' l='483' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='518' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='571' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='614' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='1244' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='1244' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='1274' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='1274' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='1306' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='1306' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='1354' u='c'/>
+<use f='MTProxy/net/net-msg.c' l='1354' u='c'/>

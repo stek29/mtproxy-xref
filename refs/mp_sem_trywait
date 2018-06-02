@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/mp-queue.h' l='141' type='int mp_sem_trywait(mp_sem_t * sem)'/>
+<def f='MTProxy/common/mp-queue.c' l='153' ll='163' type='int mp_sem_trywait(mp_sem_t * sem)'/>
+<use f='MTProxy/common/mp-queue.c' l='607' u='c' c='mpq_pop_w'/>
+<use f='MTProxy/common/mp-queue.c' l='641' u='c' c='mpq_pop_nw'/>

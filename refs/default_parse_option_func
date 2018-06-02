@@ -1,0 +1,5 @@
+<dec f='MTProxy/common/server-functions.c' l='302' type='int default_parse_option_func(int a)'/>
+<def f='MTProxy/common/server-functions.c' l='303' type='int default_parse_option_func(int a)'/>
+<use f='MTProxy/common/server-functions.c' l='348' u='r' c='parse_option_internal'/>
+<def f='MTProxy/engine/engine.c' l='709' ll='720' type='int default_parse_option_func(int a)'/>
+<doc f='MTProxy/engine/engine.c' l='707'>/*}}}*/</doc>

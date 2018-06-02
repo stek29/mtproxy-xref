@@ -1,0 +1,10 @@
+<dec f='MTProxy/net/net-msg-buffers.h' l='119' type='long long'/>
+<def f='MTProxy/common/server-functions.c' l='65' type='long long'/>
+<use f='MTProxy/common/server-functions.c' l='619' u='w' c='builtin_parse_option'/>
+<def f='MTProxy/net/net-msg-buffers.c' l='42' type='long long'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='66' u='r' c='raw_msg_buffer_prepare_stat'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='77' u='r' c='fetch_buffers_stat'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='320' u='r' c='init_msg_buffers'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='326' u='w' c='init_msg_buffers'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='583' u='r' c='msg_buffer_reach_limit'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='587' u='r' c='msg_buffer_usage'/>

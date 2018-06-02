@@ -1,0 +1,23 @@
+<def f='MTProxy/common/tl-parse.c' l='59' macro='1'/>
+<def f='MTProxy/common/tl-parse.c' l='69' macro='1' type='struct jobs_module_stat_tl_parse *'/>
+<use f='MTProxy/common/tl-parse.c' l='69' macro='1' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='632' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='660' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='727' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='729' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='876' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='879' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='881' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='950' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='955' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='966' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='971' macro='1' u='r'/>
+<size>56</size>
+<mbr r='jobs_module_stat_tl_parse::rpc_queries_received' o='0' t='long long'/>
+<mbr r='jobs_module_stat_tl_parse::rpc_answers_error' o='64' t='long long'/>
+<mbr r='jobs_module_stat_tl_parse::rpc_answers_received' o='128' t='long long'/>
+<mbr r='jobs_module_stat_tl_parse::rpc_sent_errors' o='192' t='long long'/>
+<mbr r='jobs_module_stat_tl_parse::rpc_sent_answers' o='256' t='long long'/>
+<mbr r='jobs_module_stat_tl_parse::rpc_sent_queries' o='320' t='long long'/>
+<mbr r='jobs_module_stat_tl_parse::tl_in_allocated' o='384' t='int'/>
+<mbr r='jobs_module_stat_tl_parse::tl_out_allocated' o='416' t='int'/>

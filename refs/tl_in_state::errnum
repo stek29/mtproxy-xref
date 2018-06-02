@@ -1,0 +1,9 @@
+<dec f='MTProxy/common/tl-parse.h' l='114' type='int'/>
+<use f='MTProxy/common/tl-parse.h' l='806' u='r' c='tlf_copy_error'/>
+<use f='MTProxy/common/tl-parse.c' l='123' macro='1' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='555' macro='1' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='573' macro='1' u='w'/>
+<offset>448</offset>
+<use f='MTProxy/engine/engine-rpc.c' l='288' u='r' c='fetch_query'/>
+<use f='MTProxy/engine/engine-rpc.c' l='297' u='r' c='fetch_query'/>
+<use f='MTProxy/engine/engine-rpc.c' l='755' u='r' c='query_job_run'/>

@@ -1,0 +1,11 @@
+<def f='MTProxy/net/net-tcp-rpc-common.h' l='58' ll='68'/>
+<size>328</size>
+<mbr r='tcp_rpc_nonce_dh_packet::type' o='0' t='int'/>
+<mbr r='tcp_rpc_nonce_dh_packet::key_select' o='32' t='int'/>
+<mbr r='tcp_rpc_nonce_dh_packet::crypto_schema' o='64' t='int'/>
+<mbr r='tcp_rpc_nonce_dh_packet::crypto_ts' o='96' t='int'/>
+<mbr r='tcp_rpc_nonce_dh_packet::crypto_nonce' o='128' t='char [16]'/>
+<mbr r='tcp_rpc_nonce_dh_packet::extra_keys_count' o='256' t='int'/>
+<mbr r='tcp_rpc_nonce_dh_packet::extra_key_select' o='288' t='int [8]'/>
+<mbr r='tcp_rpc_nonce_dh_packet::dh_params_select' o='544' t='int'/>
+<mbr r='tcp_rpc_nonce_dh_packet::g_a' o='576' t='unsigned char [256]'/>

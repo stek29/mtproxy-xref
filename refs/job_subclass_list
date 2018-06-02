@@ -1,0 +1,5 @@
+<def f='MTProxy/jobs/jobs.h' l='200' ll='206'/>
+<size>48</size>
+<mbr r='job_subclass_list::subclass_cnt' o='0' t='int'/>
+<mbr r='job_subclass_list::sem' o='64' t='sem_t'/>
+<mbr r='job_subclass_list::subclasses' o='320' t='struct job_subclass *'/>

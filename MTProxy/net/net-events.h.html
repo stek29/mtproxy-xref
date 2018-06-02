@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>net-events.h source code [MTProxy/net/net-events.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="event_descr,sockaddr_in46 "/>
+<link rel="stylesheet" href="https://code.woboq.org/data//qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="https://code.woboq.org/data//kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery-ui.min.js"></script>
+<script>var file = 'MTProxy/net/net-events.h'; var root_path = '../..'; var data_path = 'https://code.woboq.org/data/';</script>
+<script src='https://code.woboq.org/data//codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='..'>MTProxy</a>/<a href='./'>net</a>/<a href='net-events.h.html'>net-events.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>    This file is part of Mtproto-proxy Library.</i></td></tr>
+<tr><th id="3">3</th><td><i></i></td></tr>
+<tr><th id="4">4</th><td><i>    Mtproto-proxy Library is free software: you can redistribute it and/or modify</i></td></tr>
+<tr><th id="5">5</th><td><i>    it under the terms of the GNU Lesser General Public License as published by</i></td></tr>
+<tr><th id="6">6</th><td><i>    the Free Software Foundation, either version 2 of the License, or</i></td></tr>
+<tr><th id="7">7</th><td><i>    (at your option) any later version.</i></td></tr>
+<tr><th id="8">8</th><td><i></i></td></tr>
+<tr><th id="9">9</th><td><i>    Mtproto-proxy Library is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="10">10</th><td><i>    but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="11">11</th><td><i>    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</i></td></tr>
+<tr><th id="12">12</th><td><i>    GNU Lesser General Public License for more details.</i></td></tr>
+<tr><th id="13">13</th><td><i></i></td></tr>
+<tr><th id="14">14</th><td><i>    You should have received a copy of the GNU Lesser General Public License</i></td></tr>
+<tr><th id="15">15</th><td><i>    along with Mtproto-proxy Library.  If not, see &lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</i></td></tr>
+<tr><th id="16">16</th><td><i></i></td></tr>
+<tr><th id="17">17</th><td><i>    Copyright 2009-2013 Vkontakte Ltd</i></td></tr>
+<tr><th id="18">18</th><td><i>              2008-2013 Nikolai Durov</i></td></tr>
+<tr><th id="19">19</th><td><i>              2008-2013 Andrey Lopatin</i></td></tr>
+<tr><th id="20">20</th><td><i>    </i></td></tr>
+<tr><th id="21">21</th><td><i>    Copyright 2014-2016 Telegram Messenger Inc             </i></td></tr>
+<tr><th id="22">22</th><td><i>                   2016 Vitaly Valtman</i></td></tr>
+<tr><th id="23">23</th><td><i>*/</i></td></tr>
+<tr><th id="24">24</th><td></td></tr>
+<tr><th id="25">25</th><td><u>#pragma once</u></td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td><u>#include <a href="../../include/netinet/in.h.html">&lt;netinet/in.h&gt;</a></u></td></tr>
+<tr><th id="28">28</th><td></td></tr>
+<tr><th id="29">29</th><td><u>#<span data-ppcond="29">ifndef</span> <span class="macro" data-ref="_M/EPOLLRDHUP">EPOLLRDHUP</span></u></td></tr>
+<tr><th id="30">30</th><td><u>#define <dfn class="macro" id="_M/EPOLLRDHUP" data-ref="_M/EPOLLRDHUP">EPOLLRDHUP</dfn> 0x2000</u></td></tr>
+<tr><th id="31">31</th><td><u>#<span data-ppcond="29">endif</span></u></td></tr>
+<tr><th id="32">32</th><td></td></tr>
+<tr><th id="33">33</th><td><u>#define	<dfn class="macro" id="_M/MAX_EVENTS" data-ref="_M/MAX_EVENTS">MAX_EVENTS</dfn>		(1 &lt;&lt; 19)</u></td></tr>
+<tr><th id="34">34</th><td></td></tr>
+<tr><th id="35">35</th><td><u>#define	<dfn class="macro" id="_M/EVT_READ" data-ref="_M/EVT_READ">EVT_READ</dfn>	4</u></td></tr>
+<tr><th id="36">36</th><td><u>#define <dfn class="macro" id="_M/EVT_WRITE" data-ref="_M/EVT_WRITE">EVT_WRITE</dfn>	2</u></td></tr>
+<tr><th id="37">37</th><td><u>#define <dfn class="macro" id="_M/EVT_SPEC" data-ref="_M/EVT_SPEC">EVT_SPEC</dfn>	1</u></td></tr>
+<tr><th id="38">38</th><td><u>#define	<dfn class="macro" id="_M/EVT_RW" data-ref="_M/EVT_RW">EVT_RW</dfn>		(EVT_READ | EVT_WRITE)</u></td></tr>
+<tr><th id="39">39</th><td><u>#define	<dfn class="macro" id="_M/EVT_RWX" data-ref="_M/EVT_RWX">EVT_RWX</dfn>		(EVT_READ | EVT_WRITE | EVT_SPEC)</u></td></tr>
+<tr><th id="40">40</th><td><u>#define <dfn class="macro" id="_M/EVT_LEVEL" data-ref="_M/EVT_LEVEL">EVT_LEVEL</dfn>	8</u></td></tr>
+<tr><th id="41">41</th><td><u>#define	<dfn class="macro" id="_M/EVT_OPEN" data-ref="_M/EVT_OPEN">EVT_OPEN</dfn>	0x80</u></td></tr>
+<tr><th id="42">42</th><td><u>#define <dfn class="macro" id="_M/EVT_CLOSED" data-ref="_M/EVT_CLOSED">EVT_CLOSED</dfn>	0x40</u></td></tr>
+<tr><th id="43">43</th><td><u>#define <dfn class="macro" id="_M/EVT_IN_EPOLL" data-ref="_M/EVT_IN_EPOLL">EVT_IN_EPOLL</dfn>	0x20</u></td></tr>
+<tr><th id="44">44</th><td><u>#define	<dfn class="macro" id="_M/EVT_NEW" data-ref="_M/EVT_NEW">EVT_NEW</dfn>		0x100</u></td></tr>
+<tr><th id="45">45</th><td><u>#define <dfn class="macro" id="_M/EVT_NOHUP" data-ref="_M/EVT_NOHUP">EVT_NOHUP</dfn>	0x200</u></td></tr>
+<tr><th id="46">46</th><td><u>#define <dfn class="macro" id="_M/EVT_FROM_EPOLL" data-ref="_M/EVT_FROM_EPOLL">EVT_FROM_EPOLL</dfn>	0x400</u></td></tr>
+<tr><th id="47">47</th><td></td></tr>
+<tr><th id="48">48</th><td><u>#define <dfn class="macro" id="_M/EVA_CONTINUE" data-ref="_M/EVA_CONTINUE">EVA_CONTINUE</dfn>	0</u></td></tr>
+<tr><th id="49">49</th><td><u>#define <dfn class="macro" id="_M/EVA_RERUN" data-ref="_M/EVA_RERUN">EVA_RERUN</dfn>	-2</u></td></tr>
+<tr><th id="50">50</th><td><u>#define <dfn class="macro" id="_M/EVA_REMOVE" data-ref="_M/EVA_REMOVE">EVA_REMOVE</dfn>	-3</u></td></tr>
+<tr><th id="51">51</th><td><u>#define <dfn class="macro" id="_M/EVA_DESTROY" data-ref="_M/EVA_DESTROY">EVA_DESTROY</dfn>	-5</u></td></tr>
+<tr><th id="52">52</th><td><u>#define <dfn class="macro" id="_M/EVA_ERROR" data-ref="_M/EVA_ERROR">EVA_ERROR</dfn>	-8</u></td></tr>
+<tr><th id="53">53</th><td><u>#define <dfn class="macro" id="_M/EVA_FATAL" data-ref="_M/EVA_FATAL">EVA_FATAL</dfn>	-666</u></td></tr>
+<tr><th id="54">54</th><td></td></tr>
+<tr><th id="55">55</th><td><u>#define <dfn class="macro" id="_M/MAX_UDP_SENDBUF_SIZE" data-ref="_M/MAX_UDP_SENDBUF_SIZE">MAX_UDP_SENDBUF_SIZE</dfn>	(1L &lt;&lt; 24)</u></td></tr>
+<tr><th id="56">56</th><td><u>#define <dfn class="macro" id="_M/MAX_UDP_RCVBUF_SIZE" data-ref="_M/MAX_UDP_RCVBUF_SIZE">MAX_UDP_RCVBUF_SIZE</dfn>	(1L &lt;&lt; 24)</u></td></tr>
+<tr><th id="57">57</th><td></td></tr>
+<tr><th id="58">58</th><td></td></tr>
+<tr><th id="59">59</th><td><b>typedef</b> <b>struct</b> <a class="type" href="#event_descr" title='event_descr' data-ref="event_descr">event_descr</a> <dfn class="typedef" id="event_t" title='event_t' data-type='struct event_descr' data-ref="event_t">event_t</dfn>;</td></tr>
+<tr><th id="60">60</th><td><b>typedef</b> <em>int</em> (*<dfn class="typedef" id="event_handler_t" title='event_handler_t' data-type='int (*)(int, void *, event_t *)' data-ref="event_handler_t">event_handler_t</dfn>)(<em>int</em> <dfn class="local col4 decl" id="1434fd" title='fd' data-type='int' data-ref="1434fd">fd</dfn>, <em>void</em> *<dfn class="local col5 decl" id="1435data" title='data' data-type='void *' data-ref="1435data">data</dfn>, <a class="typedef" href="#event_t" title='event_t' data-type='struct event_descr' data-ref="event_t">event_t</a> *<dfn class="local col6 decl" id="1436ev" title='ev' data-type='event_t *' data-ref="1436ev">ev</dfn>);</td></tr>
+<tr><th id="61">61</th><td></td></tr>
+<tr><th id="62">62</th><td><b>struct</b> <dfn class="type def" id="event_descr" title='event_descr' data-ref="event_descr">event_descr</dfn> {</td></tr>
+<tr><th id="63">63</th><td>  <em>int</em> <dfn class="decl" id="event_descr::fd" title='event_descr::fd' data-ref="event_descr::fd">fd</dfn>;</td></tr>
+<tr><th id="64">64</th><td>  <em>int</em> <dfn class="decl" id="event_descr::state" title='event_descr::state' data-ref="event_descr::state">state</dfn>;		<i>// actions that we should wait for (read/write/special) + status</i></td></tr>
+<tr><th id="65">65</th><td>  <em>int</em> <dfn class="decl" id="event_descr::ready" title='event_descr::ready' data-ref="event_descr::ready">ready</dfn>;		<i>// actions we are ready to do</i></td></tr>
+<tr><th id="66">66</th><td>  <em>int</em> <dfn class="decl" id="event_descr::epoll_state" title='event_descr::epoll_state' data-ref="event_descr::epoll_state">epoll_state</dfn>;	<i>// current state in epoll()</i></td></tr>
+<tr><th id="67">67</th><td>  <em>int</em> <dfn class="decl" id="event_descr::epoll_ready" title='event_descr::epoll_ready' data-ref="event_descr::epoll_ready">epoll_ready</dfn>;	<i>// result of epoll()</i></td></tr>
+<tr><th id="68">68</th><td>  <em>int</em> <dfn class="decl" id="event_descr::timeout" title='event_descr::timeout' data-ref="event_descr::timeout">timeout</dfn>;		<i>// timeout in ms (UNUSED)</i></td></tr>
+<tr><th id="69">69</th><td>  <em>int</em> <dfn class="decl" id="event_descr::priority" title='event_descr::priority' data-ref="event_descr::priority">priority</dfn>;		<i>// priority (0-9)</i></td></tr>
+<tr><th id="70">70</th><td>  <em>int</em> <dfn class="decl" id="event_descr::in_queue" title='event_descr::in_queue' data-ref="event_descr::in_queue">in_queue</dfn>;		<i>// position in heap (0=not in queue)</i></td></tr>
+<tr><th id="71">71</th><td>  <em>long</em> <em>long</em> <dfn class="decl" id="event_descr::timestamp" title='event_descr::timestamp' data-ref="event_descr::timestamp">timestamp</dfn>;</td></tr>
+<tr><th id="72">72</th><td>  <em>long</em> <em>long</em> <dfn class="decl" id="event_descr::refcnt" title='event_descr::refcnt' data-ref="event_descr::refcnt">refcnt</dfn>;</td></tr>
+<tr><th id="73">73</th><td>  <a class="typedef" href="#event_handler_t" title='event_handler_t' data-type='int (*)(int, void *, event_t *)' data-ref="event_handler_t">event_handler_t</a> <dfn class="decl" id="event_descr::work" title='event_descr::work' data-ref="event_descr::work">work</dfn>;</td></tr>
+<tr><th id="74">74</th><td>  <em>void</em> *<dfn class="decl" id="event_descr::data" title='event_descr::data' data-ref="event_descr::data">data</dfn>;</td></tr>
+<tr><th id="75">75</th><td>  <i>//  struct sockaddr_in peer;</i></td></tr>
+<tr><th id="76">76</th><td>};</td></tr>
+<tr><th id="77">77</th><td></td></tr>
+<tr><th id="78">78</th><td><b>extern</b> <em>double</em> <dfn class="decl" id="last_epoll_wait_at" title='last_epoll_wait_at' data-ref="last_epoll_wait_at">last_epoll_wait_at</dfn>;</td></tr>
+<tr><th id="79">79</th><td><b>extern</b> <em>int</em> <dfn class="decl" id="ev_heap_size" title='ev_heap_size' data-ref="ev_heap_size">ev_heap_size</dfn>;</td></tr>
+<tr><th id="80">80</th><td><b>extern</b> <a class="typedef" href="#event_t" title='event_t' data-type='struct event_descr' data-ref="event_t">event_t</a> <dfn class="decl" id="Events" title='Events' data-ref="Events">Events</dfn>[<a class="macro" href="#33" title="(1 &lt;&lt; 19)" data-ref="_M/MAX_EVENTS">MAX_EVENTS</a>];</td></tr>
+<tr><th id="81">81</th><td></td></tr>
+<tr><th id="82">82</th><td><b>extern</b> <em>double</em> <dfn class="decl" id="tot_idle_time" title='tot_idle_time' data-ref="tot_idle_time">tot_idle_time</dfn>, <dfn class="decl" id="a_idle_time" title='a_idle_time' data-ref="a_idle_time">a_idle_time</dfn>, <dfn class="decl" id="a_idle_quotient" title='a_idle_quotient' data-ref="a_idle_quotient">a_idle_quotient</dfn>;</td></tr>
+<tr><th id="83">83</th><td></td></tr>
+<tr><th id="84">84</th><td><em>int</em> <dfn class="decl" id="init_epoll" title='init_epoll' data-ref="init_epoll">init_epoll</dfn> (<em>void</em>);</td></tr>
+<tr><th id="85">85</th><td></td></tr>
+<tr><th id="86">86</th><td><em>int</em> <dfn class="decl" id="remove_event_from_heap" title='remove_event_from_heap' data-ref="remove_event_from_heap">remove_event_from_heap</dfn> (<a class="typedef" href="#event_t" title='event_t' data-type='struct event_descr' data-ref="event_t">event_t</a> *<dfn class="local col7 decl" id="1437ev" title='ev' data-type='event_t *' data-ref="1437ev">ev</dfn>, <em>int</em> <dfn class="local col8 decl" id="1438allow_hole" title='allow_hole' data-type='int' data-ref="1438allow_hole">allow_hole</dfn>);</td></tr>
+<tr><th id="87">87</th><td><em>int</em> <dfn class="decl" id="put_event_into_heap" title='put_event_into_heap' data-ref="put_event_into_heap">put_event_into_heap</dfn> (<a class="typedef" href="#event_t" title='event_t' data-type='struct event_descr' data-ref="event_t">event_t</a> *<dfn class="local col9 decl" id="1439ev" title='ev' data-type='event_t *' data-ref="1439ev">ev</dfn>);</td></tr>
+<tr><th id="88">88</th><td><em>int</em> <dfn class="decl" id="put_event_into_heap_tail" title='put_event_into_heap_tail' data-ref="put_event_into_heap_tail">put_event_into_heap_tail</dfn> (<a class="typedef" href="#event_t" title='event_t' data-type='struct event_descr' data-ref="event_t">event_t</a> *<dfn class="local col0 decl" id="1440ev" title='ev' data-type='event_t *' data-ref="1440ev">ev</dfn>, <em>int</em> <dfn class="local col1 decl" id="1441ts_delta" title='ts_delta' data-type='int' data-ref="1441ts_delta">ts_delta</dfn>);</td></tr>
+<tr><th id="89">89</th><td></td></tr>
+<tr><th id="90">90</th><td><em>int</em> <dfn class="decl" id="epoll_sethandler" title='epoll_sethandler' data-ref="epoll_sethandler">epoll_sethandler</dfn> (<em>int</em> <dfn class="local col2 decl" id="1442fd" title='fd' data-type='int' data-ref="1442fd">fd</dfn>, <em>int</em> <dfn class="local col3 decl" id="1443prio" title='prio' data-type='int' data-ref="1443prio">prio</dfn>, <a class="typedef" href="#event_handler_t" title='event_handler_t' data-type='int (*)(int, void *, event_t *)' data-ref="event_handler_t">event_handler_t</a> <dfn class="local col4 decl" id="1444handler" title='handler' data-type='event_handler_t' data-ref="1444handler">handler</dfn>, <em>void</em> *<dfn class="local col5 decl" id="1445data" title='data' data-type='void *' data-ref="1445data">data</dfn>);</td></tr>
+<tr><th id="91">91</th><td><em>int</em> <dfn class="decl" id="epoll_fetch_events" title='epoll_fetch_events' data-ref="epoll_fetch_events">epoll_fetch_events</dfn> (<em>int</em> <dfn class="local col6 decl" id="1446timeout" title='timeout' data-type='int' data-ref="1446timeout">timeout</dfn>);</td></tr>
+<tr><th id="92">92</th><td><em>int</em> <dfn class="decl" id="epoll_work" title='epoll_work' data-ref="epoll_work">epoll_work</dfn> (<em>int</em> <dfn class="local col7 decl" id="1447timeout" title='timeout' data-type='int' data-ref="1447timeout">timeout</dfn>);</td></tr>
+<tr><th id="93">93</th><td><em>int</em> <dfn class="decl" id="epoll_insert" title='epoll_insert' data-ref="epoll_insert">epoll_insert</dfn> (<em>int</em> <dfn class="local col8 decl" id="1448fd" title='fd' data-type='int' data-ref="1448fd">fd</dfn>, <em>int</em> <dfn class="local col9 decl" id="1449flags" title='flags' data-type='int' data-ref="1449flags">flags</dfn>);</td></tr>
+<tr><th id="94">94</th><td><em>int</em> <dfn class="decl" id="epoll_remove" title='epoll_remove' data-ref="epoll_remove">epoll_remove</dfn> (<em>int</em> <dfn class="local col0 decl" id="1450fd" title='fd' data-type='int' data-ref="1450fd">fd</dfn>);</td></tr>
+<tr><th id="95">95</th><td><em>int</em> <dfn class="decl" id="epoll_close" title='epoll_close' data-ref="epoll_close">epoll_close</dfn> (<em>int</em> <dfn class="local col1 decl" id="1451fd" title='fd' data-type='int' data-ref="1451fd">fd</dfn>);</td></tr>
+<tr><th id="96">96</th><td></td></tr>
+<tr><th id="97">97</th><td><b>extern</b> <em>int</em> <dfn class="decl" id="epoll_fd" title='epoll_fd' data-ref="epoll_fd">epoll_fd</dfn>;</td></tr>
+<tr><th id="98">98</th><td></td></tr>
+<tr><th id="99">99</th><td><i>//extern volatile unsigned long long pending_signals;</i></td></tr>
+<tr><th id="100">100</th><td><b>extern</b> <em>volatile</em> <em>int</em> <dfn class="decl" id="main_thread_interrupt_status" title='main_thread_interrupt_status' data-ref="main_thread_interrupt_status">main_thread_interrupt_status</dfn>;</td></tr>
+<tr><th id="101">101</th><td></td></tr>
+<tr><th id="102">102</th><td><i>//int insert_event_timer (event_timer_t *et);</i></td></tr>
+<tr><th id="103">103</th><td><i>//int remove_event_timer (event_timer_t *et);</i></td></tr>
+<tr><th id="104">104</th><td><i>//static inline int event_timer_active (event_timer_t *et) { return et-&gt;h_idx; }</i></td></tr>
+<tr><th id="105">105</th><td><i>//static inline void event_timer_init (event_timer_t *et) { et-&gt;h_idx = 0;}</i></td></tr>
+<tr><th id="106">106</th><td></td></tr>
+<tr><th id="107">107</th><td><u>#define	<dfn class="macro" id="_M/PRIVILEGED_TCP_PORTS" data-ref="_M/PRIVILEGED_TCP_PORTS">PRIVILEGED_TCP_PORTS</dfn>	1024</u></td></tr>
+<tr><th id="108">108</th><td></td></tr>
+<tr><th id="109">109</th><td><b>extern</b> <em>int</em> <dfn class="decl" id="tcp_maximize_buffers" title='tcp_maximize_buffers' data-ref="tcp_maximize_buffers">tcp_maximize_buffers</dfn>;</td></tr>
+<tr><th id="110">110</th><td><b>extern</b> <b>struct</b> <a class="type" href="../../include/netinet/in.h.html#in_addr" title='in_addr' data-ref="in_addr">in_addr</a> <dfn class="decl" id="settings_addr" title='settings_addr' data-ref="settings_addr">settings_addr</dfn>;</td></tr>
+<tr><th id="111">111</th><td></td></tr>
+<tr><th id="112">112</th><td><u>#define <dfn class="macro" id="_M/SM_UDP" data-ref="_M/SM_UDP">SM_UDP</dfn>	1</u></td></tr>
+<tr><th id="113">113</th><td><u>#define <dfn class="macro" id="_M/SM_IPV6" data-ref="_M/SM_IPV6">SM_IPV6</dfn>	2</u></td></tr>
+<tr><th id="114">114</th><td><u>#define	<dfn class="macro" id="_M/SM_IPV6_ONLY" data-ref="_M/SM_IPV6_ONLY">SM_IPV6_ONLY</dfn>	4</u></td></tr>
+<tr><th id="115">115</th><td><u>#define	<dfn class="macro" id="_M/SM_LOWPRIO" data-ref="_M/SM_LOWPRIO">SM_LOWPRIO</dfn>	8</u></td></tr>
+<tr><th id="116">116</th><td><u>#define <dfn class="macro" id="_M/SM_REUSE" data-ref="_M/SM_REUSE">SM_REUSE</dfn> 16</u></td></tr>
+<tr><th id="117">117</th><td><u>#define	<dfn class="macro" id="_M/SM_SPECIAL" data-ref="_M/SM_SPECIAL">SM_SPECIAL</dfn>	0x10000</u></td></tr>
+<tr><th id="118">118</th><td><u>#define	<dfn class="macro" id="_M/SM_NOQACK" data-ref="_M/SM_NOQACK">SM_NOQACK</dfn>	0x20000</u></td></tr>
+<tr><th id="119">119</th><td><u>#define	<dfn class="macro" id="_M/SM_RAWMSG" data-ref="_M/SM_RAWMSG">SM_RAWMSG</dfn>	0x40000</u></td></tr>
+<tr><th id="120">120</th><td></td></tr>
+<tr><th id="121">121</th><td><em>int</em> <dfn class="decl" id="server_socket" title='server_socket' data-ref="server_socket">server_socket</dfn> (<em>int</em> <dfn class="local col2 decl" id="1452port" title='port' data-type='int' data-ref="1452port">port</dfn>, <b>struct</b> <a class="type" href="../../include/netinet/in.h.html#in_addr" title='in_addr' data-ref="in_addr">in_addr</a> <dfn class="local col3 decl" id="1453in_addr" title='in_addr' data-type='struct in_addr' data-ref="1453in_addr">in_addr</dfn>, <em>int</em> <dfn class="local col4 decl" id="1454backlog" title='backlog' data-type='int' data-ref="1454backlog">backlog</dfn>, <em>int</em> <dfn class="local col5 decl" id="1455mode" title='mode' data-type='int' data-ref="1455mode">mode</dfn>);</td></tr>
+<tr><th id="122">122</th><td><em>int</em> <dfn class="decl" id="client_socket" title='client_socket' data-ref="client_socket">client_socket</dfn> (<a class="typedef" href="../../include/netinet/in.h.html#in_addr_t" title='in_addr_t' data-type='uint32_t' data-ref="in_addr_t">in_addr_t</a> <dfn class="local col6 decl" id="1456in_addr" title='in_addr' data-type='in_addr_t' data-ref="1456in_addr">in_addr</dfn>, <em>int</em> <dfn class="local col7 decl" id="1457port" title='port' data-type='int' data-ref="1457port">port</dfn>, <em>int</em> <dfn class="local col8 decl" id="1458mode" title='mode' data-type='int' data-ref="1458mode">mode</dfn>);</td></tr>
+<tr><th id="123">123</th><td><em>int</em> <dfn class="decl" id="client_socket_ipv6" title='client_socket_ipv6' data-ref="client_socket_ipv6">client_socket_ipv6</dfn> (<em>const</em> <em>unsigned</em> <em>char</em> <dfn class="local col9 decl" id="1459in6_addr_ptr" title='in6_addr_ptr' data-type='const unsigned char *' data-ref="1459in6_addr_ptr">in6_addr_ptr</dfn>[<var>16</var>], <em>int</em> <dfn class="local col0 decl" id="1460port" title='port' data-type='int' data-ref="1460port">port</dfn>, <em>int</em> <dfn class="local col1 decl" id="1461mode" title='mode' data-type='int' data-ref="1461mode">mode</dfn>);</td></tr>
+<tr><th id="124">124</th><td></td></tr>
+<tr><th id="125">125</th><td><em>void</em> <dfn class="decl" id="maximize_sndbuf" title='maximize_sndbuf' data-ref="maximize_sndbuf">maximize_sndbuf</dfn> (<em>int</em> <dfn class="local col2 decl" id="1462sfd" title='sfd' data-type='int' data-ref="1462sfd">sfd</dfn>, <em>int</em> <dfn class="local col3 decl" id="1463max" title='max' data-type='int' data-ref="1463max">max</dfn>);</td></tr>
+<tr><th id="126">126</th><td><em>void</em> <dfn class="decl" id="maximize_rcvbuf" title='maximize_rcvbuf' data-ref="maximize_rcvbuf">maximize_rcvbuf</dfn> (<em>int</em> <dfn class="local col4 decl" id="1464sfd" title='sfd' data-type='int' data-ref="1464sfd">sfd</dfn>, <em>int</em> <dfn class="local col5 decl" id="1465max" title='max' data-type='int' data-ref="1465max">max</dfn>);</td></tr>
+<tr><th id="127">127</th><td></td></tr>
+<tr><th id="128">128</th><td><em>unsigned</em> <dfn class="decl" id="get_my_ipv4" title='get_my_ipv4' data-ref="get_my_ipv4">get_my_ipv4</dfn> (<em>void</em>);</td></tr>
+<tr><th id="129">129</th><td><em>int</em> <dfn class="decl" id="get_my_ipv6" title='get_my_ipv6' data-ref="get_my_ipv6">get_my_ipv6</dfn> (<em>unsigned</em> <em>char</em> <dfn class="local col6 decl" id="1466ipv6" title='ipv6' data-type='unsigned char *' data-ref="1466ipv6">ipv6</dfn>[<var>16</var>]);</td></tr>
+<tr><th id="130">130</th><td></td></tr>
+<tr><th id="131">131</th><td><b>union</b> <dfn class="type def" id="sockaddr_in46" title='sockaddr_in46' data-ref="sockaddr_in46">sockaddr_in46</dfn> {</td></tr>
+<tr><th id="132">132</th><td>  <b>struct</b> <a class="type" href="../../include/netinet/in.h.html#sockaddr_in" title='sockaddr_in' data-ref="sockaddr_in">sockaddr_in</a> <dfn class="decl" id="sockaddr_in46::a4" title='sockaddr_in46::a4' data-ref="sockaddr_in46::a4">a4</dfn>;</td></tr>
+<tr><th id="133">133</th><td>  <b>struct</b> <a class="type" href="../../include/netinet/in.h.html#sockaddr_in6" title='sockaddr_in6' data-ref="sockaddr_in6">sockaddr_in6</a> <dfn class="decl" id="sockaddr_in46::a6" title='sockaddr_in46::a6' data-ref="sockaddr_in46::a6">a6</dfn>;</td></tr>
+<tr><th id="134">134</th><td>};</td></tr>
+<tr><th id="135">135</th><td></td></tr>
+<tr><th id="136">136</th><td><em>static</em> <b>inline</b> <em>int</em> <dfn class="decl def" id="is_4in6" title='is_4in6' data-ref="is_4in6">is_4in6</dfn> (<em>const</em> <em>unsigned</em> <em>char</em> <dfn class="local col7 decl" id="1467ipv6" title='ipv6' data-type='const unsigned char *' data-ref="1467ipv6">ipv6</dfn>[<var>16</var>]) { <b>return</b> !*((<em>long</em> <em>long</em> *) <a class="local col7 ref" href="#1467ipv6" title='ipv6' data-ref="1467ipv6">ipv6</a>) &amp;&amp; ((<em>int</em> *) <a class="local col7 ref" href="#1467ipv6" title='ipv6' data-ref="1467ipv6">ipv6</a>)[<var>2</var>] == -<var>0x10000</var>; }</td></tr>
+<tr><th id="137">137</th><td><em>static</em> <b>inline</b> <em>unsigned</em> <dfn class="decl def" id="extract_4in6" title='extract_4in6' data-ref="extract_4in6">extract_4in6</dfn> (<em>const</em> <em>unsigned</em> <em>char</em> <dfn class="local col8 decl" id="1468ipv6" title='ipv6' data-type='const unsigned char *' data-ref="1468ipv6">ipv6</dfn>[<var>16</var>]) { <b>return</b> (((<em>unsigned</em> *) <a class="local col8 ref" href="#1468ipv6" title='ipv6' data-ref="1468ipv6">ipv6</a>)[<var>3</var>]); }</td></tr>
+<tr><th id="138">138</th><td><em>static</em> <b>inline</b> <em>void</em> <dfn class="decl def" id="set_4in6" title='set_4in6' data-ref="set_4in6">set_4in6</dfn> (<em>unsigned</em> <em>char</em> <dfn class="local col9 decl" id="1469ipv6" title='ipv6' data-type='unsigned char *' data-ref="1469ipv6">ipv6</dfn>[<var>16</var>], <em>unsigned</em> <dfn class="local col0 decl" id="1470ip" title='ip' data-type='unsigned int' data-ref="1470ip">ip</dfn>) {  *(<em>long</em> <em>long</em> *) <a class="local col9 ref" href="#1469ipv6" title='ipv6' data-ref="1469ipv6">ipv6</a> = <var>0</var>; ((<em>int</em> *) <a class="local col9 ref" href="#1469ipv6" title='ipv6' data-ref="1469ipv6">ipv6</a>)[<var>2</var>] = -<var>0x10000</var>; ((<em>unsigned</em> *) <a class="local col9 ref" href="#1469ipv6" title='ipv6' data-ref="1469ipv6">ipv6</a>)[<var>3</var>] = <a class="local col0 ref" href="#1470ip" title='ip' data-ref="1470ip">ip</a>; }</td></tr>
+<tr><th id="139">139</th><td></td></tr>
+<tr><th id="140">140</th><td><em>const</em> <em>char</em> *<dfn class="decl" id="conv_addr" title='conv_addr' data-ref="conv_addr">conv_addr</dfn> (<a class="typedef" href="../../include/netinet/in.h.html#in_addr_t" title='in_addr_t' data-type='uint32_t' data-ref="in_addr_t">in_addr_t</a> <dfn class="local col1 decl" id="1471a" title='a' data-type='in_addr_t' data-ref="1471a">a</dfn>, <em>char</em> *<dfn class="local col2 decl" id="1472buf" title='buf' data-type='char *' data-ref="1472buf">buf</dfn>);</td></tr>
+<tr><th id="141">141</th><td><em>const</em> <em>char</em> *<dfn class="decl" id="show_ip" title='show_ip' data-ref="show_ip">show_ip</dfn> (<em>unsigned</em> <dfn class="local col3 decl" id="1473ip" title='ip' data-type='unsigned int' data-ref="1473ip">ip</dfn>);</td></tr>
+<tr><th id="142">142</th><td><em>const</em> <em>char</em> *<dfn class="decl" id="conv_addr6" title='conv_addr6' data-ref="conv_addr6">conv_addr6</dfn> (<em>const</em> <em>unsigned</em> <em>char</em> <dfn class="local col4 decl" id="1474a" title='a' data-type='const unsigned char *' data-ref="1474a">a</dfn>[<var>16</var>], <em>char</em> *<dfn class="local col5 decl" id="1475buf" title='buf' data-type='char *' data-ref="1475buf">buf</dfn>);</td></tr>
+<tr><th id="143">143</th><td><em>const</em> <em>char</em> *<dfn class="decl" id="show_ipv6" title='show_ipv6' data-ref="show_ipv6">show_ipv6</dfn> (<em>const</em> <em>unsigned</em> <em>char</em> <dfn class="local col6 decl" id="1476ipv6" title='ipv6' data-type='const unsigned char *' data-ref="1476ipv6">ipv6</dfn>[<var>16</var>]);</td></tr>
+<tr><th id="144">144</th><td></td></tr>
+<tr><th id="145">145</th><td><b>extern</b> <em>int</em> <dfn class="decl" id="epoll_sleep_ns" title='epoll_sleep_ns' data-ref="epoll_sleep_ns">epoll_sleep_ns</dfn>;</td></tr>
+<tr><th id="146">146</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../common/common-stats.c.html'>MTProxy/common/common-stats.c</a><br/>Generated on <em>2018-Jun-02</em> from project MTProxy revision <em>842f343decf6c463bdecf1862e357c4a03e4bc97</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

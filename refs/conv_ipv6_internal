@@ -1,0 +1,3 @@
+<def f='MTProxy/net/net-events.c' l='832' ll='870' type='int conv_ipv6_internal(const unsigned short * a, char * buf)'/>
+<use f='MTProxy/net/net-events.c' l='877' u='c' c='conv_addr6'/>
+<use f='MTProxy/net/net-events.c' l='899' u='c' c='show_ipv6'/>

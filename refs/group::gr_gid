@@ -1,0 +1,4 @@
+<dec f='include/grp.h' l='46' type='__gid_t'/>
+<use f='MTProxy/common/server-functions.c' l='99' u='r' c='change_user_group'/>
+<offset>128</offset>
+<doc f='include/grp.h' l='46'>/* Group ID.	*/</doc>

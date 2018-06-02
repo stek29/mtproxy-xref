@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/bits/mathcalls.h' l='156' type='double sqrt(double __x)'/>
+<use f='MTProxy/common/crc32.c' l='949' u='c' c='crc32_find_corrupted_bit'/>

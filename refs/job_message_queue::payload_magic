@@ -1,0 +1,4 @@
+<dec f='MTProxy/jobs/jobs.h' l='254' type='unsigned int'/>
+<offset>192</offset>
+<use f='MTProxy/jobs/jobs.c' l='1596' u='r' c='job_message_queue_work'/>
+<use f='MTProxy/jobs/jobs.c' l='1597' u='r' c='job_message_queue_work'/>

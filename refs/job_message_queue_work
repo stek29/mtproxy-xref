@@ -1,0 +1,3 @@
+<dec f='MTProxy/jobs/jobs.h' l='397' type='void job_message_queue_work(job_t job, int (*)(job_t, struct job_message *, void *) receive_message, void * extra, unsigned int mask)'/>
+<def f='MTProxy/jobs/jobs.c' l='1567' ll='1622' type='void job_message_queue_work(job_t job, int (*)(job_t, struct job_message *, void *) receive_message, void * extra, unsigned int mask)'/>
+<use f='MTProxy/jobs/jobs.c' l='1680' u='c' c='notify_job_run'/>

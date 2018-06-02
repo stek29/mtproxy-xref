@@ -1,0 +1,2 @@
+<def f='MTProxy/engine/engine-rpc.c' l='200' ll='208' type='int __tl_query_act_custom(struct tl_in_state * tlio_in, struct query_work_params * P)'/>
+<use f='MTProxy/engine/engine-rpc.c' l='648' u='c' c='process_query_custom_subjob'/>

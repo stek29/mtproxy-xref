@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-connections.h' l='258' type='unsigned int'/>
+<offset>992</offset>
+<use f='MTProxy/net/net-connections.c' l='1119' u='r' c='net_server_socket_read_write_gateway'/>
+<use f='MTProxy/net/net-connections.c' l='1197' u='w' c='alloc_new_socket_connection'/>

@@ -1,0 +1,11 @@
+<dec f='MTProxy/net/net-connections.h' l='205' type='conn_target_job_t'/>
+<offset>512</offset>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1718' u='r' c='forward_tcp_query'/>
+<use f='MTProxy/net/net-connections.c' l='417' u='r' c='cpu_server_free_connection'/>
+<use f='MTProxy/net/net-connections.c' l='421' u='r' c='cpu_server_free_connection'/>
+<use f='MTProxy/net/net-connections.c' l='496' u='r' c='cpu_server_close_connection'/>
+<use f='MTProxy/net/net-connections.c' l='503' c='cpu_server_close_connection'/>
+<use f='MTProxy/net/net-connections.c' l='503' u='r' c='cpu_server_close_connection'/>
+<use f='MTProxy/net/net-connections.c' l='503' u='w' c='cpu_server_close_connection'/>
+<use f='MTProxy/net/net-connections.c' l='547' u='r' c='do_connection_job'/>
+<use f='MTProxy/net/net-connections.c' l='631' u='w' c='alloc_new_connection'/>

@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-timers.h' l='22'/>
+<use f='MTProxy/net/net-timers.c' l='86' u='c'/>
+<use f='MTProxy/net/net-timers.c' l='95' u='c'/>
+<use f='MTProxy/net/net-timers.c' l='103' u='c'/>
+<use f='MTProxy/net/net-timers.c' l='124' u='c'/>

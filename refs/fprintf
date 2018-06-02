@@ -1,0 +1,39 @@
+<dec f='include/stdio.h' l='356' type='int fprintf(FILE *restrict __stream, const char *restrict __format)'/>
+<doc f='include/stdio.h' l='352'>/* Write formatted output to STREAM.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */</doc>
+<use f='MTProxy/common/kprintf.c' l='138' u='c' c='kdb_write'/>
+<use f='MTProxy/common/kprintf.c' l='149' u='c' c='kdb_write'/>
+<use f='MTProxy/common/parse-config.c' l='156' u='c' c='syntax'/>
+<use f='MTProxy/common/parse-config.c' l='158' u='c' c='syntax'/>
+<use f='MTProxy/common/parse-config.c' l='167' u='c' c='syntax'/>
+<use f='MTProxy/common/parse-config.c' l='173' u='c' c='syntax_warning'/>
+<use f='MTProxy/common/parse-config.c' l='183' u='c' c='syntax_warning'/>
+<use f='MTProxy/common/parse-config.c' l='247' u='c' c='load_config'/>
+<use f='MTProxy/common/parse-config.c' l='254' u='c' c='load_config'/>
+<use f='MTProxy/common/parse-config.c' l='258' u='c' c='load_config'/>
+<use f='MTProxy/common/resolver.c' l='292' u='c' c='kdb_load_hosts_internal'/>
+<use f='MTProxy/common/resolver.c' l='316' u='c' c='kdb_load_hosts_internal'/>
+<use f='MTProxy/common/tl-parse.c' l='942' u='c' c='tls_init'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1215' u='c' c='process_http_query'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1216' u='c' c='process_http_query'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1218' u='c' c='process_http_query'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1219' u='c' c='process_http_query'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2218' u='c' c='mtfront_pre_init'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2229' u='c' c='mtfront_pre_init'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2266' u='c' c='mtfront_pre_start'/>
+<use f='MTProxy/net/net-connections.c' l='2147' u='c' c='net_add_nat_info'/>
+<use f='MTProxy/net/net-connections.c' l='2153' u='c' c='net_add_nat_info'/>
+<use f='MTProxy/net/net-connections.c' l='2157' u='c' c='net_add_nat_info'/>
+<use f='MTProxy/net/net-connections.c' l='2161' u='c' c='net_add_nat_info'/>
+<use f='MTProxy/net/net-msg.c' l='317' u='c' c='fork_message_chain'/>
+<use f='MTProxy/net/net-msg.c' l='843' u='c' c='rwm_dump_sizes'/>
+<use f='MTProxy/net/net-msg.c' l='848' u='c' c='rwm_dump_sizes'/>
+<use f='MTProxy/net/net-msg.c' l='851' u='c' c='rwm_dump_sizes'/>
+<use f='MTProxy/net/net-msg.c' l='857' u='c' c='rwm_dump_sizes'/>
+<use f='MTProxy/net/net-msg.c' l='883' u='c' c='rwm_check'/>
+<use f='MTProxy/net/net-msg.c' l='901' u='c' c='rwm_dump'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='396' u='c' c='tcp_rpcc_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='329' u='c' c='tcp_rpcs_compact_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='400' u='c' c='tcp_rpcs_parse_execute'/>

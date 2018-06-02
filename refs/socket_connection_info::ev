@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-connections.h' l='253' type='event_t *'/>
+<offset>448</offset>
+<use f='MTProxy/net/net-connections.c' l='801' u='r' c='fail_socket_connection'/>
+<use f='MTProxy/net/net-connections.c' l='804' u='w' c='fail_socket_connection'/>
+<use f='MTProxy/net/net-connections.c' l='822' u='r' c='net_server_socket_free'/>
+<use f='MTProxy/net/net-connections.c' l='1206' u='w' c='alloc_new_socket_connection'/>

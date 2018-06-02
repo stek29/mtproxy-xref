@@ -1,0 +1,1 @@
+<dec f='MTProxy/net/net-rpc-targets.c' l='65' type='struct tree_rpc_target * get_rpc_target_tree_ptr(struct tree_rpc_target ** T)'/>

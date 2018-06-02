@@ -1,0 +1,22 @@
+<def f='MTProxy/net/net-connections.h' l='175' ll='195'/>
+<size>168</size>
+<mbr r='conn_target_info::timer' o='0' t='struct event_timer'/>
+<mbr r='conn_target_info::min_connections' o='256' t='int'/>
+<mbr r='conn_target_info::max_connections' o='288' t='int'/>
+<mbr r='conn_target_info::conn_tree' o='320' t='struct tree_connection *'/>
+<mbr r='conn_target_info::type' o='384' t='conn_type_t *'/>
+<mbr r='conn_target_info::extra' o='448' t='void *'/>
+<mbr r='conn_target_info::target' o='512' t='struct in_addr'/>
+<mbr r='conn_target_info::target_ipv6' o='544' t='unsigned char [16]'/>
+<mbr r='conn_target_info::port' o='672' t='int'/>
+<mbr r='conn_target_info::active_outbound_connections' o='704' t='int'/>
+<mbr r='conn_target_info::outbound_connections' o='736' t='int'/>
+<mbr r='conn_target_info::ready_outbound_connections' o='768' t='int'/>
+<mbr r='conn_target_info::next_reconnect' o='832' t='double'/>
+<mbr r='conn_target_info::reconnect_timeout' o='896' t='double'/>
+<mbr r='conn_target_info::next_reconnect_timeout' o='960' t='double'/>
+<mbr r='conn_target_info::custom_field' o='1024' t='int'/>
+<mbr r='conn_target_info::next_target' o='1088' t='conn_target_job_t'/>
+<mbr r='conn_target_info::prev_target' o='1152' t='conn_target_job_t'/>
+<mbr r='conn_target_info::hnext' o='1216' t='conn_target_job_t'/>
+<mbr r='conn_target_info::global_refcnt' o='1280' t='int'/>

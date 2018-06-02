@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/bits/resource.h' l='63'/>
+<use f='MTProxy/common/server-functions.c' l='148' u='c'/>
+<use f='MTProxy/common/server-functions.c' l='156' u='c'/>
+<use f='MTProxy/engine/engine.c' l='180' u='c'/>

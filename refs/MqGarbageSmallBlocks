@@ -1,0 +1,6 @@
+<def f='MTProxy/common/mp-queue.c' l='53' type='struct mp_queue'/>
+<use f='MTProxy/common/mp-queue.c' l='173' u='a' c='alloc_mpq_block'/>
+<use f='MTProxy/common/mp-queue.c' l='181' u='a' c='alloc_mpq_block'/>
+<use f='MTProxy/common/mp-queue.c' l='379' u='a' c='init_mp_queue'/>
+<use f='MTProxy/common/mp-queue.c' l='471' u='a' c='mpq_pop'/>
+<use f='MTProxy/common/mp-queue.c' l='523' u='a' c='mpq_is_empty'/>

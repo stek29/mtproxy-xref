@@ -1,0 +1,6 @@
+<dec f='MTProxy/jobs/jobs.h' l='237' type='struct job_class *'/>
+<offset>1600</offset>
+<use f='MTProxy/jobs/jobs.c' l='462' u='w' c='create_job_thread_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='712' u='r' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='908' u='r' c='job_thread_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='957' u='r' c='process_one_sublist'/>

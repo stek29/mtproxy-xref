@@ -1,0 +1,7 @@
+<dec f='MTProxy/common/tl-parse.h' l='98' type='3'/>
+<use f='MTProxy/common/tl-parse.c' l='797' u='r' c='tls_init_tcp_raw_msg'/>
+<use f='MTProxy/common/tl-parse.c' l='811' u='r' c='tls_init_tcp_raw_msg_unaligned'/>
+<use f='MTProxy/common/tl-parse.c' l='926' c='tls_init'/>
+<use f='MTProxy/engine/engine-rpc.c' l='71' u='r' c='tl_aio_init_store'/>
+<use f='MTProxy/engine/engine-rpc.c' l='841' u='r' c='default_tl_tcp_rpcs_execute'/>
+<use f='MTProxy/engine/engine-rpc.c' l='843' u='r' c='default_tl_tcp_rpcs_execute'/>

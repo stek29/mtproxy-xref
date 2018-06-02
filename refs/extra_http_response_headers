@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-http-server.h' l='106' type='char *'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1250' u='w' c='process_http_query'/>
+<def f='MTProxy/net/net-http-server.c' l='52' type='char *'/>
+<use f='MTProxy/net/net-http-server.c' l='849' u='r' c='write_basic_http_header_raw'/>
+<use f='MTProxy/net/net-http-server.c' l='849' u='r' c='write_basic_http_header_raw'/>

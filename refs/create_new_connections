@@ -1,0 +1,8 @@
+<dec f='MTProxy/net/net-connections.h' l='323' type='int create_new_connections(conn_target_job_t S)'/>
+<def f='MTProxy/net/net-connections.c' l='1678' ll='1756' type='int create_new_connections(conn_target_job_t CTJ)'/>
+<use f='MTProxy/net/net-connections.c' l='1914' u='c' c='do_conn_target_job'/>
+<doc f='MTProxy/net/net-connections.c' l='1674'>/*
+  creates new connections for target 
+  must be called in main thread, because we can allocate new connections only in main thread
+*/</doc>
+<doc f='MTProxy/net/net-connections.c' l='1678'>/* {{{ */</doc>

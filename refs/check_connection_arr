@@ -1,0 +1,2 @@
+<def f='MTProxy/net/net-rpc-targets.c' l='260' ll='283' type='void check_connection_arr(connection_job_t C, void * ex, void * ex2)'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='336' u='r' c='rpc_target_choose_random_connections'/>

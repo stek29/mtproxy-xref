@@ -1,0 +1,8 @@
+<dec f='include/netdb.h' l='106' type='char **'/>
+<use f='MTProxy/common/parse-config.c' l='216' u='r' c='cfg_gethost_ex'/>
+<use f='MTProxy/common/parse-config.c' l='216' macro='1' u='r'/>
+<offset>192</offset>
+<doc f='include/netdb.h' l='106'>/* List of addresses from name server.  */</doc>
+<use f='MTProxy/common/resolver.c' l='97' u='w'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='156' macro='1' u='r'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='160' macro='1' u='r'/>

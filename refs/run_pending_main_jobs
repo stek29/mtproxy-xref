@@ -1,0 +1,6 @@
+<dec f='MTProxy/jobs/jobs.h' l='326' type='int run_pending_main_jobs()'/>
+<doc f='MTProxy/jobs/jobs.h' l='325'>/* runs all pending jobs of class JF_CLASS_MAIN, then returns */</doc>
+<use f='MTProxy/engine/engine.c' l='469' u='c' c='default_engine_server_start'/>
+<use f='MTProxy/engine/engine.c' l='474' u='c' c='default_engine_server_start'/>
+<use f='MTProxy/engine/engine.c' l='479' u='c' c='default_engine_server_start'/>
+<def f='MTProxy/jobs/jobs.c' l='1032' ll='1053' type='int run_pending_main_jobs()'/>

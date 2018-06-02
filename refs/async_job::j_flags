@@ -1,0 +1,45 @@
+<dec f='MTProxy/jobs/jobs.h' l='168' type='int'/>
+<use f='MTProxy/jobs/jobs.h' l='304' u='r' c='check_job_completion'/>
+<offset>0</offset>
+<doc f='MTProxy/jobs/jobs.h' l='168'>// bits 0..15: queue flags; bits 16..23: status; bits 24..31: received signals (only bits that can be changed without having lock)</doc>
+<use f='MTProxy/jobs/jobs.c' l='602' u='r' c='try_lock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='606' u='a' c='try_lock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='618' u='r' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='621' u='r' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='622' u='r' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='626' u='a' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='636' u='r' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='639' u='w' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='660' u='a' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='664' u='r' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='678' u='r' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='685' u='a' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='703' u='a' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='711' u='r' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='728' u='r' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='746' u='r' c='job_send_signals'/>
+<use f='MTProxy/jobs/jobs.c' l='749' u='r' c='job_send_signals'/>
+<use f='MTProxy/jobs/jobs.c' l='750' u='r' c='job_send_signals'/>
+<use f='MTProxy/jobs/jobs.c' l='758' u='a' c='job_send_signals'/>
+<use f='MTProxy/jobs/jobs.c' l='762' u='r' c='job_send_signals'/>
+<use f='MTProxy/jobs/jobs.c' l='802' u='r' c='process_one_job'/>
+<use f='MTProxy/jobs/jobs.c' l='806' u='a' c='process_one_job'/>
+<use f='MTProxy/jobs/jobs.c' l='819' u='r' c='complete_subjob'/>
+<use f='MTProxy/jobs/jobs.c' l='853' u='r' c='complete_job'/>
+<use f='MTProxy/jobs/jobs.c' l='854' u='r' c='complete_job'/>
+<use f='MTProxy/jobs/jobs.c' l='855' u='r' c='complete_job'/>
+<use f='MTProxy/jobs/jobs.c' l='858' u='a' c='complete_job'/>
+<use f='MTProxy/jobs/jobs.c' l='1058' u='r' c='job_change_signals'/>
+<use f='MTProxy/jobs/jobs.c' l='1081' u='w' c='create_async_job'/>
+<use f='MTProxy/jobs/jobs.c' l='1106' u='r' c='create_async_job'/>
+<use f='MTProxy/jobs/jobs.c' l='1112' u='r' c='schedule_job'/>
+<use f='MTProxy/jobs/jobs.c' l='1113' u='w' c='schedule_job'/>
+<use f='MTProxy/jobs/jobs.c' l='1120' u='r' c='job_timer_wakeup_gateway'/>
+<use f='MTProxy/jobs/jobs.c' l='1123' u='r' c='job_timer_wakeup_gateway'/>
+<use f='MTProxy/jobs/jobs.c' l='1159' u='r' c='process_job_list'/>
+<use f='MTProxy/jobs/jobs.c' l='1172' u='r' c='process_job_list'/>
+<use f='MTProxy/jobs/jobs.c' l='1197' u='r' c='insert_node_into_job_list'/>
+<use f='MTProxy/jobs/jobs.c' l='1317' u='r' c='do_timer_job'/>
+<use f='MTProxy/net/net-connections.c' l='796' u='r' c='fail_socket_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1917' u='r' c='do_conn_target_job'/>
+<use f='MTProxy/net/net-connections.c' l='1932' u='r' c='do_conn_target_job'/>

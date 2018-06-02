@@ -1,0 +1,4 @@
+<dec f='include/linux/futex.h' l='99'/>
+<doc f='include/linux/futex.h' l='96'>/*
+ * Are there any waiters for this robust futex:
+ */</doc>

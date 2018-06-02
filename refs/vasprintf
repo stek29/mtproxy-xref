@@ -1,0 +1,7 @@
+<dec f='include/stdio.h' l='399' type='int vasprintf(char **restrict __ptr, const char *restrict __f, struct __va_list_tag * __arg)'/>
+<doc f='include/stdio.h' l='397'>/* Write formatted output to a string dynamically allocated with `malloc&apos;.
+   Store the address of the string in *PTR.  */</doc>
+<use f='MTProxy/common/server-functions.c' l='369' u='c' c='parse_option_ex'/>
+<use f='MTProxy/common/server-functions.c' l='379' u='c' c='parse_option'/>
+<use f='MTProxy/engine/engine-net.c' l='225' u='c' c='parse_option_net_builtin'/>
+<use f='MTProxy/engine/engine.c' l='685' u='c' c='parse_option_engine_builtin'/>

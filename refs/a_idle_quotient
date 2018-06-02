@@ -1,0 +1,10 @@
+<dec f='MTProxy/net/net-events.h' l='82' type='double'/>
+<use f='MTProxy/jobs/jobs.c' l='94' u='r' c='jobs_prepare_stat'/>
+<use f='MTProxy/jobs/jobs.c' l='933' u='r' c='job_thread_ex'/>
+<def f='MTProxy/net/net-events.c' l='54' type='double'/>
+<use f='MTProxy/net/net-events.c' l='426' u='w' c='epoll_work'/>
+<use f='MTProxy/net/net-events.c' l='426' u='r' c='epoll_work'/>
+<use f='MTProxy/net/net-stats.c' l='88' u='r' c='recent_idle_percent'/>
+<use f='MTProxy/net/net-stats.c' l='88' u='r' c='recent_idle_percent'/>
+<use f='MTProxy/net/net-stats.c' l='134' u='r' c='prepare_stats'/>
+<use f='MTProxy/net/net-stats.c' l='134' u='r' c='prepare_stats'/>

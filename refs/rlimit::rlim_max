@@ -1,0 +1,5 @@
+<dec f='include/x86_64-linux-gnu/bits/resource.h' l='144' type='rlim_t'/>
+<use f='MTProxy/common/server-functions.c' l='154' u='r' c='raise_file_rlimit'/>
+<use f='MTProxy/common/server-functions.c' l='155' u='w' c='raise_file_rlimit'/>
+<offset>64</offset>
+<doc f='include/x86_64-linux-gnu/bits/resource.h' l='143'>/* The hard limit.  */</doc>

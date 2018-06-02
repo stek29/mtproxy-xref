@@ -1,0 +1,9 @@
+<dec f='MTProxy/jobs/jobs.h' l='211' type='int'/>
+<offset>32</offset>
+<use f='MTProxy/jobs/jobs.c' l='513' u='r' c='create_job_class_threads'/>
+<use f='MTProxy/jobs/jobs.c' l='516' u='r' c='create_job_class_threads'/>
+<use f='MTProxy/jobs/jobs.c' l='559' u='r' c='create_job_class'/>
+<use f='MTProxy/jobs/jobs.c' l='560' u='r' c='create_job_class'/>
+<use f='MTProxy/jobs/jobs.c' l='560' u='r' c='create_job_class'/>
+<use f='MTProxy/jobs/jobs.c' l='561' u='w' c='create_job_class'/>
+<use f='MTProxy/jobs/jobs.c' l='566' u='r' c='create_job_class'/>

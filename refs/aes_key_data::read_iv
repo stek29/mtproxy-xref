@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-crypto-aes.h' l='64' type='unsigned char [16]'/>
+<offset>256</offset>
+<use f='MTProxy/net/net-crypto-aes.c' l='90' u='r' c='aes_crypto_init'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='109' u='r' c='aes_crypto_ctr128_init'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='309' u='r' c='aes_create_keys'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='197' u='r' c='tcp_rpcs_compact_parse_execute'/>

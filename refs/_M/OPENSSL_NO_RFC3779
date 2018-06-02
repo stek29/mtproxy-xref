@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/openssl/opensslconf.h' l='36'/>
+<use f='include/openssl/x509.h' l='291' u='a'/>

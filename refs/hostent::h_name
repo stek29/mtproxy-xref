@@ -1,0 +1,4 @@
+<dec f='include/netdb.h' l='102' type='char *'/>
+<offset>0</offset>
+<doc f='include/netdb.h' l='102'>/* Official name of host.  */</doc>
+<use f='MTProxy/common/resolver.c' l='399' u='w' c='kdb_gethostbyname'/>

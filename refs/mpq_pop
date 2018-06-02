@@ -1,0 +1,7 @@
+<dec f='MTProxy/common/mp-queue.h' l='132' type='mqn_value_t mpq_pop(struct mp_queue * MQ, int flags)'/>
+<use f='MTProxy/common/mp-queue.c' l='173' u='c' c='alloc_mpq_block'/>
+<use f='MTProxy/common/mp-queue.c' l='186' u='c' c='alloc_mpq_block'/>
+<def f='MTProxy/common/mp-queue.c' l='435' ll='480' type='mqn_value_t mpq_pop(struct mp_queue * MQ, int flags)'/>
+<use f='MTProxy/common/mp-queue.c' l='629' u='c' c='mpq_pop_w'/>
+<use f='MTProxy/common/mp-queue.c' l='653' u='c' c='mpq_pop_nw'/>
+<doc f='MTProxy/common/mp-queue.c' l='434'>// may invoke mpq_push() to discard new empty block</doc>

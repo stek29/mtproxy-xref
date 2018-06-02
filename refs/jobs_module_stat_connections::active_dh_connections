@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-connections.c' l='94' type='int'/>
+<use f='MTProxy/net/net-connections.c' l='489' u='w' c='cpu_server_close_connection'/>
+<use f='MTProxy/net/net-connections.c' l='2128' u='w' c='incr_active_dh_connections'/>
+<offset>32</offset>

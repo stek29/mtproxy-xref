@@ -1,0 +1,14 @@
+<def f='MTProxy/jobs/jobs.c' l='79' macro='1' type='struct jobs_module_stat_jobs *[256]'/>
+<use f='MTProxy/jobs/jobs.c' l='79' macro='1' u='w'/>
+<use f='MTProxy/jobs/jobs.c' l='99' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='102' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='103' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='104' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='105' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='106' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='177' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='286' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='320' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='321' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='322' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='326' macro='1' u='r'/>

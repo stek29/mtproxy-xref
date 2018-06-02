@@ -1,0 +1,9 @@
+<dec f='MTProxy/common/tl-parse.h' l='77' type='void *(*)(struct tl_out_state *, int)'/>
+<use f='MTProxy/common/tl-parse.h' l='566' u='r' c='tls_get_ptr'/>
+<use f='MTProxy/common/tl-parse.c' l='455' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='474' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='491' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='510' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='529' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='746' u='r' c='__tl_store_init'/>
+<offset>0</offset>

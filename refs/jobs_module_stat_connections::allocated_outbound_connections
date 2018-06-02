@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-connections.c' l='96' type='int'/>
+<use f='MTProxy/net/net-connections.c' l='455' u='w' c='cpu_server_free_connection'/>
+<use f='MTProxy/net/net-connections.c' l='712' u='w' c='alloc_new_connection'/>
+<offset>192</offset>

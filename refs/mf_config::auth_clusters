@@ -1,0 +1,16 @@
+<dec f='MTProxy/mtproto/mtproto-config.h' l='46' type='int'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='136' u='r' c='clear_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='140' u='w' c='clear_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='219' u='r' c='mf_cluster_lookup'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='237' u='w' c='preinit_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='291' u='r' c='parse_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='292' u='r' c='parse_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='300' u='r' c='parse_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='302' u='r' c='parse_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='304' u='r' c='parse_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='306' u='w' c='parse_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='307' u='r' c='parse_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='308' u='r' c='parse_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='347' u='r' c='parse_config'/>
+<offset>32</offset>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1628' u='r' c='choose_proxy_target'/>

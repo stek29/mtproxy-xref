@@ -1,0 +1,3 @@
+<def f='MTProxy/common/tl-parse.h' l='642' ll='648' type='int tls_pad(struct tl_out_state * tlio_out)'/>
+<use f='MTProxy/common/tl-parse.h' l='664' u='c' c='tls_string_data'/>
+<doc f='MTProxy/common/tl-parse.h' l='642'>/* {{{ */</doc>

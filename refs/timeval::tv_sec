@@ -1,0 +1,5 @@
+<dec f='include/x86_64-linux-gnu/bits/time.h' l='32' type='__time_t'/>
+<offset>0</offset>
+<doc f='include/x86_64-linux-gnu/bits/time.h' l='32'>/* Seconds.  */</doc>
+<use f='MTProxy/common/kprintf.c' l='253' u='a' c='kprintf'/>
+<use f='MTProxy/common/precise-time.c' l='55' u='r' c='get_double_time'/>

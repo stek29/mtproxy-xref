@@ -1,0 +1,4 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='2202' ll='2209' type='void mtfront_parse_extra_args(int argc, char ** argv)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2299'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2299'/>
+<doc f='MTProxy/mtproto/mtproto-proxy.c' l='2202'>/* {{{ */</doc>

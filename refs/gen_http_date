@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-http-server.h' l='112' type='void gen_http_date(char * date_buffer, int time)'/>
+<def f='MTProxy/net/net-http-server.c' l='681' ll='728' type='void gen_http_date(char * date_buffer, int time)'/>
+<use f='MTProxy/net/net-http-server.c' l='776' u='c' c='cur_http_date'/>
+<use f='MTProxy/net/net-http-server.c' l='843' u='c' c='write_basic_http_header_raw'/>

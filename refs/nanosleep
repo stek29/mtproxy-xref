@@ -1,0 +1,4 @@
+<dec f='include/time.h' l='334' type='int nanosleep(const struct timespec * __requested_time, struct timespec * __remaining)'/>
+<use f='MTProxy/common/precise-time.h' l='58' u='c' c='precise_sleep'/>
+<use f='MTProxy/common/kprintf.c' l='127' u='c' c='kdb_write'/>
+<use f='MTProxy/net/net-events.c' l='372' u='c' c='epoll_fetch_events'/>

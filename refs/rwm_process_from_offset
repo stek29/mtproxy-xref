@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-msg.h' l='143' type='int rwm_process_from_offset(struct raw_message * raw, int bytes, int offset, int (*)(void *, const void *, int) process_block, void * extra)'/>
+<doc f='MTProxy/net/net-msg.h' l='142'>/* negative exit code of process stops processing */</doc>
+<def f='MTProxy/net/net-msg.c' l='1051' ll='1053' type='int rwm_process_from_offset(struct raw_message * raw, int bytes, int offset, int (*)(void *, const void *, int) process_block, void * extra)'/>
+<doc f='MTProxy/net/net-msg.c' l='1049'>/* }}} */</doc>
+<doc f='MTProxy/net/net-msg.c' l='1051'>/* {{{ */</doc>

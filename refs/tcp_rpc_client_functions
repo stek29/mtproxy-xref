@@ -1,0 +1,16 @@
+<def f='MTProxy/net/net-tcp-rpc-client.h' l='28' ll='43'/>
+<size>104</size>
+<mbr r='tcp_rpc_client_functions::info' o='0' t='void *'/>
+<mbr r='tcp_rpc_client_functions::rpc_extra' o='64' t='void *'/>
+<mbr r='tcp_rpc_client_functions::execute' o='128' t='int (*)(connection_job_t, int, struct raw_message *)'/>
+<mbr r='tcp_rpc_client_functions::check_ready' o='192' t='int (*)(connection_job_t)'/>
+<mbr r='tcp_rpc_client_functions::flush_packet' o='256' t='int (*)(connection_job_t)'/>
+<mbr r='tcp_rpc_client_functions::rpc_check_perm' o='320' t='int (*)(connection_job_t)'/>
+<mbr r='tcp_rpc_client_functions::rpc_init_crypto' o='384' t='int (*)(connection_job_t)'/>
+<mbr r='tcp_rpc_client_functions::rpc_start_crypto' o='448' t='int (*)(connection_job_t, char *, int, unsigned char *, int)'/>
+<mbr r='tcp_rpc_client_functions::rpc_wakeup' o='512' t='int (*)(connection_job_t)'/>
+<mbr r='tcp_rpc_client_functions::rpc_alarm' o='576' t='int (*)(connection_job_t)'/>
+<mbr r='tcp_rpc_client_functions::rpc_ready' o='640' t='int (*)(connection_job_t)'/>
+<mbr r='tcp_rpc_client_functions::rpc_close' o='704' t='int (*)(connection_job_t, int)'/>
+<mbr r='tcp_rpc_client_functions::max_packet_len' o='768' t='int'/>
+<mbr r='tcp_rpc_client_functions::mode_flags' o='800' t='int'/>

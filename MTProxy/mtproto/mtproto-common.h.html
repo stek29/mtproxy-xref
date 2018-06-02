@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>mtproto-common.h source code [MTProxy/mtproto/mtproto-common.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="encrypted_message,rpc_close_conn,rpc_close_ext,rpc_proxy_ans,rpc_proxy_req,rpc_simple_ack "/>
+<link rel="stylesheet" href="https://code.woboq.org/data//qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="https://code.woboq.org/data//kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery-ui.min.js"></script>
+<script>var file = 'MTProxy/mtproto/mtproto-common.h'; var root_path = '../..'; var data_path = 'https://code.woboq.org/data/';</script>
+<script src='https://code.woboq.org/data//codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='..'>MTProxy</a>/<a href='./'>mtproto</a>/<a href='mtproto-common.h.html'>mtproto-common.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>    This file is part of MTProto-Server</i></td></tr>
+<tr><th id="3">3</th><td><i></i></td></tr>
+<tr><th id="4">4</th><td><i>    MTProto-Server is free software: you can redistribute it and/or modify</i></td></tr>
+<tr><th id="5">5</th><td><i>    it under the terms of the GNU General Public License as published by</i></td></tr>
+<tr><th id="6">6</th><td><i>    the Free Software Foundation, either version 2 of the License, or</i></td></tr>
+<tr><th id="7">7</th><td><i>    (at your option) any later version.</i></td></tr>
+<tr><th id="8">8</th><td><i></i></td></tr>
+<tr><th id="9">9</th><td><i>    MTProto-Server is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="10">10</th><td><i>    but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="11">11</th><td><i>    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</i></td></tr>
+<tr><th id="12">12</th><td><i>    GNU General Public License for more details.</i></td></tr>
+<tr><th id="13">13</th><td><i></i></td></tr>
+<tr><th id="14">14</th><td><i>    You should have received a copy of the GNU General Public License</i></td></tr>
+<tr><th id="15">15</th><td><i>    along with MTProto-Server.  If not, see &lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</i></td></tr>
+<tr><th id="16">16</th><td><i></i></td></tr>
+<tr><th id="17">17</th><td><i>    This program is released under the GPL with the additional exemption</i></td></tr>
+<tr><th id="18">18</th><td><i>    that compiling, linking, and/or using OpenSSL is allowed.</i></td></tr>
+<tr><th id="19">19</th><td><i>    You are free to remove this exemption from derived works.</i></td></tr>
+<tr><th id="20">20</th><td><i></i></td></tr>
+<tr><th id="21">21</th><td><i>    Copyright 2012-2015 Nikolai Durov</i></td></tr>
+<tr><th id="22">22</th><td><i>              2012-2013 Andrey Lopatin</i></td></tr>
+<tr><th id="23">23</th><td><i>              2014-2018 Telegram Messenger Inc</i></td></tr>
+<tr><th id="24">24</th><td><i>*/</i></td></tr>
+<tr><th id="25">25</th><td><u>#pragma once</u></td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td><u>#include <a href="../../include/string.h.html">&lt;string.h&gt;</a></u></td></tr>
+<tr><th id="28">28</th><td><u>#include <a href="../../include/openssl/rsa.h.html">&lt;openssl/rsa.h&gt;</a></u></td></tr>
+<tr><th id="29">29</th><td><u>#include <a href="../../include/openssl/bn.h.html">&lt;openssl/bn.h&gt;</a></u></td></tr>
+<tr><th id="30">30</th><td><u>#include <a href="../../include/openssl/aes.h.html">&lt;openssl/aes.h&gt;</a></u></td></tr>
+<tr><th id="31">31</th><td></td></tr>
+<tr><th id="32">32</th><td><u>#include <a href="../common/rpc-const.h.html">"rpc-const.h"</a></u></td></tr>
+<tr><th id="33">33</th><td></td></tr>
+<tr><th id="34">34</th><td><u>#define <dfn class="macro" id="_M/tls_push" data-ref="_M/tls_push">tls_push</dfn>()	{ struct tl_out_state *tlio_out = tl_out_state_alloc ();</u></td></tr>
+<tr><th id="35">35</th><td><u>#define <dfn class="macro" id="_M/tls_pop" data-ref="_M/tls_pop">tls_pop</dfn>()	tl_out_state_free (tlio_out); }</u></td></tr>
+<tr><th id="36">36</th><td><u>#define <dfn class="macro" id="_M/TLS_START" data-ref="_M/TLS_START">TLS_START</dfn>(C)		tls_push(); tls_init_tcp_raw_msg (tlio_out, C, 0);</u></td></tr>
+<tr><th id="37">37</th><td><u>#define <dfn class="macro" id="_M/TLS_START_UNALIGN" data-ref="_M/TLS_START_UNALIGN">TLS_START_UNALIGN</dfn>(C)	tls_push(); tls_init_tcp_raw_msg_unaligned (tlio_out, C, 0);</u></td></tr>
+<tr><th id="38">38</th><td><u>#define <dfn class="macro" id="_M/TLS_END" data-ref="_M/TLS_END">TLS_END</dfn>		tl_store_end_ext (0); tls_pop();</u></td></tr>
+<tr><th id="39">39</th><td></td></tr>
+<tr><th id="40">40</th><td><i>/* DH key exchange protocol data structures */</i></td></tr>
+<tr><th id="41">41</th><td><u>#define	<dfn class="macro" id="_M/CODE_req_pq" data-ref="_M/CODE_req_pq">CODE_req_pq</dfn>			0x60469778</u></td></tr>
+<tr><th id="42">42</th><td><u>#define	<dfn class="macro" id="_M/CODE_req_pq_multi" data-ref="_M/CODE_req_pq_multi">CODE_req_pq_multi</dfn>	       	0xbe7e8ef1</u></td></tr>
+<tr><th id="43">43</th><td><u>#define <dfn class="macro" id="_M/CODE_req_DH_params" data-ref="_M/CODE_req_DH_params">CODE_req_DH_params</dfn>		0xd712e4be</u></td></tr>
+<tr><th id="44">44</th><td><u>#define <dfn class="macro" id="_M/CODE_set_client_DH_params" data-ref="_M/CODE_set_client_DH_params">CODE_set_client_DH_params</dfn>	0xf5045f1f</u></td></tr>
+<tr><th id="45">45</th><td></td></tr>
+<tr><th id="46">46</th><td><i>/* RPC for front/proxy */</i></td></tr>
+<tr><th id="47">47</th><td><u>#define	<dfn class="macro" id="_M/RPC_PROXY_REQ" data-ref="_M/RPC_PROXY_REQ">RPC_PROXY_REQ</dfn>		0x36cef1ee</u></td></tr>
+<tr><th id="48">48</th><td><u>#define	<dfn class="macro" id="_M/RPC_PROXY_ANS" data-ref="_M/RPC_PROXY_ANS">RPC_PROXY_ANS</dfn>		0x4403da0d</u></td></tr>
+<tr><th id="49">49</th><td><u>#define	<dfn class="macro" id="_M/RPC_CLOSE_CONN" data-ref="_M/RPC_CLOSE_CONN">RPC_CLOSE_CONN</dfn>		0x1fcf425d</u></td></tr>
+<tr><th id="50">50</th><td><u>#define	<dfn class="macro" id="_M/RPC_CLOSE_EXT" data-ref="_M/RPC_CLOSE_EXT">RPC_CLOSE_EXT</dfn>		0x5eb634a2</u></td></tr>
+<tr><th id="51">51</th><td><u>#define	<dfn class="macro" id="_M/RPC_SIMPLE_ACK" data-ref="_M/RPC_SIMPLE_ACK">RPC_SIMPLE_ACK</dfn>		0x3bac409b</u></td></tr>
+<tr><th id="52">52</th><td></td></tr>
+<tr><th id="53">53</th><td><i>/* not really a limit, for struct encrypted_message only */</i></td></tr>
+<tr><th id="54">54</th><td><i>// #define MAX_MESSAGE_INTS	16384</i></td></tr>
+<tr><th id="55">55</th><td><u>#define <dfn class="macro" id="_M/MAX_MESSAGE_INTS" data-ref="_M/MAX_MESSAGE_INTS">MAX_MESSAGE_INTS</dfn>	1048576</u></td></tr>
+<tr><th id="56">56</th><td><u>#define <dfn class="macro" id="_M/MAX_PROTO_MESSAGE_INTS" data-ref="_M/MAX_PROTO_MESSAGE_INTS">MAX_PROTO_MESSAGE_INTS</dfn>	524288</u></td></tr>
+<tr><th id="57">57</th><td></td></tr>
+<tr><th id="58">58</th><td><u>#pragma pack(push,4)</u></td></tr>
+<tr><th id="59">59</th><td><b>struct</b> <dfn class="type def" id="encrypted_message" title='encrypted_message' data-ref="encrypted_message">encrypted_message</dfn> {</td></tr>
+<tr><th id="60">60</th><td>  <i>// unencrypted header</i></td></tr>
+<tr><th id="61">61</th><td>  <em>long</em> <em>long</em> <dfn class="decl" id="encrypted_message::auth_key_id" title='encrypted_message::auth_key_id' data-ref="encrypted_message::auth_key_id">auth_key_id</dfn>;</td></tr>
+<tr><th id="62">62</th><td>  <em>char</em> <dfn class="decl" id="encrypted_message::msg_key" title='encrypted_message::msg_key' data-ref="encrypted_message::msg_key">msg_key</dfn>[<var>16</var>];</td></tr>
+<tr><th id="63">63</th><td>  <i>// encrypted part, starts with encrypted header</i></td></tr>
+<tr><th id="64">64</th><td>  <em>long</em> <em>long</em> <dfn class="decl" id="encrypted_message::server_salt" title='encrypted_message::server_salt' data-ref="encrypted_message::server_salt">server_salt</dfn>;</td></tr>
+<tr><th id="65">65</th><td>  <em>long</em> <em>long</em> <dfn class="decl" id="encrypted_message::session_id" title='encrypted_message::session_id' data-ref="encrypted_message::session_id">session_id</dfn>;</td></tr>
+<tr><th id="66">66</th><td>  <i>// first message follows</i></td></tr>
+<tr><th id="67">67</th><td>  <em>long</em> <em>long</em> <dfn class="decl" id="encrypted_message::msg_id" title='encrypted_message::msg_id' data-ref="encrypted_message::msg_id">msg_id</dfn>;</td></tr>
+<tr><th id="68">68</th><td>  <em>int</em> <dfn class="decl" id="encrypted_message::seq_no" title='encrypted_message::seq_no' data-ref="encrypted_message::seq_no">seq_no</dfn>;</td></tr>
+<tr><th id="69">69</th><td>  <em>int</em> <dfn class="decl" id="encrypted_message::msg_len" title='encrypted_message::msg_len' data-ref="encrypted_message::msg_len">msg_len</dfn>;   <i>// divisible by 4</i></td></tr>
+<tr><th id="70">70</th><td>  <em>int</em> <dfn class="decl" id="encrypted_message::message" title='encrypted_message::message' data-ref="encrypted_message::message">message</dfn>[<a class="macro" href="#55" title="1048576" data-ref="_M/MAX_MESSAGE_INTS">MAX_MESSAGE_INTS</a> + <var>8</var>];</td></tr>
+<tr><th id="71">71</th><td>};</td></tr>
+<tr><th id="72">72</th><td></td></tr>
+<tr><th id="73">73</th><td><u>#define <dfn class="macro" id="_M/MAX_PROXY_EXTRA_BYTES" data-ref="_M/MAX_PROXY_EXTRA_BYTES">MAX_PROXY_EXTRA_BYTES</dfn>	16384</u></td></tr>
+<tr><th id="74">74</th><td></td></tr>
+<tr><th id="75">75</th><td><b>struct</b> <dfn class="type def" id="rpc_proxy_req" title='rpc_proxy_req' data-ref="rpc_proxy_req">rpc_proxy_req</dfn> {</td></tr>
+<tr><th id="76">76</th><td>  <em>int</em> <dfn class="decl" id="rpc_proxy_req::type" title='rpc_proxy_req::type' data-ref="rpc_proxy_req::type">type</dfn>;	<i>// RPC_PROXY_REQ</i></td></tr>
+<tr><th id="77">77</th><td>  <em>int</em> <dfn class="decl" id="rpc_proxy_req::flags" title='rpc_proxy_req::flags' data-ref="rpc_proxy_req::flags">flags</dfn>;</td></tr>
+<tr><th id="78">78</th><td>  <em>long</em> <em>long</em> <dfn class="decl" id="rpc_proxy_req::ext_conn_id" title='rpc_proxy_req::ext_conn_id' data-ref="rpc_proxy_req::ext_conn_id">ext_conn_id</dfn>;</td></tr>
+<tr><th id="79">79</th><td>  <em>unsigned</em> <em>char</em> <dfn class="decl" id="rpc_proxy_req::remote_ipv6" title='rpc_proxy_req::remote_ipv6' data-ref="rpc_proxy_req::remote_ipv6">remote_ipv6</dfn>[<var>16</var>];</td></tr>
+<tr><th id="80">80</th><td>  <em>int</em> <dfn class="decl" id="rpc_proxy_req::remote_port" title='rpc_proxy_req::remote_port' data-ref="rpc_proxy_req::remote_port">remote_port</dfn>;</td></tr>
+<tr><th id="81">81</th><td>  <em>unsigned</em> <em>char</em> <dfn class="decl" id="rpc_proxy_req::our_ipv6" title='rpc_proxy_req::our_ipv6' data-ref="rpc_proxy_req::our_ipv6">our_ipv6</dfn>[<var>16</var>];</td></tr>
+<tr><th id="82">82</th><td>  <em>int</em> <dfn class="decl" id="rpc_proxy_req::our_port" title='rpc_proxy_req::our_port' data-ref="rpc_proxy_req::our_port">our_port</dfn>;</td></tr>
+<tr><th id="83">83</th><td>  <b>union</b> {</td></tr>
+<tr><th id="84">84</th><td>    <em>int</em> <dfn class="decl" id="rpc_proxy_req::(anonymous)::data" title='rpc_proxy_req::(anonymous union)::data' data-ref="rpc_proxy_req::(anonymous)::data">data</dfn>[<var>0</var>];</td></tr>
+<tr><th id="85">85</th><td>    <b>struct</b> {</td></tr>
+<tr><th id="86">86</th><td>      <em>int</em> <dfn class="decl" id="rpc_proxy_req::(anonymousunion)::(anonymous)::extra_bytes" title='rpc_proxy_req::(anonymous union)::(anonymous struct)::extra_bytes' data-ref="rpc_proxy_req::(anonymousunion)::(anonymous)::extra_bytes">extra_bytes</dfn>;</td></tr>
+<tr><th id="87">87</th><td>      <em>int</em> <dfn class="decl" id="rpc_proxy_req::(anonymousunion)::(anonymous)::extra" title='rpc_proxy_req::(anonymous union)::(anonymous struct)::extra' data-ref="rpc_proxy_req::(anonymousunion)::(anonymous)::extra">extra</dfn>[<a class="macro" href="#73" title="16384" data-ref="_M/MAX_PROXY_EXTRA_BYTES">MAX_PROXY_EXTRA_BYTES</a> / <var>4</var>];</td></tr>
+<tr><th id="88">88</th><td>    };</td></tr>
+<tr><th id="89">89</th><td>  };</td></tr>
+<tr><th id="90">90</th><td>};</td></tr>
+<tr><th id="91">91</th><td></td></tr>
+<tr><th id="92">92</th><td><b>struct</b> <dfn class="type def" id="rpc_proxy_ans" title='rpc_proxy_ans' data-ref="rpc_proxy_ans">rpc_proxy_ans</dfn> {</td></tr>
+<tr><th id="93">93</th><td>  <em>int</em> <dfn class="decl" id="rpc_proxy_ans::type" title='rpc_proxy_ans::type' data-ref="rpc_proxy_ans::type">type</dfn>;	<i>// RPC_PROXY_ANS</i></td></tr>
+<tr><th id="94">94</th><td>  <em>int</em> <dfn class="decl" id="rpc_proxy_ans::flags" title='rpc_proxy_ans::flags' data-ref="rpc_proxy_ans::flags">flags</dfn>;	<i>// +16 = small error packet, +8 = flush immediately</i></td></tr>
+<tr><th id="95">95</th><td>  <em>long</em> <em>long</em> <dfn class="decl" id="rpc_proxy_ans::ext_conn_id" title='rpc_proxy_ans::ext_conn_id' data-ref="rpc_proxy_ans::ext_conn_id">ext_conn_id</dfn>;</td></tr>
+<tr><th id="96">96</th><td>  <em>int</em> <dfn class="decl" id="rpc_proxy_ans::data" title='rpc_proxy_ans::data' data-ref="rpc_proxy_ans::data">data</dfn>[];</td></tr>
+<tr><th id="97">97</th><td>};</td></tr>
+<tr><th id="98">98</th><td></td></tr>
+<tr><th id="99">99</th><td><b>struct</b> <dfn class="type def" id="rpc_close_conn" title='rpc_close_conn' data-ref="rpc_close_conn">rpc_close_conn</dfn> {</td></tr>
+<tr><th id="100">100</th><td>  <em>int</em> <dfn class="decl" id="rpc_close_conn::type" title='rpc_close_conn::type' data-ref="rpc_close_conn::type">type</dfn>;	<i>// RPC_CLOSE_CONN</i></td></tr>
+<tr><th id="101">101</th><td>  <em>long</em> <em>long</em> <dfn class="decl" id="rpc_close_conn::ext_conn_id" title='rpc_close_conn::ext_conn_id' data-ref="rpc_close_conn::ext_conn_id">ext_conn_id</dfn>;</td></tr>
+<tr><th id="102">102</th><td>};</td></tr>
+<tr><th id="103">103</th><td></td></tr>
+<tr><th id="104">104</th><td><b>struct</b> <dfn class="type def" id="rpc_close_ext" title='rpc_close_ext' data-ref="rpc_close_ext">rpc_close_ext</dfn> {</td></tr>
+<tr><th id="105">105</th><td>  <em>int</em> <dfn class="decl" id="rpc_close_ext::type" title='rpc_close_ext::type' data-ref="rpc_close_ext::type">type</dfn>;	<i>// RPC_CLOSE_EXT</i></td></tr>
+<tr><th id="106">106</th><td>  <em>long</em> <em>long</em> <dfn class="decl" id="rpc_close_ext::ext_conn_id" title='rpc_close_ext::ext_conn_id' data-ref="rpc_close_ext::ext_conn_id">ext_conn_id</dfn>;</td></tr>
+<tr><th id="107">107</th><td>};</td></tr>
+<tr><th id="108">108</th><td></td></tr>
+<tr><th id="109">109</th><td><b>struct</b> <dfn class="type def" id="rpc_simple_ack" title='rpc_simple_ack' data-ref="rpc_simple_ack">rpc_simple_ack</dfn> {</td></tr>
+<tr><th id="110">110</th><td>  <em>int</em> <dfn class="decl" id="rpc_simple_ack::type" title='rpc_simple_ack::type' data-ref="rpc_simple_ack::type">type</dfn>;	<i>// RPC_SIMPLE_ACK</i></td></tr>
+<tr><th id="111">111</th><td>  <em>long</em> <em>long</em> <dfn class="decl" id="rpc_simple_ack::ext_conn_id" title='rpc_simple_ack::ext_conn_id' data-ref="rpc_simple_ack::ext_conn_id">ext_conn_id</dfn>;</td></tr>
+<tr><th id="112">112</th><td>  <em>int</em> <dfn class="decl" id="rpc_simple_ack::confirm_key" title='rpc_simple_ack::confirm_key' data-ref="rpc_simple_ack::confirm_key">confirm_key</dfn>;</td></tr>
+<tr><th id="113">113</th><td>};</td></tr>
+<tr><th id="114">114</th><td></td></tr>
+<tr><th id="115">115</th><td><u>#pragma pack(pop)</u></td></tr>
+<tr><th id="116">116</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='mtproto-config.c.html'>MTProxy/mtproto/mtproto-config.c</a><br/>Generated on <em>2018-Jun-02</em> from project MTProxy revision <em>842f343decf6c463bdecf1862e357c4a03e4bc97</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

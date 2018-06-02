@@ -1,0 +1,2 @@
+<dec f='MTProxy/net/net-events.h' l='95' type='int epoll_close(int fd)'/>
+<def f='MTProxy/net/net-events.c' l='291' ll='305' type='int epoll_close(int fd)'/>

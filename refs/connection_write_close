@@ -1,0 +1,8 @@
+<dec f='MTProxy/net/net-connections.h' l='366' type='void connection_write_close(connection_job_t C)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1336' u='c' c='http_query_job_run'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1538' u='c' c='mtproto_http_alarm'/>
+<def f='MTProxy/net/net-connections.c' l='307' ll='319' type='void connection_write_close(connection_job_t C)'/>
+<doc f='MTProxy/net/net-connections.c' l='305'>/* }}} */</doc>
+<doc f='MTProxy/net/net-connections.c' l='307'>/* {{{ */</doc>
+<use f='MTProxy/net/net-http-server.c' l='627' u='c' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='872' u='c' c='http_flush'/>

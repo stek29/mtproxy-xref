@@ -1,0 +1,8 @@
+<dec f='MTProxy/net/net-connections.h' l='140' type='int (*)(connection_job_t)'/>
+<offset>512</offset>
+<doc f='MTProxy/net/net-connections.h' l='140'>/* initializes newly created outbound connection */</doc>
+<use f='MTProxy/net/net-connections.c' l='702' u='r' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1514' u='r' c='check_conn_functions'/>
+<use f='MTProxy/net/net-connections.c' l='1515' u='w' c='check_conn_functions'/>
+<use f='MTProxy/net/net-http-server.c' l='70' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='79' u='w'/>

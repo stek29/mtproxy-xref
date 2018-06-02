@@ -1,0 +1,31 @@
+<dec f='include/ifaddrs.h' l='33' type='char *'/>
+<use f='MTProxy/net/net-events.c' l='749' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='749' u='r' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='749' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='749' u='r' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='749' u='r' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='749' u='r' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='749' u='r' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='749' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='749' u='r' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='749' u='r' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='749' u='r' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='749' u='r' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='749' u='r' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='749' u='r' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='749' u='r' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='749' u='r' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='749' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='749' u='r' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='749' u='r' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='749' u='r' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='749' u='r' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='749' u='r' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='749' u='r' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='758' u='r' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='762' u='r' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='787' u='r' c='get_my_ipv6'/>
+<use f='MTProxy/net/net-events.c' l='796' u='r' c='get_my_ipv6'/>
+<use f='MTProxy/net/net-events.c' l='801' u='r' c='get_my_ipv6'/>
+<offset>64</offset>
+<doc f='include/ifaddrs.h' l='33'>/* Name of this network interface.  */</doc>

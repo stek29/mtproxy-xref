@@ -1,0 +1,14 @@
+<dec f='MTProxy/common/md5.h' l='107' type='void md5_hmac(unsigned char * key, int keylen, unsigned char * input, int ilen, unsigned char * output)'/>
+<def f='MTProxy/common/md5.c' l='389' ll='399' type='void md5_hmac(unsigned char * key, int keylen, unsigned char * input, int ilen, unsigned char * output)'/>
+<doc f='MTProxy/common/md5.c' l='386'>/*
+ * output = HMAC-MD5( hmac key, input buffer )
+ */</doc>
+<doc f='MTProxy/common/md5.h' l='98'>/**
+ * \brief          Output = HMAC-MD5( hmac key, input buffer )
+ *
+ * \param key      HMAC secret key
+ * \param keylen   length of the HMAC key
+ * \param input    buffer holding the  data
+ * \param ilen     length of the input data
+ * \param output   HMAC-MD5 result
+ */</doc>

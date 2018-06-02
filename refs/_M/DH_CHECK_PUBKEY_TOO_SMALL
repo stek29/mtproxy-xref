@@ -1,0 +1,2 @@
+<dec f='include/openssl/dh.h' l='175'/>
+<doc f='include/openssl/dh.h' l='174'>/* DH_check_pub_key error codes */</doc>

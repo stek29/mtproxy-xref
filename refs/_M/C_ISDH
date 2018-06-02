@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-connections.h' l='82'/>
+<use f='MTProxy/net/net-connections.c' l='488' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='490' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='217' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='609' u='c'/>

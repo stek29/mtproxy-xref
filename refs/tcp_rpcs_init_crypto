@@ -1,0 +1,7 @@
+<dec f='MTProxy/net/net-tcp-rpc-server.h' l='65' type='int tcp_rpcs_init_crypto(connection_job_t c, struct tcp_rpc_nonce_packet * P)'/>
+<use f='MTProxy/engine/engine-net.c' l='118' u='r'/>
+<use f='MTProxy/engine/engine-net.c' l='118' u='r'/>
+<dec f='MTProxy/net/net-tcp-rpc-server.c' l='66' type='int tcp_rpcs_init_crypto(connection_job_t c, struct tcp_rpc_nonce_packet * P)'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='96'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='96'/>
+<def f='MTProxy/net/net-tcp-rpc-server.c' l='557' ll='646' type='int tcp_rpcs_init_crypto(connection_job_t C, struct tcp_rpc_nonce_packet * P)'/>

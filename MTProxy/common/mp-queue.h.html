@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>mp-queue.h source code [MTProxy/common/mp-queue.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="mp_queue,mp_queue_block,mp_queue_node,mp_semaphore "/>
+<link rel="stylesheet" href="https://code.woboq.org/data//qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="https://code.woboq.org/data//kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery-ui.min.js"></script>
+<script>var file = 'MTProxy/common/mp-queue.h'; var root_path = '../..'; var data_path = 'https://code.woboq.org/data/';</script>
+<script src='https://code.woboq.org/data//codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='..'>MTProxy</a>/<a href='./'>common</a>/<a href='mp-queue.h.html'>mp-queue.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>    This file is part of Mtproto-proxy Library.</i></td></tr>
+<tr><th id="3">3</th><td><i></i></td></tr>
+<tr><th id="4">4</th><td><i>    Mtproto-proxy Library is free software: you can redistribute it and/or modify</i></td></tr>
+<tr><th id="5">5</th><td><i>    it under the terms of the GNU Lesser General Public License as published by</i></td></tr>
+<tr><th id="6">6</th><td><i>    the Free Software Foundation, either version 2 of the License, or</i></td></tr>
+<tr><th id="7">7</th><td><i>    (at your option) any later version.</i></td></tr>
+<tr><th id="8">8</th><td><i></i></td></tr>
+<tr><th id="9">9</th><td><i>    Mtproto-proxy Library is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="10">10</th><td><i>    but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="11">11</th><td><i>    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</i></td></tr>
+<tr><th id="12">12</th><td><i>    GNU Lesser General Public License for more details.</i></td></tr>
+<tr><th id="13">13</th><td><i></i></td></tr>
+<tr><th id="14">14</th><td><i>    You should have received a copy of the GNU Lesser General Public License</i></td></tr>
+<tr><th id="15">15</th><td><i>    along with Mtproto-proxy Library.  If not, see &lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</i></td></tr>
+<tr><th id="16">16</th><td><i></i></td></tr>
+<tr><th id="17">17</th><td><i>    Copyright 2014-2018 Telegram Messenger Inc             </i></td></tr>
+<tr><th id="18">18</th><td><i>              2014-2015 Andrey Lopatin</i></td></tr>
+<tr><th id="19">19</th><td><i>              2014-2018 Nikolai Durov</i></td></tr>
+<tr><th id="20">20</th><td><i>*/</i></td></tr>
+<tr><th id="21">21</th><td></td></tr>
+<tr><th id="22">22</th><td><u>#pragma once</u></td></tr>
+<tr><th id="23">23</th><td></td></tr>
+<tr><th id="24">24</th><td><u>#define <dfn class="macro" id="_M/MPQ_USE_POSIX_SEMAPHORES" data-ref="_M/MPQ_USE_POSIX_SEMAPHORES">MPQ_USE_POSIX_SEMAPHORES</dfn>	0</u></td></tr>
+<tr><th id="25">25</th><td></td></tr>
+<tr><th id="26">26</th><td><u>#<span data-ppcond="26">if</span> <a class="macro" href="#24" title="0" data-ref="_M/MPQ_USE_POSIX_SEMAPHORES">MPQ_USE_POSIX_SEMAPHORES</a></u></td></tr>
+<tr><th id="27">27</th><td><u>#include &lt;semaphore.h&gt;</u></td></tr>
+<tr><th id="28">28</th><td><u>#<span data-ppcond="26">endif</span></u></td></tr>
+<tr><th id="29">29</th><td></td></tr>
+<tr><th id="30">30</th><td><b>typedef</b> <b>struct</b> <dfn class="type def" id="mp_semaphore" title='mp_semaphore' data-ref="mp_semaphore"><a class="type" href="#mp_semaphore" title='mp_semaphore' data-ref="mp_semaphore">mp_semaphore</a></dfn> {</td></tr>
+<tr><th id="31">31</th><td>  <em>volatile</em> <em>int</em> <dfn class="decl" id="mp_semaphore::value" title='mp_semaphore::value' data-ref="mp_semaphore::value">value</dfn>;</td></tr>
+<tr><th id="32">32</th><td>  <em>volatile</em> <em>int</em> <dfn class="decl" id="mp_semaphore::waiting" title='mp_semaphore::waiting' data-ref="mp_semaphore::waiting">waiting</dfn>;</td></tr>
+<tr><th id="33">33</th><td>} <dfn class="typedef" id="mp_sem_t" title='mp_sem_t' data-type='struct mp_semaphore' data-ref="mp_sem_t">mp_sem_t</dfn>;</td></tr>
+<tr><th id="34">34</th><td></td></tr>
+<tr><th id="35">35</th><td><u>#define <dfn class="macro" id="_M/THREAD_HPTRS" data-ref="_M/THREAD_HPTRS">THREAD_HPTRS</dfn>	16</u></td></tr>
+<tr><th id="36">36</th><td></td></tr>
+<tr><th id="37">37</th><td><u>#define <dfn class="macro" id="_M/MPQ_SMALL_BLOCK_SIZE" data-ref="_M/MPQ_SMALL_BLOCK_SIZE">MPQ_SMALL_BLOCK_SIZE</dfn>	64</u></td></tr>
+<tr><th id="38">38</th><td><u>#define	<dfn class="macro" id="_M/MPQ_BLOCK_SIZE" data-ref="_M/MPQ_BLOCK_SIZE">MPQ_BLOCK_SIZE</dfn>	4096	// must be a power of 2</u></td></tr>
+<tr><th id="39">39</th><td><u>#define <dfn class="macro" id="_M/MPQ_BLOCK_ALIGNMENT" data-ref="_M/MPQ_BLOCK_ALIGNMENT">MPQ_BLOCK_ALIGNMENT</dfn>	64</u></td></tr>
+<tr><th id="40">40</th><td></td></tr>
+<tr><th id="41">41</th><td><u>#<span data-ppcond="41">ifdef</span> <span class="macro" data-ref="_M/_LP64">_LP64</span></u></td></tr>
+<tr><th id="42">42</th><td><b>typedef</b> <em>int</em> <dfn class="typedef" id="int128_t" title='int128_t' data-type='__int128' data-ref="int128_t">int128_t</dfn> <b>__attribute__</b>((__mode__(TI)));</td></tr>
+<tr><th id="43">43</th><td><u># define <dfn class="macro" id="_M/DLONG" data-ref="_M/DLONG">DLONG</dfn> <a class="typedef" href="#int128_t" title='int128_t' data-type='__int128' data-ref="int128_t">int128_t</a></u></td></tr>
+<tr><th id="44">44</th><td><i>// # define DLONG __int128</i></td></tr>
+<tr><th id="45">45</th><td><u># define <dfn class="macro" id="_M/MQN_SAFE" data-ref="_M/MQN_SAFE">MQN_SAFE</dfn> (-1LL &lt;&lt; 63)</u></td></tr>
+<tr><th id="46">46</th><td><u>#<span data-ppcond="41">else</span></u></td></tr>
+<tr><th id="47">47</th><td><u># define DLONG long long</u></td></tr>
+<tr><th id="48">48</th><td><u># define MQN_SAFE (-1L &lt;&lt; 31)</u></td></tr>
+<tr><th id="49">49</th><td><u>#<span data-ppcond="41">endif</span></u></td></tr>
+<tr><th id="50">50</th><td></td></tr>
+<tr><th id="51">51</th><td></td></tr>
+<tr><th id="52">52</th><td><u>#define <dfn class="macro" id="_M/MQN_IDX_MASK" data-ref="_M/MQN_IDX_MASK">MQN_IDX_MASK</dfn> (~MQN_SAFE)</u></td></tr>
+<tr><th id="53">53</th><td></td></tr>
+<tr><th id="54">54</th><td><b>typedef</b> <em>void</em> *<dfn class="typedef" id="mqn_value_t" title='mqn_value_t' data-type='void *' data-ref="mqn_value_t">mqn_value_t</dfn>;</td></tr>
+<tr><th id="55">55</th><td></td></tr>
+<tr><th id="56">56</th><td><b>typedef</b> <b>struct</b> <dfn class="type def" id="mp_queue_node" title='mp_queue_node' data-ref="mp_queue_node"><a class="type" href="#mp_queue_node" title='mp_queue_node' data-ref="mp_queue_node">mp_queue_node</a></dfn> {</td></tr>
+<tr><th id="57">57</th><td>  <b>union</b> {</td></tr>
+<tr><th id="58">58</th><td>    <b>struct</b> {</td></tr>
+<tr><th id="59">59</th><td>      <em>long</em> <dfn class="decl" id="mp_queue_node::(anonymousunion)::(anonymous)::idx" title='mp_queue_node::(anonymous union)::(anonymous struct)::idx' data-ref="mp_queue_node::(anonymousunion)::(anonymous)::idx">idx</dfn>;</td></tr>
+<tr><th id="60">60</th><td>      <b>union</b> {</td></tr>
+<tr><th id="61">61</th><td>	<em>long</em> <dfn class="decl" id="mp_queue_node::(anonymousunion)::(anonymousstruct)::(anonymous)::mqn_value" title='mp_queue_node::(anonymous union)::(anonymous struct)::(anonymous union)::mqn_value' data-ref="mp_queue_node::(anonymousunion)::(anonymousstruct)::(anonymous)::mqn_value">mqn_value</dfn>;</td></tr>
+<tr><th id="62">62</th><td>	<em>void</em> *<dfn class="decl" id="mp_queue_node::(anonymousunion)::(anonymousstruct)::(anonymous)::mqn_ptr" title='mp_queue_node::(anonymous union)::(anonymous struct)::(anonymous union)::mqn_ptr' data-ref="mp_queue_node::(anonymousunion)::(anonymousstruct)::(anonymous)::mqn_ptr">mqn_ptr</dfn>;</td></tr>
+<tr><th id="63">63</th><td>	<a class="typedef" href="#mqn_value_t" title='mqn_value_t' data-type='void *' data-ref="mqn_value_t">mqn_value_t</a> <dfn class="decl" id="mp_queue_node::(anonymousunion)::(anonymousstruct)::(anonymous)::val" title='mp_queue_node::(anonymous union)::(anonymous struct)::(anonymous union)::val' data-ref="mp_queue_node::(anonymousunion)::(anonymousstruct)::(anonymous)::val">val</dfn>;</td></tr>
+<tr><th id="64">64</th><td>      };</td></tr>
+<tr><th id="65">65</th><td>    };</td></tr>
+<tr><th id="66">66</th><td>    <a class="macro" href="#43" title="int128_t" data-ref="_M/DLONG">DLONG</a> <dfn class="decl" id="mp_queue_node::(anonymous)::pair" title='mp_queue_node::(anonymous union)::pair' data-ref="mp_queue_node::(anonymous)::pair">pair</dfn>;</td></tr>
+<tr><th id="67">67</th><td>  };</td></tr>
+<tr><th id="68">68</th><td>} <dfn class="typedef" id="mpq_node_t" title='mpq_node_t' data-type='struct mp_queue_node' data-ref="mpq_node_t">mpq_node_t</dfn>;</td></tr>
+<tr><th id="69">69</th><td></td></tr>
+<tr><th id="70">70</th><td><u>#define <dfn class="macro" id="_M/MQ_BLOCK_USED_MAGIC" data-ref="_M/MQ_BLOCK_USED_MAGIC">MQ_BLOCK_USED_MAGIC</dfn>	0x1ebacaef</u></td></tr>
+<tr><th id="71">71</th><td><u>#define <dfn class="macro" id="_M/MQ_BLOCK_FREE_MAGIC" data-ref="_M/MQ_BLOCK_FREE_MAGIC">MQ_BLOCK_FREE_MAGIC</dfn>	0x2e4afeda</u></td></tr>
+<tr><th id="72">72</th><td><u>#define <dfn class="macro" id="_M/MQ_BLOCK_GARBAGE_MAGIC" data-ref="_M/MQ_BLOCK_GARBAGE_MAGIC">MQ_BLOCK_GARBAGE_MAGIC</dfn>	0x3a04dc7d</u></td></tr>
+<tr><th id="73">73</th><td><u>#define <dfn class="macro" id="_M/MQ_BLOCK_PREPARED_MAGIC" data-ref="_M/MQ_BLOCK_PREPARED_MAGIC">MQ_BLOCK_PREPARED_MAGIC</dfn>	0x4b9b13cd</u></td></tr>
+<tr><th id="74">74</th><td></td></tr>
+<tr><th id="75">75</th><td><u>#define <dfn class="macro" id="_M/MQ_MAGIC" data-ref="_M/MQ_MAGIC">MQ_MAGIC</dfn>	0x1aed9b43</u></td></tr>
+<tr><th id="76">76</th><td><u>#define <dfn class="macro" id="_M/MQ_MAGIC_SEM" data-ref="_M/MQ_MAGIC_SEM">MQ_MAGIC_SEM</dfn>	0x1aedcd21</u></td></tr>
+<tr><th id="77">77</th><td></td></tr>
+<tr><th id="78">78</th><td><b>struct</b> <dfn class="type def" id="mp_queue_block" title='mp_queue_block' data-ref="mp_queue_block">mp_queue_block</dfn> {</td></tr>
+<tr><th id="79">79</th><td>  <em>long</em> <dfn class="decl" id="mp_queue_block::mqb_head" title='mp_queue_block::mqb_head' data-ref="mp_queue_block::mqb_head">mqb_head</dfn> <b>__attribute__</b> ((aligned(<var>64</var>)));</td></tr>
+<tr><th id="80">80</th><td>  <em>int</em> <dfn class="decl" id="mp_queue_block::mqb_magic" title='mp_queue_block::mqb_magic' data-ref="mp_queue_block::mqb_magic">mqb_magic</dfn>;</td></tr>
+<tr><th id="81">81</th><td>  <em>int</em> <dfn class="decl" id="mp_queue_block::mqb_align_bytes" title='mp_queue_block::mqb_align_bytes' data-ref="mp_queue_block::mqb_align_bytes">mqb_align_bytes</dfn>;</td></tr>
+<tr><th id="82">82</th><td>  <em>int</em> <dfn class="decl" id="mp_queue_block::mqb_size" title='mp_queue_block::mqb_size' data-ref="mp_queue_block::mqb_size">mqb_size</dfn>;  <i>// power of 2; one of MPQ_BLOCK_SIZE or MPQ_SMALL_BLOCK_SIZE</i></td></tr>
+<tr><th id="83">83</th><td>  <em>long</em> <dfn class="decl" id="mp_queue_block::mqb_tail" title='mp_queue_block::mqb_tail' data-ref="mp_queue_block::mqb_tail">mqb_tail</dfn> <b>__attribute__</b> ((aligned(<var>64</var>)));</td></tr>
+<tr><th id="84">84</th><td>  <b>struct</b> <a class="type" href="#mp_queue_block" title='mp_queue_block' data-ref="mp_queue_block">mp_queue_block</a> *<dfn class="decl" id="mp_queue_block::mqb_next" title='mp_queue_block::mqb_next' data-ref="mp_queue_block::mqb_next">mqb_next</dfn>;</td></tr>
+<tr><th id="85">85</th><td>  <em>int</em> <dfn class="decl" id="mp_queue_block::mqb_next_allocators" title='mp_queue_block::mqb_next_allocators' data-ref="mp_queue_block::mqb_next_allocators">mqb_next_allocators</dfn>;</td></tr>
+<tr><th id="86">86</th><td>  <a class="typedef" href="#mpq_node_t" title='mpq_node_t' data-type='struct mp_queue_node' data-ref="mpq_node_t">mpq_node_t</a> <dfn class="decl" id="mp_queue_block::mqb_nodes" title='mp_queue_block::mqb_nodes' data-ref="mp_queue_block::mqb_nodes">mqb_nodes</dfn>[<a class="macro" href="#38" title="4096" data-ref="_M/MPQ_BLOCK_SIZE">MPQ_BLOCK_SIZE</a>] <b>__attribute__</b> ((aligned(<var>64</var>)));</td></tr>
+<tr><th id="87">87</th><td>};</td></tr>
+<tr><th id="88">88</th><td></td></tr>
+<tr><th id="89">89</th><td><b>struct</b> <dfn class="type def" id="mp_queue" title='mp_queue' data-ref="mp_queue">mp_queue</dfn> {</td></tr>
+<tr><th id="90">90</th><td>  <b>struct</b> <a class="type" href="#mp_queue_block" title='mp_queue_block' data-ref="mp_queue_block">mp_queue_block</a> *<dfn class="decl" id="mp_queue::mq_head" title='mp_queue::mq_head' data-ref="mp_queue::mq_head">mq_head</dfn> <b>__attribute__</b> ((aligned(<var>64</var>)));</td></tr>
+<tr><th id="91">91</th><td>  <em>int</em> <dfn class="decl" id="mp_queue::mq_magic" title='mp_queue::mq_magic' data-ref="mp_queue::mq_magic">mq_magic</dfn>;</td></tr>
+<tr><th id="92">92</th><td>  <b>struct</b> <a class="type" href="#mp_queue_block" title='mp_queue_block' data-ref="mp_queue_block">mp_queue_block</a> *<dfn class="decl" id="mp_queue::mq_tail" title='mp_queue::mq_tail' data-ref="mp_queue::mq_tail">mq_tail</dfn> <b>__attribute__</b> ((aligned(<var>64</var>)));</td></tr>
+<tr><th id="93">93</th><td><u>#<span data-ppcond="93">if</span> <a class="macro" href="#24" title="0" data-ref="_M/MPQ_USE_POSIX_SEMAPHORES">MPQ_USE_POSIX_SEMAPHORES</a></u></td></tr>
+<tr><th id="94">94</th><td>  sem_t mq_sem <b>__attribute__</b> ((aligned(<var>64</var>)));</td></tr>
+<tr><th id="95">95</th><td><u>#<span data-ppcond="93">else</span></u></td></tr>
+<tr><th id="96">96</th><td>  <a class="typedef" href="#mp_sem_t" title='mp_sem_t' data-type='struct mp_semaphore' data-ref="mp_sem_t">mp_sem_t</a> <dfn class="decl" id="mp_queue::mq_sem" title='mp_queue::mq_sem' data-ref="mp_queue::mq_sem">mq_sem</dfn> <b>__attribute__</b> ((aligned(<var>64</var>)));</td></tr>
+<tr><th id="97">97</th><td><u>#<span data-ppcond="93">endif</span></u></td></tr>
+<tr><th id="98">98</th><td>  };</td></tr>
+<tr><th id="99">99</th><td></td></tr>
+<tr><th id="100">100</th><td><b>extern</b> <em>volatile</em> <em>int</em> <dfn class="decl" id="mpq_blocks_allocated" title='mpq_blocks_allocated' data-ref="mpq_blocks_allocated">mpq_blocks_allocated</dfn>, <dfn class="decl" id="mpq_blocks_allocated_max" title='mpq_blocks_allocated_max' data-ref="mpq_blocks_allocated_max">mpq_blocks_allocated_max</dfn>, <dfn class="decl" id="mpq_blocks_allocations" title='mpq_blocks_allocations' data-ref="mpq_blocks_allocations">mpq_blocks_allocations</dfn>, <dfn class="decl" id="mpq_blocks_true_allocations" title='mpq_blocks_true_allocations' data-ref="mpq_blocks_true_allocations">mpq_blocks_true_allocations</dfn>, <dfn class="decl" id="mpq_blocks_wasted" title='mpq_blocks_wasted' data-ref="mpq_blocks_wasted">mpq_blocks_wasted</dfn>, <dfn class="decl" id="mpq_blocks_prepared" title='mpq_blocks_prepared' data-ref="mpq_blocks_prepared">mpq_blocks_prepared</dfn>;</td></tr>
+<tr><th id="101">101</th><td><b>extern</b> <em>volatile</em> <em>int</em> <dfn class="decl" id="mpq_small_blocks_allocated" title='mpq_small_blocks_allocated' data-ref="mpq_small_blocks_allocated">mpq_small_blocks_allocated</dfn>, <dfn class="decl" id="mpq_small_blocks_allocated_max" title='mpq_small_blocks_allocated_max' data-ref="mpq_small_blocks_allocated_max">mpq_small_blocks_allocated_max</dfn>;</td></tr>
+<tr><th id="102">102</th><td></td></tr>
+<tr><th id="103">103</th><td><u>#define <dfn class="macro" id="_M/MAX_MPQ_THREADS" data-ref="_M/MAX_MPQ_THREADS">MAX_MPQ_THREADS</dfn>	256</u></td></tr>
+<tr><th id="104">104</th><td><b>extern</b> <b>__thread</b> <em>int</em> <dfn class="decl" id="mpq_this_thread_id" title='mpq_this_thread_id' data-ref="mpq_this_thread_id">mpq_this_thread_id</dfn>;</td></tr>
+<tr><th id="105">105</th><td><b>extern</b> <b>__thread</b> <em>void</em> **<dfn class="decl" id="thread_hazard_pointers" title='thread_hazard_pointers' data-ref="thread_hazard_pointers">thread_hazard_pointers</dfn>;</td></tr>
+<tr><th id="106">106</th><td><b>extern</b> <em>volatile</em> <em>int</em> <dfn class="decl" id="mpq_threads" title='mpq_threads' data-ref="mpq_threads">mpq_threads</dfn>;</td></tr>
+<tr><th id="107">107</th><td></td></tr>
+<tr><th id="108">108</th><td><i>/* initialize this thread id and return it */</i></td></tr>
+<tr><th id="109">109</th><td><em>int</em> <dfn class="decl" id="get_this_thread_id" title='get_this_thread_id' data-ref="get_this_thread_id">get_this_thread_id</dfn> (<em>void</em>);</td></tr>
+<tr><th id="110">110</th><td></td></tr>
+<tr><th id="111">111</th><td><i>/* functions for one mp_queue_block */</i></td></tr>
+<tr><th id="112">112</th><td><b>struct</b> <a class="type" href="#mp_queue_block" title='mp_queue_block' data-ref="mp_queue_block">mp_queue_block</a> *<dfn class="decl" id="alloc_mpq_block" title='alloc_mpq_block' data-ref="alloc_mpq_block">alloc_mpq_block</dfn> (<a class="typedef" href="#mqn_value_t" title='mqn_value_t' data-type='void *' data-ref="mqn_value_t">mqn_value_t</a> <dfn class="local col2 decl" id="1592first_val" title='first_val' data-type='mqn_value_t' data-ref="1592first_val">first_val</dfn>, <em>int</em> <dfn class="local col3 decl" id="1593allow_recursion" title='allow_recursion' data-type='int' data-ref="1593allow_recursion">allow_recursion</dfn>, <em>int</em> <dfn class="local col4 decl" id="1594is_small" title='is_small' data-type='int' data-ref="1594is_small">is_small</dfn>);</td></tr>
+<tr><th id="113">113</th><td><em>void</em> <dfn class="decl" id="free_mpq_block" title='free_mpq_block' data-ref="free_mpq_block">free_mpq_block</dfn> (<b>struct</b> <a class="type" href="#mp_queue_block" title='mp_queue_block' data-ref="mp_queue_block">mp_queue_block</a> *<dfn class="local col5 decl" id="1595QB" title='QB' data-type='struct mp_queue_block *' data-ref="1595QB">QB</dfn>);</td></tr>
+<tr><th id="114">114</th><td></td></tr>
+<tr><th id="115">115</th><td><a class="typedef" href="#mqn_value_t" title='mqn_value_t' data-type='void *' data-ref="mqn_value_t">mqn_value_t</a> <dfn class="decl" id="mpq_block_pop" title='mpq_block_pop' data-ref="mpq_block_pop">mpq_block_pop</dfn> (<b>struct</b> <a class="type" href="#mp_queue_block" title='mp_queue_block' data-ref="mp_queue_block">mp_queue_block</a> *<dfn class="local col6 decl" id="1596QB" title='QB' data-type='struct mp_queue_block *' data-ref="1596QB">QB</dfn>);</td></tr>
+<tr><th id="116">116</th><td><em>long</em> <dfn class="decl" id="mpq_block_push" title='mpq_block_push' data-ref="mpq_block_push">mpq_block_push</dfn> (<b>struct</b> <a class="type" href="#mp_queue_block" title='mp_queue_block' data-ref="mp_queue_block">mp_queue_block</a> *<dfn class="local col7 decl" id="1597QB" title='QB' data-type='struct mp_queue_block *' data-ref="1597QB">QB</dfn>, <a class="typedef" href="#mqn_value_t" title='mqn_value_t' data-type='void *' data-ref="mqn_value_t">mqn_value_t</a> <dfn class="local col8 decl" id="1598val" title='val' data-type='mqn_value_t' data-ref="1598val">val</dfn>);</td></tr>
+<tr><th id="117">117</th><td></td></tr>
+<tr><th id="118">118</th><td><i>/* functions for mp_queue = list of mp_queue_block's */</i></td></tr>
+<tr><th id="119">119</th><td><em>void</em> <dfn class="decl" id="init_mp_queue" title='init_mp_queue' data-ref="init_mp_queue">init_mp_queue</dfn> (<b>struct</b> <a class="type" href="#mp_queue" title='mp_queue' data-ref="mp_queue">mp_queue</a> *<dfn class="local col9 decl" id="1599MQ" title='MQ' data-type='struct mp_queue *' data-ref="1599MQ">MQ</dfn>);</td></tr>
+<tr><th id="120">120</th><td><b>struct</b> <a class="type" href="#mp_queue" title='mp_queue' data-ref="mp_queue">mp_queue</a> *<dfn class="decl" id="alloc_mp_queue" title='alloc_mp_queue' data-ref="alloc_mp_queue">alloc_mp_queue</dfn> (<em>void</em>);</td></tr>
+<tr><th id="121">121</th><td><b>struct</b> <a class="type" href="#mp_queue" title='mp_queue' data-ref="mp_queue">mp_queue</a> *<dfn class="decl" id="alloc_mp_queue_w" title='alloc_mp_queue_w' data-ref="alloc_mp_queue_w">alloc_mp_queue_w</dfn> (<em>void</em>);</td></tr>
+<tr><th id="122">122</th><td><em>void</em> <dfn class="decl" id="init_mp_queue_w" title='init_mp_queue_w' data-ref="init_mp_queue_w">init_mp_queue_w</dfn> (<b>struct</b> <a class="type" href="#mp_queue" title='mp_queue' data-ref="mp_queue">mp_queue</a> *<dfn class="local col0 decl" id="1600MQ" title='MQ' data-type='struct mp_queue *' data-ref="1600MQ">MQ</dfn>);</td></tr>
+<tr><th id="123">123</th><td><em>void</em> <dfn class="decl" id="clear_mp_queue" title='clear_mp_queue' data-ref="clear_mp_queue">clear_mp_queue</dfn> (<b>struct</b> <a class="type" href="#mp_queue" title='mp_queue' data-ref="mp_queue">mp_queue</a> *<dfn class="local col1 decl" id="1601MQ" title='MQ' data-type='struct mp_queue *' data-ref="1601MQ">MQ</dfn>); <i>// frees all mpq block chain; invoke only if nobody else is using mp-queue</i></td></tr>
+<tr><th id="124">124</th><td><em>void</em> <dfn class="decl" id="free_mp_queue" title='free_mp_queue' data-ref="free_mp_queue">free_mp_queue</dfn> (<b>struct</b> <a class="type" href="#mp_queue" title='mp_queue' data-ref="mp_queue">mp_queue</a> *<dfn class="local col2 decl" id="1602MQ" title='MQ' data-type='struct mp_queue *' data-ref="1602MQ">MQ</dfn>);  <i>// same + invoke free()</i></td></tr>
+<tr><th id="125">125</th><td></td></tr>
+<tr><th id="126">126</th><td><i>// flags for mpq_push / mpq_pop functions</i></td></tr>
+<tr><th id="127">127</th><td><u>#define	<dfn class="macro" id="_M/MPQF_RECURSIVE" data-ref="_M/MPQF_RECURSIVE">MPQF_RECURSIVE</dfn>	8192</u></td></tr>
+<tr><th id="128">128</th><td><u>#define	<dfn class="macro" id="_M/MPQF_STORE_PTR" data-ref="_M/MPQF_STORE_PTR">MPQF_STORE_PTR</dfn>	4096</u></td></tr>
+<tr><th id="129">129</th><td><u>#define	<dfn class="macro" id="_M/MPQF_MAX_ITERATIONS" data-ref="_M/MPQF_MAX_ITERATIONS">MPQF_MAX_ITERATIONS</dfn>	(MPQF_STORE_PTR - 1)</u></td></tr>
+<tr><th id="130">130</th><td></td></tr>
+<tr><th id="131">131</th><td><em>long</em> <dfn class="decl" id="mpq_push" title='mpq_push' data-ref="mpq_push">mpq_push</dfn> (<b>struct</b> <a class="type" href="#mp_queue" title='mp_queue' data-ref="mp_queue">mp_queue</a> *<dfn class="local col3 decl" id="1603MQ" title='MQ' data-type='struct mp_queue *' data-ref="1603MQ">MQ</dfn>, <a class="typedef" href="#mqn_value_t" title='mqn_value_t' data-type='void *' data-ref="mqn_value_t">mqn_value_t</a> <dfn class="local col4 decl" id="1604val" title='val' data-type='mqn_value_t' data-ref="1604val">val</dfn>, <em>int</em> <dfn class="local col5 decl" id="1605flags" title='flags' data-type='int' data-ref="1605flags">flags</dfn>);</td></tr>
+<tr><th id="132">132</th><td><a class="typedef" href="#mqn_value_t" title='mqn_value_t' data-type='void *' data-ref="mqn_value_t">mqn_value_t</a> <dfn class="decl" id="mpq_pop" title='mpq_pop' data-ref="mpq_pop">mpq_pop</dfn> (<b>struct</b> <a class="type" href="#mp_queue" title='mp_queue' data-ref="mp_queue">mp_queue</a> *<dfn class="local col6 decl" id="1606MQ" title='MQ' data-type='struct mp_queue *' data-ref="1606MQ">MQ</dfn>, <em>int</em> <dfn class="local col7 decl" id="1607flags" title='flags' data-type='int' data-ref="1607flags">flags</dfn>);</td></tr>
+<tr><th id="133">133</th><td><em>int</em> <dfn class="decl" id="mpq_is_empty" title='mpq_is_empty' data-ref="mpq_is_empty">mpq_is_empty</dfn> (<b>struct</b> <a class="type" href="#mp_queue" title='mp_queue' data-ref="mp_queue">mp_queue</a> *<dfn class="local col8 decl" id="1608MQ" title='MQ' data-type='struct mp_queue *' data-ref="1608MQ">MQ</dfn>);</td></tr>
+<tr><th id="134">134</th><td></td></tr>
+<tr><th id="135">135</th><td><em>long</em> <dfn class="decl" id="mpq_push_w" title='mpq_push_w' data-ref="mpq_push_w">mpq_push_w</dfn> (<b>struct</b> <a class="type" href="#mp_queue" title='mp_queue' data-ref="mp_queue">mp_queue</a> *<dfn class="local col9 decl" id="1609MQ" title='MQ' data-type='struct mp_queue *' data-ref="1609MQ">MQ</dfn>, <a class="typedef" href="#mqn_value_t" title='mqn_value_t' data-type='void *' data-ref="mqn_value_t">mqn_value_t</a> <dfn class="local col0 decl" id="1610val" title='val' data-type='mqn_value_t' data-ref="1610val">val</dfn>, <em>int</em> <dfn class="local col1 decl" id="1611flags" title='flags' data-type='int' data-ref="1611flags">flags</dfn>);</td></tr>
+<tr><th id="136">136</th><td><a class="typedef" href="#mqn_value_t" title='mqn_value_t' data-type='void *' data-ref="mqn_value_t">mqn_value_t</a> <dfn class="decl" id="mpq_pop_w" title='mpq_pop_w' data-ref="mpq_pop_w">mpq_pop_w</dfn> (<b>struct</b> <a class="type" href="#mp_queue" title='mp_queue' data-ref="mp_queue">mp_queue</a> *<dfn class="local col2 decl" id="1612MQ" title='MQ' data-type='struct mp_queue *' data-ref="1612MQ">MQ</dfn>, <em>int</em> <dfn class="local col3 decl" id="1613flags" title='flags' data-type='int' data-ref="1613flags">flags</dfn>);</td></tr>
+<tr><th id="137">137</th><td><a class="typedef" href="#mqn_value_t" title='mqn_value_t' data-type='void *' data-ref="mqn_value_t">mqn_value_t</a> <dfn class="decl" id="mpq_pop_nw" title='mpq_pop_nw' data-ref="mpq_pop_nw">mpq_pop_nw</dfn> (<b>struct</b> <a class="type" href="#mp_queue" title='mp_queue' data-ref="mp_queue">mp_queue</a> *<dfn class="local col4 decl" id="1614MQ" title='MQ' data-type='struct mp_queue *' data-ref="1614MQ">MQ</dfn>, <em>int</em> <dfn class="local col5 decl" id="1615flags" title='flags' data-type='int' data-ref="1615flags">flags</dfn>);</td></tr>
+<tr><th id="138">138</th><td></td></tr>
+<tr><th id="139">139</th><td><em>int</em> <dfn class="decl" id="mp_sem_post" title='mp_sem_post' data-ref="mp_sem_post">mp_sem_post</dfn> (<a class="typedef" href="#mp_sem_t" title='mp_sem_t' data-type='struct mp_semaphore' data-ref="mp_sem_t">mp_sem_t</a> *<dfn class="local col6 decl" id="1616sem" title='sem' data-type='mp_sem_t *' data-ref="1616sem">sem</dfn>);</td></tr>
+<tr><th id="140">140</th><td><em>int</em> <dfn class="decl" id="mp_sem_wait" title='mp_sem_wait' data-ref="mp_sem_wait">mp_sem_wait</dfn> (<a class="typedef" href="#mp_sem_t" title='mp_sem_t' data-type='struct mp_semaphore' data-ref="mp_sem_t">mp_sem_t</a> *<dfn class="local col7 decl" id="1617sem" title='sem' data-type='mp_sem_t *' data-ref="1617sem">sem</dfn>);</td></tr>
+<tr><th id="141">141</th><td><em>int</em> <dfn class="decl" id="mp_sem_trywait" title='mp_sem_trywait' data-ref="mp_sem_trywait">mp_sem_trywait</dfn> (<a class="typedef" href="#mp_sem_t" title='mp_sem_t' data-type='struct mp_semaphore' data-ref="mp_sem_t">mp_sem_t</a> *<dfn class="local col8 decl" id="1618sem" title='sem' data-type='mp_sem_t *' data-ref="1618sem">sem</dfn>);</td></tr>
+<tr><th id="142">142</th><td></td></tr>
+<tr><th id="143">143</th><td><u>#define <dfn class="macro" id="_M/COMMON_HAZARD_PTR_NUM" data-ref="_M/COMMON_HAZARD_PTR_NUM">COMMON_HAZARD_PTR_NUM</dfn> 3</u></td></tr>
+<tr><th id="144">144</th><td><em>int</em> <dfn class="decl" id="is_hazard_ptr" title='is_hazard_ptr' data-ref="is_hazard_ptr">is_hazard_ptr</dfn> (<em>void</em> *<dfn class="local col9 decl" id="1619ptr" title='ptr' data-type='void *' data-ref="1619ptr">ptr</dfn>, <em>int</em> <dfn class="local col0 decl" id="1620a" title='a' data-type='int' data-ref="1620a">a</dfn>, <em>int</em> <dfn class="local col1 decl" id="1621b" title='b' data-type='int' data-ref="1621b">b</dfn>);</td></tr>
+<tr><th id="145">145</th><td><b>extern</b> <em>void</em> *<dfn class="decl" id="mqb_hazard_ptr" title='mqb_hazard_ptr' data-ref="mqb_hazard_ptr">mqb_hazard_ptr</dfn>[<a class="macro" href="#103" title="256" data-ref="_M/MAX_MPQ_THREADS">MAX_MPQ_THREADS</a>][<a class="macro" href="#35" title="16" data-ref="_M/THREAD_HPTRS">THREAD_HPTRS</a>];</td></tr>
+<tr><th id="146">146</th><td><em>void</em> *<dfn class="decl" id="get_ptr_multithread_copy" title='get_ptr_multithread_copy' data-ref="get_ptr_multithread_copy">get_ptr_multithread_copy</dfn> (<em>void</em> **<dfn class="local col2 decl" id="1622ptr" title='ptr' data-type='void **' data-ref="1622ptr">ptr</dfn>, <em>void</em> (*<dfn class="local col3 decl" id="1623incref" title='incref' data-type='void (*)(void *)' data-ref="1623incref">incref</dfn>)(<em>void</em> *<dfn class="local col4 decl" id="1624ptr" title='ptr' data-type='void *' data-ref="1624ptr">ptr</dfn>));</td></tr>
+<tr><th id="147">147</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='common-stats.c.html'>MTProxy/common/common-stats.c</a><br/>Generated on <em>2018-Jun-02</em> from project MTProxy revision <em>842f343decf6c463bdecf1862e357c4a03e4bc97</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

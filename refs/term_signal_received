@@ -1,0 +1,4 @@
+<def f='MTProxy/net/net-events.c' l='312' ll='314' type='int term_signal_received()'/>
+<use f='MTProxy/net/net-events.c' l='326' u='c' c='epoll_runqueue'/>
+<use f='MTProxy/net/net-events.c' l='406' u='c' c='epoll_work'/>
+<use f='MTProxy/net/net-events.c' l='408' u='c' c='epoll_work'/>

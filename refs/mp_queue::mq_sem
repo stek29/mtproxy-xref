@@ -1,0 +1,6 @@
+<dec f='MTProxy/common/mp-queue.h' l='96' type='mp_sem_t'/>
+<offset>1024</offset>
+<use f='MTProxy/common/mp-queue.c' l='607' u='a' c='mpq_pop_w'/>
+<use f='MTProxy/common/mp-queue.c' l='620' u='a' c='mpq_pop_w'/>
+<use f='MTProxy/common/mp-queue.c' l='641' u='a' c='mpq_pop_nw'/>
+<use f='MTProxy/common/mp-queue.c' l='664' u='a' c='mpq_push_w'/>

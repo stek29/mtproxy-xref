@@ -1,0 +1,5 @@
+<dec f='MTProxy/engine/engine-rpc.h' l='66' type='int default_tl_tcp_rpcs_execute(connection_job_t c, int op, struct raw_message * raw)'/>
+<use f='MTProxy/engine/engine-net.c' l='114' u='r'/>
+<use f='MTProxy/engine/engine-net.c' l='114' u='r'/>
+<def f='MTProxy/engine/engine-rpc.c' l='836' ll='846' type='int default_tl_tcp_rpcs_execute(connection_job_t c, int op, struct raw_message * raw)'/>
+<doc f='MTProxy/engine/engine-rpc.c' l='836'>/* {{{ */</doc>

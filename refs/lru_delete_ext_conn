@@ -1,0 +1,6 @@
+<dec f='MTProxy/mtproto/mtproto-proxy.c' l='196' type='void lru_delete_ext_conn(struct ext_connection * Ext)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='246' u='c' c='get_ext_connection_by_in_conn_id'/>
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='1852' ll='1858' type='void lru_delete_ext_conn(struct ext_connection * Ext)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1861' u='c' c='lru_insert_ext_conn'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1871' u='c' c='lru_delete_conn'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1897' u='c' c='check_all_conn_buffers'/>

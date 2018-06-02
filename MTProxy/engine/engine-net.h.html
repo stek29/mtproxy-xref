@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>engine-net.h source code [MTProxy/engine/engine-net.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="https://code.woboq.org/data//qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="https://code.woboq.org/data//kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery-ui.min.js"></script>
+<script>var file = 'MTProxy/engine/engine-net.h'; var root_path = '../..'; var data_path = 'https://code.woboq.org/data/';</script>
+<script src='https://code.woboq.org/data//codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='..'>MTProxy</a>/<a href='./'>engine</a>/<a href='engine-net.h.html'>engine-net.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>    This file is part of Mtproto-proxy Library.</i></td></tr>
+<tr><th id="3">3</th><td><i></i></td></tr>
+<tr><th id="4">4</th><td><i>    Mtproto-proxy Library is free software: you can redistribute it and/or modify</i></td></tr>
+<tr><th id="5">5</th><td><i>    it under the terms of the GNU Lesser General Public License as published by</i></td></tr>
+<tr><th id="6">6</th><td><i>    the Free Software Foundation, either version 2 of the License, or</i></td></tr>
+<tr><th id="7">7</th><td><i>    (at your option) any later version.</i></td></tr>
+<tr><th id="8">8</th><td><i></i></td></tr>
+<tr><th id="9">9</th><td><i>    Mtproto-proxy Library is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="10">10</th><td><i>    but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="11">11</th><td><i>    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</i></td></tr>
+<tr><th id="12">12</th><td><i>    GNU Lesser General Public License for more details.</i></td></tr>
+<tr><th id="13">13</th><td><i></i></td></tr>
+<tr><th id="14">14</th><td><i>    You should have received a copy of the GNU Lesser General Public License</i></td></tr>
+<tr><th id="15">15</th><td><i>    along with Mtproto-proxy Library.  If not, see &lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</i></td></tr>
+<tr><th id="16">16</th><td><i></i></td></tr>
+<tr><th id="17">17</th><td><i>    Copyright 2013 Vkontakte Ltd</i></td></tr>
+<tr><th id="18">18</th><td><i>              2013 Vitaliy Valtman</i></td></tr>
+<tr><th id="19">19</th><td><i>              2013 Anton Maydell</i></td></tr>
+<tr><th id="20">20</th><td><i>    </i></td></tr>
+<tr><th id="21">21</th><td><i>    Copyright 2014 Telegram Messenger Inc             </i></td></tr>
+<tr><th id="22">22</th><td><i>              2014 Vitaly Valtman     </i></td></tr>
+<tr><th id="23">23</th><td><i>              2014 Anton Maydell</i></td></tr>
+<tr><th id="24">24</th><td><i>    </i></td></tr>
+<tr><th id="25">25</th><td><i>    Copyright 2015-2016 Telegram Messenger Inc             </i></td></tr>
+<tr><th id="26">26</th><td><i>              2015-2016 Vitaliy Valtman</i></td></tr>
+<tr><th id="27">27</th><td><i>*/</i></td></tr>
+<tr><th id="28">28</th><td><u>#pragma once</u></td></tr>
+<tr><th id="29">29</th><td></td></tr>
+<tr><th id="30">30</th><td><em>void</em> <a class="decl" href="engine-net.c.html#default_close_network_sockets" title='default_close_network_sockets' data-ref="default_close_network_sockets" id="default_close_network_sockets">default_close_network_sockets</a> (<em>void</em>);</td></tr>
+<tr><th id="31">31</th><td><em>void</em> <a class="decl" href="engine-net.c.html#engine_do_open_port" title='engine_do_open_port' data-ref="engine_do_open_port" id="engine_do_open_port">engine_do_open_port</a> (<em>void</em>);</td></tr>
+<tr><th id="32">32</th><td><em>int</em> <a class="decl" href="engine-net.c.html#try_open_port_range" title='try_open_port_range' data-ref="try_open_port_range" id="try_open_port_range">try_open_port_range</a> (<em>int</em> <dfn class="local col1 decl" id="1start_port" title='start_port' data-type='int' data-ref="1start_port">start_port</dfn>, <em>int</em> <dfn class="local col2 decl" id="2end_port" title='end_port' data-type='int' data-ref="2end_port">end_port</dfn>, <em>int</em> <dfn class="local col3 decl" id="3mod_port" title='mod_port' data-type='int' data-ref="3mod_port">mod_port</dfn>, <em>int</em> <dfn class="local col4 decl" id="4rem_port" title='rem_port' data-type='int' data-ref="4rem_port">rem_port</dfn>, <em>int</em> <dfn class="local col5 decl" id="5quit_on_fail" title='quit_on_fail' data-type='int' data-ref="5quit_on_fail">quit_on_fail</dfn>);</td></tr>
+<tr><th id="33">33</th><td><em>int</em> <a class="decl" href="engine-net.c.html#try_open_port" title='try_open_port' data-ref="try_open_port" id="try_open_port">try_open_port</a> (<em>int</em> <dfn class="local col6 decl" id="6port" title='port' data-type='int' data-ref="6port">port</dfn>, <em>int</em> <dfn class="local col7 decl" id="7quit_on_fail" title='quit_on_fail' data-type='int' data-ref="7quit_on_fail">quit_on_fail</dfn>);</td></tr>
+<tr><th id="34">34</th><td><em>int</em> <a class="decl" href="engine-net.c.html#get_port_mod" title='get_port_mod' data-ref="get_port_mod" id="get_port_mod">get_port_mod</a> (<em>void</em>);</td></tr>
+<tr><th id="35">35</th><td><em>void</em> <a class="decl" href="engine-net.c.html#engine_server_init" title='engine_server_init' data-ref="engine_server_init" id="engine_server_init">engine_server_init</a> (<em>void</em>);</td></tr>
+<tr><th id="36">36</th><td><em>void</em> <a class="decl" href="engine-net.c.html#engine_set_tcp_methods" title='engine_set_tcp_methods' data-ref="engine_set_tcp_methods" id="engine_set_tcp_methods">engine_set_tcp_methods</a> (<b>struct</b> <a class="type" href="../net/net-tcp-rpc-server.h.html#tcp_rpc_server_functions" title='tcp_rpc_server_functions' data-ref="tcp_rpc_server_functions">tcp_rpc_server_functions</a> *<dfn class="local col8 decl" id="8F" title='F' data-type='struct tcp_rpc_server_functions *' data-ref="8F">F</dfn>);</td></tr>
+<tr><th id="37">37</th><td><em>void</em> <a class="decl" href="engine-net.c.html#engine_set_http_fallback" title='engine_set_http_fallback' data-ref="engine_set_http_fallback" id="engine_set_http_fallback">engine_set_http_fallback</a> (<a class="typedef" href="../net/net-connections.h.html#conn_type_t" title='conn_type_t' data-type='struct conn_functions' data-ref="conn_type_t">conn_type_t</a> *<dfn class="local col9 decl" id="9http_type" title='http_type' data-type='conn_type_t *' data-ref="9http_type">http_type</dfn>, <b>struct</b> <a class="type" href="../net/net-http-server.h.html#http_server_functions" title='http_server_functions' data-ref="http_server_functions">http_server_functions</a> *<dfn class="local col0 decl" id="10http_functions" title='http_functions' data-type='struct http_server_functions *' data-ref="10http_functions">http_functions</dfn>);</td></tr>
+<tr><th id="38">38</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='engine-net.c.html'>MTProxy/engine/engine-net.c</a><br/>Generated on <em>2018-Jun-02</em> from project MTProxy revision <em>842f343decf6c463bdecf1862e357c4a03e4bc97</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

@@ -1,0 +1,3 @@
+<def f='MTProxy/mtproto/mtproto-config.c' l='127' ll='142' type='void clear_config(struct mf_config * MC, int do_destroy_targets)'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='399' u='c' c='do_reload_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='408' u='c' c='do_reload_config'/>

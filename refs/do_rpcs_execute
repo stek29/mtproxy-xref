@@ -1,0 +1,2 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='1475' ll='1494' type='int do_rpcs_execute(void * _data, int s_len)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1517' u='r' c='ext_rpcs_execute'/>

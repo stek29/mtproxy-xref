@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-msg.h' l='107' type='int rwm_push_data_ext(struct raw_message * raw, const void * data, int alloc_bytes, int prepend, int small_buffer, int std_buffer)'/>
+<def f='MTProxy/net/net-msg.c' l='363' ll='479' type='int rwm_push_data_ext(struct raw_message * raw, const void * data, int alloc_bytes, int prepend, int small_buffer, int std_buffer)'/>
+<use f='MTProxy/net/net-msg.c' l='483' u='c' c='rwm_push_data'/>
+<doc f='MTProxy/net/net-msg.c' l='361'>/* }}} */</doc>
+<doc f='MTProxy/net/net-msg.c' l='363'>/* {{{ */</doc>

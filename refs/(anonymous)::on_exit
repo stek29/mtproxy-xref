@@ -1,0 +1,5 @@
+<dec f='MTProxy/engine/engine.h' l='72' type='void (*)(void)'/>
+<offset>128</offset>
+<use f='MTProxy/engine/engine.c' l='416' u='r' c='terminate_job_run'/>
+<use f='MTProxy/engine/engine.c' l='417' u='r' c='terminate_job_run'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2295' u='w'/>

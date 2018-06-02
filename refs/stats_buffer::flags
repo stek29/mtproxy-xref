@@ -1,0 +1,6 @@
+<dec f='MTProxy/common/common-stats.h' l='74' type='int'/>
+<use f='MTProxy/common/common-stats.c' l='199' u='w' c='sb_init'/>
+<use f='MTProxy/common/common-stats.c' l='210' u='w' c='sb_alloc'/>
+<use f='MTProxy/common/common-stats.c' l='214' u='r' c='sb_release'/>
+<use f='MTProxy/common/common-stats.c' l='257' u='r' c='sb_printf'/>
+<offset>128</offset>

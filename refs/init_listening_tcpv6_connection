@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-connections.h' l='389' type='int init_listening_tcpv6_connection(int fd, conn_type_t * type, void * extra, int mode)'/>
+<use f='MTProxy/engine/engine.c' l='304' u='c' c='server_init'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2060' u='c' c='mtfront_pre_loop'/>
+<def f='MTProxy/net/net-connections.c' l='1380' ll='1382' type='int init_listening_tcpv6_connection(int fd, conn_type_t * type, void * extra, int mode)'/>

@@ -1,0 +1,18 @@
+<dec f='MTProxy/net/net-connections.h' l='182' type='conn_type_t *'/>
+<offset>384</offset>
+<doc f='MTProxy/net/net-connections.h' l='181'>//connection_job_t first_conn, last_conn;</doc>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='161' u='w'/>
+<use f='MTProxy/net/net-connections.c' l='651' u='r' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='702' u='r' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1771' u='r' c='find_target'/>
+<use f='MTProxy/net/net-connections.c' l='1808' u='r' c='find_target_ipv6'/>
+<use f='MTProxy/net/net-connections.c' l='1837' u='r' c='free_target'/>
+<use f='MTProxy/net/net-connections.c' l='1841' u='r' c='free_target'/>
+<use f='MTProxy/net/net-connections.c' l='1844' u='r' c='free_target'/>
+<use f='MTProxy/net/net-connections.c' l='1865' u='r' c='clean_unused_target'/>
+<use f='MTProxy/net/net-connections.c' l='1881' u='r' c='destroy_target'/>
+<use f='MTProxy/net/net-connections.c' l='1942' u='r' c='create_target'/>
+<use f='MTProxy/net/net-connections.c' l='1949' u='r' c='create_target'/>
+<use f='MTProxy/net/net-connections.c' l='1950' u='r' c='create_target'/>
+<use f='MTProxy/net/net-connections.c' l='1987' u='r' c='create_target'/>
+<use f='MTProxy/net/net-connections.c' l='1989' u='r' c='create_target'/>

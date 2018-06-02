@@ -1,0 +1,4 @@
+<def f='MTProxy/engine/engine.c' l='142' ll='147' type='void wakeup_main_thread()'/>
+<dec f='MTProxy/jobs/jobs.c' l='350' type='void wakeup_main_thread()'/>
+<def f='MTProxy/jobs/jobs.c' l='351' type='void wakeup_main_thread()'/>
+<use f='MTProxy/jobs/jobs.c' l='717' u='c' c='unlock_job'/>

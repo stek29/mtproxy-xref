@@ -1,0 +1,6 @@
+<dec f='MTProxy/jobs/jobs.h' l='221' type='pthread_t'/>
+<offset>0</offset>
+<use f='MTProxy/jobs/jobs.c' l='449' u='r' c='create_job_thread_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='474' u='a' c='create_job_thread_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='486' u='w' c='create_job_thread_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='764' u='r' c='job_send_signals'/>

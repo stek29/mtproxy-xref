@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-tcp-rpc-common.h' l='163' type='int tcp_rpc_write_packet_compact(connection_job_t C, struct raw_message * raw)'/>
+<def f='MTProxy/net/net-tcp-rpc-common.c' l='175' ll='202' type='int tcp_rpc_write_packet_compact(connection_job_t C, struct raw_message * raw)'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='69' u='r'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='69' u='r'/>

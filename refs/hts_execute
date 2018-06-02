@@ -1,0 +1,10 @@
+<dec f='MTProxy/mtproto/mtproto-proxy.c' l='993' type='int hts_execute(connection_job_t C, struct raw_message * msg, int op)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1000'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1000'/>
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='1399' ll='1466' type='int hts_execute(connection_job_t c, struct raw_message * msg, int op)'/>
+<doc f='MTProxy/mtproto/mtproto-proxy.c' l='987'>/*
+ *
+ *	HTTP INTERFACE
+ *
+ */</doc>
+<doc f='MTProxy/mtproto/mtproto-proxy.c' l='1398'>// NET-CPU context</doc>

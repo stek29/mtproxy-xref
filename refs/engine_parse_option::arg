@@ -1,0 +1,10 @@
+<dec f='MTProxy/common/server-functions.h' l='85' type='int'/>
+<offset>480</offset>
+<use f='MTProxy/common/server-functions.c' l='346' u='w' c='parse_option_internal'/>
+<use f='MTProxy/common/server-functions.c' l='515' u='r' c='parse_usage'/>
+<use f='MTProxy/common/server-functions.c' l='517' u='r' c='parse_usage'/>
+<use f='MTProxy/common/server-functions.c' l='548' u='r' c='parse_usage'/>
+<use f='MTProxy/common/server-functions.c' l='551' u='r' c='parse_usage'/>
+<use f='MTProxy/common/server-functions.c' l='649' u='r' c='parse_engine_options_long'/>
+<use f='MTProxy/common/server-functions.c' l='667' u='r' c='parse_engine_options_long'/>
+<use f='MTProxy/common/server-functions.c' l='677' u='r' c='parse_engine_options_long'/>

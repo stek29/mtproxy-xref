@@ -1,0 +1,13 @@
+<dec f='MTProxy/common/mp-queue.h' l='31' type='volatile int'/>
+<offset>0</offset>
+<use f='MTProxy/common/mp-queue.c' l='122' u='a' c='mp_sem_post'/>
+<use f='MTProxy/common/mp-queue.c' l='124' u='a' c='mp_sem_post'/>
+<use f='MTProxy/common/mp-queue.c' l='130' u='r' c='mp_sem_wait'/>
+<use f='MTProxy/common/mp-queue.c' l='133' u='a' c='mp_sem_wait'/>
+<use f='MTProxy/common/mp-queue.c' l='137' u='a' c='mp_sem_wait'/>
+<use f='MTProxy/common/mp-queue.c' l='141' u='r' c='mp_sem_wait'/>
+<use f='MTProxy/common/mp-queue.c' l='145' u='a' c='mp_sem_wait'/>
+<use f='MTProxy/common/mp-queue.c' l='147' u='r' c='mp_sem_wait'/>
+<use f='MTProxy/common/mp-queue.c' l='154' u='r' c='mp_sem_trywait'/>
+<use f='MTProxy/common/mp-queue.c' l='156' u='a' c='mp_sem_trywait'/>
+<use f='MTProxy/common/mp-queue.c' l='160' u='a' c='mp_sem_trywait'/>

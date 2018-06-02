@@ -1,0 +1,2 @@
+<dec f='include/openssl/x509_vfy.h' l='403'/>
+<doc f='include/openssl/x509_vfy.h' l='402'>/* Ignore unhandled critical extensions */</doc>

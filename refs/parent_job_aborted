@@ -1,0 +1,2 @@
+<def f='MTProxy/jobs/jobs.h' l='312' ll='314' type='int parent_job_aborted(job_t job)'/>
+<use f='MTProxy/engine/engine-rpc.c' l='354' u='c' c='process_act_atom_subjob'/>

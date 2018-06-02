@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-tcp-rpc-common.h' l='169' type='int tcp_add_dh_accept()'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='567' u='c' c='tcp_rpcc_init_outbound'/>
+<def f='MTProxy/net/net-tcp-rpc-common.c' l='246' ll='259' type='int tcp_add_dh_accept()'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='601' u='c' c='tcp_rpcs_init_crypto'/>

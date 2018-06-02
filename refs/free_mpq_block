@@ -1,0 +1,5 @@
+<dec f='MTProxy/common/mp-queue.h' l='113' type='void free_mpq_block(struct mp_queue_block * QB)'/>
+<def f='MTProxy/common/mp-queue.c' l='242' ll='253' type='void free_mpq_block(struct mp_queue_block * QB)'/>
+<use f='MTProxy/common/mp-queue.c' l='422' u='c' c='clear_mp_queue'/>
+<use f='MTProxy/common/mp-queue.c' l='466' u='c' c='mpq_pop'/>
+<use f='MTProxy/common/mp-queue.c' l='518' u='c' c='mpq_is_empty'/>

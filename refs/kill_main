@@ -1,0 +1,2 @@
+<def f='MTProxy/common/server-functions.c' l='185' ll='189' type='void kill_main()'/>
+<use f='MTProxy/common/server-functions.c' l='227' u='c' c='extended_debug_handler'/>

@@ -1,0 +1,17 @@
+<dec f='MTProxy/net/net-msg.h' l='111' type='int rwm_fetch_lookup(struct raw_message * raw, void * buf, int bytes)'/>
+<use f='MTProxy/common/tl-parse.c' l='155' u='c' c='__tl_raw_msg_fetch_lookup'/>
+<use f='MTProxy/common/tl-parse.c' l='239' u='c' c='__tl_raw_msg_str_copy_through'/>
+<def f='MTProxy/net/net-msg.c' l='1154' ll='1160' type='int rwm_fetch_lookup(struct raw_message * raw, void * buf, int bytes)'/>
+<doc f='MTProxy/net/net-msg.c' l='1152'>/* }}} */</doc>
+<doc f='MTProxy/net/net-msg.c' l='1154'>/* {{{ */</doc>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='122' u='c' c='tcp_rpcc_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='289' u='c' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='346' u='c' c='tcp_rpcc_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='392' u='c' c='tcp_rpcc_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='133' u='c' c='tcp_rpcs_compact_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='180' u='c' c='tcp_rpcs_compact_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='321' u='c' c='tcp_rpcs_compact_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='128' u='c' c='tcp_rpcs_process_nonce_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='277' u='c' c='tcp_rpcs_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='329' u='c' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='396' u='c' c='tcp_rpcs_parse_execute'/>

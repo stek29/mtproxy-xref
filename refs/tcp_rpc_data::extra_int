@@ -1,0 +1,14 @@
+<dec f='MTProxy/net/net-tcp-rpc-common.h' l='135' type='int'/>
+<offset>512</offset>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='950' u='r' c='mtfront_client_ready'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='951' u='w' c='mtfront_client_ready'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='970' u='r' c='mtfront_client_close'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='971' u='r' c='mtfront_client_close'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='983' u='w' c='mtfront_client_close'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1079' u='r' c='mtproto_proxy_rpc_ready'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1080' u='w' c='mtproto_proxy_rpc_ready'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1091' u='r' c='mtproto_proxy_rpc_close'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1092' u='r' c='mtproto_proxy_rpc_close'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1104' u='w' c='mtproto_proxy_rpc_close'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1639' u='r' c='choose_proxy_target'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1732' u='r' c='forward_tcp_query'/>

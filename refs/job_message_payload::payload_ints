@@ -1,0 +1,3 @@
+<dec f='MTProxy/jobs/jobs.h' l='413' type='int'/>
+<use f='MTProxy/jobs/jobs.h' l='420' u='w' c='job_message_payload_alloc'/>
+<offset>96</offset>

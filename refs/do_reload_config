@@ -1,0 +1,6 @@
+<dec f='MTProxy/mtproto/mtproto-config.h' l='67' type='int do_reload_config(int create_conn)'/>
+<def f='MTProxy/mtproto/mtproto-config.c' l='358' ll='423' type='int do_reload_config(int flags)'/>
+<doc f='MTProxy/mtproto/mtproto-config.c' l='357'>// flags: +1 = create targets and connections, +2 = allow proxies, +4 = allow proxies only, +16 = do not re-load file itself, +32 = preload config + perform syntax check, do not apply</doc>
+<doc f='MTProxy/mtproto/mtproto-config.h' l='65'>// (re)load configuration file</doc>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2215' u='c' c='mtfront_pre_init'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2263' u='c' c='mtfront_pre_start'/>

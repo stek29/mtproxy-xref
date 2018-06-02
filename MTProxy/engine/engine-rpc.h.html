@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>engine-rpc.h source code [MTProxy/engine/engine-rpc.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="query_work_params,tl_act_extra "/>
+<link rel="stylesheet" href="https://code.woboq.org/data//qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="https://code.woboq.org/data//kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery-ui.min.js"></script>
+<script>var file = 'MTProxy/engine/engine-rpc.h'; var root_path = '../..'; var data_path = 'https://code.woboq.org/data/';</script>
+<script src='https://code.woboq.org/data//codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='..'>MTProxy</a>/<a href='./'>engine</a>/<a href='engine-rpc.h.html'>engine-rpc.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>    This file is part of Mtproto-proxy Library.</i></td></tr>
+<tr><th id="3">3</th><td><i></i></td></tr>
+<tr><th id="4">4</th><td><i>    Mtproto-proxy Library is free software: you can redistribute it and/or modify</i></td></tr>
+<tr><th id="5">5</th><td><i>    it under the terms of the GNU Lesser General Public License as published by</i></td></tr>
+<tr><th id="6">6</th><td><i>    the Free Software Foundation, either version 2 of the License, or</i></td></tr>
+<tr><th id="7">7</th><td><i>    (at your option) any later version.</i></td></tr>
+<tr><th id="8">8</th><td><i></i></td></tr>
+<tr><th id="9">9</th><td><i>    Mtproto-proxy Library is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="10">10</th><td><i>    but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="11">11</th><td><i>    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</i></td></tr>
+<tr><th id="12">12</th><td><i>    GNU Lesser General Public License for more details.</i></td></tr>
+<tr><th id="13">13</th><td><i></i></td></tr>
+<tr><th id="14">14</th><td><i>    You should have received a copy of the GNU Lesser General Public License</i></td></tr>
+<tr><th id="15">15</th><td><i>    along with Mtproto-proxy Library.  If not, see &lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</i></td></tr>
+<tr><th id="16">16</th><td><i></i></td></tr>
+<tr><th id="17">17</th><td><i>    Copyright 2013 Vkontakte Ltd</i></td></tr>
+<tr><th id="18">18</th><td><i>              2013 Vitaliy Valtman</i></td></tr>
+<tr><th id="19">19</th><td><i>              2013 Anton Maydell</i></td></tr>
+<tr><th id="20">20</th><td><i>    </i></td></tr>
+<tr><th id="21">21</th><td><i>    Copyright 2014 Telegram Messenger Inc             </i></td></tr>
+<tr><th id="22">22</th><td><i>              2014 Vitaly Valtman     </i></td></tr>
+<tr><th id="23">23</th><td><i>              2014 Anton Maydell</i></td></tr>
+<tr><th id="24">24</th><td><i>    </i></td></tr>
+<tr><th id="25">25</th><td><i>    Copyright 2015-2016 Telegram Messenger Inc             </i></td></tr>
+<tr><th id="26">26</th><td><i>              2015-2016 Vitaliy Valtman</i></td></tr>
+<tr><th id="27">27</th><td><i>*/</i></td></tr>
+<tr><th id="28">28</th><td><u>#pragma once</u></td></tr>
+<tr><th id="29">29</th><td></td></tr>
+<tr><th id="30">30</th><td><u>#include <a href="../common/tl-parse.h.html">"common/tl-parse.h"</a></u></td></tr>
+<tr><th id="31">31</th><td><u>#include <a href="../common/precise-time.h.html">"common/precise-time.h"</a></u></td></tr>
+<tr><th id="32">32</th><td></td></tr>
+<tr><th id="33">33</th><td><b>struct</b> <a class="type" href="../common/common-stats.h.html#stats_buffer" title='stats_buffer' data-ref="stats_buffer" id="stats_buffer">stats_buffer</a>;</td></tr>
+<tr><th id="34">34</th><td><b>struct</b> <a class="type" href="#tl_act_extra" title='tl_act_extra' data-ref="tl_act_extra">tl_act_extra</a>;</td></tr>
+<tr><th id="35">35</th><td></td></tr>
+<tr><th id="36">36</th><td><b>struct</b> <dfn class="type def" id="query_work_params" title='query_work_params' data-ref="query_work_params">query_work_params</dfn> {</td></tr>
+<tr><th id="37">37</th><td>  <b>struct</b> <a class="type" href="../net/net-timers.h.html#event_timer" title='event_timer' data-ref="event_timer">event_timer</a> <dfn class="decl" id="query_work_params::ev" title='query_work_params::ev' data-ref="query_work_params::ev">ev</dfn>;</td></tr>
+<tr><th id="38">38</th><td>  <b>enum</b> <a class="type" href="../common/tl-parse.h.html#tl_type" title='tl_type' data-ref="tl_type">tl_type</a> <dfn class="decl" id="query_work_params::type" title='query_work_params::type' data-ref="query_work_params::type">type</dfn>;</td></tr>
+<tr><th id="39">39</th><td>  <b>struct</b> <a class="type" href="../common/pid.h.html#process_id" title='process_id' data-ref="process_id">process_id</a> <dfn class="decl" id="query_work_params::pid" title='query_work_params::pid' data-ref="query_work_params::pid">pid</dfn>;</td></tr>
+<tr><th id="40">40</th><td>  <b>struct</b> <a class="type" href="../net/net-msg.h.html#raw_message" title='raw_message' data-ref="raw_message">raw_message</a> <dfn class="decl" id="query_work_params::src" title='query_work_params::src' data-ref="query_work_params::src">src</dfn>;</td></tr>
+<tr><th id="41">41</th><td>  <b>struct</b> <a class="type" href="../common/tl-parse.h.html#tl_query_header" title='tl_query_header' data-ref="tl_query_header">tl_query_header</a> *<dfn class="decl" id="query_work_params::h" title='query_work_params::h' data-ref="query_work_params::h">h</dfn>;</td></tr>
+<tr><th id="42">42</th><td>  <b>struct</b> <a class="type" href="../net/net-msg.h.html#raw_message" title='raw_message' data-ref="raw_message">raw_message</a> *<dfn class="decl" id="query_work_params::result" title='query_work_params::result' data-ref="query_work_params::result">result</dfn>;</td></tr>
+<tr><th id="43">43</th><td>  <em>int</em> <dfn class="decl" id="query_work_params::error_code" title='query_work_params::error_code' data-ref="query_work_params::error_code">error_code</dfn>;</td></tr>
+<tr><th id="44">44</th><td>  <em>int</em> <dfn class="decl" id="query_work_params::answer_sent" title='query_work_params::answer_sent' data-ref="query_work_params::answer_sent">answer_sent</dfn>;</td></tr>
+<tr><th id="45">45</th><td>  <em>int</em> <dfn class="decl" id="query_work_params::wait_coord" title='query_work_params::wait_coord' data-ref="query_work_params::wait_coord">wait_coord</dfn>;</td></tr>
+<tr><th id="46">46</th><td>  <em>char</em> *<dfn class="decl" id="query_work_params::error" title='query_work_params::error' data-ref="query_work_params::error">error</dfn>;</td></tr>
+<tr><th id="47">47</th><td>  <em>void</em> *<dfn class="decl" id="query_work_params::wait_pos" title='query_work_params::wait_pos' data-ref="query_work_params::wait_pos">wait_pos</dfn>;</td></tr>
+<tr><th id="48">48</th><td>  <i>//void *wait_time;</i></td></tr>
+<tr><th id="49">49</th><td>  <b>struct</b> <dfn class="type" id="paramed_type" title='paramed_type' data-ref="paramed_type"><a class="type" href="#paramed_type" title='paramed_type' data-ref="paramed_type">paramed_type</a></dfn> *<dfn class="decl" id="query_work_params::P" title='query_work_params::P' data-ref="query_work_params::P">P</dfn>;</td></tr>
+<tr><th id="50">50</th><td>  <em>long</em> <em>long</em> <dfn class="decl" id="query_work_params::start_rdtsc" title='query_work_params::start_rdtsc' data-ref="query_work_params::start_rdtsc">start_rdtsc</dfn>;</td></tr>
+<tr><th id="51">51</th><td>  <em>long</em> <em>long</em> <dfn class="decl" id="query_work_params::total_work_rdtsc" title='query_work_params::total_work_rdtsc' data-ref="query_work_params::total_work_rdtsc">total_work_rdtsc</dfn>;</td></tr>
+<tr><th id="52">52</th><td>  <a class="typedef" href="../jobs/jobs.h.html#job_t" title='job_t' data-type='struct async_job *' data-ref="job_t">job_t</a> <dfn class="decl" id="query_work_params::all_list" title='query_work_params::all_list' data-ref="query_work_params::all_list">all_list</dfn>;</td></tr>
+<tr><th id="53">53</th><td>  <em>int</em> <dfn class="decl" id="query_work_params::fd" title='query_work_params::fd' data-ref="query_work_params::fd">fd</dfn>;</td></tr>
+<tr><th id="54">54</th><td>  <em>int</em> <dfn class="decl" id="query_work_params::generation" title='query_work_params::generation' data-ref="query_work_params::generation">generation</dfn>;</td></tr>
+<tr><th id="55">55</th><td>};</td></tr>
+<tr><th id="56">56</th><td></td></tr>
+<tr><th id="57">57</th><td><i>//extern struct tl_act_extra *(*tl_parse_function)(struct tl_in_state *tlio_in, long long actor_id);</i></td></tr>
+<tr><th id="58">58</th><td><b>typedef</b> <em>void</em> (*<dfn class="typedef" id="tl_query_result_fun_t" title='tl_query_result_fun_t' data-type='void (*)(struct tl_in_state *, struct tl_query_header *)' data-ref="tl_query_result_fun_t">tl_query_result_fun_t</dfn>)(<b>struct</b> <a class="type" href="../common/tl-parse.h.html#tl_in_state" title='tl_in_state' data-ref="tl_in_state">tl_in_state</a> *<dfn class="local col5 decl" id="325tlio_in" title='tlio_in' data-type='struct tl_in_state *' data-ref="325tlio_in">tlio_in</dfn>, <b>struct</b> <a class="type" href="../common/tl-parse.h.html#tl_query_header" title='tl_query_header' data-ref="tl_query_header">tl_query_header</a> *<dfn class="local col6 decl" id="326h" title='h' data-type='struct tl_query_header *' data-ref="326h">h</dfn>);</td></tr>
+<tr><th id="59">59</th><td><i>//extern void (*tl_stat_function)(struct tl_out_state *tlio_out);</i></td></tr>
+<tr><th id="60">60</th><td><i>//extern int (*tl_get_op_function)(struct tl_in_state *tlio_in);</i></td></tr>
+<tr><th id="61">61</th><td></td></tr>
+<tr><th id="62">62</th><td><em>void</em> <dfn class="decl" id="tl_query_result_fun_set" title='tl_query_result_fun_set' data-ref="tl_query_result_fun_set">tl_query_result_fun_set</dfn> (<a class="typedef" href="#tl_query_result_fun_t" title='tl_query_result_fun_t' data-type='void (*)(struct tl_in_state *, struct tl_query_header *)' data-ref="tl_query_result_fun_t">tl_query_result_fun_t</a> <dfn class="local col7 decl" id="327func" title='func' data-type='tl_query_result_fun_t' data-ref="327func">func</dfn>, <em>int</em> <dfn class="local col8 decl" id="328query_type_id" title='query_type_id' data-type='int' data-ref="328query_type_id">query_type_id</dfn>);</td></tr>
+<tr><th id="63">63</th><td><em>long</em> <em>long</em> <dfn class="decl" id="tl_generate_next_qid" title='tl_generate_next_qid' data-ref="tl_generate_next_qid">tl_generate_next_qid</dfn> (<em>int</em> <dfn class="local col9 decl" id="329query_type_id" title='query_type_id' data-type='int' data-ref="329query_type_id">query_type_id</dfn>);</td></tr>
+<tr><th id="64">64</th><td></td></tr>
+<tr><th id="65">65</th><td><em>int</em> <dfn class="decl" id="default_tl_rpcs_execute" title='default_tl_rpcs_execute' data-ref="default_tl_rpcs_execute">default_tl_rpcs_execute</dfn> (<a class="typedef" href="../net/net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col0 decl" id="330c" title='c' data-type='connection_job_t' data-ref="330c">c</dfn>, <em>int</em> <dfn class="local col1 decl" id="331op" title='op' data-type='int' data-ref="331op">op</dfn>, <em>int</em> <dfn class="local col2 decl" id="332len" title='len' data-type='int' data-ref="332len">len</dfn>);</td></tr>
+<tr><th id="66">66</th><td><em>int</em> <dfn class="decl" id="default_tl_tcp_rpcs_execute" title='default_tl_tcp_rpcs_execute' data-ref="default_tl_tcp_rpcs_execute">default_tl_tcp_rpcs_execute</dfn> (<a class="typedef" href="../net/net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col3 decl" id="333c" title='c' data-type='connection_job_t' data-ref="333c">c</dfn>, <em>int</em> <dfn class="local col4 decl" id="334op" title='op' data-type='int' data-ref="334op">op</dfn>, <b>struct</b> <a class="type" href="../net/net-msg.h.html#raw_message" title='raw_message' data-ref="raw_message">raw_message</a> *<dfn class="local col5 decl" id="335raw" title='raw' data-type='struct raw_message *' data-ref="335raw">raw</dfn>);</td></tr>
+<tr><th id="67">67</th><td><em>int</em> <dfn class="decl" id="default_tl_close_conn" title='default_tl_close_conn' data-ref="default_tl_close_conn">default_tl_close_conn</dfn> (<a class="typedef" href="../net/net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col6 decl" id="336c" title='c' data-type='connection_job_t' data-ref="336c">c</dfn>, <em>int</em> <dfn class="local col7 decl" id="337who" title='who' data-type='int' data-ref="337who">who</dfn>);</td></tr>
+<tr><th id="68">68</th><td><em>int</em> <dfn class="decl" id="tl_store_stats" title='tl_store_stats' data-ref="tl_store_stats">tl_store_stats</dfn> (<b>struct</b> <a class="type" href="../common/tl-parse.h.html#tl_out_state" title='tl_out_state' data-ref="tl_out_state">tl_out_state</a> *<dfn class="local col8 decl" id="338tlio_out" title='tlio_out' data-type='struct tl_out_state *' data-ref="338tlio_out">tlio_out</dfn>, <em>const</em> <em>char</em> *<dfn class="local col9 decl" id="339s" title='s' data-type='const char *' data-ref="339s">s</dfn>, <em>int</em> <dfn class="local col0 decl" id="340raw" title='raw' data-type='int' data-ref="340raw">raw</dfn>);</td></tr>
+<tr><th id="69">69</th><td><b>extern</b> <em>char</em> *<dfn class="decl" id="tl_engine_name" title='tl_engine_name' data-ref="tl_engine_name">tl_engine_name</dfn>;</td></tr>
+<tr><th id="70">70</th><td><em>void</em> <dfn class="decl" id="register_custom_op_cb" title='register_custom_op_cb' data-ref="register_custom_op_cb">register_custom_op_cb</dfn> (<em>unsigned</em> <dfn class="local col1 decl" id="341op" title='op' data-type='unsigned int' data-ref="341op">op</dfn>, <em>void</em> (*<dfn class="local col2 decl" id="342func" title='func' data-type='void (*)(struct tl_in_state *, struct query_work_params *)' data-ref="342func">func</dfn>)(<b>struct</b> <a class="type" href="../common/tl-parse.h.html#tl_in_state" title='tl_in_state' data-ref="tl_in_state">tl_in_state</a> *<dfn class="local col3 decl" id="343tlio_in" title='tlio_in' data-type='struct tl_in_state *' data-ref="343tlio_in">tlio_in</dfn>, <b>struct</b> <a class="type" href="#query_work_params" title='query_work_params' data-ref="query_work_params">query_work_params</a> *<dfn class="local col4 decl" id="344params" title='params' data-type='struct query_work_params *' data-ref="344params">params</dfn>));</td></tr>
+<tr><th id="71">71</th><td><em>void</em> <dfn class="decl" id="engine_work_rpc_req_result" title='engine_work_rpc_req_result' data-ref="engine_work_rpc_req_result">engine_work_rpc_req_result</dfn> (<b>struct</b> <a class="type" href="../common/tl-parse.h.html#tl_in_state" title='tl_in_state' data-ref="tl_in_state">tl_in_state</a> *<dfn class="local col5 decl" id="345tlio_in" title='tlio_in' data-type='struct tl_in_state *' data-ref="345tlio_in">tlio_in</dfn>, <b>struct</b> <a class="type" href="#query_work_params" title='query_work_params' data-ref="query_work_params">query_work_params</a> *<dfn class="local col6 decl" id="346params" title='params' data-type='struct query_work_params *' data-ref="346params">params</dfn>);</td></tr>
+<tr><th id="72">72</th><td><em>void</em> <dfn class="decl" id="tl_engine_store_stats" title='tl_engine_store_stats' data-ref="tl_engine_store_stats">tl_engine_store_stats</dfn> (<b>struct</b> <a class="type" href="../common/tl-parse.h.html#tl_out_state" title='tl_out_state' data-ref="tl_out_state">tl_out_state</a> *<dfn class="local col7 decl" id="347tlio_out" title='tlio_out' data-type='struct tl_out_state *' data-ref="347tlio_out">tlio_out</dfn>);</td></tr>
+<tr><th id="73">73</th><td></td></tr>
+<tr><th id="74">74</th><td><em>const</em> <em>char</em> *<dfn class="decl" id="op_to_string" title='op_to_string' data-ref="op_to_string">op_to_string</dfn> (<em>int</em> <dfn class="local col8 decl" id="348op" title='op' data-type='int' data-ref="348op">op</dfn>);</td></tr>
+<tr><th id="75">75</th><td></td></tr>
+<tr><th id="76">76</th><td><em>void</em> <dfn class="decl" id="tl_restart_all_ready" title='tl_restart_all_ready' data-ref="tl_restart_all_ready">tl_restart_all_ready</dfn> (<em>void</em>);</td></tr>
+<tr><th id="77">77</th><td><em>void</em> <dfn class="decl" id="tl_default_act_free" title='tl_default_act_free' data-ref="tl_default_act_free">tl_default_act_free</dfn> (<b>struct</b> <a class="type" href="#tl_act_extra" title='tl_act_extra' data-ref="tl_act_extra">tl_act_extra</a> *<dfn class="local col9 decl" id="349extra" title='extra' data-type='struct tl_act_extra *' data-ref="349extra">extra</dfn>);</td></tr>
+<tr><th id="78">78</th><td></td></tr>
+<tr><th id="79">79</th><td></td></tr>
+<tr><th id="80">80</th><td><em>int</em> <dfn class="decl" id="engine_check_allow_query" title='engine_check_allow_query' data-ref="engine_check_allow_query">engine_check_allow_query</dfn> (<em>unsigned</em> <dfn class="local col0 decl" id="350flags" title='flags' data-type='unsigned int' data-ref="350flags">flags</dfn>);</td></tr>
+<tr><th id="81">81</th><td><em>int</em> <dfn class="decl" id="tl_query_act" title='tl_query_act' data-ref="tl_query_act">tl_query_act</dfn> (<a class="typedef" href="../net/net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col1 decl" id="351c" title='c' data-type='connection_job_t' data-ref="351c">c</dfn>, <em>int</em> <dfn class="local col2 decl" id="352op" title='op' data-type='int' data-ref="352op">op</dfn>, <em>int</em> <dfn class="local col3 decl" id="353len" title='len' data-type='int' data-ref="353len">len</dfn>);</td></tr>
+<tr><th id="82">82</th><td><em>int</em> <dfn class="decl" id="tl_query_act_tcp" title='tl_query_act_tcp' data-ref="tl_query_act_tcp">tl_query_act_tcp</dfn> (<a class="typedef" href="../net/net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col4 decl" id="354c" title='c' data-type='connection_job_t' data-ref="354c">c</dfn>, <em>int</em> <dfn class="local col5 decl" id="355op" title='op' data-type='int' data-ref="355op">op</dfn>, <b>struct</b> <a class="type" href="../net/net-msg.h.html#raw_message" title='raw_message' data-ref="raw_message">raw_message</a> *<dfn class="local col6 decl" id="356raw" title='raw' data-type='struct raw_message *' data-ref="356raw">raw</dfn>);</td></tr>
+<tr><th id="83">83</th><td></td></tr>
+<tr><th id="84">84</th><td><b>struct</b> <dfn class="type def" id="tl_act_extra" title='tl_act_extra' data-ref="tl_act_extra">tl_act_extra</dfn> {</td></tr>
+<tr><th id="85">85</th><td>  <em>int</em> <dfn class="decl" id="tl_act_extra::size" title='tl_act_extra::size' data-ref="tl_act_extra::size">size</dfn>;</td></tr>
+<tr><th id="86">86</th><td>  <em>int</em> <dfn class="decl" id="tl_act_extra::flags" title='tl_act_extra::flags' data-ref="tl_act_extra::flags">flags</dfn>;  </td></tr>
+<tr><th id="87">87</th><td>  <em>int</em> <dfn class="decl" id="tl_act_extra::attempt" title='tl_act_extra::attempt' data-ref="tl_act_extra::attempt">attempt</dfn>;</td></tr>
+<tr><th id="88">88</th><td>  <em>int</em> <dfn class="decl" id="tl_act_extra::type" title='tl_act_extra::type' data-ref="tl_act_extra::type">type</dfn>;</td></tr>
+<tr><th id="89">89</th><td>  <em>int</em> <dfn class="decl" id="tl_act_extra::op" title='tl_act_extra::op' data-ref="tl_act_extra::op">op</dfn>;</td></tr>
+<tr><th id="90">90</th><td>  <em>int</em> <dfn class="decl" id="tl_act_extra::subclass" title='tl_act_extra::subclass' data-ref="tl_act_extra::subclass">subclass</dfn>;</td></tr>
+<tr><th id="91">91</th><td>  <em>unsigned</em> <em>long</em> <em>long</em> <dfn class="decl" id="tl_act_extra::hash" title='tl_act_extra::hash' data-ref="tl_act_extra::hash">hash</dfn>;</td></tr>
+<tr><th id="92">92</th><td>  <em>long</em> <em>long</em> <dfn class="decl" id="tl_act_extra::start_rdtsc" title='tl_act_extra::start_rdtsc' data-ref="tl_act_extra::start_rdtsc">start_rdtsc</dfn>;</td></tr>
+<tr><th id="93">93</th><td>  <em>long</em> <em>long</em> <dfn class="decl" id="tl_act_extra::cpu_rdtsc" title='tl_act_extra::cpu_rdtsc' data-ref="tl_act_extra::cpu_rdtsc">cpu_rdtsc</dfn>;</td></tr>
+<tr><th id="94">94</th><td>  <b>struct</b> <a class="type" href="../common/tl-parse.h.html#tl_out_state" title='tl_out_state' data-ref="tl_out_state">tl_out_state</a> *<dfn class="decl" id="tl_act_extra::tlio_out" title='tl_act_extra::tlio_out' data-ref="tl_act_extra::tlio_out">tlio_out</dfn>;</td></tr>
+<tr><th id="95">95</th><td>  <em>int</em> (*<dfn class="decl" id="tl_act_extra::act" title='tl_act_extra::act' data-ref="tl_act_extra::act">act</dfn>)(<a class="typedef" href="../jobs/jobs.h.html#job_t" title='job_t' data-type='struct async_job *' data-ref="job_t">job_t</a>, <b>struct</b> <a class="type" href="#tl_act_extra" title='tl_act_extra' data-ref="tl_act_extra">tl_act_extra</a> *<dfn class="local col7 decl" id="357data" title='data' data-type='struct tl_act_extra *' data-ref="357data">data</dfn>);</td></tr>
+<tr><th id="96">96</th><td>  <em>void</em> (*<dfn class="decl" id="tl_act_extra::free" title='tl_act_extra::free' data-ref="tl_act_extra::free">free</dfn>)(<b>struct</b> <a class="type" href="#tl_act_extra" title='tl_act_extra' data-ref="tl_act_extra">tl_act_extra</a> *<dfn class="local col8 decl" id="358data" title='data' data-type='struct tl_act_extra *' data-ref="358data">data</dfn>);</td></tr>
+<tr><th id="97">97</th><td>  <b>struct</b> <a class="type" href="#tl_act_extra" title='tl_act_extra' data-ref="tl_act_extra">tl_act_extra</a> *(*<dfn class="decl" id="tl_act_extra::dup" title='tl_act_extra::dup' data-ref="tl_act_extra::dup">dup</dfn>)(<b>struct</b> <a class="type" href="#tl_act_extra" title='tl_act_extra' data-ref="tl_act_extra">tl_act_extra</a> *<dfn class="local col9 decl" id="359data" title='data' data-type='struct tl_act_extra *' data-ref="359data">data</dfn>);</td></tr>
+<tr><th id="98">98</th><td>  <b>struct</b> <a class="type" href="../common/tl-parse.h.html#tl_query_header" title='tl_query_header' data-ref="tl_query_header">tl_query_header</a> *<dfn class="decl" id="tl_act_extra::header" title='tl_act_extra::header' data-ref="tl_act_extra::header">header</dfn>;</td></tr>
+<tr><th id="99">99</th><td>  <b>struct</b> <a class="type" href="../net/net-msg.h.html#raw_message" title='raw_message' data-ref="raw_message">raw_message</a> **<dfn class="decl" id="tl_act_extra::raw" title='tl_act_extra::raw' data-ref="tl_act_extra::raw">raw</dfn>;  </td></tr>
+<tr><th id="100">100</th><td>  <em>char</em> **<dfn class="decl" id="tl_act_extra::error" title='tl_act_extra::error' data-ref="tl_act_extra::error">error</dfn>;</td></tr>
+<tr><th id="101">101</th><td>  <a class="typedef" href="../jobs/jobs.h.html#job_t" title='job_t' data-type='struct async_job *' data-ref="job_t">job_t</a> <dfn class="decl" id="tl_act_extra::extra_ref" title='tl_act_extra::extra_ref' data-ref="tl_act_extra::extra_ref">extra_ref</dfn>;</td></tr>
+<tr><th id="102">102</th><td>  <em>int</em> *<dfn class="decl" id="tl_act_extra::error_code" title='tl_act_extra::error_code' data-ref="tl_act_extra::error_code">error_code</dfn>;</td></tr>
+<tr><th id="103">103</th><td>  <em>int</em> <dfn class="decl" id="tl_act_extra::extra" title='tl_act_extra::extra' data-ref="tl_act_extra::extra">extra</dfn>[<var>0</var>];</td></tr>
+<tr><th id="104">104</th><td>};</td></tr>
+<tr><th id="105">105</th><td></td></tr>
+<tr><th id="106">106</th><td><em>static</em> <b>inline</b> <b>struct</b> <a class="type" href="#tl_act_extra" title='tl_act_extra' data-ref="tl_act_extra">tl_act_extra</a> *<dfn class="decl def" id="tl_act_extra_init" title='tl_act_extra_init' data-ref="tl_act_extra_init">tl_act_extra_init</dfn> (<em>void</em> *<dfn class="local col0 decl" id="360buf" title='buf' data-type='void *' data-ref="360buf">buf</dfn>, <em>int</em> <dfn class="local col1 decl" id="361size" title='size' data-type='int' data-ref="361size">size</dfn>, <em>int</em> (*<dfn class="local col2 decl" id="362act" title='act' data-type='int (*)(job_t, struct tl_act_extra *)' data-ref="362act">act</dfn>)(<a class="typedef" href="../jobs/jobs.h.html#job_t" title='job_t' data-type='struct async_job *' data-ref="job_t">job_t</a>, <b>struct</b> <a class="type" href="#tl_act_extra" title='tl_act_extra' data-ref="tl_act_extra">tl_act_extra</a> *)) {</td></tr>
+<tr><th id="107">107</th><td>  <b>struct</b> <a class="type" href="#tl_act_extra" title='tl_act_extra' data-ref="tl_act_extra">tl_act_extra</a> *<dfn class="local col3 decl" id="363extra" title='extra' data-type='struct tl_act_extra *' data-ref="363extra">extra</dfn> = (<b>struct</b> <a class="type" href="#tl_act_extra" title='tl_act_extra' data-ref="tl_act_extra">tl_act_extra</a> *)<a class="local col0 ref" href="#360buf" title='buf' data-ref="360buf">buf</a>;</td></tr>
+<tr><th id="108">108</th><td>  <a class="ref" href="../../include/string.h.html#memset" title='memset' data-ref="memset">memset</a> (<a class="local col3 ref" href="#363extra" title='extra' data-ref="363extra">extra</a>, <var>0</var>, <b>sizeof</b> (*<a class="local col3 ref" href="#363extra" title='extra' data-ref="363extra">extra</a>));</td></tr>
+<tr><th id="109">109</th><td>  <a class="local col3 ref" href="#363extra" title='extra' data-ref="363extra">extra</a>-&gt;<a class="ref" href="#tl_act_extra::size" title='tl_act_extra::size' data-ref="tl_act_extra::size">size</a> = <a class="local col1 ref" href="#361size" title='size' data-ref="361size">size</a> + (<em>int</em>)<b>sizeof</b> (*<a class="local col3 ref" href="#363extra" title='extra' data-ref="363extra">extra</a>);</td></tr>
+<tr><th id="110">110</th><td>  <a class="local col3 ref" href="#363extra" title='extra' data-ref="363extra">extra</a>-&gt;<a class="ref" href="#tl_act_extra::flags" title='tl_act_extra::flags' data-ref="tl_act_extra::flags">flags</a> = <var>0</var>;</td></tr>
+<tr><th id="111">111</th><td>  <a class="local col3 ref" href="#363extra" title='extra' data-ref="363extra">extra</a>-&gt;<a class="ref" href="#tl_act_extra::act" title='tl_act_extra::act' data-ref="tl_act_extra::act">act</a> = <a class="local col2 ref" href="#362act" title='act' data-ref="362act">act</a>;</td></tr>
+<tr><th id="112">112</th><td>  <a class="local col3 ref" href="#363extra" title='extra' data-ref="363extra">extra</a>-&gt;<a class="ref" href="#tl_act_extra::free" title='tl_act_extra::free' data-ref="tl_act_extra::free">free</a> = <var>0</var>;</td></tr>
+<tr><th id="113">113</th><td>  <a class="local col3 ref" href="#363extra" title='extra' data-ref="363extra">extra</a>-&gt;<a class="ref" href="#tl_act_extra::dup" title='tl_act_extra::dup' data-ref="tl_act_extra::dup">dup</a> = <var>0</var>;</td></tr>
+<tr><th id="114">114</th><td>  <a class="local col3 ref" href="#363extra" title='extra' data-ref="363extra">extra</a>-&gt;<a class="ref" href="#tl_act_extra::start_rdtsc" title='tl_act_extra::start_rdtsc' data-ref="tl_act_extra::start_rdtsc">start_rdtsc</a> = <a class="ref" href="../common/precise-time.h.html#rdtsc" title='rdtsc' data-ref="rdtsc">rdtsc</a> ();</td></tr>
+<tr><th id="115">115</th><td>  <a class="local col3 ref" href="#363extra" title='extra' data-ref="363extra">extra</a>-&gt;<a class="ref" href="#tl_act_extra::cpu_rdtsc" title='tl_act_extra::cpu_rdtsc' data-ref="tl_act_extra::cpu_rdtsc">cpu_rdtsc</a> = <var>0</var>;</td></tr>
+<tr><th id="116">116</th><td>  <b>return</b> <a class="local col3 ref" href="#363extra" title='extra' data-ref="363extra">extra</a>;</td></tr>
+<tr><th id="117">117</th><td>}</td></tr>
+<tr><th id="118">118</th><td></td></tr>
+<tr><th id="119">119</th><td><u>#define <dfn class="macro" id="_M/QUERY_ALLOW_REPLICA_GET" data-ref="_M/QUERY_ALLOW_REPLICA_GET">QUERY_ALLOW_REPLICA_GET</dfn> 1</u></td></tr>
+<tr><th id="120">120</th><td><u>#define <dfn class="macro" id="_M/QUERY_ALLOW_REPLICA_SET" data-ref="_M/QUERY_ALLOW_REPLICA_SET">QUERY_ALLOW_REPLICA_SET</dfn> 2</u></td></tr>
+<tr><th id="121">121</th><td><u>#define <dfn class="macro" id="_M/QUERY_ALLOW_UNINIT" data-ref="_M/QUERY_ALLOW_UNINIT">QUERY_ALLOW_UNINIT</dfn> 4</u></td></tr>
+<tr><th id="122">122</th><td></td></tr>
+<tr><th id="123">123</th><td><u>#define <dfn class="macro" id="_M/TL_PARSE_FUN_EX" data-ref="_M/TL_PARSE_FUN_EX">TL_PARSE_FUN_EX</dfn>(tname,fname,dname,qtype,...) \</u></td></tr>
+<tr><th id="124">124</th><td><u>static struct tl_act_extra *fname (struct tl_in_state *tlio_in, ## __VA_ARGS__) { \</u></td></tr>
+<tr><th id="125">125</th><td><u>  struct tl_act_extra *extra = tl_act_extra_init (stats_buff, sizeof (tname), dname); \</u></td></tr>
+<tr><th id="126">126</th><td><u>  tname *e __attribute__ ((unused)); \</u></td></tr>
+<tr><th id="127">127</th><td><u>  e = (void *)extra-&gt;extra;  \</u></td></tr>
+<tr><th id="128">128</th><td><u>  extra-&gt;type = qtype; \</u></td></tr>
+<tr><th id="129">129</th><td><u>  extra-&gt;subclass = -1;</u> \</td></tr>
+<tr><th id="130">130</th><td></td></tr>
+<tr><th id="131">131</th><td><u>#define <dfn class="macro" id="_M/TL_PARSE_FUN" data-ref="_M/TL_PARSE_FUN">TL_PARSE_FUN</dfn>(name,...) TL_PARSE_FUN_EX(struct tl_ ## name,tl_ ## name,tl_do_ ## name,__VA_ARGS__)</u></td></tr>
+<tr><th id="132">132</th><td><u>#define <dfn class="macro" id="_M/TL_PARSE_FUN_GET" data-ref="_M/TL_PARSE_FUN_GET">TL_PARSE_FUN_GET</dfn>(name,...) TL_PARSE_FUN_EX(struct tl_ ## name,tl_ ## name,tl_do_ ## name, QUERY_ALLOW_REPLICA_GET | QUERY_ALLOW_REPLICA_SET, ## __VA_ARGS__)</u></td></tr>
+<tr><th id="133">133</th><td><u>#define <dfn class="macro" id="_M/TL_PARSE_FUN_GET_ONLY" data-ref="_M/TL_PARSE_FUN_GET_ONLY">TL_PARSE_FUN_GET_ONLY</dfn>(name,...) TL_PARSE_FUN_EX(struct tl_ ## name,tl_ ## name,tl_do_ ## name, QUERY_ALLOW_REPLICA_GET, ## __VA_ARGS__)</u></td></tr>
+<tr><th id="134">134</th><td><u>#define <dfn class="macro" id="_M/TL_PARSE_FUN_SET" data-ref="_M/TL_PARSE_FUN_SET">TL_PARSE_FUN_SET</dfn>(name,...) TL_PARSE_FUN_EX(struct tl_ ## name,tl_ ## name,tl_do_ ## name, QUERY_ALLOW_REPLICA_SET, ## __VA_ARGS__)</u></td></tr>
+<tr><th id="135">135</th><td></td></tr>
+<tr><th id="136">136</th><td><u>#define <dfn class="macro" id="_M/TL_PARSE_FUN_END" data-ref="_M/TL_PARSE_FUN_END">TL_PARSE_FUN_END</dfn> \</u></td></tr>
+<tr><th id="137">137</th><td><u>  tl_fetch_end (); \</u></td></tr>
+<tr><th id="138">138</th><td><u>  if (tl_fetch_error ()) { \</u></td></tr>
+<tr><th id="139">139</th><td><u>    return 0; \</u></td></tr>
+<tr><th id="140">140</th><td><u>  } \</u></td></tr>
+<tr><th id="141">141</th><td><u>  return extra; \</u></td></tr>
+<tr><th id="142">142</th><td><u>}</u></td></tr>
+<tr><th id="143">143</th><td></td></tr>
+<tr><th id="144">144</th><td><i>/* ${engine}-interface-structures.h must contain #pragma pack(push,4) for use TL_DEFAULT_PARSE_FUN macro */</i></td></tr>
+<tr><th id="145">145</th><td><u>#define <dfn class="macro" id="_M/TL_DEFAULT_PARSE_FUN" data-ref="_M/TL_DEFAULT_PARSE_FUN">TL_DEFAULT_PARSE_FUN</dfn>(name,qtype) \</u></td></tr>
+<tr><th id="146">146</th><td><u>  TL_PARSE_FUN(name, qtype) \</u></td></tr>
+<tr><th id="147">147</th><td><u>  if (tlf_check (tlio_in, sizeof (*e)) &lt; 0) { tl_fetch_set_error_format (TL_ERROR_NOT_ENOUGH_DATA, "Not enougth data"); return 0; } \</u></td></tr>
+<tr><th id="148">148</th><td><u>  tl_fetch_raw_data (e, sizeof (*e)); \</u></td></tr>
+<tr><th id="149">149</th><td><u>  TL_PARSE_FUN_END</u></td></tr>
+<tr><th id="150">150</th><td></td></tr>
+<tr><th id="151">151</th><td><u>#define <dfn class="macro" id="_M/TL_DEFAULT_PARSE_FUN_GET_ONLY" data-ref="_M/TL_DEFAULT_PARSE_FUN_GET_ONLY">TL_DEFAULT_PARSE_FUN_GET_ONLY</dfn>(name) TL_DEFAULT_PARSE_FUN(name,QUERY_ALLOW_REPLICA_GET)</u></td></tr>
+<tr><th id="152">152</th><td><u>#define <dfn class="macro" id="_M/TL_DEFAULT_PARSE_FUN_GET" data-ref="_M/TL_DEFAULT_PARSE_FUN_GET">TL_DEFAULT_PARSE_FUN_GET</dfn>(name) TL_DEFAULT_PARSE_FUN(name,QUERY_ALLOW_REPLICA_GET | QUERY_ALLOW_REPLICA_SET)</u></td></tr>
+<tr><th id="153">153</th><td><u>#define <dfn class="macro" id="_M/TL_DEFAULT_PARSE_FUN_SET" data-ref="_M/TL_DEFAULT_PARSE_FUN_SET">TL_DEFAULT_PARSE_FUN_SET</dfn>(name) TL_DEFAULT_PARSE_FUN(name,QUERY_ALLOW_REPLICA_SET)</u></td></tr>
+<tr><th id="154">154</th><td></td></tr>
+<tr><th id="155">155</th><td><u>#define <dfn class="macro" id="_M/TL_DO_FUN_EX" data-ref="_M/TL_DO_FUN_EX">TL_DO_FUN_EX</dfn>(tname,dname) \</u></td></tr>
+<tr><th id="156">156</th><td><u>  static int dname (job_t this_query_job, struct tl_act_extra *extra) { \</u></td></tr>
+<tr><th id="157">157</th><td><u>    tname *e = (void *)extra-&gt;extra; \</u></td></tr>
+<tr><th id="158">158</th><td><u>    struct tl_out_state *tlio_out __attribute__ ((unused)); \</u></td></tr>
+<tr><th id="159">159</th><td><u>    tlio_out = extra-&gt;tlio_out;</u> \</td></tr>
+<tr><th id="160">160</th><td></td></tr>
+<tr><th id="161">161</th><td><u>#define <dfn class="macro" id="_M/TL_DO_FUN_DECL_EX" data-ref="_M/TL_DO_FUN_DECL_EX">TL_DO_FUN_DECL_EX</dfn>(tname,dname) \</u></td></tr>
+<tr><th id="162">162</th><td><u>  static int dname (job_t this_query_job, struct tl_act_extra *extra);</u></td></tr>
+<tr><th id="163">163</th><td></td></tr>
+<tr><th id="164">164</th><td><u>#define <dfn class="macro" id="_M/TL_DO_FUN" data-ref="_M/TL_DO_FUN">TL_DO_FUN</dfn>(name) TL_DO_FUN_EX(struct tl_ ## name __attribute__ ((unused)), tl_do_ ## name);</u></td></tr>
+<tr><th id="165">165</th><td><u>#define <dfn class="macro" id="_M/TL_DO_FUN_DECL" data-ref="_M/TL_DO_FUN_DECL">TL_DO_FUN_DECL</dfn>(name) TL_DO_FUN_DECL_EX(struct tl_ ## name __attribute__ ((unused)), tl_do_ ## name);</u></td></tr>
+<tr><th id="166">166</th><td></td></tr>
+<tr><th id="167">167</th><td><u>#define <dfn class="macro" id="_M/TL_DO_PUBLIC_FUN_EX" data-ref="_M/TL_DO_PUBLIC_FUN_EX">TL_DO_PUBLIC_FUN_EX</dfn>(tname,dname) \</u></td></tr>
+<tr><th id="168">168</th><td><u>  int dname (job_t this_query_job, struct tl_act_extra *extra) { \</u></td></tr>
+<tr><th id="169">169</th><td><u>    tname *e = (void *)extra-&gt;extra; \</u></td></tr>
+<tr><th id="170">170</th><td><u>    struct tl_out_state *tlio_out = extra-&gt;tlio_out;</u> \</td></tr>
+<tr><th id="171">171</th><td></td></tr>
+<tr><th id="172">172</th><td><u>#define <dfn class="macro" id="_M/TL_DO_PUBLIC_FUN_DECL_EX" data-ref="_M/TL_DO_PUBLIC_FUN_DECL_EX">TL_DO_PUBLIC_FUN_DECL_EX</dfn>(tname,dname) \</u></td></tr>
+<tr><th id="173">173</th><td><u>  int dname (job_t this_query_job, struct tl_act_extra *extra);</u></td></tr>
+<tr><th id="174">174</th><td></td></tr>
+<tr><th id="175">175</th><td><u>#define <dfn class="macro" id="_M/TL_DO_PUBLIC_FUN" data-ref="_M/TL_DO_PUBLIC_FUN">TL_DO_PUBLIC_FUN</dfn>(name) TL_DO_PUBLIC_FUN_EX(struct tl_ ## name __attribute__ ((unused)), tl_do_ ## name);</u></td></tr>
+<tr><th id="176">176</th><td><u>#define <dfn class="macro" id="_M/TL_DO_PUBLIC_FUN_DECL" data-ref="_M/TL_DO_PUBLIC_FUN_DECL">TL_DO_PUBLIC_FUN_DECL</dfn>(name) TL_DO_PUBLIC_FUN_DECL_EX(struct tl_ ## name __attribute__ ((unused)), tl_do_ ## name);</u></td></tr>
+<tr><th id="177">177</th><td></td></tr>
+<tr><th id="178">178</th><td><u>#define <dfn class="macro" id="_M/TL_DO_FUN_END" data-ref="_M/TL_DO_FUN_END">TL_DO_FUN_END</dfn> \</u></td></tr>
+<tr><th id="179">179</th><td><u>  return 0; \</u></td></tr>
+<tr><th id="180">180</th><td><u>}</u></td></tr>
+<tr><th id="181">181</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../common/tl-parse.c.html'>MTProxy/common/tl-parse.c</a><br/>Generated on <em>2018-Jun-02</em> from project MTProxy revision <em>842f343decf6c463bdecf1862e357c4a03e4bc97</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

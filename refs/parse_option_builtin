@@ -1,0 +1,7 @@
+<def f='MTProxy/common/server-functions.c' l='386' ll='388' type='void parse_option_builtin(const char * name, int arg, int * var, int val, unsigned int flags, const char * help)'/>
+<use f='MTProxy/common/server-functions.c' l='732' u='c' c='add_builtin_parse_options'/>
+<use f='MTProxy/common/server-functions.c' l='733' u='c' c='add_builtin_parse_options'/>
+<use f='MTProxy/common/server-functions.c' l='734' u='c' c='add_builtin_parse_options'/>
+<use f='MTProxy/common/server-functions.c' l='735' u='c' c='add_builtin_parse_options'/>
+<use f='MTProxy/common/server-functions.c' l='736' u='c' c='add_builtin_parse_options'/>
+<use f='MTProxy/common/server-functions.c' l='737' u='c' c='add_builtin_parse_options'/>

@@ -1,0 +1,6 @@
+<dec f='MTProxy/mtproto/mtproto-config.h' l='51' type='struct mf_group_stats'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='137' u='a' c='clear_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='141' u='a' c='clear_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='302' u='a' c='parse_config'/>
+<offset>384</offset>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='659' u='m' c='mtfront_prepare_stats'/>

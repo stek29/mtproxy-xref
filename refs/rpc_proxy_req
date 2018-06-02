@@ -1,0 +1,9 @@
+<def f='MTProxy/mtproto/mtproto-common.h' l='75' ll='90'/>
+<size>16444</size>
+<mbr r='rpc_proxy_req::type' o='0' t='int'/>
+<mbr r='rpc_proxy_req::flags' o='32' t='int'/>
+<mbr r='rpc_proxy_req::ext_conn_id' o='64' t='long long'/>
+<mbr r='rpc_proxy_req::remote_ipv6' o='128' t='unsigned char [16]'/>
+<mbr r='rpc_proxy_req::remote_port' o='256' t='int'/>
+<mbr r='rpc_proxy_req::our_ipv6' o='288' t='unsigned char [16]'/>
+<mbr r='rpc_proxy_req::our_port' o='416' t='int'/>

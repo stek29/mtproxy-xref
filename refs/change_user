@@ -1,0 +1,2 @@
+<dec f='MTProxy/common/server-functions.h' l='50' type='int change_user(const char * username)'/>
+<def f='MTProxy/common/server-functions.c' l='115' ll='143' type='int change_user(const char * username)'/>

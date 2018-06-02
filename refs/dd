@@ -1,0 +1,7 @@
+<def f='MTProxy/net/net-http-server.c' l='678' ll='679' type='int [12]'/>
+<use f='MTProxy/net/net-http-server.c' l='707' u='w' c='gen_http_date'/>
+<use f='MTProxy/net/net-http-server.c' l='709' u='w' c='gen_http_date'/>
+<use f='MTProxy/net/net-http-server.c' l='713' u='r' c='gen_http_date'/>
+<use f='MTProxy/net/net-http-server.c' l='716' u='r' c='gen_http_date'/>
+<use f='MTProxy/net/net-http-server.c' l='766' u='w' c='gen_http_time'/>
+<use f='MTProxy/net/net-http-server.c' l='768' u='r' c='gen_http_time'/>

@@ -1,0 +1,56 @@
+<dec f='MTProxy/net/net-msg.h' l='101' type='int rwm_free(struct raw_message * raw)'/>
+<doc f='MTProxy/net/net-msg.h' l='97'>/* NB: struct raw_message itself is never allocated or freed by the following functions since 
+        it is usually part (field) of a larger structure
+*/</doc>
+<use f='MTProxy/common/tl-parse.c' l='177' u='c' c='__tl_raw_msg_fetch_mark_restore'/>
+<use f='MTProxy/common/tl-parse.c' l='188' u='c' c='__tl_raw_msg_fetch_mark_delete'/>
+<use f='MTProxy/common/tl-parse.c' l='217' u='c' c='__tl_raw_msg_store_read_back_nondestruct'/>
+<use f='MTProxy/common/tl-parse.c' l='246' u='c' c='__tl_raw_msg_fetch_clear'/>
+<use f='MTProxy/common/tl-parse.c' l='254' u='c' c='__tl_raw_msg_store_clear'/>
+<use f='MTProxy/common/tl-parse.c' l='283' u='c' c='__tl_tcp_raw_msg_store_clear'/>
+<use f='MTProxy/engine/engine-rpc.c' l='594' u='c' c='process_query_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='598' u='c' c='process_query_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='625' u='c' c='process_parse_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='669' u='c' c='process_query_custom_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='743' u='c' c='query_job_run'/>
+<use f='MTProxy/engine/engine-rpc.c' l='765' u='c' c='query_job_run'/>
+<use f='MTProxy/engine/engine-rpc.c' l='803' u='c' c='do_query_job_run'/>
+<use f='MTProxy/jobs/jobs.c' l='1462' u='c' c='job_message_queue_free'/>
+<use f='MTProxy/jobs/jobs.c' l='1474' u='c' c='job_message_queue_free'/>
+<use f='MTProxy/jobs/jobs.c' l='1495' u='c' c='job_message_free_default'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='909' u='c' c='client_packet_job_run'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1347' u='c' c='http_query_job_run'/>
+<use f='MTProxy/net/net-connections.c' l='429' u='c' c='cpu_server_free_connection'/>
+<use f='MTProxy/net/net-connections.c' l='439' u='c' c='cpu_server_free_connection'/>
+<use f='MTProxy/net/net-connections.c' l='764' u='c' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='765' u='c' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='766' u='c' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='767' u='c' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='833' u='c' c='net_server_socket_free'/>
+<use f='MTProxy/net/net-connections.c' l='839' u='c' c='net_server_socket_free'/>
+<use f='MTProxy/net/net-connections.c' l='893' u='c' c='net_server_socket_reader'/>
+<use f='MTProxy/net/net-http-server.c' l='589' u='c' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='595' u='c' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='632' u='c' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='637' u='c' c='hts_parse_execute'/>
+<def f='MTProxy/net/net-msg.c' l='193' ll='200' type='int rwm_free(struct raw_message * raw)'/>
+<use f='MTProxy/net/net-msg.c' l='833' u='c' c='rwm_union'/>
+<use f='MTProxy/net/net-msg.c' l='903' u='c' c='rwm_dump'/>
+<doc f='MTProxy/net/net-msg.c' l='190'>/* }}} */
+
+// struct raw_message itself is not freed since it is usually part of a larger structure</doc>
+<doc f='MTProxy/net/net-msg.c' l='193'>/* {{{ */</doc>
+<use f='MTProxy/net/net-tcp-connections.c' l='44' u='c' c='cpu_tcp_free_connection_buffers'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='45' u='c' c='cpu_tcp_free_connection_buffers'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='46' u='c' c='cpu_tcp_free_connection_buffers'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='47' u='c' c='cpu_tcp_free_connection_buffers'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='91' u='c' c='cpu_tcp_server_writer'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='384' u='c' c='tcp_rpcc_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='403' u='c' c='tcp_rpcc_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='425' u='c' c='tcp_rpcc_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='443' u='c' c='tcp_rpcc_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='343' u='c' c='tcp_rpcs_compact_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='388' u='c' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='413' u='c' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='429' u='c' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='443' u='c' c='tcp_rpcs_parse_execute'/>

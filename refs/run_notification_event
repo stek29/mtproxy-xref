@@ -1,0 +1,2 @@
+<def f='MTProxy/net/net-thread.c' l='49' ll='74' type='void run_notification_event(struct notification_event * ev)'/>
+<use f='MTProxy/net/net-thread.c' l='91' u='c' c='notification_event_run'/>

@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-msg-buffers.h' l='100' type='void fetch_buffers_stat(struct buffers_stat * bs)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='432' u='c' c='update_local_stats_copy'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='584' u='c' c='mtfront_prepare_stats'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1884' u='c' c='check_all_conn_buffers'/>
+<def f='MTProxy/net/net-msg-buffers.c' l='70' ll='79' type='void fetch_buffers_stat(struct buffers_stat * bs)'/>

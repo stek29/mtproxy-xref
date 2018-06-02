@@ -1,0 +1,4 @@
+<dec f='MTProxy/crypto/aesni256.h' l='38' type='void (*)(struct tg_aes_ctx *, const unsigned char *, unsigned char *, int, unsigned char *, unsigned long long)'/>
+<offset>128</offset>
+<use f='MTProxy/crypto/aesni256.c' l='113' u='w'/>
+<use f='MTProxy/crypto/aesni256.c' l='125' u='w'/>

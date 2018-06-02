@@ -1,0 +1,30 @@
+<dec f='include/x86_64-linux-gnu/sys/socket.h' l='226' type='int setsockopt(int __fd, int __level, int __optname, const void * __optval, socklen_t __optlen)'/>
+<doc f='include/x86_64-linux-gnu/sys/socket.h' l='223'>/* Set socket FD&apos;s option OPTNAME at protocol level LEVEL
+   to *OPTVAL (which is OPTLEN bytes long).
+   Returns 0 on success, -1 for errors.  */</doc>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2066' u='c' c='mtfront_pre_loop'/>
+<use f='MTProxy/net/net-connections.c' l='325' u='c' c='disable_qack'/>
+<use f='MTProxy/net/net-connections.c' l='608' u='c' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='731' u='c' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-events.c' l='459' u='c' c='new_socket'/>
+<use f='MTProxy/net/net-events.c' l='506' u='c' c='maximize_sndbuf'/>
+<use f='MTProxy/net/net-events.c' l='544' u='c' c='maximize_rcvbuf'/>
+<use f='MTProxy/net/net-events.c' l='570' u='c' c='server_socket'/>
+<use f='MTProxy/net/net-events.c' l='573' u='c' c='server_socket'/>
+<use f='MTProxy/net/net-events.c' l='578' u='c' c='server_socket'/>
+<use f='MTProxy/net/net-events.c' l='580' u='c' c='server_socket'/>
+<use f='MTProxy/net/net-events.c' l='581' u='c' c='server_socket'/>
+<use f='MTProxy/net/net-events.c' l='584' u='c' c='server_socket'/>
+<use f='MTProxy/net/net-events.c' l='585' u='c' c='server_socket'/>
+<use f='MTProxy/net/net-events.c' l='587' u='c' c='server_socket'/>
+<use f='MTProxy/net/net-events.c' l='591' u='c' c='server_socket'/>
+<use f='MTProxy/net/net-events.c' l='644' u='c' c='client_socket'/>
+<use f='MTProxy/net/net-events.c' l='646' u='c' c='client_socket'/>
+<use f='MTProxy/net/net-events.c' l='651' u='c' c='client_socket'/>
+<use f='MTProxy/net/net-events.c' l='653' u='c' c='client_socket'/>
+<use f='MTProxy/net/net-events.c' l='656' u='c' c='client_socket'/>
+<use f='MTProxy/net/net-events.c' l='657' u='c' c='client_socket'/>
+<use f='MTProxy/net/net-events.c' l='659' u='c' c='client_socket'/>
+<use f='MTProxy/net/net-events.c' l='712' u='c' c='client_socket_ipv6'/>
+<use f='MTProxy/net/net-events.c' l='717' u='c' c='client_socket_ipv6'/>
+<use f='MTProxy/net/net-events.c' l='718' u='c' c='client_socket_ipv6'/>

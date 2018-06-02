@@ -1,0 +1,6 @@
+<dec f='MTProxy/common/md5.h' l='116' type='int md5_self_test(int verbose)'/>
+<doc f='MTProxy/common/md5.h' l='111'>/**
+ * \brief          Checkup routine
+ *
+ * \return         0 if successful, or 1 if the test failed
+ */</doc>

@@ -1,0 +1,2 @@
+<use f='MTProxy/net/net-rpc-targets.c' l='133' u='c' c='rpc_target_insert_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='177' u='c' c='rpc_target_delete_conn'/>

@@ -1,0 +1,1 @@
+<dec f='MTProxy/engine/engine-rpc.h' l='82' type='int tl_query_act_tcp(connection_job_t c, int op, struct raw_message * raw)'/>

@@ -1,0 +1,5 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='407' type='int'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2024' u='r' c='check_children_status'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2025' u='r' c='check_children_status'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2250' u='w' c='mtfront_pre_init'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2251' u='r' c='mtfront_pre_init'/>

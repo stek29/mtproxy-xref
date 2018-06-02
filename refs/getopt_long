@@ -1,0 +1,2 @@
+<dec f='include/getopt.h' l='173' type='int getopt_long(int ___argc, char *const * ___argv, const char * __shortopts, const struct option * __longopts, int * __longind)'/>
+<use f='MTProxy/common/server-functions.c' l='692' u='c' c='parse_engine_options_long'/>

@@ -1,0 +1,4 @@
+<dec f='MTProxy/engine/engine.h' l='131' type='int'/>
+<use f='MTProxy/engine/engine.h' l='197' u='w' c='engine_set_required_cpu_threads'/>
+<use f='MTProxy/engine/engine.h' l='197' u='r' c='engine_get_required_cpu_threads'/>
+<offset>384</offset>

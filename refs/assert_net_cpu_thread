@@ -1,0 +1,14 @@
+<dec f='MTProxy/net/net-connections.h' l='375' type='void assert_net_cpu_thread()'/>
+<def f='MTProxy/net/net-connections.c' l='263' type='void assert_net_cpu_thread()'/>
+<use f='MTProxy/net/net-connections.c' l='412' u='c' c='cpu_server_free_connection'/>
+<use f='MTProxy/net/net-connections.c' l='472' u='c' c='cpu_server_close_connection'/>
+<use f='MTProxy/net/net-connections.c' l='540' u='c' c='do_connection_job'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='115' u='c' c='rpc_target_insert_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='157' u='c' c='rpc_target_delete_conn'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='43' u='c' c='cpu_tcp_free_connection_buffers'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='54' u='c' c='cpu_tcp_server_writer'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='100' u='c' c='cpu_tcp_server_reader'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='194' u='c' c='cpu_tcp_aes_crypto_encrypt_output'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='212' u='c' c='cpu_tcp_aes_crypto_decrypt_input'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='236' u='c' c='cpu_tcp_aes_crypto_ctr128_encrypt_output'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='253' u='c' c='cpu_tcp_aes_crypto_ctr128_decrypt_input'/>

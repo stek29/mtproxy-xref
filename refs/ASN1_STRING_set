@@ -1,0 +1,5 @@
+<dec f='include/openssl/asn1.h' l='815' type='int ASN1_STRING_set(ASN1_STRING * str, const void * data, int len)'/>
+<doc f='include/openssl/asn1.h' l='811'>/*
+   * Since this is used to store all sorts of things, via macros, for now,
+   * make its data void *
+   */</doc>

@@ -1,0 +1,7 @@
+<dec f='MTProxy/net/net-crypto-aes.h' l='89' type='int aes_create_keys(struct aes_key_data * R, int am_client, const char * nonce_server, const char * nonce_client, int client_timestamp, unsigned int server_ip, unsigned short server_port, const unsigned char * server_ipv6, unsigned int client_ip, unsigned short client_port, const unsigned char * client_ipv6, const aes_secret_t * key, const unsigned char * temp_key, int temp_key_len)'/>
+<def f='MTProxy/net/net-crypto-aes.c' l='240' ll='314' type='int aes_create_keys(struct aes_key_data * R, int am_client, const char * nonce_server, const char * nonce_client, int client_timestamp, unsigned int server_ip, unsigned short server_port, const unsigned char * server_ipv6, unsigned int client_ip, unsigned short client_port, const unsigned char * client_ipv6, const aes_secret_t * key, const unsigned char * temp_key, int temp_key_len)'/>
+<doc f='MTProxy/net/net-crypto-aes.c' l='236'>// str := nonce_server.nonce_client.client_timestamp.server_ip.client_port.(&quot;SERVER&quot;/&quot;CLIENT&quot;).client_ip.server_port.master_key.nonce_server.[client_ipv6.server_ipv6].nonce_client
+// key := SUBSTR(MD5(str+1),0,12).SHA1(str)
+// iv  := MD5(str+2)</doc>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='675' u='c' c='tcp_rpcc_start_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='615' u='c' c='tcp_rpcs_init_crypto'/>

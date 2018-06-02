@@ -1,0 +1,12 @@
+<dec f='MTProxy/net/net-events.h' l='72' type='long long'/>
+<offset>320</offset>
+<use f='MTProxy/net/net-connections.c' l='1094' u='r' c='net_server_socket_read_write_gateway'/>
+<use f='MTProxy/net/net-connections.c' l='1204' u='r' c='alloc_new_socket_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1336' u='r' c='init_listening_connection_ext'/>
+<use f='MTProxy/net/net-connections.c' l='1391' u='a' c='connection_event_incref'/>
+<use f='MTProxy/net/net-connections.c' l='1400' u='r' c='connection_get_by_fd'/>
+<use f='MTProxy/net/net-connections.c' l='1403' u='a' c='connection_get_by_fd'/>
+<use f='MTProxy/net/net-connections.c' l='1405' u='a' c='connection_get_by_fd'/>
+<use f='MTProxy/net/net-connections.c' l='1409' u='a' c='connection_get_by_fd'/>
+<use f='MTProxy/net/net-events.c' l='192' u='r' c='epoll_sethandler'/>
+<use f='MTProxy/net/net-events.c' l='193' u='a' c='epoll_sethandler'/>

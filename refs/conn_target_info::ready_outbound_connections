@@ -1,0 +1,14 @@
+<dec f='MTProxy/net/net-connections.h' l='188' type='int'/>
+<offset>768</offset>
+<use f='MTProxy/net/net-connections.c' l='1648' u='r' c='destroy_dead_target_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1649' u='w' c='destroy_dead_target_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1651' u='r' c='destroy_dead_target_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1652' u='r' c='destroy_dead_target_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1655' u='r' c='destroy_dead_target_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1658' u='r' c='destroy_dead_target_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1688' u='r' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1689' u='w' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1691' u='r' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1692' u='r' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1695' u='r' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1698' u='r' c='create_new_connections'/>

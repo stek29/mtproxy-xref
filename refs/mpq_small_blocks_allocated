@@ -1,0 +1,5 @@
+<dec f='MTProxy/common/mp-queue.h' l='101' type='volatile int'/>
+<def f='MTProxy/common/mp-queue.c' l='46' type='volatile int'/>
+<use f='MTProxy/common/mp-queue.c' l='71' u='r' c='mp_queue_prepare_stat'/>
+<use f='MTProxy/common/mp-queue.c' l='204' u='a' c='alloc_mpq_block'/>
+<use f='MTProxy/common/mp-queue.c' l='247' u='a' c='free_mpq_block'/>

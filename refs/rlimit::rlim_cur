@@ -1,0 +1,9 @@
+<dec f='include/x86_64-linux-gnu/bits/resource.h' l='142' type='rlim_t'/>
+<use f='MTProxy/common/server-functions.c' l='152' u='r' c='raise_file_rlimit'/>
+<use f='MTProxy/common/server-functions.c' l='153' u='w' c='raise_file_rlimit'/>
+<use f='MTProxy/common/server-functions.c' l='154' u='r' c='raise_file_rlimit'/>
+<use f='MTProxy/common/server-functions.c' l='155' u='r' c='raise_file_rlimit'/>
+<offset>0</offset>
+<doc f='include/x86_64-linux-gnu/bits/resource.h' l='141'>/* The current (soft) limit.  */</doc>
+<use f='MTProxy/engine/engine.c' l='184' u='r' c='raise_file_limit'/>
+<use f='MTProxy/engine/engine.c' l='185' u='r' c='raise_file_limit'/>

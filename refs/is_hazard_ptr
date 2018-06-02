@@ -1,0 +1,5 @@
+<dec f='MTProxy/common/mp-queue.h' l='144' type='int is_hazard_ptr(void * ptr, int a, int b)'/>
+<def f='MTProxy/common/mp-queue.c' l='81' ll='105' type='int is_hazard_ptr(void * ptr, int a, int b)'/>
+<use f='MTProxy/common/mp-queue.c' l='175' u='c' c='alloc_mpq_block'/>
+<use f='MTProxy/common/mp-queue.c' l='465' u='c' c='mpq_pop'/>
+<use f='MTProxy/common/mp-queue.c' l='517' u='c' c='mpq_is_empty'/>

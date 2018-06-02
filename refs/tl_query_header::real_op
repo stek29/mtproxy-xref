@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/tl-parse.h' l='145' type='int'/>
+<use f='MTProxy/common/tl-parse.c' l='620' u='w' c='tlf_query_header'/>
+<use f='MTProxy/common/tl-parse.c' l='691' u='w' c='tlf_query_answer_header'/>
+<offset>192</offset>

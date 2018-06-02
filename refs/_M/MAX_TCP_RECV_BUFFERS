@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-connections.h' l='43'/>
+<use f='MTProxy/net/net-connections.c' l='220' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='221' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='227' u='c'/>
+<use f='MTProxy/net/net-connections.c' l='868' u='c'/>

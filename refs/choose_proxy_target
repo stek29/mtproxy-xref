@@ -1,0 +1,6 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='1627' ll='1645' type='conn_target_job_t choose_proxy_target(int target_dc)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1655' u='c' c='forward_mtproto_enc_packet'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1685' u='c' c='forward_mtproto_packet'/>
+<doc f='MTProxy/mtproto/mtproto-proxy.c' l='1623'>/* ------------- process normal (encrypted) packet ----------------- */
+
+// connection_job_t get_target_connection (conn_target_job_t S, int rotate);</doc>

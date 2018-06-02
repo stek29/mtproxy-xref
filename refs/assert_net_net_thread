@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-connections.h' l='376' type='void assert_net_net_thread()'/>
+<def f='MTProxy/net/net-connections.c' l='264' type='void assert_net_net_thread()'/>
+<use f='MTProxy/net/net-connections.c' l='818' u='c' c='net_server_socket_free'/>
+<use f='MTProxy/net/net-connections.c' l='851' u='c' c='net_server_socket_reader'/>
+<use f='MTProxy/net/net-connections.c' l='950' u='c' c='net_server_socket_writer'/>
+<use f='MTProxy/net/net-connections.c' l='1037' u='c' c='net_server_socket_read_write'/>

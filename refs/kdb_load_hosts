@@ -1,0 +1,5 @@
+<dec f='MTProxy/common/resolver.h' l='31' type='int kdb_load_hosts()'/>
+<def f='MTProxy/common/resolver.c' l='331' ll='353' type='int kdb_load_hosts()'/>
+<use f='MTProxy/common/resolver.c' l='361' u='c' c='kdb_gethostbyname'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='372' u='c' c='do_reload_config'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2236' u='c' c='mtfront_pre_init'/>

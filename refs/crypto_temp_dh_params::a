@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-crypto-dh.h' l='29' type='unsigned char [256]'/>
+<offset>64</offset>
+<use f='MTProxy/net/net-crypto-dh.c' l='171' u='r' c='dh_first_round'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='229' u='r' c='dh_third_round'/>

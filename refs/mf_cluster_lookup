@@ -1,0 +1,5 @@
+<dec f='MTProxy/mtproto/mtproto-config.h' l='69' type='struct mf_cluster * mf_cluster_lookup(struct mf_config * MC, int cluster_id, int force)'/>
+<def f='MTProxy/mtproto/mtproto-config.c' l='217' ll='225' type='struct mf_cluster * mf_cluster_lookup(struct mf_config * MC, int cluster_id, int force)'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='298' u='c' c='parse_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='350' u='c' c='parse_config'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1629' u='c' c='choose_proxy_target'/>

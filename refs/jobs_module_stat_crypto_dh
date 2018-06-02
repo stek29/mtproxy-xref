@@ -1,0 +1,8 @@
+<def f='MTProxy/net/net-crypto-dh.c' l='53' macro='1'/>
+<def f='MTProxy/net/net-crypto-dh.c' l='57' macro='1' type='struct jobs_module_stat_crypto_dh *'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='57' macro='1' u='w'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='173' macro='1' u='r'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='219' macro='1' u='r'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='232' macro='1' u='r'/>
+<size>24</size>
+<mbr r='jobs_module_stat_crypto_dh::tot_dh_rounds' o='0' t='long long [3]'/>

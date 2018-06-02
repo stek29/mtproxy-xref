@@ -1,0 +1,10 @@
+<def f='MTProxy/common/mp-queue.h' l='78' ll='87'/>
+<size>65664</size>
+<mbr r='mp_queue_block::mqb_head' o='0' t='long'/>
+<mbr r='mp_queue_block::mqb_magic' o='64' t='int'/>
+<mbr r='mp_queue_block::mqb_align_bytes' o='96' t='int'/>
+<mbr r='mp_queue_block::mqb_size' o='128' t='int'/>
+<mbr r='mp_queue_block::mqb_tail' o='512' t='long'/>
+<mbr r='mp_queue_block::mqb_next' o='576' t='struct mp_queue_block *'/>
+<mbr r='mp_queue_block::mqb_next_allocators' o='640' t='int'/>
+<mbr r='mp_queue_block::mqb_nodes' o='1024' t='mpq_node_t [4096]'/>

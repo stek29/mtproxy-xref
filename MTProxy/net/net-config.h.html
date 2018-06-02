@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>net-config.h source code [MTProxy/net/net-config.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="https://code.woboq.org/data//qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="https://code.woboq.org/data//kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery-ui.min.js"></script>
+<script>var file = 'MTProxy/net/net-config.h'; var root_path = '../..'; var data_path = 'https://code.woboq.org/data/';</script>
+<script src='https://code.woboq.org/data//codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='..'>MTProxy</a>/<a href='./'>net</a>/<a href='net-config.h.html'>net-config.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>    This file is part of Mtproto-proxy Library.</i></td></tr>
+<tr><th id="3">3</th><td><i></i></td></tr>
+<tr><th id="4">4</th><td><i>    Mtproto-proxy Library is free software: you can redistribute it and/or modify</i></td></tr>
+<tr><th id="5">5</th><td><i>    it under the terms of the GNU Lesser General Public License as published by</i></td></tr>
+<tr><th id="6">6</th><td><i>    the Free Software Foundation, either version 2 of the License, or</i></td></tr>
+<tr><th id="7">7</th><td><i>    (at your option) any later version.</i></td></tr>
+<tr><th id="8">8</th><td><i></i></td></tr>
+<tr><th id="9">9</th><td><i>    Mtproto-proxy Library is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="10">10</th><td><i>    but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="11">11</th><td><i>    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</i></td></tr>
+<tr><th id="12">12</th><td><i>    GNU Lesser General Public License for more details.</i></td></tr>
+<tr><th id="13">13</th><td><i></i></td></tr>
+<tr><th id="14">14</th><td><i>    You should have received a copy of the GNU Lesser General Public License</i></td></tr>
+<tr><th id="15">15</th><td><i>    along with Mtproto-proxy Library.  If not, see &lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</i></td></tr>
+<tr><th id="16">16</th><td><i></i></td></tr>
+<tr><th id="17">17</th><td><i>    Copyright 2014-2016 Telegram Messenger Inc             </i></td></tr>
+<tr><th id="18">18</th><td><i>              2014-2016 Nikolai Durov</i></td></tr>
+<tr><th id="19">19</th><td><i>*/</i></td></tr>
+<tr><th id="20">20</th><td></td></tr>
+<tr><th id="21">21</th><td><u>#pragma once</u></td></tr>
+<tr><th id="22">22</th><td></td></tr>
+<tr><th id="23">23</th><td><u>#include <a href="net-crypto-aes.h.html">"net/net-crypto-aes.h"</a></u></td></tr>
+<tr><th id="24">24</th><td></td></tr>
+<tr><th id="25">25</th><td><u>#define <dfn class="macro" id="_M/MAX_PWD_CONFIG_LEN" data-ref="_M/MAX_PWD_CONFIG_LEN">MAX_PWD_CONFIG_LEN</dfn>	16384</u></td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td><u>#define <dfn class="macro" id="_M/RPCF_ALLOW_UNENC" data-ref="_M/RPCF_ALLOW_UNENC">RPCF_ALLOW_UNENC</dfn>        1</u></td></tr>
+<tr><th id="28">28</th><td><u>#define <dfn class="macro" id="_M/RPCF_ALLOW_ENC" data-ref="_M/RPCF_ALLOW_ENC">RPCF_ALLOW_ENC</dfn>          2</u></td></tr>
+<tr><th id="29">29</th><td><u>#define <dfn class="macro" id="_M/RPCF_REQ_DH" data-ref="_M/RPCF_REQ_DH">RPCF_REQ_DH</dfn>             4</u></td></tr>
+<tr><th id="30">30</th><td><u>#define <dfn class="macro" id="_M/RPCF_ALLOW_SKIP_DH" data-ref="_M/RPCF_ALLOW_SKIP_DH">RPCF_ALLOW_SKIP_DH</dfn>      8</u></td></tr>
+<tr><th id="31">31</th><td><u>#define <dfn class="macro" id="_M/RPCF_DISABLE_RPC" data-ref="_M/RPCF_DISABLE_RPC">RPCF_DISABLE_RPC</dfn>	0x1000</u></td></tr>
+<tr><th id="32">32</th><td><u>#define <dfn class="macro" id="_M/RPCF_ALLOW_MC" data-ref="_M/RPCF_ALLOW_MC">RPCF_ALLOW_MC</dfn>		0x2000</u></td></tr>
+<tr><th id="33">33</th><td><u>#define <dfn class="macro" id="_M/RPCF_ALLOW_SQL" data-ref="_M/RPCF_ALLOW_SQL">RPCF_ALLOW_SQL</dfn>		0x4000</u></td></tr>
+<tr><th id="34">34</th><td><u>#define <dfn class="macro" id="_M/RPCF_ALLOW_HTTP" data-ref="_M/RPCF_ALLOW_HTTP">RPCF_ALLOW_HTTP</dfn>		0x8000</u></td></tr>
+<tr><th id="35">35</th><td><u>#define <dfn class="macro" id="_M/RPCF_RESULT_VALID" data-ref="_M/RPCF_RESULT_VALID">RPCF_RESULT_VALID</dfn>	0x80000000</u></td></tr>
+<tr><th id="36">36</th><td></td></tr>
+<tr><th id="37">37</th><td><b>extern</b> <em>char</em> <dfn class="decl" id="pwd_config_buf" title='pwd_config_buf' data-ref="pwd_config_buf">pwd_config_buf</dfn>[<a class="macro" href="#25" title="16384" data-ref="_M/MAX_PWD_CONFIG_LEN">MAX_PWD_CONFIG_LEN</a> + <var>128</var>];</td></tr>
+<tr><th id="38">38</th><td><b>extern</b> <em>int</em> <dfn class="decl" id="pwd_config_len" title='pwd_config_len' data-ref="pwd_config_len">pwd_config_len</dfn>;</td></tr>
+<tr><th id="39">39</th><td><b>extern</b> <em>char</em> <dfn class="decl" id="pwd_config_md5" title='pwd_config_md5' data-ref="pwd_config_md5">pwd_config_md5</dfn>[<var>33</var>];</td></tr>
+<tr><th id="40">40</th><td></td></tr>
+<tr><th id="41">41</th><td><em>int</em> <a class="decl" href="net-config.c.html#select_best_key_signature" title='select_best_key_signature' data-ref="select_best_key_signature" id="select_best_key_signature">select_best_key_signature</a> (<em>int</em> <dfn class="local col1 decl" id="1key_signature" title='key_signature' data-type='int' data-ref="1key_signature">key_signature</dfn>, <em>int</em> <dfn class="local col2 decl" id="2extra_num" title='extra_num' data-type='int' data-ref="2extra_num">extra_num</dfn>, <em>const</em> <em>int</em> *<dfn class="local col3 decl" id="3extra_key_signatures" title='extra_key_signatures' data-type='const int *' data-ref="3extra_key_signatures">extra_key_signatures</dfn>);</td></tr>
+<tr><th id="42">42</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='net-config.c.html'>MTProxy/net/net-config.c</a><br/>Generated on <em>2018-Jun-02</em> from project MTProxy revision <em>842f343decf6c463bdecf1862e357c4a03e4bc97</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

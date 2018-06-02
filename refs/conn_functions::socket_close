@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-connections.h' l='160' type='int (*)(connection_job_t)'/>
+<offset>1536</offset>
+<use f='MTProxy/net/net-connections.c' l='806' u='r' c='fail_socket_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1492' u='r' c='check_conn_functions'/>
+<use f='MTProxy/net/net-connections.c' l='1493' u='w' c='check_conn_functions'/>

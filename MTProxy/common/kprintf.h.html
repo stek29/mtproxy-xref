@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>kprintf.h source code [MTProxy/common/kprintf.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="https://code.woboq.org/data//qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="https://code.woboq.org/data//kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery-ui.min.js"></script>
+<script>var file = 'MTProxy/common/kprintf.h'; var root_path = '../..'; var data_path = 'https://code.woboq.org/data/';</script>
+<script src='https://code.woboq.org/data//codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='..'>MTProxy</a>/<a href='./'>common</a>/<a href='kprintf.h.html'>kprintf.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>    This file is part of Mtproto-proxy Library.</i></td></tr>
+<tr><th id="3">3</th><td><i></i></td></tr>
+<tr><th id="4">4</th><td><i>    Mtproto-proxy Library is free software: you can redistribute it and/or modify</i></td></tr>
+<tr><th id="5">5</th><td><i>    it under the terms of the GNU Lesser General Public License as published by</i></td></tr>
+<tr><th id="6">6</th><td><i>    the Free Software Foundation, either version 2 of the License, or</i></td></tr>
+<tr><th id="7">7</th><td><i>    (at your option) any later version.</i></td></tr>
+<tr><th id="8">8</th><td><i></i></td></tr>
+<tr><th id="9">9</th><td><i>    Mtproto-proxy Library is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="10">10</th><td><i>    but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="11">11</th><td><i>    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</i></td></tr>
+<tr><th id="12">12</th><td><i>    GNU Lesser General Public License for more details.</i></td></tr>
+<tr><th id="13">13</th><td><i></i></td></tr>
+<tr><th id="14">14</th><td><i>    You should have received a copy of the GNU Lesser General Public License</i></td></tr>
+<tr><th id="15">15</th><td><i>    along with Mtproto-proxy Library.  If not, see &lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</i></td></tr>
+<tr><th id="16">16</th><td><i></i></td></tr>
+<tr><th id="17">17</th><td><i>    Copyright 2009-2012 Vkontakte Ltd</i></td></tr>
+<tr><th id="18">18</th><td><i>              2009-2012 Nikolai Durov</i></td></tr>
+<tr><th id="19">19</th><td><i>              2009-2012 Andrey Lopatin</i></td></tr>
+<tr><th id="20">20</th><td><i>                   2012 Anton Maydell</i></td></tr>
+<tr><th id="21">21</th><td><i></i></td></tr>
+<tr><th id="22">22</th><td><i>    Copyright 2014 Telegram Messenger Inc</i></td></tr>
+<tr><th id="23">23</th><td><i>              2014 Anton Maydell</i></td></tr>
+<tr><th id="24">24</th><td><i>*/</i></td></tr>
+<tr><th id="25">25</th><td></td></tr>
+<tr><th id="26">26</th><td><u>#pragma once</u></td></tr>
+<tr><th id="27">27</th><td></td></tr>
+<tr><th id="28">28</th><td><u>#include &lt;stddef.h&gt;</u></td></tr>
+<tr><th id="29">29</th><td><u>#include <a href="../../include/x86_64-linux-gnu/sys/types.h.html">&lt;sys/types.h&gt;</a></u></td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td><b>extern</b> <em>int</em> <dfn class="decl" id="verbosity" title='verbosity' data-ref="verbosity">verbosity</dfn>;</td></tr>
+<tr><th id="32">32</th><td><b>extern</b> <em>const</em> <em>char</em> *<dfn class="decl" id="logname" title='logname' data-ref="logname">logname</dfn>;</td></tr>
+<tr><th id="33">33</th><td></td></tr>
+<tr><th id="34">34</th><td><em>void</em> <dfn class="decl" id="reopen_logs" title='reopen_logs' data-ref="reopen_logs">reopen_logs</dfn> (<em>void</em>);</td></tr>
+<tr><th id="35">35</th><td><em>void</em> <dfn class="decl" id="reopen_logs_ext" title='reopen_logs_ext' data-ref="reopen_logs_ext">reopen_logs_ext</dfn> (<em>int</em> <dfn class="local col0 decl" id="1050slave_mode" title='slave_mode' data-type='int' data-ref="1050slave_mode">slave_mode</dfn>);</td></tr>
+<tr><th id="36">36</th><td><em>int</em> <dfn class="decl" id="hexdump" title='hexdump' data-ref="hexdump">hexdump</dfn> (<em>const</em> <em>void</em> *<dfn class="local col1 decl" id="1051start" title='start' data-type='const void *' data-ref="1051start">start</dfn>, <em>const</em> <em>void</em> *<dfn class="local col2 decl" id="1052end" title='end' data-type='const void *' data-ref="1052end">end</dfn>);</td></tr>
+<tr><th id="37">37</th><td></td></tr>
+<tr><th id="38">38</th><td><b>extern</b> <em>double</em> <dfn class="decl" id="reindex_speed" title='reindex_speed' data-ref="reindex_speed">reindex_speed</dfn>;</td></tr>
+<tr><th id="39">39</th><td></td></tr>
+<tr><th id="40">40</th><td><i>// safely writes buf to fd, considering write speed limit</i></td></tr>
+<tr><th id="41">41</th><td><em>void</em> <dfn class="decl" id="kdb_write" title='kdb_write' data-ref="kdb_write">kdb_write</dfn> (<em>int</em> <dfn class="local col3 decl" id="1053fd" title='fd' data-type='int' data-ref="1053fd">fd</dfn>, <em>const</em> <em>void</em> *<dfn class="local col4 decl" id="1054buf" title='buf' data-type='const void *' data-ref="1054buf">buf</dfn>, <em>long</em> <em>long</em> <dfn class="local col5 decl" id="1055count" title='count' data-type='long long' data-ref="1055count">count</dfn>, <em>const</em> <em>char</em> *<dfn class="local col6 decl" id="1056filename" title='filename' data-type='const char *' data-ref="1056filename">filename</dfn>);</td></tr>
+<tr><th id="42">42</th><td></td></tr>
+<tr><th id="43">43</th><td><i>// write message with timestamp and pid, safe to call inside handler</i></td></tr>
+<tr><th id="44">44</th><td><em>int</em> <dfn class="decl" id="kwrite" title='kwrite' data-ref="kwrite">kwrite</dfn> (<em>int</em> <dfn class="local col7 decl" id="1057fd" title='fd' data-type='int' data-ref="1057fd">fd</dfn>, <em>const</em> <em>void</em> *<dfn class="local col8 decl" id="1058buf" title='buf' data-type='const void *' data-ref="1058buf">buf</dfn>, <em>int</em> <dfn class="local col9 decl" id="1059count" title='count' data-type='int' data-ref="1059count">count</dfn>);</td></tr>
+<tr><th id="45">45</th><td></td></tr>
+<tr><th id="46">46</th><td><i>// print message with timestamp</i></td></tr>
+<tr><th id="47">47</th><td><em>void</em> <dfn class="decl" id="kprintf" title='kprintf' data-ref="kprintf">kprintf</dfn> (<em>const</em> <em>char</em> *<dfn class="local col0 decl" id="1060format" title='format' data-type='const char *' data-ref="1060format">format</dfn>, ...) <b>__attribute__</b> ((format (printf, <var>1</var>, <var>2</var>)));</td></tr>
+<tr><th id="48">48</th><td><u>#define <dfn class="macro" id="_M/vkprintf" data-ref="_M/vkprintf">vkprintf</dfn>(verbosity_level, format, ...) do { \</u></td></tr>
+<tr><th id="49">49</th><td><u>    if ((verbosity_level) &gt; verbosity) { \</u></td></tr>
+<tr><th id="50">50</th><td><u>      break; \</u></td></tr>
+<tr><th id="51">51</th><td><u>    } \</u></td></tr>
+<tr><th id="52">52</th><td><u>    kprintf ((format), ##__VA_ARGS__); \</u></td></tr>
+<tr><th id="53">53</th><td><u>  } while (0)</u></td></tr>
+<tr><th id="54">54</th><td></td></tr>
+<tr><th id="55">55</th><td><em>void</em> <dfn class="decl" id="nck_write" title='nck_write' data-ref="nck_write">nck_write</dfn> (<em>int</em> <dfn class="local col1 decl" id="1061fd" title='fd' data-type='int' data-ref="1061fd">fd</dfn>, <em>const</em> <em>void</em> *<dfn class="local col2 decl" id="1062data" title='data' data-type='const void *' data-ref="1062data">data</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span> <dfn class="local col3 decl" id="1063len" title='len' data-type='size_t' data-ref="1063len">len</dfn>);</td></tr>
+<tr><th id="56">56</th><td><em>void</em> <dfn class="decl" id="nck_pwrite" title='nck_pwrite' data-ref="nck_pwrite">nck_pwrite</dfn> (<em>int</em> <dfn class="local col4 decl" id="1064fd" title='fd' data-type='int' data-ref="1064fd">fd</dfn>, <em>const</em> <em>void</em> *<dfn class="local col5 decl" id="1065data" title='data' data-type='const void *' data-ref="1065data">data</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t">size_t</span> <dfn class="local col6 decl" id="1066len" title='len' data-type='size_t' data-ref="1066len">len</dfn>, <a class="typedef" href="../../include/stdio.h.html#off_t" title='off_t' data-type='__off64_t' data-ref="off_t">off_t</a> <dfn class="local col7 decl" id="1067offset" title='offset' data-type='off_t' data-ref="1067offset">offset</dfn>);</td></tr>
+<tr><th id="57">57</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='common-stats.c.html'>MTProxy/common/common-stats.c</a><br/>Generated on <em>2018-Jun-02</em> from project MTProxy revision <em>842f343decf6c463bdecf1862e357c4a03e4bc97</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

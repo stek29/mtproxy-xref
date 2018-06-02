@@ -1,0 +1,4 @@
+<def f='MTProxy/common/tl-parse.h' l='315' ll='321' type='int tlf_lookup_data(struct tl_in_state * tlio_in, void * data, int len)'/>
+<doc f='MTProxy/common/tl-parse.h' l='315'>/* {{{ */</doc>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1225' macro='1' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1666' macro='1' u='c'/>

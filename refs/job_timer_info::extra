@@ -1,0 +1,4 @@
+<dec f='MTProxy/jobs/jobs.h' l='259' type='void *'/>
+<offset>256</offset>
+<use f='MTProxy/jobs/jobs.c' l='1322' u='r' c='do_timer_job'/>
+<use f='MTProxy/jobs/jobs.c' l='1347' u='w' c='job_timer_alloc'/>

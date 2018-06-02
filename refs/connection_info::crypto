@@ -1,0 +1,27 @@
+<dec f='MTProxy/net/net-connections.h' l='231' type='void *'/>
+<offset>3904</offset>
+<use f='MTProxy/net/net-crypto-aes.c' l='95' u='w' c='aes_crypto_init'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='114' u='w' c='aes_crypto_ctr128_init'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='119' u='r' c='aes_crypto_free'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='120' u='r' c='aes_crypto_free'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='121' u='w' c='aes_crypto_free'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='75' u='r' c='cpu_tcp_server_writer'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='107' u='r' c='cpu_tcp_server_reader'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='115' u='r' c='cpu_tcp_server_reader'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='175' u='r' c='cpu_tcp_server_reader'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='197' u='r' c='cpu_tcp_aes_crypto_encrypt_output'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='198' u='r' c='cpu_tcp_aes_crypto_encrypt_output'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='214' u='r' c='cpu_tcp_aes_crypto_decrypt_input'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='215' u='r' c='cpu_tcp_aes_crypto_decrypt_input'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='230' u='r' c='cpu_tcp_aes_crypto_needed_output_bytes'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='239' u='r' c='cpu_tcp_aes_crypto_ctr128_encrypt_output'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='240' u='r' c='cpu_tcp_aes_crypto_ctr128_encrypt_output'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='255' u='r' c='cpu_tcp_aes_crypto_ctr128_decrypt_input'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='256' u='r' c='cpu_tcp_aes_crypto_ctr128_decrypt_input'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='270' u='r' c='cpu_tcp_aes_crypto_ctr128_needed_output_bytes'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='647' u='r' c='tcp_rpcc_init_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='659' u='r' c='tcp_rpcc_start_crypto'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='207' u='r' c='tcp_rpc_flush'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='213' u='r' c='tcp_rpcs_compact_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='214' u='r' c='tcp_rpcs_compact_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='563' u='r' c='tcp_rpcs_init_crypto'/>

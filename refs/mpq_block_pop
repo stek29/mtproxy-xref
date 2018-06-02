@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/mp-queue.h' l='115' type='mqn_value_t mpq_block_pop(struct mp_queue_block * QB)'/>
+<def f='MTProxy/common/mp-queue.c' l='277' ll='330' type='mqn_value_t mpq_block_pop(struct mp_queue_block * QB)'/>
+<use f='MTProxy/common/mp-queue.c' l='450' u='c' c='mpq_pop'/>
+<use f='MTProxy/common/mp-queue.c' l='459' u='c' c='mpq_pop'/>

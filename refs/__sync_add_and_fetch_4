@@ -1,0 +1,3 @@
+<use f='MTProxy/common/mp-queue.c' l='137' u='c' c='mp_sem_wait'/>
+<use f='MTProxy/net/net-crypto-aes.h' l='98' u='c' c='aes_secret_decref'/>
+<use f='MTProxy/net/net-connections.c' l='1885' u='c' c='destroy_target'/>

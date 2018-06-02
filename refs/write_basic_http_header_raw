@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-http-server.h' l='116' type='int write_basic_http_header_raw(connection_job_t c, struct raw_message * raw, int code, int date, int len, const char * add_header, const char * content_type)'/>
+<doc f='MTProxy/net/net-http-server.h' l='115'>//int write_basic_http_header (connection_job_t c, int code, int date, int len, const char *add_header, const char *content_type);</doc>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1388' u='c' c='hts_stats_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='185' u='c' c='write_http_error_raw'/>
+<use f='MTProxy/net/net-http-server.c' l='192' u='c' c='write_http_error_raw'/>
+<def f='MTProxy/net/net-http-server.c' l='834' ll='864' type='int write_basic_http_header_raw(connection_job_t C, struct raw_message * raw, int code, int date, int len, const char * add_header, const char * content_type)'/>

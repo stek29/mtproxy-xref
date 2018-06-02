@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-connections.h' l='377' type='void assert_engine_thread()'/>
+<def f='MTProxy/net/net-connections.c' l='265' ll='267' type='void assert_engine_thread()'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='86' u='c' c='rpc_target_alloc'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='107' u='c' c='rpc_target_insert_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='152' u='c' c='rpc_target_delete_conn'/>

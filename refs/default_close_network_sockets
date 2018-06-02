@@ -1,0 +1,4 @@
+<dec f='MTProxy/engine/engine-net.h' l='30' type='void default_close_network_sockets()'/>
+<def f='MTProxy/engine/engine-net.c' l='41' ll='48' type='void default_close_network_sockets()'/>
+<doc f='MTProxy/engine/engine-net.c' l='41'>/* {{{ */</doc>
+<use f='MTProxy/engine/engine.c' l='543' u='r' c='check_server_functions'/>

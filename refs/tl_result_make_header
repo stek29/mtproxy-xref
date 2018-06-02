@@ -1,0 +1,2 @@
+<def f='MTProxy/engine/engine-rpc.c' l='127' ll='136' type='int tl_result_make_header(int * ptr, struct tl_query_header * h)'/>
+<use f='MTProxy/engine/engine-rpc.c' l='513' u='c' c='process_query_job'/>

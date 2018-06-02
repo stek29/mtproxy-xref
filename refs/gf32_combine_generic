@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/crc32.h' l='76' type='unsigned int gf32_combine_generic(unsigned int * powers, unsigned int crc1, int64_t len2)'/>
+<def f='MTProxy/common/crc32.c' l='747' ll='757' type='unsigned int gf32_combine_generic(unsigned int * powers, unsigned int crc1, int64_t len2)'/>
+<use f='MTProxy/common/crc32.c' l='797' u='c' c='compute_crc32_combine_generic'/>
+<use f='MTProxy/common/crc32c.c' l='614' u='c' c='crc32c_combine_generic'/>

@@ -1,0 +1,8 @@
+<dec f='include/netinet/tcp.h' l='40'/>
+<doc f='include/netinet/tcp.h' l='37'>/*
+ * User-settable options (used with setsockopt).
+ */</doc>
+<use f='MTProxy/net/net-connections.c' l='608' u='c'/>
+<use f='MTProxy/net/net-events.c' l='581' u='c'/>
+<use f='MTProxy/net/net-events.c' l='653' u='c'/>
+<use f='MTProxy/net/net-events.c' l='718' u='c'/>

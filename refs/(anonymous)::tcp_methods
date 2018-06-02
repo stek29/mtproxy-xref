@@ -1,0 +1,4 @@
+<dec f='MTProxy/engine/engine.h' l='109' type='struct tcp_rpc_server_functions *'/>
+<offset>5824</offset>
+<use f='MTProxy/engine/engine.c' l='596' u='r' c='default_main'/>
+<use f='MTProxy/engine/engine.c' l='597' u='r' c='default_main'/>

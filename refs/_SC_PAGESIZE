@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/bits/confname.h' l='133' type='30'/>
+<use f='MTProxy/common/common-stats.c' l='73' macro='1' u='r'/>

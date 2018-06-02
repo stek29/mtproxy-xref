@@ -1,0 +1,26 @@
+<dec f='MTProxy/common/tl-parse.h' l='108' type='int'/>
+<use f='MTProxy/common/tl-parse.h' l='162' u='r' c='tlf_check'/>
+<use f='MTProxy/common/tl-parse.h' l='162' u='r' c='tlf_check'/>
+<use f='MTProxy/common/tl-parse.h' l='162' u='r' c='tlf_check'/>
+<use f='MTProxy/common/tl-parse.h' l='162' u='w' c='__tlf_raw_data'/>
+<use f='MTProxy/common/tl-parse.h' l='162' u='w' c='__tlf_skip_raw_data'/>
+<use f='MTProxy/common/tl-parse.h' l='162' u='r' c='tlf_string_len'/>
+<use f='MTProxy/common/tl-parse.h' l='162' u='r' c='tlf_string_len'/>
+<use f='MTProxy/common/tl-parse.h' l='162' u='r' c='tlf_pad'/>
+<use f='MTProxy/common/tl-parse.h' l='162' u='r' c='tlf_end'/>
+<use f='MTProxy/common/tl-parse.h' l='162' u='r' c='tlf_end'/>
+<use f='MTProxy/common/tl-parse.h' l='162' u='r' c='tlf_check_str_end'/>
+<use f='MTProxy/common/tl-parse.h' l='162' u='r' c='tlf_check_str_end'/>
+<use f='MTProxy/common/tl-parse.h' l='162' u='r' c='tlf_unread'/>
+<use f='MTProxy/common/tl-parse.h' l='162' u='w' c='tl_copy_through'/>
+<use f='MTProxy/common/tl-parse.h' l='162' u='w' c='_tlf_raw_message'/>
+<use f='MTProxy/common/tl-parse.c' l='183' macro='1' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='389' macro='1' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='564' macro='1' u='w'/>
+<offset>256</offset>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1568' macro='1' u='r'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1575' macro='1' u='r'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1611' macro='1' u='r'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1657' macro='1' u='r'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1687' macro='1' u='r'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1813' macro='1' u='r'/>

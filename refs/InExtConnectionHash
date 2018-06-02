@@ -1,0 +1,4 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='193' type='struct ext_connection *[1048576]'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='226' u='a' c='get_ext_connection_by_in_conn_id'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='267' u='r' c='get_ext_connection_by_in_conn_id'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='268' u='w' c='get_ext_connection_by_in_conn_id'/>

@@ -1,0 +1,8 @@
+<dec f='MTProxy/net/net-connections.h' l='411' type='int check_conn_functions(conn_type_t * type, int listening)'/>
+<use f='MTProxy/engine/engine.c' l='604' u='c' c='default_main'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1926' u='c' c='init_ct_server_mtfront'/>
+<use f='MTProxy/net/net-connections.c' l='1313' u='c' c='init_listening_connection_ext'/>
+<def f='MTProxy/net/net-connections.c' l='1476' ll='1569' type='int check_conn_functions(conn_type_t * type, int listening)'/>
+<use f='MTProxy/net/net-connections.c' l='1942' u='c' c='create_target'/>
+<doc f='MTProxy/net/net-connections.c' l='1474'>/* }}} */</doc>
+<doc f='MTProxy/net/net-connections.c' l='1476'>/* {{{ */</doc>

@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-msg-buffers.h' l='51'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='122' u='c'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='165' u='c'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='271' u='c'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='346' u='c'/>

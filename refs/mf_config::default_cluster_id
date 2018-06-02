@@ -1,0 +1,5 @@
+<dec f='MTProxy/mtproto/mtproto-config.h' l='46' type='int'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='241' u='w' c='preinit_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='280' u='w' c='parse_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='350' u='r' c='parse_config'/>
+<offset>64</offset>

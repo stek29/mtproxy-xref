@@ -1,0 +1,7 @@
+<dec f='include/unistd.h' l='720' type='int setgid(__gid_t __gid)'/>
+<doc f='include/unistd.h' l='716'>/* Set the group ID of the calling process to GID.
+   If the calling process is the super-user, set the real
+   and effective group IDs, and the saved set-group-ID to GID;
+   if not, the effective group ID is set to GID.  */</doc>
+<use f='MTProxy/common/server-functions.c' l='102' u='c' c='change_user_group'/>
+<use f='MTProxy/common/server-functions.c' l='137' u='c' c='change_user'/>

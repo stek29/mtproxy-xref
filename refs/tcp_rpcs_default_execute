@@ -1,0 +1,7 @@
+<dec f='MTProxy/net/net-tcp-rpc-ext-server.c' l='80' type='int tcp_rpcs_default_execute(connection_job_t c, int op, struct raw_message * msg)'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='338' u='c' c='tcp_rpcs_compact_parse_execute'/>
+<dec f='MTProxy/net/net-tcp-rpc-server.c' l='87' type='int tcp_rpcs_default_execute(connection_job_t c, int op, struct raw_message * msg)'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='90'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='90'/>
+<def f='MTProxy/net/net-tcp-rpc-server.c' l='100' ll='114' type='int tcp_rpcs_default_execute(connection_job_t C, int op, struct raw_message * raw)'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='438' u='c' c='tcp_rpcs_parse_execute'/>

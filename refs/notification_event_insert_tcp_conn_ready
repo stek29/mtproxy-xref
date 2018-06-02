@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-thread.h' l='29' type='void notification_event_insert_tcp_conn_ready(connection_job_t C)'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='418' u='c' c='tcp_rpcc_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='426' u='c' c='tcp_rpcs_parse_execute'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='527' u='c' c='tcp_rpcs_init_accepted_nohs'/>
+<def f='MTProxy/net/net-thread.c' l='120' ll='122' type='void notification_event_insert_tcp_conn_ready(connection_job_t C)'/>

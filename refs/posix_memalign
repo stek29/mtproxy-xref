@@ -1,0 +1,6 @@
+<dec f='include/stdlib.h' l='503' type='int posix_memalign(void ** __memptr, size_t __alignment, size_t __size)'/>
+<doc f='include/stdlib.h' l='502'>/* Allocate memory of SIZE bytes with an alignment of ALIGNMENT.  */</doc>
+<use f='MTProxy/common/mp-queue.c' l='397' u='c' c='alloc_mp_queue'/>
+<use f='MTProxy/common/mp-queue.c' l='405' u='c' c='alloc_mp_queue_w'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='83' u='c' c='aes_crypto_init'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='102' u='c' c='aes_crypto_ctr128_init'/>

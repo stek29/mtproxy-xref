@@ -1,0 +1,13 @@
+<dec f='MTProxy/jobs/jobs.h' l='43'/>
+<use f='MTProxy/jobs/jobs.h' l='421' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='960' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='976' u='c'/>
+<use f='MTProxy/jobs/jobs.c' l='713' u='c'/>
+<use f='MTProxy/jobs/jobs.c' l='729' u='c'/>
+<use f='MTProxy/jobs/jobs.c' l='859' u='c'/>
+<use f='MTProxy/jobs/jobs.c' l='947' u='c'/>
+<use f='MTProxy/jobs/jobs.c' l='1091' u='c'/>
+<use f='MTProxy/jobs/jobs.c' l='1219' u='c'/>
+<use f='MTProxy/jobs/jobs.c' l='1505' u='c'/>
+<use f='MTProxy/jobs/jobs.c' l='1546' u='c'/>
+<use f='MTProxy/jobs/jobs.c' l='1661' u='c'/>

@@ -1,0 +1,4 @@
+<dec f='MTProxy/net/net-connections.h' l='103' type='2'/>
+<doc f='MTProxy/net/net-connections.h' l='103'>// inbound connection</doc>
+<use f='MTProxy/net/net-connections.c' l='457' u='r' c='cpu_server_free_connection'/>
+<use f='MTProxy/net/net-connections.c' l='655' u='r' c='alloc_new_connection'/>

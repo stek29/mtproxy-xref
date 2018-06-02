@@ -1,0 +1,2 @@
+<dec f='include/openssl/evp.h' l='427'/>
+<doc f='include/openssl/evp.h' l='426'>/* RFC 5246 defines additional data to be 13 bytes in length */</doc>

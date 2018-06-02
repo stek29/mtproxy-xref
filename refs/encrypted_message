@@ -1,0 +1,10 @@
+<def f='MTProxy/mtproto/mtproto-common.h' l='59' ll='71'/>
+<size>4194392</size>
+<mbr r='encrypted_message::auth_key_id' o='0' t='long long'/>
+<mbr r='encrypted_message::msg_key' o='64' t='char [16]'/>
+<mbr r='encrypted_message::server_salt' o='192' t='long long'/>
+<mbr r='encrypted_message::session_id' o='256' t='long long'/>
+<mbr r='encrypted_message::msg_id' o='320' t='long long'/>
+<mbr r='encrypted_message::seq_no' o='384' t='int'/>
+<mbr r='encrypted_message::msg_len' o='416' t='int'/>
+<mbr r='encrypted_message::message' o='448' t='int [1048584]'/>

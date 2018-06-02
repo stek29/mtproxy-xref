@@ -1,0 +1,4 @@
+<dec f='include/asm-generic/socket.h' l='16'/>
+<use f='MTProxy/net/net-connections.c' l='737' u='c'/>
+<use f='MTProxy/net/net-events.c' l='531' u='c'/>
+<use f='MTProxy/net/net-events.c' l='544' u='c'/>

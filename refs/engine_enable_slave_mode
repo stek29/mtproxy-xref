@@ -1,0 +1,2 @@
+<def f='MTProxy/engine/engine.h' l='191' macro='1' type='void engine_enable_slave_mode()'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2252' u='c' c='mtfront_pre_init'/>

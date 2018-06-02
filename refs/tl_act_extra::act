@@ -1,0 +1,6 @@
+<dec f='MTProxy/engine/engine-rpc.h' l='95' type='int (*)(job_t, struct tl_act_extra *)'/>
+<use f='MTProxy/engine/engine-rpc.h' l='111' u='w' c='tl_act_extra_init'/>
+<offset>448</offset>
+<use f='MTProxy/engine/engine-rpc-common.c' l='81' u='w' c='tl_simple_parse_function'/>
+<use f='MTProxy/engine/engine-rpc.c' l='307' u='r' c='fetch_query'/>
+<use f='MTProxy/engine/engine-rpc.c' l='387' u='r' c='process_act_atom_subjob'/>

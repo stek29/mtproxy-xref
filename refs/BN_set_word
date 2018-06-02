@@ -1,0 +1,2 @@
+<dec f='include/openssl/bn.h' l='489' type='int BN_set_word(BIGNUM * a, unsigned long w)'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='126' u='c' c='init_dh_params'/>

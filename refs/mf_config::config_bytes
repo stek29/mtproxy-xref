@@ -1,0 +1,4 @@
+<dec f='MTProxy/mtproto/mtproto-config.h' l='49' type='int'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='415' u='w' c='do_reload_config'/>
+<offset>256</offset>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='657' u='r' c='mtfront_prepare_stats'/>

@@ -1,0 +1,4 @@
+<def f='MTProxy/jobs/jobs.h' l='318' ll='323' type='int job_fatal(job_t job, int error)'/>
+<use f='MTProxy/engine/engine-rpc.c' l='355' u='c' c='process_act_atom_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='373' u='c' c='process_act_atom_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='439' u='c' c='process_act_atom_subjob'/>

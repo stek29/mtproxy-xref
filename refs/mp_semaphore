@@ -1,0 +1,4 @@
+<def f='MTProxy/common/mp-queue.h' l='30' ll='33'/>
+<size>8</size>
+<mbr r='mp_semaphore::value' o='0' t='volatile int'/>
+<mbr r='mp_semaphore::waiting' o='32' t='volatile int'/>

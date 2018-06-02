@@ -1,0 +1,6 @@
+<dec f='MTProxy/engine/engine.h' l='97' type='const char *'/>
+<offset>1216</offset>
+<use f='MTProxy/engine/engine.c' l='163' u='r' c='get_version_string'/>
+<use f='MTProxy/engine/engine.c' l='164' u='r' c='get_version_string'/>
+<use f='MTProxy/engine/engine.c' l='609' u='r' c='default_main'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2301' u='w'/>

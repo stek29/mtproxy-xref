@@ -1,0 +1,5 @@
+<def f='MTProxy/jobs/jobs.c' l='79' macro='1' type='char *'/>
+<use f='MTProxy/jobs/jobs.c' l='286' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='320' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='321' macro='1' u='r'/>
+<use f='MTProxy/jobs/jobs.c' l='322' macro='1' u='r'/>

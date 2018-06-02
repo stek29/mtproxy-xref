@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-connections.h' l='297' type='long long'/>
+<offset>832</offset>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='489' u='w' c='add_stats'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='489' u='r' c='add_stats'/>
+<use f='MTProxy/net/net-connections.c' l='197' u='w' c='fetch_connections_stat'/>

@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-tcp-rpc-common.h' l='110'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='851' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='161' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='184' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='230' u='c'/>

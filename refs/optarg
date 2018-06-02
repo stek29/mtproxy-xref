@@ -1,0 +1,47 @@
+<dec f='include/getopt.h' l='57' type='char *'/>
+<dec f='include/getopt.h' l='57' type='char *'/>
+<doc f='include/getopt.h' l='51'>/* For communication from `getopt&apos; to the caller.
+   When `getopt&apos; finds an option that takes an argument,
+   the argument value is returned here.
+   Also, when `ordering&apos; is RETURN_IN_ORDER,
+   each non-option ARGV-element is returned here.  */</doc>
+<use f='MTProxy/common/server-functions.c' l='586' u='r' c='builtin_parse_option'/>
+<use f='MTProxy/common/server-functions.c' l='589' u='r' c='builtin_parse_option'/>
+<use f='MTProxy/common/server-functions.c' l='597' u='r' c='builtin_parse_option'/>
+<use f='MTProxy/common/server-functions.c' l='600' u='r' c='builtin_parse_option'/>
+<use f='MTProxy/common/server-functions.c' l='603' u='r' c='builtin_parse_option'/>
+<use f='MTProxy/common/server-functions.c' l='606' u='r' c='builtin_parse_option'/>
+<use f='MTProxy/common/server-functions.c' l='609' u='r' c='builtin_parse_option'/>
+<use f='MTProxy/common/server-functions.c' l='614' u='r' c='builtin_parse_option'/>
+<use f='MTProxy/common/server-functions.c' l='619' u='r' c='builtin_parse_option'/>
+<use f='MTProxy/engine/engine-net.c' l='148' u='r' c='f_parse_option_net'/>
+<use f='MTProxy/engine/engine-net.c' l='151' u='r' c='f_parse_option_net'/>
+<use f='MTProxy/engine/engine-net.c' l='156' u='r' c='f_parse_option_net'/>
+<use f='MTProxy/engine/engine-net.c' l='178' u='r' c='f_parse_option_net'/>
+<use f='MTProxy/engine/engine-net.c' l='193' u='r' c='f_parse_option_net'/>
+<use f='MTProxy/engine/engine-net.c' l='196' u='r' c='f_parse_option_net'/>
+<use f='MTProxy/engine/engine-net.c' l='199' u='r' c='f_parse_option_net'/>
+<use f='MTProxy/engine/engine-net.c' l='208' u='r' c='f_parse_option_net'/>
+<use f='MTProxy/engine/engine-net.c' l='209' u='r' c='f_parse_option_net'/>
+<use f='MTProxy/engine/engine.c' l='655' u='r' c='f_parse_option_engine'/>
+<use f='MTProxy/engine/engine.c' l='658' u='r' c='f_parse_option_engine'/>
+<use f='MTProxy/engine/engine.c' l='661' u='r' c='f_parse_option_engine'/>
+<use f='MTProxy/engine/engine.c' l='661' u='r' c='f_parse_option_engine'/>
+<use f='MTProxy/engine/engine.c' l='669' u='r' c='f_parse_option_engine'/>
+<use f='MTProxy/engine/engine.c' l='672' u='r' c='f_parse_option_engine'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2103' u='r' c='f_parse_option'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2109' u='r' c='f_parse_option'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2112' u='r' c='f_parse_option'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2141' u='r' c='f_parse_option'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2145' u='r' c='f_parse_option'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2153' u='r' c='f_parse_option'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2162' u='r' c='f_parse_option'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2162' u='r' c='f_parse_option'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2163' u='r' c='f_parse_option'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2164' u='r' c='f_parse_option'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2164' u='r' c='f_parse_option'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2165' u='r' c='f_parse_option'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2166' u='r' c='f_parse_option'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2166' u='r' c='f_parse_option'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2167' u='r' c='f_parse_option'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2169' u='r' c='f_parse_option'/>

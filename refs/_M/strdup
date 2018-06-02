@@ -1,0 +1,13 @@
+<dec f='include/x86_64-linux-gnu/bits/string2.h' l='1291'/>
+<use f='MTProxy/common/parse-config.c' l='265' u='c'/>
+<use f='MTProxy/common/server-functions.c' l='387' u='c'/>
+<use f='MTProxy/common/tl-parse.h' l='805' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='124' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='140' u='c'/>
+<use f='MTProxy/common/tl-parse.c' l='554' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='287' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='296' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='366' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='430' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='449' u='c'/>
+<use f='MTProxy/engine/engine-rpc.c' l='482' u='c'/>

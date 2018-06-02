@@ -1,0 +1,18 @@
+<dec f='MTProxy/jobs/jobs.h' l='399' type='int job_free(int job_tag_int, job_t job)'/>
+<use f='MTProxy/engine/engine-rpc.c' l='465' u='c' c='process_act_atom_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='601' u='c' c='process_query_job'/>
+<use f='MTProxy/engine/engine-rpc.c' l='671' u='c' c='process_query_custom_subjob'/>
+<use f='MTProxy/engine/engine-rpc.c' l='805' u='c' c='do_query_job_run'/>
+<use f='MTProxy/jobs/jobs.c' l='645' u='c' c='unlock_job'/>
+<use f='MTProxy/jobs/jobs.c' l='1161' u='c' c='process_job_list'/>
+<use f='MTProxy/jobs/jobs.c' l='1336' u='c' c='do_timer_job'/>
+<def f='MTProxy/jobs/jobs.c' l='1632' ll='1638' type='int job_free(int job_tag_int, job_t job)'/>
+<use f='MTProxy/jobs/jobs.c' l='1698' u='c' c='notify_job_run'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='741' u='c' c='callback_job_run'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='911' u='c' c='client_packet_job_run'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1349' u='c' c='http_query_job_run'/>
+<use f='MTProxy/net/net-connections.c' l='578' u='c' c='do_connection_job'/>
+<use f='MTProxy/net/net-connections.c' l='775' u='c' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1167' u='c' c='do_socket_connection_job'/>
+<use f='MTProxy/net/net-connections.c' l='1934' u='c' c='do_conn_target_job'/>
+<use f='MTProxy/net/net-msg-buffers.c' l='541' u='c' c='free_msg_buffer_job'/>

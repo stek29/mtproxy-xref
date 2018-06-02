@@ -1,0 +1,4 @@
+<def f='MTProxy/mtproto/mtproto-common.h' l='99' ll='102'/>
+<size>12</size>
+<mbr r='rpc_close_conn::type' o='0' t='int'/>
+<mbr r='rpc_close_conn::ext_conn_id' o='32' t='long long'/>

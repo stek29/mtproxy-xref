@@ -1,0 +1,4 @@
+<def f='MTProxy/net/net-events.h' l='131' ll='134'/>
+<size>28</size>
+<mbr r='sockaddr_in46::a4' o='0' t='struct sockaddr_in'/>
+<mbr r='sockaddr_in46::a6' o='0' t='struct sockaddr_in6'/>

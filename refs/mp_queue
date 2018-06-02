@@ -1,0 +1,6 @@
+<def f='MTProxy/common/mp-queue.h' l='89' ll='98'/>
+<size>192</size>
+<mbr r='mp_queue::mq_head' o='0' t='struct mp_queue_block *'/>
+<mbr r='mp_queue::mq_magic' o='64' t='int'/>
+<mbr r='mp_queue::mq_tail' o='512' t='struct mp_queue_block *'/>
+<mbr r='mp_queue::mq_sem' o='1024' t='mp_sem_t'/>

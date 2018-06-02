@@ -1,0 +1,27 @@
+<dec f='MTProxy/net/net-connections.h' l='212' type='int'/>
+<offset>800</offset>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1042' u='r' c='mtproto_http_close'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1043' u='r' c='mtproto_http_close'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1044' u='r' c='mtproto_http_close'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1046' u='w' c='mtproto_http_close'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1333' u='r' c='http_query_job_run'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1334' u='w' c='http_query_job_run'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1449' u='r' c='hts_execute'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1450' u='w' c='hts_execute'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1531' u='r' c='mtproto_http_alarm'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1532' u='r' c='mtproto_http_alarm'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1534' u='w' c='mtproto_http_alarm'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1548' u='r' c='finish_postponed_http_response'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1549' u='r' c='finish_postponed_http_response'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1550' u='r' c='finish_postponed_http_response'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1551' u='w' c='finish_postponed_http_response'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1556' u='r' c='finish_postponed_http_response'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1581' u='r' c='http_send_message'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1819' u='r' c='forward_tcp_query'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1820' u='r' c='forward_tcp_query'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1821' u='r' c='forward_tcp_query'/>
+<use f='MTProxy/net/net-http-server.c' l='228' u='r' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='626' u='r' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='871' u='r' c='http_flush'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='462' u='w' c='tcp_rpcs_wakeup'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='476' u='w' c='tcp_rpcs_alarm'/>

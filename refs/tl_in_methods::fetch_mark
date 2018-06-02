@@ -1,0 +1,5 @@
+<dec f='MTProxy/common/tl-parse.h' l='67' type='void (*)(struct tl_in_state *)'/>
+<use f='MTProxy/common/tl-parse.h' l='359' u='r' c='tlf_mark'/>
+<use f='MTProxy/common/tl-parse.c' l='413' u='w'/>
+<use f='MTProxy/common/tl-parse.c' l='426' u='w'/>
+<offset>256</offset>

@@ -1,0 +1,6 @@
+<dec f='MTProxy/common/cpuid.h' l='34' type='int'/>
+<use f='MTProxy/common/cpuid.c' l='30' u='w' c='kdb_cpuid'/>
+<use f='MTProxy/common/cpuid.c' l='31' u='r' c='kdb_cpuid'/>
+<use f='MTProxy/common/cpuid.c' l='32' u='r' c='kdb_cpuid'/>
+<use f='MTProxy/common/cpuid.c' l='46' u='w' c='kdb_cpuid'/>
+<offset>0</offset>

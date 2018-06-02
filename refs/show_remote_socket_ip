@@ -1,0 +1,3 @@
+<def f='MTProxy/net/net-connections.h' l='316' type='const char * show_remote_socket_ip(socket_connection_job_t c)'/>
+<use f='MTProxy/net/net-connections.c' l='979' u='c' c='net_server_socket_writer'/>
+<use f='MTProxy/net/net-connections.c' l='1119' u='c' c='net_server_socket_read_write_gateway'/>

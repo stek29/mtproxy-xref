@@ -1,0 +1,11 @@
+<dec f='MTProxy/common/mp-queue.h' l='82' type='int'/>
+<offset>128</offset>
+<doc f='MTProxy/common/mp-queue.h' l='82'>// power of 2; one of MPQ_BLOCK_SIZE or MPQ_SMALL_BLOCK_SIZE</doc>
+<use f='MTProxy/common/mp-queue.c' l='215' u='r' c='alloc_mpq_block'/>
+<use f='MTProxy/common/mp-queue.c' l='221' u='w' c='alloc_mpq_block'/>
+<use f='MTProxy/common/mp-queue.c' l='246' u='r' c='free_mpq_block'/>
+<use f='MTProxy/common/mp-queue.c' l='249' u='r' c='free_mpq_block'/>
+<use f='MTProxy/common/mp-queue.c' l='279' u='r' c='mpq_block_pop'/>
+<use f='MTProxy/common/mp-queue.c' l='334' u='r' c='mpq_block_push'/>
+<use f='MTProxy/common/mp-queue.c' l='471' u='r' c='mpq_pop'/>
+<use f='MTProxy/common/mp-queue.c' l='523' u='r' c='mpq_is_empty'/>

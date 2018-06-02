@@ -1,0 +1,5 @@
+<dec f='include/openssl/evp.h' l='387'/>
+<doc f='include/openssl/evp.h' l='382'>/*
+ * Cipher context flag to indicate we can handle wrap mode: if allowed in
+ * older applications it could overflow buffers.
+ */</doc>

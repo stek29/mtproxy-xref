@@ -1,0 +1,2 @@
+<dec f='MTProxy/net/net-msg-buffers.h' l='116' type='int msg_buffer_reach_limit(double ratio)'/>
+<def f='MTProxy/net/net-msg-buffers.c' l='582' ll='584' type='int msg_buffer_reach_limit(double ratio)'/>

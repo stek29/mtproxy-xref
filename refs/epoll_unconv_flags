@@ -1,0 +1,2 @@
+<def f='MTProxy/net/net-events.c' l='226' ll='238' type='int epoll_unconv_flags(int f)'/>
+<use f='MTProxy/net/net-events.c' l='390' u='c' c='epoll_fetch_events'/>

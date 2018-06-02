@@ -1,0 +1,6 @@
+<dec f='include/x86_64-linux-gnu/bits/sigaction.h' l='43' type='__sigset_t'/>
+<offset>64</offset>
+<doc f='include/x86_64-linux-gnu/bits/sigaction.h' l='42'>/* Additional set of signals to be blocked.  */</doc>
+<use f='MTProxy/common/server-functions.c' l='194' u='a' c='ksignal'/>
+<use f='MTProxy/common/server-functions.c' l='206' u='a' c='ksignal_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='875' u='a' c='set_job_interrupt_signal_handler'/>

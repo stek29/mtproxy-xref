@@ -1,0 +1,29 @@
+<dec f='MTProxy/net/net-tcp-rpc-common.h' l='97'/>
+<doc f='MTProxy/net/net-tcp-rpc-common.h' l='96'>/* for crypto_flags in struct tcp_rpc_data */</doc>
+<dec f='MTProxy/net/net-config.h' l='27'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='173' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='178' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='461' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='462' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='467' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='531' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='562' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='563' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='574' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='176' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='177' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='195' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='196' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='202' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='203' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='212' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='215' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='216' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='506' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='507' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='513' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='523' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='533' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='567' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='567' u='c'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='571' u='c'/>

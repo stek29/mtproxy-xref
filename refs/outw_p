@@ -1,0 +1,1 @@
+<def f='include/x86_64-linux-gnu/sys/io.h' l='115' ll='120' type='void outw_p(unsigned short __value, unsigned short __port)'/>

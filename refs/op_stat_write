@@ -1,0 +1,2 @@
+<dec f='MTProxy/net/net-stats.c' l='66' type='int op_stat_write(stats_buffer_t * sb)'/>
+<def f='MTProxy/net/net-stats.c' l='67' type='int op_stat_write(stats_buffer_t * sb)'/>

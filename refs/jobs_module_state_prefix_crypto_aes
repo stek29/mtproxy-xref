@@ -1,0 +1,3 @@
+<def f='MTProxy/net/net-crypto-aes.c' l='58' macro='1' type='char *'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='61' macro='1' u='r'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='62' macro='1' u='r'/>

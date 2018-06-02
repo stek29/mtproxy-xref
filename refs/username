@@ -1,0 +1,8 @@
+<dec f='MTProxy/common/server-functions.h' l='65' type='const char *'/>
+<def f='MTProxy/common/server-functions.c' l='74' type='const char *'/>
+<use f='MTProxy/common/server-functions.c' l='596' u='r' c='builtin_parse_option'/>
+<use f='MTProxy/common/server-functions.c' l='597' u='r' c='builtin_parse_option'/>
+<use f='MTProxy/common/server-functions.c' l='600' u='w' c='builtin_parse_option'/>
+<use f='MTProxy/engine/engine.c' l='214' u='r' c='engine_init'/>
+<use f='MTProxy/engine/engine.c' l='215' u='r' c='engine_init'/>
+<use f='MTProxy/engine/engine.c' l='215' u='r' c='engine_init'/>

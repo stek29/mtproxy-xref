@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-tcp-rpc-common.h' l='90' type='void tcp_rpc_conn_send_init(connection_job_t C, struct raw_message * raw, int flags)'/>
+<def f='MTProxy/net/net-tcp-rpc-common.c' l='42' ll='65' type='void tcp_rpc_conn_send_init(connection_job_t C, struct raw_message * raw, int flags)'/>
+<use f='MTProxy/net/net-tcp-rpc-common.c' l='124' u='c' c='tcp_rpc_conn_send_data_init'/>
+<doc f='MTProxy/net/net-tcp-rpc-common.c' l='39'>// Flags:
+//   Flag 1 - can not edit this message. Need to make copy.</doc>

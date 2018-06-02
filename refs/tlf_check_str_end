@@ -1,0 +1,2 @@
+<def f='MTProxy/common/tl-parse.h' l='512' ll='518' type='int tlf_check_str_end(struct tl_in_state * tlio_in, int size)'/>
+<doc f='MTProxy/common/tl-parse.h' l='512'>/* {{{ */</doc>

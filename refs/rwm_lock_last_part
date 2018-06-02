@@ -1,0 +1,14 @@
+<def f='MTProxy/net/net-msg.c' l='129' ll='155' type='struct msg_part * rwm_lock_last_part(struct raw_message * raw)'/>
+<use f='MTProxy/net/net-msg.c' l='410' u='c' c='rwm_push_data_ext'/>
+<use f='MTProxy/net/net-msg.c' l='626' u='c' c='rwm_postpone_alloc'/>
+<use f='MTProxy/net/net-msg.c' l='815' u='c' c='rwm_union'/>
+<use f='MTProxy/net/net-msg.c' l='820' u='c' c='rwm_union'/>
+<use f='MTProxy/net/net-msg.c' l='1350' u='c' c='rwm_encrypt_decrypt_to'/>
+<doc f='MTProxy/net/net-msg.c' l='122'>/* }}} */
+
+
+// after this function non-empty raw message raw should have following properties:
+//   raw-&gt;last_offset = raw-&gt;last-&gt;data_end
+//   raw-&gt;last-&gt;next = NULL
+//   raw-&gt;last is locked, unless refcnt is 1 in full msg_part chain</doc>
+<doc f='MTProxy/net/net-msg.c' l='129'>/* {{{ */</doc>

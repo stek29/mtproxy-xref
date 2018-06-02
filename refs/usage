@@ -1,0 +1,33 @@
+<dec f='MTProxy/common/server-functions.c' l='240' type='void usage()'/>
+<def f='MTProxy/common/server-functions.c' l='242' ll='246' type='void usage()'/>
+<use f='MTProxy/common/server-functions.c' l='253' u='c' c='parse_memory_limit'/>
+<use f='MTProxy/common/server-functions.c' l='264' u='c' c='parse_memory_limit'/>
+<use f='MTProxy/common/server-functions.c' l='337' u='c' c='parse_option_internal'/>
+<use f='MTProxy/common/server-functions.c' l='412' u='c' c='remove_parse_option'/>
+<use f='MTProxy/common/server-functions.c' l='462' u='c' c='parse_option_alias'/>
+<use f='MTProxy/common/server-functions.c' l='467' u='c' c='parse_option_alias'/>
+<use f='MTProxy/common/server-functions.c' l='484' u='c' c='parse_option_long_alias'/>
+<use f='MTProxy/common/server-functions.c' l='489' u='c' c='parse_option_long_alias'/>
+<use f='MTProxy/common/server-functions.c' l='593' u='c' c='builtin_parse_option'/>
+<use f='MTProxy/common/server-functions.c' l='697' u='c' c='parse_engine_options_long'/>
+<use f='MTProxy/common/server-functions.c' l='703' u='c' c='parse_engine_options_long'/>
+<use f='MTProxy/common/server-functions.c' l='706' u='c' c='parse_engine_options_long'/>
+<use f='MTProxy/common/server-functions.c' l='709' u='c' c='parse_engine_options_long'/>
+<dec f='MTProxy/engine/engine.h' l='206' type='void usage()'/>
+<use f='MTProxy/engine/engine-net.c' l='158' u='c' c='f_parse_option_net'/>
+<use f='MTProxy/engine/engine-net.c' l='162' u='c' c='f_parse_option_net'/>
+<use f='MTProxy/engine/engine-net.c' l='167' u='c' c='f_parse_option_net'/>
+<use f='MTProxy/engine/engine-net.c' l='200' u='c' c='f_parse_option_net'/>
+<dec f='MTProxy/engine/engine.c' l='518' type='void usage()'/>
+<use f='MTProxy/engine/engine.c' l='704' u='c' c='default_parse_extra_args'/>
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='2091' ll='2097' type='void usage()'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2114' u='c' c='f_parse_option'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2128' u='c' c='f_parse_option'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2155' u='c' c='f_parse_option'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2170' u='c' c='f_parse_option'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2204' u='c' c='mtfront_parse_extra_args'/>
+<doc f='MTProxy/mtproto/mtproto-proxy.c' l='2085'>/*
+ *
+ *		MAIN
+ *
+ */</doc>

@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-http-server.h' l='100' type='int hts_close_connection(connection_job_t c, int who)'/>
+<dec f='MTProxy/net/net-http-server.c' l='59' type='int hts_close_connection(connection_job_t c, int who)'/>
+<use f='MTProxy/net/net-http-server.c' l='69'/>
+<use f='MTProxy/net/net-http-server.c' l='69'/>
+<def f='MTProxy/net/net-http-server.c' l='129' ll='137' type='int hts_close_connection(connection_job_t c, int who)'/>

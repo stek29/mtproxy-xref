@@ -1,0 +1,8 @@
+<def f='MTProxy/net/net-crypto-dh.c' l='81' type='BN_CTX *'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='135' u='w' c='init_dh_params'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='146' u='r' c='create_g_a'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='147' u='w' c='create_g_a'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='155' u='r' c='create_g_a'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='180' u='r' c='dh_inner_round'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='181' u='w' c='dh_inner_round'/>
+<use f='MTProxy/net/net-crypto-dh.c' l='190' u='r' c='dh_inner_round'/>

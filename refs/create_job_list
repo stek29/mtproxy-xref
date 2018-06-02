@@ -1,0 +1,2 @@
+<dec f='MTProxy/jobs/jobs.h' l='341' type='job_t create_job_list()'/>
+<def f='MTProxy/jobs/jobs.c' l='1184' ll='1193' type='job_t create_job_list()'/>

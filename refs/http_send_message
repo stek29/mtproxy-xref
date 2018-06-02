@@ -1,0 +1,4 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='1564' ll='1595' type='int http_send_message(int C_tag_int, job_t C, struct tl_in_state * tlio_in, int flags)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1608' u='c' c='client_send_message'/>
+<doc f='MTProxy/mtproto/mtproto-proxy.c' l='1562'>// ENGINE context
+// problem: mtproto_http_alarm() may be invoked in parallel in NET-CPU context</doc>

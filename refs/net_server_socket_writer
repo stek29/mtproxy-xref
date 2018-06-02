@@ -1,0 +1,7 @@
+<dec f='MTProxy/net/net-connections.h' l='354' type='int net_server_socket_writer(connection_job_t C)'/>
+<def f='MTProxy/net/net-connections.c' l='949' ll='1028' type='int net_server_socket_writer(socket_connection_job_t C)'/>
+<use f='MTProxy/net/net-connections.c' l='1490' u='r' c='check_conn_functions'/>
+<doc f='MTProxy/net/net-connections.c' l='946'>/* 
+  Get data from out raw message and writes it to socket 
+*/</doc>
+<doc f='MTProxy/net/net-connections.c' l='949'>/* {{{ */</doc>

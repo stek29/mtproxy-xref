@@ -1,0 +1,5 @@
+<dec f='MTProxy/common/precise-time.h' l='48' type='long long'/>
+<doc f='MTProxy/common/precise-time.h' l='48'>// when precise_time was obtained</doc>
+<def f='MTProxy/common/precise-time.c' l='32' type='long long'/>
+<use f='MTProxy/common/precise-time.c' l='72' u='w' c='get_utime'/>
+<use f='MTProxy/common/precise-time.c' l='78' u='r' c='get_precise_time'/>

@@ -1,0 +1,11 @@
+<def f='MTProxy/net/net-connections.h' l='264' ll='274'/>
+<size>80</size>
+<mbr r='listening_connection_info::timer' o='0' t='struct event_timer'/>
+<mbr r='listening_connection_info::fd' o='256' t='int'/>
+<mbr r='listening_connection_info::generation' o='288' t='int'/>
+<mbr r='listening_connection_info::flags' o='320' t='int'/>
+<mbr r='listening_connection_info::current_epoll_status' o='352' t='int'/>
+<mbr r='listening_connection_info::type' o='384' t='conn_type_t *'/>
+<mbr r='listening_connection_info::ev' o='448' t='event_t *'/>
+<mbr r='listening_connection_info::extra' o='512' t='void *'/>
+<mbr r='listening_connection_info::window_clamp' o='576' t='int'/>

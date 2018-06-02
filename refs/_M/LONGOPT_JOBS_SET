@@ -1,0 +1,7 @@
+<dec f='MTProxy/common/server-functions.h' l='68'/>
+<doc f='MTProxy/common/server-functions.h' l='67'>/* keep mask defines */</doc>
+<use f='MTProxy/engine/engine.c' l='694' u='c'/>
+<use f='MTProxy/engine/engine.c' l='695' u='c'/>
+<use f='MTProxy/engine/engine.c' l='696' u='c'/>
+<use f='MTProxy/engine/engine.c' l='697' u='c'/>
+<use f='MTProxy/engine/engine.c' l='698' u='c'/>

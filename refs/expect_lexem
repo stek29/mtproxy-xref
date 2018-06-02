@@ -1,0 +1,4 @@
+<dec f='MTProxy/common/parse-config.h' l='33' type='int expect_lexem(int lexem)'/>
+<def f='MTProxy/common/parse-config.c' l='186' ll='193' type='int expect_lexem(int lexem)'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='168' u='c' c='cfg_parse_server_port'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='340' macro='1' u='c'/>

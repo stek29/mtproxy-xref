@@ -1,0 +1,7 @@
+<dec f='MTProxy/net/net-msg.c' l='61' type='int'/>
+<use f='MTProxy/net/net-msg.c' l='197' u='w' c='rwm_free'/>
+<use f='MTProxy/net/net-msg.c' l='352' u='w' c='rwm_clone'/>
+<use f='MTProxy/net/net-msg.c' l='556' u='w' c='rwm_create'/>
+<use f='MTProxy/net/net-msg.c' l='741' u='w' c='rwm_split'/>
+<use f='MTProxy/net/net-msg.c' l='811' u='w' c='rwm_union'/>
+<offset>0</offset>

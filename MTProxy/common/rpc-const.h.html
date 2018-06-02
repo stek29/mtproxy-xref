@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>rpc-const.h source code [MTProxy/common/rpc-const.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="https://code.woboq.org/data//qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="https://code.woboq.org/data//kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery-ui.min.js"></script>
+<script>var file = 'MTProxy/common/rpc-const.h'; var root_path = '../..'; var data_path = 'https://code.woboq.org/data/';</script>
+<script src='https://code.woboq.org/data//codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='..'>MTProxy</a>/<a href='./'>common</a>/<a href='rpc-const.h.html'>rpc-const.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>    This file is part of Mtproto-proxy Library.</i></td></tr>
+<tr><th id="3">3</th><td><i></i></td></tr>
+<tr><th id="4">4</th><td><i>    Mtproto-proxy Library is free software: you can redistribute it and/or modify</i></td></tr>
+<tr><th id="5">5</th><td><i>    it under the terms of the GNU Lesser General Public License as published by</i></td></tr>
+<tr><th id="6">6</th><td><i>    the Free Software Foundation, either version 2 of the License, or</i></td></tr>
+<tr><th id="7">7</th><td><i>    (at your option) any later version.</i></td></tr>
+<tr><th id="8">8</th><td><i></i></td></tr>
+<tr><th id="9">9</th><td><i>    Mtproto-proxy Library is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="10">10</th><td><i>    but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="11">11</th><td><i>    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</i></td></tr>
+<tr><th id="12">12</th><td><i>    GNU Lesser General Public License for more details.</i></td></tr>
+<tr><th id="13">13</th><td><i></i></td></tr>
+<tr><th id="14">14</th><td><i>    You should have received a copy of the GNU Lesser General Public License</i></td></tr>
+<tr><th id="15">15</th><td><i>    along with Mtproto-proxy Library.  If not, see &lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</i></td></tr>
+<tr><th id="16">16</th><td><i></i></td></tr>
+<tr><th id="17">17</th><td><i>    Copyright 2012-2013 Vkontakte Ltd</i></td></tr>
+<tr><th id="18">18</th><td><i>              2012-2013 Nikolai Durov</i></td></tr>
+<tr><th id="19">19</th><td><i>              2012-2013 Andrey Lopatin</i></td></tr>
+<tr><th id="20">20</th><td><i>              2012-2013 Vitaliy Valtman</i></td></tr>
+<tr><th id="21">21</th><td><i></i></td></tr>
+<tr><th id="22">22</th><td><i>    Copyright 2014 Telegram Messenger Inc</i></td></tr>
+<tr><th id="23">23</th><td><i>              2014 Vitaly Valtman</i></td></tr>
+<tr><th id="24">24</th><td><i>*/</i></td></tr>
+<tr><th id="25">25</th><td></td></tr>
+<tr><th id="26">26</th><td><u>#pragma once</u></td></tr>
+<tr><th id="27">27</th><td></td></tr>
+<tr><th id="28">28</th><td><u>#define <dfn class="macro" id="_M/TL_STAT" data-ref="_M/TL_STAT">TL_STAT</dfn> 0x9d56e6b2</u></td></tr>
+<tr><th id="29">29</th><td></td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td><u>#define <dfn class="macro" id="_M/RPC_INVOKE_REQ" data-ref="_M/RPC_INVOKE_REQ">RPC_INVOKE_REQ</dfn>			0x2374df3d</u></td></tr>
+<tr><th id="32">32</th><td><u>#define <dfn class="macro" id="_M/RPC_INVOKE_KPHP_REQ" data-ref="_M/RPC_INVOKE_KPHP_REQ">RPC_INVOKE_KPHP_REQ</dfn>		0x99a37fda</u></td></tr>
+<tr><th id="33">33</th><td><u>#define <dfn class="macro" id="_M/RPC_REQ_RUNNING" data-ref="_M/RPC_REQ_RUNNING">RPC_REQ_RUNNING</dfn>			0x346d5efa</u></td></tr>
+<tr><th id="34">34</th><td><u>#define <dfn class="macro" id="_M/RPC_REQ_ERROR" data-ref="_M/RPC_REQ_ERROR">RPC_REQ_ERROR</dfn>			0x7ae432f5</u></td></tr>
+<tr><th id="35">35</th><td><u>#define <dfn class="macro" id="_M/RPC_REQ_RESULT" data-ref="_M/RPC_REQ_RESULT">RPC_REQ_RESULT</dfn>			0x63aeda4e</u></td></tr>
+<tr><th id="36">36</th><td><u>#define	<dfn class="macro" id="_M/RPC_READY" data-ref="_M/RPC_READY">RPC_READY</dfn>			0x6a34cac7</u></td></tr>
+<tr><th id="37">37</th><td><u>#define	<dfn class="macro" id="_M/RPC_STOP_READY" data-ref="_M/RPC_STOP_READY">RPC_STOP_READY</dfn>			0x59d86654</u></td></tr>
+<tr><th id="38">38</th><td><u>#define	<dfn class="macro" id="_M/RPC_SEND_SESSION_MSG" data-ref="_M/RPC_SEND_SESSION_MSG">RPC_SEND_SESSION_MSG</dfn>		0x1ed5a3cc</u></td></tr>
+<tr><th id="39">39</th><td><u>#define <dfn class="macro" id="_M/RPC_RESPONSE_INDIRECT" data-ref="_M/RPC_RESPONSE_INDIRECT">RPC_RESPONSE_INDIRECT</dfn>		0x2194f56e</u></td></tr>
+<tr><th id="40">40</th><td><u>#define <dfn class="macro" id="_M/RPC_PING" data-ref="_M/RPC_PING">RPC_PING</dfn> 0x5730a2df</u></td></tr>
+<tr><th id="41">41</th><td><u>#define <dfn class="macro" id="_M/RPC_PONG" data-ref="_M/RPC_PONG">RPC_PONG</dfn> 0x8430eaa7</u></td></tr>
+<tr><th id="42">42</th><td></td></tr>
+<tr><th id="43">43</th><td></td></tr>
+<tr><th id="44">44</th><td><u>#define <dfn class="macro" id="_M/RPC_DEST_ACTOR" data-ref="_M/RPC_DEST_ACTOR">RPC_DEST_ACTOR</dfn> 0x7568aabd</u></td></tr>
+<tr><th id="45">45</th><td><u>#define <dfn class="macro" id="_M/RPC_DEST_ACTOR_FLAGS" data-ref="_M/RPC_DEST_ACTOR_FLAGS">RPC_DEST_ACTOR_FLAGS</dfn> 0xf0a5acf7</u></td></tr>
+<tr><th id="46">46</th><td><u>#define <dfn class="macro" id="_M/RPC_DEST_FLAGS" data-ref="_M/RPC_DEST_FLAGS">RPC_DEST_FLAGS</dfn> 0xe352035e</u></td></tr>
+<tr><th id="47">47</th><td><u>#define <dfn class="macro" id="_M/RPC_REQ_RESULT_FLAGS" data-ref="_M/RPC_REQ_RESULT_FLAGS">RPC_REQ_RESULT_FLAGS</dfn> 0x8cc84ce1</u></td></tr>
+<tr><th id="48">48</th><td></td></tr>
+<tr><th id="49">49</th><td><u>#define <dfn class="macro" id="_M/MAX_TL_STRING_LENGTH" data-ref="_M/MAX_TL_STRING_LENGTH">MAX_TL_STRING_LENGTH</dfn> 0xffffff</u></td></tr>
+<tr><th id="50">50</th><td></td></tr>
+<tr><th id="51">51</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_RETRY" data-ref="_M/TL_ERROR_RETRY">TL_ERROR_RETRY</dfn> 503</u></td></tr>
+<tr><th id="52">52</th><td></td></tr>
+<tr><th id="53">53</th><td><u>#define <dfn class="macro" id="_M/TL_BOOL_TRUE" data-ref="_M/TL_BOOL_TRUE">TL_BOOL_TRUE</dfn> 0x997275b5</u></td></tr>
+<tr><th id="54">54</th><td><u>#define <dfn class="macro" id="_M/TL_BOOL_FALSE" data-ref="_M/TL_BOOL_FALSE">TL_BOOL_FALSE</dfn> 0xbc799737</u></td></tr>
+<tr><th id="55">55</th><td></td></tr>
+<tr><th id="56">56</th><td><u>#define <dfn class="macro" id="_M/TL_BOOL_STAT" data-ref="_M/TL_BOOL_STAT">TL_BOOL_STAT</dfn> 0x92cbcbfa</u></td></tr>
+<tr><th id="57">57</th><td></td></tr>
+<tr><th id="58">58</th><td><u>#define <dfn class="macro" id="_M/TL_TRUE" data-ref="_M/TL_TRUE">TL_TRUE</dfn> 0x3fedd339</u></td></tr>
+<tr><th id="59">59</th><td></td></tr>
+<tr><th id="60">60</th><td><u>#define <dfn class="macro" id="_M/TL_INT" data-ref="_M/TL_INT">TL_INT</dfn> 0xa8509bda</u></td></tr>
+<tr><th id="61">61</th><td><u>#define <dfn class="macro" id="_M/TL_LONG" data-ref="_M/TL_LONG">TL_LONG</dfn> 0x22076cba</u></td></tr>
+<tr><th id="62">62</th><td><u>#define <dfn class="macro" id="_M/TL_DOUBLE" data-ref="_M/TL_DOUBLE">TL_DOUBLE</dfn> 0x2210c154</u></td></tr>
+<tr><th id="63">63</th><td><u>#define <dfn class="macro" id="_M/TL_STRING" data-ref="_M/TL_STRING">TL_STRING</dfn> 0xb5286e24</u></td></tr>
+<tr><th id="64">64</th><td></td></tr>
+<tr><th id="65">65</th><td><u>#define <dfn class="macro" id="_M/TL_MAYBE_TRUE" data-ref="_M/TL_MAYBE_TRUE">TL_MAYBE_TRUE</dfn> 0x3f9c8ef8</u></td></tr>
+<tr><th id="66">66</th><td><u>#define <dfn class="macro" id="_M/TL_MAYBE_FALSE" data-ref="_M/TL_MAYBE_FALSE">TL_MAYBE_FALSE</dfn> 0x27930a7b</u></td></tr>
+<tr><th id="67">67</th><td></td></tr>
+<tr><th id="68">68</th><td><u>#define <dfn class="macro" id="_M/TL_VECTOR" data-ref="_M/TL_VECTOR">TL_VECTOR</dfn> 0x1cb5c415</u></td></tr>
+<tr><th id="69">69</th><td><u>#define <dfn class="macro" id="_M/TL_VECTOR_TOTAL" data-ref="_M/TL_VECTOR_TOTAL">TL_VECTOR_TOTAL</dfn> 0x10133f47</u> </td></tr>
+<tr><th id="70">70</th><td><u>#define <dfn class="macro" id="_M/TL_TUPLE" data-ref="_M/TL_TUPLE">TL_TUPLE</dfn> 0x9770768a</u></td></tr>
+<tr><th id="71">71</th><td></td></tr>
+<tr><th id="72">72</th><td><u>#define <dfn class="macro" id="_M/TL_DICTIONARY" data-ref="_M/TL_DICTIONARY">TL_DICTIONARY</dfn> 0x1f4c618f</u></td></tr>
+<tr><th id="73">73</th><td></td></tr>
+<tr><th id="74">74</th><td><i>//</i></td></tr>
+<tr><th id="75">75</th><td><i>// Error codes</i></td></tr>
+<tr><th id="76">76</th><td><i>//</i></td></tr>
+<tr><th id="77">77</th><td><i></i></td></tr>
+<tr><th id="78">78</th><td><i>//</i></td></tr>
+<tr><th id="79">79</th><td><i>// Query syntax errors -1000...-1999</i></td></tr>
+<tr><th id="80">80</th><td><i>//</i></td></tr>
+<tr><th id="81">81</th><td></td></tr>
+<tr><th id="82">82</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_SYNTAX" data-ref="_M/TL_ERROR_SYNTAX">TL_ERROR_SYNTAX</dfn> -1000</u></td></tr>
+<tr><th id="83">83</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_EXTRA_DATA" data-ref="_M/TL_ERROR_EXTRA_DATA">TL_ERROR_EXTRA_DATA</dfn> -1001</u></td></tr>
+<tr><th id="84">84</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_HEADER" data-ref="_M/TL_ERROR_HEADER">TL_ERROR_HEADER</dfn> -1002</u></td></tr>
+<tr><th id="85">85</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_WRONG_QUERY_ID" data-ref="_M/TL_ERROR_WRONG_QUERY_ID">TL_ERROR_WRONG_QUERY_ID</dfn> -1003</u></td></tr>
+<tr><th id="86">86</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_NOT_ENOUGH_DATA" data-ref="_M/TL_ERROR_NOT_ENOUGH_DATA">TL_ERROR_NOT_ENOUGH_DATA</dfn> -1004</u></td></tr>
+<tr><th id="87">87</th><td></td></tr>
+<tr><th id="88">88</th><td><i>//</i></td></tr>
+<tr><th id="89">89</th><td><i>// Syntax ok, bad can not start query. -2000...-2999</i></td></tr>
+<tr><th id="90">90</th><td><i>//</i></td></tr>
+<tr><th id="91">91</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_UNKNOWN_FUNCTION_ID" data-ref="_M/TL_ERROR_UNKNOWN_FUNCTION_ID">TL_ERROR_UNKNOWN_FUNCTION_ID</dfn> -2000</u></td></tr>
+<tr><th id="92">92</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_PROXY_NO_TARGET" data-ref="_M/TL_ERROR_PROXY_NO_TARGET">TL_ERROR_PROXY_NO_TARGET</dfn> -2001</u></td></tr>
+<tr><th id="93">93</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_WRONG_ACTOR_ID" data-ref="_M/TL_ERROR_WRONG_ACTOR_ID">TL_ERROR_WRONG_ACTOR_ID</dfn> -2002</u></td></tr>
+<tr><th id="94">94</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_TOO_LONG_STRING" data-ref="_M/TL_ERROR_TOO_LONG_STRING">TL_ERROR_TOO_LONG_STRING</dfn> -2003</u></td></tr>
+<tr><th id="95">95</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_VALUE_NOT_IN_RANGE" data-ref="_M/TL_ERROR_VALUE_NOT_IN_RANGE">TL_ERROR_VALUE_NOT_IN_RANGE</dfn> -2004</u></td></tr>
+<tr><th id="96">96</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_QUERY_INCORRECT" data-ref="_M/TL_ERROR_QUERY_INCORRECT">TL_ERROR_QUERY_INCORRECT</dfn> -2005</u></td></tr>
+<tr><th id="97">97</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_BAD_VALUE" data-ref="_M/TL_ERROR_BAD_VALUE">TL_ERROR_BAD_VALUE</dfn> -2006</u></td></tr>
+<tr><th id="98">98</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_BINLOG_DISABLED" data-ref="_M/TL_ERROR_BINLOG_DISABLED">TL_ERROR_BINLOG_DISABLED</dfn> -2007</u></td></tr>
+<tr><th id="99">99</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_FEATURE_DISABLED" data-ref="_M/TL_ERROR_FEATURE_DISABLED">TL_ERROR_FEATURE_DISABLED</dfn> -2008</u></td></tr>
+<tr><th id="100">100</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_QUERY_IS_EMPTY" data-ref="_M/TL_ERROR_QUERY_IS_EMPTY">TL_ERROR_QUERY_IS_EMPTY</dfn>	-2009</u></td></tr>
+<tr><th id="101">101</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_INVALID_CONNECTION_ID" data-ref="_M/TL_ERROR_INVALID_CONNECTION_ID">TL_ERROR_INVALID_CONNECTION_ID</dfn> -2010</u></td></tr>
+<tr><th id="102">102</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_WRONG_SPLIT" data-ref="_M/TL_ERROR_WRONG_SPLIT">TL_ERROR_WRONG_SPLIT</dfn> -2011</u></td></tr>
+<tr><th id="103">103</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_TOO_BIG_OFFSET" data-ref="_M/TL_ERROR_TOO_BIG_OFFSET">TL_ERROR_TOO_BIG_OFFSET</dfn> -2012</u></td></tr>
+<tr><th id="104">104</th><td></td></tr>
+<tr><th id="105">105</th><td><i>//</i></td></tr>
+<tr><th id="106">106</th><td><i>// Error processing query -3000...-3999</i></td></tr>
+<tr><th id="107">107</th><td><i>//</i></td></tr>
+<tr><th id="108">108</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_QUERY_TIMEOUT" data-ref="_M/TL_ERROR_QUERY_TIMEOUT">TL_ERROR_QUERY_TIMEOUT</dfn> -3000</u></td></tr>
+<tr><th id="109">109</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_PROXY_INVALID_RESPONSE" data-ref="_M/TL_ERROR_PROXY_INVALID_RESPONSE">TL_ERROR_PROXY_INVALID_RESPONSE</dfn> -3001</u></td></tr>
+<tr><th id="110">110</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_NO_CONNECTIONS" data-ref="_M/TL_ERROR_NO_CONNECTIONS">TL_ERROR_NO_CONNECTIONS</dfn> -3002</u></td></tr>
+<tr><th id="111">111</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_INTERNAL" data-ref="_M/TL_ERROR_INTERNAL">TL_ERROR_INTERNAL</dfn> -3003</u></td></tr>
+<tr><th id="112">112</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_AIO_FAIL" data-ref="_M/TL_ERROR_AIO_FAIL">TL_ERROR_AIO_FAIL</dfn> -3004</u></td></tr>
+<tr><th id="113">113</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_AIO_TIMEOUT" data-ref="_M/TL_ERROR_AIO_TIMEOUT">TL_ERROR_AIO_TIMEOUT</dfn> -3005</u></td></tr>
+<tr><th id="114">114</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_BINLOG_WAIT_TIMEOUT" data-ref="_M/TL_ERROR_BINLOG_WAIT_TIMEOUT">TL_ERROR_BINLOG_WAIT_TIMEOUT</dfn> -3006</u></td></tr>
+<tr><th id="115">115</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_AIO_MAX_RETRY_EXCEEDED" data-ref="_M/TL_ERROR_AIO_MAX_RETRY_EXCEEDED">TL_ERROR_AIO_MAX_RETRY_EXCEEDED</dfn> -3007</u></td></tr>
+<tr><th id="116">116</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_TTL" data-ref="_M/TL_ERROR_TTL">TL_ERROR_TTL</dfn> -3008</u></td></tr>
+<tr><th id="117">117</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_BAD_METAFILE" data-ref="_M/TL_ERROR_BAD_METAFILE">TL_ERROR_BAD_METAFILE</dfn> -3009</u></td></tr>
+<tr><th id="118">118</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_NOT_READY" data-ref="_M/TL_ERROR_NOT_READY">TL_ERROR_NOT_READY</dfn> -3010</u></td></tr>
+<tr><th id="119">119</th><td></td></tr>
+<tr><th id="120">120</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_STORAGE_CACHE_MISS" data-ref="_M/TL_ERROR_STORAGE_CACHE_MISS">TL_ERROR_STORAGE_CACHE_MISS</dfn> -3500</u></td></tr>
+<tr><th id="121">121</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_STORAGE_CACHE_NO_MTPROTO_CONN" data-ref="_M/TL_ERROR_STORAGE_CACHE_NO_MTPROTO_CONN">TL_ERROR_STORAGE_CACHE_NO_MTPROTO_CONN</dfn> -3501</u></td></tr>
+<tr><th id="122">122</th><td></td></tr>
+<tr><th id="123">123</th><td><i>//</i></td></tr>
+<tr><th id="124">124</th><td><i>// Different errors -4000...-4999</i></td></tr>
+<tr><th id="125">125</th><td><i>//</i></td></tr>
+<tr><th id="126">126</th><td><u>#define <dfn class="macro" id="_M/TL_ERROR_UNKNOWN" data-ref="_M/TL_ERROR_UNKNOWN">TL_ERROR_UNKNOWN</dfn> -4000</u></td></tr>
+<tr><th id="127">127</th><td></td></tr>
+<tr><th id="128">128</th><td><u>#define <dfn class="macro" id="_M/TL_IS_USER_ERROR" data-ref="_M/TL_IS_USER_ERROR">TL_IS_USER_ERROR</dfn>(x) ((x) &lt;= -1000 &amp;&amp; (x) &gt; -3000)</u></td></tr>
+<tr><th id="129">129</th><td></td></tr>
+<tr><th id="130">130</th><td><u>#define <dfn class="macro" id="_M/TL_NAMESPACE" data-ref="_M/TL_NAMESPACE">TL_NAMESPACE</dfn> TL_</u></td></tr>
+<tr><th id="131">131</th><td></td></tr>
+<tr><th id="132">132</th><td><u>#define <dfn class="macro" id="_M/CONCAT" data-ref="_M/CONCAT">CONCAT</dfn>(a,b) a ## b</u></td></tr>
+<tr><th id="133">133</th><td><u>#define <dfn class="macro" id="_M/TLN" data-ref="_M/TLN">TLN</dfn>(nspc,name) CONCAT (nspc, name)</u></td></tr>
+<tr><th id="134">134</th><td><u>#define <dfn class="macro" id="_M/TLG" data-ref="_M/TLG">TLG</dfn>(name) TL_ ## name</u></td></tr>
+<tr><th id="135">135</th><td><u>#define <dfn class="macro" id="_M/TL" data-ref="_M/TL">TL</dfn>(x) TLN (TL_NAMESPACE, x)</u></td></tr>
+<tr><th id="136">136</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='tl-parse.c.html'>MTProxy/common/tl-parse.c</a><br/>Generated on <em>2018-Jun-02</em> from project MTProxy revision <em>842f343decf6c463bdecf1862e357c4a03e4bc97</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

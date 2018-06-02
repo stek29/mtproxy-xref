@@ -1,0 +1,14 @@
+<def f='MTProxy/common/common-stats.h' l='54' type='double safe_div(double x, double y)'/>
+<use f='MTProxy/common/common-stats.c' l='293' u='c' c='sb_print_queries'/>
+<use f='MTProxy/common/tl-parse.c' l='88' u='c' c='tl_parse_prepare_stat'/>
+<use f='MTProxy/jobs/jobs.c' l='124' u='c' c='jobs_prepare_stat'/>
+<use f='MTProxy/jobs/jobs.c' l='136' u='c' c='jobs_prepare_stat'/>
+<use f='MTProxy/jobs/jobs.c' l='254' u='c' c='jobs_prepare_stat'/>
+<use f='MTProxy/jobs/jobs.c' l='272' u='c' c='jobs_prepare_stat'/>
+<use f='MTProxy/jobs/jobs.c' l='273' u='c' c='jobs_prepare_stat'/>
+<use f='MTProxy/jobs/jobs.c' l='274' u='c' c='jobs_prepare_stat'/>
+<use f='MTProxy/jobs/jobs.c' l='278' u='c' c='jobs_prepare_stat'/>
+<use f='MTProxy/jobs/jobs.c' l='279' u='c' c='jobs_prepare_stat'/>
+<use f='MTProxy/jobs/jobs.c' l='280' u='c' c='jobs_prepare_stat'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='662' u='c' c='mtfront_prepare_stats'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='711' u='c' c='mtfront_prepare_stats'/>

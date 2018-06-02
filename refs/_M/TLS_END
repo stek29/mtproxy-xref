@@ -1,0 +1,5 @@
+<dec f='MTProxy/mtproto/mtproto-common.h' l='38'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='787' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1578' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1612' u='c'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1816' u='c'/>

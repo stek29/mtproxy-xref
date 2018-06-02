@@ -1,0 +1,2 @@
+<def f='MTProxy/jobs/jobs.h' l='309' ll='311' type='int check_parent_job_validity(job_t job)'/>
+<use f='MTProxy/jobs/jobs.h' l='316' u='c' c='job_parent_ptr_valid'/>

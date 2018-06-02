@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-events.h' l='86' type='int remove_event_from_heap(event_t * ev, int allow_hole)'/>
+<use f='MTProxy/net/net-connections.c' l='801' u='c' c='fail_socket_connection'/>
+<def f='MTProxy/net/net-events.c' l='122' ll='158' type='int remove_event_from_heap(event_t * ev, int allow_hole)'/>
+<use f='MTProxy/net/net-events.c' l='164' u='c' c='put_event_into_heap'/>
+<use f='MTProxy/net/net-events.c' l='300' u='c' c='epoll_close'/>
+<use f='MTProxy/net/net-events.c' l='336' u='c' c='epoll_runqueue'/>

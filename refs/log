@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/bits/mathcalls.h' l='109' type='double log(double __x)'/>
+<use f='MTProxy/common/kprintf.c' l='122' u='c' c='kdb_write'/>

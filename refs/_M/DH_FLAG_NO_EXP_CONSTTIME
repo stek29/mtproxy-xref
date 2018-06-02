@@ -1,0 +1,9 @@
+<dec f='include/openssl/dh.h' l='90'/>
+<doc f='include/openssl/dh.h' l='82'>/*
+ * new with 0.9.7h; the built-in DH
+ * implementation now uses constant time
+ * modular exponentiation for secret exponents
+ * by default. This flag causes the
+ * faster variable sliding window method to
+ * be used for all exponents.
+ */</doc>

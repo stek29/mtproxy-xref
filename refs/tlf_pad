@@ -1,0 +1,4 @@
+<def f='MTProxy/common/tl-parse.h' l='402' ll='415' type='int tlf_pad(struct tl_in_state * tlio_in)'/>
+<use f='MTProxy/common/tl-parse.h' l='435' u='c' c='tlf_string_data'/>
+<use f='MTProxy/common/tl-parse.h' l='448' u='c' c='tlf_skip_string_data'/>
+<doc f='MTProxy/common/tl-parse.h' l='402'>/* {{{ */</doc>

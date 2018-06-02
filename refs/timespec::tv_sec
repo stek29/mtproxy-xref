@@ -1,0 +1,10 @@
+<dec f='include/time.h' l='122' type='__time_t'/>
+<use f='MTProxy/common/precise-time.h' l='56' u='w' c='precise_sleep'/>
+<offset>0</offset>
+<use f='MTProxy/common/kprintf.c' l='126' u='w' c='kdb_write'/>
+<use f='MTProxy/common/precise-time.c' l='40' u='r' c='get_utime_monotonic'/>
+<use f='MTProxy/common/precise-time.c' l='65' u='r' c='get_utime'/>
+<use f='MTProxy/common/resolver.c' l='273' macro='1' u='r'/>
+<use f='MTProxy/common/resolver.c' l='284' macro='1' u='r'/>
+<use f='MTProxy/net/net-crypto-aes.c' l='227' u='r' c='aes_generate_nonce'/>
+<use f='MTProxy/net/net-events.c' l='370' u='w' c='epoll_fetch_events'/>

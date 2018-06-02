@@ -1,0 +1,10 @@
+<dec f='include/netinet/in.h' l='243' type='struct in_addr'/>
+<offset>32</offset>
+<doc f='include/netinet/in.h' l='243'>/* Internet address.  */</doc>
+<use f='MTProxy/net/net-connections.c' l='670' u='m' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1283' u='m' c='net_accept_new_connections'/>
+<use f='MTProxy/net/net-events.c' l='600' u='w' c='server_socket'/>
+<use f='MTProxy/net/net-events.c' l='670' u='w' c='client_socket'/>
+<use f='MTProxy/net/net-events.c' l='683' u='m' c='client_socket'/>
+<use f='MTProxy/net/net-events.c' l='752' u='m' c='get_my_ipv4'/>
+<use f='MTProxy/net/net-events.c' l='753' u='m' c='get_my_ipv4'/>

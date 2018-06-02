@@ -1,0 +1,5 @@
+<dec f='include/signal.h' l='213' type='int sigemptyset(sigset_t * __set)'/>
+<doc f='include/signal.h' l='212'>/* Clear all signals from SET.  */</doc>
+<use f='MTProxy/common/server-functions.c' l='194' u='c' c='ksignal'/>
+<use f='MTProxy/common/server-functions.c' l='206' u='c' c='ksignal_ex'/>
+<use f='MTProxy/jobs/jobs.c' l='875' u='c' c='set_job_interrupt_signal_handler'/>

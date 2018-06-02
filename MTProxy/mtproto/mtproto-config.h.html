@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>mtproto-config.h source code [MTProxy/mtproto/mtproto-config.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="mf_cluster,mf_config,mf_group_stats "/>
+<link rel="stylesheet" href="https://code.woboq.org/data//qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="https://code.woboq.org/data//kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery-ui.min.js"></script>
+<script>var file = 'MTProxy/mtproto/mtproto-config.h'; var root_path = '../..'; var data_path = 'https://code.woboq.org/data/';</script>
+<script src='https://code.woboq.org/data//codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='..'>MTProxy</a>/<a href='./'>mtproto</a>/<a href='mtproto-config.h.html'>mtproto-config.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>    This file is part of MTProto-Server</i></td></tr>
+<tr><th id="3">3</th><td><i></i></td></tr>
+<tr><th id="4">4</th><td><i>    MTProto-Server is free software: you can redistribute it and/or modify</i></td></tr>
+<tr><th id="5">5</th><td><i>    it under the terms of the GNU General Public License as published by</i></td></tr>
+<tr><th id="6">6</th><td><i>    the Free Software Foundation, either version 2 of the License, or</i></td></tr>
+<tr><th id="7">7</th><td><i>    (at your option) any later version.</i></td></tr>
+<tr><th id="8">8</th><td><i></i></td></tr>
+<tr><th id="9">9</th><td><i>    MTProto-Server is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="10">10</th><td><i>    but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="11">11</th><td><i>    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</i></td></tr>
+<tr><th id="12">12</th><td><i>    GNU General Public License for more details.</i></td></tr>
+<tr><th id="13">13</th><td><i></i></td></tr>
+<tr><th id="14">14</th><td><i>    You should have received a copy of the GNU General Public License</i></td></tr>
+<tr><th id="15">15</th><td><i>    along with MTProto-Server.  If not, see &lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</i></td></tr>
+<tr><th id="16">16</th><td><i></i></td></tr>
+<tr><th id="17">17</th><td><i>    This program is released under the GPL with the additional exemption</i></td></tr>
+<tr><th id="18">18</th><td><i>    that compiling, linking, and/or using OpenSSL is allowed.</i></td></tr>
+<tr><th id="19">19</th><td><i>    You are free to remove this exemption from derived works.</i></td></tr>
+<tr><th id="20">20</th><td><i></i></td></tr>
+<tr><th id="21">21</th><td><i>    Copyright 2012-2018 Nikolai Durov</i></td></tr>
+<tr><th id="22">22</th><td><i>              2012-2014 Andrey Lopatin</i></td></tr>
+<tr><th id="23">23</th><td><i>              2014-2018 Telegram Messenger Inc</i></td></tr>
+<tr><th id="24">24</th><td><i>*/</i></td></tr>
+<tr><th id="25">25</th><td><u>#pragma once</u></td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td><u>#define <dfn class="macro" id="_M/MAX_CFG_CLUSTERS" data-ref="_M/MAX_CFG_CLUSTERS">MAX_CFG_CLUSTERS</dfn>	1024</u></td></tr>
+<tr><th id="28">28</th><td><u>#define	<dfn class="macro" id="_M/MAX_CFG_TARGETS" data-ref="_M/MAX_CFG_TARGETS">MAX_CFG_TARGETS</dfn>		4096</u></td></tr>
+<tr><th id="29">29</th><td><u>#define <dfn class="macro" id="_M/MAX_CLUSTER_TARGETS" data-ref="_M/MAX_CLUSTER_TARGETS">MAX_CLUSTER_TARGETS</dfn>	1024</u></td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td><b>struct</b> <dfn class="type def" id="mf_cluster" title='mf_cluster' data-ref="mf_cluster">mf_cluster</dfn> {</td></tr>
+<tr><th id="32">32</th><td>  <em>int</em> <dfn class="decl" id="mf_cluster::targets_num" title='mf_cluster::targets_num' data-ref="mf_cluster::targets_num">targets_num</dfn>;  <i>// 1 for old-fashioned</i></td></tr>
+<tr><th id="33">33</th><td>  <em>int</em> <dfn class="decl" id="mf_cluster::write_targets_num" title='mf_cluster::write_targets_num' data-ref="mf_cluster::write_targets_num">write_targets_num</dfn>;</td></tr>
+<tr><th id="34">34</th><td>  <em>int</em> <dfn class="decl" id="mf_cluster::targets_allocated" title='mf_cluster::targets_allocated' data-ref="mf_cluster::targets_allocated">targets_allocated</dfn>; <i>// size of `cluster_targets` and `balance_hashes` arrays</i></td></tr>
+<tr><th id="35">35</th><td>  <em>int</em> <dfn class="decl" id="mf_cluster::flags" title='mf_cluster::flags' data-ref="mf_cluster::flags">flags</dfn>;</td></tr>
+<tr><th id="36">36</th><td>  <em>int</em> <dfn class="decl" id="mf_cluster::cluster_id" title='mf_cluster::cluster_id' data-ref="mf_cluster::cluster_id">cluster_id</dfn>;   <i>// datacenter # or 0</i></td></tr>
+<tr><th id="37">37</th><td>  <a class="typedef" href="../net/net-connections.h.html#conn_target_job_t" title='conn_target_job_t' data-type='job_t' data-ref="conn_target_job_t">conn_target_job_t</a> *<dfn class="decl" id="mf_cluster::cluster_targets" title='mf_cluster::cluster_targets' data-ref="mf_cluster::cluster_targets">cluster_targets</dfn>; <i>// N entries</i></td></tr>
+<tr><th id="38">38</th><td>};</td></tr>
+<tr><th id="39">39</th><td></td></tr>
+<tr><th id="40">40</th><td><b>struct</b> <dfn class="type def" id="mf_group_stats" title='mf_group_stats' data-ref="mf_group_stats">mf_group_stats</dfn> {</td></tr>
+<tr><th id="41">41</th><td>  <em>int</em> <dfn class="decl" id="mf_group_stats::tot_clusters" title='mf_group_stats::tot_clusters' data-ref="mf_group_stats::tot_clusters">tot_clusters</dfn>;</td></tr>
+<tr><th id="42">42</th><td>};</td></tr>
+<tr><th id="43">43</th><td></td></tr>
+<tr><th id="44">44</th><td><b>struct</b> <dfn class="type def" id="mf_config" title='mf_config' data-ref="mf_config">mf_config</dfn> {</td></tr>
+<tr><th id="45">45</th><td>  <em>int</em> <dfn class="decl" id="mf_config::tot_targets" title='mf_config::tot_targets' data-ref="mf_config::tot_targets">tot_targets</dfn>;</td></tr>
+<tr><th id="46">46</th><td>  <em>int</em> <dfn class="decl" id="mf_config::auth_clusters" title='mf_config::auth_clusters' data-ref="mf_config::auth_clusters">auth_clusters</dfn>, <dfn class="decl" id="mf_config::default_cluster_id" title='mf_config::default_cluster_id' data-ref="mf_config::default_cluster_id">default_cluster_id</dfn>;</td></tr>
+<tr><th id="47">47</th><td>  <em>int</em> <dfn class="decl" id="mf_config::min_connections" title='mf_config::min_connections' data-ref="mf_config::min_connections">min_connections</dfn>, <dfn class="decl" id="mf_config::max_connections" title='mf_config::max_connections' data-ref="mf_config::max_connections">max_connections</dfn>;</td></tr>
+<tr><th id="48">48</th><td>  <em>double</em> <dfn class="decl" id="mf_config::timeout" title='mf_config::timeout' data-ref="mf_config::timeout">timeout</dfn>;</td></tr>
+<tr><th id="49">49</th><td>  <em>int</em> <dfn class="decl" id="mf_config::config_bytes" title='mf_config::config_bytes' data-ref="mf_config::config_bytes">config_bytes</dfn>, <dfn class="decl" id="mf_config::config_loaded_at" title='mf_config::config_loaded_at' data-ref="mf_config::config_loaded_at">config_loaded_at</dfn>;</td></tr>
+<tr><th id="50">50</th><td>  <em>char</em> *<dfn class="decl" id="mf_config::config_md5_hex" title='mf_config::config_md5_hex' data-ref="mf_config::config_md5_hex">config_md5_hex</dfn>;</td></tr>
+<tr><th id="51">51</th><td>  <b>struct</b> <a class="type" href="#mf_group_stats" title='mf_group_stats' data-ref="mf_group_stats">mf_group_stats</a> <dfn class="decl" id="mf_config::auth_stats" title='mf_config::auth_stats' data-ref="mf_config::auth_stats">auth_stats</dfn>;</td></tr>
+<tr><th id="52">52</th><td>  <em>int</em> <dfn class="decl" id="mf_config::have_proxy" title='mf_config::have_proxy' data-ref="mf_config::have_proxy">have_proxy</dfn>;</td></tr>
+<tr><th id="53">53</th><td>  <b>struct</b> <a class="type" href="#mf_cluster" title='mf_cluster' data-ref="mf_cluster">mf_cluster</a> *<dfn class="decl" id="mf_config::default_cluster" title='mf_config::default_cluster' data-ref="mf_config::default_cluster">default_cluster</dfn>;</td></tr>
+<tr><th id="54">54</th><td>  <a class="typedef" href="../net/net-connections.h.html#conn_target_job_t" title='conn_target_job_t' data-type='job_t' data-ref="conn_target_job_t">conn_target_job_t</a> <dfn class="decl" id="mf_config::targets" title='mf_config::targets' data-ref="mf_config::targets">targets</dfn>[<a class="macro" href="#28" title="4096" data-ref="_M/MAX_CFG_TARGETS">MAX_CFG_TARGETS</a>];</td></tr>
+<tr><th id="55">55</th><td>  <b>struct</b> <a class="type" href="#mf_cluster" title='mf_cluster' data-ref="mf_cluster">mf_cluster</a> <dfn class="decl" id="mf_config::auth_cluster" title='mf_config::auth_cluster' data-ref="mf_config::auth_cluster">auth_cluster</dfn>[<a class="macro" href="#27" title="1024" data-ref="_M/MAX_CFG_CLUSTERS">MAX_CFG_CLUSTERS</a>];</td></tr>
+<tr><th id="56">56</th><td>  <i>//  struct mf_cluster *clusters_by_hash[MAX_CFG_CLUSTERS*2];</i></td></tr>
+<tr><th id="57">57</th><td>};</td></tr>
+<tr><th id="58">58</th><td></td></tr>
+<tr><th id="59">59</th><td><b>extern</b> <b>struct</b> <a class="type" href="#mf_config" title='mf_config' data-ref="mf_config">mf_config</a> *<dfn class="decl" id="CurConf" title='CurConf' data-ref="CurConf">CurConf</dfn>;</td></tr>
+<tr><th id="60">60</th><td><b>extern</b> <em>char</em> *<dfn class="decl" id="config_filename" title='config_filename' data-ref="config_filename">config_filename</dfn>;</td></tr>
+<tr><th id="61">61</th><td></td></tr>
+<tr><th id="62">62</th><td><b>extern</b> <b>struct</b> <a class="type" href="../net/net-connections.h.html#conn_target_info" title='conn_target_info' data-ref="conn_target_info">conn_target_info</a> <dfn class="decl" id="default_cfg_ct" title='default_cfg_ct' data-ref="default_cfg_ct">default_cfg_ct</dfn>;</td></tr>
+<tr><th id="63">63</th><td><b>extern</b> <em>int</em> <dfn class="decl" id="default_cfg_min_connections" title='default_cfg_min_connections' data-ref="default_cfg_min_connections">default_cfg_min_connections</dfn>, <dfn class="decl" id="default_cfg_max_connections" title='default_cfg_max_connections' data-ref="default_cfg_max_connections">default_cfg_max_connections</dfn>;</td></tr>
+<tr><th id="64">64</th><td></td></tr>
+<tr><th id="65">65</th><td><i>// (re)load configuration file</i></td></tr>
+<tr><th id="66">66</th><td></td></tr>
+<tr><th id="67">67</th><td><em>int</em> <a class="decl" href="mtproto-config.c.html#do_reload_config" title='do_reload_config' data-ref="do_reload_config" id="do_reload_config">do_reload_config</a> (<em>int</em> <dfn class="local col6 decl" id="316create_conn" title='create_conn' data-type='int' data-ref="316create_conn">create_conn</dfn>);</td></tr>
+<tr><th id="68">68</th><td></td></tr>
+<tr><th id="69">69</th><td><b>struct</b> <a class="type" href="#mf_cluster" title='mf_cluster' data-ref="mf_cluster">mf_cluster</a> *<a class="decl" href="mtproto-config.c.html#mf_cluster_lookup" title='mf_cluster_lookup' data-ref="mf_cluster_lookup" id="mf_cluster_lookup">mf_cluster_lookup</a> (<b>struct</b> <a class="type" href="#mf_config" title='mf_config' data-ref="mf_config">mf_config</a> *<dfn class="local col7 decl" id="317MC" title='MC' data-type='struct mf_config *' data-ref="317MC">MC</dfn>, <em>int</em> <dfn class="local col8 decl" id="318cluster_id" title='cluster_id' data-type='int' data-ref="318cluster_id">cluster_id</dfn>, <em>int</em> <dfn class="local col9 decl" id="319force" title='force' data-type='int' data-ref="319force">force</dfn>);</td></tr>
+<tr><th id="70">70</th><td></td></tr>
+<tr><th id="71">71</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='mtproto-config.c.html'>MTProxy/mtproto/mtproto-config.c</a><br/>Generated on <em>2018-Jun-02</em> from project MTProxy revision <em>842f343decf6c463bdecf1862e357c4a03e4bc97</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

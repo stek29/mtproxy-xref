@@ -1,0 +1,10 @@
+<def f='MTProxy/net/net-events.c' l='448' ll='476' type='int new_socket(int mode, int nonblock)'/>
+<use f='MTProxy/net/net-events.c' l='563' u='c' c='server_socket'/>
+<use f='MTProxy/net/net-events.c' l='637' u='c' c='client_socket'/>
+<use f='MTProxy/net/net-events.c' l='704' u='c' c='client_socket_ipv6'/>
+<doc f='MTProxy/net/net-events.c' l='441'>/*
+ * end (events)
+ */
+  
+
+// From memcached.c: socket functions</doc>

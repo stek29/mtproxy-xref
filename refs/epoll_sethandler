@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-events.h' l='90' type='int epoll_sethandler(int fd, int prio, event_handler_t handler, void * data)'/>
+<use f='MTProxy/engine/engine.c' l='283' u='c' c='server_init'/>
+<use f='MTProxy/net/net-connections.c' l='1208' u='c' c='alloc_new_socket_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1366' u='c' c='init_listening_connection_ext'/>
+<def f='MTProxy/net/net-events.c' l='184' ll='198' type='int epoll_sethandler(int fd, int prio, event_handler_t handler, void * data)'/>

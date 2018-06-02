@@ -1,0 +1,3 @@
+<def f='MTProxy/common/server-functions.c' l='305' ll='317' type='void parse_option_up(struct engine_parse_option * P)'/>
+<use f='MTProxy/common/server-functions.c' l='362' u='c' c='parse_option_internal'/>
+<use f='MTProxy/common/server-functions.c' l='476' u='c' c='parse_option_alias'/>

@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-http-server.h' l='96' type='int hts_parse_execute(connection_job_t c)'/>
+<dec f='MTProxy/net/net-http-server.c' l='55' type='int hts_parse_execute(connection_job_t c)'/>
+<use f='MTProxy/net/net-http-server.c' l='68'/>
+<use f='MTProxy/net/net-http-server.c' l='68'/>
+<def f='MTProxy/net/net-http-server.c' l='215' ll='639' type='int hts_parse_execute(connection_job_t C)'/>

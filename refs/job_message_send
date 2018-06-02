@@ -1,0 +1,4 @@
+<dec f='MTProxy/jobs/jobs.h' l='368' type='void job_message_send(int job_tag_int, job_t job, int src_tag_int, job_t src, unsigned int type, struct raw_message * raw, int dup, int payload_ints, const unsigned int * payload, unsigned int flags, void (*)(struct job_message *) destructor)'/>
+<use f='MTProxy/jobs/jobs.h' l='372' u='c' c='job_message_send_empty'/>
+<use f='MTProxy/jobs/jobs.h' l='378' u='c' c='job_message_answer_true'/>
+<def f='MTProxy/jobs/jobs.c' l='1500' ll='1517' type='void job_message_send(int job_tag_int, job_t job, int src_tag_int, job_t src, unsigned int type, struct raw_message * raw, int dup, int payload_ints, const unsigned int * payload, unsigned int flags, void (*)(struct job_message *) destroy)'/>

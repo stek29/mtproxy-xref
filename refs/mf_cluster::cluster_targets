@@ -1,0 +1,10 @@
+<dec f='MTProxy/mtproto/mtproto-config.h' l='37' type='conn_target_job_t *'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='114' u='r' c='forget_cluster_targets'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='115' u='w' c='forget_cluster_targets'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='201' u='w' c='init_old_mf_cluster'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='207' u='r' c='extend_old_mf_cluster'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='231' u='r' c='dump_mf_cluster'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='231' u='r' c='dump_mf_cluster'/>
+<offset>192</offset>
+<doc f='MTProxy/mtproto/mtproto-config.h' l='37'>// N entries</doc>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1636' u='r' c='choose_proxy_target'/>

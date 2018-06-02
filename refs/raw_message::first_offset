@@ -1,0 +1,44 @@
+<dec f='MTProxy/net/net-msg.h' l='93' type='int'/>
+<offset>192</offset>
+<doc f='MTProxy/net/net-msg.h' l='93'>// offset of first used byte inside first buffer data</doc>
+<use f='MTProxy/net/net-connections.c' l='908' u='w' c='net_server_socket_reader'/>
+<use f='MTProxy/net/net-msg.c' l='54' u='w'/>
+<use f='MTProxy/net/net-msg.c' l='166' u='r' c='rwm_lock_first_part'/>
+<use f='MTProxy/net/net-msg.c' l='169' u='r' c='rwm_lock_first_part'/>
+<use f='MTProxy/net/net-msg.c' l='175' u='r' c='rwm_lock_first_part'/>
+<use f='MTProxy/net/net-msg.c' l='213' u='r' c='rwm_compare'/>
+<use f='MTProxy/net/net-msg.c' l='214' u='r' c='rwm_compare'/>
+<use f='MTProxy/net/net-msg.c' l='260' u='r' c='fork_message_chain'/>
+<use f='MTProxy/net/net-msg.c' l='262' u='r' c='fork_message_chain'/>
+<use f='MTProxy/net/net-msg.c' l='288' u='r' c='fork_message_chain'/>
+<use f='MTProxy/net/net-msg.c' l='289' u='r' c='fork_message_chain'/>
+<use f='MTProxy/net/net-msg.c' l='328' u='w' c='rwm_clean'/>
+<use f='MTProxy/net/net-msg.c' l='389' u='w' c='rwm_push_data_ext'/>
+<use f='MTProxy/net/net-msg.c' l='501' u='r' c='rwm_push_data_front'/>
+<use f='MTProxy/net/net-msg.c' l='505' u='w' c='rwm_push_data_front'/>
+<use f='MTProxy/net/net-msg.c' l='510' u='w' c='rwm_push_data_front'/>
+<use f='MTProxy/net/net-msg.c' l='539' u='w' c='rwm_push_data_front'/>
+<use f='MTProxy/net/net-msg.c' l='580' u='r' c='rwm_prepend_alloc'/>
+<use f='MTProxy/net/net-msg.c' l='584' u='r' c='rwm_prepend_alloc'/>
+<use f='MTProxy/net/net-msg.c' l='588' u='w' c='rwm_prepend_alloc'/>
+<use f='MTProxy/net/net-msg.c' l='591' u='r' c='rwm_prepend_alloc'/>
+<use f='MTProxy/net/net-msg.c' l='594' u='r' c='rwm_prepend_alloc'/>
+<use f='MTProxy/net/net-msg.c' l='604' u='w' c='rwm_prepend_alloc'/>
+<use f='MTProxy/net/net-msg.c' l='623' u='r' c='rwm_postpone_alloc'/>
+<use f='MTProxy/net/net-msg.c' l='662' u='r' c='rwm_prepare_iovec'/>
+<use f='MTProxy/net/net-msg.c' l='745' u='w' c='rwm_split'/>
+<use f='MTProxy/net/net-msg.c' l='758' u='w' c='rwm_split'/>
+<use f='MTProxy/net/net-msg.c' l='769' u='r' c='rwm_split'/>
+<use f='MTProxy/net/net-msg.c' l='778' u='r' c='rwm_split'/>
+<use f='MTProxy/net/net-msg.c' l='780' u='w' c='rwm_split'/>
+<use f='MTProxy/net/net-msg.c' l='850' u='r' c='rwm_dump_sizes'/>
+<use f='MTProxy/net/net-msg.c' l='871' u='r' c='rwm_check'/>
+<use f='MTProxy/net/net-msg.c' l='874' u='r' c='rwm_check'/>
+<use f='MTProxy/net/net-msg.c' l='931' u='w' c='rwm_process_ex'/>
+<use f='MTProxy/net/net-msg.c' l='953' u='r' c='rwm_process_ex'/>
+<use f='MTProxy/net/net-msg.c' l='981' u='r' c='rwm_process_ex'/>
+<use f='MTProxy/net/net-msg.c' l='1001' u='w' c='rwm_process_ex'/>
+<use f='MTProxy/net/net-msg.c' l='1170' u='r' c='rwm_get_block_ptr_bytes'/>
+<use f='MTProxy/net/net-msg.c' l='1184' u='w' c='rwm_get_block_ptr_bytes'/>
+<use f='MTProxy/net/net-msg.c' l='1191' u='r' c='rwm_get_block_ptr'/>
+<use f='MTProxy/net/net-msg.c' l='1363' u='w' c='rwm_encrypt_decrypt_to'/>

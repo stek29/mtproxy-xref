@@ -1,0 +1,5 @@
+<dec f='MTProxy/engine/engine-rpc.h' l='67' type='int default_tl_close_conn(connection_job_t c, int who)'/>
+<use f='MTProxy/engine/engine-net.c' l='119' u='r'/>
+<use f='MTProxy/engine/engine-net.c' l='119' u='r'/>
+<def f='MTProxy/engine/engine-rpc.c' l='831' ll='834' type='int default_tl_close_conn(connection_job_t c, int who)'/>
+<doc f='MTProxy/engine/engine-rpc.c' l='829'>/* }}} */</doc>

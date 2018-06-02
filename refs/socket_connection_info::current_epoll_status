@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-connections.h' l='251' type='int'/>
+<offset>352</offset>
+<use f='MTProxy/net/net-connections.c' l='1150' u='r' c='do_socket_connection_job'/>
+<use f='MTProxy/net/net-connections.c' l='1151' u='w' c='do_socket_connection_job'/>
+<use f='MTProxy/net/net-connections.c' l='1210' u='w' c='alloc_new_socket_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1211' u='r' c='alloc_new_socket_connection'/>

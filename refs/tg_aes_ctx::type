@@ -1,0 +1,9 @@
+<dec f='MTProxy/crypto/aesni256.h' l='47' type='const struct tg_aes_methods *'/>
+<offset>2048</offset>
+<use f='MTProxy/crypto/aesni256.c' l='119' u='w' c='tg_aes_set_encrypt_key'/>
+<use f='MTProxy/crypto/aesni256.c' l='131' u='w' c='tg_aes_set_decrypt_key'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='204' u='r' c='cpu_tcp_aes_crypto_encrypt_output'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='221' u='r' c='cpu_tcp_aes_crypto_decrypt_input'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='245' u='r' c='cpu_tcp_aes_crypto_ctr128_encrypt_output'/>
+<use f='MTProxy/net/net-tcp-connections.c' l='261' u='r' c='cpu_tcp_aes_crypto_ctr128_decrypt_input'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='216' u='r' c='tcp_rpcs_compact_parse_execute'/>

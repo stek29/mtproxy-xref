@@ -1,0 +1,24 @@
+<dec f='MTProxy/common/pid.h' l='31' type='short'/>
+<offset>32</offset>
+<use f='MTProxy/common/pid.c' l='62' u='r' c='init_server_PID'/>
+<use f='MTProxy/common/pid.c' l='63' u='w' c='init_server_PID'/>
+<use f='MTProxy/common/pid.c' l='72' u='r' c='matches_pid'/>
+<use f='MTProxy/common/pid.c' l='72' u='r' c='matches_pid'/>
+<use f='MTProxy/common/pid.c' l='72' u='r' c='matches_pid'/>
+<use f='MTProxy/common/tl-parse.c' l='869' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='911' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='930' macro='1' u='r'/>
+<use f='MTProxy/common/tl-parse.c' l='934' macro='1' u='r'/>
+<use f='MTProxy/engine/engine-rpc.c' l='74' macro='1' u='r'/>
+<use f='MTProxy/engine/engine-rpc.c' l='79' macro='1' u='r'/>
+<use f='MTProxy/engine/engine.c' l='272' macro='1' u='r'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='121' u='r' c='rpc_target_insert_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='165' u='r' c='rpc_target_delete_conn'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='215' u='w' c='rpc_target_lookup_hp'/>
+<use f='MTProxy/net/net-stats.c' l='139' macro='1' u='r'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='250' u='r' c='tcp_rpcc_send_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='252' u='w' c='tcp_rpcc_send_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='301' u='r' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='301' u='r' c='tcp_rpcc_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='291' u='r' c='tcp_rpcs_process_handshake_packet'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='291' u='r' c='tcp_rpcs_process_handshake_packet'/>

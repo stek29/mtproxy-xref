@@ -1,0 +1,13 @@
+<def f='MTProxy/net/net-msg.c' l='60' macro='1'/>
+<def f='MTProxy/net/net-msg.c' l='65' macro='1' type='struct jobs_module_stat_raw_msg *'/>
+<use f='MTProxy/net/net-msg.c' l='65' macro='1' u='w'/>
+<use f='MTProxy/net/net-msg.c' l='73' macro='1' u='r'/>
+<use f='MTProxy/net/net-msg.c' l='74' macro='1' u='r'/>
+<use f='MTProxy/net/net-msg.c' l='197' macro='1' u='r'/>
+<use f='MTProxy/net/net-msg.c' l='352' macro='1' u='r'/>
+<use f='MTProxy/net/net-msg.c' l='556' macro='1' u='r'/>
+<use f='MTProxy/net/net-msg.c' l='741' macro='1' u='r'/>
+<use f='MTProxy/net/net-msg.c' l='811' macro='1' u='r'/>
+<size>8</size>
+<mbr r='jobs_module_stat_raw_msg::rwm_total_msgs' o='0' t='int'/>
+<mbr r='jobs_module_stat_raw_msg::rwm_total_msg_parts' o='32' t='int'/>

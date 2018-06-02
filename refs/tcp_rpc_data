@@ -1,0 +1,18 @@
+<def f='MTProxy/net/net-tcp-rpc-common.h' l='118' ll='141'/>
+<size>104</size>
+<doc f='MTProxy/net/net-tcp-rpc-common.h' l='117'>/* in conn-&gt;custom_data */</doc>
+<mbr r='tcp_rpc_data::flags' o='0' t='int'/>
+<mbr r='tcp_rpc_data::in_packet_num' o='32' t='int'/>
+<mbr r='tcp_rpc_data::out_packet_num' o='64' t='int'/>
+<mbr r='tcp_rpc_data::crypto_flags' o='96' t='int'/>
+<mbr r='tcp_rpc_data::remote_pid' o='128' t='struct process_id'/>
+<mbr r='tcp_rpc_data::nonce' o='224' t='char [16]'/>
+<mbr r='tcp_rpc_data::nonce_time' o='352' t='int'/>
+<mbr r='tcp_rpc_data::in_rpc_target' o='384' t='int'/>
+<mbr r='tcp_rpc_data::extra_int' o='512' t='int'/>
+<mbr r='tcp_rpc_data::extra_int2' o='544' t='int'/>
+<mbr r='tcp_rpc_data::extra_int3' o='576' t='int'/>
+<mbr r='tcp_rpc_data::extra_int4' o='608' t='int'/>
+<mbr r='tcp_rpc_data::extra_double' o='640' t='double'/>
+<mbr r='tcp_rpc_data::extra_double2' o='704' t='double'/>
+<mbr r='tcp_rpc_data::custom_crc_partial' o='768' t='crc32_partial_func_t'/>

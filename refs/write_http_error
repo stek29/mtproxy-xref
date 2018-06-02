@@ -1,0 +1,7 @@
+<dec f='MTProxy/net/net-http-server.h' l='117' type='int write_http_error(connection_job_t c, int code)'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1312' u='c' c='http_query_job_run'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1529' u='c' c='mtproto_http_alarm'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1571' u='c' c='http_send_message'/>
+<def f='MTProxy/net/net-http-server.c' l='198' ll='207' type='int write_http_error(connection_job_t C, int code)'/>
+<use f='MTProxy/net/net-http-server.c' l='613' u='c' c='hts_parse_execute'/>
+<use f='MTProxy/net/net-http-server.c' l='624' u='c' c='hts_parse_execute'/>

@@ -1,0 +1,8 @@
+<dec f='MTProxy/net/net-http-server.h' l='109' type='int get_http_header(const char * qHeaders, const int qHeadersLen, char * buffer, int b_len, const char * arg_name, const int arg_len)'/>
+<doc f='MTProxy/net/net-http-server.h' l='108'>/* useful functions */</doc>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1266' u='c' c='process_http_query'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1267' u='c' c='process_http_query'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1268' u='c' c='process_http_query'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1273' u='c' c='process_http_query'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='1274' u='c' c='process_http_query'/>
+<def f='MTProxy/net/net-http-server.c' l='781' ll='825' type='int get_http_header(const char * qHeaders, const int qHeadersLen, char * buffer, int b_len, const char * arg_name, const int arg_len)'/>

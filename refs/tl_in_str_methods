@@ -1,0 +1,2 @@
+<def f='MTProxy/common/tl-parse.c' l='419' ll='431' type='const struct tl_in_methods'/>
+<use f='MTProxy/common/tl-parse.c' l='591' u='a' c='tlf_init_str'/>

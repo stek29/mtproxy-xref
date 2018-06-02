@@ -1,0 +1,5 @@
+<dec f='MTProxy/net/net-events.h' l='66' type='int'/>
+<offset>96</offset>
+<doc f='MTProxy/net/net-events.h' l='66'>// current state in epoll()</doc>
+<use f='MTProxy/net/net-events.c' l='260' u='r' c='epoll_insert'/>
+<use f='MTProxy/net/net-events.c' l='261' u='w' c='epoll_insert'/>

@@ -1,0 +1,2 @@
+<def f='MTProxy/jobs/jobs.c' l='507' ll='521' type='int create_job_class_threads(int job_class)'/>
+<use f='MTProxy/jobs/jobs.c' l='568' u='c' c='create_job_class'/>

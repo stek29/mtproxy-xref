@@ -1,0 +1,2 @@
+<dec f='MTProxy/net/net-msg.h' l='155' type='void rwm_to_tl_string(struct raw_message * raw)'/>
+<def f='MTProxy/net/net-msg.c' l='1194' ll='1209' type='void rwm_to_tl_string(struct raw_message * raw)'/>

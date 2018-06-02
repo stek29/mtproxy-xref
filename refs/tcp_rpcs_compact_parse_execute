@@ -1,0 +1,23 @@
+<dec f='MTProxy/net/net-tcp-rpc-ext-server.h' l='31' type='int tcp_rpcs_compact_parse_execute(connection_job_t c)'/>
+<doc f='MTProxy/net/net-tcp-rpc-ext-server.h' l='29'>// extern struct tcp_rpc_server_functions default_tcp_rpc_server;</doc>
+<dec f='MTProxy/net/net-tcp-rpc-ext-server.c' l='59' type='int tcp_rpcs_compact_parse_execute(connection_job_t c)'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='66' u='r'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='66' u='r'/>
+<def f='MTProxy/net/net-tcp-rpc-ext-server.c' l='103' ll='349' type='int tcp_rpcs_compact_parse_execute(connection_job_t C)'/>
+<doc f='MTProxy/net/net-tcp-rpc-ext-server.c' l='53'>/*
+ *
+ *                EXTERNAL RPC SERVER INTERFACE
+ *
+ */</doc>
+<doc f='MTProxy/net/net-tcp-rpc-ext-server.c' l='90'>/*
+struct tcp_rpc_server_functions default_tcp_rpc_ext_server = {
+  .execute = tcp_rpcs_default_execute,
+  .check_ready = server_check_ready,
+  .flush_packet = tcp_rpc_flush_packet,
+  .rpc_wakeup = tcp_rpcs_do_wakeup,
+  .rpc_alarm = tcp_rpcs_do_wakeup,
+  .rpc_check_perm = tcp_rpcs_default_check_perm,
+  .rpc_init_crypto = tcp_rpcs_init_crypto,
+  .rpc_ready = server_noop,
+};
+*/</doc>

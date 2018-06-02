@@ -1,0 +1,4 @@
+<def f='MTProxy/jobs/jobs.c' l='798' ll='813' type='void process_one_job(int job_tag_int, job_t job, int thread_class)'/>
+<use f='MTProxy/jobs/jobs.c' l='991' u='c' c='process_one_sublist'/>
+<use f='MTProxy/jobs/jobs.c' l='1021' u='c' c='process_one_job_gw'/>
+<use f='MTProxy/jobs/jobs.c' l='1047' u='c' c='run_pending_main_jobs'/>

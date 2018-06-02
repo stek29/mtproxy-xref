@@ -1,0 +1,12 @@
+<dec f='MTProxy/net/net-tcp-rpc-server.h' l='55' type='int tcp_rpcs_wakeup(connection_job_t c)'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='71' u='r'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='71' u='r'/>
+<dec f='MTProxy/net/net-tcp-rpc-server.c' l='58' type='int tcp_rpcs_wakeup(connection_job_t c)'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='78' u='r'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='78' u='r'/>
+<def f='MTProxy/net/net-tcp-rpc-server.c' l='452' ll='464' type='int tcp_rpcs_wakeup(connection_job_t C)'/>
+<doc f='MTProxy/net/net-tcp-rpc-server.c' l='52'>/*
+ *
+ *                BASIC RPC SERVER INTERFACE
+ *
+ */</doc>

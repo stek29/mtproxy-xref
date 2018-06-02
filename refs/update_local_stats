@@ -1,0 +1,2 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='533' ll='539' type='void update_local_stats()'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2075' u='c' c='precise_cron'/>

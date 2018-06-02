@@ -1,0 +1,6 @@
+<dec f='include/pthread.h' l='275' type='pthread_t pthread_self()'/>
+<doc f='include/pthread.h' l='274'>/* Obtain the identifier of the current thread.  */</doc>
+<use f='MTProxy/common/server-functions.c' l='186' u='c' c='kill_main'/>
+<use f='MTProxy/common/server-functions.c' l='237' u='c' c='set_debug_handlers'/>
+<use f='MTProxy/jobs/jobs.c' l='406' u='c' c='init_main_pthread_id'/>
+<use f='MTProxy/jobs/jobs.c' l='416' u='c' c='check_main_thread'/>

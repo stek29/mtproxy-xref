@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>engine-signals.h source code [MTProxy/engine/engine-signals.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="https://code.woboq.org/data//qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="https://code.woboq.org/data//kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery-ui.min.js"></script>
+<script>var file = 'MTProxy/engine/engine-signals.h'; var root_path = '../..'; var data_path = 'https://code.woboq.org/data/';</script>
+<script src='https://code.woboq.org/data//codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='..'>MTProxy</a>/<a href='./'>engine</a>/<a href='engine-signals.h.html'>engine-signals.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>    This file is part of Mtproto-proxy Library.</i></td></tr>
+<tr><th id="3">3</th><td><i></i></td></tr>
+<tr><th id="4">4</th><td><i>    Mtproto-proxy Library is free software: you can redistribute it and/or modify</i></td></tr>
+<tr><th id="5">5</th><td><i>    it under the terms of the GNU Lesser General Public License as published by</i></td></tr>
+<tr><th id="6">6</th><td><i>    the Free Software Foundation, either version 2 of the License, or</i></td></tr>
+<tr><th id="7">7</th><td><i>    (at your option) any later version.</i></td></tr>
+<tr><th id="8">8</th><td><i></i></td></tr>
+<tr><th id="9">9</th><td><i>    Mtproto-proxy Library is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="10">10</th><td><i>    but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="11">11</th><td><i>    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</i></td></tr>
+<tr><th id="12">12</th><td><i>    GNU Lesser General Public License for more details.</i></td></tr>
+<tr><th id="13">13</th><td><i></i></td></tr>
+<tr><th id="14">14</th><td><i>    You should have received a copy of the GNU Lesser General Public License</i></td></tr>
+<tr><th id="15">15</th><td><i>    along with Mtproto-proxy Library.  If not, see &lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</i></td></tr>
+<tr><th id="16">16</th><td><i></i></td></tr>
+<tr><th id="17">17</th><td><i>    Copyright 2013 Vkontakte Ltd</i></td></tr>
+<tr><th id="18">18</th><td><i>              2013 Vitaliy Valtman</i></td></tr>
+<tr><th id="19">19</th><td><i>              2013 Anton Maydell</i></td></tr>
+<tr><th id="20">20</th><td><i>    </i></td></tr>
+<tr><th id="21">21</th><td><i>    Copyright 2014 Telegram Messenger Inc             </i></td></tr>
+<tr><th id="22">22</th><td><i>              2014 Vitaly Valtman     </i></td></tr>
+<tr><th id="23">23</th><td><i>              2014 Anton Maydell</i></td></tr>
+<tr><th id="24">24</th><td><i>    </i></td></tr>
+<tr><th id="25">25</th><td><i>    Copyright 2015-2016 Telegram Messenger Inc             </i></td></tr>
+<tr><th id="26">26</th><td><i>              2015-2016 Vitaliy Valtman</i></td></tr>
+<tr><th id="27">27</th><td><i>*/</i></td></tr>
+<tr><th id="28">28</th><td><u>#pragma once</u></td></tr>
+<tr><th id="29">29</th><td></td></tr>
+<tr><th id="30">30</th><td><em>void</em> <a class="decl" href="engine-signals.c.html#sigint_immediate_handler" title='sigint_immediate_handler' data-ref="sigint_immediate_handler" id="sigint_immediate_handler">sigint_immediate_handler</a> (<em>const</em> <em>int</em> <dfn class="local col1 decl" id="1sig" title='sig' data-type='const int' data-ref="1sig">sig</dfn>);</td></tr>
+<tr><th id="31">31</th><td><em>void</em> <a class="decl" href="engine-signals.c.html#sigterm_immediate_handler" title='sigterm_immediate_handler' data-ref="sigterm_immediate_handler" id="sigterm_immediate_handler">sigterm_immediate_handler</a> (<em>const</em> <em>int</em> <dfn class="local col2 decl" id="2sig" title='sig' data-type='const int' data-ref="2sig">sig</dfn>);</td></tr>
+<tr><th id="32">32</th><td></td></tr>
+<tr><th id="33">33</th><td><em>void</em> <a class="decl" href="engine-signals.c.html#sigterm_handler" title='sigterm_handler' data-ref="sigterm_handler" id="sigterm_handler">sigterm_handler</a> (<em>const</em> <em>int</em> <dfn class="local col3 decl" id="3sig" title='sig' data-type='const int' data-ref="3sig">sig</dfn>);</td></tr>
+<tr><th id="34">34</th><td><em>void</em> <a class="decl" href="engine-signals.c.html#sigint_handler" title='sigint_handler' data-ref="sigint_handler" id="sigint_handler">sigint_handler</a> (<em>const</em> <em>int</em> <dfn class="local col4 decl" id="4sig" title='sig' data-type='const int' data-ref="4sig">sig</dfn>);</td></tr>
+<tr><th id="35">35</th><td></td></tr>
+<tr><th id="36">36</th><td><em>void</em> <a class="decl" href="engine-signals.c.html#default_signal_handler" title='default_signal_handler' data-ref="default_signal_handler" id="default_signal_handler">default_signal_handler</a> (<em>const</em> <em>int</em> <dfn class="local col5 decl" id="5sig" title='sig' data-type='const int' data-ref="5sig">sig</dfn>);</td></tr>
+<tr><th id="37">37</th><td><em>void</em> <a class="decl" href="engine-signals.c.html#quiet_signal_handler" title='quiet_signal_handler' data-ref="quiet_signal_handler" id="quiet_signal_handler">quiet_signal_handler</a> (<em>const</em> <em>int</em> <dfn class="local col6 decl" id="6sig" title='sig' data-type='const int' data-ref="6sig">sig</dfn>);</td></tr>
+<tr><th id="38">38</th><td><em>void</em> <a class="decl" href="engine-signals.c.html#empty_signal_handler" title='empty_signal_handler' data-ref="empty_signal_handler" id="empty_signal_handler">empty_signal_handler</a> (<em>const</em> <em>int</em> <dfn class="local col7 decl" id="7sig" title='sig' data-type='const int' data-ref="7sig">sig</dfn>);</td></tr>
+<tr><th id="39">39</th><td></td></tr>
+<tr><th id="40">40</th><td><em>int</em> <a class="decl" href="engine-signals.c.html#interrupt_signal_raised" title='interrupt_signal_raised' data-ref="interrupt_signal_raised" id="interrupt_signal_raised">interrupt_signal_raised</a> (<em>void</em>);</td></tr>
+<tr><th id="41">41</th><td></td></tr>
+<tr><th id="42">42</th><td><em>int</em> <a class="decl" href="engine-signals.c.html#engine_process_signals" title='engine_process_signals' data-ref="engine_process_signals" id="engine_process_signals">engine_process_signals</a> (<em>void</em>);</td></tr>
+<tr><th id="43">43</th><td><em>void</em> <a class="decl" href="engine-signals.c.html#empty_signal_handler" title='empty_signal_handler' data-ref="empty_signal_handler" id="empty_signal_handler">empty_signal_handler</a> (<em>const</em> <em>int</em> <dfn class="local col8 decl" id="8sig" title='sig' data-type='const int' data-ref="8sig">sig</dfn>);</td></tr>
+<tr><th id="44">44</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='engine-signals.c.html'>MTProxy/engine/engine-signals.c</a><br/>Generated on <em>2018-Jun-02</em> from project MTProxy revision <em>842f343decf6c463bdecf1862e357c4a03e4bc97</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

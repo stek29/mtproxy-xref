@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>net-thread.h source code [MTProxy/net/net-thread.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="https://code.woboq.org/data//qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="https://code.woboq.org/data//kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.woboq.org/data//jquery/jquery-ui.min.js"></script>
+<script>var file = 'MTProxy/net/net-thread.h'; var root_path = '../..'; var data_path = 'https://code.woboq.org/data/';</script>
+<script src='https://code.woboq.org/data//codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='..'>MTProxy</a>/<a href='./'>net</a>/<a href='net-thread.h.html'>net-thread.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>    This file is part of Mtproto-proxy Library.</i></td></tr>
+<tr><th id="3">3</th><td><i></i></td></tr>
+<tr><th id="4">4</th><td><i>    Mtproto-proxy Library is free software: you can redistribute it and/or modify</i></td></tr>
+<tr><th id="5">5</th><td><i>    it under the terms of the GNU Lesser General Public License as published by</i></td></tr>
+<tr><th id="6">6</th><td><i>    the Free Software Foundation, either version 2 of the License, or</i></td></tr>
+<tr><th id="7">7</th><td><i>    (at your option) any later version.</i></td></tr>
+<tr><th id="8">8</th><td><i></i></td></tr>
+<tr><th id="9">9</th><td><i>    Mtproto-proxy Library is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="10">10</th><td><i>    but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="11">11</th><td><i>    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</i></td></tr>
+<tr><th id="12">12</th><td><i>    GNU Lesser General Public License for more details.</i></td></tr>
+<tr><th id="13">13</th><td><i></i></td></tr>
+<tr><th id="14">14</th><td><i>    You should have received a copy of the GNU Lesser General Public License</i></td></tr>
+<tr><th id="15">15</th><td><i>    along with Mtproto-proxy Library.  If not, see &lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</i></td></tr>
+<tr><th id="16">16</th><td><i></i></td></tr>
+<tr><th id="17">17</th><td><i>    Copyright 2015-2016 Telegram Messenger Inc             </i></td></tr>
+<tr><th id="18">18</th><td><i>              2015-2016 Vitaly Valtman     </i></td></tr>
+<tr><th id="19">19</th><td><i>    </i></td></tr>
+<tr><th id="20">20</th><td><i>*/</i></td></tr>
+<tr><th id="21">21</th><td><u>#pragma once</u> </td></tr>
+<tr><th id="22">22</th><td></td></tr>
+<tr><th id="23">23</th><td><u>#include <a href="net-msg.h.html">"net/net-msg.h"</a></u></td></tr>
+<tr><th id="24">24</th><td><u>#include <a href="net-connections.h.html">"net/net-connections.h"</a></u></td></tr>
+<tr><th id="25">25</th><td></td></tr>
+<tr><th id="26">26</th><td><em>void</em> <dfn class="decl" id="notification_event_insert_tcp_conn_alarm" title='notification_event_insert_tcp_conn_alarm' data-ref="notification_event_insert_tcp_conn_alarm">notification_event_insert_tcp_conn_alarm</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col6 decl" id="46C" title='C' data-type='connection_job_t' data-ref="46C">C</dfn>);</td></tr>
+<tr><th id="27">27</th><td><em>void</em> <dfn class="decl" id="notification_event_insert_tcp_conn_wakeup" title='notification_event_insert_tcp_conn_wakeup' data-ref="notification_event_insert_tcp_conn_wakeup">notification_event_insert_tcp_conn_wakeup</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col7 decl" id="47C" title='C' data-type='connection_job_t' data-ref="47C">C</dfn>);</td></tr>
+<tr><th id="28">28</th><td><em>void</em> <dfn class="decl" id="notification_event_insert_tcp_conn_close" title='notification_event_insert_tcp_conn_close' data-ref="notification_event_insert_tcp_conn_close">notification_event_insert_tcp_conn_close</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col8 decl" id="48C" title='C' data-type='connection_job_t' data-ref="48C">C</dfn>);</td></tr>
+<tr><th id="29">29</th><td><em>void</em> <dfn class="decl" id="notification_event_insert_tcp_conn_ready" title='notification_event_insert_tcp_conn_ready' data-ref="notification_event_insert_tcp_conn_ready">notification_event_insert_tcp_conn_ready</dfn> (<a class="typedef" href="net-connections.h.html#connection_job_t" title='connection_job_t' data-type='job_t' data-ref="connection_job_t">connection_job_t</a> <dfn class="local col9 decl" id="49C" title='C' data-type='connection_job_t' data-ref="49C">C</dfn>);</td></tr>
+<tr><th id="30">30</th><td><em>void</em> <dfn class="decl" id="notification_event_job_create" title='notification_event_job_create' data-ref="notification_event_job_create">notification_event_job_create</dfn> (<em>void</em>);</td></tr>
+<tr><th id="31">31</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../engine/engine.c.html'>MTProxy/engine/engine.c</a><br/>Generated on <em>2018-Jun-02</em> from project MTProxy revision <em>842f343decf6c463bdecf1862e357c4a03e4bc97</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

@@ -1,0 +1,9 @@
+<def f='MTProxy/net/net-connections.c' l='1090' ll='1135' type='int net_server_socket_read_write_gateway(int fd, void * data, event_t * ev)'/>
+<use f='MTProxy/net/net-connections.c' l='1208' u='r' c='alloc_new_socket_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1366' u='r' c='init_listening_connection_ext'/>
+<doc f='MTProxy/net/net-connections.c' l='1085'>/*
+  removes C_NOWR and C_NORD flags if necessary
+  reads errors from socket
+  sends JS_RUN signal to socket_connection
+*/</doc>
+<doc f='MTProxy/net/net-connections.c' l='1090'>/* {{{ */</doc>

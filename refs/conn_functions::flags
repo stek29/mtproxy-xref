@@ -1,0 +1,10 @@
+<dec f='MTProxy/net/net-connections.h' l='132' type='int'/>
+<offset>32</offset>
+<doc f='MTProxy/net/net-connections.h' l='132'>/* may contain for example C_RAWMSG; (partially) inherited by inbound/outbound connections */</doc>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='2274' u='w' c='mtfront_pre_start'/>
+<use f='MTProxy/net/net-connections.c' l='658' u='r' c='alloc_new_connection'/>
+<use f='MTProxy/net/net-connections.c' l='1544' u='r' c='check_conn_functions'/>
+<use f='MTProxy/net/net-http-server.c' l='65' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='90' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='63' u='w'/>
+<use f='MTProxy/net/net-tcp-rpc-server.c' l='70' u='w'/>

@@ -1,0 +1,12 @@
+<dec f='MTProxy/net/net-connections.h' l='142' type='int (*)(connection_job_t)'/>
+<offset>640</offset>
+<doc f='MTProxy/net/net-connections.h' l='142'>/* updates conn-&gt;ready if necessary and returns it */</doc>
+<use f='MTProxy/net/net-connections.c' l='1529' u='r' c='check_conn_functions'/>
+<use f='MTProxy/net/net-connections.c' l='1530' u='w' c='check_conn_functions'/>
+<use f='MTProxy/net/net-connections.c' l='1591' u='r' c='count_connection_num'/>
+<use f='MTProxy/net/net-connections.c' l='2058' u='r' c='check_connection'/>
+<use f='MTProxy/net/net-connections.c' l='2071' u='r' c='check_connection_stopped'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='234' u='r' c='check_connection'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='265' u='r' c='check_connection_arr'/>
+<use f='MTProxy/net/net-rpc-targets.c' l='356' u='r' c='rpc_target_get_state'/>
+<use f='MTProxy/net/net-tcp-rpc-client.c' l='82' u='w'/>

@@ -1,0 +1,6 @@
+<dec f='MTProxy/net/net-tcp-connections.h' l='36' type='int cpu_tcp_aes_crypto_ctr128_encrypt_output(connection_job_t c)'/>
+<def f='MTProxy/net/net-tcp-connections.c' l='235' ll='249' type='int cpu_tcp_aes_crypto_ctr128_encrypt_output(connection_job_t C)'/>
+<doc f='MTProxy/net/net-tcp-connections.c' l='233'>/* }}} */</doc>
+<doc f='MTProxy/net/net-tcp-connections.c' l='235'>/* {{{ */</doc>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='75' u='r'/>
+<use f='MTProxy/net/net-tcp-rpc-ext-server.c' l='75' u='r'/>

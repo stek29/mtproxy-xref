@@ -1,0 +1,23 @@
+<dec f='MTProxy/net/net-connections.h' l='184' type='struct in_addr'/>
+<offset>512</offset>
+<use f='MTProxy/mtproto/mtproto-config.c' l='131' u='r' c='clear_config'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='156' u='w' c='cfg_parse_server_port'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='159' u='m' c='cfg_parse_server_port'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='190' u='r' c='cfg_parse_server_port'/>
+<use f='MTProxy/mtproto/mtproto-config.c' l='231' u='m' c='dump_mf_cluster'/>
+<use f='MTProxy/net/net-connections.c' l='1714' u='m' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1715' u='r' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1719' u='m' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1719' u='m' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1721' u='m' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1722' u='r' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1730' u='m' c='create_new_connections'/>
+<use f='MTProxy/net/net-connections.c' l='1771' u='m' c='find_target'/>
+<use f='MTProxy/net/net-connections.c' l='1808' u='m' c='find_target_ipv6'/>
+<use f='MTProxy/net/net-connections.c' l='1839' u='m' c='free_target'/>
+<use f='MTProxy/net/net-connections.c' l='1840' u='r' c='free_target'/>
+<use f='MTProxy/net/net-connections.c' l='1841' u='r' c='free_target'/>
+<use f='MTProxy/net/net-connections.c' l='1948' u='m' c='create_target'/>
+<use f='MTProxy/net/net-connections.c' l='1949' u='r' c='create_target'/>
+<use f='MTProxy/net/net-connections.c' l='1986' u='m' c='create_target'/>
+<use f='MTProxy/net/net-connections.c' l='1987' u='r' c='create_target'/>

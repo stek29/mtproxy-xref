@@ -1,0 +1,4 @@
+<def f='MTProxy/jobs/jobs.h' l='402' ll='405'/>
+<size>16</size>
+<mbr r='thread_callback::next' o='0' t='struct thread_callback *'/>
+<mbr r='thread_callback::new_thread' o='64' t='void (*)(void)'/>

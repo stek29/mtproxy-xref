@@ -1,0 +1,5 @@
+<def f='MTProxy/net/net-connections.h' l='312' type='const char * show_ip46(unsigned int ip, const unsigned char * ipv6)'/>
+<use f='MTProxy/net/net-connections.h' l='313' u='c' c='show_our_ip'/>
+<use f='MTProxy/net/net-connections.h' l='314' u='c' c='show_remote_ip'/>
+<use f='MTProxy/net/net-connections.h' l='315' u='c' c='show_our_socket_ip'/>
+<use f='MTProxy/net/net-connections.h' l='316' u='c' c='show_remote_socket_ip'/>

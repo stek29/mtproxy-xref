@@ -1,0 +1,6 @@
+<def f='MTProxy/mtproto/mtproto-proxy.c' l='190' type='long long'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='256' u='w' c='get_ext_connection_by_in_conn_id'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='264' u='r' c='get_ext_connection_by_in_conn_id'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='294' u='w' c='get_ext_connection_by_in_conn_id'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='453' u='r' c='update_local_stats_copy'/>
+<use f='MTProxy/mtproto/mtproto-proxy.c' l='696' u='r' c='mtfront_prepare_stats'/>

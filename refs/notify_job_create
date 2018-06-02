@@ -1,0 +1,2 @@
+<dec f='MTProxy/jobs/jobs.h' l='272' type='job_t notify_job_create(int sig_class)'/>
+<def f='MTProxy/jobs/jobs.c' l='1704' ll='1706' type='job_t notify_job_create(int sig_class)'/>
